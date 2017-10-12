@@ -33,103 +33,104 @@ import xtc.util.Runtime;
  * https://en.wikipedia.org/wiki/Single_responsibility_principle
  */
 public class Boot extends Tool {
-  private Logger logger =
-          org.slf4j.LoggerFactory.getLogger(this.getClass());
+    private Logger logger =
+        org.slf4j.LoggerFactory.getLogger(this.getClass());
 
-  @Override
-  public String getName() {
-    return XtcProps.get("app.name");
-  }
-
-  @Override
-  public String getCopy() {
-    return XtcProps.get("group.name");
-  }
-
-  @Override
-  public void init() {
-    super.init();
-    // Declare command line arguments.
-    runtime.
-            bool("printJavaAst", "printJavaAst", false, "Print Java Ast.").
-            bool("printSimpleJavaAst", "printSimpleJavaAst", false, "Print Simplified Java Ast.").
-            bool("printJavaCode", "printJavaCode", false, "Print Java code.").
-            bool("cppFilePrinter", "cppFilePrinter", false, "Print example cpp file into output directory.").
-            bool("printJavaImportCode", "printJavaImportCode", false, "Print Java code for imports of primary source file.").
-            bool("printSymbolTable", "printSymbolTable", false, "Print symbol table for Java Ast.").
-            bool("printConfig", "printConfig", false, "Output application configuration to screen.");
-  }
-
-  @Override
-  public void prepare() {
-    super.prepare();
-    // Perform consistency checks on command line arguments.
-    // (i.e. are there some commands that cannot be run together?)
-    logger.debug("This is a debugging statement."); // Example logging statement, you may delete
-  }
-
-  @Override
-  public File locate(String name) throws IOException {
-    File file = super.locate(name);
-    if (Integer.MAX_VALUE < file.length()) {
-      throw new IllegalArgumentException("File too large " + file.getName());
-    }
-    if (!file.getAbsolutePath().startsWith(System.getProperty("user.dir"))) {
-      throw new IllegalArgumentException("File must be under project root.");
-    }
-    return file;
-  }
-
-  @Override
-  public Node parse(Reader in, File file) throws IOException, ParseException {
-    return NodeUtil.parseJavaFile(file);
-  }
-
-  @Override
-  public void process(Node n) {
-    if (runtime.test("printJavaAst")) {
-      runtime.console().format(n).pln().flush();
+    @Override
+    public String getName() {
+        return XtcProps.get("app.name");
     }
 
-    if (runtime.test("printSimpleJavaAst")) {
-      new JavaAstSimplifier().dispatch(n);
-      runtime.console().format(n).pln().flush();
+    @Override
+    public String getCopy() {
+        return XtcProps.get("group.name");
     }
 
-    if (runtime.test("printJavaCode")) {
-      new JavaPrinter(runtime.console()).dispatch(n);
-      runtime.console().flush();
+    @Override
+    public void init() {
+        super.init();
+        // Declare command line arguments.
+        runtime.
+        bool("printJavaAst", "printJavaAst", false, "Print Java Ast.").
+        bool("printSimpleJavaAst", "printSimpleJavaAst", false, "Print Simplified Java Ast.").
+        bool("printJavaCode", "printJavaCode", false, "Print Java code.").
+        bool("cppFilePrinter", "cppFilePrinter", false, "Print example cpp file into output directory.").
+        bool("printJavaImportCode", "printJavaImportCode", false, "Print Java code for imports of primary source file.").
+        bool("printSymbolTable", "printSymbolTable", false, "Print symbol table for Java Ast.").
+        bool("printConfig", "printConfig", false, "Output application configuration to screen.");
     }
 
-    if (runtime.test("printJavaImportCode")) {
-      List<GNode> nodes = JavaFiveImportParser.parse((GNode) n);
-      for (Node node : nodes) {
-        runtime.console().pln();
-        new JavaPrinter(runtime.console()).dispatch(node);
-      }
-      runtime.console().flush();
+    @Override
+    public void prepare() {
+        super.prepare();
+        // Perform consistency checks on command line arguments.
+        // (i.e. are there some commands that cannot be run together?)
+        logger.debug("This is a debugging statement."); // Example logging statement, you may delete
     }
 
-    if (runtime.test("printConfig")) {
-      XtcProps.getProperties().list(System.out);
+    @Override
+    public File locate(String name) throws IOException {
+        File file = super.locate(name);
+        if (Integer.MAX_VALUE < file.length()) {
+            throw new IllegalArgumentException("File too large " + file.getName());
+        }
+        if (!file.getAbsolutePath().startsWith(System.getProperty("user.dir"))) {
+            throw new IllegalArgumentException("File must be under project root.");
+        }
+        return file;
     }
 
-    if (runtime.test("cppFilePrinter")) {
-      new CppFilePrinter().print(n);
+    @Override
+    public Node parse(Reader in, File file) throws IOException, ParseException {
+        return NodeUtil.parseJavaFile(file);
     }
 
-    if (runtime.test("printSymbolTable")) {
-      SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
-      new SymbolTablePrinter(runtime, table).full();
-    }
-  }
+    @Override
+    public void process(Node n) {
+        if (runtime.test("printJavaAst")) {
+            runtime.console().format(n).pln().flush();
+        }
 
-  /**
-   * Run Boot with the specified command line arguments.
-   *
-   * @param args The command line arguments.
-   */
-  public static void main(String[] args) {
-    new Boot().run(args);
-  }
+        if (runtime.test("printSimpleJavaAst")) {
+            new JavaAstSimplifier().dispatch(n);
+            runtime.console().format(n).pln().flush();
+        }
+
+        if (runtime.test("printJavaCode")) {
+            new JavaPrinter(runtime.console()).dispatch(n);
+            runtime.console().flush();
+        }
+
+        if (runtime.test("printJavaImportCode")) {
+            List<GNode> nodes = JavaFiveImportParser.parse((GNode) n);
+            for (Node node : nodes) {
+                runtime.console().pln();
+                new JavaPrinter(runtime.console()).dispatch(node);
+            }
+            runtime.console().flush();
+        }
+
+
+        if (runtime.test("printConfig")) {
+            XtcProps.getProperties().list(System.out);
+        }
+
+        if (runtime.test("cppFilePrinter")) {
+            new CppFilePrinter().print(n);
+        }
+
+        if (runtime.test("printSymbolTable")) {
+            SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
+            new SymbolTablePrinter(runtime, table).full();
+        }
+    }
+
+    /**
+     * Run Boot with the specified command line arguments.
+     *
+     * @param args The command line arguments.
+     */
+    public static void main(String[] args) {
+        new Boot().run(args);
+    }
 }
