@@ -8,6 +8,15 @@ import xtc.tree.Node;
 
 // an array list of classes
 
+class File{
+
+    ArrayList<LocalVariable> globalVariables;
+
+    ArrayList<ClassObject> classes;
+
+}
+
+
 class ClassObject{
 
     // an arraylist of methods
