@@ -1,76 +1,33 @@
-[0m[[0minfo[0m] [0mRunning edu.nyu.oop.Boot -printJavaAst src/test/java/inputs/Test000/Test000.java[0m
+[0m[[0minfo[0m] [0mRunning edu.nyu.oop.Boot -displaySymbolTable src/test/java/inputs/test000/Test010.java[0m
 [0m[[0minfo[0m] [0mTranslator-2, v. 2.4.0, The Compilers[0m
-[0m[[0minfo[0m] [0m2017-10-12 16:01:15,442 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.[0m
-[0m[[0minfo[0m] [0mProcessing src/test/java/inputs/Test000/Test000.java ...[0m
-[0m[[0minfo[0m] [0mCompilationUnit([0m
-[0m[[0minfo[0m] [0m  PackageDeclaration([0m
-[0m[[0minfo[0m] [0m    null,[0m
-[0m[[0minfo[0m] [0m    QualifiedIdentifier([0m
-[0m[[0minfo[0m] [0m      "inputs",[0m
-[0m[[0minfo[0m] [0m      "test000"[0m
-[0m[[0minfo[0m] [0m    )[0m
-[0m[[0minfo[0m] [0m  ),[0m
-[0m[[0minfo[0m] [0m  ClassDeclaration([0m
-[0m[[0minfo[0m] [0m    Modifiers([0m
-[0m[[0minfo[0m] [0m      Modifier([0m
-[0m[[0minfo[0m] [0m        "public"[0m
-[0m[[0minfo[0m] [0m      )[0m
-[0m[[0minfo[0m] [0m    ),[0m
-[0m[[0minfo[0m] [0m    "Test000",[0m
-[0m[[0minfo[0m] [0m    null,[0m
-[0m[[0minfo[0m] [0m    null,[0m
-[0m[[0minfo[0m] [0m    null,[0m
-[0m[[0minfo[0m] [0m    ClassBody([0m
-[0m[[0minfo[0m] [0m      MethodDeclaration([0m
-[0m[[0minfo[0m] [0m        Modifiers([0m
-[0m[[0minfo[0m] [0m          Modifier([0m
-[0m[[0minfo[0m] [0m            "public"[0m
-[0m[[0minfo[0m] [0m          ),[0m
-[0m[[0minfo[0m] [0m          Modifier([0m
-[0m[[0minfo[0m] [0m            "static"[0m
-[0m[[0minfo[0m] [0m          )[0m
-[0m[[0minfo[0m] [0m        ),[0m
-[0m[[0minfo[0m] [0m        null,[0m
-[0m[[0minfo[0m] [0m        VoidType(),[0m
-[0m[[0minfo[0m] [0m        "main",[0m
-[0m[[0minfo[0m] [0m        FormalParameters([0m
-[0m[[0minfo[0m] [0m          FormalParameter([0m
-[0m[[0minfo[0m] [0m            Modifiers(),[0m
-[0m[[0minfo[0m] [0m            Type([0m
-[0m[[0minfo[0m] [0m              QualifiedIdentifier([0m
-[0m[[0minfo[0m] [0m                "String"[0m
-[0m[[0minfo[0m] [0m              ),[0m
-[0m[[0minfo[0m] [0m              Dimensions([0m
-[0m[[0minfo[0m] [0m                "["[0m
-[0m[[0minfo[0m] [0m              )[0m
-[0m[[0minfo[0m] [0m            ),[0m
-[0m[[0minfo[0m] [0m            null,[0m
-[0m[[0minfo[0m] [0m            "args",[0m
-[0m[[0minfo[0m] [0m            null[0m
-[0m[[0minfo[0m] [0m          )[0m
-[0m[[0minfo[0m] [0m        ),[0m
-[0m[[0minfo[0m] [0m        null,[0m
-[0m[[0minfo[0m] [0m        null,[0m
-[0m[[0minfo[0m] [0m        Block([0m
-[0m[[0minfo[0m] [0m          ExpressionStatement([0m
-[0m[[0minfo[0m] [0m            CallExpression([0m
-[0m[[0minfo[0m] [0m              SelectionExpression([0m
-[0m[[0minfo[0m] [0m                PrimaryIdentifier([0m
-[0m[[0minfo[0m] [0m                  "System"[0m
-[0m[[0minfo[0m] [0m                ),[0m
-[0m[[0minfo[0m] [0m                "out"[0m
-[0m[[0minfo[0m] [0m              ),[0m
-[0m[[0minfo[0m] [0m              null,[0m
-[0m[[0minfo[0m] [0m              "println",[0m
-[0m[[0minfo[0m] [0m              Arguments([0m
-[0m[[0minfo[0m] [0m                StringLiteral([0m
-[0m[[0minfo[0m] [0m                  "\"Hello.\""[0m
-[0m[[0minfo[0m] [0m                )[0m
-[0m[[0minfo[0m] [0m              )[0m
-[0m[[0minfo[0m] [0m            )[0m
-[0m[[0minfo[0m] [0m          )[0m
-[0m[[0minfo[0m] [0m        )[0m
-[0m[[0minfo[0m] [0m      )[0m
-[0m[[0minfo[0m] [0m    )[0m
-[0m[[0minfo[0m] [0m  )[0m
-[0m[[0minfo[0m] [0m)[0m
+[0m[[0minfo[0m] [0m2017-10-18 18:20:31,119 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.[0m
+[0m[[0minfo[0m] [0mProcessing src/test/java/inputs/test000/Test010.java ...[0m
+[0m[[31merror[0m] [0merror: src/test/java/inputs/test000/Test010.java: not found[0m
+[0m[[31merror[0m] [0m1 error[0m
+java.lang.RuntimeException: Nonzero exit code returned from runner: 1
+	at scala.sys.package$.error(package.scala:27)
+	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:1943)
+	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:1943)
+	at scala.Option.foreach(Option.scala:236)
+	at sbt.BuildCommon$class.toError(Defaults.scala:1943)
+	at sbt.Defaults$.toError(Defaults.scala:38)
+	at sbt.Defaults$$anonfun$runMainTask$1$$anonfun$apply$34$$anonfun$apply$35.apply(Defaults.scala:709)
+	at sbt.Defaults$$anonfun$runMainTask$1$$anonfun$apply$34$$anonfun$apply$35.apply(Defaults.scala:707)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[0m[[31merror[0m] [0m(compile:[31mrunMain[0m) Nonzero exit code returned from runner: 1[0m

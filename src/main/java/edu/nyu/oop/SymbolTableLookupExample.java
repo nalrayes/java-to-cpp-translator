@@ -5,6 +5,9 @@ import edu.nyu.oop.util.SymbolTableUtil;
 import org.slf4j.Logger;
 import xtc.lang.JavaEntities;
 
+import edu.nyu.oop.IntermediateDataStructure;
+
+
 import xtc.Constants;
 
 import xtc.tree.GNode;
@@ -20,6 +23,7 @@ import java.util.*;
 public class SymbolTableLookupExample extends ContextualVisitor {
     final private Map<String, Tag> summary = new HashMap<>();
 
+   // private IntermediateDataStructure interDataStructure = new IntermediateDataStructure();
 
     public SymbolTableLookupExample(Runtime runtime, SymbolTable table) {
         super(runtime, table);
@@ -29,6 +33,7 @@ public class SymbolTableLookupExample extends ContextualVisitor {
         SymbolTableUtil.enterScope(table, n);
 
         summary.put(n.getString(3)+"()", Tag.FUNCTION);
+        //interDataStructure.FileClass.
 
         // Extract a list representing the parameters to this method.
         List<VariableT> params = SymbolTableUtil.extractFormalParams(table.current());

@@ -1,6 +1,7 @@
 #Successful Tests
-#Thu Oct 12 15:20:58 EDT 2017
+#Wed Oct 18 19:25:28 EDT 2017
 edu.nyu.oop.NodeTransformationExample=1507836058402
+edu.nyu.oop.TraverseASTTest=1508369128094
 edu.nyu.oop.StringToNodeExample=1507836058430
 edu.nyu.oop.JunitAssertionsExample=1507836056926
 edu.nyu.oop.JunitTestExample=1507836056800

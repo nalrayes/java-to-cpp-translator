@@ -51,6 +51,8 @@ public class Boot extends Tool {
         super.init();
         // Declare command line arguments.
         runtime.
+                bool("displaySymbolTable", "displaySymbolTable", false, "Test Symbol Table Display.").
+
         bool("printJavaAst", "printJavaAst", false, "Print Java Ast.").
         bool("printSimpleJavaAst", "printSimpleJavaAst", false, "Print Simplified Java Ast.").
         bool("printJavaCode", "printJavaCode", false, "Print Java code.").
@@ -122,6 +124,15 @@ public class Boot extends Tool {
         if (runtime.test("printSymbolTable")) {
             SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
             new SymbolTablePrinter(runtime, table).full();
+        }
+
+        if (runtime.test("displaySymbolTable")) {
+            SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
+            new SymbolTableCreate(runtime, table).dispatch(n);
+            SymbolTableCreate res = new SymbolTableCreate(runtime, table);
+            res.dispatch(n);
+            res.printSummary();
+
         }
     }
 

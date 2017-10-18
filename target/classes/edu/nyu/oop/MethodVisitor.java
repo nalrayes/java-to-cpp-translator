@@ -25,6 +25,13 @@ public class MethodVisitor extends Visitor {
     public void visitMethodDeclaration(GNode n) {
         summary.nodes += n.getName() + " ";
         summary.names += n.getString(3) + " ";
+
+        Node modifiers  = n.getNode(0);
+        for (int i = 0; i < modifiers.size(); i++) {
+            Node curNode = modifiers.getNode(i);
+            String modifierName = curNode.toString();
+            System.out.println(modifierName);
+        }
         summary.count++;
         visit(n);
     }
@@ -43,6 +50,7 @@ public class MethodVisitor extends Visitor {
         int count = 0;
         String names = "";
         String nodes = "";
+
 
         public String toString() {
             return "Method count: " + count + System.lineSeparator() +

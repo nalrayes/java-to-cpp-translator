@@ -156,3 +156,64 @@
 2017-10-12 15:20:58,400 - [pool-14-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - After...
 2017-10-12 15:20:58,411 - [pool-14-thread-2] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
 2017-10-12 16:01:15,442 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 17:32:40,930 - [pool-8-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 17:33:38,013 - [pool-10-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 17:33:41,641 - [pool-12-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:16:48,753 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 18:17:28,201 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 18:17:28,351 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:28,353 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:28,354 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:28,354 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:28,355 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:28,355 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:31,396 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 18:17:31,537 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:31,539 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:31,540 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:31,541 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:31,541 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:17:31,542 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:03,890 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 18:19:22,966 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 18:19:23,175 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:23,176 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:23,177 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:23,177 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:23,178 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:23,179 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:19:23,179 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-18 18:20:31,119 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-18 18:31:17,345 - [pool-25-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:32:41,050 - [pool-27-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:33:07,593 - [pool-29-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:34:01,982 - [pool-31-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:35:59,404 - [pool-7-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:37:55,204 - [pool-9-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:38:04,865 - [pool-11-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:38:15,995 - [pool-13-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:38:33,789 - [pool-15-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:38:51,010 - [pool-17-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:39:06,185 - [pool-19-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:42:09,382 - [pool-21-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:43:35,660 - [pool-34-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:43:45,644 - [pool-36-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:45:51,340 - [pool-38-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:46:39,795 - [pool-40-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:46:47,236 - [pool-42-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:46:54,502 - [pool-44-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:47:12,285 - [pool-46-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:52:01,788 - [pool-48-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:56:05,033 - [pool-50-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 18:58:04,507 - [pool-54-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:00:00,726 - [pool-56-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:00:57,884 - [pool-58-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:01:32,160 - [pool-60-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:02:07,886 - [pool-62-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:02:15,966 - [pool-64-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:02:29,838 - [pool-66-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:03:14,539 - [pool-68-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:04:15,094 - [pool-70-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:06:33,161 - [pool-72-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:11:01,993 - [pool-74-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:25:28,060 - [pool-6-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
