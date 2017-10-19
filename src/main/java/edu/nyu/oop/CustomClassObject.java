@@ -10,7 +10,7 @@ public class CustomClassObject {
 //
 //        ArrayList<Constructor> constructors;
 //
-//        ArrayList<LocalVariable> localVariables;
+      	ArrayList<CustomVariablesClass> classVariables;
 
         ArrayList<String> modifiers;
 
@@ -24,6 +24,7 @@ public class CustomClassObject {
     public CustomClassObject() {
 
         modifiers = new ArrayList<String>();
+        classVariables = new ArrayList<CustomVariablesClass>();
 
         //this.className = className;
 

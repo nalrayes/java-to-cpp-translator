@@ -58,3 +58,10 @@ runxtc -displaySymbolTable src/test/java/inputs/test010/Test010.java
 runxtc -displaySymbolTable src/test/java/inputs/test000/Test010.java
 runxtc -displaySymbolTable src/test/java/inputs/test010/Test010.java
 test
+runxtc -displaySymbolTable src/test/java/inputs/test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/test000/Test010.java
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/test016/Test016.java
+test

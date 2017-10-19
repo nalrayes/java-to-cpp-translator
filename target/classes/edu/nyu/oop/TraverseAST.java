@@ -39,10 +39,59 @@ public class TraverseAST extends Visitor {
 
    }
 
-   public void TraverseFieldDeclaration(Node n){
+   // this function is used to get class Vars
+   public CustomVariablesClass TraverseFieldDeclaration(Node n){
 
-        System.out.println(n.getName());
-        System.out.println(n.getNode(1).getNode(0).getString(0));
+       // System.out.println(n.getName());
+        
+
+        CustomVariablesClass varToReturn = new CustomVariablesClass();
+
+        // Get Modifier if one exists 
+        if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).getNode(0).size() > 0){
+
+            String varModifiers = "";
+
+            int amountOfModifers = n.getNode(0).size();
+
+            for (int i = 0; i < amountOfModifers; i++){
+
+
+                //System.out.println("get mods " + n.getNode(0).getNode(0).getString(i));
+                varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
+
+            }
+
+            varToReturn.modifier = varModifiers;
+           
+        }
+
+
+
+        // Get Qualified Identifier
+        String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
+        //System.out.println(qualifiedIdentifier);
+        varToReturn.type = qualifiedIdentifier;
+
+        // Get Declarator Identifier
+       // System.out.println("Get Dec");
+        String declarator = n.getNode(2).getNode(0).getString(0);
+       // System.out.println(declarator);
+        varToReturn.name = declarator;
+
+
+
+
+        String theVariable = qualifiedIdentifier + " " + declarator;
+        System.out.println("var to return " + varToReturn.name);
+
+        return varToReturn;
+
+      //  theV
+
+
+        //Get Class var declarators
+
       // return n.getString(1);
 
    }
@@ -78,9 +127,22 @@ public class TraverseAST extends Visitor {
 
                     System.out.println("found field dec");
                     //System.out.println(curNode.getName());
-                    TraverseFieldDeclaration(curNode);
+                   
+
+                   CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
+
+                   aClass.classVariables.add(aVar);
+
+                   for (CustomVariablesClass v : aClass.classVariables){
+
+                    System.out.println("the vars " + v.name);
+                   }
+
+                  // System.out.println("the var " + aVar.name);
 
 
+
+                   //System.out.println("class var " + getClassVar);
 
 
             }
