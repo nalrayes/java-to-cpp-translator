@@ -102,7 +102,8 @@ public class TraverseAST extends Visitor {
         //summary.names += n.getString(3) + " ";
         CustomClassObject aClass = new CustomClassObject();
         aClass.className = n.getString(1);
-      //  System.out.println("printing " + aClass.className);
+      
+        // Get all modifiers of the class and add them to the class object
         Node modifiers  = n.getNode(0);
         for (int i = 0; i < modifiers.size(); i++) {
             Node curNode = modifiers.getNode(i);
@@ -111,24 +112,22 @@ public class TraverseAST extends Visitor {
 
         }
 
-  //  visitClassBody(n);
-      //  System.out.println("class body " + n.getNode(5));
+
 
         Node classBody = n.getNode(5);
 
 
         int classBodySize = n.getNode(5).size();
 
+        // check all field declarations
         for (int i = 0; i < classBodySize; i++){
              Node curNode = classBody.getNode(i);
 
-
+             // if a field Declaration is found get the class variable contained within it
             if (curNode.getName().equals("FieldDeclaration")){
 
-                    System.out.println("found field dec");
-                    //System.out.println(curNode.getName());
-                   
-
+                    
+                    // calls a custom method TraverseFieldDeclaration to collect variable info
                    CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
 
                    aClass.classVariables.add(aVar);
