@@ -30,12 +30,30 @@ public class TraverseAST extends Visitor {
     }
 
 
+   private void visitClassBody(GNode n){
+
+
+     //System.out.print("in class body " + n.getName());
+     visit(n);
+
+
+   }
+
+   public void TraverseFieldDeclaration(Node n){
+
+        System.out.println(n.getName());
+        System.out.println(n.getNode(1).getNode(0).getString(0));
+      // return n.getString(1);
+
+   }
+
+
     public void visitClassDeclaration(GNode n) {
        // summary.nodes += n.getName() + " ";
         //summary.names += n.getString(3) + " ";
         CustomClassObject aClass = new CustomClassObject();
         aClass.className = n.getString(1);
-        System.out.println("printing " + aClass.className);
+      //  System.out.println("printing " + aClass.className);
         Node modifiers  = n.getNode(0);
         for (int i = 0; i < modifiers.size(); i++) {
             Node curNode = modifiers.getNode(i);
@@ -44,9 +62,42 @@ public class TraverseAST extends Visitor {
 
         }
 
+  //  visitClassBody(n);
+      //  System.out.println("class body " + n.getNode(5));
+
+        Node classBody = n.getNode(5);
+
+
+        int classBodySize = n.getNode(5).size();
+
+        for (int i = 0; i < classBodySize; i++){
+             Node curNode = classBody.getNode(i);
+
+
+            if (curNode.getName().equals("FieldDeclaration")){
+
+                    System.out.println("found field dec");
+                    //System.out.println(curNode.getName());
+                    TraverseFieldDeclaration(curNode);
+
+
+
+
+            }
+
+
+
+        }
+
+
+           
+            //isit(n)
+
+        
+
 
         //get class vars
-        System.out.println("class body " + n.getNode(5));
+      //  System.out.println("class body " + n.getNode(5));
 
 
 
@@ -59,6 +110,8 @@ public class TraverseAST extends Visitor {
        // summary.count++;
         visit(n);
     }
+
+
 
 //    public void visitMethodDeclaration(GNode n) {
 //        summary.nodes += n.getName() + " ";

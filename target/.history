@@ -51,3 +51,10 @@ runxtc -displaySymbolTable src/test/java/inputs/test010/Test010.java
 runxtc -displaySymbolTable src/test/java/inputs/test000/Test010.java
 test-only *MethodVisitorTest*
 test
+test-only *MethodVisitorTest*
+test
+runxtc -displaySymbolTable src/test/java/inputs/test000/Test010.java
+runxtc -displaySymbolTable src/test/java/inputs/test010/Test010.java
+runxtc -displaySymbolTable src/test/java/inputs/test000/Test010.java
+runxtc -displaySymbolTable src/test/java/inputs/test010/Test010.java
+test

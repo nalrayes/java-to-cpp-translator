@@ -25,7 +25,7 @@ public class SymbolTableCreate extends ContextualVisitor {
     }
 
 
-    public void visitModifiers(GNode n){
+    public void visitMethodDeclaration(GNode n){
          SymbolTableUtil.enterScope(table, n);
 
        // summary.put(n.getString(3)+"()", Tag.FUNCTION);
@@ -33,8 +33,13 @@ public class SymbolTableCreate extends ContextualVisitor {
     // Extract a list representing the parameters to this method.
     List<VariableT> params = SymbolTableUtil.extractFormalParams(table.current());
         for(VariableT p : params) {
-        runtime.console().p("my class ").p(n.getName());
+        //runtime.console().p("my method ").p(n.getName());
 
+       // Type type = (Type) table.current().lookup(name);
+
+      //  runtime.console().p("my method ").p(n.getName()).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
+
+     //   runtime.console.p("params ").p(params);
         summary.put(p.getName(), p.tag());
     }
 
@@ -61,40 +66,55 @@ public class SymbolTableCreate extends ContextualVisitor {
 //    }
 
 
+    // public void visitFieldDeclaration(GNode n){
+    //    String name = n.getName();
 
-    public void visitMethodDeclaration(GNode n) {
-        SymbolTableUtil.enterScope(table, n);
+    //     if (table.current().isDefined(name)) {
+    //         Type type = (Type) table.current().lookup(name);
+    //         runtime.console().loc(n).pln();
+    //         summary.put(name, type.tag());
+    //         if (JavaEntities.isParameterT(type))
+    //             runtime.console().p("local variable ").p(name).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
+    //         else if (JavaEntities.isFieldT(type))
+    //             runtime.console().p("field ").p(name).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
 
-        summary.put(n.getString(3)+"()", Tag.FUNCTION);
-
-        // Extract a list representing the parameters to this method.
-        List<VariableT> params = SymbolTableUtil.extractFormalParams(table.current());
-        for(VariableT p : params) {
-            //runtime.console().p("my print ").p(n.getName());
-
-            summary.put(p.getName(), p.tag());
-        }
-
-        visit(n);
-        SymbolTableUtil.exitScope(table, n);
-    }
+    //     }
+    // }
 
 
 
-    public void visitPrimaryIdentifier(GNode n) {
-        String name = n.getString(0);
+    //  public void visitMethodDeclaration(GNode n) {
+    //     SymbolTableUtil.enterScope(table, n);
 
-        if (table.current().isDefined(name)) {
-            Type type = (Type) table.current().lookup(name);
-            runtime.console().loc(n).pln();
-            summary.put(name, type.tag());
-            if (JavaEntities.isParameterT(type))
-                runtime.console().p("local variable ").p(name).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
-            else if (JavaEntities.isFieldT(type))
-                runtime.console().p("field ").p(name).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
+    //     summary.put(n.getString(3)+"()", Tag.FUNCTION);
+    //     //interDataStructure.FileClass.
 
-        }
-    }
+    //     // Extract a list representing the parameters to this method.
+    //     List<VariableT> params = SymbolTableUtil.extractFormalParams(table.current());
+    //     for(VariableT p : params) {
+    //         summary.put(p.getName(), p.tag());
+    //     }
+
+    //     visit(n);
+    //     SymbolTableUtil.exitScope(table, n);
+    // }
+
+
+
+    // public void visitPrimaryIdentifier(GNode n) {
+    //     String name = n.getString(0);
+
+    //     if (table.current().isDefined(name)) {
+    //         Type type = (Type) table.current().lookup(name);
+    //         runtime.console().loc(n).pln();
+    //         summary.put(name, type.tag());
+    //         if (JavaEntities.isParameterT(type))
+    //             runtime.console().p("local variable ").p(name).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
+    //         else if (JavaEntities.isFieldT(type))
+    //             runtime.console().p("field ").p(name).p(" with type ").p(type.toString()).p(" at location ").p(n.getLocation().toString()).pln(type.toString());
+
+    //     }
+    // }
 
     public Map<String, Tag> getSummary(Node n) {
         this.dispatch(n);

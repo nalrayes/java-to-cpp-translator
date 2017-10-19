@@ -217,3 +217,75 @@
 2017-10-18 19:06:33,161 - [pool-72-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-18 19:11:01,993 - [pool-74-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-18 19:25:28,060 - [pool-6-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-18 19:29:55,785 - [pool-6-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 13:22:58,220 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 13:23:00,111 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 13:23:08,372 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 13:23:08,588 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,010 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 13:23:52,223 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,226 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,226 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,227 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,227 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,228 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,229 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,229 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,229 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,229 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,229 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,229 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,230 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,231 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,231 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,232 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,233 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:23:52,233 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,502 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 13:24:13,688 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,690 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,691 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,692 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,692 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,693 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,695 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,695 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,695 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,695 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,695 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,695 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,696 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,697 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,697 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,698 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,698 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,698 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,699 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,699 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,699 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,699 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,699 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:13,699 - [main] WARN  edu.nyu.oop.util.SymbolTableUtil - Node Modifiers not marked
+2017-10-19 13:24:21,527 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 18:37:51,484 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 18:37:57,870 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 18:50:33,516 - [pool-16-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 18:50:59,893 - [pool-18-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 18:52:00,305 - [pool-20-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 18:52:49,079 - [pool-22-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 18:53:16,479 - [pool-24-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 18:53:32,103 - [pool-26-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 18:59:18,932 - [pool-28-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:00:10,284 - [pool-30-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:02:53,604 - [pool-33-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:03:13,640 - [pool-35-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:03:26,698 - [pool-37-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:04:32,961 - [pool-40-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:05:13,831 - [pool-42-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:05:26,020 - [pool-44-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest

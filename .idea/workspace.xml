@@ -2,471 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697a7b87-ecd4-4f04-a991-6fd3e2ac2a23" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__ch_qos_logback_logback_classic_1_0_9_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__ch_qos_logback_logback_core_1_0_9_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__com_novocode_junit_interface_0_11_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__junit_junit_4_11_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_hamcrest_hamcrest_core_1_3_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_11_7_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_sbt_test_interface_1_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_slf4j_api_1_7_2_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/translator-2-build.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/translator-2.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$65beaa9b3d55d407451c$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$65beaa9b3d55d407451c.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$65beaa9b3d55d407451c.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$aefde69f239e6f750009$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$aefde69f239e6f750009$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$aefde69f239e6f750009.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$aefde69f239e6f750009.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$cd4fc455e22cc5ad32c0$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$cd4fc455e22cc5ad32c0.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$cd4fc455e22cc5ad32c0.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$e422bb704e9b28916ba6$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$e422bb704e9b28916ba6$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$e422bb704e9b28916ba6.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$e422bb704e9b28916ba6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c465e091924926b1645$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c465e091924926b1645$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c465e091924926b1645.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0c465e091924926b1645.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0$$anonfun$$sbtdef$2$$anonfun$apply$1$$anonfun$apply$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0$$anonfun$$sbtdef$2$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0$$anonfun$$sbtdef$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1637a7ead45912a7f1c0.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ddc48d86eb3508e03ea$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ddc48d86eb3508e03ea.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$2ddc48d86eb3508e03ea.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$32fc4121f39d3d406932$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$32fc4121f39d3d406932$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$32fc4121f39d3d406932.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$32fc4121f39d3d406932.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$387b41b0d553ebab4dd0$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$387b41b0d553ebab4dd0$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$387b41b0d553ebab4dd0.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$387b41b0d553ebab4dd0.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$4343b905a147f2594a98$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$4343b905a147f2594a98$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$4343b905a147f2594a98.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$4343b905a147f2594a98.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5e5ad057cbf271e28764$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5e5ad057cbf271e28764$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5e5ad057cbf271e28764.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$5e5ad057cbf271e28764.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70d4ea930dbbe649252e$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70d4ea930dbbe649252e$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70d4ea930dbbe649252e.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70d4ea930dbbe649252e.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70f06be73fa0d6f172f6$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70f06be73fa0d6f172f6$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70f06be73fa0d6f172f6.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$70f06be73fa0d6f172f6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$72695ed48b97cb90f7b6$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$72695ed48b97cb90f7b6$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$72695ed48b97cb90f7b6.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$72695ed48b97cb90f7b6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$8c12edb437063e9c9b5b$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$8c12edb437063e9c9b5b.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$8c12edb437063e9c9b5b.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9d7737e3b80f4a20c4b5$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9d7737e3b80f4a20c4b5$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9d7737e3b80f4a20c4b5.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$9d7737e3b80f4a20c4b5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f$$anonfun$$sbtdef$1$$anonfun$apply$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f$$anonfun$$sbtdef$2$$anonfun$apply$2$$anonfun$apply$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f$$anonfun$$sbtdef$2$$anonfun$apply$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f$$anonfun$$sbtdef$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$b0fecfe29347e883cc0f.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bd5615579d70d4018e19$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bd5615579d70d4018e19$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bd5615579d70d4018e19.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bd5615579d70d4018e19.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c3205b31356ff9302a76$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c3205b31356ff9302a76$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c3205b31356ff9302a76.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c3205b31356ff9302a76.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c38a7a63e7fb4a831823$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c38a7a63e7fb4a831823$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c38a7a63e7fb4a831823.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c38a7a63e7fb4a831823.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c52d7a1856dbfb7e05d6$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c52d7a1856dbfb7e05d6.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$c52d7a1856dbfb7e05d6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ceb739e70a093a820aae$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ceb739e70a093a820aae$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ceb739e70a093a820aae.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ceb739e70a093a820aae.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d107937df8e396ece399$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d107937df8e396ece399$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d107937df8e396ece399.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d107937df8e396ece399.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d12308b7aa4a2ae79c27$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d12308b7aa4a2ae79c27$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d12308b7aa4a2ae79c27.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d12308b7aa4a2ae79c27.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ef2ba9eff8447bb0d87a$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ef2ba9eff8447bb0d87a$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ef2ba9eff8447bb0d87a.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ef2ba9eff8447bb0d87a.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f0b568d78c6af28ae1d3$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f0b568d78c6af28ae1d3$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f0b568d78c6af28ae1d3.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f0b568d78c6af28ae1d3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f1373055437a225cf042$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f1373055437a225cf042$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f1373055437a225cf042.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f1373055437a225cf042.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f310301d2b7c1fbdbec8$$anonfun$$sbtdef$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f310301d2b7c1fbdbec8$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f310301d2b7c1fbdbec8.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$f310301d2b7c1fbdbec8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/translator-2-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/translator-2-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-compile-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-compile.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-docs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-optional.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-provided.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-runtime-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-runtime.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-scala-tool.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-sources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-test-internal.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-translator-2-build-test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/ivy-report.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/ivy-report.xsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/$global/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/input_dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivySbt/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/projectDescriptors/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/inputs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/$global/$global/discoveredMainClasses/data" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CppFilePrinter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SimpleXtc.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTablePrinter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ChildToParentMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ContextualVisitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/JavaFiveImportParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/NodeUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/RecursiveVisitor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/SymbolTableBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/SymbolTableUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/TypeUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/XtcProps.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/xtc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/ivy-report.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/ivy-report.xsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/clean/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache/input_dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache/output_dsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/ivySbt/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/projectDescriptors/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/mainClass/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/run/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/scalariformFormat/$global/streams/scalariform/in-cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/scalariformFormat/$global/streams/scalariform/out-cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/compile/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/export" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/copyResources/$global/streams/copy-resources" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/copyResources/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/loadedTestFrameworks/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/scalariformFormat/$global/streams/scalariform/in-cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/scalariformFormat/$global/streams/scalariform/out-cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.ChildToParentMapTest/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.JunitAssertionsExample/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.JunitTestExample/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.MethodVisitorTest/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.NodeInspectionExample/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.NodeTransformationExample/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.NodeUtilTest/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.StringToNodeExample/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.SymbolTableTest/test/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/testOnly/$global/streams/out" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/inputs/homework2/Input$ICommand.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.ChildToParentMapTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.JunitAssertionsExample.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.JunitTestExample.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.MethodVisitorTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.NodeInspectionExample.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.NodeTransformationExample.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.NodeUtilTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.StringToNodeExample.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.SymbolTableTest.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/Boot.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/Boot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CppFilePrinter.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CppFilePrinter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/MethodVisitor$MethodSummary.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/MethodVisitor$MethodSummary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/MethodVisitor.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/MethodVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SimpleXtc$1.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SimpleXtc$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SimpleXtc.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SimpleXtc.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableLookupExample.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableLookupExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTablePrinter.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTablePrinter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ChildToParentMap$1.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ChildToParentMap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ChildToParentMap.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ChildToParentMap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ContextualVisitor.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/ContextualVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/JavaFiveImportParser$1.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/JavaFiveImportParser$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/JavaFiveImportParser.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/JavaFiveImportParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/NodeUtil$1.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/NodeUtil$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/NodeUtil.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/NodeUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/RecursiveVisitor.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/RecursiveVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/SymbolTableBuilder.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/SymbolTableBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/SymbolTableUtil.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/SymbolTableUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/TypeUtil.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/TypeUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/XtcProps.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/util/XtcProps.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/$global/$global/discoveredMainClasses/data" afterPath="$PROJECT_DIR$/target/streams/compile/$global/$global/discoveredMainClasses/data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableCreate.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableCreate.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/$global/$global/definedTestNames/data" afterPath="$PROJECT_DIR$/target/streams/test/$global/$global/definedTestNames/data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/$global/$global/discoveredMainClasses/data" afterPath="$PROJECT_DIR$/target/streams/test/$global/$global/discoveredMainClasses/data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/ChildToParentMapTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/ChildToParentMapTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/JunitAssertionsExample.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/JunitAssertionsExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/JunitTestExample.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/JunitTestExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/MethodVisitorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/MethodVisitorTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/NodeInspectionExample.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/NodeInspectionExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/NodeTransformationExample.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/NodeTransformationExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/NodeUtilTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/NodeUtilTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/StringToNodeExample.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/StringToNodeExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/SymbolTableTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/SymbolTableTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/XtcTestUtils.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/XtcTestUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/homework2/Input$1.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/homework2/Input$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/homework2/Input.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/homework2/Input.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test000/Test000.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test000/Test000.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test001/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test001/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test001/Test001.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test001/Test001.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test002/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test002/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test002/Test002.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test002/Test002.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test003/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test003/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test003/Test003.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test003/Test003.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test004/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test004/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test004/Test004.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test004/Test004.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test005/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test005/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test005/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test005/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test005/Test005.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test005/Test005.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test006/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test006/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test006/Test006.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test006/Test006.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test007/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test007/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test007/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test007/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test007/Test007.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test007/Test007.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test008/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test008/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test008/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test008/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test008/Test008.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test008/Test008.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test009/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test009/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test009/Test009.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test009/Test009.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test010/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test010/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test010/B1.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test010/B1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test010/B2.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test010/B2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test010/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test010/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test010/Test010.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test010/Test010.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test011/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test011/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test011/B1.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test011/B1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test011/B2.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test011/B2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test011/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test011/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test011/Test011.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test011/Test011.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test012/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test012/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test012/B1.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test012/B1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test012/B2.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test012/B2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test012/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test012/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test012/Test012.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test012/Test012.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test013/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test013/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test013/Test013.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test013/Test013.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test014/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test014/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test014/Test014.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test014/Test014.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test015/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test015/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test015/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test015/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test015/Test015.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test015/Test015.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test016/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test016/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test016/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test016/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test016/Test016.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test016/Test016.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test017/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test017/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test017/Test017.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test017/Test017.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test018/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test018/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test018/Test018.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test018/Test018.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test019/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test019/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test019/Test019.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test019/Test019.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test020/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test020/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test020/Test020.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test020/Test020.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test021/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test021/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test021/Test021.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test021/Test021.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test022/Test022.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test022/Test022.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test023/Test023.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test023/Test023.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test024/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test024/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test024/Test024.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test024/Test024.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test025/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test025/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test025/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test025/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test025/Test025.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test025/Test025.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test026/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test026/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test026/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test026/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test026/Test026.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test026/Test026.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test027/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test027/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test027/Test027.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test027/Test027.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test028/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test028/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test028/Test028.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test028/Test028.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test029/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test029/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test029/Test029.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test029/Test029.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test030/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test030/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test030/Test030.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test030/Test030.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test031/Test031.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test031/Test031.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test032/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test032/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test032/Test032.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test032/Test032.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test033/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test033/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test033/Test033.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test033/Test033.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test034/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test034/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test034/Test034.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test034/Test034.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test035/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test035/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test035/Test035.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test035/Test035.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test036/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test036/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test036/Test036.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test036/Test036.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test037/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test037/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test037/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test037/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test037/Test037.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test037/Test037.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test038/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test038/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test038/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test038/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test038/Test038.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test038/Test038.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test039/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test039/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test039/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test039/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test039/Test039.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test039/Test039.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test040/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test040/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test040/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test040/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test040/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test040/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test040/Test040.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test040/Test040.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test041/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test041/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test041/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test041/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test041/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test041/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test041/Test041.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test041/Test041.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test042/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test042/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test042/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test042/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test042/Test042.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test042/Test042.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test043/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test043/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test043/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test043/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test043/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test043/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test043/Test043.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test043/Test043.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test044/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test044/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test044/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test044/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test044/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test044/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test044/Test044.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test044/Test044.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test045/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test045/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test045/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test045/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test045/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test045/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test045/Test045.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test045/Test045.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test046/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test046/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test046/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test046/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test046/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test046/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test046/Test046.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test046/Test046.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test047/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test047/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test047/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test047/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test047/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test047/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test047/Test047.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test047/Test047.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test048/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test048/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test048/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test048/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test048/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test048/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test048/Test048.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test048/Test048.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test049/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test049/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test049/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test049/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test049/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test049/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test049/Test049.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test049/Test049.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test050/A.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test050/A.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test050/B.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test050/B.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test050/C.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test050/C.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/inputs/test050/Test050.class" afterPath="$PROJECT_DIR$/target/test-classes/inputs/test050/Test050.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/Boot.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/Boot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/MethodVisitor.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/MethodVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableLookupExample.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableLookupExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/xtc-demo-xtc-demo-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/xtc-demo/xtc-demo/1.0/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/xtc-demo/xtc-demo/1.0/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/xtc-demo/xtc-demo/1.0/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/xtc-demo/xtc-demo/1.0/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableCreate.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/SymbolTableCreate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/fullClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -496,104 +43,22 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test002.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test002/Test002.java">
+    <leaf>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="19">
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test000.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test000/Test000.java">
+      <file leaf-file-name="java_lang.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/output/java_lang.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TraverseASTTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MethodVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/MethodVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Boot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="55" column="71" lean-forward="false" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TraverseAST.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-              <folding>
-                <element signature="e#2942#2961#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test010.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test012.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test012/Test012.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test020.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test020/Test020.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test019.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test019/Test019.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="39">
+              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -617,6 +82,7 @@
       <find>MethodVisitorTest</find>
       <find>test-only</find>
       <find>TheClas</find>
+      <find>SymbolClass</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/target/test-classes/inputs</dir>
@@ -659,8 +125,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
-    <option name="y" value="92" />
+    <option name="x" value="34" />
+    <option name="y" value="77" />
     <option name="width" value="1646" />
     <option name="height" value="884" />
   </component>
@@ -681,9 +147,9 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1037,36 +503,15 @@
   </component>
   <component name="SbtLocalSettings">
     <option name="lastUpdateTimestamp" value="1507744942476" />
-    <option name="availableProjects">
-      <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="xtc-demo" />
-              <option name="path" value="$PROJECT_DIR$" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="translator-2" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value="translator-2-build" />
-                <option name="path" value="$PROJECT_DIR$/project" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1080,47 +525,51 @@
       <workItem from="1507846909114" duration="702000" />
       <workItem from="1508096302214" duration="4299000" />
       <workItem from="1508179348805" duration="40000" />
-      <workItem from="1508271280888" duration="11312000" />
+      <workItem from="1508271280888" duration="11795000" />
+      <workItem from="1508433417290" duration="57000" />
+      <workItem from="1508433494114" duration="51000" />
+      <workItem from="1508433583032" duration="191000" />
+      <workItem from="1508452465578" duration="709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31682000" />
+    <option name="totallyTimeSpent" value="33173000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="69" y="92" width="1646" height="884" extended-state="0" />
+    <frame x="34" y="77" width="1646" height="884" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21259351" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953104" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22940432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14089775" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14276809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21259351" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953104" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3041543" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1168,26 +617,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1277#1278#0" expanded="false" />
-            <element signature="e#1322#1323#0" expanded="false" />
-            <element signature="e#1371#1372#0" expanded="false" />
-            <element signature="e#4918#4919#0" expanded="false" />
-            <element signature="e#4954#4955#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SimpleXtc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1387">
           <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,7 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="11" column="41" lean-forward="true" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,10 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#91#92#0" expanded="true" />
-            <element signature="e#135#136#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,10 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="34" column="47" lean-forward="true" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-          <folding>
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#819#820#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1225,9 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1235,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,14 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
-          <folding>
-            <element signature="e#1230#1231#0" expanded="false" />
-            <element signature="e#1277#1278#0" expanded="false" />
-            <element signature="e#1322#1323#0" expanded="false" />
-            <element signature="e#1371#1372#0" expanded="false" />
-            <element signature="e#4918#4919#0" expanded="false" />
-            <element signature="e#4954#4955#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1258,7 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="30" column="36" lean-forward="false" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,7 +677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1274,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,18 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/java_lang.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,7 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-302">
           <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1347,7 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1363,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1371,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1379,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1387,10 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-          <folding>
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#819#820#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1398,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,7 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,7 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,7 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1446,9 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1456,7 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1464,7 +845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1085">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,9 +852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="16" column="55" lean-forward="false" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1482,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1490,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="60" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1498,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1506,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,7 +887,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1522,31 +901,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="55" column="71" lean-forward="false" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/MethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="37" column="5" lean-forward="false" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="550">
+          <caret line="48" column="53" lean-forward="true" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1554,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1562,7 +922,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/MethodVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1570,7 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1578,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1586,17 +957,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
+    <entry file="file://$PROJECT_DIR$/output/java_lang.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding>
-            <element signature="e#2942#2961#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="39">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
