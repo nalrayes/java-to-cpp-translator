@@ -447,9 +447,11 @@ public class TraverseAST extends Visitor {
         if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0) {
 
 
+            System.out.println(params.getNode(4).getNode(0));
+
             //TraverseFieldDeclaration(params.getNode(4));
-            System.out.println("params " + params.getNode(4));
-            // methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4).getNode(0)));
+            //System.out.println("params " + params.getNode(4).getNode(0));
+            //methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4)));
             // CustomVariablesClass myVars =
 
 
@@ -470,7 +472,7 @@ public class TraverseAST extends Visitor {
         CustomConstructorClass constructor = traverseConstructorDeclaration(n);
         currentClass.addConstructor(constructor);
 
-        
+
     }
 
 

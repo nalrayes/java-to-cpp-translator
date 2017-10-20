@@ -47,14 +47,24 @@
       <file leaf-file-name="TraverseAST.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="478" column="0" lean-forward="true" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="454" column="8" lean-forward="false" selection-start-line="454" selection-start-column="8" selection-end-line="454" selection-end-column="8" />
               <folding>
                 <element signature="e#781#782#0" expanded="true" />
                 <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#12309#12310#0" expanded="true" />
-                <element signature="e#12385#12386#0" expanded="true" />
+                <element signature="e#12373#12374#0" expanded="true" />
+                <element signature="e#12449#12450#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SymbolTableTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/SymbolTableTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-57">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -500,12 +510,12 @@
       <workItem from="1508433417290" duration="57000" />
       <workItem from="1508433494114" duration="51000" />
       <workItem from="1508433583032" duration="191000" />
-      <workItem from="1508452465578" duration="7695000" />
+      <workItem from="1508452465578" duration="9103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40159000" />
+    <option name="totallyTimeSpent" value="41567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="34" y="77" width="1646" height="884" extended-state="0" />
@@ -588,13 +598,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SimpleXtc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test001/Test001.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -947,15 +950,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/SymbolTableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="478" column="0" lean-forward="true" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="454" column="8" lean-forward="false" selection-start-line="454" selection-start-column="8" selection-end-line="454" selection-end-column="8" />
           <folding>
             <element signature="e#781#782#0" expanded="true" />
             <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#12309#12310#0" expanded="true" />
-            <element signature="e#12385#12386#0" expanded="true" />
+            <element signature="e#12373#12374#0" expanded="true" />
+            <element signature="e#12449#12450#0" expanded="true" />
           </folding>
         </state>
       </provider>
