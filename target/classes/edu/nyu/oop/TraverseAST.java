@@ -25,6 +25,9 @@ public class TraverseAST extends Visitor {
     public static final int DEBUGGING = 1;
 
 
+    public CustomClassObject currentClass;
+
+
 
     public void visitCompilationUnit(GNode n) {
         visit(n);
@@ -217,8 +220,12 @@ public class TraverseAST extends Visitor {
     public void visitClassDeclaration(GNode n) {
         // summary.nodes += n.getName() + " ";
         //summary.names += n.getString(3) + " ";
+
+
+
         CustomClassObject aClass = new CustomClassObject();
         aClass.className = n.getString(1);
+        currentClass = aClass;
 
         // Get all modifiers of the class and add them to the class object
         Node modifiers  = n.getNode(0);
@@ -260,10 +267,6 @@ public class TraverseAST extends Visitor {
                 // System.out.println("the var " + aVar.name);
 
 
-            } else if (curNode.getName().equals("ConstructorDeclaration")) {
-                System.out.println("Found constructor!");
-                CustomConstructorClass constructor = traverseConstructorDeclaration(curNode);
-                aClass.addConstructor(constructor);
             }
 
         }
@@ -272,96 +275,96 @@ public class TraverseAST extends Visitor {
 
         // GET METHODS - WILL TURN THIS INTO A METHOD LATER
 
-        classBody = n.getNode(5);
-
-        for (int i = 0; i < classBody.size(); i++){
-
-
-            if (classBody.getNode(i).getName().equals("MethodDeclaration")){
-                // System.out.println(classBody.getNode(i));
-
-                CustomMethodClass methodObj = new CustomMethodClass();
-
-                Node currMethod = classBody.getNode(i);
-
-
-                Node methodModifers = currMethod.getNode(0);
-
-                //System .out.println(methodModifers);
-
-                int methodModifersSize = methodModifers.getNode(0).size();
-
-                String wholeModifier = "";
-
-                for (int j = 0; j < methodModifersSize; j++){
-
-
-
-                    if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true){
-                        // System.out.println("vis");
-                        methodObj.visibility = methodModifers.getNode(0).getString(j);
-
-
-                    }
-                    else{
-                        wholeModifier += methodModifers.getNode(0).getString(j) + " ";
-                    }
-
-                    //System.out.println(methodModifers.getNode(0).getString(j));
-
-                }
-
-                methodObj.modifier = wholeModifier;
-
-               Node params = currMethod;
-               System.out.println("params " + params.getNode(4).size());
-
-               if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0){
-
-
-                   //TraverseFieldDeclaration(params.getNode(4));
-                   System.out.println("params " + params.getNode(4));
-                 // methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4).getNode(0)));
-                   // CustomVariablesClass myVars =
-
-
-               }
-
-//               for (int x = 0; x < params.size(); x++){
-//                    if (params.getNode(x) != null) {
-//                        System.out.println("index " + x + "\n" + params.getNode(x));
+//        classBody = n.getNode(5);
+//
+//        for (int i = 0; i < classBody.size(); i++){
+//
+//
+//            if (classBody.getNode(i).getName().equals("MethodDeclaration")){
+//                // System.out.println(classBody.getNode(i));
+//
+//                CustomMethodClass methodObj = new CustomMethodClass();
+//
+//                Node currMethod = classBody.getNode(i);
+//
+//
+//                Node methodModifers = currMethod.getNode(0);
+//
+//                //System .out.println(methodModifers);
+//
+//                int methodModifersSize = methodModifers.getNode(0).size();
+//
+//                String wholeModifier = "";
+//
+//                for (int j = 0; j < methodModifersSize; j++){
+//
+//
+//
+//                    if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true){
+//                        // System.out.println("vis");
+//                        methodObj.visibility = methodModifers.getNode(0).getString(j);
+//
+//
+//                    }
+//                    else{
+//                        wholeModifier += methodModifers.getNode(0).getString(j) + " ";
 //                    }
 //
-//               }
-//                if (params.size() > 0) {
-//                    for (int l = 0; l < params.size(); l++) {
-//                        // need to refactor, uses feilddeclaraion instead
-//                        // of formalparamater. They're basically the same,
-//                        // except for the difference outlined int the above
-//                        // code
-//                        methodObj.parameters.add((TraverseFieldDeclaration(params.getNode(l))));
-//                    }
+//                    //System.out.println(methodModifers.getNode(0).getString(j));
+//
 //                }
-
-
-
-
-                // GET PARAMETERS OF METHOD
-                // Identifier
-                System.out.println("iden " + n.getNode(5).getNode(0).getNode(1));
-
-                //Declarator
-                System.out.println("declarator " + n.getNode(5).getNode(0).getNode(2));
-
-
-
-                //methodObj.modifiers = wholeModifier;
-
-
-
-
-            }
-        }
+//
+//                methodObj.modifier = wholeModifier;
+//
+//               Node params = currMethod;
+//               System.out.println("params " + params.getNode(4).size());
+//
+//               if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0){
+//
+//
+//                   //TraverseFieldDeclaration(params.getNode(4));
+//                   System.out.println("params " + params.getNode(4));
+//                 // methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4).getNode(0)));
+//                   // CustomVariablesClass myVars =
+//
+//
+//               }
+//
+////               for (int x = 0; x < params.size(); x++){
+////                    if (params.getNode(x) != null) {
+////                        System.out.println("index " + x + "\n" + params.getNode(x));
+////                    }
+////
+////               }
+////                if (params.size() > 0) {
+////                    for (int l = 0; l < params.size(); l++) {
+////                        // need to refactor, uses feilddeclaraion instead
+////                        // of formalparamater. They're basically the same,
+////                        // except for the difference outlined int the above
+////                        // code
+////                        methodObj.parameters.add((TraverseFieldDeclaration(params.getNode(l))));
+////                    }
+////                }
+//
+//
+//
+//
+//                // GET PARAMETERS OF METHOD
+//                // Identifier
+////                System.out.println("iden " + n.getNode(5).getNode(0).getNode(1));
+////
+////                //Declarator
+////                System.out.println("declarator " + n.getNode(5).getNode(0).getNode(2));
+//
+//
+//
+//                //methodObj.modifiers = wholeModifier;
+//
+//
+//
+//
+//            }
+//        }
 
         //     //System.out.println("helloi");
 
@@ -387,7 +390,6 @@ public class TraverseAST extends Visitor {
 
 
 
-        classSummary.classes.add(aClass);
 
         System.out.println("class's modifiers " + aClass.modifiers.toString());
 
@@ -395,7 +397,83 @@ public class TraverseAST extends Visitor {
 
         // summary.count++;
         visit(n);
+
+        classSummary.classes.add(aClass);
+        //aClass = new CustomClassObject();
+
+
+
     }
+
+
+
+    public void visitMethodDeclaration(GNode n) {
+
+
+        CustomMethodClass methodObj = new CustomMethodClass();
+
+        Node currMethod = n;
+
+
+        Node methodModifers = currMethod.getNode(0);
+
+        //System .out.println(methodModifers);
+
+        int methodModifersSize = methodModifers.getNode(0).size();
+
+        String wholeModifier = "";
+
+        for (int j = 0; j < methodModifersSize; j++) {
+
+
+            if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true) {
+                // System.out.println("vis");
+                methodObj.visibility = methodModifers.getNode(0).getString(j);
+
+
+            } else {
+                wholeModifier += methodModifers.getNode(0).getString(j) + " ";
+            }
+
+            //System.out.println(methodModifers.getNode(0).getString(j));
+
+        }
+
+        methodObj.modifier = wholeModifier;
+
+        Node params = currMethod;
+        System.out.println("params " + params.getNode(4).size());
+
+        if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0) {
+
+
+            //TraverseFieldDeclaration(params.getNode(4));
+            System.out.println("params " + params.getNode(4));
+            // methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4).getNode(0)));
+            // CustomVariablesClass myVars =
+
+
+        }
+
+
+        visit(n);
+        //currentClass.
+
+    }
+
+
+
+
+    public void visitConstructorDeclaration(GNode n){
+
+
+        CustomConstructorClass constructor = traverseConstructorDeclaration(n);
+        currentClass.addConstructor(constructor);
+
+        
+    }
+
+
 
 
 

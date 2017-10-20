@@ -98,3 +98,5 @@ runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
 test
 runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
 test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test

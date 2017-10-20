@@ -491,3 +491,19 @@
 2017-10-20 16:29:36,133 - [pool-88-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-20 16:32:13,998 - [pool-90-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-20 16:32:33,904 - [pool-92-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:35:16,320 - [pool-94-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:35:20,977 - [pool-96-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:36:02,665 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-20 16:36:04,513 - [pool-99-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:44:35,544 - [pool-102-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:45:21,301 - [pool-104-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:46:17,784 - [pool-106-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:52:27,815 - [pool-108-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:52:59,329 - [pool-110-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:53:05,368 - [pool-112-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:56:27,701 - [pool-115-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:56:56,778 - [pool-117-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:57:18,813 - [pool-119-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:59:02,063 - [pool-121-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:59:14,745 - [pool-123-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-20 16:59:54,689 - [pool-125-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
