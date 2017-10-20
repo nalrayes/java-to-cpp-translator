@@ -39,12 +39,58 @@ public class TraverseAST extends Visitor {
 
    }
 
-   public void TraverseFieldDeclaration(Node n){
+   // this function is used to get class Vars
+   public CustomVariablesClass TraverseFieldDeclaration(Node n){
 
-        System.out.println(n.getName());
+       // System.out.println(n.getName());
         
+
+        CustomVariablesClass varToReturn = new CustomVariablesClass();
+
+        // Get Modifier if one exists 
+        if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).getNode(0).size() > 0){
+
+            String varModifiers = "";
+
+            int amountOfModifers = n.getNode(0).size();
+
+            for (int i = 0; i < amountOfModifers; i++){
+
+
+                //System.out.println("get mods " + n.getNode(0).getNode(0).getString(i));
+                varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
+
+            }
+
+            varToReturn.modifier = varModifiers;
+           
+        }
+
+
+
         // Get Qualified Identifier
-        System.out.println(n.getNode(1).getNode(0).getString(0));
+        String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
+        //System.out.println(qualifiedIdentifier);
+        varToReturn.type = qualifiedIdentifier;
+
+        // Get Declarator Identifier
+       // System.out.println("Get Dec");
+        String declarator = n.getNode(2).getNode(0).getString(0);
+       // System.out.println(declarator);
+        varToReturn.name = declarator;
+
+
+
+
+        String theVariable = qualifiedIdentifier + " " + declarator;
+        System.out.println("var to return " + varToReturn.name);
+
+        return varToReturn;
+
+      //  theV
+
+
+        //Get Class var declarators
 
       // return n.getString(1);
 
@@ -70,7 +116,8 @@ public class TraverseAST extends Visitor {
         //summary.names += n.getString(3) + " ";
         CustomClassObject aClass = new CustomClassObject();
         aClass.className = n.getString(1);
-      //  System.out.println("printing " + aClass.className);
+      
+        // Get all modifiers of the class and add them to the class object
         Node modifiers  = n.getNode(0);
         for (int i = 0; i < modifiers.size(); i++) {
             Node curNode = modifiers.getNode(i);
@@ -79,23 +126,33 @@ public class TraverseAST extends Visitor {
 
         }
 
-  //  visitClassBody(n);
-      //  System.out.println("class body " + n.getNode(5));
+
 
         Node classBody = n.getNode(5);
 
 
         int classBodySize = n.getNode(5).size();
 
+        // check all field declarations
         for (int i = 0; i < classBodySize; i++){
              Node curNode = classBody.getNode(i);
 
-
+             // if a field Declaration is found get the class variable contained within it
             if (curNode.getName().equals("FieldDeclaration")){
 
-                    System.out.println("found field dec");
-                    //System.out.println(curNode.getName());
-                    TraverseFieldDeclaration(curNode);
+                    
+                    // calls a custom method TraverseFieldDeclaration to collect variable info
+                   CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
+
+                   aClass.classVariables.add(aVar);
+
+                   for (CustomVariablesClass v : aClass.classVariables){
+
+                    System.out.println("the vars " + v.name);
+                   }
+
+                  // System.out.println("the var " + aVar.name);
+
 
             } else if (curNode.getName().equals("ConstructorDeclaration")) {
                 System.out.println("Found constructor!");

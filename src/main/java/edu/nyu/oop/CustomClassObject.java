@@ -10,7 +10,7 @@ public class CustomClassObject {
 //
         private ArrayList<CustomConstructorClass> constructors;
 //
-//        ArrayList<LocalVariable> localVariables;
+      	ArrayList<CustomVariablesClass> classVariables;
 
         ArrayList<String> modifiers;
 
@@ -21,7 +21,7 @@ public class CustomClassObject {
 //        ArrayList<IntermediateDataStructure.FileClass> implementors;
 
 
-    public CustomClassObject() {
+    public CustomClassObject()
         this.constructors = new ArrayList<CustomConstructorClass>();
         this.modifiers = new ArrayList<String>();
 
