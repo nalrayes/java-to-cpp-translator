@@ -19,7 +19,7 @@ public class TraverseASTTest {
     @BeforeClass
     public static void beforeClass() {
         logger.debug("Executing TraverseASTTest");
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test010/Test010.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test003/Test003.java");
         // XtcTestUtils.prettyPrintAst(node);
     }
 
@@ -34,7 +34,7 @@ public class TraverseASTTest {
     public void testMethodSummary1() {
         // Assert that the correct number of methods were counted by our visitor
         System.out.println(classSummary.classes.toString());
-       assertEquals(2, classSummary.classes.size());
+        assertEquals(2, classSummary.classes.size());
     }
 
 //    @Test

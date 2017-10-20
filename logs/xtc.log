@@ -289,3 +289,124 @@
 2017-10-19 19:04:32,961 - [pool-40-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-19 19:05:13,831 - [pool-42-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-19 19:05:26,020 - [pool-44-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:04:04,863 - [pool-7-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-19 20:04:04,889 - [pool-7-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-19 20:04:05,077 - [pool-7-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-19 20:04:05,177 - [pool-7-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-19 20:04:05,273 - [pool-7-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-19 20:04:05,409 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-19 20:04:05,413 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-19 20:04:05,414 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-19 20:04:05,415 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-19 20:04:05,427 - [pool-7-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:04:05,441 - [pool-7-thread-5] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-19 20:04:05,455 - [pool-7-thread-5] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-19 20:04:05,463 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-19 20:04:05,463 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-19 20:04:05,464 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-19 20:04:05,465 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-19 20:04:05,465 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-19 20:04:05,468 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-19 20:04:05,468 - [pool-7-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-19 20:04:05,475 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-19 20:04:05,476 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:05,476 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:05,477 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:05,477 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:05,477 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:05,478 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:05,478 - [pool-7-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-19 20:04:26,578 - [pool-6-thread-9] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-19 20:04:26,600 - [pool-6-thread-9] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-19 20:04:26,802 - [pool-6-thread-9] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-19 20:04:26,926 - [pool-6-thread-9] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-19 20:04:27,117 - [pool-6-thread-9] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-19 20:04:27,312 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-19 20:04:27,316 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-19 20:04:27,317 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-19 20:04:27,318 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-19 20:04:27,331 - [pool-6-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:04:27,347 - [pool-6-thread-9] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-19 20:04:27,363 - [pool-6-thread-9] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-19 20:04:27,370 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-19 20:04:27,371 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-19 20:04:27,372 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-19 20:04:27,372 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-19 20:04:27,373 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-19 20:04:27,376 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-19 20:04:27,376 - [pool-6-thread-9] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-19 20:04:27,384 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-19 20:04:27,384 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:27,384 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:27,385 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:27,386 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:27,386 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:27,386 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:27,386 - [pool-6-thread-9] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-19 20:04:29,032 - [pool-8-thread-4] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-19 20:04:29,052 - [pool-8-thread-4] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-19 20:04:29,213 - [pool-8-thread-4] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-19 20:04:29,305 - [pool-8-thread-4] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-19 20:04:29,402 - [pool-8-thread-4] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-19 20:04:29,505 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-19 20:04:29,508 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-19 20:04:29,509 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-19 20:04:29,509 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-19 20:04:29,509 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-19 20:04:29,509 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-19 20:04:29,517 - [pool-8-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:04:29,527 - [pool-8-thread-4] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-19 20:04:29,537 - [pool-8-thread-4] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-19 20:04:29,542 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-19 20:04:29,543 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-19 20:04:29,544 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-19 20:04:29,544 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-19 20:04:29,544 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-19 20:04:29,546 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-19 20:04:29,547 - [pool-8-thread-4] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-19 20:04:29,551 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-19 20:04:29,551 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:29,551 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:29,552 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:29,552 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:29,552 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-19 20:04:29,553 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-19 20:04:29,553 - [pool-8-thread-4] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-19 20:05:09,205 - [pool-11-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:07:09,051 - [pool-13-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:08:59,682 - [pool-15-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:09:35,130 - [pool-17-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest

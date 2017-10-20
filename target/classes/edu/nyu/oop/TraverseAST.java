@@ -42,9 +42,26 @@ public class TraverseAST extends Visitor {
    public void TraverseFieldDeclaration(Node n){
 
         System.out.println(n.getName());
+        
+        // Get Qualified Identifier
         System.out.println(n.getNode(1).getNode(0).getString(0));
+
       // return n.getString(1);
 
+   }
+
+   private CustomConstructorClass traverseConstructorDeclaration(Node n) {
+       String name = n.getString(2);
+       Node modifiers = n.getNode(0);
+       CustomConstructorClass currentConstructor = new CustomConstructorClass(name);
+       if (modifiers.size() == 0) {
+           currentConstructor.setVisibility("");
+       } else {
+           System.out.println(modifiers.getNode(0).getString(0));
+           currentConstructor.setVisibility(modifiers.getNode(0).toString());
+       }
+
+       return currentConstructor;
    }
 
 
@@ -80,9 +97,10 @@ public class TraverseAST extends Visitor {
                     //System.out.println(curNode.getName());
                     TraverseFieldDeclaration(curNode);
 
-
-
-
+            } else if (curNode.getName().equals("ConstructorDeclaration")) {
+                System.out.println("Found constructor!");
+                CustomConstructorClass constructor = traverseConstructorDeclaration(curNode);
+                aClass.addConstructor(constructor);
             }
 
 

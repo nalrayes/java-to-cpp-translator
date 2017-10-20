@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/}translator-2...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/nayef/Dropbox/NYU%20Classes/Senior%20Semester%201/oop/translator-2/}translator-2...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: xtc-demo#xtc-demo;1.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for xtc-demo#xtc-demo;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies xtc-demo#xtc-demo;1.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@23bb3059[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6acda7b2[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -307,19 +307,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 389ms :: artifacts dl 18ms[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 compile produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 runtime produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 test produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 provided produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 optional produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 compile-internal produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 runtime-internal produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 test-internal produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 plugin produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 sources produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 docs produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 pom produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 scala-tool produced in /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (389ms resolve - 18ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 429ms :: artifacts dl 18ms[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 compile produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 runtime produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 test produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 provided produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 optional produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 compile-internal produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 runtime-internal produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 test-internal produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 plugin produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 sources produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 docs produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 pom produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for xtc-demo#xtc-demo;1.0 scala-tool produced in /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/resolution-cache/reports/xtc-demo-xtc-demo-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (429ms resolve - 18ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

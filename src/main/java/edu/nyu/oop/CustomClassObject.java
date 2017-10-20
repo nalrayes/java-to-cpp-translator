@@ -8,7 +8,7 @@ public class CustomClassObject {
         // an arraylist of methods
 //        ArrayList<Method> methods;
 //
-//        ArrayList<Constructor> constructors;
+        private ArrayList<CustomConstructorClass> constructors;
 //
 //        ArrayList<LocalVariable> localVariables;
 
@@ -22,11 +22,15 @@ public class CustomClassObject {
 
 
     public CustomClassObject() {
-
-        modifiers = new ArrayList<String>();
+        this.constructors = new ArrayList<CustomConstructorClass>();
+        this.modifiers = new ArrayList<String>();
 
         //this.className = className;
 
 
+    }
+
+    public void addConstructor(CustomConstructorClass constructor) {
+        this.constructors.add(constructor);
     }
 }
