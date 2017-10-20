@@ -65,3 +65,26 @@ test
 runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/test016/Test016.java
 test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/test002/Test002.java
+test
+runxtc -printJavaAst src/test/java/inputs/test002/Test002.java
+test
+runxtc -printJavaAst src/test/java/inputs/test002/Test002.java
+test
+runxtc -printJavaAst src/test/java/inputs/test002/Test002.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test
+runxtc -printJavaAst src/test/java/inputs/test010/Test010.java
+test

@@ -326,3 +326,122 @@
 2017-10-19 19:38:14,844 - [pool-113-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-19 19:39:21,185 - [pool-116-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-19 19:39:46,803 - [pool-118-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:48:03,551 - [pool-120-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:48:13,242 - [pool-122-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:52:56,860 - [pool-130-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:55:00,281 - [pool-132-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:57:53,821 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 19:58:34,169 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 19:58:37,289 - [pool-136-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:58:38,988 - [pool-138-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:58:46,343 - [pool-140-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 19:59:00,453 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 19:59:53,945 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 19:59:56,334 - [pool-144-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:00:10,779 - [pool-146-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:00:24,047 - [pool-148-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:00:29,596 - [pool-150-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:00:36,694 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:01:10,392 - [pool-153-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:02:26,925 - [pool-156-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:02:41,246 - [pool-158-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:02:47,730 - [pool-160-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:02:54,768 - [pool-162-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:03:21,249 - [pool-164-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:04:36,950 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:06:08,121 - [pool-167-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:06:17,303 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:07:11,205 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:07:13,112 - [pool-171-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:19:04,870 - [pool-174-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:19:43,399 - [pool-176-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:22:57,829 - [pool-178-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:24:54,698 - [pool-180-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:27:00,125 - [pool-182-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:27:29,556 - [pool-184-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:27:31,441 - [pool-186-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:27:44,512 - [pool-188-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:28:06,220 - [pool-190-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:28:23,394 - [pool-192-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:28:40,615 - [pool-194-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:28:50,501 - [pool-196-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:29:52,785 - [pool-199-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:30:06,664 - [pool-201-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:31:27,138 - [pool-203-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:32:10,999 - [pool-205-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:32:59,090 - [pool-207-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:33:32,829 - [pool-209-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:33:43,396 - [pool-211-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:33:51,958 - [pool-213-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:34:07,026 - [pool-215-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:37:32,138 - [pool-217-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:39:51,611 - [pool-220-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:43:03,030 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:44:10,940 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:44:47,783 - [pool-230-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:44:59,544 - [pool-232-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:46:51,170 - [pool-236-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:47:01,511 - [pool-238-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:47:17,068 - [pool-240-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:47:49,030 - [pool-242-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:48:03,673 - [pool-244-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:48:19,813 - [pool-246-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:49:01,352 - [pool-249-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:49:04,224 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:50:34,598 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:50:37,098 - [pool-253-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:50:47,916 - [pool-255-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:52:04,975 - [pool-257-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:52:13,826 - [pool-259-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:52:28,878 - [pool-261-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:52:37,793 - [pool-263-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:52:47,486 - [pool-265-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:53:06,339 - [pool-268-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:53:22,784 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:54:01,411 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:54:07,503 - [pool-272-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:55:38,063 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:56:04,321 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 20:57:11,210 - [pool-276-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:57:35,671 - [pool-278-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:57:53,412 - [pool-280-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:58:11,927 - [pool-282-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:58:20,816 - [pool-284-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:58:45,079 - [pool-286-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 20:59:46,232 - [pool-289-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:00:00,573 - [pool-291-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:00:11,300 - [pool-293-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:00:32,625 - [pool-295-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:00:37,080 - [pool-297-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:00:48,062 - [pool-299-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:01:15,817 - [pool-301-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:01:27,821 - [pool-303-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:01:37,534 - [pool-306-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:01:45,701 - [pool-308-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:01:55,186 - [pool-310-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:02:04,438 - [pool-312-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:02:12,831 - [pool-314-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:14:03,523 - [pool-318-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:16:41,039 - [pool-323-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:16:55,380 - [pool-325-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:17:59,836 - [pool-328-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:18:26,131 - [pool-330-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:18:28,790 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 21:23:40,370 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-19 21:23:42,755 - [pool-334-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:24:19,684 - [pool-336-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:24:32,059 - [pool-339-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:24:50,106 - [pool-342-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:11,461 - [pool-344-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:22,525 - [pool-347-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:31,633 - [pool-349-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:37,886 - [pool-351-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:47,588 - [pool-353-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:52,367 - [pool-355-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:25:58,361 - [pool-357-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:26:02,722 - [pool-359-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:26:06,781 - [pool-361-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:26:17,815 - [pool-363-thread-10] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:27:28,478 - [pool-365-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:28:02,289 - [pool-368-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-19 21:28:27,404 - [pool-370-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest

@@ -22,6 +22,7 @@ public class TraverseAST extends Visitor {
 
     private ClassSummary classSummary = new ClassSummary();
 
+    public static final int DEBUGGING = 1;  
 
 
 
@@ -48,7 +49,9 @@ public class TraverseAST extends Visitor {
         CustomVariablesClass varToReturn = new CustomVariablesClass();
 
         // Get Modifier if one exists 
-        if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).getNode(0).size() > 0){
+
+
+        if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
 
             String varModifiers = "";
 
@@ -85,14 +88,90 @@ public class TraverseAST extends Visitor {
         String theVariable = qualifiedIdentifier + " " + declarator;
         System.out.println("var to return " + varToReturn.name);
 
+
         return varToReturn;
 
-      //  theV
+
+        
+
+   }
 
 
-        //Get Class var declarators
+   public void traverseMethodsInClass(Node n, CustomClassObject customClassObj){
 
-      // return n.getString(1);
+        // getting methods in the class
+
+       // if ()
+        //System.out.println("in method " + n.getNode(5));
+
+
+        int classBodySize = n.getNode(5).size();
+        System.out.println("hello");
+
+        // for (int i = 0; i < classBodySize; i++){
+
+        //     if (n.getNode(5).getNode(i).getName().equals("MethodDeclaration")){
+
+        //         Node theMethod = n.getNode(5).getNode(i);
+
+        //         if (theMethod.getNode(0).getName().equals("Modifiers")){
+
+
+
+        //             int modifierSize = theMethod.getNode(0).getNode(0).size();
+        //            //System.out.println("mod size " + modifierSize);
+        //           //  for (int x = 0; x < modifierSize; x++){ 
+
+
+        //                 System.out.println("the mod " + theMethod.getNode(0).getNode(0).getString(x) + " at index " + x);
+
+
+
+        //             //}
+
+
+        //         }
+
+
+
+        //     }
+
+
+        // }
+
+
+
+   }
+
+
+   public boolean checkMethodVisibility(String check){
+
+        switch (check){
+
+
+            case "public":
+                return true;
+               // break;
+
+            case "private":
+                return true;
+               // break;
+
+            case "protected":
+                return true;
+               // break;
+
+            default:
+                return false;
+
+
+
+
+        }
+
+       // return false;
+
+
 
    }
 
@@ -132,10 +211,13 @@ public class TraverseAST extends Visitor {
 
                    aClass.classVariables.add(aVar);
 
-                   for (CustomVariablesClass v : aClass.classVariables){
+                   if (DEBUGGING == 1){
 
-                    System.out.println("the vars " + v.name);
-                   }
+                       for (CustomVariablesClass v : aClass.classVariables){
+
+                        System.out.println("the vars " + v.name);
+                       }
+                    }
 
                   // System.out.println("the var " + aVar.name);
 
@@ -149,6 +231,83 @@ public class TraverseAST extends Visitor {
 
 
         }
+
+
+
+        // GET METHODS - WILL TURN THIS INTO A METHOD LATER 
+
+        classBody = n.getNode(5);
+
+        for (int i = 0; i < classBody.size(); i++){
+
+
+            if (classBody.getNode(i).getName().equals("MethodDeclaration")){
+               // System.out.println(classBody.getNode(i));
+
+                CustomMethodClass methodObj = new CustomMethodClass();
+
+                Node currMethod = classBody.getNode(i);
+
+
+                Node methodModifers = currMethod.getNode(0);
+
+                //System .out.println(methodModifers);
+
+                int methodModifersSize = methodModifers.getNode(0).size();
+
+                String wholeModifier = "";
+
+                for (int j = 0; j < methodModifersSize; j++){
+
+
+
+                   if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true){
+                       // System.out.println("vis");
+                        methodObj.visibility = methodModifers.getNode(0).getString(j);
+
+
+                   }
+                   else{
+                        wholeModifier += methodModifers.getNode(0).getString(j) + " ";
+                    }
+                        
+                        //System.out.println(methodModifers.getNode(0).getString(j));
+
+                }
+
+                methodObj.modifier = wholeModifier;
+
+
+
+
+                // GET PARAMETERS OF METHOD
+                // Identifier
+                System.out.println("iden " + n.getNode(5).getNode(0).getNode(1));
+
+                //Declarator
+                System.out.println("declarator " + n.getNode(5).getNode(0).getNode(2));
+
+
+
+                //methodObj.modifiers = wholeModifier;
+
+
+
+                
+            }
+        }
+
+            //     //System.out.println("helloi");
+
+            // }
+        //}
+
+
+                //System.out.println("hello");
+
+
+
+        
 
 
            

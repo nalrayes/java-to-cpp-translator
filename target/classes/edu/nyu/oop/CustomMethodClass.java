@@ -6,6 +6,7 @@ public class CustomMethodClass {
 
     String visibility;
     String modifier;
+    String name;
     ArrayList<Object> parameters;
     String returnType;
 }
