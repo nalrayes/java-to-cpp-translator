@@ -1,6 +1,6 @@
 [0m[[0minfo[0m] [0mRunning edu.nyu.oop.Boot -printJavaAst src/test/java/inputs/test010/Test010.java[0m
 [0m[[0minfo[0m] [0mTranslator-2, v. 2.4.0, The Compilers[0m
-[0m[[0minfo[0m] [0m2017-10-19 21:23:40,370 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.[0m
+[0m[[0minfo[0m] [0m2017-10-20 16:17:43,216 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.[0m
 [0m[[0minfo[0m] [0mProcessing src/test/java/inputs/test010/Test010.java ...[0m
 [0m[[0minfo[0m] [0mCompilationUnit([0m
 [0m[[0minfo[0m] [0m  PackageDeclaration([0m

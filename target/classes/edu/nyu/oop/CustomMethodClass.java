@@ -7,6 +7,6 @@ public class CustomMethodClass {
     String visibility;
     String modifier;
     String name;
-    ArrayList<Object> parameters;
+    ArrayList<CustomVariablesClass> parameters;
     String returnType;
 }

@@ -313,6 +313,36 @@ public class TraverseAST extends Visitor {
 
                 methodObj.modifier = wholeModifier;
 
+               Node params = currMethod;
+               System.out.println("params " + params.getNode(4).size());
+
+               if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0){
+
+
+                   //TraverseFieldDeclaration(params.getNode(4));
+                   System.out.println("params " + params.getNode(4));
+                 // methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4).getNode(0)));
+                   // CustomVariablesClass myVars =
+
+
+               }
+
+//               for (int x = 0; x < params.size(); x++){
+//                    if (params.getNode(x) != null) {
+//                        System.out.println("index " + x + "\n" + params.getNode(x));
+//                    }
+//
+//               }
+//                if (params.size() > 0) {
+//                    for (int l = 0; l < params.size(); l++) {
+//                        // need to refactor, uses feilddeclaraion instead
+//                        // of formalparamater. They're basically the same,
+//                        // except for the difference outlined int the above
+//                        // code
+//                        methodObj.parameters.add((TraverseFieldDeclaration(params.getNode(l))));
+//                    }
+//                }
+
 
 
 
