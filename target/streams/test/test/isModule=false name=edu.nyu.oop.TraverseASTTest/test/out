@@ -1,1 +1,20 @@
-[0m[[31merror[0m] [0mTest edu.nyu.oop.[33mTraverseASTTest[0m.[31mtestMethodSummary1[0m failed: expected:<2> but was:<5>, took 0.007 sec[0m
+[0m[[31merror[0m] [0mTest edu.nyu.oop.[33mTraverseASTTest[0m.[31mtestMethodSummary1[0m failed: xtc.tree.[31mVisitingException[0m: Error visiting node ClassDeclaration(Modifiers(), "A", null, null, null, ClassBody(FieldDeclaration(Modifiers(), Type(QualifiedIdentifier("String"), null), Declarators(Declarator("a", null, null))), MethodDeclaration(Modifiers(Modifier("public")), null, VoidType(), "setA", FormalParameters(FormalParameter(Modifiers(), Type(QualifiedIdentifier("String"), null), null, "x", null)), null, null, Block(ExpressionStatement(Expression(PrimaryIdentifier("a"), "=", PrimaryIdentifier("x"))))), MethodDeclaration(Modifiers(Modifier("public")), null, VoidType(), "printOther", FormalParameters(FormalParameter(Modifiers(), Type(QualifiedIdentifier("A"), null), null, "other", null)), null, null, Block(ExpressionStatement(CallExpression(SelectionExpression(PrimaryIdentifier("System"), "out"), null, "println", Arguments(CallExpression(PrimaryIdentifier("other"), null, "toString", Arguments())))))), MethodDeclaration(Modifiers(Modifier("public")), null, Type(QualifiedIdentifier("String"), null), "toString", FormalParameters(), null, null, Block(ReturnStatement(PrimaryIdentifier("a")))))) with visitor edu.nyu.oop.TraverseAST@2c86965c, took 0.005 sec[0m
+[0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:228)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:192)[0m
+[0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
+[0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[31merror[0m] [0m    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
+[0m[[31merror[0m] [0m    at java.lang.reflect.Method.invoke(Method.java:498)[0m
+[0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:210)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:214)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseASTTest.before([35mTraverseASTTest.java[0m:[33m34[0m)[0m
+[0m[[31merror[0m] [0m    ...[0m
+[0m[[31merror[0m] [0mCaused by: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0[0m
+[0m[[31merror[0m] [0m    at xtc.tree.GNode$Fixed0.get(GNode.java:115)[0m
+[0m[[31merror[0m] [0m    at xtc.tree.Node.getNode(Node.java:460)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.TraverseFieldDeclaration(TraverseAST.java:51)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitClassDeclaration(TraverseAST.java:131)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:192)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:214)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseASTTest.before([35mTraverseASTTest.java[0m:[33m34[0m)[0m
+[0m[[31merror[0m] [0m    ... 53 more[0m
