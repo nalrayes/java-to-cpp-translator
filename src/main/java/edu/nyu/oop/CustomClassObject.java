@@ -21,13 +21,17 @@ public class CustomClassObject {
 //        ArrayList<IntermediateDataStructure.FileClass> implementors;
 
 
-    public CustomClassObject()
+    public CustomClassObject() {
         this.constructors = new ArrayList<CustomConstructorClass>();
         this.modifiers = new ArrayList<String>();
-
+        this.classVariables = new ArrayList<CustomVariablesClass>();
         //this.className = className;
 
 
+    }
+
+    public ArrayList<CustomConstructorClass> getConstructors() {
+        return constructors;
     }
 
     public void addConstructor(CustomConstructorClass constructor) {
