@@ -49,8 +49,11 @@ public class TraverseAST extends Visitor {
         CustomVariablesClass varToReturn = new CustomVariablesClass();
 
         // Get Modifier if one exists 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ed154f75d294cd0e31a2e7f44ae04ab2bd9dec1e
         if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
 
             String varModifiers = "";
@@ -78,7 +81,15 @@ public class TraverseAST extends Visitor {
 
         // Get Declarator Identifier
        // System.out.println("Get Dec");
-        String declarator = n.getNode(2).getNode(0).getString(0);
+       String declarator;
+       if (n.getNode(2) != null) {
+           // then this is a declarator
+           declarator = n.getNode(2).getNode(0).getString(0);
+       } else {
+           // then this is a formalparameter
+           declarator = n.getString(2);
+       }
+
        // System.out.println(declarator);
         varToReturn.name = declarator;
 
@@ -175,6 +186,35 @@ public class TraverseAST extends Visitor {
 
    }
 
+   private CustomConstructorClass traverseConstructorDeclaration(Node n) {
+       // name is 2nd
+       String name = n.getString(2);
+       // modifiers node
+       Node modifiers = n.getNode(0);
+       CustomConstructorClass currentConstructor = new CustomConstructorClass(name);
+       // only possible modifiers for constructor is visibility
+       if (modifiers.size() == 0) {
+           currentConstructor.setVisibility("");
+       } else {
+           System.out.println(modifiers.getNode(0).getString(0));
+           currentConstructor.setVisibility(modifiers.getNode(0).getString(0));
+       }
+
+       Node params = n.getNode(3);
+       if (params.size() > 0) {
+           for (int i = 0; i < params.size(); i++) {
+               // need to refactor, uses feilddeclaraion instead
+               // of formalparamater. They're basically the same,
+               // except for the difference outlined int the above
+               // code
+               currentConstructor.addParameter(TraverseFieldDeclaration(params.getNode(i)));
+           }
+       }
+
+
+       return currentConstructor;
+   }
+
 
     public void visitClassDeclaration(GNode n) {
        // summary.nodes += n.getName() + " ";
@@ -222,13 +262,11 @@ public class TraverseAST extends Visitor {
                   // System.out.println("the var " + aVar.name);
 
 
-
-                   //System.out.println("class var " + getClassVar);
-
-
+            } else if (curNode.getName().equals("ConstructorDeclaration")) {
+                System.out.println("Found constructor!");
+                CustomConstructorClass constructor = traverseConstructorDeclaration(curNode);
+                aClass.addConstructor(constructor);
             }
-
-
 
         }
 
