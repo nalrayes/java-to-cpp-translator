@@ -766,3 +766,54 @@
 2017-10-21 14:21:37,505 - [pool-12-thread-3] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
 >>>>>>> 260abbe50f060cab5728a5464c7a55867a98897b
 2017-10-21 14:31:03,078 - [pool-16-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 14:35:22,149 - [main] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-21 14:35:28,623 - [main] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-21 14:35:28,662 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 14:35:28,663 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 14:35:28,666 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 14:35:28,666 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 14:35:28,667 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 14:35:28,668 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 14:35:28,669 - [main] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-21 14:35:28,671 - [main] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-21 14:35:28,719 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-21 14:35:28,761 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-21 14:35:28,766 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-21 14:35:28,766 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-21 14:35:28,766 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-21 14:35:28,766 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 14:35:28,767 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 14:35:28,768 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-21 14:35:28,769 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-21 14:35:28,776 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 14:35:28,777 - [main] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 14:35:28,778 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-21 14:35:28,788 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 14:35:28,789 - [main] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 14:35:28,792 - [main] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-21 14:35:28,834 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-21 14:35:28,849 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-21 14:35:29,622 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-21 14:35:29,968 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-21 14:35:30,481 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-21 14:35:30,936 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 14:35:38,128 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 14:42:46,447 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 14:47:20,475 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 15:10:31,040 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:11:59,617 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:12:25,398 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:13:50,917 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:14:15,669 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:14:34,544 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:15:35,108 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 15:15:57,580 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest

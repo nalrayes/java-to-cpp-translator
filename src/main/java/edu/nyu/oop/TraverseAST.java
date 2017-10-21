@@ -23,16 +23,12 @@ public class TraverseAST extends Visitor {
     private ClassSummary classSummary = new ClassSummary();
 
     public static final int DEBUGGING = 1;
-
-
+    //Global var to keep track of the current class in AST
     public CustomClassObject currentClass;
-
-
 
     public void visitCompilationUnit(GNode n) {
         visit(n);
     }
-
 
     private void visitClassBody(GNode n){
 
@@ -47,33 +43,17 @@ public class TraverseAST extends Visitor {
     public CustomVariablesClass TraverseFieldDeclaration(Node n){
 
         // System.out.println(n.getName());
-
-
         CustomVariablesClass varToReturn = new CustomVariablesClass();
-
-
-
-
-
         if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
-
             String varModifiers = "";
-
             int amountOfModifers = n.getNode(0).size();
-
             for (int i = 0; i < amountOfModifers; i++){
-
-
                 //System.out.println("get mods " + n.getNode(0).getNode(0).getString(i));
                 varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
 
             }
-
             varToReturn.modifier = varModifiers;
-
         }
-
-
 
         // Get Qualified Identifier
         String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
@@ -94,18 +74,10 @@ public class TraverseAST extends Visitor {
         // System.out.println(declarator);
         varToReturn.name = declarator;
 
-
-
-
         String theVariable = qualifiedIdentifier + " " + declarator;
-        System.out.println("var to return " + varToReturn.name);
-
+        //System.out.println("var to return " + varToReturn.name);
 
         return varToReturn;
-
-
-
-
     }
 
 
@@ -218,191 +190,50 @@ public class TraverseAST extends Visitor {
 
 
     public void visitClassDeclaration(GNode n) {
-        // summary.nodes += n.getName() + " ";
-        //summary.names += n.getString(3) + " ";
 
-
-
-        CustomClassObject aClass = new CustomClassObject();
-        aClass.className = n.getString(1);
-        currentClass = aClass;
+        //Entering the class scope & create a new class object
+        currentClass = new CustomClassObject();
+        //Get the class name
+        currentClass.className = n.getString(1);
 
         // Get all modifiers of the class and add them to the class object
         Node modifiers  = n.getNode(0);
         for (int i = 0; i < modifiers.size(); i++) {
             Node curNode = modifiers.getNode(i);
             String modifierName = curNode.getString(0);
-            aClass.modifiers.add(modifierName);
+            currentClass.modifiers.add(modifierName);
 
         }
+        System.out.println("Class's modifiers " + currentClass.modifiers.toString());
 
-
-
+        //Get the field decleration node
         Node classBody = n.getNode(5);
-
-
+        //Get the size of the field
         int classBodySize = n.getNode(5).size();
-
         // check all field declarations
         for (int i = 0; i < classBodySize; i++){
             Node curNode = classBody.getNode(i);
-
             // if a field Declaration is found get the class variable contained within it
             if (curNode.getName().equals("FieldDeclaration")){
-
-
                 // calls a custom method TraverseFieldDeclaration to collect variable info
                 CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
-
-                aClass.classVariables.add(aVar);
-
+                currentClass.classVariables.add(aVar);
+                //For DEBUG
                 if (DEBUGGING == 1){
-
-                    for (CustomVariablesClass v : aClass.classVariables){
-
-                        System.out.println("the vars " + v.name);
+                    for (CustomVariablesClass v : currentClass.classVariables){
+                        System.out.println("Class vars " + v.name);
                     }
                 }
-
-                // System.out.println("the var " + aVar.name);
-
-
             }
-
         }
 
-
-
-        // GET METHODS - WILL TURN THIS INTO A METHOD LATER
-
-//        classBody = n.getNode(5);
-//
-//        for (int i = 0; i < classBody.size(); i++){
-//
-//
-//            if (classBody.getNode(i).getName().equals("MethodDeclaration")){
-//                // System.out.println(classBody.getNode(i));
-//
-//                CustomMethodClass methodObj = new CustomMethodClass();
-//
-//                Node currMethod = classBody.getNode(i);
-//
-//
-//                Node methodModifers = currMethod.getNode(0);
-//
-//                //System .out.println(methodModifers);
-//
-//                int methodModifersSize = methodModifers.getNode(0).size();
-//
-//                String wholeModifier = "";
-//
-//                for (int j = 0; j < methodModifersSize; j++){
-//
-//
-//
-//                    if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true){
-//                        // System.out.println("vis");
-//                        methodObj.visibility = methodModifers.getNode(0).getString(j);
-//
-//
-//                    }
-//                    else{
-//                        wholeModifier += methodModifers.getNode(0).getString(j) + " ";
-//                    }
-//
-//                    //System.out.println(methodModifers.getNode(0).getString(j));
-//
-//                }
-//
-//                methodObj.modifier = wholeModifier;
-//
-//               Node params = currMethod;
-//               System.out.println("params " + params.getNode(4).size());
-//
-//               if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0){
-//
-//
-//                   //TraverseFieldDeclaration(params.getNode(4));
-//                   System.out.println("params " + params.getNode(4));
-//                 // methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4).getNode(0)));
-//                   // CustomVariablesClass myVars =
-//
-//
-//               }
-//
-////               for (int x = 0; x < params.size(); x++){
-////                    if (params.getNode(x) != null) {
-////                        System.out.println("index " + x + "\n" + params.getNode(x));
-////                    }
-////
-////               }
-////                if (params.size() > 0) {
-////                    for (int l = 0; l < params.size(); l++) {
-////                        // need to refactor, uses feilddeclaraion instead
-////                        // of formalparamater. They're basically the same,
-////                        // except for the difference outlined int the above
-////                        // code
-////                        methodObj.parameters.add((TraverseFieldDeclaration(params.getNode(l))));
-////                    }
-////                }
-//
-//
-//
-//
-//                // GET PARAMETERS OF METHOD
-//                // Identifier
-////                System.out.println("iden " + n.getNode(5).getNode(0).getNode(1));
-////
-////                //Declarator
-////                System.out.println("declarator " + n.getNode(5).getNode(0).getNode(2));
-//
-//
-//
-//                //methodObj.modifiers = wholeModifier;
-//
-//
-//
-//
-//            }
-//        }
-
-        //     //System.out.println("helloi");
-
-        // }
-        //}
-
-
-        //System.out.println("hello");
-
-
-
-
-
-
-
-        //isit(n)
-
-
-
-
-        //get class vars
-        //  System.out.println("class body " + n.getNode(5));
-
-
-
-
-        System.out.println("class's modifiers " + aClass.modifiers.toString());
-
-
-
-        // summary.count++;
         visit(n);
-
-        classSummary.classes.add(aClass);
-        //aClass = new CustomClassObject();
-
-
-
+        //Class scope exists. Hence, end of the class
+        //Save the class object to the array of class objects
+        classSummary.classes.add(currentClass);
+        //Make the pointer point to NULL
+        System.out.println("End of class: " + currentClass.className);
+        currentClass = null;
     }
 
 

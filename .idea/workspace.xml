@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0c82ea-0ab0-44f0-bed3-bbabd831298f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CustomMethodClass.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CustomMethodClass.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" />
@@ -16,12 +15,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.TraverseASTTest/test/out" afterPath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.TraverseASTTest/test/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.TraverseASTTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.TraverseASTTest.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -43,17 +40,42 @@
       <file leaf-file-name="TraverseAST.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="64">
+              <caret line="120" column="16" lean-forward="true" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
               <folding>
-                <marker date="1508610752000" expanded="true" signature="11677:11929" ph="//..." />
-                <marker date="1508610752000" expanded="true" signature="12049:12190" ph="{...}" />
-                <marker date="1508610752000" expanded="true" signature="12196:12686" ph="//..." />
-                <marker date="1508610752000" expanded="false" signature="12717:12728" ph=" { " />
-                <marker date="1508610752000" expanded="false" signature="12789:12795" ph=" }" />
-                <marker date="1508610752000" expanded="true" signature="12797:13380" ph="//..." />
-                <marker date="1508610752000" expanded="true" signature="13430:13493" ph="{...}" />
+                <marker date="1508613353000" expanded="false" signature="9583:9594" ph=" { " />
+                <marker date="1508613353000" expanded="false" signature="9655:9661" ph=" }" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test010.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-35">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TraverseASTTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomVariablesClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomVariablesClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,8 +83,8 @@
       <file leaf-file-name="CustomClassObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="239">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -78,21 +100,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test010.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>fail</find>
+      <find>class</find>
+      <find>currentClass</find>
+      <find>varToReturn</find>
+      <find>TraverseFieldDeclaration</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,9 +123,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/MethodVisitorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
       </list>
     </option>
   </component>
@@ -260,7 +278,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MethodVisitorTest">
+  <component name="RunManager" selected="JUnit.TraverseASTTest">
     <configuration name="MethodVisitorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -424,9 +442,9 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MethodVisitorTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TraverseASTTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.edu.nyu.oop in translator-2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TraverseASTTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.edu.nyu.oop in translator-2" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MethodVisitorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -470,44 +488,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508609332887</updated>
-      <workItem from="1508609337730" duration="1513000" />
+      <workItem from="1508609337730" duration="4086000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MethodVisitorTest - 2017.10.21 at 14h 12m 10s.xml">
-      <configuration name="MethodVisitorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MethodVisitorTest - 2017.10.21 at 14h 16m 41s.xml">
-      <configuration name="MethodVisitorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MethodVisitorTest - 2017.10.21 at 14h 19m 13s.xml">
-      <configuration name="MethodVisitorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MethodVisitorTest - 2017.10.21 at 14h 21m 31s.xml">
-      <configuration name="MethodVisitorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TraverseASTTest - 2017.10.21 at 14h 15m 33s.xml">
+    <history-entry file="TraverseASTTest - 2017.10.21 at 14h 35m 38s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TraverseASTTest - 2017.10.21 at 14h 16m 04s.xml">
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 10m 31s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TraverseASTTest - 2017.10.21 at 14h 16m 30s.xml">
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 12m 00s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TraverseASTTest - 2017.10.21 at 14h 16m 58s.xml">
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 12m 25s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="edu_nyu_oop_in_translator-2 - 2017.10.21 at 14h 12m 27s.xml">
-      <configuration name="edu.nyu.oop in translator-2" configurationId="JUnit" />
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 13m 51s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="edu_nyu_oop_in_translator-2 - 2017.10.21 at 14h 13m 04s.xml">
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 14m 16s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 14m 35s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 15m 35s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TraverseASTTest - 2017.10.21 at 15h 15m 58s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="edu_nyu_oop_in_translator-2 - 2017.10.21 at 14h 35m 31s.xml">
       <configuration name="edu.nyu.oop in translator-2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1513000" />
+    <option name="totallyTimeSpent" value="4086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -522,7 +540,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41295546" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4385965" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -644,30 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1508610752000" expanded="true" signature="11677:11929" ph="//..." />
-            <marker date="1508610752000" expanded="true" signature="12049:12190" ph="{...}" />
-            <marker date="1508610752000" expanded="true" signature="12196:12686" ph="//..." />
-            <marker date="1508610752000" expanded="false" signature="12717:12728" ph=" { " />
-            <marker date="1508610752000" expanded="false" signature="12789:12795" ph=" }" />
-            <marker date="1508610752000" expanded="true" signature="12797:13380" ph="//..." />
-            <marker date="1508610752000" expanded="true" signature="13430:13493" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
@@ -678,16 +672,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state relative-caret-position="-810">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="120" column="16" lean-forward="true" selection-start-line="120" selection-start-column="16" selection-end-line="120" selection-end-column="16" />
+          <folding>
+            <marker date="1508613353000" expanded="false" signature="9583:9594" ph=" { " />
+            <marker date="1508613353000" expanded="false" signature="9655:9661" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomVariablesClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="239">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding />
         </state>
       </provider>

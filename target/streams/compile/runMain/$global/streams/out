@@ -1,7 +1,7 @@
-[0m[[0minfo[0m] [0mRunning edu.nyu.oop.Boot -printJavaAst src/test/java/inputs/test010/Test010.java[0m
+[0m[[0minfo[0m] [0mRunning edu.nyu.oop.Boot -printJavaAst src/test/java/inputs/Test010/Test010.java[0m
 [0m[[0minfo[0m] [0mTranslator-2, v. 2.4.0, The Compilers[0m
-[0m[[0minfo[0m] [0m2017-10-20 18:28:23,642 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.[0m
-[0m[[0minfo[0m] [0mProcessing src/test/java/inputs/test010/Test010.java ...[0m
+[0m[[0minfo[0m] [0m2017-10-21 14:47:20,475 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.[0m
+[0m[[0minfo[0m] [0mProcessing src/test/java/inputs/Test010/Test010.java ...[0m
 [0m[[0minfo[0m] [0mCompilationUnit([0m
 [0m[[0minfo[0m] [0m  PackageDeclaration([0m
 [0m[[0minfo[0m] [0m    null,[0m
@@ -28,6 +28,22 @@
 [0m[[0minfo[0m] [0m        Declarators([0m
 [0m[[0minfo[0m] [0m          Declarator([0m
 [0m[[0minfo[0m] [0m            "a",[0m
+[0m[[0minfo[0m] [0m            null,[0m
+[0m[[0minfo[0m] [0m            null[0m
+[0m[[0minfo[0m] [0m          )[0m
+[0m[[0minfo[0m] [0m        )[0m
+[0m[[0minfo[0m] [0m      ),[0m
+[0m[[0minfo[0m] [0m      FieldDeclaration([0m
+[0m[[0minfo[0m] [0m        Modifiers(),[0m
+[0m[[0minfo[0m] [0m        Type([0m
+[0m[[0minfo[0m] [0m          QualifiedIdentifier([0m
+[0m[[0minfo[0m] [0m            "String"[0m
+[0m[[0minfo[0m] [0m          ),[0m
+[0m[[0minfo[0m] [0m          null[0m
+[0m[[0minfo[0m] [0m        ),[0m
+[0m[[0minfo[0m] [0m        Declarators([0m
+[0m[[0minfo[0m] [0m          Declarator([0m
+[0m[[0minfo[0m] [0m            "b",[0m
 [0m[[0minfo[0m] [0m            null,[0m
 [0m[[0minfo[0m] [0m            null[0m
 [0m[[0minfo[0m] [0m          )[0m
