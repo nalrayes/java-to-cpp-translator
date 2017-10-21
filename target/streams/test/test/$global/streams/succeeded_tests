@@ -1,4 +1,5 @@
 #Successful Tests
+<<<<<<< HEAD
 #Sat Oct 21 14:21:42 EDT 2017
 edu.nyu.oop.NodeTransformationExample=1507836058402
 edu.nyu.oop.TraverseASTTest=1508610102932
@@ -10,3 +11,17 @@ edu.nyu.oop.NodeInspectionExample=1507836058378
 edu.nyu.oop.ChildToParentMapTest=1507836056869
 edu.nyu.oop.NodeUtilTest=1507836058423
 edu.nyu.oop.SymbolTableTest=1507836058316
+=======
+#Sat Oct 21 14:21:37 EDT 2017
+edu.nyu.oop.NodeTransformationExample=1508610097500
+edu.nyu.oop.TraverseASTTest=1508610095807
+edu.nyu.oop.StringToNodeExample=1508610097524
+edu.nyu.oop.JunitAssertionsExample=1508610095778
+edu.nyu.oop.SymbolTableCreateTest=1508610097464
+edu.nyu.oop.JunitTestExample=1508610095704
+edu.nyu.oop.MethodVisitorTest=1508610095680
+edu.nyu.oop.NodeInspectionExample=1508610097480
+edu.nyu.oop.ChildToParentMapTest=1508610095737
+edu.nyu.oop.NodeUtilTest=1508610097510
+edu.nyu.oop.SymbolTableTest=1508610097448
+>>>>>>> 260abbe50f060cab5728a5464c7a55867a98897b

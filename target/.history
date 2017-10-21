@@ -110,3 +110,4 @@ test-only *MethodVisitorTest*
 test
 test-only *MethodVisitorTest*
 kill -9 5430
+test

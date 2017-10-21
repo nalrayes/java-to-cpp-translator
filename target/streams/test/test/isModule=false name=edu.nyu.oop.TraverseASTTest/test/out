@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0m[[31merror[0m] [0mTest edu.nyu.oop.[33mTraverseASTTest[0m.[31mtestMethodSummary1[0m failed: xtc.tree.[31mVisitingException[0m: Error visiting node MethodDeclaration(Modifiers(Modifier("public"), Modifier("static")), null, VoidType(), "main", FormalParameters(FormalParameter(Modifiers(), Type(QualifiedIdentifier("String"), Dimensions("[")), null, "args", null)), null, null, Block(FieldDeclaration(Modifiers(), Type(QualifiedIdentifier("A"), null), Declarators(Declarator("a", null, NewClassExpression(null, null, QualifiedIdentifier("A"), Arguments(IntegerLiteral("5")), null)))), ExpressionStatement(CallExpression(SelectionExpression(PrimaryIdentifier("System"), "out"), null, "println", Arguments(CallExpression(CallExpression(PrimaryIdentifier("a"), null, "self", Arguments()), null, "toString", Arguments())))))) with visitor edu.nyu.oop.TraverseAST@52b2aca, took 0.011 sec[0m
 [0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:228)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
@@ -33,3 +34,5 @@
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:530)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseASTTest.before([35mTraverseASTTest.java[0m:[33m34[0m)[0m
 [0m[[31merror[0m] [0m    ... 53 more[0m
+=======
+>>>>>>> 260abbe50f060cab5728a5464c7a55867a98897b
