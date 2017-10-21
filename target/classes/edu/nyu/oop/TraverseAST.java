@@ -205,11 +205,7 @@ public class TraverseAST extends Visitor {
             currentClass.modifiers.add(modifierName);
 
         }
-<<<<<<< HEAD
-        System.out.println("Class's modifiers " + currentClass.modifiers.toString());
-=======
        // System.out.println("Class's modifiers " + currentClass.modifiers.toString());
->>>>>>> 4599ab4d74fcbaf0b692abaf285f3a7f4a07118b
 
         //Get the field decleration node
         Node classBody = n.getNode(5);
@@ -237,11 +233,7 @@ public class TraverseAST extends Visitor {
         //Save the class object to the array of class objects
         classSummary.classes.add(currentClass);
         //Make the pointer point to NULL
-<<<<<<< HEAD
-        System.out.println("End of class: " + currentClass.className);
-=======
        // System.out.println("End of class: " + currentClass.className);
->>>>>>> 4599ab4d74fcbaf0b692abaf285f3a7f4a07118b
         currentClass = null;
     }
 
@@ -264,27 +256,41 @@ public class TraverseAST extends Visitor {
 
         //System .out.println(methodModifers);
 
-        int methodModifersSize = methodModifers.getNode(0).size();
+       // int methodModifersSize = methodModifers.getNode(0).size();
 
         String wholeModifier = "";
 
-        for (int j = 0; j < methodModifersSize; j++) {
+        //for (int j = 0; j < methodModifersSize; j++) {
 
 
-            if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true) {
+           // System.out.println("modifiers " + currMethod.getNode(j).size());
+
+
+            int totalModsInMethod = currMethod.getNode(0).size();
+            //System.out.println("tot mods " + totalModsInMethod);
+
+        for (int j = 0; j < totalModsInMethod; j++) {
+
+           // for (int k =0; k < currMethod.getNode(0).getNode)
+
+            //System.out.println("my modifier " + currMethod.getNode(0).getNode(j).getString(0));
+
+            String modifierVal = currMethod.getNode(0).getNode(j).getString(0);
+
+            if (checkMethodVisibility(modifierVal) == true) {
                 // System.out.println("vis");
-                currentMethodObj.visibility = methodModifers.getNode(0).getString(j);
+                currentMethodObj.visibility = modifierVal;
 
 
             } else {
-                wholeModifier += methodModifers.getNode(0).getString(j) + " ";
+                wholeModifier += modifierVal;
             }
 
             //System.out.println(methodModifers.getNode(0).getString(j));
 
+            currentMethodObj.modifier = wholeModifier;
         }
-
-        currentMethodObj.modifier = wholeModifier;
+        //currentMethodObj.modifier = wholeModifier;
 
        // Node params = currMethod;
         //System.out.println("params " + params.getNode(4).size());
