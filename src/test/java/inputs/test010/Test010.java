@@ -1,5 +1,6 @@
 package inputs.test010;
 
+
 class A {
     String a;
 

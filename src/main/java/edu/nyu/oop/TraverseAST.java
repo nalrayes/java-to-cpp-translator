@@ -130,34 +130,20 @@ public class TraverseAST extends Visitor {
 
 
     public boolean checkMethodVisibility(String check){
-
         switch (check){
-
-
             case "public":
                 return true;
             // break;
-
             case "private":
                 return true;
             // break;
-
             case "protected":
                 return true;
             // break;
-
             default:
                 return false;
-
-
-
-
         }
-
         // return false;
-
-
-
     }
 
     private CustomConstructorClass traverseConstructorDeclaration(Node n) {
@@ -189,6 +175,19 @@ public class TraverseAST extends Visitor {
         return currentConstructor;
     }
 
+
+    //VISIT METHODS
+    public void visitPackageDeclaration(GNode n){
+        //Get the node QualifiedIdentifier
+        Node qualifiedIdentifier = n.getNode(1);
+        //Get len of QualifiedIden
+        int len = qualifiedIdentifier.size();
+        for (int i = 0; i < len; i++){
+            //for loop to get the names
+            //System.out.println(n.getNode(1).getString(i));
+            classSummary.packages.add(qualifiedIdentifier.getString(i));
+        }
+    }
 
     public void visitClassDeclaration(GNode n) {
 
@@ -403,6 +402,7 @@ public class TraverseAST extends Visitor {
 
 
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
+        ArrayList<String> packages = new ArrayList<String>();
 //        public String toString() {
 ////            return "Method count: " + count + System.lineSeparator() +
 ////                    "Method names: " + names + System.lineSeparator() +

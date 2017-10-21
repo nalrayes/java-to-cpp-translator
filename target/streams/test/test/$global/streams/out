@@ -1,14 +1,14 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.MethodVisitorTest, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.JunitTestExample, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.ChildToParentMapTest, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.JunitAssertionsExample, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.TraverseASTTest, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.SymbolTableTest, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.SymbolTableCreateTest, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeInspectionExample, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeTransformationExample, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeUtilTest, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.StringToNodeExample, com.novocode.junit.JUnitFingerprint@2c6d5f84, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.MethodVisitorTest, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.JunitTestExample, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.ChildToParentMapTest, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.JunitAssertionsExample, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.TraverseASTTest, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.SymbolTableTest, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.SymbolTableCreateTest, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeInspectionExample, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeTransformationExample, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeUtilTest, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.StringToNodeExample, com.novocode.junit.JUnitFingerprint@331623c3, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0minfo[0m] [0mPassed: Total 31, Failed 0, Errors 0, Passed 31[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
