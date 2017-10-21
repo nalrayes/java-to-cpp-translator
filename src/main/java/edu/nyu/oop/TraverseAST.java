@@ -6,9 +6,10 @@ import xtc.tree.GNode;
 import xtc.tree.Node;
 import xtc.tree.Visitor;
 
+import  edu.nyu.oop.CustomClassObject;
+
 import java.util.List;
 import java.util.ArrayList;
-
 /**
  * This class demostrates a trivial usage of Xtc's Visitor class.
  * You may use this as a base for your ScopeVisitor.
@@ -441,31 +442,55 @@ public class TraverseAST extends Visitor {
 
         methodObj.modifier = wholeModifier;
 
-        Node params = currMethod;
+       // Node params = currMethod;
         //System.out.println("params " + params.getNode(4).size());
 
-        if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0) {
+        if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
 
-            Node formalParams = params.getNode(4);
-
-           // System.out.println("here " + params.getNode(4).getNode(0));
-
-//           for (int i = 0; i < params.getNode(4).getNode(0).size();i++){
-//              // System.out.println("name " + params.getNode(4).getNode(0).size());
-//               System.out.println("name " + params.getNode(4).getNode(0).getNode(i));
-//
-//
-//
-//
-//
-//           }
-
-            //TraverseFieldDeclaration(params.getNode(4));
-            //System.out.println("params " + params.getNode(4).getNode(0));
-            //methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4)));
-            // CustomVariablesClass myVars =
+            Node formalParams = currMethod.getNode(4);
 
 
+            for (int i = 0; i < currMethod.getNode(4).size(); i++) {
+                if (currMethod.getNode(4).getNode(i).getName().equals("FormalParameter")) {
+                    CustomVariablesClass aVar = new CustomVariablesClass();
+
+
+
+                    Node currentformalParameter = currMethod.getNode(4).getNode(i);
+
+
+                    if (currentformalParameter == null){
+                        continue;
+                    }
+
+                    CustomVariablesClass myVar = new CustomVariablesClass();
+                    // get method parameters
+                    myVar.modifier = "";
+                    // get parameter variable name
+                    if (currentformalParameter.getNode(1).getName().equals("Type")) {
+
+
+
+                        System.out.println("thing thing " + currentformalParameter.getNode(1).getNode(0));
+                        Node getVarName = currentformalParameter.getNode(1).getNode(0);
+
+
+                            myVar.name = getVarName.getString(0);
+
+
+                    }
+
+                    // get parameter variable type
+                    System.out.println("var type " + currentformalParameter.getString(3));
+                    if (currentformalParameter.getString(3) != null)
+                        myVar.type = currentformalParameter.getString(3);
+
+
+                    currentClass.classVariables.add(myVar);
+
+
+                }
+            }
         }
 
 

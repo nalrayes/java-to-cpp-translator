@@ -1,27 +1,23 @@
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomConstructorClass.class: stamp changed from lastModified(1508529076000) to lastModified(1508610222000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomClassObject.class: stamp changed from lastModified(1508536794000) to lastModified(1508610222000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomMethodClass.class: stamp changed from lastModified(1508536794000) to lastModified(1508610488000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomVariablesClass.class: stamp changed from lastModified(1508528971000) to lastModified(1508610222000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
-[0m[[0mdebug[0m] [0mRemoved products: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/TraverseAST.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class)[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomConstructorClass.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomClassObject.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomMethodClass.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomVariablesClass.class)[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
-[0m[[0mdebug[0m] [0m	product: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
-[0m[[0mdebug[0m] [0m	binary dep: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@31bcce6d directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.063809366 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.014484968 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.079503308 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@3843b9af directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.019591533 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.00942678 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.029910344 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

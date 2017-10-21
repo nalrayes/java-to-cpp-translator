@@ -21,7 +21,7 @@ public class TraverseASTTest {
     public static void beforeClass() {
         logger.debug("Executing TraverseASTTest");
 
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test017/Test017.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/CustomTests/CustomTest1.java");
 
 
         // XtcTestUtils.prettyPrintAst(node);
@@ -42,20 +42,20 @@ public class TraverseASTTest {
 //        assertEquals(2, classSummary.classes.size());
 //        assretEquals(1, classSummary.classes.get(1).getConstructors().size());
         // to see constructor details of the first class in the file
-        ArrayList<CustomConstructorClass> constructors = classSummary.classes.get(0).getConstructors();
-        for (int i = 0; i < constructors.size(); i++) {
-            CustomConstructorClass c = constructors.get(i);
-            System.out.println(c.getVisibility());
-            System.out.println(c.getName());
-            ArrayList<CustomVariablesClass> vars = c.getParameters();
-            for (int j = 0; j < vars.size(); j++) {
-                CustomVariablesClass v = vars.get(j);
-                System.out.println(v.visibility);
-                System.out.println(v.modifier);
-                System.out.println(v.name);
-                System.out.println(v.type);
-            }
-        }
+//        ArrayList<CustomConstructorClass> constructors = classSummary.classes.get(0).getConstructors();
+//        for (int i = 0; i < constructors.size(); i++) {
+//            CustomConstructorClass c = constructors.get(i);
+//            System.out.println(c.getVisibility());
+//            System.out.println(c.getName());
+//            ArrayList<CustomVariablesClass> vars = c.getParameters();
+//            for (int j = 0; j < vars.size(); j++) {
+//                CustomVariablesClass v = vars.get(j);
+//                System.out.println(v.visibility);
+//                System.out.println(v.modifier);
+//                System.out.println(v.name);
+//                System.out.println(v.type);
+//            }
+//        }
     }
 
 //    @Test
