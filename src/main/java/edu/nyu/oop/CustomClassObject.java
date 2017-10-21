@@ -34,7 +34,7 @@ public class CustomClassObject {
         this.modifiers = new ArrayList<String>();
         this.classVariables = new ArrayList<CustomVariablesClass>();
         //this.className = className;
-
+        this.methods = new ArrayList<CustomMethodClass>();
 
     }
 

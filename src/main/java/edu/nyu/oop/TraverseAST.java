@@ -6,9 +6,10 @@ import xtc.tree.GNode;
 import xtc.tree.Node;
 import xtc.tree.Visitor;
 
+import  edu.nyu.oop.CustomClassObject;
+
 import java.util.List;
 import java.util.ArrayList;
-
 /**
  * This class demostrates a trivial usage of Xtc's Visitor class.
  * You may use this as a base for your ScopeVisitor.
@@ -204,7 +205,7 @@ public class TraverseAST extends Visitor {
             currentClass.modifiers.add(modifierName);
 
         }
-        System.out.println("Class's modifiers " + currentClass.modifiers.toString());
+       // System.out.println("Class's modifiers " + currentClass.modifiers.toString());
 
         //Get the field decleration node
         Node classBody = n.getNode(5);
@@ -232,7 +233,7 @@ public class TraverseAST extends Visitor {
         //Save the class object to the array of class objects
         classSummary.classes.add(currentClass);
         //Make the pointer point to NULL
-        System.out.println("End of class: " + currentClass.className);
+       // System.out.println("End of class: " + currentClass.className);
         currentClass = null;
     }
 
@@ -241,10 +242,15 @@ public class TraverseAST extends Visitor {
     public void visitMethodDeclaration(GNode n) {
 
 
-        CustomMethodClass methodObj = new CustomMethodClass();
+        CustomMethodClass currentMethodObj = new CustomMethodClass();
 
         Node currMethod = n;
 
+        if (n.getString(3) != null){
+
+            currentMethodObj.name = n.getString(3);
+        }
+       //System.out.println("getting method name " + n.getString(3));
 
         Node methodModifers = currMethod.getNode(0);
 
@@ -259,7 +265,7 @@ public class TraverseAST extends Visitor {
 
             if (checkMethodVisibility(methodModifers.getNode(0).getString(j)) == true) {
                 // System.out.println("vis");
-                methodObj.visibility = methodModifers.getNode(0).getString(j);
+                currentMethodObj.visibility = methodModifers.getNode(0).getString(j);
 
 
             } else {
@@ -270,36 +276,61 @@ public class TraverseAST extends Visitor {
 
         }
 
-        methodObj.modifier = wholeModifier;
+        currentMethodObj.modifier = wholeModifier;
 
-        Node params = currMethod;
+       // Node params = currMethod;
         //System.out.println("params " + params.getNode(4).size());
 
-        if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0) {
+        if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
 
-            Node formalParams = params.getNode(4);
-
-           // System.out.println("here " + params.getNode(4).getNode(0));
-
-//           for (int i = 0; i < params.getNode(4).getNode(0).size();i++){
-//              // System.out.println("name " + params.getNode(4).getNode(0).size());
-//               System.out.println("name " + params.getNode(4).getNode(0).getNode(i));
-//
-//
-//
-//
-//
-//           }
-
-            //TraverseFieldDeclaration(params.getNode(4));
-            //System.out.println("params " + params.getNode(4).getNode(0));
-            //methodObj.parameters.add(TraverseFieldDeclaration(params.getNode(4)));
-            // CustomVariablesClass myVars =
+            Node formalParams = currMethod.getNode(4);
 
 
+            for (int i = 0; i < currMethod.getNode(4).size(); i++) {
+                if (currMethod.getNode(4).getNode(i).getName().equals("FormalParameter")) {
+                    CustomVariablesClass aVar = new CustomVariablesClass();
+
+
+
+                    Node currentformalParameter = currMethod.getNode(4).getNode(i);
+
+
+                    if (currentformalParameter == null){
+                        continue;
+                    }
+
+                    CustomVariablesClass myVar = new CustomVariablesClass();
+                    // get method parameters
+                    myVar.modifier = "";
+                    // get parameter variable name
+                    if (currentformalParameter.getNode(1).getName().equals("Type")) {
+
+
+
+                    //    System.out.println("thing thing " + currentformalParameter.getNode(1).getNode(0));
+                        Node getVarName = currentformalParameter.getNode(1).getNode(0);
+
+
+                            myVar.name = getVarName.getString(0);
+
+
+                    }
+
+                    // get parameter variable type
+                   //System.out.println("var type " + currentformalParameter.getString(3));
+                    if (currentformalParameter.getString(3) != null)
+                        myVar.type = currentformalParameter.getString(3);
+
+
+                   currentMethodObj.parameters.add(myVar);
+                    //System.out.println(currentMethodObj.name);
+
+
+                }
+            }
         }
 
-
+        currentClass.methods.add(currentMethodObj);
         visit(n);
         //currentClass.
 

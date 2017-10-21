@@ -2,16 +2,25 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0m	modified: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java)[0m
+=======
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+>>>>>>> 4599ab4d74fcbaf0b692abaf285f3a7f4a07118b
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@26ca5e35 directly...[0m
@@ -24,3 +33,6 @@
 [0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
+=======
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
+>>>>>>> 4599ab4d74fcbaf0b692abaf285f3a7f4a07118b
