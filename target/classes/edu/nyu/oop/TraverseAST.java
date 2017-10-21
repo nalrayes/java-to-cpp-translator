@@ -442,12 +442,23 @@ public class TraverseAST extends Visitor {
         methodObj.modifier = wholeModifier;
 
         Node params = currMethod;
-        System.out.println("params " + params.getNode(4).size());
+        //System.out.println("params " + params.getNode(4).size());
 
         if (params.getNode(4).getName().equals("FormalParameters") && params.getNode(4).size() > 0) {
 
+            Node formalParams = params.getNode(4);
 
-            System.out.println(params.getNode(4).getNode(0));
+           // System.out.println("here " + params.getNode(4).getNode(0));
+
+//           for (int i = 0; i < params.getNode(4).getNode(0).size();i++){
+//              // System.out.println("name " + params.getNode(4).getNode(0).size());
+//               System.out.println("name " + params.getNode(4).getNode(0).getNode(i));
+//
+//
+//
+//
+//
+//           }
 
             //TraverseFieldDeclaration(params.getNode(4));
             //System.out.println("params " + params.getNode(4).getNode(0));

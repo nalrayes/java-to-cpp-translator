@@ -1,38 +1,35 @@
-[0m[[31merror[0m] [0mTest edu.nyu.oop.[33mTraverseASTTest[0m.[31mtestMethodSummary1[0m failed: xtc.tree.[31mVisitingException[0m: Error visiting node MethodDeclaration(Modifiers(Modifier("public")), null, VoidType(), "setA", FormalParameters(FormalParameter(Modifiers(), Type(QualifiedIdentifier("String"), null), null, "x", null)), null, null, Block(ExpressionStatement(Expression(PrimaryIdentifier("a"), "=", PrimaryIdentifier("x"))))) with visitor edu.nyu.oop.TraverseAST@31b96c81, took 0.005 sec[0m
+[0m[[31merror[0m] [0mTest edu.nyu.oop.[33mTraverseASTTest[0m.[31mtestMethodSummary1[0m failed: xtc.tree.[31mVisitingException[0m: Error visiting node MethodDeclaration(Modifiers(Modifier("public"), Modifier("static")), null, VoidType(), "main", FormalParameters(FormalParameter(Modifiers(), Type(QualifiedIdentifier("String"), Dimensions("[")), null, "args", null)), null, null, Block(FieldDeclaration(Modifiers(), Type(QualifiedIdentifier("A"), null), Declarators(Declarator("a", null, NewClassExpression(null, null, QualifiedIdentifier("A"), Arguments(IntegerLiteral("5")), null)))), ExpressionStatement(CallExpression(SelectionExpression(PrimaryIdentifier("System"), "out"), null, "println", Arguments(CallExpression(CallExpression(PrimaryIdentifier("a"), null, "self", Arguments()), null, "toString", Arguments())))))) with visitor edu.nyu.oop.TraverseAST@52b2aca, took 0.011 sec[0m
 [0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:228)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:495)[0m
-[0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
-[0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
+[0m[[31merror[0m] [0m    at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[31merror[0m] [0m    at java.lang.reflect.Method.invoke(Method.java:498)[0m
 [0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:210)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:495)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitClassDeclaration(TraverseAST.java:399)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[31merror[0m] [0m    at java.lang.reflect.Method.invoke(Method.java:498)[0m
 [0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:210)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:495)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitCompilationUnit(TraverseAST.java:33)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)[0m
 [0m[[31merror[0m] [0m    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[0m
 [0m[[31merror[0m] [0m    at java.lang.reflect.Method.invoke(Method.java:498)[0m
 [0m[[31merror[0m] [0m    at xtc.tree.Visitor.dispatch(Visitor.java:210)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:517)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:530)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseASTTest.before([35mTraverseASTTest.java[0m:[33m34[0m)[0m
 [0m[[31merror[0m] [0m    ...[0m
-[0m[[31merror[0m] [0mCaused by: java.lang.IndexOutOfBoundsException: Index: 1, Size: 1[0m
-[0m[[31merror[0m] [0m    at xtc.tree.GNode$Fixed1.get(GNode.java:152)[0m
+[0m[[31merror[0m] [0mCaused by: java.lang.ClassCastException: java.lang.String cannot be cast to xtc.tree.Node[0m
 [0m[[31merror[0m] [0m    at xtc.tree.Node.getNode(Node.java:460)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.TraverseFieldDeclaration(TraverseAST.java:79)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitMethodDeclaration(TraverseAST.java:452)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:495)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:495)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitMethodDeclaration(TraverseAST.java:455)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitClassDeclaration(TraverseAST.java:399)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:495)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visit(TraverseAST.java:508)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.visitCompilationUnit(TraverseAST.java:33)[0m
-[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:517)[0m
+[0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseAST.getClassSummary(TraverseAST.java:530)[0m
 [0m[[31merror[0m] [0m    at edu.nyu.oop.TraverseASTTest.before([35mTraverseASTTest.java[0m:[33m34[0m)[0m
 [0m[[31merror[0m] [0m    ... 53 more[0m
