@@ -16,7 +16,7 @@ public class MethodVisitorTest {
     @BeforeClass
     public static void beforeClass() {
         logger.debug("Executing MethodVisitorTest");
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test010/Test010.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test001/Test001.java");
         XtcTestUtils.prettyPrintAst(node);
     }
 

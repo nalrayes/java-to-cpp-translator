@@ -1,5 +1,25 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.TraverseASTTest, com.novocode.junit.JUnitFingerprint@3f471d3b, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.MethodVisitorTest, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.JunitTestExample, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.ChildToParentMapTest, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.JunitAssertionsExample, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.TraverseASTTest, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.SymbolTableTest, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.SymbolTableCreateTest, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeInspectionExample, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeTransformationExample, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.NodeUtilTest, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(edu.nyu.oop.StringToNodeExample, com.novocode.junit.JUnitFingerprint@7167d5c9, false, [SuiteSelector])[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
-[0m[[0minfo[0m] [0mPassed: Total 1, Failed 0, Errors 0, Passed 1[0m
+[0m[[0minfo[0m] [0mPassed: Total 31, Failed 0, Errors 0, Passed 31[0m
 [0m[[0mdebug[0m] [0mPassed tests:[0m
 [0m[[0mdebug[0m] [0m	edu.nyu.oop.TraverseASTTest[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.JunitAssertionsExample[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.MethodVisitorTest[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.NodeTransformationExample[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.NodeInspectionExample[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.JunitTestExample[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.ChildToParentMapTest[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.NodeUtilTest[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.SymbolTableCreateTest[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.StringToNodeExample[0m
+[0m[[0mdebug[0m] [0m	edu.nyu.oop.SymbolTableTest[0m
