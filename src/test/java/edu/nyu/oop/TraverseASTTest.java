@@ -4,6 +4,9 @@ import org.junit.*;
 import org.slf4j.Logger;
 import xtc.tree.GNode;
 import java.util.ArrayList;
+import edu.nyu.oop.util.JavaFiveImportParser;
+import java.util.List;
+import xtc.tree.Location;
 
 import static org.junit.Assert.*;
 
@@ -25,7 +28,6 @@ public class TraverseASTTest {
         node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/CustomTests/CustomTest1.java");
 
 
-
         // XtcTestUtils.prettyPrintAst(node);
     }
 
@@ -33,6 +35,17 @@ public class TraverseASTTest {
     public void before() {
         TraverseAST visitor = new TraverseAST();
         //summary = visitor.getSummary(node);
+
+        //Test Phase one
+        System.out.println("Start Phase One");
+        List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep(node);
+        //System.out.println("Total Number of AST's found: " + javaASTNodes.size());
+        GNode firstNode = javaASTNodes.get(0); //Get the first node
+        //System.out.println(firstNode.getLocation().file);
+        //System.out.println(javaASTNodes);
+        System.out.println("END Phase One");
+
+        //Phase two
         classSummary = visitor.getClassSummary(node);
     }
 

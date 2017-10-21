@@ -19,6 +19,8 @@ class B extends A {
 }
 
 public class CustomTest1 {
+
+    //int x;
     public static void main(String[] args) {
         A a = new A();
         B other = new B();

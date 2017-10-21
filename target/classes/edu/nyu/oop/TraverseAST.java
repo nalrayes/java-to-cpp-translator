@@ -34,7 +34,7 @@ public class TraverseAST extends Visitor {
     private void visitClassBody(GNode n){
 
 
-        //System.out.print("in class body " + n.getName());
+
         visit(n);
 
 
@@ -43,13 +43,13 @@ public class TraverseAST extends Visitor {
     // this function is used to get class Vars
     public CustomVariablesClass TraverseFieldDeclaration(Node n){
 
-        // System.out.println(n.getName());
+
         CustomVariablesClass varToReturn = new CustomVariablesClass();
         if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
             String varModifiers = "";
             int amountOfModifers = n.getNode(0).size();
             for (int i = 0; i < amountOfModifers; i++){
-                //System.out.println("get mods " + n.getNode(0).getNode(0).getString(i));
+
                 varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
 
             }
@@ -58,11 +58,11 @@ public class TraverseAST extends Visitor {
 
         // Get Qualified Identifier
         String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
-        //System.out.println(qualifiedIdentifier);
+
         varToReturn.type = qualifiedIdentifier;
 
         // Get Declarator Identifier
-        // System.out.println("Get Dec");
+
         String declarator;
         if (n.getNode(2) != null) {
             // then this is a declarator
@@ -72,63 +72,16 @@ public class TraverseAST extends Visitor {
             declarator = n.getString(2);
         }
 
-        // System.out.println(declarator);
         varToReturn.name = declarator;
 
         String theVariable = qualifiedIdentifier + " " + declarator;
-        //System.out.println("var to return " + varToReturn.name);
+
 
         return varToReturn;
     }
 
 
-    public void traverseMethodsInClass(Node n, CustomClassObject customClassObj){
-
-        // getting methods in the class
-
-        // if ()
-        //System.out.println("in method " + n.getNode(5));
-
-
-        int classBodySize = n.getNode(5).size();
-        System.out.println("hello");
-
-        // for (int i = 0; i < classBodySize; i++){
-
-        //     if (n.getNode(5).getNode(i).getName().equals("MethodDeclaration")){
-
-        //         Node theMethod = n.getNode(5).getNode(i);
-
-        //         if (theMethod.getNode(0).getName().equals("Modifiers")){
-
-
-
-        //             int modifierSize = theMethod.getNode(0).getNode(0).size();
-        //            //System.out.println("mod size " + modifierSize);
-        //           //  for (int x = 0; x < modifierSize; x++){
-
-
-        //                 System.out.println("the mod " + theMethod.getNode(0).getNode(0).getString(x) + " at index " + x);
-
-
-
-        //             //}
-
-
-        //         }
-
-
-
-        //     }
-
-
-        // }
-
-
-
-    }
-
-
+    // this is a method to check if a Modifer()'s string is a visibility parameter
     public boolean checkMethodVisibility(String check){
 
         switch (check){
@@ -153,8 +106,6 @@ public class TraverseAST extends Visitor {
 
 
         }
-
-        // return false;
 
 
 
@@ -205,8 +156,7 @@ public class TraverseAST extends Visitor {
             currentClass.modifiers.add(modifierName);
 
         }
-       // System.out.println("Class's modifiers " + currentClass.modifiers.toString());
-
+        
         //Get the field decleration node
         Node classBody = n.getNode(5);
         //Get the size of the field
@@ -250,30 +200,21 @@ public class TraverseAST extends Visitor {
 
             currentMethodObj.name = n.getString(3);
         }
-       //System.out.println("getting method name " + n.getString(3));
+
 
         Node methodModifers = currMethod.getNode(0);
 
-        //System .out.println(methodModifers);
 
-       // int methodModifersSize = methodModifers.getNode(0).size();
 
         String wholeModifier = "";
 
-        //for (int j = 0; j < methodModifersSize; j++) {
-
-
-           // System.out.println("modifiers " + currMethod.getNode(j).size());
 
 
             int totalModsInMethod = currMethod.getNode(0).size();
-            //System.out.println("tot mods " + totalModsInMethod);
+
 
         for (int j = 0; j < totalModsInMethod; j++) {
 
-           // for (int k =0; k < currMethod.getNode(0).getNode)
-
-            //System.out.println("my modifier " + currMethod.getNode(0).getNode(j).getString(0));
 
             String modifierVal = currMethod.getNode(0).getNode(j).getString(0);
 
@@ -290,10 +231,6 @@ public class TraverseAST extends Visitor {
 
             currentMethodObj.modifier = wholeModifier;
         }
-        //currentMethodObj.modifier = wholeModifier;
-
-       // Node params = currMethod;
-        //System.out.println("params " + params.getNode(4).size());
 
         if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
 
@@ -320,8 +257,6 @@ public class TraverseAST extends Visitor {
                     if (currentformalParameter.getNode(1).getName().equals("Type")) {
 
 
-
-                    //    System.out.println("thing thing " + currentformalParameter.getNode(1).getNode(0));
                         Node getVarName = currentformalParameter.getNode(1).getNode(0);
 
 
@@ -330,8 +265,6 @@ public class TraverseAST extends Visitor {
 
                     }
 
-                    // get parameter variable type
-                   //System.out.println("var type " + currentformalParameter.getString(3));
                     if (currentformalParameter.getString(3) != null)
                         myVar.type = currentformalParameter.getString(3);
 
@@ -346,61 +279,21 @@ public class TraverseAST extends Visitor {
 
         currentClass.methods.add(currentMethodObj);
         visit(n);
-        //currentClass.
 
     }
-
-
 
 
     public void visitConstructorDeclaration(GNode n){
-
-
         CustomConstructorClass constructor = traverseConstructorDeclaration(n);
         currentClass.addConstructor(constructor);
-
-
     }
 
-
-
-
-
-//    public void visitMethodDeclaration(GNode n) {
-//        summary.nodes += n.getName() + " ";
-//        summary.names += n.getString(3) + " ";
-//
-//        Node modifiers  = n.getNode(0);
-//        for (int i = 0; i < modifiers.size(); i++) {
-//            Node curNode = modifiers.getNode(i);
-//            String modifierName = curNode.getString(0);
-//            System.out.println("method " + curNode.getString(0));
-//        }
-//        summary.count++;
-//        visit(n);
-//    }
 
     public void visit(Node n) {
         for (Object o : n) if (o instanceof Node) dispatch((Node) o);
     }
 
-//    public MethodSummary getSummary(Node n) {
-//        super.dispatch(n);
-//        return summary;
-//    }
 
-//    // An instance of this class will be mutated as the AST is traversed.
-//    static class MethodSummary {
-//        int count = 0;
-//        String names = "";
-//        String nodes = "";
-//
-//        public String toString() {
-//            return "Method count: " + count + System.lineSeparator() +
-//                    "Method names: " + names + System.lineSeparator() +
-//                    "Node names: " + nodes + System.lineSeparator();
-//        }
-//    }
 
     public ClassSummary getClassSummary(Node n) {
         super.dispatch(n);
@@ -412,13 +305,8 @@ public class TraverseAST extends Visitor {
 
 
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
-//        public String toString() {
-////            return "Method count: " + count + System.lineSeparator() +
-////                    "Method names: " + names + System.lineSeparator() +
-////                    "Node names: " + nodes + System.lineSeparator();
-//
-//
-//       }
+        ArrayList<String> packages = new ArrayList<String>();
+
 
 
     }
