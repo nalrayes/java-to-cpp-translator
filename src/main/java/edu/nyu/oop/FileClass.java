@@ -10,14 +10,9 @@ public class FileClass {
 
     ArrayList<CustomClassObject> classes;
 
-    ArrayList<FileClass> packageNames;
-
+    ArrayList <String> packageNames;
 
     public FileClass(){
 
-
-
-
     }
-
 }

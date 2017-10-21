@@ -59,7 +59,9 @@ public class Boot extends Tool {
         bool("cppFilePrinter", "cppFilePrinter", false, "Print example cpp file into output directory.").
         bool("printJavaImportCode", "printJavaImportCode", false, "Print Java code for imports of primary source file.").
         bool("printSymbolTable", "printSymbolTable", false, "Print symbol table for Java Ast.").
-        bool("printConfig", "printConfig", false, "Output application configuration to screen.");
+        bool("printConfig", "printConfig", false, "Output application configuration to screen.").
+                //Add new command for Transation
+        bool("translate", "translate", false, "Translate Java Into C++");
     }
 
     @Override
@@ -112,7 +114,6 @@ public class Boot extends Tool {
             runtime.console().flush();
         }
 
-
         if (runtime.test("printConfig")) {
             XtcProps.getProperties().list(System.out);
         }
@@ -134,6 +135,25 @@ public class Boot extends Tool {
             res.printSummary();
 
         }
+        //Command for translation
+        if (runtime.test("translate")) {
+            System.out.println(" ");
+            System.out.println("Translating for File: " + n.getLocation().file);
+            //Phase one. Get AST - All source and dep
+            System.out.println("Start Phase One");
+            List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep((GNode)n);
+            //System.out.println("Total Number of AST's found: " + javaASTNodes.size());
+            GNode firstNode = javaASTNodes.get(0); //Get the first node
+            //System.out.println(firstNode.getLocation().file);
+            //System.out.println(javaASTNodes);
+            System.out.println("END Phase One");
+
+            //Phase 2 - ALl JavaAST head nodes are stored in javaASTNodesList
+
+
+
+
+        }//End translation if
     }
 
     /**

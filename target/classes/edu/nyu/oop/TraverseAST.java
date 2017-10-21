@@ -43,33 +43,17 @@ public class TraverseAST extends Visitor {
     public CustomVariablesClass TraverseFieldDeclaration(Node n){
 
         // System.out.println(n.getName());
-
-
         CustomVariablesClass varToReturn = new CustomVariablesClass();
-
-
-
-
-
         if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
-
             String varModifiers = "";
-
             int amountOfModifers = n.getNode(0).size();
-
             for (int i = 0; i < amountOfModifers; i++){
-
-
                 //System.out.println("get mods " + n.getNode(0).getNode(0).getString(i));
                 varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
 
             }
-
             varToReturn.modifier = varModifiers;
-
         }
-
-
 
         // Get Qualified Identifier
         String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
@@ -90,18 +74,10 @@ public class TraverseAST extends Visitor {
         // System.out.println(declarator);
         varToReturn.name = declarator;
 
-
-
-
         String theVariable = qualifiedIdentifier + " " + declarator;
-        System.out.println("var to return " + varToReturn.name);
-
+        //System.out.println("var to return " + varToReturn.name);
 
         return varToReturn;
-
-
-
-
     }
 
 
@@ -228,6 +204,7 @@ public class TraverseAST extends Visitor {
             currentClass.modifiers.add(modifierName);
 
         }
+        System.out.println("Class's modifiers " + currentClass.modifiers.toString());
 
         //Get the field decleration node
         Node classBody = n.getNode(5);
@@ -241,12 +218,10 @@ public class TraverseAST extends Visitor {
                 // calls a custom method TraverseFieldDeclaration to collect variable info
                 CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
                 currentClass.classVariables.add(aVar);
-
+                //For DEBUG
                 if (DEBUGGING == 1){
-
                     for (CustomVariablesClass v : currentClass.classVariables){
-
-                        System.out.println("the vars " + v.name);
+                        System.out.println("Class vars " + v.name);
                     }
                 }
             }
@@ -254,10 +229,10 @@ public class TraverseAST extends Visitor {
 
         visit(n);
         //Class scope exists. Hence, end of the class
-        System.out.println("class's modifiers " + currentClass.modifiers.toString());
         //Save the class object to the array of class objects
         classSummary.classes.add(currentClass);
         //Make the pointer point to NULL
+        System.out.println("End of class: " + currentClass.className);
         currentClass = null;
     }
 
@@ -331,19 +306,10 @@ public class TraverseAST extends Visitor {
     }
 
 
-
-
     public void visitConstructorDeclaration(GNode n){
-
-
         CustomConstructorClass constructor = traverseConstructorDeclaration(n);
         currentClass.addConstructor(constructor);
-
-
     }
-
-
-
 
 
 //    public void visitMethodDeclaration(GNode n) {

@@ -306,19 +306,10 @@ public class TraverseAST extends Visitor {
     }
 
 
-
-
     public void visitConstructorDeclaration(GNode n){
-
-
         CustomConstructorClass constructor = traverseConstructorDeclaration(n);
         currentClass.addConstructor(constructor);
-
-
     }
-
-
-
 
 
 //    public void visitMethodDeclaration(GNode n) {

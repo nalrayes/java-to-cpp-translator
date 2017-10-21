@@ -113,3 +113,6 @@ kill -9 5430
 test
 runxtc -printJavaAst src/test/java/inputs/Test000/Test000.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translateJava
+runxtc -translate
+runxtc -translate src/test/java/inputs/Test000/Test000.java

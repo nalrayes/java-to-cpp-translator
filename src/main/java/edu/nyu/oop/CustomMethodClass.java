@@ -9,4 +9,5 @@ public class CustomMethodClass {
     String name;
     ArrayList<CustomVariablesClass> parameters;
     String returnType;
+
 }
