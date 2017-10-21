@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0c82ea-0ab0-44f0-bed3-bbabd831298f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/compile/runMain/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CustomMethodClass.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/CustomMethodClass.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/TraverseASTTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/TraverseASTTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/test/incCompileSetup/$global/streams/inc_compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.TraverseASTTest/test/out" afterPath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=edu.nyu.oop.TraverseASTTest/test/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.TraverseASTTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/edu.nyu.oop.TraverseASTTest.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -25,8 +44,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <marker date="1508610752000" expanded="true" signature="11677:11929" ph="//..." />
+                <marker date="1508610752000" expanded="true" signature="12049:12190" ph="{...}" />
+                <marker date="1508610752000" expanded="true" signature="12196:12686" ph="//..." />
+                <marker date="1508610752000" expanded="false" signature="12717:12728" ph=" { " />
+                <marker date="1508610752000" expanded="false" signature="12789:12795" ph=" }" />
+                <marker date="1508610752000" expanded="true" signature="12797:13380" ph="//..." />
+                <marker date="1508610752000" expanded="true" signature="13430:13493" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -34,8 +61,8 @@
       <file leaf-file-name="CustomClassObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="480">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="545">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,6 +109,7 @@
         <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/MethodVisitorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -114,6 +142,11 @@
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -437,7 +470,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508609332887</updated>
-      <workItem from="1508609337730" duration="1361000" />
+      <workItem from="1508609337730" duration="1513000" />
     </task>
     <servers />
   </component>
@@ -474,7 +507,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1361000" />
+    <option name="totallyTimeSpent" value="1513000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -622,23 +655,39 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1508610752000" expanded="true" signature="11677:11929" ph="//..." />
+            <marker date="1508610752000" expanded="true" signature="12049:12190" ph="{...}" />
+            <marker date="1508610752000" expanded="true" signature="12196:12686" ph="//..." />
+            <marker date="1508610752000" expanded="false" signature="12717:12728" ph=" { " />
+            <marker date="1508610752000" expanded="false" signature="12789:12795" ph=" }" />
+            <marker date="1508610752000" expanded="true" signature="12797:13380" ph="//..." />
+            <marker date="1508610752000" expanded="true" signature="13430:13493" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="545">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="480">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>
