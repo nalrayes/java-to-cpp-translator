@@ -27,6 +27,10 @@ public class PrimarySourceAndDep {
             //Nodes exist to check
             //Get the file name of the nodes left to check
             GNode currentNodeToCheck = remainingNodes.poll();
+
+            if (currentNodeToCheck == null)
+                continue;
+            //System.out.println("current node to check " + currentNodeToCheck);
             String currentFileName = currentNodeToCheck.getLocation().file;
             //Check if we have already gone through the current file
             if(!fileNamesFound.contains(currentFileName)){

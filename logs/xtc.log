@@ -54,3 +54,73 @@
 2017-10-21 17:40:01,994 - [pool-62-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-21 17:40:02,015 - [pool-62-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
 2017-10-21 17:40:02,015 - [pool-62-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:44:38,829 - [pool-64-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:44:38,854 - [pool-64-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:44:38,854 - [pool-64-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:44:38,856 - [pool-64-thread-3] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/io/File.java
+2017-10-21 17:44:46,516 - [pool-66-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:44:46,536 - [pool-66-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:44:46,536 - [pool-66-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:44:46,538 - [pool-66-thread-9] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/io/File.java
+2017-10-21 17:44:59,845 - [pool-68-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:44:59,866 - [pool-68-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:44:59,866 - [pool-68-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:24,942 - [pool-70-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:45:24,962 - [pool-70-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:45:24,963 - [pool-70-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:24,964 - [pool-70-thread-3] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:45:35,878 - [pool-72-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:45:35,899 - [pool-72-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:45:35,899 - [pool-72-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:46,707 - [pool-74-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:45:46,730 - [pool-74-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:45:46,730 - [pool-74-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:46,732 - [pool-74-thread-2] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:46:06,355 - [pool-76-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:46:06,397 - [pool-76-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:46:06,397 - [pool-76-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:46:17,062 - [pool-78-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:46:17,081 - [pool-78-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:46:17,082 - [pool-78-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:46:17,083 - [pool-78-thread-5] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:47:17,773 - [pool-80-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:47:35,616 - [pool-82-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:47:35,636 - [pool-82-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:47:35,636 - [pool-82-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:47:35,638 - [pool-82-thread-6] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:47:42,192 - [pool-84-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:48:12,183 - [pool-86-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:48:12,203 - [pool-86-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:48:12,204 - [pool-86-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:48:12,205 - [pool-86-thread-9] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:50:05,457 - [pool-88-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:50:05,479 - [pool-88-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:50:05,479 - [pool-88-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:50:05,481 - [pool-88-thread-1] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:50:28,061 - [pool-90-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:50:28,082 - [pool-90-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:50:28,082 - [pool-90-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:50:28,084 - [pool-90-thread-2] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:52:49,715 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:53:06,753 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:54:22,662 - [pool-94-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:54:22,684 - [pool-94-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:54:22,684 - [pool-94-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:54:22,686 - [pool-94-thread-6] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:55:18,482 - [pool-96-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:55:18,502 - [pool-96-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:55:18,502 - [pool-96-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:55:18,504 - [pool-96-thread-3] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:56:46,381 - [pool-98-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:56:46,404 - [pool-98-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:56:46,404 - [pool-98-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:56:46,406 - [pool-98-thread-6] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:57:48,892 - [pool-100-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:57:48,913 - [pool-100-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:57:48,913 - [pool-100-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:57:48,915 - [pool-100-thread-2] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:59:12,599 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 18:08:13,601 - [pool-103-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 18:08:13,621 - [pool-103-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 18:08:13,622 - [pool-103-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 18:08:13,624 - [pool-103-thread-8] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java

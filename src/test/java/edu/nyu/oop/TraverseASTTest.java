@@ -40,7 +40,7 @@ public class TraverseASTTest {
         System.out.println("Start Phase One");
         List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep(node);
         //System.out.println("Total Number of AST's found: " + javaASTNodes.size());
-        GNode firstNode = javaASTNodes.get(0); //Get the first node
+      //  GNode firstNode = javaASTNodes.get(0); //Get the first node
         //System.out.println(firstNode.getLocation().file);
         //System.out.println(javaASTNodes);
         System.out.println("END Phase One");

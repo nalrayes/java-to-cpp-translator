@@ -141,6 +141,36 @@ public class TraverseAST extends Visitor {
     }
 
 
+
+//    public void visitImportDeclaration(GNode n){
+//
+//        String getImportFileName = "";
+//
+//        Node getQualifiedID = n.getNode(1);
+//       // System.out.println("get imports");
+//       // System.out.println(getQualifiedID.size());
+//        for (int i = 0; i < getQualifiedID.size();i++){
+//
+//            // conditions used to get proper "." paths
+//            if (i < getQualifiedID.size()-1) {
+//
+//                getImportFileName += getQualifiedID.getString(i) + ".";
+//            }
+//            else{
+//                getImportFileName += getQualifiedID.getString(i);
+//            }
+//
+//
+//        }
+//
+//        System.out.println("import file " + getImportFileName);
+//
+//
+//
+//
+//    }
+
+
     public void visitClassDeclaration(GNode n) {
 
         //Entering the class scope & create a new class object
@@ -156,7 +186,7 @@ public class TraverseAST extends Visitor {
             currentClass.modifiers.add(modifierName);
 
         }
-        
+
         //Get the field decleration node
         Node classBody = n.getNode(5);
         //Get the size of the field

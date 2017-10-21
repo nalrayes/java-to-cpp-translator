@@ -1,4 +1,6 @@
 package inputs.CustomTests;
+import java.util.List;
+
 
 class A {
     public void printOther(A other) {
