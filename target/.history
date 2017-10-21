@@ -142,3 +142,7 @@ test
 test-only *TraverseASTTest* | more
 runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 test-only *TraverseASTTest* | more
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+test-only *TraverseASTTest* | more
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+test-only *TraverseASTTest* | more

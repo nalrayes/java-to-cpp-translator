@@ -48,8 +48,9 @@ public class TraverseASTTest {
 
             for (int j = 0; j < classSummary.classes.get(i).methods.size(); j++){
 
-
-               // System.out.println("m name " + classSummary.classes.get(i).methods.get(j).name);
+                System.out.println("m vis " + classSummary.classes.get(i).methods.get(j).visibility);
+                System.out.println("m mod " + classSummary.classes.get(i).methods.get(j).modifier);
+                System.out.println("m name " + classSummary.classes.get(i).methods.get(j).name);
 
 
 
