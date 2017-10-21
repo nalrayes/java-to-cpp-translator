@@ -10,20 +10,22 @@ import edu.nyu.oop.CustomConstructorClass;
 
 public class CustomClassObject {
 
-
-        // an arraylist of methods
-//        ArrayList<Method> methods;
-//
         private ArrayList<CustomConstructorClass> constructors;
-//
+
       	ArrayList<CustomVariablesClass> classVariables;
 
         ArrayList<String> modifiers;
 
+        //Keep track of this class parent class
         CustomClassObject parentClass;
+        //keep track of this class child class
+        ArrayList<CustomClassObject> childClasses;
+
+        //Keep track of the classes methods
+        ArrayList<CustomMethodClass> methods;
 
         String className;
-//
+
 //        ArrayList<IntermediateDataStructure.FileClass> implementors;
 
 
@@ -32,7 +34,7 @@ public class CustomClassObject {
         this.modifiers = new ArrayList<String>();
         this.classVariables = new ArrayList<CustomVariablesClass>();
         //this.className = className;
-
+        this.methods = new ArrayList<CustomMethodClass>();
 
     }
 

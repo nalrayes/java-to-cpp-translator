@@ -21,7 +21,9 @@ public class TraverseASTTest {
     public static void beforeClass() {
         logger.debug("Executing TraverseASTTest");
 
+
         node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/CustomTests/CustomTest1.java");
+
 
 
         // XtcTestUtils.prettyPrintAst(node);
@@ -38,8 +40,30 @@ public class TraverseASTTest {
     public void testMethodSummary1() {
         // Assert that the correct number of methods were counted by our visitor
         System.out.println(classSummary.classes.toString());
-        System.out.println("hellooooo");
-//        assertEquals(2, classSummary.classes.size());
+        System.out.println("Print classes");
+        for (int i =0; i < classSummary.classes.size(); i++){
+
+        //    System.out.println(classSummary.classes.get(i).methods.size());
+
+
+            for (int j = 0; j < classSummary.classes.get(i).methods.size(); j++){
+
+
+               // System.out.println("m name " + classSummary.classes.get(i).methods.get(j).name);
+
+
+
+            }
+
+            //classSummary.classes.get(i).metho
+        }
+
+
+
+
+        assertEquals(3, classSummary.classes.size());
+        //assertEquals(3, classSummary.classes);
+
 //        assretEquals(1, classSummary.classes.get(1).getConstructors().size());
         // to see constructor details of the first class in the file
 //        ArrayList<CustomConstructorClass> constructors = classSummary.classes.get(0).getConstructors();

@@ -9,4 +9,12 @@ public class CustomMethodClass {
     String name;
     ArrayList<CustomVariablesClass> parameters;
     String returnType;
+
+
+
+    public CustomMethodClass(){
+
+
+        parameters = new ArrayList<CustomVariablesClass>();
+    }
 }
