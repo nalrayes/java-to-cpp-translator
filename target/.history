@@ -1,12 +1,2 @@
 test
-runxtc -translate
-testrunxtc -translate src/test/java/inputs/Test000/Test000.java
-runxtc -translate src/test/java/inputs/Test000/Test000.java
-runxtc -printJavaAst src/test/java/inputs/Test000/Test0.java
-runxtc -printJavaAst src/test/java/inputs/Test000/Test0.runxtc -printJavaAst src/test/jjava
-runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
-testrunxtc -translate src/test/java/inputs/Test010/Test010.java
-runxtc -translate src/test/java/inputs/Test010/Test010.java
-testrunxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
-runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
-test
+git ci -am "Merge"

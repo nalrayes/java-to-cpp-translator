@@ -1,13 +1,13 @@
 #Successful Tests
-#Sat Oct 21 18:16:42 EDT 2017
-edu.nyu.oop.NodeTransformationExample=1508624202727
-edu.nyu.oop.TraverseASTTest=1508624199240
-edu.nyu.oop.StringToNodeExample=1508624202787
-edu.nyu.oop.JunitAssertionsExample=1508624199184
-edu.nyu.oop.SymbolTableCreateTest=1508624202690
-edu.nyu.oop.JunitTestExample=1508624199093
-edu.nyu.oop.MethodVisitorTest=1508624199064
-edu.nyu.oop.NodeInspectionExample=1508624202708
-edu.nyu.oop.ChildToParentMapTest=1508624199137
-edu.nyu.oop.NodeUtilTest=1508624202769
-edu.nyu.oop.SymbolTableTest=1508624202606
+#Sat Oct 21 18:22:11 EDT 2017
+edu.nyu.oop.NodeTransformationExample=1508624531146
+edu.nyu.oop.TraverseASTTest=1508624529978
+edu.nyu.oop.StringToNodeExample=1508624531171
+edu.nyu.oop.JunitAssertionsExample=1508624529944
+edu.nyu.oop.SymbolTableCreateTest=1508624531103
+edu.nyu.oop.JunitTestExample=1508624529873
+edu.nyu.oop.MethodVisitorTest=1508624529809
+edu.nyu.oop.NodeInspectionExample=1508624531125
+edu.nyu.oop.ChildToParentMapTest=1508624529910
+edu.nyu.oop.NodeUtilTest=1508624531160
+edu.nyu.oop.SymbolTableTest=1508624531095

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2017-10-21 17:17:52,852 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-21 17:17:52,959 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/CustomTests
 2017-10-21 17:17:52,960 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
@@ -172,3 +173,257 @@
 2017-10-21 18:16:44,762 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-21 18:16:44,847 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/CustomTests
 2017-10-21 18:16:44,848 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+=======
+2017-10-21 17:24:46,874 - [pool-6-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:24:46,891 - [pool-6-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:24:46,891 - [pool-6-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:24:46,905 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-21 17:24:46,909 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-21 17:24:46,909 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-21 17:24:46,909 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-21 17:24:46,910 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-21 17:24:46,911 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-21 17:24:46,911 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 17:24:46,911 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 17:24:46,918 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-21 17:24:46,918 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 17:24:46,919 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 17:24:46,921 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 17:24:46,922 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 17:24:46,922 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 17:24:46,922 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 17:24:46,922 - [pool-6-thread-2] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-21 17:24:46,949 - [pool-6-thread-2] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-21 17:24:46,956 - [pool-6-thread-2] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-21 17:24:46,973 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-21 17:24:46,973 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-21 17:24:46,974 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 17:24:46,975 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 17:24:46,975 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-21 17:24:46,978 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 17:24:46,979 - [pool-6-thread-2] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 17:24:46,984 - [pool-6-thread-2] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-21 17:24:46,985 - [pool-6-thread-2] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-21 17:24:47,122 - [pool-6-thread-2] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-21 17:24:47,208 - [pool-6-thread-2] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-21 17:24:47,292 - [pool-6-thread-2] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-21 17:25:01,393 - [pool-8-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:25:01,414 - [pool-8-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:25:01,415 - [pool-8-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:25:34,139 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:25:34,157 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test001
+2017-10-21 17:25:34,158 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
+2017-10-21 17:27:38,482 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:28:22,029 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:38:53,690 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:38:55,807 - [pool-60-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:38:55,829 - [pool-60-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:38:55,830 - [pool-60-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:40:01,994 - [pool-62-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:40:02,015 - [pool-62-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:40:02,015 - [pool-62-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:44:38,829 - [pool-64-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:44:38,854 - [pool-64-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:44:38,854 - [pool-64-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:44:38,856 - [pool-64-thread-3] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/io/File.java
+2017-10-21 17:44:46,516 - [pool-66-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:44:46,536 - [pool-66-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:44:46,536 - [pool-66-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:44:46,538 - [pool-66-thread-9] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/io/File.java
+2017-10-21 17:44:59,845 - [pool-68-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:44:59,866 - [pool-68-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:44:59,866 - [pool-68-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:24,942 - [pool-70-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:45:24,962 - [pool-70-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:45:24,963 - [pool-70-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:24,964 - [pool-70-thread-3] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:45:35,878 - [pool-72-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:45:35,899 - [pool-72-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:45:35,899 - [pool-72-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:46,707 - [pool-74-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:45:46,730 - [pool-74-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:45:46,730 - [pool-74-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:45:46,732 - [pool-74-thread-2] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:46:06,355 - [pool-76-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:46:06,397 - [pool-76-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:46:06,397 - [pool-76-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:46:17,062 - [pool-78-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:46:17,081 - [pool-78-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:46:17,082 - [pool-78-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:46:17,083 - [pool-78-thread-5] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:47:17,773 - [pool-80-thread-7] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:47:35,616 - [pool-82-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:47:35,636 - [pool-82-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:47:35,636 - [pool-82-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:47:35,638 - [pool-82-thread-6] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:47:42,192 - [pool-84-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:48:12,183 - [pool-86-thread-9] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:48:12,203 - [pool-86-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:48:12,204 - [pool-86-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:48:12,205 - [pool-86-thread-9] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:50:05,457 - [pool-88-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:50:05,479 - [pool-88-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:50:05,479 - [pool-88-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:50:05,481 - [pool-88-thread-1] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:50:28,061 - [pool-90-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:50:28,082 - [pool-90-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:50:28,082 - [pool-90-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:50:28,084 - [pool-90-thread-2] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:52:49,715 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:53:06,753 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 17:54:22,662 - [pool-94-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:54:22,684 - [pool-94-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:54:22,684 - [pool-94-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:54:22,686 - [pool-94-thread-6] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:55:18,482 - [pool-96-thread-3] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:55:18,502 - [pool-96-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:55:18,502 - [pool-96-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:55:18,504 - [pool-96-thread-3] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:56:46,381 - [pool-98-thread-6] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:56:46,404 - [pool-98-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:56:46,404 - [pool-98-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:56:46,406 - [pool-98-thread-6] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:57:48,892 - [pool-100-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 17:57:48,913 - [pool-100-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 17:57:48,913 - [pool-100-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 17:57:48,915 - [pool-100-thread-2] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 17:59:12,599 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-21 18:08:13,601 - [pool-103-thread-8] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 18:08:13,621 - [pool-103-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 18:08:13,622 - [pool-103-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 18:08:13,624 - [pool-103-thread-8] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+>>>>>>> 212a2052dac90e925c2d065b71555705dd67ab28
+2017-10-21 18:20:08,573 - [main] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-21 18:20:08,579 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:20:08,579 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:20:08,581 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:20:08,582 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:20:08,583 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:20:08,583 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:20:08,584 - [main] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-21 18:20:08,584 - [main] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-21 18:20:08,664 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-21 18:20:08,689 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-21 18:20:08,690 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-21 18:20:08,695 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-21 18:20:08,696 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-21 18:20:08,696 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 18:20:08,697 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 18:20:08,698 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-21 18:20:08,701 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-21 18:20:08,704 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 18:20:08,705 - [main] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 18:20:08,708 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-21 18:20:08,717 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 18:20:08,718 - [main] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 18:20:08,719 - [main] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-21 18:20:08,760 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-21 18:20:08,768 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-21 18:20:09,643 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-21 18:20:10,089 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-21 18:20:10,341 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-21 18:20:10,505 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 18:20:10,516 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 18:20:10,517 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 18:20:10,520 - [main] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 18:22:09,704 - [pool-6-thread-5] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-21 18:22:09,868 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-21 18:22:09,869 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:22:09,869 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:22:09,871 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:22:09,872 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:22:09,872 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:22:09,872 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:22:09,872 - [pool-6-thread-5] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-21 18:22:09,953 - [pool-6-thread-5] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 18:22:09,962 - [pool-6-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 18:22:09,962 - [pool-6-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 18:22:09,967 - [pool-6-thread-5] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java
+2017-10-21 18:22:09,996 - [pool-6-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-21 18:22:10,007 - [pool-6-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-21 18:22:10,391 - [pool-6-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-21 18:22:10,615 - [pool-6-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-21 18:22:10,875 - [pool-6-thread-5] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-21 18:22:11,110 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-21 18:22:11,121 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-21 18:22:11,121 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-21 18:22:11,122 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-21 18:22:11,123 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-21 18:22:11,123 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-21 18:22:11,123 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-21 18:22:11,124 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-21 18:22:11,124 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 18:22:11,124 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 18:22:11,130 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-21 18:22:11,131 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-21 18:22:11,133 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 18:22:11,134 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 18:22:11,135 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-21 18:22:11,141 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 18:22:11,145 - [pool-6-thread-5] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 18:22:11,152 - [pool-6-thread-5] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-21 18:22:24,516 - [main] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-10-21 18:22:24,533 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:22:24,535 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:22:24,539 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:22:24,539 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:22:24,540 - [main] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-10-21 18:22:24,540 - [main] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-10-21 18:22:24,540 - [main] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-10-21 18:22:24,542 - [main] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-10-21 18:22:24,641 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-10-21 18:22:24,652 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-10-21 18:22:24,654 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-10-21 18:22:24,655 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-10-21 18:22:24,656 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-10-21 18:22:24,656 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-10-21 18:22:24,657 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 18:22:24,657 - [main] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-10-21 18:22:24,660 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-10-21 18:22:24,661 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-10-21 18:22:24,669 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 18:22:24,670 - [main] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 18:22:24,671 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-10-21 18:22:24,681 - [main] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-10-21 18:22:24,683 - [main] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-10-21 18:22:24,685 - [main] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-10-21 18:22:24,725 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-10-21 18:22:24,728 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-10-21 18:22:26,304 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-10-21 18:22:27,210 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-10-21 18:22:28,459 - [main] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-10-21 18:22:29,406 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-21 18:22:29,426 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/CustomTests
+2017-10-21 18:22:29,426 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-21 18:22:29,429 - [main] WARN  e.nyu.oop.util.JavaFiveImportParser - Unable to find any source file for path java/util/List.java

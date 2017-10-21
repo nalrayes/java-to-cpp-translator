@@ -1,4 +1,6 @@
 package inputs.CustomTests;
+import java.util.List;
+
 
 class A {
     public void printOther(A other) {
@@ -19,6 +21,8 @@ class B extends A {
 }
 
 public class CustomTest1 {
+
+    //int x;
     public static void main(String[] args) {
         A a = new A();
         B other = new B();
