@@ -1,2 +1,6 @@
 test
 git ci -am "Merge"
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/Test003/Test0031.java
+runxtc -printJavaAst src/test/java/inputs/test003/Test0031.java
+runxtc -printJavaAst src/test/java/inputs/test003/Test003.java

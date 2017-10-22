@@ -14,4 +14,7 @@ public class CustomMethodClass {
         parameters = new ArrayList<CustomVariablesClass>();
     }
 
+    public ArrayList<CustomVariablesClass> getParameters() {
+        return parameters;
+    }
 }

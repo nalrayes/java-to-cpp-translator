@@ -1,6 +1,4 @@
 package inputs.CustomTests;
-import java.util.List;
-
 
 class A {
     public void printOther(A other) {
@@ -10,6 +8,12 @@ class A {
 
 class B extends A {
     public B some;
+
+    private A classA;
+
+    public A returnClass(){
+        return this.classA;
+    }
 
     public void printOther(A other, B thing, int xyz) {
         System.out.println(other.toString());

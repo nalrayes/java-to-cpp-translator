@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 
 //import edu.nyu.oop.CustomClassObject;
-import edu.nyu.oop.CustomVariablesClass;
-import edu.nyu.oop.CustomConstructorClass;
 
 
 public class CustomClassObject {
@@ -17,9 +15,7 @@ public class CustomClassObject {
         ArrayList<String> modifiers;
 
         //Keep track of this class parent class
-        CustomClassObject parentClass;
-        //keep track of this class child class
-        ArrayList<CustomClassObject> childClasses;
+        String parentClass;
 
         //Keep track of the classes methods
         ArrayList<CustomMethodClass> methods;
@@ -41,8 +37,21 @@ public class CustomClassObject {
     public ArrayList<CustomConstructorClass> getConstructors() {
         return constructors;
     }
-
     public void addConstructor(CustomConstructorClass constructor) {
         this.constructors.add(constructor);
+    }
+
+    public  ArrayList<CustomVariablesClass> getClassVariables(){
+     return this.classVariables;
+    }
+    public void addClassVariable(CustomVariablesClass var) {
+        this.classVariables.add(var);
+    }
+
+    public void setParentClass(String parentClass) {
+        this.parentClass = parentClass;
+    }
+    public String getParentClass(){
+        return this.parentClass;
     }
 }

@@ -69,7 +69,7 @@ public class TraverseAST extends Visitor {
             declarator = n.getNode(2).getNode(0).getString(0);
         } else {
             // then this is a formalparameter
-            declarator = n.getString(2);
+            declarator = n.getString(3);
         }
 
         varToReturn.name = declarator;
@@ -148,6 +148,16 @@ public class TraverseAST extends Visitor {
         //Get the class name
         currentClass.className = n.getString(1);
 
+        //Get the class extensions
+        Node extention = n.getNode(3);
+        String classExtension = "None";
+        if (extention != null){
+            //there is an extension
+            classExtension = extention.getNode(0).getNode(0).getString(0);
+        }
+        //Add the extension to the class
+        currentClass.setParentClass(classExtension);
+
         // Get all modifiers of the class and add them to the class object
         Node modifiers  = n.getNode(0);
         for (int i = 0; i < modifiers.size(); i++) {
@@ -168,11 +178,11 @@ public class TraverseAST extends Visitor {
             if (curNode.getName().equals("FieldDeclaration")){
                 // calls a custom method TraverseFieldDeclaration to collect variable info
                 CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
-                currentClass.classVariables.add(aVar);
+                currentClass.addClassVariable(aVar);
                 //For DEBUG
                 if (DEBUGGING == 1){
                     for (CustomVariablesClass v : currentClass.classVariables){
-                        System.out.println("Class vars " + v.name);
+                        //System.out.println("Class vars " + v.name);
                     }
                 }
             }
@@ -201,17 +211,27 @@ public class TraverseAST extends Visitor {
             currentMethodObj.name = n.getString(3);
         }
 
+        //Get method return type
+        Node returnType = n.getNode(2);
+        //System.out.println("Method Return " + returnType.size());
+        if(returnType.size() > 0){
+            //Return type is not void
+            //Get the return type
+            String rt = returnType.getNode(0).getString(0);
+            currentMethodObj.returnType = rt;
+            // System.out.println("Method Return Type " + rt);
+        }
+        else{
+            //Return type is void
+            currentMethodObj.returnType = returnType.getName();
+            //System.out.println("Method Return Type " + returnType.getName());
+        }
 
         Node methodModifers = currMethod.getNode(0);
 
-
-
         String wholeModifier = "";
 
-
-
-            int totalModsInMethod = currMethod.getNode(0).size();
-
+        int totalModsInMethod = currMethod.getNode(0).size();
 
         for (int j = 0; j < totalModsInMethod; j++) {
 
@@ -231,6 +251,7 @@ public class TraverseAST extends Visitor {
 
             currentMethodObj.modifier = wholeModifier;
         }
+
 
         if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
 
@@ -253,20 +274,20 @@ public class TraverseAST extends Visitor {
                     CustomVariablesClass myVar = new CustomVariablesClass();
                     // get method parameters
                     myVar.modifier = "";
-                    // get parameter variable name
+                    // get parameter variable type
                     if (currentformalParameter.getNode(1).getName().equals("Type")) {
 
 
                         Node getVarName = currentformalParameter.getNode(1).getNode(0);
 
 
-                            myVar.name = getVarName.getString(0);
+                            myVar.type = getVarName.getString(0);
 
 
                     }
-
+                    //Get parameter var name
                     if (currentformalParameter.getString(3) != null)
-                        myVar.type = currentformalParameter.getString(3);
+                        myVar.name = currentformalParameter.getString(3);
 
 
                    currentMethodObj.parameters.add(myVar);
@@ -301,6 +322,7 @@ public class TraverseAST extends Visitor {
     }
 
 
+    //Class Summary represents a file
     static class ClassSummary{
 
 
