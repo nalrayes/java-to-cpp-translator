@@ -20,9 +20,9 @@ public abstract class cppNodeActions {
         return parent;
     }
 
-    public static GNode addDataToNode(GNode node, String value){
+    public static GNode addDataToNode(GNode node, int index ,String value){
         //Create new simpleCPPDataNode
-        node.set(0,value);
+        node.set(index,value);
         //Add the data node to node
         return node;
     }
@@ -33,8 +33,10 @@ public abstract class cppNodeActions {
         if(listOfData == null && listOfData.size() == 0){
             return null;
         }
+        int index = 0;
         for (String value : listOfData){
-            addDataToNode(node,value);
+            addDataToNode(node,index,value);
+            index += 1;
         }
         return node;
     }

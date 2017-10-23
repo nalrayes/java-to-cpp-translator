@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0c82ea-0ab0-44f0-bed3-bbabd831298f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderVisitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cpp/CppTest1.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/CppHVisitorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logs/xtc.log" afterPath="$PROJECT_DIR$/src/logs/xtc.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -102,24 +90,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="343">
+              <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -248,8 +226,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
         <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
       </list>
     </option>
   </component>
@@ -714,7 +692,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508609332887</updated>
-      <workItem from="1508609337730" duration="47377000" />
+      <workItem from="1508609337730" duration="47481000" />
     </task>
     <servers />
   </component>
@@ -751,7 +729,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47377000" />
+    <option name="totallyTimeSpent" value="47481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="23" width="1440" height="813" extended-state="6" />
@@ -1309,21 +1287,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="343">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
