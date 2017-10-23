@@ -53,9 +53,6 @@ public class TraverseASTTest {
         //Phase two
         CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
 
-
-
-
     }
 
     @Test

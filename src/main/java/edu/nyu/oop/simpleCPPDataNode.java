@@ -1,14 +1,16 @@
 package edu.nyu.oop;
 
-public class simpleCPPDataNode {
+import xtc.tree.GNode;
+
+public class simpleCPPDataNode extends GNode{
+
+    public static GNode create(String var0) {
+        return new GNode.Variable(var0);
+    }
 
     private String type;
     private String value;
 
-    public simpleCPPDataNode(String type, String value){
-        this.type = type;
-        this.value = value;
-    }
 
     public void setType(String type) {
         this.type = type;
