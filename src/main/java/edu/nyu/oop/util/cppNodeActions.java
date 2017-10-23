@@ -19,25 +19,22 @@ public abstract class cppNodeActions {
         return parent;
     }
 
-    public static GNode addDataToNode(GNode node, String type ,String value){
-        simpleCPPDataNode newDataNode = new simpleCPPDataNode(type,value);
+    public static GNode addDataToNode(GNode node ,String value){
         //Add as a child
-        node.add(newDataNode);
+        node.add(value);
         //Add the data node to node
         return node;
     }
 
     //Add data to node for multiple varaibles
 
-    public static GNode addDataToNodeWithArray(GNode node, String type ,ArrayList<String> listOfData){
+    public static GNode addDataToNodeWithArray(GNode node ,ArrayList<String> listOfData){
         if(listOfData == null && listOfData.size() == 0){
             return null;
         }
         for (String value : listOfData){
-            //create new node
-            simpleCPPDataNode newDataNode = new simpleCPPDataNode(type,value);
             //Add to the parent
-            node.add(newDataNode);
+            node.add(value);
         }
         return node;
     }
@@ -45,37 +42,38 @@ public abstract class cppNodeActions {
 
 
     //Custom object to hold key values for the Gnode
-    public static class simpleCPPDataNode extends cppNodeActions{
+//    public static class simpleCPPDataNode extends cppNodeActions{
+//
+//        private String type;
+//        private String value;
+//
+//        public simpleCPPDataNode(String type, String value){
+//            this.type = type;
+//            this.value = value;
+//        }
+//
+//        public void setType(String type) {
+//            this.type = type;
+//        }
+//
+//        public String getType() {
+//            return type;
+//        }
+//
+//        public void setValue(String value) {
+//            this.value = value;
+//        }
+//
+//        public String getValue() {
+//            return value;
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return this.type + " = " + this.value;
+//        }
+//    }
 
-        private String type;
-        private String value;
-
-        public simpleCPPDataNode(String type, String value){
-            this.type = type;
-            this.value = value;
-        }
-
-        public void setType(String type) {
-            this.type = type;
-        }
-
-        public String getType() {
-            return type;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        @Override
-        public String toString() {
-            return this.type + " = " + this.value;
-        }
-    }
 }
 
 

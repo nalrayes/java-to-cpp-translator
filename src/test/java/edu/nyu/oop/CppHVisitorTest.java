@@ -32,13 +32,17 @@ public class CppHVisitorTest {
     public void before() {
         //Phase one
         List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep(node);
+
         //Phase two
         CppHeaderVisitor visitor = new CppHeaderVisitor();
+
         CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
 
         //Print the CPPAST
         XtcTestUtils.prettyPrintAst(cppAST.getRoot());
 
+        //Visit
+        visitor.visit(cppAST.getRoot());
 
 
 

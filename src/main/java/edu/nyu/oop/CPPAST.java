@@ -11,7 +11,7 @@ public class CPPAST {
     //Private the root node of the tree
     private GNode root;
 
-    //Keeps tack of the ParentNodeOfRecentAdditionOfNode
+    //Keeps tack of the ParentNodeOfRecentAdditionOfNode - use this to find the last Node point you want to add too
     private GNode recentParentNodeMutated;
 
     //All the diff classes

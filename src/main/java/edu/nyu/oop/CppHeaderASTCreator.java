@@ -25,13 +25,13 @@ public class CppHeaderASTCreator {
         //Add the node to the root of tree
         cppNodeActions.addNodeAsChildToParent(cppHeaderAST.getRoot(),dep);
         //Add the data to the child node
-        cppNodeActions.addDataToNodeWithArray(dep,"Data",new ArrayList<String>(Arrays.asList("#pragma once",
+        cppNodeActions.addDataToNodeWithArray(dep,new ArrayList<String>(Arrays.asList("#pragma once",
                 "#include \"java_lang.h\"", "#include <string>")));
 
         //Add Using Namespace for javalang to CPP AST
         GNode namespace = cppNodeActions.createNewASTNode("UsingNamespace");
         cppNodeActions.addNodeAsChildToParent(cppHeaderAST.getRoot(),namespace);
-        cppNodeActions.addDataToNode(namespace,"Data","java::lang");
+        cppNodeActions.addDataToNode(namespace,"java::lang");
 
         //Create all the JavaClassSummary's from the JavaAST
         //Holds the classSummary from JavaASTs
@@ -43,12 +43,13 @@ public class CppHeaderASTCreator {
         }
 
         //With the Class Summary create the namespaces
+        GNode pointer = cppHeaderAST.getRoot(); // The last node that we added new GNodes too
         for(TraverseAST.ClassSummary javaData: javaClassSummaries){
             //Add the nameSpaces to our C++ AST Tree
             addNameSpacesToCppAST(javaData,cppHeaderAST);
         }
 
-        //Check to print out the recent parent mutated
+        //Check to print out the recent parent mutated of the ASTTree
         System.out.println(cppHeaderAST.getRecentParentNodeMutated());
 
         //TODO create the classObjects and heirechy strucutre
@@ -75,7 +76,7 @@ public class CppHeaderASTCreator {
         //Add the node to the root
         cppNodeActions.addNodeAsChildToParent(pointer,newNamespaceNode);
         //Add the data node
-        cppNodeActions.addDataToNodeWithArray(newNamespaceNode,"Data",packages);
+        cppNodeActions.addDataToNodeWithArray(newNamespaceNode,packages);
         //Update the recent node pointer
         cppAst.setRecentParentNodeMutated(newNamespaceNode);
     }

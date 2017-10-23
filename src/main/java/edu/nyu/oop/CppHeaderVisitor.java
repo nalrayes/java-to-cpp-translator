@@ -20,17 +20,11 @@ public class CppHeaderVisitor extends xtc.tree.Visitor {
 
 
 
+    //visitDependencies in CppAST
     public void visitDependencies(GNode n) throws IOException {
-//        summary.nodes += n.getName() + " ";
-//        summary.names += n.getString(3) + " ";
-
-        Node modifiers  = n.getNode(0);
-        for (int i = 0; i < modifiers.size(); i++) {
-            Node curNode = modifiers.getNode(i);
-            String modifierName = curNode.toString();
-            System.out.println(modifierName);
+        for (int i = 0; i < n.size(); i++) {
+            //System.out.println(n.getString(i));
         }
-       // summary.count++;
         visit(n);
     }
 
