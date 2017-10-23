@@ -50,6 +50,9 @@ public class TraverseASTTest {
         //Phase two
         classSummary = visitor.getClassSummary(javaASTNodes.get(0));
 
+
+
+
     }
 
     @Test

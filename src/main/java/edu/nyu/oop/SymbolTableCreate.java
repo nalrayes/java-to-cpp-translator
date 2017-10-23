@@ -87,7 +87,6 @@ public class SymbolTableCreate extends ContextualVisitor {
     //     SymbolTableUtil.enterScope(table, n);
 
     //     summary.put(n.getString(3)+"()", Tag.FUNCTION);
-    //     //interDataStructure.FileClass.
 
     //     // Extract a list representing the parameters to this method.
     //     List<VariableT> params = SymbolTableUtil.extractFormalParams(table.current());

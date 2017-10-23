@@ -22,8 +22,6 @@ public class CustomClassObject {
 
         String className;
 
-//        ArrayList<IntermediateDataStructure.FileClass> implementors;
-
 
     public CustomClassObject() {
         this.constructors = new ArrayList<CustomConstructorClass>();
