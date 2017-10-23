@@ -45,7 +45,7 @@ public class CPPAST {
         if (cppDepList != null && cppDepList.size() >0) {
          //Values exit we add it to the dep list
          for (String dep: cppDepList){
-             this.cppDepList.add(new simpleCPPDataNode("dependencies",dep));
+           //  this.cppDepList.add(new simpleCPPDataNode("dependencies",dep));
          }
         }
     }

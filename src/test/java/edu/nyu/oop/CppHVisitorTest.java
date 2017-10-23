@@ -39,6 +39,7 @@ public class CppHVisitorTest {
     @Test
     public void testMethodSummary1() {
         // Assert that the correct number of methods were counted by our visitor
+        System.out.println(summary);
         assertEquals(summary.count, 2);
     }
 

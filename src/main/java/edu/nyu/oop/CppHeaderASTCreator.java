@@ -31,7 +31,7 @@ public class CppHeaderASTCreator {
         //Name space for javalang
         GNode namespace = cppNodeActions.createNewASTNode("UsingNamespace");
         cppNodeActions.addNodeAsChildToParent(cppHeaderAST.getRoot(),namespace);
-        cppNodeActions.addDataToNode(namespace, "UsingNamespace","java::lang");
+        cppNodeActions.addDataToNode(namespace, 0,"java::lang");
 
         //With the summary's create the namespaces
 
