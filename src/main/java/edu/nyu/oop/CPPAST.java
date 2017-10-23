@@ -12,13 +12,13 @@ public class CPPAST {
     private GNode root;
 
     //Keep track of the namespace
-    private List<simpleCPPDataNode> nameSpaceNames;
+   // private List<simpleCPPDataNode> nameSpaceNames;
 
     //All the diff classes
     private List <CppClassObject> cppClassObjectslist;
 
     //Simple data node to hold all c++ starting dep
-    private List <simpleCPPDataNode> cppDepList;
+   // private List <simpleCPPDataNode> cppDepList;
 
     //The main class
     private CppClassObject mainClass;
@@ -26,9 +26,9 @@ public class CPPAST {
 
     //Constructor
     public CPPAST (String name){
-        this.nameSpaceNames = new ArrayList<simpleCPPDataNode>();
+      //  this.nameSpaceNames = new ArrayList<simpleCPPDataNode>();
         this.cppClassObjectslist = new ArrayList<CppClassObject>();
-        this.cppDepList = new ArrayList<simpleCPPDataNode>();
+      //  this.cppDepList = new ArrayList<simpleCPPDataNode>();
         //create new gnode as root
         this.root = cppNodeActions.createNewASTNode(name);
     }
@@ -45,7 +45,7 @@ public class CPPAST {
         if (cppDepList != null && cppDepList.size() >0) {
          //Values exit we add it to the dep list
          for (String dep: cppDepList){
-             this.cppDepList.add(new simpleCPPDataNode("dependencies",dep));
+             //this.cppDepList.add(new simpleCPPDataNode("dependencies",dep));
          }
         }
     }

@@ -21,7 +21,6 @@ public class CppHVisitorTest {
 
 
 
-
     @BeforeClass
     public static void beforeClass() {
         logger.debug("Executing MethodVisitorTest");
