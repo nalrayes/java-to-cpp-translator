@@ -595,3 +595,7 @@
 2017-10-22 19:48:11,701 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
 2017-10-22 19:48:11,775 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test010
 2017-10-22 19:48:11,778 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-23 12:27:25,159 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-23 12:27:35,114 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-23 12:29:24,048 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-23 12:30:47,886 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.

@@ -17,7 +17,6 @@ import java.util.ArrayList;
 public class TraverseAST extends Visitor {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
 
-    //IntermediateDataStructure astData = new IntermediateDataStructure();
     // CustomClassObject
     // private MethodSummary summary = new MethodSummary();
 
@@ -69,7 +68,7 @@ public class TraverseAST extends Visitor {
             declarator = n.getNode(2).getNode(0).getString(0);
         } else {
             // then this is a formalparameter
-            declarator = n.getString(2);
+            declarator = n.getString(3);
         }
 
         varToReturn.name = declarator;

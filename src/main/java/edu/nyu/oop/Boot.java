@@ -19,6 +19,7 @@ import xtc.tree.Node;
 import xtc.util.SymbolTable;
 import xtc.util.Tool;
 import xtc.lang.JavaPrinter;
+import xtc.lang.CPrinter;
 import xtc.parser.ParseException;
 import xtc.util.Runtime;
 
@@ -61,7 +62,8 @@ public class Boot extends Tool {
         bool("printSymbolTable", "printSymbolTable", false, "Print symbol table for Java Ast.").
         bool("printConfig", "printConfig", false, "Output application configuration to screen.").
                 //Add new command for Transation
-        bool("translate", "translate", false, "Translate Java Into C++");
+        bool("translate", "translate", false, "Translate Java Into C++").
+        bool("printCppCode", "printCppCode", false, "Print Cpp code.");
     }
 
     @Override
@@ -103,6 +105,12 @@ public class Boot extends Tool {
         if (runtime.test("printJavaCode")) {
             new JavaPrinter(runtime.console()).dispatch(n);
             runtime.console().flush();
+        }
+
+        if (runtime.test("printCppCode")) {
+            new CPrinter().dispatch(n);
+            runtime.console().flush();
+
         }
 
         if (runtime.test("printJavaImportCode")) {
