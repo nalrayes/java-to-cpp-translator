@@ -15,7 +15,7 @@ public class CppHVisitorTest {
 
     private CppHeaderVisitor.MethodSummary summary;
 
-    
+
 
     CppHeaderVisitor visitor = new CppHeaderVisitor();
 

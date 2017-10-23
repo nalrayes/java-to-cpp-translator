@@ -24,7 +24,6 @@ public class TraverseASTTest {
     public static void beforeClass() {
         logger.debug("Executing TraverseASTTest");
 
-
         node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/Test010/Test010.java");
 
 
@@ -33,6 +32,7 @@ public class TraverseASTTest {
 
     @Before
     public void before() {
+
         TraverseAST visitor = new TraverseAST();
         //summary = visitor.getSummary(node);
 
@@ -47,8 +47,11 @@ public class TraverseASTTest {
 
         System.out.println("END Phase One");
 
-        //Phase two
+        //Phase one get the classSummary Test
         classSummary = visitor.getClassSummary(javaASTNodes.get(0));
+
+        //Phase two
+        CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
 
 
 
