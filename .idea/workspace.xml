@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0c82ea-0ab0-44f0-bed3-bbabd831298f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderVisitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cpp/CppTest1.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/CppHVisitorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/logs/xtc.log" afterPath="$PROJECT_DIR$/src/logs/xtc.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -27,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-4241">
-              <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding>
                 <element signature="e#800#801#0" expanded="true" />
                 <element signature="e#824#825#0" expanded="true" />
@@ -44,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -54,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
-              <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1695#1696#0" expanded="true" />
@@ -84,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
-              <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="349">
@@ -100,6 +110,16 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +169,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+              <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -214,7 +234,6 @@
         <option value="$PROJECT_DIR$/logs/xtc.log" />
         <option value="$PROJECT_DIR$/target/.history" />
         <option value="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/TraverseASTTest.class" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java" />
         <option value="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" />
@@ -230,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -238,12 +258,6 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-17" />
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -268,6 +282,11 @@
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -695,7 +714,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508609332887</updated>
-      <workItem from="1508609337730" duration="47339000" />
+      <workItem from="1508609337730" duration="47377000" />
     </task>
     <servers />
   </component>
@@ -732,7 +751,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47339000" />
+    <option name="totallyTimeSpent" value="47377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="23" width="1440" height="813" extended-state="6" />
@@ -901,56 +920,6 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1508778922000" expanded="true" signature="83194:83211" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83194:83229" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83194:83242" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83194:83257" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83292:85788" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83305:85773" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83359:83654" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83378:83639" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83441:83619" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83481:83585" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83502:83563" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83704:84031" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83723:84016" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83818:83996" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83858:83962" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="83879:83940" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84082:84347" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84101:84332" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84134:84312" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84174:84278" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84195:84256" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84390:84696" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84409:84681" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84483:84661" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84523:84627" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84544:84605" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84747:85101" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84766:85086" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84849:85066" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84889:85032" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="84910:85010" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85136:85442" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85155:85427" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85229:85407" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85269:85373" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85290:85351" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85494:85759" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85513:85744" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85546:85724" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85586:85690" ph="..." />
-            <marker date="1508778922000" expanded="true" signature="85607:85668" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1210,7 +1179,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1226,7 +1195,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4241">
-          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding>
             <element signature="e#800#801#0" expanded="true" />
             <element signature="e#824#825#0" expanded="true" />
@@ -1241,7 +1210,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1249,7 +1218,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1695#1696#0" expanded="true" />
@@ -1287,7 +1256,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1347,6 +1316,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
