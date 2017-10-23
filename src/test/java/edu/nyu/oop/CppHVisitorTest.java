@@ -1,9 +1,14 @@
 package edu.nyu.oop;
 
+import java.util.List;
+
+import edu.nyu.oop.util.cppNodeActions;
+
 import org.junit.*;
 import org.slf4j.Logger;
 import xtc.tree.GNode;
 
+import edu.nyu.oop.util.cppNodeActions;
 
 
 import static org.junit.Assert.*;
@@ -13,12 +18,7 @@ public class CppHVisitorTest {
 
     private static GNode node = null;
 
-    private CppHeaderVisitor.MethodSummary summary;
-
-
-
     CppHeaderVisitor visitor = new CppHeaderVisitor();
-
 
 
     @BeforeClass
@@ -30,27 +30,36 @@ public class CppHVisitorTest {
 
     @Before
     public void before() {
+        //Phase one
+        List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep(node);
+        //Phase two
         CppHeaderVisitor visitor = new CppHeaderVisitor();
-        System.out.println(summary);
-        summary = visitor.getSummary(node);
+        CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
+
+        //Print the CPPAST
+        XtcTestUtils.prettyPrintAst(cppAST.getRoot());
+
+
+
+
+
+//        for (int i = 0; i < cppAST.getRoot().size(); i++){
+//            if (cppAST.getRoot().getNode(i).getName() == "Dependencies"){
+//                //Get the Dependencies
+//                GNode depNode = (GNode) cppAST.getRoot().getNode(i);
+//                for (int k = 0; k < depNode.size(); k++){
+//                    cppNodeActions.simpleCPPDataNode datanode = (cppNodeActions.simpleCPPDataNode) depNode.get(i);
+//                    System.out.println(datanode.getType());
+//                    System.out.println(datanode.getValue());
+//                }
+//            }
+//        }
+
     }
 
     @Test
-    public void testMethodSummary1() {
-        // Assert that the correct number of methods were counted by our visitor
-        assertEquals(summary.count, 2);
-    }
+    public void testVistCPPAstTree() {
 
-    @Test
-    public void testMethodSummary2() {
-        // Assert that the toString method name was collected
-        assertTrue(summary.names.contains("toString"));
-    }
-
-    @Test
-    public void testMethodSummary3() {
-        // Assert that the main method name was collected
-        assertTrue(summary.names.contains("main"));
     }
 
 }

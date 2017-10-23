@@ -8,21 +8,19 @@ import xtc.tree.Visitor;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.io.IOException;
 
 /**
  * This class demostrates a trivial usage of Xtc's Visitor class.
  * You may use this as a base for your ScopeVisitor.
  */
-public class CppHeaderVisitor extends Visitor {
+public class CppHeaderVisitor extends xtc.tree.Visitor {
+
     private Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
 
-    private MethodSummary summary = new MethodSummary();
 
-//    public void visitCompilationUnit(GNode n) {
-//        visit(n);
-//    }
 
-    public void visit(GNode n) {
+    public void visitDependencies(GNode n) throws IOException {
 //        summary.nodes += n.getName() + " ";
 //        summary.names += n.getString(3) + " ";
 
@@ -38,25 +36,6 @@ public class CppHeaderVisitor extends Visitor {
 
     public void visit(Node n) {
         for (Object o : n) if (o instanceof Node) dispatch((Node) o);
-    }
-
-    public MethodSummary getSummary(Node n) {
-        super.dispatch(n);
-        return summary;
-    }
-
-    // An instance of this class will be mutated as the AST is traversed.
-    static class MethodSummary {
-        int count = 0;
-        String names = "";
-        String nodes = "";
-
-
-        public String toString() {
-            return "Method count: " + count + System.lineSeparator() +
-                    "Method names: " + names + System.lineSeparator() +
-                    "Node names: " + nodes + System.lineSeparator();
-        }
     }
 
 

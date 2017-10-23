@@ -323,16 +323,7 @@ public class TraverseAST extends Visitor {
 
     //Class Summary represents a file
     static class ClassSummary{
-
-
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
         ArrayList<String> packages = new ArrayList<String>();
-//        public String toString() {
-////            return "Method count: " + count + System.lineSeparator() +
-////                    "Method names: " + names + System.lineSeparator() +
-////                    "Node names: " + nodes + System.lineSeparator();
-//
-//
-//       }
     }
 }

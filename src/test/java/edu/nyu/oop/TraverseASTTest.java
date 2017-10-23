@@ -47,11 +47,9 @@ public class TraverseASTTest {
 
         System.out.println("END Phase One");
 
-        //Phase one get the classSummary Test
+        //TEST the values are correct from the JavaAST
         classSummary = visitor.getClassSummary(javaASTNodes.get(0));
 
-        //Phase two
-        CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
 
     }
 

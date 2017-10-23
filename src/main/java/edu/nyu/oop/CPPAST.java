@@ -11,42 +11,28 @@ public class CPPAST {
     //Private the root node of the tree
     private GNode root;
 
-    //Keep track of the namespace
-   // private List<simpleCPPDataNode> nameSpaceNames;
+    //Keeps tack of the ParentNodeOfRecentAdditionOfNode
+    private GNode recentParentNodeMutated;
 
     //All the diff classes
-    private List <CppClassObject> cppClassObjectslist;
-
-    //Simple data node to hold all c++ starting dep
-   // private List <simpleCPPDataNode> cppDepList;
+    private List<CppClassObject> cppClassObjectslist;
 
     //The main class
     private CppClassObject mainClass;
 
 
     //Constructor
-    public CPPAST (String name){
-      //  this.nameSpaceNames = new ArrayList<simpleCPPDataNode>();
+    public CPPAST(String name) {
         this.cppClassObjectslist = new ArrayList<CppClassObject>();
-      //  this.cppDepList = new ArrayList<simpleCPPDataNode>();
         //create new gnode as root
         this.root = cppNodeActions.createNewASTNode(name);
     }
 
     //Add to the list of classes
-    public void addClass(CppClassObject classobj){
-        if(classobj != null){
+    public void addClass(CppClassObject classobj) {
+        if (classobj != null) {
             //not null so add
             this.cppClassObjectslist.add(classobj);
-        }
-    }
-
-    public void addCppDepWithList(List<String> cppDepList){
-        if (cppDepList != null && cppDepList.size() >0) {
-         //Values exit we add it to the dep list
-         for (String dep: cppDepList){
-             //this.cppDepList.add(new simpleCPPDataNode("dependencies",dep));
-         }
         }
     }
 
@@ -54,6 +40,7 @@ public class CPPAST {
     public void setCppClassObjectslist(List<CppClassObject> cppClassObjectslist) {
         this.cppClassObjectslist = cppClassObjectslist;
     }
+
     public List<CppClassObject> getCppClassObjectslist() {
         return cppClassObjectslist;
     }
@@ -66,27 +53,19 @@ public class CPPAST {
         return mainClass;
     }
 
-    public void setNameSpaceNames(List<simpleCPPDataNode> nameSpaceNames) {
-        this.nameSpaceNames = nameSpaceNames;
-    }
-
-    public List<simpleCPPDataNode> getNameSpaceNames() {
-        return nameSpaceNames;
-    }
-
-    public void setCppDepList(List<simpleCPPDataNode> cppDepList) {
-        this.cppDepList = cppDepList;
-    }
-
-    public List<simpleCPPDataNode> getCppDepList() {
-        return cppDepList;
-    }
-
     public void setRoot(GNode root) {
         this.root = root;
     }
 
     public GNode getRoot() {
         return root;
+    }
+
+    public void setRecentParentNodeMutated(GNode recentParentNodeMutated) {
+        this.recentParentNodeMutated = recentParentNodeMutated;
+    }
+
+    public GNode getRecentParentNodeMutated() {
+        return recentParentNodeMutated;
     }
 }

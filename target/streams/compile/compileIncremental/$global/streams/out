@@ -1,15 +1,226 @@
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
-[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
 [0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 28 sources: invalidated sources (28) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 28 Java sources to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@5f64bf21 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.466320705 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.512852283 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 1.987281342 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/JavaFiveImportParser.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTablePrinter.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableBuilder.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/TypeUtil.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/XtcProps.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SimpleXtc.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/RecursiveVisitor.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderVisitor.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, name, wait, equals, notifyAll, <init>, returnType, toString, modifier, getParameters, getClass, CustomMethodClass, parameters, visibility, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomMethodClass.java[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/SymbolTableUtil.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomVariablesClass.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ContextualVisitor.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CustomConstructorClass.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppFilePrinter.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, visitCompilationUnit, wait, logger, classes, classSummary, map, equals, mapInPlace, dispatch, TraverseAST$ClassSummary, checkMethodVisibility, notifyAll, getClassSummary, unableToVisit, visitMethodDeclaration, visitConstructorDeclaration, <init>, currentClass, visitClassDeclaration, TraverseFieldDeclaration, visit, DEBUGGING, toString, iterate, getClass, visitPackageDeclaration, TraverseAST, visitClassBody, traverseConstructorDeclaration, packages, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableCreate.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/MethodVisitor.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/Boot.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/simpleCPPDataNode.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/NodeUtil.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/ChildToParentMap.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

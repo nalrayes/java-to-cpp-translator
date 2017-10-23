@@ -1,7 +1,6 @@
 package edu.nyu.oop.util;
 
 import xtc.tree.GNode;
-import edu.nyu.oop.simpleCPPDataNode;
 
 import java.util.ArrayList;
 
@@ -20,9 +19,10 @@ public abstract class cppNodeActions {
         return parent;
     }
 
-    public static GNode addDataToNode(GNode node, int index ,String value){
-        //Create new simpleCPPDataNode
-        node.set(index,value);
+    public static GNode addDataToNode(GNode node, String type ,String value){
+        simpleCPPDataNode newDataNode = new simpleCPPDataNode(type,value);
+        //Add as a child
+        node.add(newDataNode);
         //Add the data node to node
         return node;
     }
@@ -33,11 +33,51 @@ public abstract class cppNodeActions {
         if(listOfData == null && listOfData.size() == 0){
             return null;
         }
-        int index = 0;
         for (String value : listOfData){
-            addDataToNode(node,index,value);
-            index += 1;
+            //create new node
+            simpleCPPDataNode newDataNode = new simpleCPPDataNode(type,value);
+            //Add to the parent
+            node.add(newDataNode);
         }
         return node;
     }
+
+
+
+    //Custom object to hold key values for the Gnode
+    public static class simpleCPPDataNode extends cppNodeActions{
+
+        private String type;
+        private String value;
+
+        public simpleCPPDataNode(String type, String value){
+            this.type = type;
+            this.value = value;
+        }
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return this.type + " = " + this.value;
+        }
+    }
 }
+
+
+
+

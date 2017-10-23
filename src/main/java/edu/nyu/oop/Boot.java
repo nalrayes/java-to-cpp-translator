@@ -107,11 +107,11 @@ public class Boot extends Tool {
             runtime.console().flush();
         }
 
-        if (runtime.test("printCppCode")) {
-            new CPrinter().dispatch(n);
-            runtime.console().flush();
-
-        }
+//        if (runtime.test("printCppCode")) {
+//            new CPrinter().dispatch(n);
+//            runtime.console().flush();
+//
+//        }
 
         if (runtime.test("printJavaImportCode")) {
             List<GNode> nodes = JavaFiveImportParser.parse((GNode) n);
