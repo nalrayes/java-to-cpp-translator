@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0c82ea-0ab0-44f0-bed3-bbabd831298f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppASTNodeActions.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/FileClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/IntermediateDataStructure.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" afterPath="$PROJECT_DIR$/target/classes/edu/nyu/oop/TraverseAST.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppASTNodeActions.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/TraverseASTTest.class" afterPath="$PROJECT_DIR$/target/test-classes/edu/nyu/oop/TraverseASTTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,8 +33,8 @@
       <file leaf-file-name="TraverseAST.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="-4241">
+              <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding>
                 <element signature="e#800#801#0" expanded="true" />
                 <element signature="e#824#825#0" expanded="true" />
@@ -52,80 +47,99 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SymbolTableCreate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="88" column="58" lean-forward="false" selection-start-line="88" selection-start-column="58" selection-end-line="88" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomClassObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SymbolTableLookupExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CPPAST.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-66">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-                <element signature="e#1047#1048#0" expanded="true" />
-                <element signature="e#1076#1077#0" expanded="true" />
-                <element signature="e#1103#1104#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1253#1254#0" expanded="true" />
-                <element signature="e#1290#1291#0" expanded="true" />
-                <element signature="e#1495#1496#0" expanded="true" />
-                <element signature="e#1537#1538#0" expanded="true" />
-                <element signature="e#1595#1596#0" expanded="true" />
-                <element signature="e#1637#1638#0" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
-                <element signature="e#1713#1714#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cppASTNodeActions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppASTNodeActions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CppClassObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CPPAST.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1695#1696#0" expanded="true" />
+                <element signature="e#1737#1738#0" expanded="true" />
+                <element signature="e#1795#1796#0" expanded="true" />
+                <element signature="e#1837#1838#0" expanded="true" />
+                <element signature="e#1881#1882#0" expanded="true" />
+                <element signature="e#1913#1914#0" expanded="true" />
+                <element signature="e#1990#1991#0" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
+                <element signature="e#2100#2101#0" expanded="true" />
+                <element signature="e#2137#2138#0" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2250#2251#0" expanded="true" />
+                <element signature="e#2304#2305#0" expanded="true" />
+                <element signature="e#2337#2338#0" expanded="true" />
+                <element signature="e#2376#2377#0" expanded="true" />
+                <element signature="e#2408#2409#0" expanded="true" />
+                <element signature="e#2438#2439#0" expanded="true" />
+                <element signature="e#2465#2466#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CppHeaderASTCreator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="63" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GNode.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/rats-runtime.jar!/xtc/tree/GNode.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="933" column="15" lean-forward="false" selection-start-line="933" selection-start-column="15" selection-end-line="933" selection-end-column="15" />
+              <folding>
+                <element signature="e#2581#2582#0" expanded="true" />
+                <element signature="e#2632#2633#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simpleCPPDataNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding>
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#489#490#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,11 +147,21 @@
       <file leaf-file-name="TraverseASTTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomClassObject.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-168">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,25 +172,6 @@
             <state relative-caret-position="194">
               <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomTest1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-              <folding>
-                <element signature="e#75#76#0" expanded="true" />
-                <element signature="e#127#128#0" expanded="true" />
-                <element signature="e#221#222#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -207,6 +212,7 @@
       <find>dfsAll</find>
       <find>constructor</find>
       <find>TraverseFieldDeclarationTraverseFieldDeclaration</find>
+      <find>packages</find>
       <find>add</find>
     </findStrings>
   </component>
@@ -232,14 +238,17 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/PrimarySourceAndDep.java" />
         <option value="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomMethodClass.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppASTNodeActions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
       </list>
     </option>
   </component>
@@ -705,17 +714,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508609332887</updated>
-      <workItem from="1508609337730" duration="34751000" />
+      <workItem from="1508609337730" duration="45414000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TraverseASTTest - 2017.10.22 at 15h 26m 32s.xml">
-      <configuration name="TraverseASTTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TraverseASTTest - 2017.10.22 at 15h 26m 46s.xml">
-      <configuration name="TraverseASTTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TraverseASTTest - 2017.10.22 at 15h 27m 27s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
@@ -740,9 +743,15 @@
     <history-entry file="TraverseASTTest - 2017.10.22 at 19h 48m 12s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TraverseASTTest - 2017.10.23 at 11h 39m 34s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TraverseASTTest - 2017.10.23 at 11h 40m 18s.xml">
+      <configuration name="TraverseASTTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34751000" />
+    <option name="totallyTimeSpent" value="45414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="23" width="1440" height="813" extended-state="6" />
@@ -819,34 +828,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/lib/rats-runtime.jar!/xtc/tree/GNode.class</url>
+          <line>101</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test018/Test018.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/MethodVisitorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/MethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test004/Test004.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -942,47 +936,47 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1508719790000" expanded="true" signature="83214:83231" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83214:83249" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83214:83262" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83214:83277" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83312:85808" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83325:85793" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83379:83674" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83398:83659" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83461:83639" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83501:83605" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83522:83583" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83724:84051" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83743:84036" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83838:84016" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83878:83982" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="83899:83960" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84102:84367" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84121:84352" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84154:84332" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84194:84298" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84215:84276" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84410:84716" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84429:84701" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84503:84681" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84543:84647" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84564:84625" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84767:85121" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84786:85106" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84869:85086" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84909:85052" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="84930:85030" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85156:85462" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85175:85447" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85249:85427" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85289:85393" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85310:85371" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85514:85779" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85533:85764" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85566:85744" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85606:85710" ph="..." />
-            <marker date="1508719790000" expanded="true" signature="85627:85688" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84184:84201" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84184:84219" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84184:84232" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84184:84247" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84282:86778" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84295:86763" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84349:84644" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84368:84629" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84431:84609" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84471:84575" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84492:84553" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84694:85021" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84713:85006" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84808:84986" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84848:84952" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="84869:84930" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85072:85337" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85091:85322" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85124:85302" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85164:85268" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85185:85246" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85380:85686" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85399:85671" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85473:85651" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85513:85617" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85534:85595" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85737:86091" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85756:86076" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85839:86056" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85879:86022" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="85900:86000" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86126:86432" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86145:86417" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86219:86397" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86259:86363" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86280:86341" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86484:86749" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86503:86734" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86536:86714" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86576:86680" ph="..." />
+            <marker date="1508776988000" expanded="true" signature="86597:86658" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1165,23 +1159,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/rats-runtime.jar!/xtc/tree/GNode.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="336" column="47" lean-forward="false" selection-start-line="336" selection-start-column="47" selection-end-line="336" selection-end-column="47" />
-          <folding>
-            <element signature="e#2215#2216#0" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#2372#2373#0" expanded="true" />
-            <element signature="e#2581#2582#0" expanded="true" />
-            <element signature="e#2632#2633#0" expanded="true" />
-            <element signature="e#2705#2706#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test003/Test003.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1215,22 +1192,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/IntermediateDataStructure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1247,6 +1208,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableCreate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -1255,10 +1226,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppASTNodeActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="-4241">
+          <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding>
             <element signature="e#800#801#0" expanded="true" />
             <element signature="e#824#825#0" expanded="true" />
@@ -1270,62 +1275,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/SymbolTableLookupExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
+    <entry file="jar://$PROJECT_DIR$/lib/rats-runtime.jar!/xtc/tree/GNode.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="79">
+          <caret line="933" column="15" lean-forward="false" selection-start-line="933" selection-start-column="15" selection-end-line="933" selection-end-column="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2581#2582#0" expanded="true" />
+            <element signature="e#2632#2633#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppASTNodeActions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/simpleCPPDataNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-66">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="264">
+          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1047#1048#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1253#1254#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1495#1496#0" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1637#1638#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1695#1696#0" expanded="true" />
+            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
+            <element signature="e#1837#1838#0" expanded="true" />
+            <element signature="e#1881#1882#0" expanded="true" />
+            <element signature="e#1913#1914#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
+            <element signature="e#2137#2138#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2304#2305#0" expanded="true" />
+            <element signature="e#2337#2338#0" expanded="true" />
+            <element signature="e#2376#2377#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2438#2439#0" expanded="true" />
+            <element signature="e#2465#2466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="22" column="48" lean-forward="false" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="24" column="63" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
