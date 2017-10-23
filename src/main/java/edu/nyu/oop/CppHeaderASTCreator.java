@@ -16,6 +16,9 @@ public class CppHeaderASTCreator {
         //Create new CPPAST
         CPPAST cppHeaderAST = new CPPAST("CppASTRoot");
 
+        //Create all the class summaries using JavaAST
+        //for (GNode javaASTNode: )
+
         //Add the C++ starting dep e.g #Pragma, #Include etc.. to the CPP Datastructure
         //Create new node to of the c++ dep
         GNode dep = cppNodeActions.createNewASTNode("Dependencies");
@@ -24,6 +27,16 @@ public class CppHeaderASTCreator {
         //Add the data to the child node
         cppNodeActions.addDataToNodeWithArray(dep,"Dependencies",new ArrayList<String>(Arrays.asList("#pragma once",
                 "#include \"java_lang.h\"", "#include <string>")));
+
+        //Name space for javalang
+        GNode namespace = cppNodeActions.createNewASTNode("UsingNamespace");
+        cppNodeActions.addNodeAsChildToParent(cppHeaderAST.getRoot(),namespace);
+        cppNodeActions.addDataToNode(namespace, "UsingNamespace","java::lang");
+
+        //With the summary's create the namespaces
+
+
+
 
 
         //cppHeaderAST.addCppDepWithList(new ArrayList<String>(Arrays.asList("#pragma once",
