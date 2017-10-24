@@ -37,6 +37,10 @@ public class CustomClassObject {
         return this.className;
     }
 
+    public ArrayList<CustomMethodClass> getMethods() {
+        return methods;
+    }
+
     public ArrayList<CustomConstructorClass> getConstructors() {
         return constructors;
     }
