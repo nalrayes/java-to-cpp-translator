@@ -19,7 +19,7 @@ public abstract class cppNodeActions {
         return parent;
     }
 
-    public static GNode addDataToNode(GNode node ,String value){
+    public static GNode addDataToNode(GNode node ,Object value){
         //Add as a child
         node.add(value);
         //Add the data node to node
@@ -35,6 +35,17 @@ public abstract class cppNodeActions {
         for (String value : listOfData){
             //Add to the parent
             node.add(value);
+        }
+        return node;
+    }
+
+    public static GNode addStructToNodeWithArray(GNode node ,ArrayList<CppDataLayout.CppStruct> listOfData){
+        if(listOfData == null && listOfData.size() == 0){
+            return null;
+        }
+        for (CppDataLayout.CppStruct value : listOfData){
+            //Add to the parent
+            node.add(value.name);
         }
         return node;
     }

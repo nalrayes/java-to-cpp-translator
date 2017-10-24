@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 
 
+
 //This class generates the C++ Header AST from the classSummary object
 public class CppHeaderASTCreator {
 
@@ -46,7 +47,9 @@ public class CppHeaderASTCreator {
         GNode pointer = cppHeaderAST.getRoot(); // The last node that we added new GNodes too
         for(TraverseAST.ClassSummary javaData: javaClassSummaries){
             //Add the nameSpaces to our C++ AST Tree
+
             addNameSpacesToCppAST(javaData,cppHeaderAST);
+            addStructNodes(javaData, cppHeaderAST);
         }
 
         //Check to print out the recent parent mutated of the ASTTree
@@ -79,7 +82,57 @@ public class CppHeaderASTCreator {
         cppNodeActions.addDataToNodeWithArray(newNamespaceNode,packages);
         //Update the recent node pointer
         cppAst.setRecentParentNodeMutated(newNamespaceNode);
+
     }
+
+    public static void addStructNodes(TraverseAST.ClassSummary javaData, CPPAST cppAst){
+        //Get the root of our cppAST
+
+        CppDataLayout dataLayout = new CppDataLayout();
+       // CppDataLayout.CppStruct = new CppDataLayout.()
+
+        GNode rootOfCppAST = cppAst.getRoot();
+
+        ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
+
+        for (CustomClassObject c: javaData.classes){
+
+            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
+
+            structs.add(aStruct);
+
+        }
+
+        GNode pointer = rootOfCppAST;
+        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");
+        cppNodeActions.addNodeAsChildToParent(pointer,newStructNode);
+        cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
+        cppAst.setRecentParentNodeMutated(newStructNode);
+
+
+
+
+
+
+
+        //Get the javaPackages, which are C++ Namespaces
+//        ArrayList<String> packages = javaData.packages;
+//        //For the javaPackages create its NameSpace
+//        //Keep track of which node to add the name space to
+//        GNode pointer = rootOfCppAST;
+//        //Create a new node for the name space
+//        GNode newNamespaceNode = cppNodeActions.createNewASTNode("Namespace");
+//        //Add the node to the root
+//        cppNodeActions.addNodeAsChildToParent(pointer,newNamespaceNode);
+//        //Add the data node
+//        cppNodeActions.addDataToNodeWithArray(newNamespaceNode,packages);
+//        //Update the recent node pointer
+//        cppAst.setRecentParentNodeMutated(newNamespaceNode);
+    }
+
+
+
+
 
 
 

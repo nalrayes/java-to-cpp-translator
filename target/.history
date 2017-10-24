@@ -4,3 +4,4 @@ test-only *CppHVisitorTest*
 tesst
 test
 git add .
+test-only *CppHVisitorTest*

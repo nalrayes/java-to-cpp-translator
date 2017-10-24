@@ -32,6 +32,11 @@ public class CustomClassObject {
 
     }
 
+
+    public String getClassName() {
+        return this.className;
+    }
+
     public ArrayList<CustomConstructorClass> getConstructors() {
         return constructors;
     }
