@@ -43,7 +43,6 @@ public class CppHeaderASTCreator {
         }
 
         //With the Class Summary create the namespaces
-        GNode pointer = cppHeaderAST.getRoot(); // The last node that we added new GNodes too
         for(TraverseAST.ClassSummary javaData: javaClassSummaries){
             //Add the nameSpaces to our C++ AST Tree
             addNameSpacesToCppAST(javaData,cppHeaderAST);
@@ -54,6 +53,9 @@ public class CppHeaderASTCreator {
 
         //TODO create the classObjects and heirechy strucutre
 
+        //Create the cppClassObjects
+        createCppClassObject(javaClassSummaries, cppHeaderAST);
+
 
 
 
@@ -61,6 +63,33 @@ public class CppHeaderASTCreator {
 
         return cppHeaderAST;
     }
+
+
+    //Helper method that creates the CPP classes Objects
+    public static void createCppClassObject(List<TraverseAST.ClassSummary> jClassSummaryList, CPPAST cppAst){
+
+        //Empty list of cppClassObject
+        List<CppClassObject> listOfCppClassObjects = new ArrayList<CppClassObject>();
+
+        //Create a new cpp classHigh for all instances of cppClassObject
+        CppClassObject.classHierarchy classHigh = new CppClassObject.classHierarchy();
+
+        //Get the point in the AST where we want to add that data from the CPPASTObjects
+
+
+
+
+
+
+
+
+
+
+        //Set the classHigh for all CPPObjects at the end
+        CppClassObject.setClassHierarchy(classHigh);
+    }
+
+
 
     //Helper method to addJavaPackages as Namespaces to the the CPPAST
     public static void addNameSpacesToCppAST(TraverseAST.ClassSummary javaData, CPPAST cppAst){

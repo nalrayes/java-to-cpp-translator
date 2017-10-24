@@ -28,7 +28,7 @@ public class CppClassObject {
 
 
     //Custom object to keep track of inheritance
-    private static class classHierarchy {
+    public static class classHierarchy {
         private HashMap<String, CppClassObject> nameOfClassForCppClassObjectHashMap;
         private HashMap<String, String> childForParentHashMap;
         private HashMap<String, ArrayList<String>> parentForChildHashMap;
@@ -63,8 +63,17 @@ public class CppClassObject {
             //Get the array list inside the hashmap
             ArrayList<String> listOfChildren = this.parentForChildHashMap.get(parentClass);
             //Add the the list of children
-
-            //TODO
+            //check if the childrens list is null
+            if(listOfChildren == null){
+                //create a new list
+                listOfChildren = new ArrayList<String>();
+                listOfChildren.add(childClass);
+                this.parentForChildHashMap.put(parentClass, listOfChildren);
+            }
+            else{
+                //list exist we just add
+                listOfChildren.add(childClass);
+            }
         }
     }
 
