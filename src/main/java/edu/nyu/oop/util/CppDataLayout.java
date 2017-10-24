@@ -12,24 +12,77 @@ public class CppDataLayout {
 
     public CppDataLayout(){}
 
+    // Translate java types to C++ types
+    // TODO: add differing types
+    public static class typeTranslate {
+
+        public String translateType (String javaType){
+
+            String cType = "";
+
+            switch (javaType) {
+
+                case "int":
+                    cType = "int32_t";
+                    break;
+
+                default:
+                    cType = javaType;
+                    break;
+
+
+            }
+
+            return cType;
+        }
+
+    }
     public static class CppStruct {
 
         ArrayList<CppVar> variables;
         ArrayList<CppMethod> methods;
-       //ArrayList<VTables>
+        //ArrayList<VTables>
         String name;
         ArrayList<CppConstructor> constructors;
-
-
-
-
-
 
         public CppStruct(CustomClassObject c) {
 
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
-            this.name = c.getClassName();
+            this.name = "__" + c.getClassName();
+            this.constructors = new ArrayList<CppConstructor>();
+
+            // instantiates all data
+            for (CustomMethodClass javaMethod : c.getMethods()){
+
+
+                CppMethod cMethod = new CppMethod(javaMethod);
+                methods.add(cMethod);
+
+            }
+
+            for (CustomConstructorClass javaConstructor : c.getConstructors()){
+
+
+                CppConstructor cppConstructor = new CppConstructor(javaConstructor);
+                this.constructors.add(cppConstructor);
+
+            }
+
+            for (CustomVariablesClass javaVar : c.getClassVariables()){
+
+                CppVar cVar = new CppVar(javaVar);
+                this.variables.add(cVar);
+
+
+            }
+
+
+
+
+
+
+            //constructors.add();
 
 
         }
@@ -55,9 +108,6 @@ public class CppDataLayout {
 
 
 
-
-
-
         }
 
 
@@ -67,16 +117,24 @@ public class CppDataLayout {
             String name;
             String modifier;
             String returnType;
-            ArrayList<CustomVariablesClass> parameters;
+            ArrayList<CppParameter> parameters;
 
             public CppMethod(CustomMethodClass m) {
-                
+
                 this.name = "__" + m.getName();
                 this.modifier = m.getModifier();
 
-                this.returnType = m.getReturnType();
-                this.parameters = m.getParameters();
+                typeTranslate translateType = new typeTranslate();
+                this.returnType =  translateType.translateType(m.getReturnType());
 
+                // translates and add java method params to cpp method params
+                for (CustomVariablesClass javaParam : m.getParameters()){
+
+
+                    CppParameter cParam = new CppParameter(javaParam);
+                    this.parameters.add(cParam);
+
+                }
 
 
             }
@@ -85,14 +143,16 @@ public class CppDataLayout {
         }
 
 
-        public static class Parameter {
+        public static class CppParameter {
             String name;
             String type;
 
 
-            public Parameter(CustomVariablesClass v){
+            public CppParameter(CustomVariablesClass v){
+
+                typeTranslate translateType = new typeTranslate();
                 this.name = v.getName();
-                this.type = v.getType();
+                this.type = translateType.translateType(v.getType());
 
 
             }
@@ -111,8 +171,9 @@ public class CppDataLayout {
 
             public CppVar(CustomVariablesClass v){
 
+                typeTranslate translateType = new typeTranslate();
                 this.name = v.getName();
-                this.type = v.getType();
+                this.type = translateType.translateType(v.getType());
                 this.modifier = v.getModifier();
 
 
@@ -141,22 +202,6 @@ public class CppDataLayout {
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-//    String name;
-//    String type;
-//    ArrayList<String> modifiers;
-//    GNode methods;
 
 
 }

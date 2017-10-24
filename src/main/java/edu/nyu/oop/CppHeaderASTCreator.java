@@ -142,22 +142,11 @@ public class CppHeaderASTCreator {
 
 
 
-
-
-        //Get the javaPackages, which are C++ Namespaces
-//        ArrayList<String> packages = javaData.packages;
-//        //For the javaPackages create its NameSpace
-//        //Keep track of which node to add the name space to
-//        GNode pointer = rootOfCppAST;
-//        //Create a new node for the name space
-//        GNode newNamespaceNode = cppNodeActions.createNewASTNode("Namespace");
-//        //Add the node to the root
-//        cppNodeActions.addNodeAsChildToParent(pointer,newNamespaceNode);
-//        //Add the data node
-//        cppNodeActions.addDataToNodeWithArray(newNamespaceNode,packages);
-//        //Update the recent node pointer
-//        cppAst.setRecentParentNodeMutated(newNamespaceNode);
     }
+
+
+
+
 
 
 
