@@ -23,11 +23,6 @@ public class CppClassObject {
 
 
 
-
-
-
-
-
     //Custom object to keep track of inheritance
     public static class classHierarchy {
         private HashMap<String, CppClassObject> nameOfClassForCppClassObjectHashMap;

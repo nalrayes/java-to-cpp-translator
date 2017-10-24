@@ -4,4 +4,12 @@ test-only *CppHVisitorTest*
 tesst
 test
 git add .
+<<<<<<< bb2654f5758943073fdfc1420ad1c664cc624e43
+=======
+test-only *CPPHVisitorTest*
+test
+test-only test.java.edu.nyu.oop.CppHVisitorTest
+test-only test.java.edu.nyu.oop.CppHVisitorTest.java
+test
+>>>>>>> started work on my own branch
 test-only *CppHVisitorTest*
