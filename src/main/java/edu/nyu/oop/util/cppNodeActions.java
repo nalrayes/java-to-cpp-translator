@@ -1,6 +1,7 @@
 package edu.nyu.oop.util;
 
 import xtc.tree.GNode;
+import xtc.tree.Node;
 
 import java.util.ArrayList;
 

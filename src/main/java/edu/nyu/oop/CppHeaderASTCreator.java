@@ -42,13 +42,13 @@ public class CppHeaderASTCreator {
         for (GNode javaAST: javaASTNodes){
             javaClassSummaries.add(jASTvisitor.getClassSummary(javaAST));
         }
+        int i = 0;
 
         //With the Class Summary create the namespaces
         for(TraverseAST.ClassSummary javaData: javaClassSummaries){
             //Add the nameSpaces to our C++ AST Tree
-
-            addNameSpacesToCppAST(javaData,cppHeaderAST);
-            addStructNodes(javaData, cppHeaderAST);
+            GNode currentNamespace = addNameSpacesToCppAST(javaData,cppHeaderAST);
+            addStructNodes(javaData, currentNamespace, cppHeaderAST);
         }
 
         //Check to print out the recent parent mutated of the ASTTree
@@ -96,7 +96,7 @@ public class CppHeaderASTCreator {
 
 
     //Helper method to addJavaPackages as Namespaces to the the CPPAST
-    public static void addNameSpacesToCppAST(TraverseAST.ClassSummary javaData, CPPAST cppAst){
+    public static GNode addNameSpacesToCppAST(TraverseAST.ClassSummary javaData, CPPAST cppAst){
         //Get the root of our cppAST
         GNode rootOfCppAST = cppAst.getRoot();
         //Get the javaPackages, which are C++ Namespaces
@@ -109,19 +109,31 @@ public class CppHeaderASTCreator {
         //Add the node to the root
         cppNodeActions.addNodeAsChildToParent(pointer,newNamespaceNode);
         //Add the data node
-        cppNodeActions.addDataToNodeWithArray(newNamespaceNode,packages);
+//        cppNodeActions.addDataToNodeWithArray(newNamespaceNode,packages);
+        GNode lastNode = newNamespaceNode;
+        String firstPackage = packages.get(0);
+        cppNodeActions.addDataToNode(lastNode, firstPackage);
+        for (int i = 1; i < packages.size(); i++) {
+            String p = packages.get(i);
+            GNode newNode = cppNodeActions.createNewASTNode("Namespace");
+            cppNodeActions.addDataToNode(newNode, p);
+            lastNode.add(newNode);
+            lastNode = newNode;
+        }
+//        cppNodeActions.nestDataToNodeWithArray(newNamespaceNode, packages);
         //Update the recent node pointer
         cppAst.setRecentParentNodeMutated(newNamespaceNode);
 
+        return lastNode;
     }
 
-    public static void addStructNodes(TraverseAST.ClassSummary javaData, CPPAST cppAst){
+    public static void addStructNodes(TraverseAST.ClassSummary javaData, GNode currentNamespace, CPPAST rootNode){
         //Get the root of our cppAST
 
         CppDataLayout dataLayout = new CppDataLayout();
        // CppDataLayout.CppStruct = new CppDataLayout.()
 
-        GNode rootOfCppAST = cppAst.getRoot();
+//        GNode rootOfCppAST = cppAst.getRoot();
 
         ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
 
@@ -133,11 +145,11 @@ public class CppHeaderASTCreator {
 
         }
 
-        GNode pointer = rootOfCppAST;
+        GNode pointer = currentNamespace;
         GNode newStructNode = cppNodeActions.createNewASTNode("Struct");
         cppNodeActions.addNodeAsChildToParent(pointer,newStructNode);
         cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
-        cppAst.setRecentParentNodeMutated(newStructNode);
+        rootNode.setRecentParentNodeMutated(newStructNode);
 
 
 
