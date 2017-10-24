@@ -57,4 +57,5 @@ public class CustomClassObject {
     public String getParentClass(){
         return this.parentClass;
     }
+
 }

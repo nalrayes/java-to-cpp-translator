@@ -46,9 +46,7 @@ public class CppHeaderASTCreator {
         //With the Class Summary create the namespaces
         for(TraverseAST.ClassSummary javaData: javaClassSummaries){
             //Add the nameSpaces to our C++ AST Tree
-
             addNameSpacesToCppAST(javaData,cppHeaderAST);
-            addStructNodes(javaData, cppHeaderAST);
         }
 
         //Check to print out the recent parent mutated of the ASTTree
@@ -78,7 +76,43 @@ public class CppHeaderASTCreator {
         CppClassObject.classHierarchy classHigh = new CppClassObject.classHierarchy();
 
         //Get the point in the AST where we want to add that data from the CPPASTObjects
+        //This point will remain constant so we always know where to add the class structs for the cp //e.g at the end of name space
+        GNode pointToAddClassesToNamespaceGnode = cppAst.getRecentParentNodeMutated();
+        //System.out.println(pointToAddClassesToNamespaceGnode);
 
+        //We also need to take into account the "main" class (main method) as it does not show up in the Cpp header
+        boolean mainFound = false;
+        CppClassObject mainClass = null;
+
+        //Go through the class summary and create the respective CppClassObject
+        int index = 0;
+        for (TraverseAST.ClassSummary javaClassSum: jClassSummaryList){
+            //Go through the javaClassSum and check all methods to see if the "main" method exists - if so set the mainFound flag to true
+            //check if the  classses array in the java object is empty
+            if(javaClassSum.classes.size() > 0){
+                for (CustomClassObject customJavaClass: javaClassSum.classes) {
+                    //Createa a new cppClassObject for its JavaClassObject counter part
+                    CppClassObject newCppClassObject = new CppClassObject("__"+customJavaClass.className);
+                    newCppClassObject.setCppast(cppAst);
+                    newCppClassObject.setLinkToNameSpaceGNodeInCppAST(pointToAddClassesToNamespaceGnode);
+
+                    //Now check if the current class created is a main
+                    for (CustomMethodClass javaMethod: customJavaClass.methods){
+                        if(javaMethod.name.equalsIgnoreCase("main")){
+                            //Main method found
+                            mainFound = true;
+                            mainClass = newCppClassObject;
+                        }
+                    }
+                    //If the class is not a main class,we check its High structure
+                    if(mainFound != true){
+                        //TODO
+                    }
+                    //Add the main class to JavaAST
+                    cppAst.setMainClass(mainClass);
+                }
+            }//End of if -> size check
+        }//End of outer for loop
 
 
 
@@ -114,29 +148,34 @@ public class CppHeaderASTCreator {
 
     }
 
-    public static void addStructNodes(TraverseAST.ClassSummary javaData, CPPAST cppAst){
-        //Get the root of our cppAST
 
-        CppDataLayout dataLayout = new CppDataLayout();
-       // CppDataLayout.CppStruct = new CppDataLayout.()
 
-        GNode rootOfCppAST = cppAst.getRoot();
 
-        ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
 
-        for (CustomClassObject c: javaData.classes){
 
-            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
-
-            structs.add(aStruct);
-
-        }
-
-        GNode pointer = rootOfCppAST;
-        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");
-        cppNodeActions.addNodeAsChildToParent(pointer,newStructNode);
-        cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
-        cppAst.setRecentParentNodeMutated(newStructNode);
+//    public static void addStructNodes(TraverseAST.ClassSummary javaData, CPPAST cppAst){
+//        //Get the root of our cppAST
+//
+//        CppDataLayout dataLayout = new CppDataLayout();
+//       // CppDataLayout.CppStruct = new CppDataLayout.()
+//
+//        GNode rootOfCppAST = cppAst.getRoot();
+//
+//        ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
+//
+//        for (CustomClassObject c: javaData.classes){
+//
+//            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
+//
+//            structs.add(aStruct);
+//
+//        }
+//
+//        GNode pointer = rootOfCppAST;
+//        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");
+//        cppNodeActions.addNodeAsChildToParent(pointer,newStructNode);
+//        cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
+//        cppAst.setRecentParentNodeMutated(newStructNode);
 
 
 
@@ -166,5 +205,3 @@ public class CppHeaderASTCreator {
 
 
 
-
-}

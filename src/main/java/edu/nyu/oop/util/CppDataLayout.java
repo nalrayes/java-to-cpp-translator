@@ -17,31 +17,20 @@ public class CppDataLayout {
        // ArrayList<VTables>
         String name;
 
-
         public CppStruct(CustomClassObject c) {
-
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
             this.name = c.getClassName();
-
-
         }
 
 
         public static class CppMethod {
-
-
-            String name;
-            ArrayList<String> modifiers;
-            String returnType;
-            ArrayList<Parameter> parameters;
+            public String name;
+            public ArrayList<String> modifiers;
+            public String returnType;
+            public ArrayList<Parameter> parameters;
 
             public CppMethod(CustomMethodClass m) {
-
-
-
-
-
             }
 
 
@@ -49,9 +38,20 @@ public class CppDataLayout {
 
 
         public static class Parameter {
-            String name;
-            String type;
+            public String name;
+            public String type;
+        }
 
+        public static class Field{
+            public String name;
+            public String type;
+            public ArrayList<String> modifiers;
+            public Field(){}
+        }
+
+        public static class Constructor {
+            public ArrayList<String> modifiers;
+            public ArrayList<Parameter> parameterList = new ArrayList<Parameter>();
         }
 
 
@@ -69,6 +69,11 @@ public class CppDataLayout {
 
 
         }
+
+
+
+
+
 
     }
 

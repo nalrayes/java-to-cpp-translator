@@ -37,6 +37,7 @@ public class CPPAST {
     }
 
 
+
     public void setCppClassObjectslist(List<CppClassObject> cppClassObjectslist) {
         this.cppClassObjectslist = cppClassObjectslist;
     }
