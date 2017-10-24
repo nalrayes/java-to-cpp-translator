@@ -64,3 +64,9 @@
 2017-10-24 15:41:22,013 - [main] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
 2017-10-24 15:41:22,198 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test010
 2017-10-24 15:41:22,200 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-24 16:06:58,132 - [main] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-24 16:06:58,260 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test010
+2017-10-24 16:06:58,263 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-24 16:07:07,398 - [main] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-10-24 16:07:07,469 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test010
+2017-10-24 16:07:07,470 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
