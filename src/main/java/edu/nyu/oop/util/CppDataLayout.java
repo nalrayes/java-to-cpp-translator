@@ -9,9 +9,11 @@ public class CppDataLayout {
 
     ArrayList<CppDataLayout.CppStruct> structs;
     ArrayList<CppDataLayout.CppVar> globalVariables;
+    // TODO: Add constructor data layout. Takes in the java class summary. How to get root node of class summary?
 
-
-//    public CppDataLayout(TraverseAST javaData){
+//    public CppDataLayout(TraverseAST javaAst, GNode n){
+//
+//      // TraverseAST summary =  javaAst.getClassSummary(n);
 //
 //
 //
@@ -21,10 +23,8 @@ public class CppDataLayout {
 //
 //    }
 
-    // Translate java types to C++ types
+    // Helper method to translate java types to C++ types
     // TODO: add differing types
-
-
     public static class typeTranslate {
 
         public String translateType(String javaType) {
@@ -119,7 +119,8 @@ public class CppDataLayout {
     public static class CppMethod {
 
         String name;
-        String modifier;
+        String modifiers;
+        String visibility;
         String returnType;
         ArrayList<CppParameter> parameters;
 
@@ -127,7 +128,8 @@ public class CppDataLayout {
             parameters = new ArrayList<CppParameter>();
 
             this.name = "__" + m.getName();
-            this.modifier = m.getModifier();
+            this.modifiers = m.getModifier();
+            this.visibility = m.getVisibility();
 
             typeTranslate translateType = new typeTranslate();
             this.returnType = translateType.translateType(m.getReturnType());
