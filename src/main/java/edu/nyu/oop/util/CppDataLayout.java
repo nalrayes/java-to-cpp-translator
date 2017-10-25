@@ -96,30 +96,33 @@ public class CppDataLayout {
 
         }
 
-        public static class CppConstructor {
-            ArrayList<CustomVariablesClass> parameters;
-            String name;
-            String visibility;
+
+    }
+
+    public static class CppConstructor {
+        ArrayList<CustomVariablesClass> parameters;
+        String name;
+        String visibility;
 
 
-            public CppConstructor(CustomConstructorClass c) {
+        public CppConstructor(CustomConstructorClass c) {
 
 
-                this.name = "__" + c.getName();
-                this.parameters = c.getParameters();
-                this.visibility = c.getVisibility();
-
-
-            }
+            this.name = "__" + c.getName();
+            this.parameters = c.getParameters();
+            this.visibility = c.getVisibility();
 
 
         }
+
+
     }
 
     public static class CppMethod {
 
         String name;
-        String modifiers;
+
+        String modifier;
         String visibility;
         String returnType;
         ArrayList<CppParameter> parameters;
@@ -128,7 +131,7 @@ public class CppDataLayout {
             parameters = new ArrayList<CppParameter>();
 
             this.name = "__" + m.getName();
-            this.modifiers = m.getModifier();
+            this.modifier = m.getModifier();
             this.visibility = m.getVisibility();
 
             typeTranslate translateType = new typeTranslate();

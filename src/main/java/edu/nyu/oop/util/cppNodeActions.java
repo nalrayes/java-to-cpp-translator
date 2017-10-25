@@ -1,6 +1,7 @@
 package edu.nyu.oop.util;
 
 import xtc.tree.GNode;
+import xtc.tree.Node;
 
 import java.util.ArrayList;
 
@@ -45,12 +46,67 @@ public abstract class cppNodeActions {
         }
         for (CppDataLayout.CppStruct value : listOfData){
             //Add to the parent
-            node.add(value.name);
+            GNode newNode = createNewASTNode("Struct");
+            newNode.add(value.name);
+            addMethodsToNodeWithArray(newNode, value.methods);
+            addFieldsToNodeWithArray(newNode, value.variables);
+            node.add(newNode);
         }
         return node;
     }
 
+    public static void addMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppMethod> methods) {
 
+        GNode newNode = createNewASTNode("Methods");
+        for (CppDataLayout.CppMethod method : methods) {
+            GNode methodNode = createNewASTNode("Method");
+
+            methodNode.add(method.name);
+            methodNode.add(method.returnType);
+            methodNode.add(createNewASTNode("Visibility").add(method.visibility));
+            methodNode.add(createModifiersNode(method.modifier));
+            methodNode.add(createParametersNode(method.parameters));
+            newNode.add(methodNode);
+        }
+        node.add(newNode);
+
+    }
+
+    public static GNode createModifiersNode(String modifier) {
+        GNode newNode = createNewASTNode("Modifiers");
+        if (modifier == null) {
+            return newNode;
+        }
+        String[] mods = modifier.split(" ");
+        for (String mod: mods) {
+            newNode.add(mod);
+        }
+        return newNode;
+    }
+
+    public static GNode createParametersNode(ArrayList<CppDataLayout.CppParameter> params) {
+        GNode newNode = createNewASTNode("Parameters");
+        for (CppDataLayout.CppParameter p: params) {
+            newNode.add(p.name);
+            newNode.add(p.type);
+        }
+        return newNode;
+    }
+
+    public static void addFieldsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppVar> vars) {
+
+        GNode newNode = createNewASTNode("Fields");
+        for (CppDataLayout.CppVar v : vars) {
+            GNode fieldNode = createNewASTNode("Field");
+
+            fieldNode.add(v.name);
+            fieldNode.add(v.type);
+            fieldNode.add(createModifiersNode(v.modifier));
+
+            newNode.add(fieldNode);
+        }
+        node.add(newNode);
+    }
 
     //Custom object to hold key values for the Gnode
 //    public static class simpleCPPDataNode extends cppNodeActions{
