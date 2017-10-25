@@ -35,7 +35,11 @@ public class CustomConstructorClass {
     public void addParameter(CustomVariablesClass var) {
         this.parameters.add(var);
 
+
+
     }
+
+
 
     public ArrayList<CustomVariablesClass> getParameters() {
         return parameters;
