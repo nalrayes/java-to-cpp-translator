@@ -12,6 +12,9 @@ import java.util.ArrayList;
 //This class generates the C++ Header AST from the classSummary object
 public class CppHeaderASTCreator {
 
+
+
+
     private CppHeaderASTCreator(){};
 
 
@@ -137,9 +140,6 @@ public class CppHeaderASTCreator {
         cppNodeActions.addNodeAsChildToParent(pointer,newStructNode);
         cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
         cppAst.setRecentParentNodeMutated(newStructNode);
-
-
-
 
 
     }

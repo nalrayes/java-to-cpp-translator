@@ -2,18 +2,33 @@ package edu.nyu.oop.util;
 
 import java.util.ArrayList;
 
-import edu.nyu.oop.CustomClassObject;
-import edu.nyu.oop.CustomConstructorClass;
-import edu.nyu.oop.CustomMethodClass;
-import edu.nyu.oop.CustomVariablesClass;
+import edu.nyu.oop.*;
 import xtc.tree.GNode;
 
 public class CppDataLayout {
 
-    public CppDataLayout(){}
+    ArrayList<CppDataLayout.CppStruct> structs;
+    ArrayList<CppDataLayout.CppVar> globalVariables;
+
+
+
+
+
+//    public CppDataLayout(TraverseAST javaData){
+//
+//
+//
+//
+//
+//
+//
+//    }
 
     // Translate java types to C++ types
     // TODO: add differing types
+
+
+
     public static class typeTranslate {
 
         public String translateType (String javaType){
@@ -53,7 +68,7 @@ public class CppDataLayout {
             this.constructors = new ArrayList<CppConstructor>();
 
             // instantiates all data
-            for (CustomMethodClass javaMethod : c.getMethods()){
+            for (CustomMethodClass javaMethod : c.getMethods()) {
 
 
                 CppMethod cMethod = new CppMethod(javaMethod);
@@ -61,7 +76,7 @@ public class CppDataLayout {
 
             }
 
-            for (CustomConstructorClass javaConstructor : c.getConstructors()){
+            for (CustomConstructorClass javaConstructor : c.getConstructors()) {
 
 
                 CppConstructor cppConstructor = new CppConstructor(javaConstructor);
@@ -69,7 +84,7 @@ public class CppDataLayout {
 
             }
 
-            for (CustomVariablesClass javaVar : c.getClassVariables()){
+            for (CustomVariablesClass javaVar : c.getClassVariables()) {
 
                 CppVar cVar = new CppVar(javaVar);
                 this.variables.add(cVar);
@@ -78,38 +93,30 @@ public class CppDataLayout {
             }
 
 
-
-
-
-
             //constructors.add();
 
 
         }
 
-        public static class CppConstructor{
+        public static class CppConstructor {
             ArrayList<CustomVariablesClass> parameters;
             String name;
             String visibility;
 
 
-            public CppConstructor(CustomConstructorClass c){
+            public CppConstructor(CustomConstructorClass c) {
 
 
-                this.name = "__"+ c.getName();
+                this.name = "__" + c.getName();
                 this.parameters = c.getParameters();
                 this.visibility = c.getVisibility();
-
-
-
 
 
             }
 
 
-
         }
-
+    }
 
         public static class CppMethod {
 
@@ -120,6 +127,7 @@ public class CppDataLayout {
             ArrayList<CppParameter> parameters;
 
             public CppMethod(CustomMethodClass m) {
+                parameters = new ArrayList<CppParameter>();
 
                 this.name = "__" + m.getName();
                 this.modifier = m.getModifier();
@@ -204,4 +212,4 @@ public class CppDataLayout {
     }
 
 
-}
+
