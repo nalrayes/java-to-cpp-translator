@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2017-10-23 20:43:01,582 - [pool-6-thread-5] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
 2017-10-23 20:43:01,626 - [pool-6-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test001
 2017-10-23 20:43:01,627 - [pool-6-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
@@ -985,3 +986,14 @@
 2017-10-24 16:07:07,469 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test010
 2017-10-24 16:07:07,470 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
 >>>>>>> a52678f761ef61f2ed9450d650a706a1ad24fe1e
+=======
+2017-10-25 18:53:41,689 - [pool-21-thread-7] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 18:53:41,742 - [pool-21-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 18:53:41,742 - [pool-21-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+>>>>>>> f681683321fac15d0ce90c5bff17f165bcef0448
+2017-10-25 19:14:45,855 - [pool-21-thread-9] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:14:46,130 - [pool-21-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:14:46,130 - [pool-21-thread-9] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-25 19:16:20,328 - [pool-23-thread-5] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:16:20,432 - [pool-23-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:16:20,432 - [pool-23-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java

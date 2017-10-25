@@ -63,7 +63,8 @@ public abstract class cppNodeActions {
 
             methodNode.add(method.name);
             methodNode.add(method.returnType);
-            methodNode.add(createModifiersNode(method.modifiers));
+            methodNode.add(createNewASTNode("Visibility").add(method.visibility));
+            methodNode.add(createModifiersNode(method.modifier));
             methodNode.add(createParametersNode(method.parameters));
             newNode.add(methodNode);
         }
@@ -71,17 +72,21 @@ public abstract class cppNodeActions {
 
     }
 
-    public static GNode createModifiersNode(ArrayList<String> mods) {
+    public static GNode createModifiersNode(String modifier) {
         GNode newNode = createNewASTNode("Modifiers");
+        if (modifier == null) {
+            return newNode;
+        }
+        String[] mods = modifier.split(" ");
         for (String mod: mods) {
             newNode.add(mod);
         }
         return newNode;
     }
 
-    public static GNode createParametersNode(ArrayList<CppDataLayout.Parameter> params) {
+    public static GNode createParametersNode(ArrayList<CppDataLayout.CppParameter> params) {
         GNode newNode = createNewASTNode("Parameters");
-        for (CppDataLayout.Parameter p: params) {
+        for (CppDataLayout.CppParameter p: params) {
             newNode.add(p.name);
             newNode.add(p.type);
         }
@@ -96,7 +101,7 @@ public abstract class cppNodeActions {
 
             fieldNode.add(v.name);
             fieldNode.add(v.type);
-            fieldNode.add(createModifiersNode(v.modifiers));
+            fieldNode.add(createModifiersNode(v.modifier));
 
             newNode.add(fieldNode);
         }

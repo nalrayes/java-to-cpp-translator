@@ -2,19 +2,29 @@ package edu.nyu.oop.util;
 
 import java.util.ArrayList;
 
-import edu.nyu.oop.CustomClassObject;
-import edu.nyu.oop.CustomConstructorClass;
-import edu.nyu.oop.CustomMethodClass;
-import edu.nyu.oop.CustomVariablesClass;
+import edu.nyu.oop.*;
 import xtc.tree.GNode;
 
 public class CppDataLayout {
 
-    public CppDataLayout() {
-    }
+    ArrayList<CppDataLayout.CppStruct> structs;
+    ArrayList<CppDataLayout.CppVar> globalVariables;
+
+
+//    public CppDataLayout(TraverseAST javaData){
+//
+//
+//
+//
+//
+//
+//
+//    }
 
     // Translate java types to C++ types
     // TODO: add differing types
+
+
     public static class typeTranslate {
 
         public String translateType(String javaType) {
@@ -86,6 +96,7 @@ public class CppDataLayout {
 
         }
 
+
     }
 
     public static class CppConstructor {
@@ -107,15 +118,16 @@ public class CppDataLayout {
 
     }
 
-
     public static class CppMethod {
 
         String name;
         String modifier;
+        String visibility;
         String returnType;
         ArrayList<CppParameter> parameters;
 
         public CppMethod(CustomMethodClass m) {
+            parameters = new ArrayList<CppParameter>();
 
             this.name = "__" + m.getName();
             this.modifier = m.getModifier();
@@ -182,6 +194,7 @@ public class CppDataLayout {
         }
 
 
+    }
 //
 //            public String getModifier() {
 //                return modifier;
@@ -195,14 +208,14 @@ public class CppDataLayout {
 //                return type;
 //            }
 
-    }
-
 
     public static class CppVTable {
 
 
     }
+
 }
+
 
 
 

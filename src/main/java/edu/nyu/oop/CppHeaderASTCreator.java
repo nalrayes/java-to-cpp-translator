@@ -12,10 +12,12 @@ import java.util.ArrayList;
 //This class generates the C++ Header AST from the classSummary object
 public class CppHeaderASTCreator {
 
+
     private CppHeaderASTCreator() {
     }
 
-    ;
+
+
 
 
     public static CPPAST createNewCPPHeaderAstFrom(List<GNode> javaASTNodes) {
@@ -171,15 +173,15 @@ public class CppHeaderASTCreator {
 //
 //        GNode rootOfCppAST = cppAst.getRoot();
 //
-//        ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
-//
-//        for (CustomClassObject c: javaData.classes){
-//
-//            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
-//
-//            structs.add(aStruct);
-//
-//        }
+        ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
+
+        for (CustomClassObject c: javaData.classes){
+
+            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
+
+            structs.add(aStruct);
+
+        }
 //
 //        GNode pointer = rootOfCppAST;
 //        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");
