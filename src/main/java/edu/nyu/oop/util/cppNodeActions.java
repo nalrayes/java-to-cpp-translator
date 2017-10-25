@@ -49,6 +49,7 @@ public abstract class cppNodeActions {
             GNode newNode = createNewASTNode("Struct");
             newNode.add(value.name);
             addMethodsToNodeWithArray(newNode, value.methods);
+            addFieldsToNodeWithArray(newNode, value.variables);
             node.add(newNode);
         }
         return node;
@@ -88,6 +89,20 @@ public abstract class cppNodeActions {
         return newNode;
     }
 
+    public static void addFieldsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppVar> vars) {
+        vars.add(new CppDataLayout.CppVar());
+        GNode newNode = createNewASTNode("Fields");
+        for (CppDataLayout.CppVar v : vars) {
+            GNode fieldNode = createNewASTNode("Field");
+
+            fieldNode.add(v.name);
+            fieldNode.add(v.type);
+            fieldNode.add(createModifiersNode(v.modifiers));
+
+            newNode.add(fieldNode);
+        }
+        node.add(newNode);
+    }
 
     //Custom object to hold key values for the Gnode
 //    public static class simpleCPPDataNode extends cppNodeActions{

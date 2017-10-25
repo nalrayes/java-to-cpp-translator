@@ -58,9 +58,14 @@ public class CppDataLayout {
 
 
     public static class CppVar {
-        String name;
-        String type;
-        ArrayList<String> modifers;
+        String name = "varname";
+        String type = "vartyple";
+        ArrayList<String> modifiers = new ArrayList<String>();
+
+        public CppVar() {
+            modifiers.add("Varmod1");
+            modifiers.add("Varmod0");
+        }
     }
 
 
