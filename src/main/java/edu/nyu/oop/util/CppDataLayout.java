@@ -38,34 +38,20 @@ public class CppDataLayout {
         String returnType;
         ArrayList<Parameter> parameters;
 
-        public CppMethod(String n) {
-            this.returnType = "returnME";
-            this.name = n;
-            this.modifiers = new ArrayList<String>();
-            this.parameters = new ArrayList<Parameter>();
-            this.parameters.add(new Parameter());
-            this.modifiers.add("MOD1");
-            this.modifiers.add("MODE2");
-
-        }
     }
 
 
     public static class Parameter {
-        String name = "hello";
-        String type = "paramtype";
+        String name;
+        String type;
     }
 
 
     public static class CppVar {
-        String name = "varname";
-        String type = "vartyple";
-        ArrayList<String> modifiers = new ArrayList<String>();
+        String name;
+        String type;
+        ArrayList<String> modifiers;
 
-        public CppVar() {
-            modifiers.add("Varmod1");
-            modifiers.add("Varmod0");
-        }
     }
 
 

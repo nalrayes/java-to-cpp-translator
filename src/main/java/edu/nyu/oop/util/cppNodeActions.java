@@ -56,8 +56,7 @@ public abstract class cppNodeActions {
     }
 
     public static void addMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppMethod> methods) {
-        methods.add(new CppDataLayout.CppMethod("ThisMethod"));
-        methods.add(new CppDataLayout.CppMethod("Metojd2"));
+
         GNode newNode = createNewASTNode("Methods");
         for (CppDataLayout.CppMethod method : methods) {
             GNode methodNode = createNewASTNode("Method");
@@ -90,7 +89,7 @@ public abstract class cppNodeActions {
     }
 
     public static void addFieldsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppVar> vars) {
-        vars.add(new CppDataLayout.CppVar());
+
         GNode newNode = createNewASTNode("Fields");
         for (CppDataLayout.CppVar v : vars) {
             GNode fieldNode = createNewASTNode("Field");
