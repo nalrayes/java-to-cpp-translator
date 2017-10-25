@@ -1,6 +1,8 @@
 package edu.nyu.oop;
 
 import java.util.*;
+
+import edu.nyu.oop.util.CppDataLayout;
 import xtc.tree.GNode;
 import java.util.HashMap;
 
@@ -12,21 +14,50 @@ public class CppClassObject {
     //Name of the class
     private String cppClassName;
 
+    //ArrayListWhichHoldsAll the CppClassObjects that exists e.g Class A, Class B etc..
+    private static ArrayList <CppClassObject> arrayListOfCppClassObjectsInTheCppAST;
+
+    //Pointer to the cppClassObjectFor "Main"
+    private static CppClassObject main;
+
     //Simple class to keep track of the inheritance
     private static classHierarchy classHierarchyObj;
 
+    //Link to the cppDataLayout -> its constuctor takes a JavaClassSummary object and translate the JavaCode into the C++
+    //representation e.g adding __ or (*) to method names, fields etc. cpp
+    private CppDataLayout cppDataLayout;
+
+    //Link to the AST for easy excess
+    private CPPAST cppast;
+
+    //Set where in the AST the class will be added to i.e as a child of namespace
+    private GNode linkToNameSpaceGNodeInCppAST;
 
     //Constructor for the CppClassObject
     public CppClassObject(String cppClassName) {
         this.cppClassName = cppClassName;
+        this.cppDataLayout = new CppDataLayout();
+        this.arrayListOfCppClassObjectsInTheCppAST = new ArrayList<CppClassObject>();
     }
 
 
 
+    //Setters and getters
+    public void setCppast(CPPAST cppast) {
+        this.cppast = cppast;
+    }
 
+    public CPPAST getCppast() {
+        return cppast;
+    }
 
+    public void setLinkToNameSpaceGNodeInCppAST(GNode linkToNameSpaceGNodeInCppAST) {
+        this.linkToNameSpaceGNodeInCppAST = linkToNameSpaceGNodeInCppAST;
+    }
 
-
+    public GNode getLinkToNameSpaceGNodeInCppAST() {
+        return linkToNameSpaceGNodeInCppAST;
+    }
 
     //Custom object to keep track of inheritance
     public static class classHierarchy {
