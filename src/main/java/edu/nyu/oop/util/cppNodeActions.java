@@ -46,11 +46,47 @@ public abstract class cppNodeActions {
         }
         for (CppDataLayout.CppStruct value : listOfData){
             //Add to the parent
-            node.add(value.name);
+            GNode newNode = createNewASTNode("Struct");
+            newNode.add(value.name);
+            addMethodsToNodeWithArray(newNode, value.methods);
+            node.add(newNode);
         }
         return node;
     }
 
+    public static void addMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppMethod> methods) {
+        methods.add(new CppDataLayout.CppMethod("ThisMethod"));
+        methods.add(new CppDataLayout.CppMethod("Metojd2"));
+        GNode newNode = createNewASTNode("Methods");
+        for (CppDataLayout.CppMethod method : methods) {
+            GNode methodNode = createNewASTNode("Method");
+
+            methodNode.add(method.name);
+            methodNode.add(method.returnType);
+            methodNode.add(createModifiersNode(method.modifiers));
+            methodNode.add(createParametersNode(method.parameters));
+            newNode.add(methodNode);
+        }
+        node.add(newNode);
+
+    }
+
+    public static GNode createModifiersNode(ArrayList<String> mods) {
+        GNode newNode = createNewASTNode("Modifiers");
+        for (String mod: mods) {
+            newNode.add(mod);
+        }
+        return newNode;
+    }
+
+    public static GNode createParametersNode(ArrayList<CppDataLayout.Parameter> params) {
+        GNode newNode = createNewASTNode("Parameters");
+        for (CppDataLayout.Parameter p: params) {
+            newNode.add(p.name);
+            newNode.add(p.type);
+        }
+        return newNode;
+    }
 
 
     //Custom object to hold key values for the Gnode

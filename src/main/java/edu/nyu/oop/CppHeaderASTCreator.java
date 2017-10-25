@@ -39,10 +39,9 @@ public class CppHeaderASTCreator {
         List <TraverseAST.ClassSummary> javaClassSummaries = new ArrayList<TraverseAST.ClassSummary>();
         //Traverse AST traverses the JAVAAST and converts it into objects saved in ClassSummary
         TraverseAST jASTvisitor = new TraverseAST();
-        for (GNode javaAST: javaASTNodes){
+        for (GNode javaAST: javaASTNodes) {
             javaClassSummaries.add(jASTvisitor.getClassSummary(javaAST));
         }
-        int i = 0;
 
         //With the Class Summary create the namespaces
         for(TraverseAST.ClassSummary javaData: javaClassSummaries){
@@ -124,6 +123,7 @@ public class CppHeaderASTCreator {
         //Update the recent node pointer
         cppAst.setRecentParentNodeMutated(newNamespaceNode);
 
+        // returns last added namespace to specific current namespace
         return lastNode;
     }
 
@@ -146,9 +146,10 @@ public class CppHeaderASTCreator {
         }
 
         GNode pointer = currentNamespace;
-        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");
+        GNode newStructNode = cppNodeActions.createNewASTNode("Structs");
         cppNodeActions.addNodeAsChildToParent(pointer,newStructNode);
         cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
+        // this may not be necessary, but I'm keeping it rn just in case
         rootNode.setRecentParentNodeMutated(newStructNode);
 
 
