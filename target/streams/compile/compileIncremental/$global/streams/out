@@ -2,45 +2,46 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
-[0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@6bc4216f directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.267003268 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.122552956 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.407322388 s[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
-[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
-[0m[[0mdebug[0m] [0mThe /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m	notify, VTMethods, wait, is_a, pointer, equals, returnTypeAndClassName, objectReference, params, CppDataLayout$VTMethod, CppDataLayout$VTable, notifyAll, CppDataLayout$VTInstantiator$VTMethod, <init>, returnType, className, constructorName, CppDataLayout$VTInstantiator, toString, CppDataLayout$VTConstructor, getClass, type, CppDataLayout$VTInstantiator$VTable, CppDataLayout$CppVTable, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0minfo[0m] [0mCompiling 3 Java sources to /Users/reshamelahi/Desktop/OOP/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@324d055a directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.083285273 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.211299102 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 1.304465167 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, VTMethods, wait, is_a, pointer, classDeclarator, equals, returnTypeAndClassName, objectReference, params, randoCurls, returnTypeClassName, notifyAll, CppDataLayout$VTInstantiator$VTMethod, isA, declarationName, <init>, VTableDeclarator, returnType, className, CppDataLayout$VTInstantiator, toString, getClass, CppDataLayout$VTInstantiator$VTable, CppDataLayout$CppVTable, hashCode.[0m
 [0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
-[0m[[0mdebug[0m] [0mIncluding /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CPPAST.java by /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java[0m
+[0m[[0mdebug[0m] [0m	Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java)[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java)[0m
+[0m[[0mdebug[0m] [0mIncluding /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java by /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java[0m
+[0m[[0mdebug[0m] [0mIncluding /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java by /Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CPPAST.java[0m
 [0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
-[0m[[0minfo[0m] [0mCompiling 3 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@6bc4216f directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.085818821 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.022410128 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.109796046 s[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(/Users/reshamelahi/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java)[0m
+[0m[[0minfo[0m] [0mCompiling 3 Java sources to /Users/reshamelahi/Desktop/OOP/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@324d055a directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.168072767 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.057247368 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.229857257 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

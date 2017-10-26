@@ -208,24 +208,38 @@ public class CppDataLayout {
     public static class VTInstantiator {
 
         String returnType;
+        String isA;
         String pointer;
-        String className;
-        String constructorName;
+//        String className;
+        String declarationName;
         String objectReference;
+        String returnTypeClassName;
+        String randoCurls;
 
         // non overridden methods
         public VTInstantiator(CustomClassObject javaClass) {
 
+            this.isA = " : __is_a(__" + javaClass.getClassName() + "::__class()),";
+            this.declarationName = "__" + javaClass.getClassName() + "_VT()";
+            this.randoCurls = "{\n}";
+            
+            int index = 0;
+            int size = javaClass.getMethods().size();
             for (CustomMethodClass m : javaClass.getMethods()) {
-
-                this.constructorName = m.getName();
-                this.returnType = m.getReturnType();
-                this.className = javaClass.getClassName();
-                this.objectReference = "&__Object::" + m.getName();
-
+                if (index != size - 1) {
+                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + "),";
+//                    this.returnType = m.getReturnType();
+//                    this.className = javaClass.getClassName();
+                    this.objectReference = "&__Object::" + m.getName();
+                } else {
+                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + ")";
+//                    this.returnType = m.getReturnType();
+//                    this.className = javaClass.getClassName();
+                    this.objectReference = "&__Object::" + m.getName();
+                }
+                index++;
 
             }
-
 
         }
 
@@ -244,6 +258,7 @@ public class CppDataLayout {
                 VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", javaData.getClassName());
                 VTMethod equalsMethod = new VTMethod("bool", "equals", javaData.getClassName());
                 VTMethod classMethod = new VTMethod("Class", "getClass", javaData.getClassName());
+                VTMethod stringMethod = new VTMethod("String","toString", javaData.getClassName());
 
                 // gets custom methods
                 for (CustomMethodClass m : javaData.getMethods()) {
