@@ -12,3 +12,5 @@ test-only *CppHVisitorTest*
 test-only *CppHVisitorTest*>
 test-only *CppHVisitorTest*
 exit 
+test-only *CppHVisitorTest*
+exit
