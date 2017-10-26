@@ -222,6 +222,26 @@ public class CppDataLayout {
 
     public static class VTConstructor{
 
+        String returnType;
+        String pointer;
+        String className;
+        String constructorName;
+        String objectReference;
+
+        // non overridden methods
+        public VTConstructor(CustomMethodClass m, CustomClassObject s){
+
+
+            this.constructorName = m.getName();
+            this.returnType = m.getReturnType();
+            this.className = s.getClassName();
+            this.objectReference = "&__Object::" + m.getName();
+
+
+        }
+
+
+
 
 
     }

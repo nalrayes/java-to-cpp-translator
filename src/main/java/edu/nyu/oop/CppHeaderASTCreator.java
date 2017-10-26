@@ -58,7 +58,7 @@ public class CppHeaderASTCreator {
         //Check to print out the recent parent mutated of the ASTTree
         System.out.println(cppHeaderAST.getRecentParentNodeMutated());
 
-        //TODO create the classObjects and heirechy strucutre
+        //TODO create the classObjects and hierarchy strucutre
 
         //Create the cppClassObjects
         createCppClassObject(javaClassSummaries, cppHeaderAST);
