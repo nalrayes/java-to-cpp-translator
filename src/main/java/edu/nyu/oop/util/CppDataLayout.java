@@ -202,25 +202,10 @@ public class CppDataLayout {
 //            }
 
 
-    public static class CppVTable {
-
-        String type;
-
-        ArrayList<VTMethod> VTMethods;
 
 
-    }
 
-
-    public static class VTable{
-        String is_a;
-        ArrayList<VTMethod> VTMethods;
-        //ArrayList<VTConstructor> VTConstructors;
-
-
-    }
-
-    public static class VTConstructor{
+    public static class VTInstantiator {
 
         String returnType;
         String pointer;
@@ -229,56 +214,86 @@ public class CppDataLayout {
         String objectReference;
 
         // non overridden methods
-        public VTConstructor(CustomMethodClass m, CustomClassObject s){
+        public VTInstantiator(CustomClassObject javaClass) {
+
+            for (CustomMethodClass m : javaClass.getMethods()) {
+
+                this.constructorName = m.getName();
+                this.returnType = m.getReturnType();
+                this.className = javaClass.getClassName();
+                this.objectReference = "&__Object::" + m.getName();
 
 
-            this.constructorName = m.getName();
-            this.returnType = m.getReturnType();
-            this.className = s.getClassName();
-            this.objectReference = "&__Object::" + m.getName();
+            }
 
 
         }
 
 
+        public static class VTable {
+            String is_a;
+            ArrayList<VTMethod> VTMethods;
+            //ArrayList<VTConstructor> VTConstructors;
 
 
+            // gets factory methods
+
+
+            public VTable(CustomClassObject javaData) {
+                VTMethods = new ArrayList<VTMethod>();
+                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", javaData.getClassName());
+                VTMethod equalsMethod = new VTMethod("bool", "equals", javaData.getClassName());
+                VTMethod classMethod = new VTMethod("Class", "getClass", javaData.getClassName());
+
+                // gets custom methods
+                for (CustomMethodClass m : javaData.getMethods()) {
+
+                    VTMethod vtMeth = new VTMethod(m, javaData);
+                    VTMethods.add(vtMeth);
+
+                }
+
+
+            }
+
+        }
+
+
+        public static class VTMethod {
+
+            String returnType;
+            String pointer;
+            String className;
+            String returnTypeAndClassName;
+            ArrayList<String> params;
+
+            public VTMethod(CustomMethodClass m, CustomClassObject s) {
+                params = new ArrayList<String>();
+
+                typeTranslate translateType = new typeTranslate();
+                this.returnType = translateType.translateType(m.getReturnType());
+                this.pointer = "(*" + m.getName() + ")";
+                this.className = s.getClassName();
+                params.add(this.className);
+
+
+            }
+
+            public VTMethod(String rt, String pt, String className) {
+                params = new ArrayList<String>();
+                this.pointer = rt;
+                this.className = className;
+                params.add(this.className);
+                if (className.equals("hashCode")) {
+                    params.add("Object");
+                }
+
+            }
+
+
+        }
 
     }
-
-
-
-
-    public static class VTMethod{
-
-        String returnType;
-        String pointer;
-        String className;
-
-        public VTMethod(CustomMethodClass m, CustomClassObject s){
-
-            typeTranslate translateType = new typeTranslate();
-            this.returnType = translateType.translateType(m.getReturnType());
-            this.pointer = "*" + m.getName();
-            this.className = s.getClassName();
-
-
-        }
-
-        public VTMethod(String rt, String pt, String cname){
-
-            this.returnType = rt;
-            this.pointer = rt;
-            this.className = cname;
-        }
-
-
-
-
-
-
-    }
-
 }
 
 
