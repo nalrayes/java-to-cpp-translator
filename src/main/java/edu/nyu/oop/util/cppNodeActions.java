@@ -87,9 +87,14 @@ public abstract class cppNodeActions {
     public static GNode createParametersNode(ArrayList<CppDataLayout.CppParameter> params) {
         GNode newNode = createNewASTNode("Parameters");
         for (CppDataLayout.CppParameter p: params) {
-            newNode.add(p.name);
-            newNode.add(p.type);
+
+           GNode parameterNode = createNewASTNode("Parameter");
+           parameterNode.add(p.type);
+           parameterNode.add(p.name);
+           newNode.add(parameterNode);
+
         }
+
         return newNode;
     }
 
@@ -98,9 +103,8 @@ public abstract class cppNodeActions {
         GNode newNode = createNewASTNode("Fields");
         for (CppDataLayout.CppVar v : vars) {
             GNode fieldNode = createNewASTNode("Field");
-
-            fieldNode.add(v.name);
             fieldNode.add(v.type);
+            fieldNode.add(v.name);
             fieldNode.add(createModifiersNode(v.modifier));
 
             newNode.add(fieldNode);
