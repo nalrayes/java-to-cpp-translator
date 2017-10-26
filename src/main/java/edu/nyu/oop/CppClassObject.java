@@ -18,7 +18,7 @@ public class CppClassObject {
     private static ArrayList <CppClassObject> arrayListOfCppClassObjectsInTheCppAST;
 
     //Pointer to the cppClassObjectFor "Main"
-    private static CppClassObject main;
+    private boolean isMain;
 
     //Simple class to keep track of the inheritance
     private static classHierarchy classHierarchyObj;
@@ -33,12 +33,19 @@ public class CppClassObject {
     //Set where in the AST the class will be added to i.e as a child of namespace
     private GNode linkToNameSpaceGNodeInCppAST;
 
+    private static CppDataLayout.CppStruct objectStructLayout;
+
     //Constructor for the CppClassObject
-    public CppClassObject(String cppClassName) {
+    public CppClassObject(String cppClassName, CustomClassObject javaClass) {
         this.cppClassName = cppClassName;
         this.cppDataLayout = new CppDataLayout();
         this.arrayListOfCppClassObjectsInTheCppAST = new ArrayList<CppClassObject>();
+        this.isMain = false;
     }
+
+    //Helper method to create the CppDataLayout for each class
+    public
+
 
 
 
@@ -51,6 +58,37 @@ public class CppClassObject {
         return cppast;
     }
 
+    public static void setArrayListOfCppClassObjectsInTheCppAST(ArrayList<CppClassObject> arrayListOfCppClassObjectsInTheCppAST) {
+        CppClassObject.arrayListOfCppClassObjectsInTheCppAST = arrayListOfCppClassObjectsInTheCppAST;
+    }
+
+    public static ArrayList<CppClassObject> getArrayListOfCppClassObjectsInTheCppAST() {
+        return arrayListOfCppClassObjectsInTheCppAST;
+    }
+
+    public void setParentClass(CppClassObject parentClass) {
+        this.parentClass = parentClass;
+    }
+
+    public CppClassObject getParentClass() {
+        return parentClass;
+    }
+
+    public void setisMain(boolean isMain){
+        this.isMain = isMain;
+    }
+    public boolean getisMain(){
+        return this.isMain;
+    }
+
+    public void setCppClassName(String cppClassName) {
+        this.cppClassName = cppClassName;
+    }
+
+    public String getCppClassName() {
+        return cppClassName;
+    }
+
     public void setLinkToNameSpaceGNodeInCppAST(GNode linkToNameSpaceGNodeInCppAST) {
         this.linkToNameSpaceGNodeInCppAST = linkToNameSpaceGNodeInCppAST;
     }
@@ -58,6 +96,13 @@ public class CppClassObject {
     public GNode getLinkToNameSpaceGNodeInCppAST() {
         return linkToNameSpaceGNodeInCppAST;
     }
+
+
+    @Override
+    public String toString() {
+        return this.cppClassName;
+    }
+
 
     //Custom object to keep track of inheritance
     public static class classHierarchy {
@@ -70,6 +115,22 @@ public class CppClassObject {
             this.nameOfClassForCppClassObjectHashMap = new HashMap<String, CppClassObject>();
             this.childForParentHashMap = new HashMap<String, String>();
             this.parentForChildHashMap = new HashMap<String, ArrayList<String>>();
+        }
+
+        public void setNameOfClassForCppClassObjectHashMap(HashMap<String, CppClassObject> nameOfClassForCppClassObjectHashMap) {
+            this.nameOfClassForCppClassObjectHashMap = nameOfClassForCppClassObjectHashMap;
+        }
+
+        public HashMap<String, CppClassObject> getNameOfClassForCppClassObjectHashMap() {
+            return nameOfClassForCppClassObjectHashMap;
+        }
+
+        public void setChildForParentHashMap(HashMap<String, String> childForParentHashMap) {
+            this.childForParentHashMap = childForParentHashMap;
+        }
+
+        public HashMap<String, String> getChildForParentHashMap() {
+            return childForParentHashMap;
         }
 
         //Helper methods
@@ -106,6 +167,14 @@ public class CppClassObject {
                 //list exist we just add
                 listOfChildren.add(childClass);
             }
+        }
+
+        public ArrayList <String> getListOfChildrenForParent(String parentClass){
+            return this.parentForChildHashMap.get(parentClass);
+        }
+
+        public HashMap<String, ArrayList<String>> getParentForChildHashMap() {
+            return parentForChildHashMap;
         }
     }
 

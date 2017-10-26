@@ -20,6 +20,8 @@ public class CPPAST {
     //The main class
     private CppClassObject mainClass;
 
+    //Keep track of the namespacenode that we add the Class Structs to
+    private GNode linkToNamespaceNode;
 
     //Constructor
     public CPPAST(String name) {
@@ -27,16 +29,6 @@ public class CPPAST {
         //create new gnode as root
         this.root = cppNodeActions.createNewASTNode(name);
     }
-
-    //Add to the list of classes
-    public void addClass(CppClassObject classobj) {
-        if (classobj != null) {
-            //not null so add
-            this.cppClassObjectslist.add(classobj);
-        }
-    }
-
-
 
     public void setCppClassObjectslist(List<CppClassObject> cppClassObjectslist) {
         this.cppClassObjectslist = cppClassObjectslist;
@@ -68,5 +60,13 @@ public class CPPAST {
 
     public GNode getRecentParentNodeMutated() {
         return recentParentNodeMutated;
+    }
+
+    public void setLinkToNamespaceNode(GNode linkToNamespaceNode) {
+        this.linkToNamespaceNode = linkToNamespaceNode;
+    }
+
+    public GNode getLinkToNamespaceNode() {
+        return linkToNamespaceNode;
     }
 }
