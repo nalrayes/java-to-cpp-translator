@@ -202,63 +202,113 @@ public class CppDataLayout {
 //            }
 
 
-    public static class CppVTable {
-
-        String type;
-
-        ArrayList<VTMethod> VTMethods;
-
-
-    }
-
-
-    public static class VTable{
-        String is_a;
-        ArrayList<VTMethod> VTMethods;
-        //ArrayList<VTConstructor> VTConstructors;
-
-
-    }
-
-    public static class VTConstructor{
 
 
 
-    }
-
-
-
-
-    public static class VTMethod{
+    public static class VTInstantiator {
 
         String returnType;
+        String isA;
         String pointer;
-        String className;
+//        String className;
+        String declarationName;
+        String objectReference;
+        String returnTypeClassName;
+        String randoCurls;
 
-        public VTMethod(CustomMethodClass m, CustomClassObject s){
+        // non overridden methods
+        public VTInstantiator(CustomClassObject javaClass) {
 
-            typeTranslate translateType = new typeTranslate();
-            this.returnType = translateType.translateType(m.getReturnType());
-            this.pointer = "*" + m.getName();
-            this.className = s.getClassName();
+            this.isA = " : __is_a(__" + javaClass.getClassName() + "::__class()),";
+            this.declarationName = "__" + javaClass.getClassName() + "_VT()";
+            this.randoCurls = "{\n}";
+            
+            int index = 0;
+            int size = javaClass.getMethods().size();
+            for (CustomMethodClass m : javaClass.getMethods()) {
+                if (index != size - 1) {
+                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + "),";
+//                    this.returnType = m.getReturnType();
+//                    this.className = javaClass.getClassName();
+                    this.objectReference = "&__Object::" + m.getName();
+                } else {
+                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + ")";
+//                    this.returnType = m.getReturnType();
+//                    this.className = javaClass.getClassName();
+                    this.objectReference = "&__Object::" + m.getName();
+                }
+                index++;
 
+            }
 
         }
 
-        public VTMethod(String rt, String pt, String cname){
 
-            this.returnType = rt;
-            this.pointer = rt;
-            this.className = cname;
+        public static class VTable {
+            String is_a;
+            ArrayList<VTMethod> VTMethods;
+            //ArrayList<VTConstructor> VTConstructors;
+
+
+            // gets factory methods
+
+
+            public VTable(CustomClassObject javaData) {
+                VTMethods = new ArrayList<VTMethod>();
+                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", javaData.getClassName());
+                VTMethod equalsMethod = new VTMethod("bool", "equals", javaData.getClassName());
+                VTMethod classMethod = new VTMethod("Class", "getClass", javaData.getClassName());
+                VTMethod stringMethod = new VTMethod("String","toString", javaData.getClassName());
+
+                // gets custom methods
+                for (CustomMethodClass m : javaData.getMethods()) {
+
+                    VTMethod vtMeth = new VTMethod(m, javaData);
+                    VTMethods.add(vtMeth);
+
+                }
+
+
+            }
+
         }
 
 
+        public static class VTMethod {
+
+            String returnType;
+            String pointer;
+            String className;
+            String returnTypeAndClassName;
+            ArrayList<String> params;
+
+            public VTMethod(CustomMethodClass m, CustomClassObject s) {
+                params = new ArrayList<String>();
+
+                typeTranslate translateType = new typeTranslate();
+                this.returnType = translateType.translateType(m.getReturnType());
+                this.pointer = "(*" + m.getName() + ")";
+                this.className = s.getClassName();
+                params.add(this.className);
 
 
+            }
 
+            public VTMethod(String rt, String pt, String className) {
+                params = new ArrayList<String>();
+                this.pointer = rt;
+                this.className = className;
+                params.add(this.className);
+                if (className.equals("hashCode")) {
+                    params.add("Object");
+                }
+
+            }
+
+
+        }
 
     }
-
 }
 
 
