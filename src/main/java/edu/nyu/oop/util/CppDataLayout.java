@@ -2,21 +2,19 @@ package edu.nyu.oop.util;
 
 import java.util.ArrayList;
 
-import edu.nyu.oop.CustomClassObject;
-import edu.nyu.oop.CustomConstructorClass;
-import edu.nyu.oop.CustomMethodClass;
-import edu.nyu.oop.CustomVariablesClass;
+import edu.nyu.oop.*;
 import xtc.tree.GNode;
 
 public class CppDataLayout {
 
-    public CppDataLayout(){}
+    ArrayList<CppDataLayout.CppStruct> structs;
+    ArrayList<CppDataLayout.CppVar> globalVariables;
 
-    // Translate java types to C++ types
+    // Helper method to translate java types to C++ types
     // TODO: add differing types
     public static class typeTranslate {
 
-        public String translateType (String javaType){
+        public String translateType(String javaType) {
 
             String cType = "";
 
@@ -37,12 +35,16 @@ public class CppDataLayout {
         }
 
     }
+
     public static class CppStruct {
 
         ArrayList<CppVar> variables;
         ArrayList<CppMethod> methods;
         //ArrayList<VTables>
         String name;
+        String classDeclarator;
+        String VTableDeclarator;
+
 
         ArrayList<CppConstructor> constructors;
 
@@ -51,10 +53,14 @@ public class CppDataLayout {
             this.methods = new ArrayList<CppMethod>();
 
             this.name = "__" + c.getClassName();
+            this.classDeclarator = "static Class __class()";
+            this.VTableDeclarator = "__" + name + "_" +"VT" + " __vtable";
+
+
             this.constructors = new ArrayList<CppConstructor>();
 
             // instantiates all data
-            for (CustomMethodClass javaMethod : c.getMethods()){
+            for (CustomMethodClass javaMethod : c.getMethods()) {
 
 
                 CppMethod cMethod = new CppMethod(javaMethod);
@@ -62,7 +68,7 @@ public class CppDataLayout {
 
             }
 
-            for (CustomConstructorClass javaConstructor : c.getConstructors()){
+            for (CustomConstructorClass javaConstructor : c.getConstructors()) {
 
 
                 CppConstructor cppConstructor = new CppConstructor(javaConstructor);
@@ -70,7 +76,7 @@ public class CppDataLayout {
 
             }
 
-            for (CustomVariablesClass javaVar : c.getClassVariables()){
+            for (CustomVariablesClass javaVar : c.getClassVariables()) {
 
                 CppVar cVar = new CppVar(javaVar);
                 this.variables.add(cVar);
@@ -79,113 +85,109 @@ public class CppDataLayout {
             }
 
 
-
-
-
-
-            //constructors.add();
-
-
         }
 
-        public static class CppConstructor{
-            ArrayList<CustomVariablesClass> parameters;
-            String name;
-            String visibility;
+
+    }
+
+    public static class CppConstructor {
+        ArrayList<CustomVariablesClass> parameters;
+        String name;
+        String visibility;
 
 
-            public CppConstructor(CustomConstructorClass c){
+        public CppConstructor(CustomConstructorClass c) {
 
 
-                this.name = "__"+ c.getName();
-                this.parameters = c.getParameters();
-                this.visibility = c.getVisibility();
-
-
-
-
-
-            }
-
+            this.name = "__" + c.getName();
+            this.parameters = c.getParameters();
+            this.visibility = c.getVisibility();
 
 
         }
 
 
-        public static class CppMethod {
+    }
 
-            String name;
-            String modifier;
-            String returnType;
-            ArrayList<CppParameter> parameters;
+    public static class CppMethod {
 
-            public CppMethod(CustomMethodClass m) {
+        String name;
 
-                this.name = "__" + m.getName();
-                this.modifier = m.getModifier();
+        String modifier;
+        String visibility;
+        String returnType;
+        ArrayList<CppParameter> parameters;
 
-                typeTranslate translateType = new typeTranslate();
-                this.returnType =  translateType.translateType(m.getReturnType());
+        public CppMethod(CustomMethodClass m) {
+            parameters = new ArrayList<CppParameter>();
 
-                // translates and add java method params to cpp method params
-                for (CustomVariablesClass javaParam : m.getParameters()){
+            this.name = "__" + m.getName();
+            this.modifier = m.getModifier();
+            this.visibility = m.getVisibility();
+
+            typeTranslate translateType = new typeTranslate();
+            this.returnType = translateType.translateType(m.getReturnType());
+
+            // translates and add java method params to cpp method params
+            for (CustomVariablesClass javaParam : m.getParameters()) {
 
 
-                    CppParameter cParam = new CppParameter(javaParam);
-                    this.parameters.add(cParam);
-
-                }
-
+                CppParameter cParam = new CppParameter(javaParam);
+                this.parameters.add(cParam);
 
             }
 
 
         }
 
-
-        public static class Field{
-            public String name;
-            public String type;
-            public ArrayList<String> modifiers;
-            public Field(){}
-        }
-
-
-        public static class CppParameter {
-            String name;
-            String type;
-
-
-            public CppParameter(CustomVariablesClass v){
-
-                typeTranslate translateType = new typeTranslate();
-                this.name = v.getName();
-                this.type = translateType.translateType(v.getType());
-
-
-            }
-
-        }
-
-
-        public static class CppVar {
-            String name;
-            String type;
-            String modifier;
-
-
-
-            public CppVar(CustomVariablesClass v){
-
-                typeTranslate translateType = new typeTranslate();
-                this.name = v.getName();
-                this.type = translateType.translateType(v.getType());
-                this.modifier = v.getModifier();
 
     }
 
 
-            }
+    public static class Field {
+        public String name;
+        public String type;
+        public ArrayList<String> modifiers;
+
+        public Field() {
+        }
+    }
+
+
+    public static class CppParameter {
+        String name;
+        String type;
+
+
+        public CppParameter(CustomVariablesClass v) {
+
+            typeTranslate translateType = new typeTranslate();
+            this.name = v.getName();
+            this.type = translateType.translateType(v.getType());
+
+
+        }
+
+    }
+
+
+    public static class CppVar {
+        String name;
+        String type;
+        String modifier;
+
+
+        public CppVar(CustomVariablesClass v) {
+
+            typeTranslate translateType = new typeTranslate();
+            this.name = v.getName();
+            this.type = translateType.translateType(v.getType());
+            this.modifier = v.getModifier();
+
+        }
+
+
+    }
 //
 //            public String getModifier() {
 //                return modifier;
@@ -199,17 +201,66 @@ public class CppDataLayout {
 //                return type;
 //            }
 
-        }
 
+    public static class CppVTable {
 
-        public static class CppVTable{
+        String type;
 
+        ArrayList<VTMethod> VTMethods;
 
-
-
-        }
 
     }
+
+
+    public static class VTable{
+        String is_a;
+        ArrayList<VTMethod> VTMethods;
+        //ArrayList<VTConstructor> VTConstructors;
+
+
+    }
+
+    public static class VTConstructor{
+
+
+
+    }
+
+
+
+
+    public static class VTMethod{
+
+        String returnType;
+        String pointer;
+        String className;
+
+        public VTMethod(CustomMethodClass m, CustomClassObject s){
+
+            typeTranslate translateType = new typeTranslate();
+            this.returnType = translateType.translateType(m.getReturnType());
+            this.pointer = "*" + m.getName();
+            this.className = s.getClassName();
+
+
+        }
+
+        public VTMethod(String rt, String pt, String cname){
+
+            this.returnType = rt;
+            this.pointer = rt;
+            this.className = cname;
+        }
+
+
+
+
+
+
+    }
+
+}
+
 
 
 
