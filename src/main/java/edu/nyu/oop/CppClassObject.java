@@ -34,7 +34,7 @@ public class CppClassObject {
     private GNode linkToNameSpaceGNodeInCppAST;
 
     //Constructor for the CppClassObject
-    public CppClassObject(String cppClassName) {
+    public CppClassObject(String cppClassName, CustomClassObject javaClass) {
         this.cppClassName = cppClassName;
         this.cppDataLayout = new CppDataLayout();
         this.arrayListOfCppClassObjectsInTheCppAST = new ArrayList<CppClassObject>();
