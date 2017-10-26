@@ -191,6 +191,10 @@ public class TraverseAST extends Visitor {
         //Class scope exists. Hence, end of the class
         //Save the class object to the array of class objects
         classSummary.classes.add(currentClass);
+        classSummary.javaFile.classes.add(currentClass);
+
+
+
         //Make the pointer point to NULL
        // System.out.println("End of class: " + currentClass.className);
         currentClass = null;
@@ -317,8 +321,13 @@ public class TraverseAST extends Visitor {
 
     public ClassSummary getClassSummary(Node n) {
         super.dispatch(n);
+
         return classSummary;
     }
+
+
+
+
 
 
 
@@ -327,5 +336,9 @@ public class TraverseAST extends Visitor {
     static class ClassSummary{
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
         ArrayList<String> packages = new ArrayList<String>();
+        JavaFileObject javaFile =  new JavaFileObject();
+
+
+
     }
 }

@@ -36,6 +36,23 @@ public class CppDataLayout {
 
     }
 
+    // used for checking overriden methods only
+    public static class CppFileObject{
+
+        JavaFileObject javaFile;
+
+
+        public CppFileObject(JavaFileObject javaFile){
+
+            this.javaFile = javaFile;
+
+
+
+        }
+
+
+    }
+
     public static class CppStruct {
 
         ArrayList<CppVar> variables;
@@ -210,7 +227,7 @@ public class CppDataLayout {
         String returnType;
         String isA;
         String pointer;
-//        String className;
+        //        String className;
         String declarationName;
         String objectReference;
         String returnTypeClassName;
@@ -222,15 +239,27 @@ public class CppDataLayout {
             this.isA = " : __is_a(__" + javaClass.getClassName() + "::__class()),";
             this.declarationName = "__" + javaClass.getClassName() + "_VT()";
             this.randoCurls = "{\n}";
-            
+
+
             int index = 0;
             int size = javaClass.getMethods().size();
+
+        // check for overidden methods
+
+
+
+
+
+
+
+
+            // for custom methods only
             for (CustomMethodClass m : javaClass.getMethods()) {
                 if (index != size - 1) {
-                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + "),";
+                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + "))" + "__" + javaClass.getClassName() + "::" + m.getReturnType() + "),";
 //                    this.returnType = m.getReturnType();
 //                    this.className = javaClass.getClassName();
-                    this.objectReference = "&__Object::" + m.getName();
+                    this.objectReference = "&__" + javaClass.getClassName() + "::" + m.getName();
                 } else {
                     this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + ")";
 //                    this.returnType = m.getReturnType();
@@ -244,10 +273,24 @@ public class CppDataLayout {
         }
 
 
+
+
+        private void checkForOverriddenMethods(CustomClassObject javaClass, JavaFileObject javaFile){
+
+
+
+        }
+
+
+    }
+
+
+
+
         public static class VTable {
             String is_a;
             ArrayList<VTMethod> VTMethods;
-            //ArrayList<VTConstructor> VTConstructors;
+            ArrayList<VTInstantiator> VTInstantiators;
 
 
             // gets factory methods
@@ -308,7 +351,9 @@ public class CppDataLayout {
 
         }
 
-    }
+
+
+
 }
 
 
