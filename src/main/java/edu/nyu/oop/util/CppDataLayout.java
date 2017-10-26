@@ -9,19 +9,6 @@ public class CppDataLayout {
 
     ArrayList<CppDataLayout.CppStruct> structs;
     ArrayList<CppDataLayout.CppVar> globalVariables;
-    // TODO: Add constructor data layout. Takes in the java class summary. How to get root node of class summary?
-
-//    public CppDataLayout(TraverseAST javaAst, GNode n){
-//
-//      // TraverseAST summary =  javaAst.getClassSummary(n);
-//
-//
-//
-//
-//
-//
-//
-//    }
 
     // Helper method to translate java types to C++ types
     // TODO: add differing types
@@ -55,6 +42,9 @@ public class CppDataLayout {
         ArrayList<CppMethod> methods;
         //ArrayList<VTables>
         String name;
+        String classDeclarator;
+        String VTableDeclarator;
+
 
         ArrayList<CppConstructor> constructors;
 
@@ -63,6 +53,10 @@ public class CppDataLayout {
             this.methods = new ArrayList<CppMethod>();
 
             this.name = "__" + c.getClassName();
+            this.classDeclarator = "static Class __class()";
+            this.VTableDeclarator = "__" + name + "_" +"VT" + " __vtable";
+
+
             this.constructors = new ArrayList<CppConstructor>();
 
             // instantiates all data
@@ -89,9 +83,6 @@ public class CppDataLayout {
 
 
             }
-
-
-            //constructors.add();
 
 
         }
@@ -212,6 +203,58 @@ public class CppDataLayout {
 
 
     public static class CppVTable {
+
+        String type;
+
+        ArrayList<VTMethod> VTMethods;
+
+
+    }
+
+
+    public static class VTable{
+        String is_a;
+        ArrayList<VTMethod> VTMethods;
+        //ArrayList<VTConstructor> VTConstructors;
+
+
+    }
+
+    public static class VTConstructor{
+
+
+
+    }
+
+
+
+
+    public static class VTMethod{
+
+        String returnType;
+        String pointer;
+        String className;
+
+        public VTMethod(CustomMethodClass m, CustomClassObject s){
+
+            typeTranslate translateType = new typeTranslate();
+            this.returnType = translateType.translateType(m.getReturnType());
+            this.pointer = "*" + m.getName();
+            this.className = s.getClassName();
+
+
+        }
+
+        public VTMethod(String rt, String pt, String cname){
+
+            this.returnType = rt;
+            this.pointer = rt;
+            this.className = cname;
+        }
+
+
+
+
 
 
     }

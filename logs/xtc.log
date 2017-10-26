@@ -1,0 +1,18 @@
+2017-10-25 19:20:16,376 - [pool-13-thread-1] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:20:16,418 - [pool-13-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:20:16,418 - [pool-13-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-25 19:23:08,935 - [pool-15-thread-8] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:23:08,969 - [pool-15-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:23:08,970 - [pool-15-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-25 19:23:20,082 - [pool-17-thread-2] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:23:20,122 - [pool-17-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:23:20,123 - [pool-17-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-25 19:23:32,841 - [pool-19-thread-7] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:23:32,879 - [pool-19-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:23:32,880 - [pool-19-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-25 19:23:39,357 - [pool-21-thread-6] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-25 19:23:39,393 - [pool-21-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-25 19:23:39,394 - [pool-21-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-10-26 13:54:06,829 - [pool-23-thread-7] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-26 13:54:06,893 - [pool-23-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/test010
+2017-10-26 13:54:06,893 - [pool-23-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java

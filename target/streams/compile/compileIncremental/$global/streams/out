@@ -1,52 +1,39 @@
-<<<<<<< HEAD
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct$CppConstructor.class: stamp changed from lastModified(1508973510000) to lastModified(1508973512000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class: stamp changed from lastModified(1508973510000) to lastModified(1508973512000)[0m
-=======
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class: stamp changed from lastModified(1508973205000) to lastModified(1508973284000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class: stamp changed from lastModified(1508973205000) to lastModified(1508973284000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class: stamp changed from lastModified(1508973205000) to lastModified(1508973284000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class: stamp changed from lastModified(1508973205000) to lastModified(1508973284000)[0m
->>>>>>> 1b3648614910aa3c25dd3531572e0fe95e9a843f
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class: could not find class edu.nyu.oop.util.CppDataLayout$typeTranslate on the classpath.[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-<<<<<<< HEAD
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
-[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CustomClassObject.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CppClassObject.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/TraverseAST$ClassSummary.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CPPAST.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/cppNodeActions.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/TraverseAST.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CppHeaderASTCreator.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/CppClassObject$classHierarchy.class)[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct$CppConstructor.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class)[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
-=======
-[0m[[0mdebug[0m] [0m	modified: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
-[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
-[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class)[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
->>>>>>> 1b3648614910aa3c25dd3531572e0fe95e9a843f
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
-[0m[[0mdebug[0m] [0m	product: Set()[0m
-[0m[[0mdebug[0m] [0m	binary dep: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0mdebug[0m] [0m	product: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CPPAST.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-<<<<<<< HEAD
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@12f0d7c0 directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.042663606 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.02014991 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.064304578 s[0m
-=======
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
-[0m[[0minfo[0m] [0mCompiling 3 Java sources to /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@7ba23bb0 directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.055676288 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.05151248 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.109390143 s[0m
->>>>>>> 1b3648614910aa3c25dd3531572e0fe95e9a843f
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CPPAST.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CustomClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java)[0m
+[0m[[0minfo[0m] [0mCompiling 7 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@5749698b directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.186956988 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.071105065 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.260037704 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, VTMethods, wait, is_a, pointer, classDeclarator, equals, CppDataLayout$VTMethod, CppDataLayout$VTable, notifyAll, <init>, VTableDeclarator, returnType, className, toString, CppDataLayout$VTConstructor, getClass, type, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0m	Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
+[0m[[0mdebug[0m] [0mIncluding /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CPPAST.java by /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java[0m
 [0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

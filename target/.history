@@ -4,18 +4,10 @@ test-only *CppHVisitorTest*
 tesst
 test
 git add .
-test-only *CPPHVisitorTest*
-test
-test-only test.java.edu.nyu.oop.CppHVisitorTest
-test-only test.java.edu.nyu.oop.CppHVisitorTest.java
-test
 test-only *CppHVisitorTest*
-<<<<<<< HEAD
 test-only *CppHVisitorTest* a
 git add .
 test-only *CppHVisitorTest* a
 test-only *CppHVisitorTest*
 test-only *CppHVisitorTest*>
 test-only *CppHVisitorTest*
-=======
->>>>>>> 1b3648614910aa3c25dd3531572e0fe95e9a843f
