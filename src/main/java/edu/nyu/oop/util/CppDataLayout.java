@@ -291,6 +291,8 @@ public class CppDataLayout {
         String returnTypeClassName;
         String randoCurls;
 
+        ArrayList<VTInstantiatorMethod> VTInstantiatorMethods;
+
         // non overridden methods
         public VTInstantiator(CustomClassObject javaClass) {
 
@@ -334,7 +336,7 @@ public class CppDataLayout {
         public VTInstantiator(CustomMethodClass method){
 
 
-            
+
         }
 
 
@@ -365,6 +367,9 @@ public class CppDataLayout {
 
 
             // gets factory methods
+
+
+            public VTableInstantiatorMethod(){}
 
 
 
