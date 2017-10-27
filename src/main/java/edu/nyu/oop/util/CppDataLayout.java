@@ -325,9 +325,20 @@ public class CppDataLayout {
 
         }
 
+            // for default instantiators
             public VTInstantiator (String rTCN) {
                 this.returnTypeClassName = rTCN;
         }
+
+            // for custom instantiators
+        public VTInstantiator(CustomMethodClass method){
+
+
+            
+        }
+
+
+
 
         }
 
