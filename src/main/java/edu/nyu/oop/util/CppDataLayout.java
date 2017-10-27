@@ -285,7 +285,7 @@ public class CppDataLayout {
         String returnType;
         String isA;
         String pointer;
-        //        String className;
+
         String declarationName;
         String objectReference;
         String returnTypeClassName;
@@ -297,6 +297,8 @@ public class CppDataLayout {
             this.isA = " : __is_a(__" + javaClass.getClassName() + "::__class()),";
             this.declarationName = "__" + javaClass.getClassName() + "_VT()";
             this.randoCurls = "{\n}";
+
+
 
 
             int index = 0;
@@ -323,6 +325,11 @@ public class CppDataLayout {
 
         }
 
+        public VTInstantiator (String rTCN) {
+            this.returnTypeClassName = rTCN;
+        }
+
+        }
 
 
 
@@ -333,7 +340,7 @@ public class CppDataLayout {
         }
 
 
-    }
+
 
 
 
@@ -341,18 +348,23 @@ public class CppDataLayout {
         public static class VTable {
             String is_a;
             ArrayList<VTMethod> VTMethods;
+
             ArrayList<VTInstantiator> VTInstantiators;
+
 
 
             // gets factory methods
 
 
-            public VTable(CustomClassObject currStruct) {
+
+            public VTable(CustomClassObject currClass) {
+
+                VTInstantiators = new ArrayList<VTInstantiator>();
                 VTMethods = new ArrayList<VTMethod>();
-                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", currStruct.getClassName());
-                VTMethod equalsMethod = new VTMethod("bool", "equals", currStruct.getClassName());
-                VTMethod classMethod = new VTMethod("Class", "getClass", currStruct.getClassName());
-                VTMethod stringMethod = new VTMethod("String","toString", currStruct.getClassName());
+                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", currClass.getClassName());
+                VTMethod equalsMethod = new VTMethod("bool", "equals", currClass.getClassName());
+                VTMethod classMethod = new VTMethod("Class", "getClass", currClass.getClassName());
+                VTMethod stringMethod = new VTMethod("String","toString", currClass.getClassName());
 
 
 
@@ -361,6 +373,7 @@ public class CppDataLayout {
 
                 // gets custom methods
 
+
                 // currstruct get parent
                 // find parent in the map and get its methods
                 // then compare those methods to the current class's methods
@@ -368,11 +381,11 @@ public class CppDataLayout {
                 ArrayList<CustomMethodClass> inheritedMethods = new ArrayList<CustomMethodClass>();
                 //CustomClassObject presentStruct = new CustomClassObject();
 
-                String currClassParent = currStruct.getParentClass();
+                String currClassParent = currClass.getParentClass();
 
-                ArrayList <CustomMethodClass> parentMethods = structsMap.get(currStruct.getClassName());
+                ArrayList <CustomMethodClass> parentMethods = structsMap.get(currClass.getClassName());
 
-                for (CustomMethodClass currMethod : currStruct.getMethods()){
+                for (CustomMethodClass currMethod : currClass.getMethods()){
 
                     for (CustomMethodClass parentMethod : parentMethods){
 
@@ -403,7 +416,28 @@ public class CppDataLayout {
 //                    VTMethods.add(vtMeth);
 //
 //                }
+//                for (CustomMethodClass m : cur.getMethods()) {
+//                    VTMethod vtMeth = new VTMethod(m, javaData);
+//                    VTMethods.add(vtMeth);
+//                }
 
+
+
+                //pre-made methods
+                String hashCodeRTCN = "((int32_t (*)(" + currClass.getClassName() + ")) &__Object::hashCode),";
+                String equalsRTCN = "((bool (*)(" + currClass.getClass() + ")) &__Object::equals),";
+                String classRTCN = "((Class (*)(" + currClass.getClass() + ")) &__Object::getClass),";
+                String stringRTCN = "((String (*)(" + currClass.getClass() + ")) &__Object::toString),";
+
+                VTInstantiator hashCodeInst = new VTInstantiator(hashCodeRTCN);
+                VTInstantiator equalsInst = new VTInstantiator(equalsRTCN);
+                VTInstantiator classInst = new VTInstantiator(classRTCN);
+                VTInstantiator stringInst = new VTInstantiator(stringRTCN);
+
+                VTInstantiators.add(hashCodeInst);
+                VTInstantiators.add(equalsInst);
+                VTInstantiators.add(classInst);
+                VTInstantiators.add(stringInst);
 
             }
 
@@ -443,9 +477,6 @@ public class CppDataLayout {
 
 
         }
-
-
-
 
 }
 
