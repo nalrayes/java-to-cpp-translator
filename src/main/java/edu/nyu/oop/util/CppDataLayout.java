@@ -290,7 +290,7 @@ public class CppDataLayout {
 
             //pre-made methods
             String hashCodeRTCN = "((int32_t (*)(" + currClass.getClassName() + ")) &__Object::hashCode),";
-            String equalsRTCN = "((bool (*)(" + currClass.getClass() + ")) &__Object::equals),";
+            String equalsRTCN = "((bool (*)(" + currClass.getClassName() + ", Object" +  ")) &__Object::equals),";
             String classRTCN = "((Class (*)(" + currClass.getClass() + ")) &__Object::getClass),";
             String stringRTCN = "((String (*)(" + currClass.getClass() + ")) &__Object::toString),";
 
@@ -328,18 +328,17 @@ public class CppDataLayout {
                     isLastMethod = true;
                 }
                 for (CustomMethodClass parentMethod : parentMethods){
-
+                    boolean isOverridden = false;
                     // if the method is overriden
                     if (currMethod.getName().equals(parentMethod.getName())){
-                        VTInstantiatorMethod currVTInst = new VTInstantiatorMethod(currMethod, isLastMethod);
-
+                        isOverridden = true;
 
 
                     }
+                    VTInstantiatorMethod currVTInst = new VTInstantiatorMethod(currMethod, currClass.getClassName(), isLastMethod, isOverridden);
+
                     // else the method is not overriden
-                    else {
 
-                    }
 
 
 
@@ -417,11 +416,16 @@ public class CppDataLayout {
 
 
             // for overriden methods
-            public VTInstantiatorMethod(CustomMethodClass method, boolean isLastMethod){
+            public VTInstantiatorMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
 
-                this.objectReference = "&__" + method.getClass() + "::" + method.getName();
-                this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + method.getClass() + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
-
+                if (isOverridden) {
+                    this.objectReference = "&__" + className + "::" + method.getName();
+                    this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + className + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
+                }
+                else {
+                    this.objectReference = "&__Object" + "::" + method.getName();
+                    this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + className + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
+                }
                 if (!isLastMethod) {
                     this.returnTypeClassName += ",";
                 }
@@ -436,6 +440,7 @@ public class CppDataLayout {
             }
 
             // TODO: add constructor for custom non overidden methods
+
 
 
 
