@@ -14,16 +14,16 @@
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@167c565b directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.032442807 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.020984069 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.054582802 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@1f83eedd directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.05509738 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.027966089 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.085068356 s[0m
 [0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
 [0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java...[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0mdebug[0m] [0mThe /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m	notify, wait, equals, notifyAll, javaFile, CppDataLayout$CppFileObject, <init>, checkForOverriddenMethods, toString, getClass, hashCode.[0m
+[0m[[0mdebug[0m] [0m	<init>.[0m
 [0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
 [0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java[0m
 [0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java[0m
@@ -37,10 +37,10 @@
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
 [0m[[0minfo[0m] [0mCompiling 3 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@167c565b directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.053908478 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.033497521 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.089437175 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@1f83eedd directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.060803217 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.024238996 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.086437641 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

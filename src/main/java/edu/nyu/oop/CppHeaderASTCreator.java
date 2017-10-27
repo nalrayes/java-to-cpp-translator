@@ -48,6 +48,8 @@ public class CppHeaderASTCreator {
             javaClassSummaries.add(jASTvisitor.getClassSummary(javaAST));
         }
 
+
+        //TODO TEST
         //With the Class Summary create the namespaces
         for (TraverseAST.ClassSummary javaData : javaClassSummaries) {
             //Add the nameSpaces to our C++ AST Tree
@@ -56,12 +58,14 @@ public class CppHeaderASTCreator {
         }
 
         //Check to print out the recent parent mutated of the ASTTree
-        System.out.println(cppHeaderAST.getRecentParentNodeMutated());
+        System.out.println(cppHeaderAST.getLinkToNamespaceNode());
 
         //TODO create the classObjects and hierarchy strucutre
 
         //Create the cppClassObjects
         createCppClassObject(javaClassSummaries, cppHeaderAST);
+
+
 
 
         return cppHeaderAST;
@@ -79,11 +83,10 @@ public class CppHeaderASTCreator {
 
         //Get the point in the AST where we want to add that data from the CPPASTObjects
         //This point will remain constant so we always know where to add the class structs for the cp //e.g at the end of name space
-        GNode pointToAddClassesToNamespaceGnode = cppAst.getRecentParentNodeMutated();
+        GNode pointToAddClassesToNamespaceGnode = cppAst.getLinkToNamespaceNode();
         //System.out.println(pointToAddClassesToNamespaceGnode);
 
         //We also need to take into account the "main" class (main method) as it does not show up in the Cpp header
-        boolean mainFound = false;
         CppClassObject mainClass = null;
 
         //Go through the class summary and create the respective CppClassObject
@@ -94,7 +97,7 @@ public class CppHeaderASTCreator {
             if (javaClassSum.classes.size() > 0) {
                 for (CustomClassObject customJavaClass : javaClassSum.classes) {
                     //Createa a new cppClassObject for its JavaClassObject counter part
-                    CppClassObject newCppClassObject = new CppClassObject("__" + customJavaClass.className);
+                    CppClassObject newCppClassObject = new CppClassObject("__" + customJavaClass.className, customJavaClass);
                     newCppClassObject.setCppast(cppAst);
                     newCppClassObject.setLinkToNameSpaceGNodeInCppAST(pointToAddClassesToNamespaceGnode);
 
@@ -102,21 +105,94 @@ public class CppHeaderASTCreator {
                     for (CustomMethodClass javaMethod : customJavaClass.methods) {
                         if (javaMethod.name.equalsIgnoreCase("main")) {
                             //Main method found
-                            mainFound = true;
                             mainClass = newCppClassObject;
+                            mainClass.setisMain(true);
+                            mainClass.setCppClassName("__MainClass");
                         }
                     }
-                    //If the class is not a main class,we check its High structure
-                    if (mainFound != true) {
-                        //TODO
+                    //Check the class High
+                    //Add the class name and reference the class object created to the hashmap
+                    String className;
+                    if (newCppClassObject.getisMain()){
+                        className = "__MainClass";
                     }
-                    //Add the main class to JavaAST
-                    cppAst.setMainClass(mainClass);
+                    else{
+                        className = newCppClassObject.getCppClassName();
+                    }
+                    classHigh.addClassNameForCppClassObject(className, newCppClassObject);
+
+                    //Map the child and what its parent is
+                    if(newCppClassObject.getCppClassName().equalsIgnoreCase("__MainClass")){
+                        classHigh.addChildNameForParent(newCppClassObject.getCppClassName(),"__Object");
+                    }
+                    else{
+                        //Not the main class so we get the extension from the java obj
+                        String parentClass =  "__" + customJavaClass.parentClass;
+                        //Check if the class extends none if so, then its extends Object
+                        if(parentClass.equalsIgnoreCase("__None")){
+                            parentClass = "__Object";
+                        }
+                        //Add to the hashMap
+                        classHigh.addChildNameForParent(newCppClassObject.getCppClassName(),parentClass);
+                    }
+                    listOfCppClassObjects.add(newCppClassObject);
                 }
+
+                //System.out.println(listOfCppClassObjects);
+                for (CppClassObject cppCObject: listOfCppClassObjects){
+                    String parentClassName = classHigh.getParentNameForChild(cppCObject.getCppClassName());
+                    classHigh.addChildClassToParent(cppCObject.getCppClassName(),parentClassName);
+                    cppCObject.setParentClass(classHigh.getCppClassObjectFromName(parentClassName));
+                }
+
+                //Sorts the CppClassObject in order
+                ArrayList <CppClassObject> newListOfCppClassObjects = new ArrayList<CppClassObject>();
+                //Sort the listOfCppClassObjects to ref the high
+                for (CppClassObject cppObject : listOfCppClassObjects){
+                    //Get the parent class of current Cpp
+                    CppClassObject parentClasCpp = cppObject.getParentClass();
+                    //Check if the parentClasCpp is null
+                    if(parentClasCpp == null && !cppObject.getisMain()){
+                        //System.out.println(cppObject.getCppClassName());
+                        //If not null then it does not inherit from Object
+                        Queue <CppClassObject> remainingNodes = new LinkedList <CppClassObject>();
+                        //Add the parent to the q
+                        remainingNodes.add(cppObject);
+                        while(remainingNodes.size() > 0){
+                            CppClassObject currentCppObject = remainingNodes.poll();
+                            newListOfCppClassObjects.add(currentCppObject);
+                            //Get the children
+                            ArrayList <String> listOfChildren = classHigh.getListOfChildrenForParent(currentCppObject.getCppClassName());
+                            if (listOfChildren != null){
+                                for (String nameOfChild : listOfChildren){
+                                    //Get the child classObj
+                                    CppClassObject childClassObj = classHigh.getCppClassObjectFromName(nameOfChild);
+                                    remainingNodes.add(childClassObj);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //Add the main class to the end of the CppObjectList
+                newListOfCppClassObjects.add(mainClass);
+
+                //Set the arrayListOfCppClassObject in the AST and for every CppClassObject
+                cppAst.setCppClassObjectslist(newListOfCppClassObjects);
+                CppClassObject.setArrayListOfCppClassObjectsInTheCppAST(newListOfCppClassObjects);
+                //System.out.println(cppAst.getCppClassObjectslist());
+                System.out.println(CppClassObject.getArrayListOfCppClassObjectsInTheCppAST());
+
+                //Prints the HashMap in the classHigh structure
+                //System.out.println(classHigh.getNameOfClassForCppClassObjectHashMap());
+                //System.out.println(classHigh.getChildForParentHashMap());
+                //System.out.println(classHigh.getParentForChildHashMap());
+
             }//End of if -> size check
         }//End of outer for loop
 
-
+        //Add the main class to JavaAST
+        cppAst.setMainClass(mainClass);
         //Set the classHigh for all CPPObjects at the end
         CppClassObject.setClassHierarchy(classHigh);
     }
@@ -149,7 +225,8 @@ public class CppHeaderASTCreator {
         }
 //        cppNodeActions.nestDataToNodeWithArray(newNamespaceNode, packages);
         //Update the recent node pointer
-        cppAst.setRecentParentNodeMutated(newNamespaceNode);
+        cppAst.setRecentParentNodeMutated(lastNode);
+        cppAst.setLinkToNamespaceNode(lastNode);
 
         // returns last added namespace to specific current namespace
         return lastNode;

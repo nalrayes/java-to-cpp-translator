@@ -4,11 +4,30 @@ import java.util.ArrayList;
 
 import edu.nyu.oop.*;
 import xtc.tree.GNode;
+import java.util.Map;
+
+import java.util.HashMap;
 
 public class CppDataLayout {
+    public static ArrayList<CppStruct> structs;
+    public static ArrayList<VTable> VTables;
 
-    ArrayList<CppDataLayout.CppStruct> structs;
-    ArrayList<CppDataLayout.CppVar> globalVariables;
+    public static HashMap<String, ArrayList<CustomMethodClass>> structsMap;
+
+
+
+
+
+
+    public CppDataLayout(){
+        structsMap = new HashMap<>();
+
+
+    }
+
+
+
+
 
     // Helper method to translate java types to C++ types
     // TODO: add differing types
@@ -53,11 +72,42 @@ public class CppDataLayout {
 
     }
 
+
+    public static class CppFile{
+
+
+        ArrayList<CppStruct> structs;
+
+        public CppFile(CppStruct cppStruct){
+
+            structs.add(cppStruct);
+
+
+
+
+        }
+
+
+
+    }
+
+    public static class CppVTable{
+
+        String name;
+
+
+
+
+    }
+
+
+
     public static class CppStruct {
 
         ArrayList<CppVar> variables;
         ArrayList<CppMethod> methods;
-        //ArrayList<VTables>
+
+
         String name;
         String classDeclarator;
         String VTableDeclarator;
@@ -100,6 +150,14 @@ public class CppDataLayout {
 
 
             }
+
+            // add current struct to array list of structs
+           // structs.add(this);
+
+
+            structsMap.put(c.getClassName(), c.getMethods());
+
+
 
 
         }
@@ -246,13 +304,6 @@ public class CppDataLayout {
 
         // check for overidden methods
 
-
-
-
-
-
-
-
             // for custom methods only
             for (CustomMethodClass m : javaClass.getMethods()) {
                 if (index != size - 1) {
@@ -296,20 +347,62 @@ public class CppDataLayout {
             // gets factory methods
 
 
-            public VTable(CustomClassObject javaData) {
+            public VTable(CustomClassObject currStruct) {
                 VTMethods = new ArrayList<VTMethod>();
-                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", javaData.getClassName());
-                VTMethod equalsMethod = new VTMethod("bool", "equals", javaData.getClassName());
-                VTMethod classMethod = new VTMethod("Class", "getClass", javaData.getClassName());
-                VTMethod stringMethod = new VTMethod("String","toString", javaData.getClassName());
+                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", currStruct.getClassName());
+                VTMethod equalsMethod = new VTMethod("bool", "equals", currStruct.getClassName());
+                VTMethod classMethod = new VTMethod("Class", "getClass", currStruct.getClassName());
+                VTMethod stringMethod = new VTMethod("String","toString", currStruct.getClassName());
+
+
+
+
+
 
                 // gets custom methods
-                for (CustomMethodClass m : javaData.getMethods()) {
 
-                    VTMethod vtMeth = new VTMethod(m, javaData);
-                    VTMethods.add(vtMeth);
+                // currstruct get parent
+                // find parent in the map and get its methods
+                // then compare those methods to the current class's methods
+
+                ArrayList<CustomMethodClass> inheritedMethods = new ArrayList<CustomMethodClass>();
+                //CustomClassObject presentStruct = new CustomClassObject();
+
+                String currClassParent = currStruct.getParentClass();
+
+                ArrayList <CustomMethodClass> parentMethods = structsMap.get(currStruct.getClassName());
+
+                for (CustomMethodClass currMethod : currStruct.getMethods()){
+
+                    for (CustomMethodClass parentMethod : parentMethods){
+
+
+                        
+                        if (currMethod.getName().equals(parentMethod.getName())){
+
+
+
+                        }
+
+
+
+                    }
 
                 }
+
+
+
+
+
+
+
+
+//                for (CustomMethodClass m : javaData.getMethods()) {
+//
+//                    VTMethod vtMeth = new VTMethod(m, javaData);
+//                    VTMethods.add(vtMeth);
+//
+//                }
 
 
             }
