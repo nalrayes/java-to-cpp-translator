@@ -243,8 +243,8 @@ public class CppDataLayout {
 
         }
 
-        public VTInstantiator (String rTCN) {
-            this.returnTypeClassName = rTCN;
+            public VTInstantiator (String rTCN) {
+                this.returnTypeClassName = rTCN;
         }
 
         }

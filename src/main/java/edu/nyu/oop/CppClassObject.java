@@ -44,7 +44,7 @@ public class CppClassObject {
     }
 
     //Helper method to create the CppDataLayout for each class
-    public
+    //public
 
 
 
