@@ -278,6 +278,7 @@ public class CppDataLayout {
 
         // non overridden methods
         public VTInstantiator(CustomClassObject currClass) {
+            VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
 
             this.isA = " : __is_a(__" + currClass.getClassName() + "::__class()),";
             this.declarationName = "__" + currClass.getClassName() + "_VT()";
@@ -475,10 +476,20 @@ public class CppDataLayout {
                 VTMethod stringMethod = new VTMethod("String","toString", currClass.getClassName());
 
 
+                // add vtmethods
+                for (CustomMethodClass m : currClass.getMethods()){
+
+                    VTMethod vtmethod = new VTMethod(m, currClass);
+                    VTInstantiator vtInstantiator = new VTInstantiator(currClass);
+
+                    VTMethods.add(vtmethod);
+                    VTInstantiators.add(vtInstantiator);
 
 
 
 
+
+                }
 
 
             }
@@ -501,6 +512,9 @@ public class CppDataLayout {
                 this.returnType = translateType.translateType(m.getReturnType());
                 this.pointer = "(*" + m.getName() + ")";
                 this.className = s.getClassName();
+
+
+
                 params.add(this.className);
 
 
