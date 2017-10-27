@@ -44,6 +44,7 @@ public class CppClassObject {
     }
 
     //Helper method to create the CppDataLayout for each class
+
     //Setters and getters
     public void setCppast(CPPAST cppast) {
         this.cppast = cppast;
