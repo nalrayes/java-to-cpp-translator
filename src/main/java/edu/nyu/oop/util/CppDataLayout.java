@@ -299,29 +299,9 @@ public class CppDataLayout {
             this.randoCurls = "{\n}";
 
 
-
-
-            int index = 0;
-            int size = javaClass.getMethods().size();
-
         // check for overidden methods
 
-            // for custom methods only
-            for (CustomMethodClass m : javaClass.getMethods()) {
-                if (index != size - 1) {
-                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + "))" + "__" + javaClass.getClassName() + "::" + m.getReturnType() + "),";
-//                    this.returnType = m.getReturnType();
-//                    this.className = javaClass.getClassName();
-                    this.objectReference = "&__" + javaClass.getClassName() + "::" + m.getName();
-                } else {
-                    this.returnTypeClassName = "((" + m.getReturnType() + " (*)(" + javaClass.getClassName() + ")) &__Object::" + m.getReturnType() + ")";
-//                    this.returnType = m.getReturnType();
-//                    this.className = javaClass.getClassName();
-                    this.objectReference = "&__Object::" + m.getName();
-                }
-                index++;
 
-            }
 
         }
 
@@ -331,10 +311,14 @@ public class CppDataLayout {
         }
 
             // for custom instantiators
-        public VTInstantiator(CustomMethodClass method){
+        public VTInstantiator(CustomMethodClass method, boolean isLastMethod){
+            this.objectReference = "&__" + method.getClass() + "::" + method.getName();
+            this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + method.getClass() + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
 
+            if (!isLastMethod) {
+                this.returnTypeClassName += ",";
+            }
 
-            
         }
 
 
@@ -396,15 +380,22 @@ public class CppDataLayout {
 
                 ArrayList <CustomMethodClass> parentMethods = structsMap.get(currClass.getClassName());
 
+                int index = 0;
                 for (CustomMethodClass currMethod : currClass.getMethods()){
-
+                    boolean isLastMethod = false;
+                    if (index == currClass.getMethods().size()) {
+                        isLastMethod = true;
+                    }
                     for (CustomMethodClass parentMethod : parentMethods){
-
 
                         
                         if (currMethod.getName().equals(parentMethod.getName())){
+                            VTInstantiator currVTInst = new VTInstantiator(currMethod, isLastMethod);
 
 
+
+                        }
+                        else {
 
                         }
 
