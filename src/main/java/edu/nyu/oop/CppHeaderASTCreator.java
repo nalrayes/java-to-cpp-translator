@@ -251,6 +251,8 @@ public class CppHeaderASTCreator {
 //        GNode rootOfCppAST = cppAst.getRoot();
 //
         ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
+        ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
+
 
         for (CustomClassObject c: javaData.classes){
 
@@ -259,6 +261,19 @@ public class CppHeaderASTCreator {
             structs.add(aStruct);
 
         }
+
+        for (CustomClassObject c: javaData.classes){
+
+            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c);
+
+
+
+            VTables.add(vTable);
+
+        }
+
+
+
 //
 //        GNode pointer = rootOfCppAST;
 //        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");

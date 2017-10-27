@@ -319,6 +319,8 @@ public class CppDataLayout {
 
             ArrayList <CustomMethodClass> parentMethods = structsMap.get(currClass.getClassName());
 
+
+
             int index = 0;
             for (CustomMethodClass currMethod : currClass.getMethods()){
                 boolean isLastMethod = false;
