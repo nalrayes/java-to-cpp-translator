@@ -16,7 +16,7 @@ public class CppDataLayout {
 
 
 
-
+    public static final int DEBUGGING = 1;
 
 
     public CppDataLayout(){
@@ -41,6 +41,11 @@ public class CppDataLayout {
 
                 case "int":
                     cType = "int32_t";
+                    break;
+
+
+                case "VoidType":
+                    cType = "void";
                     break;
 
                 default:
@@ -306,6 +311,8 @@ public class CppDataLayout {
             VTInstantiatorMethods.add(stringInst);
 
 
+
+
             // gets custom methods
 
 
@@ -340,6 +347,20 @@ public class CppDataLayout {
 
                     // else the method is not overriden
 
+                    if (DEBUGGING == 1) {
+
+                        String instantName = "";
+
+                        //instantName += (this.returnType + " " + pointer + "" + className);
+                        System.out.println(this.declarationName);
+                        System.out.println(this.isA);
+                        System.out.println(currVTInst.getReturnTypeClassName());
+                        System.out.println(this.randoCurls);
+                        System.out.println("________________");
+                        // System.out.println("return type " + this.returnType);
+
+                        System.out.println("________________");
+                    }
 
 
 
@@ -419,13 +440,16 @@ public class CppDataLayout {
             // for overriden methods
             public VTInstantiatorMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
 
+                typeTranslate translateType = new typeTranslate();
+              String returnT = translateType.translateType(method.getReturnType());
+
                 if (isOverridden) {
                     this.objectReference = "&__" + className + "::" + method.getName();
-                    this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + className + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
+                    this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "__" + className + "::" + method.getName() + ")";
                 }
                 else {
                     this.objectReference = "&__Object" + "::" + method.getName();
-                    this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + className + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
+                    this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "__" + className + "::" + method.getName() + ")";
                 }
                 if (!isLastMethod) {
                     this.returnTypeClassName += ",";
@@ -443,10 +467,13 @@ public class CppDataLayout {
             // TODO: add constructor for custom non overidden methods
 
 
+            public String getObjectReference() {
+                return objectReference;
+            }
 
-
-
-
+            public String getReturnTypeClassName() {
+                return returnTypeClassName;
+            }
         }
 
 
@@ -494,6 +521,16 @@ public class CppDataLayout {
 
             }
 
+//            @Override
+//            public String toString() {
+//                for (VTMethod method : VTMethods){
+//
+//                    method.getClassName();
+//
+//                }
+//
+//
+//            }
         }
 
 
@@ -503,9 +540,11 @@ public class CppDataLayout {
             String pointer;
             String className;
             String returnTypeAndClassName;
+            String methodName;
             ArrayList<String> params;
 
             public VTMethod(CustomMethodClass m, CustomClassObject s) {
+
                 params = new ArrayList<String>();
 
                 typeTranslate translateType = new typeTranslate();
@@ -514,23 +553,53 @@ public class CppDataLayout {
                 this.className = s.getClassName();
 
 
+                if (DEBUGGING == 1) {
+
+                    methodName = "";
+
+                    methodName += (this.returnType + " " + pointer + "" + className);
+                    methodName += (this.returnType + " " + pointer + "" + className);
+
+                    System.out.println("________________");
+                   // System.out.println("return type " + this.returnType);
+                    System.out.println(methodName);
+                    System.out.println("________________");
+                }
 
                 params.add(this.className);
 
 
             }
 
+            // default methods
             public VTMethod(String rt, String pt, String className) {
                 params = new ArrayList<String>();
-                this.pointer = rt;
+                this.pointer = pt;
+
+                this.returnType = rt;
                 this.className = className;
                 params.add(this.className);
                 if (className.equals("hashCode")) {
                     params.add("Object");
                 }
 
+                if (DEBUGGING == 1) {
+
+                    methodName = "";
+
+                    methodName += (this.returnType + " " + pointer + "" + className);
+
+                    System.out.println("________________");
+                    // System.out.println("return type " + this.returnType);
+                    System.out.println(methodName);
+                    System.out.println("________________");
+                }
+
             }
 
+            public String getClassName() {
+                return className;
+            }
 
         }
 
