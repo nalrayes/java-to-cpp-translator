@@ -24,7 +24,7 @@ public class CppHVisitorTest {
     @BeforeClass
     public static void beforeClass() {
         logger.debug("Executing MethodVisitorTest");
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/CustomTests/CustomTest1.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test010/test010.java");
         XtcTestUtils.prettyPrintAst(node);
     }
 
@@ -42,6 +42,9 @@ public class CppHVisitorTest {
         XtcTestUtils.prettyPrintAst(cppAST.getRoot());
         //Visit
         visitor.visit(cppAST.getRoot());
+        // print cpp node names for translation
+        CppHeaderPrinter printer = new CppHeaderPrinter();
+        printer.print(cppAST.getRoot());
 
         //Phase three ->Take cppAST from above and use visit methods to access the nodes and data
         //Print data into Cpp.h file

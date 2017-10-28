@@ -18,16 +18,25 @@ public class CppDataLayout {
 
     public static final int DEBUGGING = 1;
 
-
     public CppDataLayout(){
+        //Use this default constructor to create the deafult __Object data layout
+
+        structsMap = new HashMap<>();
+    }
+
+    public CppDataLayout(CppDataLayout parentDataLayout, CustomClassObject childJavaClassObject){
+        //Use this constructor to take in a parentDataLayout and the javaCustomClass
+        //Check javaCustomClassObj against the parentDataLayout for overidden methods
+
         structsMap = new HashMap<>();
 
 
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 
     // Helper method to translate java types to C++ types
     // TODO: add differing types
@@ -133,7 +142,6 @@ public class CppDataLayout {
 
             // instantiates all data
             for (CustomMethodClass javaMethod : c.getMethods()) {
-
 
                 CppMethod cMethod = new CppMethod(javaMethod);
                 methods.add(cMethod);
@@ -301,12 +309,12 @@ public class CppDataLayout {
             String stringRTCN = "((String (*)(" + currClass.getClass() + ")) &__Object::toString),";
 
             VTInstantiatorMethod hashCodeInst = new VTInstantiatorMethod(hashCodeRTCN);
-            VTInstantiatorMethod equalsInst = new VTInstantiatorMethod(equalsRTCN);
+            //VTInstantiatorMethod equalsInst = new VTInstantiatorMethod(equalsRTCN);
             VTInstantiatorMethod classInst = new VTInstantiatorMethod(classRTCN);
             VTInstantiatorMethod stringInst = new VTInstantiatorMethod(stringRTCN);
 
             VTInstantiatorMethods.add(hashCodeInst);
-            VTInstantiatorMethods.add(equalsInst);
+          //  VTInstantiatorMethods.add(equalsInst);
             VTInstantiatorMethods.add(classInst);
             VTInstantiatorMethods.add(stringInst);
 
