@@ -53,6 +53,7 @@ public class CppDataLayout {
     // TODO: add differing types
     public static class typeTranslate {
 
+        // TODO: make static
         public String translateType(String javaType) {
 
             String cType = "";
@@ -151,14 +152,23 @@ public class CppDataLayout {
                 methods.add(cMethod);
 
             }
+            if (c.getConstructors().size() > 0) {
+                for (CustomConstructorClass javaConstructor : c.getConstructors()) {
 
-            for (CustomConstructorClass javaConstructor : c.getConstructors()) {
 
+                    CppMethod cppConstructor = new CppMethod(javaConstructor);
+                    this.methods.add(cppConstructor);
 
-                CppConstructor cppConstructor = new CppConstructor(javaConstructor);
-                this.constructors.add(cppConstructor);
+                }
+            } else {
+                // make default constructor
+                CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
 
+                this.methods.add(defaultConstructor);
+
+                System.out.println(defaultConstructor);
             }
+
 
             for (CustomVariablesClass javaVar : c.getClassVariables()) {
 
@@ -227,6 +237,27 @@ public class CppDataLayout {
             }
 
 
+        }
+
+        public CppMethod(CustomConstructorClass c) {
+            parameters = new ArrayList<CppParameter>();
+
+            this.name = "__init";
+            this.returnType = c.getName();
+
+            for (CustomVariablesClass javaParam :c.getParameters()) {
+                CppParameter cParam = new CppParameter(javaParam);
+                this.parameters.add(cParam);
+            }
+
+        }
+
+        // used for creating default constructor object
+        public CppMethod(String name, String returnType) {
+            parameters = new ArrayList<CppParameter>();
+
+            this.name = name;
+            this.returnType = returnType;
         }
 
 

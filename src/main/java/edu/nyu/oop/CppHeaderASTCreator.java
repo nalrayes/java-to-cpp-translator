@@ -328,7 +328,9 @@ public class CppHeaderASTCreator {
         GNode newStructNode = cppNodeActions.createNewASTNode("Structs");
         cppNodeActions.addNodeAsChildToParent(pointer, newStructNode);
         cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
-        cppNodeActions.addVTableToNodeWithArray(newStructNode, VTables);
+        GNode newVTablesNode = cppNodeActions.createNewASTNode("VTables");
+        cppNodeActions.addVTableToNodeWithArray(newVTablesNode, VTables);
+        cppNodeActions.addNodeAsChildToParent(pointer, newVTablesNode);
         // this may not be necessary, but I'm keeping it rn just in case
         rootNode.setRecentParentNodeMutated(newStructNode);
 
