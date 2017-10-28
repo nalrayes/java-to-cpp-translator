@@ -290,19 +290,7 @@ public class CppHeaderASTCreator {
         //Get the root of our cppAST
 
         CppDataLayout dataLayout = new CppDataLayout();
-        // CppDataLayout.CppStruct = new CppDataLayout.()
 
-//        GNode rootOfCppAST = cppAst.getRoot();
-
-
-//    public static void addStructNodes(TraverseAST.ClassSummary javaData, CPPAST cppAst){
-//        //Get the root of our cppAST
-//
-//        CppDataLayout dataLayout = new CppDataLayout();
-//       // CppDataLayout.CppStruct = new CppDataLayout.()
-//
-//        GNode rootOfCppAST = cppAst.getRoot();
-//
         ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
         ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
 
@@ -314,6 +302,8 @@ public class CppHeaderASTCreator {
             structs.add(aStruct);
 
         }
+
+
 
         for (CustomClassObject c: javaData.classes){
 
@@ -338,6 +328,7 @@ public class CppHeaderASTCreator {
         GNode newStructNode = cppNodeActions.createNewASTNode("Structs");
         cppNodeActions.addNodeAsChildToParent(pointer, newStructNode);
         cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
+        cppNodeActions.addVTableToNodeWithArray(newStructNode, VTables);
         // this may not be necessary, but I'm keeping it rn just in case
         rootNode.setRecentParentNodeMutated(newStructNode);
 

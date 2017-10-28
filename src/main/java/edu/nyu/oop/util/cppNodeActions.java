@@ -55,7 +55,33 @@ public abstract class cppNodeActions {
         return node;
     }
 
-    public static void addMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppMethod> methods) {
+
+    public static GNode addVTableToNodeWithArray(GNode node ,ArrayList<CppDataLayout.VTable> listOfData){
+
+
+
+
+        if(listOfData == null && listOfData.size() == 0){
+            return null;
+        }
+        for (CppDataLayout.VTable value : listOfData){
+            //Add to the parent
+            GNode newNode = createNewASTNode("VTable");
+
+
+                newNode.add(value.name);
+
+           addVTMethodsToNodeWithArray(newNode, value.VTMethods);
+//            addFieldsToNodeWithArray(newNode, value.variables);
+
+            node.add(newNode);
+        }
+        return node;
+
+    }
+
+
+        public static void addMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.CppMethod> methods) {
 
         GNode newNode = createNewASTNode("Methods");
         for (CppDataLayout.CppMethod method : methods) {
@@ -71,6 +97,38 @@ public abstract class cppNodeActions {
         node.add(newNode);
 
     }
+
+    public static void addVTMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTMethod> methods) {
+
+        GNode newNode = createNewASTNode("VTMethods");
+        for (CppDataLayout.VTMethod method : methods) {
+            GNode methodNode = createNewASTNode("VTMethod");
+
+            methodNode.add(method.methodName);
+
+            newNode.add(methodNode);
+        }
+        node.add(newNode);
+
+    }
+
+//    public static void addVTInstantiatorsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiator> instantiators) {
+//
+//        GNode newNode = createNewASTNode("VTInstantiators");
+//        for (CppDataLayout.VTInstantiator method : methods) {
+//            GNode methodNode = createNewASTNode("VTInstantiator");
+//
+//            methodNode.add(method.methodName);
+//
+//            newNode.add(methodNode);
+//        }
+//        node.add(newNode);
+//
+//    }
+
+
+
+
 
     public static GNode createModifiersNode(String modifier) {
         GNode newNode = createNewASTNode("Modifiers");
@@ -112,38 +170,7 @@ public abstract class cppNodeActions {
         node.add(newNode);
     }
 
-    //Custom object to hold key values for the Gnode
-//    public static class simpleCPPDataNode extends cppNodeActions{
-//
-//        private String type;
-//        private String value;
-//
-//        public simpleCPPDataNode(String type, String value){
-//            this.type = type;
-//            this.value = value;
-//        }
-//
-//        public void setType(String type) {
-//            this.type = type;
-//        }
-//
-//        public String getType() {
-//            return type;
-//        }
-//
-//        public void setValue(String value) {
-//            this.value = value;
-//        }
-//
-//        public String getValue() {
-//            return value;
-//        }
-//
-//        @Override
-//        public String toString() {
-//            return this.type + " = " + this.value;
-//        }
-//    }
+
 
 }
 
