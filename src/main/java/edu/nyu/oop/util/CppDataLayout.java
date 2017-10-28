@@ -22,11 +22,22 @@ public class CppDataLayout {
         //Use this default constructor to create the deafult __Object data layout
 
         structsMap = new HashMap<>();
+        structs = new ArrayList<CppStruct>();
+        VTables = new ArrayList<VTable>();
     }
 
     public CppDataLayout(CppDataLayout parentDataLayout, CustomClassObject childJavaClassObject){
         //Use this constructor to take in a parentDataLayout and the javaCustomClass
         //Check javaCustomClassObj against the parentDataLayout for overidden methods
+
+        structs = new ArrayList<CppStruct>();
+        VTables = new ArrayList<VTable>();
+        ArrayList<VTMethod> parentMethods;
+
+        parentDataLayout.getStructs();
+
+
+
 
         structsMap = new HashMap<>();
 
@@ -106,14 +117,7 @@ public class CppDataLayout {
 
     }
 
-    public static class CppVTable{
 
-        String name;
-
-
-
-
-    }
 
 
 
@@ -174,7 +178,7 @@ public class CppDataLayout {
 
             }
 
-
+            structs.add(this);
             structsMap.put(c.getClassName(), c.getMethods());
 
 
@@ -306,6 +310,14 @@ public class CppDataLayout {
     }
 
 
+    public static class InheritedMethodChecker{
+
+        String methodName;
+        boolean hasBeenOverriden;
+
+
+    }
+
 
 
 
@@ -317,12 +329,15 @@ public class CppDataLayout {
 
         String declarationName;
 
+        ArrayList<VTInstantiatorMethod> inheritedMethods;
+
 
         ArrayList<VTInstantiatorMethod> VTInstantiatorMethods;
 
         // non overridden methods
         public VTInstantiator(CustomClassObject currClass) {
             VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
+            inheritedMethods = new ArrayList<VTInstantiatorMethod>();
 
             this.isA = " : __is_a(__" + currClass.getClassName() + "::__class()),";
             this.declarationName = "__" + currClass.getClassName() + "_VT()";
@@ -369,6 +384,9 @@ public class CppDataLayout {
 
 
             int index = 0;
+
+
+
             for (CustomMethodClass currMethod : currClass.getMethods()){
                 boolean isLastMethod = false;
                 if (index == currClass.getMethods().size()) {
@@ -414,43 +432,13 @@ public class CppDataLayout {
 
 
 
-//                for (CustomMethodClass m : javaData.getMethods()) {
-//
-//                    VTMethod vtMeth = new VTMethod(m, javaData);
-//                    VTMethods.add(vtMeth);
-//
-//                }
-//                for (CustomMethodClass m : cur.getMethods()) {
-//                    VTMethod vtMeth = new VTMethod(m, javaData);
-//                    VTMethods.add(vtMeth);
-//                }
-
-
-
-
-
 
 
 
 
         }
 
-//            // for default instantiators
-//            public VTInstantiator (String rTCN) {
-//                this.returnTypeClassName = rTCN;
-//        }
-//
-//            // for custom instantiators
-//        public VTInstantiator(CustomMethodClass method, boolean isLastMethod){
-//            this.objectReference = "&__" + method.getClass() + "::" + method.getName();
-//            this.returnTypeClassName = "((" + method.getReturnType() + " (*)(" + method.getClass() + "))" + "__" + method.getClass() + "::" + method.getReturnType() + ")";
-//
-//            if (!isLastMethod) {
-//                this.returnTypeClassName += ",";
-//            }
-//
-//
-//        }
+
 
 
 
@@ -522,7 +510,7 @@ public class CppDataLayout {
             ArrayList<VTMethod> VTMethods;
 
             ArrayList<VTInstantiator> VTInstantiators;
-
+            String name;
 
 
             // gets factory methods
@@ -534,15 +522,22 @@ public class CppDataLayout {
 
             public VTable(CustomClassObject currClass) {
 
-                VTInstantiators = new ArrayList<VTInstantiator>();
-                VTMethods = new ArrayList<VTMethod>();
+                this.name = currClass.getClassName();
+
+                this.VTInstantiators = new ArrayList<VTInstantiator>();
+                this.VTMethods = new ArrayList<VTMethod>();
                 VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", currClass.getClassName());
                 VTMethod equalsMethod = new VTMethod("bool", "equals", currClass.getClassName());
                 VTMethod classMethod = new VTMethod("Class", "getClass", currClass.getClassName());
                 VTMethod stringMethod = new VTMethod("String","toString", currClass.getClassName());
 
+                // add default methods
+                VTMethods.add(hashCodeMethod);
+                VTMethods.add(equalsMethod);
+                VTMethods.add(classMethod);
+                VTMethods.add(stringMethod);
 
-                // add vtmethods
+                // add custom vtmethods
                 for (CustomMethodClass m : currClass.getMethods()){
 
                     VTMethod vtmethod = new VTMethod(m, currClass);
@@ -552,10 +547,11 @@ public class CppDataLayout {
                     VTInstantiators.add(vtInstantiator);
 
 
-
-
-
                 }
+
+
+
+                VTables.add(this);
 
 
             }
@@ -579,6 +575,7 @@ public class CppDataLayout {
             String pointer;
             String className;
             String returnTypeAndClassName;
+            String entireMethod;
             String methodName;
             ArrayList<String> params;
 
@@ -586,19 +583,21 @@ public class CppDataLayout {
 
                 params = new ArrayList<String>();
 
+
                 typeTranslate translateType = new typeTranslate();
                 this.returnType = translateType.translateType(m.getReturnType());
                 this.pointer = "(*" + m.getName() + ")";
-                this.className = s.getClassName();
+                this.className = "(" + s.getClassName() +")";
+              //  methodName += this.returnType + " " + this.pointer + this.className + ";";
 
 
-                if (DEBUGGING == 1) {
+
 
                     methodName = "";
 
-                    methodName += (this.returnType + " " + pointer + "" + className);
-                    methodName += (this.returnType + " " + pointer + "" + className);
-
+                    methodName += (this.returnType + " " + this.pointer + "" + this.className +";");
+                    //methodName += (this.returnType + " " + pointer + "" + className);
+                if (DEBUGGING == 1) {
                     System.out.println("________________");
                    // System.out.println("return type " + this.returnType);
                     System.out.println(methodName);
@@ -613,21 +612,22 @@ public class CppDataLayout {
             // default methods
             public VTMethod(String rt, String pt, String className) {
                 params = new ArrayList<String>();
-                this.pointer = pt;
+                this.pointer = "(*"+pt +")";
 
                 this.returnType = rt;
-                this.className = className;
+                this.className = "("+className +")";
                 params.add(this.className);
                 if (className.equals("hashCode")) {
                     params.add("Object");
                 }
+//
 
-                if (DEBUGGING == 1) {
 
                     methodName = "";
 
-                    methodName += (this.returnType + " " + pointer + "" + className);
+                    methodName += (this.returnType + " " + this.pointer + "(" + this.className+")" +";");
 
+                if (DEBUGGING == 1) {
                     System.out.println("________________");
                     // System.out.println("return type " + this.returnType);
                     System.out.println(methodName);
@@ -642,6 +642,9 @@ public class CppDataLayout {
 
         }
 
+    public static ArrayList<CppStruct> getStructs() {
+        return structs;
+    }
 }
 
 
