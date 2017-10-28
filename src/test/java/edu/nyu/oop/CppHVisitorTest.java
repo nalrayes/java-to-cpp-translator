@@ -42,6 +42,9 @@ public class CppHVisitorTest {
         XtcTestUtils.prettyPrintAst(cppAST.getRoot());
         //Visit
         visitor.visit(cppAST.getRoot());
+        // print cpp node names for translation
+        CppHeaderPrinter printer = new CppHeaderPrinter();
+        printer.print(cppAST.getRoot());
 
         //Phase three ->Take cppAST from above and use visit methods to access the nodes and data
         //Print data into Cpp.h file
