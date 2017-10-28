@@ -10,8 +10,8 @@ using namespace java::lang;
 struct __A;
 
 struct __A{ 
-void __setA(String,);
-void __printOther(A,);
+void __setA(String);
+void __printOther(A);
 String __toString();
 };
 struct __B1;
@@ -29,7 +29,7 @@ struct __C{
 struct __Test010;
 
 struct __Test010{ 
-void __main(String,);
+void __main(String);
 };
 }
 }

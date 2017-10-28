@@ -88,14 +88,21 @@ public class CppHeaderPrinter extends Visitor {
         visit(n);
         // TODO: remove comma at the end of the line
         // before closing parentheses
-        if (n.size() > 0) {
-            printer.p('\b');
+        StringBuilder sb = new StringBuilder();
+        Node curNode;
+        for (int i = 0; i < n.size(); i++) {
+            curNode = n.getNode(i);
+            sb.append(curNode.getString(0));
+            sb.append(',');
         }
+        System.out.println(sb.length());
+        if (sb.length() > 0) {
+            sb.delete(sb.length() - 1, sb.length());
+        }
+        printer.p(sb.toString());
         printer.p(')');
     }
     public void visitParameter(GNode n) {
-        printer.p(n.getString(0));
-        printer.p(',');
         visit(n);
     }
     public void visitMethod(GNode n) throws IOException {
@@ -103,6 +110,7 @@ public class CppHeaderPrinter extends Visitor {
         // TODO: add static modifiers
 
         printer.p(n.getString(1) + " " + n.getString(0));
+        printer = printer.buffer();
         visit(n);
         printer.pln(";");
     }
