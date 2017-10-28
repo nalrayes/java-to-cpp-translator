@@ -74,6 +74,8 @@ public class CppHeaderPrinter extends Visitor {
         printer.pln("struct " + n.getString(0) + ";");
         printer.pln("");
         printer.pln("struct " + n.getString(0) + " { ");
+        // the constructor for the struct (initializer)
+        printer.pln(n.getString(0) + "();");
         visit(n);
         printer.pln("};");
         printer.pln("\n");
