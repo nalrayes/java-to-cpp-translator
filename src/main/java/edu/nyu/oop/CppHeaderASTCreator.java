@@ -51,7 +51,7 @@ public class CppHeaderASTCreator {
         for (TraverseAST.ClassSummary javaData : javaClassSummaries) {
             //Add the nameSpaces to our C++ AST Tree
             GNode currentNamespace = addNameSpacesToCppAST(javaData, cppHeaderAST);
-           // addStructNodes(javaData, currentNamespace, cppHeaderAST);
+           addStructNodes(javaData, currentNamespace, cppHeaderAST);
         }
 
         //Check to print out the recent parent mutated of the ASTTree

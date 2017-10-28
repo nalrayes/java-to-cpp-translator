@@ -33,4 +33,9 @@ public class CustomTest1 {
         other.some = (B) a; // throws ClassCastException
         a.printOther(other);
     }
+
+
+    public static int thing(){
+        return 1;
+    }
 }

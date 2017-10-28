@@ -13,20 +13,3 @@ test-only *CppHVisitorTest*>
 test-only *CppHVisitorTest*
 q
 test-only *CppHVisitorTest*
-Method(
-              "__setA",
-              "VoidType",
-              Visibility(
-                "public"
-              ),
-              Modifiers(
-                ""
-              ),
-              Parameters(
-                Parameter(
-                  "String",
-                  "x"
-                )
-              )
-            ),
-test-only *CppHVisitorTest*
