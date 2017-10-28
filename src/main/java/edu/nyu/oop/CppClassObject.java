@@ -8,6 +8,8 @@ import java.util.HashMap;
 
 public class CppClassObject {
 
+    private String oldJavaClassName;
+
     //Refer to the parent of this class
     private CppClassObject parentClass;
 
@@ -23,9 +25,6 @@ public class CppClassObject {
     //Simple class to keep track of the inheritance
     private static classHierarchy classHierarchyObj;
 
-    //Link to the cppDataLayout -> its constuctor takes a JavaClassSummary object and translate the JavaCode into the C++
-    //representation e.g adding __ or (*) to method names, fields etc. cpp
-    private CppDataLayout cppDataLayout;
 
     //Link to the AST for easy excess
     private CPPAST cppast;
@@ -33,7 +32,12 @@ public class CppClassObject {
     //Set where in the AST the class will be added to i.e as a child of namespace
     private GNode linkToNameSpaceGNodeInCppAST;
 
-    private static CppDataLayout.CppStruct objectStructLayout;
+    //DataStructure of the __Object that we will start checking from
+    private static CppDataLayout __ObjectDatalayout;
+
+    //Link to the cppDataLayout -> its constuctor takes a JavaClassSummary object and translate the JavaCode into the C++
+    //representation e.g adding __ or (*) to method names, fields etc. cpp
+    private CppDataLayout cppDataLayout;
 
     //Constructor for the CppClassObject
     public CppClassObject(String cppClassName, CustomClassObject javaClass) {
@@ -43,7 +47,22 @@ public class CppClassObject {
         this.isMain = false;
     }
 
+    //Helper method to create the default OBJECT datalayout
+    //e.g with all the default methods hashtable etc..
+    public static CppDataLayout create__ObjectDataLayout(){
+        //TODO change this to the default object constructor
+        return new CppDataLayout();
+    }
+
     //Helper method to create the CppDataLayout for each class
+    public void createCppDataLayoutExtends__Object(CppDataLayout __ObjectDatalayout, CustomClassObject javaCustomClassObject){
+        //constructor of CppDataLayout that takes in a __ObjectDataLayout and the javaCustom
+        this.cppDataLayout = new CppDataLayout(__ObjectDatalayout,javaCustomClassObject);
+    }
+
+    public void createCppDataLayoutExtendsParent(CppDataLayout parentDataLayout, CustomClassObject javaCustomClassObject){
+        this.cppDataLayout = new CppDataLayout(parentDataLayout,javaCustomClassObject);
+    }
 
     //Setters and getters
     public void setCppast(CPPAST cppast) {
@@ -54,12 +73,36 @@ public class CppClassObject {
         return cppast;
     }
 
+    public void setCppDataLayout(CppDataLayout cppDataLayout) {
+        this.cppDataLayout = cppDataLayout;
+    }
+
+    public CppDataLayout getCppDataLayout() {
+        return cppDataLayout;
+    }
+
     public static void setArrayListOfCppClassObjectsInTheCppAST(ArrayList<CppClassObject> arrayListOfCppClassObjectsInTheCppAST) {
         CppClassObject.arrayListOfCppClassObjectsInTheCppAST = arrayListOfCppClassObjectsInTheCppAST;
     }
 
     public static ArrayList<CppClassObject> getArrayListOfCppClassObjectsInTheCppAST() {
         return arrayListOfCppClassObjectsInTheCppAST;
+    }
+
+    public static void set__ObjectDatalayout(CppDataLayout __ObjectDatalayout) {
+        CppClassObject.__ObjectDatalayout = __ObjectDatalayout;
+    }
+
+    public static CppDataLayout get__ObjectDatalayout() {
+        return __ObjectDatalayout;
+    }
+
+    public void setOldJavaClassName(String oldJavaClassName) {
+        this.oldJavaClassName = oldJavaClassName;
+    }
+
+    public String getOldJavaClassName() {
+        return oldJavaClassName;
     }
 
     public void setParentClass(CppClassObject parentClass) {

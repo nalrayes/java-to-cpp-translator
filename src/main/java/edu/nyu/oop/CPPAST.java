@@ -15,7 +15,7 @@ public class CPPAST {
     private GNode recentParentNodeMutated;
 
     //All the diff classes
-    private List<CppClassObject> cppClassObjectslist;
+    private ArrayList<CppClassObject> cppClassObjectslist;
 
     //The main class
     private CppClassObject mainClass;
@@ -30,11 +30,11 @@ public class CPPAST {
         this.root = cppNodeActions.createNewASTNode(name);
     }
 
-    public void setCppClassObjectslist(List<CppClassObject> cppClassObjectslist) {
+    public void setCppClassObjectslist(ArrayList<CppClassObject> cppClassObjectslist) {
         this.cppClassObjectslist = cppClassObjectslist;
     }
 
-    public List<CppClassObject> getCppClassObjectslist() {
+    public ArrayList<CppClassObject> getCppClassObjectslist() {
         return cppClassObjectslist;
     }
 
