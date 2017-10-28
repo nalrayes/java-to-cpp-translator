@@ -151,7 +151,8 @@ public class CppHeaderASTCreator {
                 for (CppClassObject cppObject : listOfCppClassObjects){
                     //Get the parent class of current Cpp
                     CppClassObject parentClasCpp = cppObject.getParentClass();
-                    //Check if the parentClasCpp is null
+                    //Check if the parentClassCpp is null && is not main
+                    //If so - then this class extends obj and is on the top of the high structure
                     if(parentClasCpp == null && !cppObject.getisMain()){
                         //System.out.println(cppObject.getCppClassName());
                         //If not null then it does not inherit from Object

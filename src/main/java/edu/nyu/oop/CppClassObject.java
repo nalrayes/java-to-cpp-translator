@@ -44,7 +44,13 @@ public class CppClassObject {
     }
 
     //Helper method to create the CppDataLayout for each class
-    public
+    public void createCppDataLayout(){
+        //if(){
+
+        //}
+
+        //this.cppDataLayout = new cppDataL( cppDataLayout, )
+    }
 
 
 

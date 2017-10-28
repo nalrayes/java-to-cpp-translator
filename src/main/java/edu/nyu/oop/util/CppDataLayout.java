@@ -7,8 +7,7 @@ import xtc.tree.GNode;
 
 public class CppDataLayout {
 
-    ArrayList<CppDataLayout.CppStruct> structs;
-    ArrayList<CppDataLayout.CppVar> globalVariables;
+
 
     // Helper method to translate java types to C++ types
     // TODO: add differing types
@@ -61,7 +60,6 @@ public class CppDataLayout {
 
             // instantiates all data
             for (CustomMethodClass javaMethod : c.getMethods()) {
-
 
                 CppMethod cMethod = new CppMethod(javaMethod);
                 methods.add(cMethod);
