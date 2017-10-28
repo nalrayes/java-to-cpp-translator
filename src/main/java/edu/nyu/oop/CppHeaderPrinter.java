@@ -10,6 +10,7 @@ import xtc.tree.Node;
 import xtc.tree.GNode;
 import xtc.tree.Printer;
 import xtc.tree.Visitor;
+import edu.nyu.oop.util.*;
 
 public class CppHeaderPrinter extends Visitor {
 
@@ -61,7 +62,7 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitNamespace(GNode n) throws IOException {
-        printer.incr().indent().pln("namespace " + n.getString(0) + "{");
+        printer.pln("namespace " + n.getString(0) + " {");
         visit(n);
         printer.pln("}");
     }
@@ -72,12 +73,14 @@ public class CppHeaderPrinter extends Visitor {
     public void visitStruct(GNode n) throws IOException {
         printer.pln("struct " + n.getString(0) + ";");
         printer.pln("");
-        printer.pln("struct " + n.getString(0) + "{ ");
+        printer.pln("struct " + n.getString(0) + " { ");
         visit(n);
         printer.pln("};");
+        printer.pln("\n");
     }
     public void visitMethods(GNode n) throws IOException {
         visit(n);
+        printer.pln("");
     }
 
     public void visitVisability(GNode n) throws IOException {
@@ -108,17 +111,20 @@ public class CppHeaderPrinter extends Visitor {
     public void visitMethod(GNode n) throws IOException {
         // all public for now
         // TODO: add static modifiers
-
+        CppDataLayout.typeTranslate tt = new CppDataLayout.typeTranslate();
+        String type = tt.translateType(n.getString(1));
         printer.p(n.getString(1) + " " + n.getString(0));
         printer = printer.buffer();
         visit(n);
         printer.pln(";");
     }
     public void visitFields(GNode n) throws IOException {
-
+        visit(n);
     }
     public void visitField(GNode n) throws IOException {
-
+        printer.pln(n.getString(0) + " " + n.getString(1) + ";");
+        visit(n);
+        printer.pln("");
     }
 
 
