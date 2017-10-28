@@ -17,9 +17,6 @@ public class CppHeaderASTCreator {
     }
 
 
-
-
-
     public static CPPAST createNewCPPHeaderAstFrom(List<GNode> javaASTNodes) {
 
         //Create new CPPAST
@@ -54,21 +51,74 @@ public class CppHeaderASTCreator {
         for (TraverseAST.ClassSummary javaData : javaClassSummaries) {
             //Add the nameSpaces to our C++ AST Tree
             GNode currentNamespace = addNameSpacesToCppAST(javaData, cppHeaderAST);
-            addStructNodes(javaData, currentNamespace, cppHeaderAST);
+           // addStructNodes(javaData, currentNamespace, cppHeaderAST);
         }
 
         //Check to print out the recent parent mutated of the ASTTree
         System.out.println(cppHeaderAST.getLinkToNamespaceNode());
 
-        //TODO create the classObjects and hierarchy strucutre
-
         //Create the cppClassObjects
         createCppClassObject(javaClassSummaries, cppHeaderAST);
+        //Fill the CPPClassObjects with their data layouts
+        fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
 
-
-
+        //TODO TEST - print all the CPPDataObject's Layouts
+        ArrayList<CppClassObject> clist = cppHeaderAST.getCppClassObjectslist();
+        for (CppClassObject c : clist){
+             System.out.println(c.getCppDataLayout());
+        }
 
         return cppHeaderAST;
+    }
+
+    public static void fillCppClassObjectsWithDataLayout(List<TraverseAST.ClassSummary> jClassSummaryList,CPPAST cppHeaderAST){
+        //Get the list of classes in the cppAST
+        ArrayList<CppClassObject> arrayListOfCppObj = cppHeaderAST.getCppClassObjectslist();
+
+        //First create the default __Object dataLayout
+        CppDataLayout __ObjectDataLayout = CppClassObject.create__ObjectDataLayout();
+        //Set the static __ObjectDatalayout var in CppClassObject - so that all instances of CppClassObject has it
+        CppClassObject.set__ObjectDatalayout(__ObjectDataLayout);
+
+        //Go over all the Cpp class objects
+        for(CppClassObject cobj:  arrayListOfCppObj){
+            //System.out.println(cobj.getParentClass());
+
+            CustomClassObject currJavaClass = null;
+            //Get the current class we are looking at - get its JavaCustomObject from JavaClassSummary e.g. the child
+            for (TraverseAST.ClassSummary javaClassSum : jClassSummaryList) {
+                //Go through the javaClassSum and check all methods to see if the "main" method exists - if so set the mainFound flag to true
+                //check if the  classes array in the java object is empty
+                if (javaClassSum.classes.size() > 0) {
+                    for (CustomClassObject customJavaClass : javaClassSum.classes) {
+                        if(customJavaClass.className.equalsIgnoreCase(cobj.getOldJavaClassName())){
+                            //System.out.println(cobj.getCppClassName() + " " + customJavaClass.className);
+                            currJavaClass = customJavaClass;
+                        }
+                    }
+                }
+            }
+            //Check for inherit
+            if(cobj.getParentClass() == null && !cobj.getisMain()){
+                //No parent class and not main - Therefore this class extends directly from __Object
+                //System.out.println(cobj.getCppClassName() + " " + cobj.getOldJavaClassName());
+                //Because this class will be the first in the high structure we pass it __Object Datalayout
+                cobj.createCppDataLayoutExtends__Object(CppClassObject.get__ObjectDatalayout(),currJavaClass);
+            }
+            else if (cobj.getisMain()){
+                //This is the main class
+                //System.out.println(cobj.getCppClassName() + " " + cobj.getOldJavaClassName());
+                cobj.createCppDataLayoutExtends__Object(CppClassObject.get__ObjectDatalayout(),currJavaClass);
+            }
+            else{
+                //this is all other classes which are children
+                //System.out.println(cobj.getCppClassName() + " " + cobj.getOldJavaClassName());
+                //Get the parent
+                CppClassObject parent = cobj.getParentClass();
+                //System.out.println(cobj.getCppClassName() + " Parent: " + parent.getCppClassName());
+                cobj.createCppDataLayoutExtendsParent(parent.getCppDataLayout(),currJavaClass);
+            }
+        }
     }
 
 
@@ -100,6 +150,7 @@ public class CppHeaderASTCreator {
                     CppClassObject newCppClassObject = new CppClassObject("__" + customJavaClass.className, customJavaClass);
                     newCppClassObject.setCppast(cppAst);
                     newCppClassObject.setLinkToNameSpaceGNodeInCppAST(pointToAddClassesToNamespaceGnode);
+                    newCppClassObject.setOldJavaClassName(customJavaClass.className);
 
                     //Now check if the current class created is a main
                     for (CustomMethodClass javaMethod : customJavaClass.methods) {
@@ -108,6 +159,7 @@ public class CppHeaderASTCreator {
                             mainClass = newCppClassObject;
                             mainClass.setisMain(true);
                             mainClass.setCppClassName("__MainClass");
+                            mainClass.setOldJavaClassName(customJavaClass.className);
                         }
                     }
                     //Check the class High
@@ -252,6 +304,8 @@ public class CppHeaderASTCreator {
 //        GNode rootOfCppAST = cppAst.getRoot();
 //
         ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
+        ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
+
 
         for (CustomClassObject c: javaData.classes){
 
@@ -260,6 +314,19 @@ public class CppHeaderASTCreator {
             structs.add(aStruct);
 
         }
+
+        for (CustomClassObject c: javaData.classes){
+
+            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c);
+
+
+
+            VTables.add(vTable);
+
+        }
+
+
+
 //
 //        GNode pointer = rootOfCppAST;
 //        GNode newStructNode = cppNodeActions.createNewASTNode("Struct");

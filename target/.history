@@ -11,4 +11,22 @@ test-only *CppHVisitorTest* a
 test-only *CppHVisitorTest*
 test-only *CppHVisitorTest*>
 test-only *CppHVisitorTest*
-exit 
+q
+test-only *CppHVisitorTest*
+Method(
+              "__setA",
+              "VoidType",
+              Visibility(
+                "public"
+              ),
+              Modifiers(
+                ""
+              ),
+              Parameters(
+                Parameter(
+                  "String",
+                  "x"
+                )
+              )
+            ),
+test-only *CppHVisitorTest*
