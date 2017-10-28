@@ -89,6 +89,7 @@ public class CppHeaderPrinter extends Visitor {
         // TODO: remove comma at the end of the line
         // before closing parentheses
         if (n.size() > 0) {
+            printer.p('\b');
         }
         printer.p(')');
     }
