@@ -1,9 +1,9 @@
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class: stamp changed from lastModified(1509220480000) to lastModified(1509220512000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class: stamp changed from lastModified(1509220480000) to lastModified(1509220512000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class: stamp changed from lastModified(1509220480000) to lastModified(1509220512000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class: stamp changed from lastModified(1509220480000) to lastModified(1509220512000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class: stamp changed from lastModified(1509220480000) to lastModified(1509220512000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppParameter.class: stamp changed from lastModified(1509220480000) to lastModified(1509220512000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class: stamp changed from lastModified(1509220512000) to lastModified(1509220599000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class: stamp changed from lastModified(1509220512000) to lastModified(1509220599000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class: stamp changed from lastModified(1509220512000) to lastModified(1509220599000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class: stamp changed from lastModified(1509220512000) to lastModified(1509220599000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class: stamp changed from lastModified(1509220512000) to lastModified(1509220599000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppParameter.class: stamp changed from lastModified(1509220512000) to lastModified(1509220599000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
@@ -20,10 +20,10 @@
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderPrinter.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
 [0m[[0minfo[0m] [0mCompiling 5 Java sources to /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@4409592d directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.0687793 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.028809903 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.099648559 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@36cf41bc directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.197106228 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.189814907 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 1.392485934 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
