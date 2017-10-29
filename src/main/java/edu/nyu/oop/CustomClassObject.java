@@ -63,4 +63,12 @@ public class CustomClassObject {
         return this.parentClass;
     }
 
+    public ArrayList<String> getMethodNames() {
+        ArrayList<String> methodNames = new ArrayList<String>();
+        for (CustomMethodClass m : this.methods) {
+            methodNames.add(m.getName());
+        }
+        return methodNames;
+    }
+
 }

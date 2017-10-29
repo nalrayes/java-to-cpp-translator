@@ -71,9 +71,9 @@ public abstract class cppNodeActions {
 
                 newNode.add(value.name);
 
-           addVTMethodsToNodeWithArray(newNode, value.VTMethods);
+            addVTMethodsToNodeWithArray(newNode, value.VTMethods);
             addVTInstantiatorsToNodeWithArray(newNode, value.VTInstantiators);
-            //addInstantiatorMethodsToNodeWithArray(newNode, value.VTInstantiators);
+            //addInstantiatorMethodsToNodeWithArray(newNode, value.VTInstantiators.getVTInstantiatorMethods());
 
 //            addFieldsToNodeWithArray(newNode, value.variables);
 
@@ -105,6 +105,8 @@ public abstract class cppNodeActions {
     public static void addInstantiatorMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiatorMethod> vtiMethods) {
 
         GNode newNode = createNewASTNode("InstantiatorMethods");
+        System.out.println("IM HERE MAN");
+        System.out.println(vtiMethods.size());
         for (CppDataLayout.VTInstantiatorMethod vtiMethod : vtiMethods) {
             GNode methodNode = createNewASTNode("InstantiatorMethod");
 
@@ -146,7 +148,7 @@ public abstract class cppNodeActions {
             for (CppDataLayout.VTInstantiatorMethod vtiM : instantiator.getVTInstantiatorMethods()){
 
 
-                instantiatorMethodsNode.add("hello");
+                instantiatorMethodsNode.add(vtiM.getFullLine());
 
 
             }

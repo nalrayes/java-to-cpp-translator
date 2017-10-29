@@ -309,6 +309,49 @@ public class CppDataLayout {
 
     }
 
+    public static ArrayList<CustomMethodClass> createDefaultMethods() {
+        ArrayList<CustomMethodClass> methods = new ArrayList<CustomMethodClass>();
+
+        // hashCode
+        CustomMethodClass hashCode = new CustomMethodClass();
+        hashCode.setName("hashCode");
+        hashCode.setOwnerClass("None");
+        hashCode.setReturnType("int");
+
+        // getClass
+        CustomMethodClass getClass = new CustomMethodClass();
+        getClass.setName("getClass");
+        getClass.setReturnType("Class");
+        getClass.setOwnerClass("None");
+
+        // toString
+        CustomMethodClass toString = new CustomMethodClass();
+        toString.setName("toString");
+        toString.setReturnType("String");
+        toString.setOwnerClass("None");
+
+        // equals
+        CustomMethodClass equals = new CustomMethodClass();
+        equals.setName("equals");
+        equals.setReturnType("boolean");
+        equals.setOwnerClass("None");
+
+        methods.add(hashCode);
+        methods.add(getClass);
+        methods.add(toString);
+        methods.add(equals);
+
+        return methods;
+
+    }
+
+    public static ArrayList<String> getMethodNames(ArrayList<CustomMethodClass> methods) {
+        ArrayList<String> methodNames = new ArrayList<String>();
+        for (CustomMethodClass m : methods) {
+            methodNames.add(m.getName());
+        }
+        return methodNames;
+    }
 
 
 
@@ -349,18 +392,27 @@ public class CppDataLayout {
             System.out.println(currStruct.getClassName());
             System.out.println("*****************");
 
-            while (tempStruct.getParentClass() != "None" ) {
+            System.out.println("!!!");
+            System.out.println(inheritedMethods);
+            System.out.println(tempStruct.getParentClass());
+
+            while (tempStruct.getParentClass() != "None") {
 
                 String getParentStructName = tempStruct.getParentClass();
 
+                System.out.println("ASDASDASDASD");
+                System.out.println(getParentStructName);
                 // get all methods of parent class
                 CustomClassObject parentClass = classMap.get(getParentStructName);
 
                 for (CustomMethodClass method : parentClass.getMethods()) {
+                    System.out.println("!!!!!!!");
+                    System.out.println(method.getName());
 
-
+                    // checking if method is overwritten
                     if ((!inheritedMethods.contains(method.getName()))) {
 
+                        method.setOwnerClass(parentClass.getClassName());
                         inheritedMethods.add(method);
 
 
@@ -369,14 +421,27 @@ public class CppDataLayout {
                 }
 
                 tempStruct = parentClass;
-                tempStruct = parentClass;
-
-
             }
+
+            // adding default methods to inheritedMethods to check for overriding
+            ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
+
+            ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
+            for (CustomMethodClass m : defaultMethods) {
+                String name = m.getName();
+
+                if (!(inheritedMethodNames.contains(name))) {
+                    inheritedMethods.add(m);
+                }
+            }
+
+
+
 
 
             // check if current class overrides any of these methods
             int index = 0;
+
             for (CustomMethodClass m : inheritedMethods){
                 boolean isLastMethod = false;
 
@@ -391,8 +456,16 @@ public class CppDataLayout {
 
                 boolean isOverriden = false;
                 // if contains override
-                if (currStruct.getMethods().contains(m.getName())){
+
+
+                System.out.println("OVERWRITTEN1111111111111111111111111111");
+                System.out.println(currStruct.getClassName());
+                System.out.println(m.getName());
+                System.out.println(currStruct.getMethods());
+
+                if (currStruct.getMethodNames().contains(m.getName())){
                     isOverriden = true;
+                    m.setOwnerClass(currStruct.getClassName());
 
                 String className = currStruct.getClassName();
 
@@ -429,21 +502,6 @@ public class CppDataLayout {
             // set defaults
 
 //            //pre-made methods
-//            String hashCodeRTCN = "((int32_t (*)(" + currClass.getClassName() + ")) &__Object::hashCode),";
-//            String equalsRTCN = "((bool (*)(" + currClass.getClassName() + ", Object" +  ")) &__Object::equals),";
-//            String classRTCN = "((Class (*)(" + currClass.getClass() + ")) &__Object::getClass),";
-//            String stringRTCN = "((String (*)(" + currClass.getClass() + ")) &__Object::toString),";
-//
-//            VTInstantiatorMethod hashCodeInst = new VTInstantiatorMethod(hashCodeRTCN);
-//            //VTInstantiatorMethod equalsInst = new VTInstantiatorMethod(equalsRTCN);
-//            VTInstantiatorMethod classInst = new VTInstantiatorMethod(classRTCN);
-//            VTInstantiatorMethod stringInst = new VTInstantiatorMethod(stringRTCN);
-//
-//            VTInstantiatorMethods.add(hashCodeInst);
-//          //  VTInstantiatorMethods.add(equalsInst);
-//            VTInstantiatorMethods.add(classInst);
-//            VTInstantiatorMethods.add(stringInst);
-
 
 
 
@@ -553,21 +611,29 @@ public class CppDataLayout {
             public VTInstantiatorMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
 
                 typeTranslate translateType = new typeTranslate();
-              String returnT = translateType.translateType(method.getReturnType());
-               fullLine = "";
+                String returnT = translateType.translateType(method.getReturnType());
+                fullLine = "";
 
-                if (isOverridden) {
+                if (isOverridden) {;
+
+
                     this.objectReference = "&__" + className + "::" + method.getName();
-                    this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "__" + className + "::" + method.getName() + ")";
                 }
                 else {
-                    this.objectReference = "&__Object" + "::" + method.getName();
-                    this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "__" + className + "::" + method.getName() + ")";
+                    // get parent class
+                    if (method.getOwnerClass() != "None") {
+                        this.objectReference = "&__" + method.getOwnerClass() + "::" + method.getName();
+                    }
+                    else {
+                        this.objectReference = "&__Object" + "::" + method.getName();
+                        this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))";
+                    }
                 }
+                this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))";
                 if (!isLastMethod) {
                     this.returnTypeClassName += ",";
                 }
-                fullLine = this.objectReference + this.returnTypeClassName;
+                fullLine = this.returnTypeClassName + this.objectReference ;
 
 
 
@@ -631,6 +697,8 @@ public class CppDataLayout {
                 VTMethods.add(classMethod);
                 VTMethods.add(stringMethod);
 
+                System.out.println("asdhasd");
+                System.out.println(currClass.getMethods().size());
                 // add custom vtmethods
                 for (CustomMethodClass m : currClass.getMethods()){
 
@@ -651,13 +719,12 @@ public class CppDataLayout {
 //                        System.out.println("*****************");
 //                    }
 
-                    
-                    VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
-
-                    VTInstantiators.add(vtInstantiator);
-
-
                 }
+
+                VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
+
+                VTInstantiators.add(vtInstantiator);
+
 
 
 
