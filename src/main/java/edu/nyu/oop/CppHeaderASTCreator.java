@@ -295,6 +295,25 @@ public class CppHeaderASTCreator {
         return lastNode;
     }
 
+    public static ArrayList<CustomMethodClass> createDefaultMethodsList() {
+        ArrayList<CustomMethodClass> methods = new ArrayList<CustomMethodClass>();
+        methods.add(new CustomMethodClass("equals", "public", "void", "Object"));
+        methods.add(new CustomMethodClass("toString", "public", "void", "Object"));
+        methods.add(new CustomMethodClass("hashCode", "public", "void", "Object"));
+        methods.add(new CustomMethodClass("getClass", "public", "void", "Object"));
+
+        return methods;
+    }
+
+    public static ArrayList<String> getMethodNames(ArrayList<CustomMethodClass> methods) {
+        ArrayList<String> strings = new ArrayList<String>();
+        for (CustomMethodClass m : methods) {
+            System.out.println("UKHESFKUAJE");
+            strings.add(m.getName());
+        }
+        return strings;
+    }
+
 
     public static void addStructNodes(TraverseAST.ClassSummary javaData, GNode currentNamespace, CPPAST rootNode) {
         //Get the root of our cppAST
@@ -354,6 +373,8 @@ public class CppHeaderASTCreator {
 
             }
 
+
+
                 System.out.println("new class name " + temp.getClassName() + " new class parent " + temp.getParentClass());
                 System.out.println("lolc " + temp.getClassName());
                 for (CustomMethodClass m : inheritedMethodsList){
@@ -368,6 +389,15 @@ public class CppHeaderASTCreator {
                 temp = structsMap.get(parentName);
 
             }
+
+//            ArrayList<CustomMethodClass> defaultMethods = createDefaultMethodsList();
+//            ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethodsList);
+//            for (CustomMethodClass meth : defaultMethods) {
+//                // if meth is not in inheritedMethodsList, put it in
+//                if (!(inheritedMethodNames.contains(meth.getName()))) {
+//                    inheritedMethodsList.add(meth);
+//                }
+//            }
 
 
 

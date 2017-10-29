@@ -5,13 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomMethodClass.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomMethodClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/CppHVisitorTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/CppHVisitorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" afterPath="$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" afterPath="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
     </list>
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -29,8 +22,8 @@
       <file leaf-file-name="CppHeaderASTCreator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="340" column="13" lean-forward="false" selection-start-line="340" selection-start-column="13" selection-end-line="340" selection-end-column="13" />
+            <state relative-caret-position="312">
+              <caret line="359" column="13" lean-forward="false" selection-start-line="359" selection-start-column="13" selection-end-line="359" selection-end-column="13" />
               <folding>
                 <element signature="e#459#497#0" expanded="true" />
                 <element signature="e#584#603#0" expanded="true" />
@@ -39,8 +32,10 @@
                 <element signature="e#6495#6511#0" expanded="true" />
                 <element signature="e#10862#10878#0" expanded="true" />
                 <element signature="e#11629#11645#0" expanded="true" />
-                <element signature="e#15713#15738#0" expanded="true" />
-                <element signature="e#15805#15827#0" expanded="true" />
+                <element signature="e#15571#15590#0" expanded="true" />
+                <element signature="e#16100#16108#0" expanded="true" />
+                <element signature="e#16562#16587#0" expanded="true" />
+                <element signature="e#16654#16676#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -639,7 +634,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43168000" />
+    <option name="totallyTimeSpent" value="44312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="23" width="1609" height="859" extended-state="0" />
@@ -776,8 +771,10 @@
             <element signature="e#6495#6511#0" expanded="true" />
             <element signature="e#10862#10878#0" expanded="true" />
             <element signature="e#11629#11645#0" expanded="true" />
-            <element signature="e#15713#15738#0" expanded="true" />
-            <element signature="e#15805#15827#0" expanded="true" />
+            <element signature="e#15571#15590#0" expanded="true" />
+            <element signature="e#16100#16108#0" expanded="true" />
+            <element signature="e#16562#16587#0" expanded="true" />
+            <element signature="e#16654#16676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -890,8 +887,10 @@
             <element signature="e#6495#6511#0" expanded="true" />
             <element signature="e#10862#10878#0" expanded="true" />
             <element signature="e#11629#11645#0" expanded="true" />
-            <element signature="e#15713#15738#0" expanded="true" />
-            <element signature="e#15805#15827#0" expanded="true" />
+            <element signature="e#15571#15590#0" expanded="true" />
+            <element signature="e#16100#16108#0" expanded="true" />
+            <element signature="e#16562#16587#0" expanded="true" />
+            <element signature="e#16654#16676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1050,8 +1049,10 @@
             <element signature="e#6495#6511#0" expanded="true" />
             <element signature="e#10862#10878#0" expanded="true" />
             <element signature="e#11629#11645#0" expanded="true" />
-            <element signature="e#15713#15738#0" expanded="true" />
-            <element signature="e#15805#15827#0" expanded="true" />
+            <element signature="e#15571#15590#0" expanded="true" />
+            <element signature="e#16100#16108#0" expanded="true" />
+            <element signature="e#16562#16587#0" expanded="true" />
+            <element signature="e#16654#16676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1236,8 +1237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="340" column="13" lean-forward="false" selection-start-line="340" selection-start-column="13" selection-end-line="340" selection-end-column="13" />
+        <state relative-caret-position="312">
+          <caret line="359" column="13" lean-forward="false" selection-start-line="359" selection-start-column="13" selection-end-line="359" selection-end-column="13" />
           <folding>
             <element signature="e#459#497#0" expanded="true" />
             <element signature="e#584#603#0" expanded="true" />
@@ -1246,8 +1247,10 @@
             <element signature="e#6495#6511#0" expanded="true" />
             <element signature="e#10862#10878#0" expanded="true" />
             <element signature="e#11629#11645#0" expanded="true" />
-            <element signature="e#15713#15738#0" expanded="true" />
-            <element signature="e#15805#15827#0" expanded="true" />
+            <element signature="e#15571#15590#0" expanded="true" />
+            <element signature="e#16100#16108#0" expanded="true" />
+            <element signature="e#16562#16587#0" expanded="true" />
+            <element signature="e#16654#16676#0" expanded="true" />
           </folding>
         </state>
       </provider>
