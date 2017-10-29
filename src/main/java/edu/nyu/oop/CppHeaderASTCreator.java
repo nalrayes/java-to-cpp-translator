@@ -16,6 +16,9 @@ public class CppHeaderASTCreator {
     private CppHeaderASTCreator() {
     }
 
+    public static HashMap<String, CustomClassObject> structsMap;
+
+
 
     public static CPPAST createNewCPPHeaderAstFrom(List<GNode> javaASTNodes) {
 
@@ -293,21 +296,28 @@ public class CppHeaderASTCreator {
 
         ArrayList<CppDataLayout.CppStruct> structs = new ArrayList<CppDataLayout.CppStruct>();
         ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
+        structsMap = new HashMap<String, CustomClassObject>();
 
-
+        // creates branch for structs
         for (CustomClassObject c: javaData.classes){
 
             CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
 
+            // added to the tree
             structs.add(aStruct);
+
+
+            // used for populating vtables
+            structsMap.put(c.getClassName(), c);
 
         }
 
 
 
+        // creates branch for VTables
         for (CustomClassObject c: javaData.classes){
 
-            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c);
+            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c, structsMap);
 
 
 

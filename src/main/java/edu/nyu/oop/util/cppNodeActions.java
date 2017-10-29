@@ -72,6 +72,9 @@ public abstract class cppNodeActions {
                 newNode.add(value.name);
 
            addVTMethodsToNodeWithArray(newNode, value.VTMethods);
+            addVTInstantiatorsToNodeWithArray(newNode, value.VTInstantiators);
+            //addInstantiatorMethodsToNodeWithArray(newNode, value.VTInstantiators);
+
 //            addFieldsToNodeWithArray(newNode, value.variables);
 
             node.add(newNode);
@@ -98,6 +101,21 @@ public abstract class cppNodeActions {
 
     }
 
+
+    public static void addInstantiatorMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiatorMethod> vtiMethods) {
+
+        GNode newNode = createNewASTNode("InstantiatorMethods");
+        for (CppDataLayout.VTInstantiatorMethod vtiMethod : vtiMethods) {
+            GNode methodNode = createNewASTNode("InstantiatorMethod");
+
+            methodNode.add(vtiMethod.getFullLine());
+
+            newNode.add(methodNode);
+        }
+        node.add(newNode);
+
+    }
+
     public static void addVTMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTMethod> methods) {
 
         GNode newNode = createNewASTNode("VTMethods");
@@ -112,19 +130,33 @@ public abstract class cppNodeActions {
 
     }
 
-//    public static void addVTInstantiatorsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiator> instantiators) {
-//
-//        GNode newNode = createNewASTNode("VTInstantiators");
-//        for (CppDataLayout.VTInstantiator method : methods) {
-//            GNode methodNode = createNewASTNode("VTInstantiator");
-//
-//            methodNode.add(method.methodName);
-//
-//            newNode.add(methodNode);
-//        }
-//        node.add(newNode);
-//
-//    }
+
+
+    public static void addVTInstantiatorsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiator> instantiators) {
+
+        GNode newNode = createNewASTNode("VTInstantiators");
+        for (CppDataLayout.VTInstantiator instantiator : instantiators) {
+            GNode instantiatorNode = createNewASTNode("VTInstantiator");
+
+            instantiatorNode.add(instantiator.getDeclarationName());
+            instantiatorNode.add(instantiator.getIsA());
+
+            GNode instantiatorMethodsNode = createNewASTNode("InstantiatorMethods");
+
+            for (CppDataLayout.VTInstantiatorMethod vtiM : instantiator.getVTInstantiatorMethods()){
+
+
+                instantiatorMethodsNode.add("hello");
+
+
+            }
+            instantiatorNode.add(instantiatorMethodsNode);
+
+            newNode.add(instantiatorNode);
+        }
+        node.add(newNode);
+
+    }
 
 
 

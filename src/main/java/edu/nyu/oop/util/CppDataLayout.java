@@ -12,7 +12,7 @@ public class CppDataLayout {
     public static ArrayList<CppStruct> structs;
     public static ArrayList<VTable> VTables;
 
-    public static HashMap<String, ArrayList<CustomMethodClass>> structsMap;
+   // public static HashMap<String, CustomClassObject> structsMap;
 
 
 
@@ -21,7 +21,7 @@ public class CppDataLayout {
     public CppDataLayout(){
         //Use this default constructor to create the deafult __Object data layout
 
-        structsMap = new HashMap<>();
+       // structsMap = new HashMap<>();
         structs = new ArrayList<CppStruct>();
         VTables = new ArrayList<VTable>();
     }
@@ -39,7 +39,7 @@ public class CppDataLayout {
 
 
 
-        structsMap = new HashMap<>();
+       // structsMap = new HashMap<>();
 
 
     }
@@ -129,6 +129,7 @@ public class CppDataLayout {
         String name;
         String classDeclarator;
         String VTableDeclarator;
+        String parentName;
 
 
         ArrayList<CppConstructor> constructors;
@@ -136,6 +137,7 @@ public class CppDataLayout {
         public CppStruct(CustomClassObject c) {
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
+            this.parentName = c.getParentClass();
 
             this.name = "__" + c.getClassName();
             this.classDeclarator = "static Class __class()";
@@ -169,14 +171,26 @@ public class CppDataLayout {
             }
 
             structs.add(this);
-            structsMap.put(c.getClassName(), c.getMethods());
+           // structsMap.put(c.getClassName(), c);
 
 
 
 
         }
 
+        public CppStruct(){}
 
+        public String getName() {
+            return name;
+        }
+
+        public String getParentName() {
+            return parentName;
+        }
+
+        public ArrayList<CppMethod> getMethods() {
+            return methods;
+        }
     }
 
     public static class CppConstructor {
@@ -282,7 +296,15 @@ public class CppDataLayout {
     public static class InheritedMethodChecker{
 
         String methodName;
-        boolean hasBeenOverriden;
+
+
+
+        public InheritedMethodChecker(String m, boolean isOverride){
+
+
+
+
+        }
 
 
     }
@@ -298,40 +320,129 @@ public class CppDataLayout {
 
         String declarationName;
 
-        ArrayList<VTInstantiatorMethod> inheritedMethods;
+        ArrayList<CustomMethodClass> inheritedMethods;
 
 
         ArrayList<VTInstantiatorMethod> VTInstantiatorMethods;
 
-        // non overridden methods
-        public VTInstantiator(CustomClassObject currClass) {
-            VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
-            inheritedMethods = new ArrayList<VTInstantiatorMethod>();
+        public String getIsA() {
+            return isA;
+        }
 
-            this.isA = " : __is_a(__" + currClass.getClassName() + "::__class()),";
-            this.declarationName = "__" + currClass.getClassName() + "_VT()";
+        // non overridden methods
+        public VTInstantiator(CustomClassObject currStruct, HashMap<String, CustomClassObject> classMap) {
+            this.VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
+            this.inheritedMethods = new ArrayList<CustomMethodClass>();
+
+            this.isA = " : __is_a(__" + currStruct.getClassName() + "::__class()),";
+            this.declarationName = "__" + currStruct.getClassName() + "_VT()";
             this.randoCurls = "{\n}";
 
+            CustomClassObject tempStruct = currStruct;
+
+
+           // tempStruct = currStruct;
+
+            // Get all methods that the current class inherits
+            System.out.println("*****************CLASS NAME");
+
+            System.out.println(currStruct.getClassName());
+            System.out.println("*****************");
+
+            while (tempStruct.getParentClass() != "None" ) {
+
+                String getParentStructName = tempStruct.getParentClass();
+
+                // get all methods of parent class
+                CustomClassObject parentClass = classMap.get(getParentStructName);
+
+                for (CustomMethodClass method : parentClass.getMethods()) {
+
+
+                    if ((!inheritedMethods.contains(method.getName()))) {
+
+                        inheritedMethods.add(method);
+
+
+                    }
+
+                }
+
+                tempStruct = parentClass;
+                tempStruct = parentClass;
+
+
+            }
+
+
+            // check if current class overrides any of these methods
+            int index = 0;
+            for (CustomMethodClass m : inheritedMethods){
+                boolean isLastMethod = false;
+
+                if (index == currStruct.getMethods().size() -1 ){
+
+                    isLastMethod = true;
+
+                }
 
 
 
+
+                boolean isOverriden = false;
+                // if contains override
+                if (currStruct.getMethods().contains(m.getName())){
+                    isOverriden = true;
+
+                String className = currStruct.getClassName();
+
+                    // create overridden instantiator
+
+                VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
+                    VTInstantiatorMethods.add(vtiMethod);
+
+                   // add to list of vt instantiatior methods
+
+
+                }
+                else{
+                    String className = currStruct.getClassName();
+                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
+                    VTInstantiatorMethods.add(vtiMethod);
+
+
+                }
+
+
+                index++;
+                // add instantiator to methodlist
+
+
+            }
+
+
+
+
+
+
+        }
             // set defaults
 
-            //pre-made methods
-            String hashCodeRTCN = "((int32_t (*)(" + currClass.getClassName() + ")) &__Object::hashCode),";
-            String equalsRTCN = "((bool (*)(" + currClass.getClassName() + ", Object" +  ")) &__Object::equals),";
-            String classRTCN = "((Class (*)(" + currClass.getClass() + ")) &__Object::getClass),";
-            String stringRTCN = "((String (*)(" + currClass.getClass() + ")) &__Object::toString),";
-
-            VTInstantiatorMethod hashCodeInst = new VTInstantiatorMethod(hashCodeRTCN);
-            //VTInstantiatorMethod equalsInst = new VTInstantiatorMethod(equalsRTCN);
-            VTInstantiatorMethod classInst = new VTInstantiatorMethod(classRTCN);
-            VTInstantiatorMethod stringInst = new VTInstantiatorMethod(stringRTCN);
-
-            VTInstantiatorMethods.add(hashCodeInst);
-          //  VTInstantiatorMethods.add(equalsInst);
-            VTInstantiatorMethods.add(classInst);
-            VTInstantiatorMethods.add(stringInst);
+//            //pre-made methods
+//            String hashCodeRTCN = "((int32_t (*)(" + currClass.getClassName() + ")) &__Object::hashCode),";
+//            String equalsRTCN = "((bool (*)(" + currClass.getClassName() + ", Object" +  ")) &__Object::equals),";
+//            String classRTCN = "((Class (*)(" + currClass.getClass() + ")) &__Object::getClass),";
+//            String stringRTCN = "((String (*)(" + currClass.getClass() + ")) &__Object::toString),";
+//
+//            VTInstantiatorMethod hashCodeInst = new VTInstantiatorMethod(hashCodeRTCN);
+//            //VTInstantiatorMethod equalsInst = new VTInstantiatorMethod(equalsRTCN);
+//            VTInstantiatorMethod classInst = new VTInstantiatorMethod(classRTCN);
+//            VTInstantiatorMethod stringInst = new VTInstantiatorMethod(stringRTCN);
+//
+//            VTInstantiatorMethods.add(hashCodeInst);
+//          //  VTInstantiatorMethods.add(equalsInst);
+//            VTInstantiatorMethods.add(classInst);
+//            VTInstantiatorMethods.add(stringInst);
 
 
 
@@ -343,56 +454,15 @@ public class CppDataLayout {
             // find parent in the map and get its methods
             // then compare those methods to the current class's methods
 
-            ArrayList<CustomMethodClass> inheritedMethods = new ArrayList<CustomMethodClass>();
+            //ArrayList<CustomMethodClass> inheritedMethods = new ArrayList<CustomMethodClass>();
             //CustomClassObject presentStruct = new CustomClassObject();
 
-            String currClassParent = currClass.getParentClass();
-
-            ArrayList <CustomMethodClass> parentMethods = structsMap.get(currClass.getClassName());
-
-
-
-            int index = 0;
-
-
-
-            for (CustomMethodClass currMethod : currClass.getMethods()){
-                boolean isLastMethod = false;
-                if (index == currClass.getMethods().size()) {
-                    isLastMethod = true;
-                }
-                for (CustomMethodClass parentMethod : parentMethods){
-                    boolean isOverridden = false;
-                    // if the method is overriden
-                    if (currMethod.getName().equals(parentMethod.getName())){
-                        isOverridden = true;
-
-
-                    }
-                    VTInstantiatorMethod currVTInst = new VTInstantiatorMethod(currMethod, currClass.getClassName(), isLastMethod, isOverridden);
-
-                    // else the method is not overriden
-
-                    if (DEBUGGING == 1) {
-
-                        String instantName = "";
-
-                        //instantName += (this.returnType + " " + pointer + "" + className);
-                        System.out.println(this.declarationName);
-                        System.out.println(this.isA);
-                        System.out.println(currVTInst.getReturnTypeClassName());
-                        System.out.println(this.randoCurls);
-                        System.out.println("________________");
-                        // System.out.println("return type " + this.returnType);
-
-                        System.out.println("________________");
-                    }
-
-
-
-                }
-
-            }
+//            String currClassParent = currClass.getParentClass();
+//
+//            ArrayList <CustomMethodClass> parentMethods = structsMap.get(currClass.getClassName());
+//
+//
+//            int index = 0;
 
 
 
@@ -404,23 +474,59 @@ public class CppDataLayout {
 
 
 
+//
+//
+//            for (CustomMethodClass currMethod : currClass.getMethods()){
+//
+//                // just for commas
+//                boolean isLastMethod = false;
+//                if (index == currClass.getMethods().size()) {
+//                    isLastMethod = true;
+//                }
+//                for (CustomMethodClass parentMethod : parentMethods){
+//                    boolean isOverridden = false;
+//                    // if the method is overriden
+//                    if (currMethod.getName().equals(parentMethod.getName())){
+//                        isOverridden = true;
+//
+//
+//                    }
+//                    VTInstantiatorMethod currVTInst = new VTInstantiatorMethod(currMethod, currClass.getClassName(), isLastMethod, isOverridden);
+//
+//                    // else the method is not overriden
+//
+//                    if (DEBUGGING == 1) {
+//
+//                        String instantName = "";
+//
+//                        //instantName += (this.returnType + " " + pointer + "" + className);
+//                        System.out.println(this.declarationName);
+//                        System.out.println(this.isA);
+//                        System.out.println(currVTInst.getReturnTypeClassName());
+//                        System.out.println(this.randoCurls);
+//                        System.out.println("________________");
+//                        // System.out.println("return type " + this.returnType);
+//
+//                        System.out.println("________________");
+//                    }
+//
+//
+//
+//                }
+//
+//            }
 
+
+        public String getDeclarationName() {
+            return declarationName;
         }
 
 
-
-
-
-
+        public ArrayList<VTInstantiatorMethod> getVTInstantiatorMethods() {
+            return VTInstantiatorMethods;
         }
+    }
 
-
-
-        private void checkForOverriddenMethods(CustomClassObject javaClass, JavaFileObject javaFile){
-
-
-
-        }
 
 
 
@@ -430,6 +536,16 @@ public class CppDataLayout {
 
             String objectReference;
             String returnTypeClassName;
+            String fullLine;
+
+
+
+
+
+            public VTInstantiatorMethod(CustomClassObject current){}
+
+
+
 
 
 
@@ -438,6 +554,7 @@ public class CppDataLayout {
 
                 typeTranslate translateType = new typeTranslate();
               String returnT = translateType.translateType(method.getReturnType());
+               fullLine = "";
 
                 if (isOverridden) {
                     this.objectReference = "&__" + className + "::" + method.getName();
@@ -450,6 +567,8 @@ public class CppDataLayout {
                 if (!isLastMethod) {
                     this.returnTypeClassName += ",";
                 }
+                fullLine = this.objectReference + this.returnTypeClassName;
+
 
 
             }
@@ -458,6 +577,7 @@ public class CppDataLayout {
             // for default methods
             public VTInstantiatorMethod (String rTCN) {
                 this.returnTypeClassName = rTCN;
+                fullLine = this.returnTypeClassName;
             }
 
             // TODO: add constructor for custom non overidden methods
@@ -467,10 +587,15 @@ public class CppDataLayout {
                 return objectReference;
             }
 
+            public String getFullLine() {
+                return fullLine;
+            }
+
             public String getReturnTypeClassName() {
                 return returnTypeClassName;
             }
         }
+
 
 
 
@@ -489,7 +614,7 @@ public class CppDataLayout {
 
 
 
-            public VTable(CustomClassObject currClass) {
+            public VTable(CustomClassObject currClass, HashMap<String, CustomClassObject> classMap) {
 
                 this.name = currClass.getClassName();
 
@@ -510,15 +635,33 @@ public class CppDataLayout {
                 for (CustomMethodClass m : currClass.getMethods()){
 
                     VTMethod vtmethod = new VTMethod(m, currClass);
-                    VTInstantiator vtInstantiator = new VTInstantiator(currClass);
 
                     VTMethods.add(vtmethod);
+
+//                    if (DEBUGGING == 1) {
+//
+//                        System.out.println("*****************");
+//                        for (VTInstantiatorMethod vtim : vtInstantiator.getVTInstantiatorMethods()) {
+//
+//                            System.out.println(vtim.getFullLine());
+//
+//
+//                        }
+//                        System.out.println("IM HERE " + currClass.getParentClass());
+//                        System.out.println("*****************");
+//                    }
+
+                    
+                    VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
+
                     VTInstantiators.add(vtInstantiator);
 
 
                 }
 
 
+
+                System.out.println("SIZE " + VTInstantiators.size() + " OF " + this.name);
 
                 VTables.add(this);
 
@@ -557,6 +700,7 @@ public class CppDataLayout {
                 this.returnType = translateType.translateType(m.getReturnType());
                 this.pointer = "(*" + m.getName() + ")";
                 this.className = "(" + s.getClassName() +")";
+               // System.out.println("");
               //  methodName += this.returnType + " " + this.pointer + this.className + ";";
 
 
