@@ -17,3 +17,6 @@ q
 test-only *CppHVisitorTest*
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 test-only *CppHVisitorTest*
+clear && printf '\e[3J'
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*

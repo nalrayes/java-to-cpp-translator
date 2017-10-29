@@ -9,9 +9,28 @@ public class CustomMethodClass {
     String name;
     ArrayList<CustomVariablesClass> parameters;
     String returnType;
+    String methodOwner;
 
     public CustomMethodClass(){
         parameters = new ArrayList<CustomVariablesClass>();
+    }
+
+
+    public CustomMethodClass(String name, String visibility, String returnType, String methodOwner){
+        this.name = name;
+        this.visibility = visibility;
+        this.returnType = returnType;
+        this.methodOwner = methodOwner;
+
+
+    }
+
+    public String getMethodOwner() {
+        return methodOwner;
+    }
+
+    public void setMethodOwner(String methodOwner) {
+        this.methodOwner = methodOwner;
     }
 
     public ArrayList<CustomVariablesClass> getParameters() {
@@ -33,6 +52,8 @@ public class CustomMethodClass {
     public String getReturnType() {
         return returnType;
     }
+
+
 
 
 }

@@ -24,7 +24,7 @@ public class TraverseASTTest {
     public static void beforeClass() {
         logger.debug("Executing TraverseASTTest");
 
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/Test010/Test010.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/CustomTests/CustomTest1.java");
 
 
         // XtcTestUtils.prettyPrintAst(node);

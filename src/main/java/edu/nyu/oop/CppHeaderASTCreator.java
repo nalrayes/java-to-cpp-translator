@@ -17,6 +17,13 @@ public class CppHeaderASTCreator {
     }
 
     public static HashMap<String, CustomClassObject> structsMap;
+    public static HashMap<String, ArrayList<CustomMethodClass>> inheritedMethodsMap = new HashMap<String, ArrayList<CustomMethodClass>>();
+    public static ArrayList<CustomMethodClass> inheritedMethodsList = new ArrayList<CustomMethodClass>();
+    public static ArrayList<String> defaultMethods = new ArrayList<String>();
+
+
+
+
 
 
 
@@ -314,10 +321,100 @@ public class CppHeaderASTCreator {
 
 
 
+    System.out.println("INHERITED");
+        // get all inherited methods
+        for (CustomClassObject c : javaData.classes){
+            CustomClassObject temp = new CustomClassObject();
+            temp = c;
+//            CustomClassObject temp = new CustomClassObject();
+//            temp = c;
+            System.out.println("testing currency " + temp.getClassName() + " parent: " + temp.getParentClass());
+
+            inheritedMethodsList.add(new CustomMethodClass("equals", "public", "void", "Object"));
+            inheritedMethodsList.add(new CustomMethodClass("toString", "public", "void", "Object"));
+            inheritedMethodsList.add(new CustomMethodClass("hashCode", "public", "void", "Object"));
+            inheritedMethodsList.add(new CustomMethodClass("getClass", "public", "void", "Object"));
+
+            inheritedMethodsMap.put("Object", inheritedMethodsList);
+
+
+           //inheritedMethodsList = new ArrayList<CustomMethodClass>();
+
+            while (temp.getParentClass() != "None"){
+
+
+
+
+            for (CustomMethodClass m: temp.getMethods()){
+                m.setMethodOwner(temp.getClassName());
+
+                System.out.println("METHOD NAME " + m.getName());
+
+                inheritedMethodsList.add(m);
+
+            }
+
+                System.out.println("new class name " + temp.getClassName() + " new class parent " + temp.getParentClass());
+                System.out.println("lolc " + temp.getClassName());
+                for (CustomMethodClass m : inheritedMethodsList){
+
+
+                    System.out.println(m.getName());
+                }
+                System.out.println("endlol");
+                String parentName = temp.getParentClass();
+                System.out.println("SHIN " + parentName);
+
+                temp = structsMap.get(parentName);
+
+            }
+
+
+
+
+
+            inheritedMethodsMap.put(c.getClassName(), inheritedMethodsList);
+
+
+
+            ArrayList<CustomMethodClass> checkingMeths = inheritedMethodsMap.get(c.getClassName());
+            System.out.println("WOWEE " + c.getClassName());
+           for (CustomMethodClass m: checkingMeths){
+               System.out.println(m);
+           }
+           System.out.println("END WOWEE");
+
+
+
+            inheritedMethodsList = new ArrayList<CustomMethodClass>();
+
+
+
+
+
+        }
+        System.out.println("/*INHERITED*/");
+
+
+
+
+
+
         // creates branch for VTables
+        ArrayList<CustomMethodClass> parentMethods;
         for (CustomClassObject c: javaData.classes){
 
-            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c, structsMap);
+
+            if (c.getParentClass().equals("None")){
+                parentMethods = inheritedMethodsMap.get("Object");
+            }
+            //get current parent
+            else {
+                parentMethods = inheritedMethodsMap.get(c.getParentClass());
+            }
+
+
+            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c, structsMap, javaData.classes, parentMethods);
 
 
 

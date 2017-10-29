@@ -72,7 +72,7 @@ public abstract class cppNodeActions {
                 newNode.add(value.name);
 
            addVTMethodsToNodeWithArray(newNode, value.VTMethods);
-            addVTInstantiatorsToNodeWithArray(newNode, value.VTInstantiators);
+            addVTInstantiatorsToNodeWithArray(newNode, value.vtInstantiator);
             //addInstantiatorMethodsToNodeWithArray(newNode, value.VTInstantiators);
 
 //            addFieldsToNodeWithArray(newNode, value.variables);
@@ -132,29 +132,32 @@ public abstract class cppNodeActions {
 
 
 
-    public static void addVTInstantiatorsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiator> instantiators) {
+    public static void addVTInstantiatorsToNodeWithArray(GNode node, CppDataLayout.VTInstantiator instantiator) {
 
         GNode newNode = createNewASTNode("VTInstantiators");
-        for (CppDataLayout.VTInstantiator instantiator : instantiators) {
+        //for (CppDataLayout.VTInstantiator instantiator : instantiators) {
             GNode instantiatorNode = createNewASTNode("VTInstantiator");
 
-            instantiatorNode.add(instantiator.getDeclarationName());
-            instantiatorNode.add(instantiator.getIsA());
+            if (instantiator != null) {
 
-            GNode instantiatorMethodsNode = createNewASTNode("InstantiatorMethods");
+                instantiatorNode.add(instantiator.getDeclarationName());
+                instantiatorNode.add(instantiator.getIsA());
 
-            for (CppDataLayout.VTInstantiatorMethod vtiM : instantiator.getVTInstantiatorMethods()){
+                GNode instantiatorMethodsNode = createNewASTNode("InstantiatorMethods");
+
+                for (CppDataLayout.VTInstantiatorMethod vtiM : instantiator.getVTInstantiatorMethods()) {
 
 
-                instantiatorMethodsNode.add("hello");
+                    instantiatorMethodsNode.add(vtiM.getFullLine());
 
 
+                }
+                instantiatorNode.add(instantiatorMethodsNode);
+
+                newNode.add(instantiatorNode);
+
+                node.add(newNode);
             }
-            instantiatorNode.add(instantiatorMethodsNode);
-
-            newNode.add(instantiatorNode);
-        }
-        node.add(newNode);
 
     }
 
