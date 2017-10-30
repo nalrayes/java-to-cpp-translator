@@ -124,7 +124,7 @@ public abstract class cppNodeActions {
         for (CppDataLayout.VTMethod method : methods) {
             GNode methodNode = createNewASTNode("VTMethod");
 
-            methodNode.add(method.methodName);
+            methodNode.add(method.fullLine);
 
             newNode.add(methodNode);
         }

@@ -24,10 +24,12 @@ struct __B2;
 struct __B2{ 
 void __goodbye();
 void __helloWorld();
+void __helloJohn();
 };
 struct __C;
 
 struct __C{ 
+void __helloDave();
 String __toString();
 };
 struct __CustomTest1;
