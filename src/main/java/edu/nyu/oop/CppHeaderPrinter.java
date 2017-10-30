@@ -168,11 +168,11 @@ public class CppHeaderPrinter extends Visitor {
     public void visitInstantiatorMethods(GNode n) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n.size(); i++) {
-            sb.append(n.getString(0));
+            sb.append(n.getString(i));
             sb.append(",\n");
         }
         if (sb.length() > 0) {
-            sb.delete(sb.length() - 3, sb.length());
+            sb.delete(sb.length() - 2, sb.length());
         }
         printer.pln(sb.toString());
         visit(n);

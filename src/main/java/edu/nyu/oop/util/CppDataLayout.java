@@ -663,7 +663,7 @@ public class CppDataLayout {
                 fullLine = "";
 
                 if (isOverridden) {;
-                    this.objectReference = "__" + className + "::" + method.getName();
+                    this.objectReference = method.getName() + "(__" + className + "::" + method.getName() + ")";
                     this.fullLine = this.objectReference;
                 }
                 else {
