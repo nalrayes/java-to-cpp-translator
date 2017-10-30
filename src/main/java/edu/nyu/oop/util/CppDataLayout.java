@@ -408,9 +408,9 @@ public class CppDataLayout {
                 for (CustomMethodClass method : parentClass.getMethods()) {
                     System.out.println("!!!!!!!");
                     System.out.println(method.getName());
-
+                    ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
                     // checking if method is overwritten
-                    if ((!inheritedMethods.contains(method.getName()))) {
+                    if ((!inheritedMethodNames.contains(method.getName()))) {
 
                         method.setOwnerClass(parentClass.getClassName());
                         inheritedMethods.add(method);
@@ -426,19 +426,18 @@ public class CppDataLayout {
             // adding default methods to inheritedMethods to check for overriding
             ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
 
-            ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
+            ArrayList<String> names = getMethodNames(inheritedMethods);
             for (CustomMethodClass m : defaultMethods) {
                 String name = m.getName();
 
-                if (!(inheritedMethodNames.contains(name))) {
+                if (!(names.contains(name))) {
                     inheritedMethods.add(m);
                 }
             }
 
+//            inheritedMethods.addAll(overwriddenMethods);
 
-
-
-
+            ArrayList<VTInstantiatorMethod> overwrittenMethods = new ArrayList<VTInstantiatorMethod>();
             // check if current class overrides any of these methods
             int index = 0;
 
@@ -472,13 +471,13 @@ public class CppDataLayout {
                     // create overridden instantiator
 
                 VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
-                    VTInstantiatorMethods.add(vtiMethod);
+                    overwrittenMethods.add(vtiMethod);
 
                    // add to list of vt instantiatior methods
 
 
                 }
-                else{
+                else {
                     String className = currStruct.getClassName();
                     VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
                     VTInstantiatorMethods.add(vtiMethod);
@@ -486,12 +485,30 @@ public class CppDataLayout {
 
                 }
 
-
                 index++;
                 // add instantiator to methodlist
 
 
             }
+
+            ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
+            int k = 0;
+            boolean isLastMethod = false;
+            for (CustomMethodClass m : currStruct.getMethods()) {
+                if (k == currStruct.getMethods().size() -1 ){
+
+                    isLastMethod = true;
+
+                }
+                m.setOwnerClass(currStruct.getClassName());
+                // if m isnt in overwritten methods, add it to vtinstantiator
+                if (!(inheritedMethodNames.contains(m.getName()))) {
+                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, currStruct.getClassName(), isLastMethod, false);
+                    VTInstantiatorMethods.add(vtiMethod);
+                }
+            }
+
+            VTInstantiatorMethods.addAll(overwrittenMethods);
 
 
 
@@ -615,25 +632,25 @@ public class CppDataLayout {
                 fullLine = "";
 
                 if (isOverridden) {;
-
-
-                    this.objectReference = "&__" + className + "::" + method.getName();
+                    this.objectReference = "__" + className + "::" + method.getName();
+                    this.fullLine = this.objectReference;
                 }
                 else {
+                    this.objectReference = method.getName();
+
                     // get parent class
                     if (method.getOwnerClass() != "None") {
-                        this.objectReference = "&__" + method.getOwnerClass() + "::" + method.getName();
+                        this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "_" + className + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
                     }
                     else {
-                        this.objectReference = "&__Object" + "::" + method.getName();
-                        this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))";
+                        this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "_" + className + " &_Object::" + method.getName() + ")";
                     }
+                    this.fullLine = this.objectReference + this.returnTypeClassName;
                 }
-                this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))";
                 if (!isLastMethod) {
                     this.returnTypeClassName += ",";
                 }
-                fullLine = this.returnTypeClassName + this.objectReference ;
+
 
 
 
