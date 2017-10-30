@@ -10,6 +10,7 @@ import xtc.tree.Node;
 import xtc.tree.GNode;
 import xtc.tree.Printer;
 import xtc.tree.Visitor;
+import edu.nyu.oop.util.*;
 
 public class CppHeaderPrinter extends Visitor {
 
@@ -61,7 +62,7 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitNamespace(GNode n) throws IOException {
-        printer.incr().indent().pln("namespace " + n.getString(0) + "{");
+        printer.pln("namespace " + n.getString(0) + " {");
         visit(n);
         printer.pln("}");
     }
@@ -72,12 +73,17 @@ public class CppHeaderPrinter extends Visitor {
     public void visitStruct(GNode n) throws IOException {
         printer.pln("struct " + n.getString(0) + ";");
         printer.pln("");
-        printer.pln("struct " + n.getString(0) + "{ ");
+        printer.pln("struct " + n.getString(0) + " { ");
+        // the constructor for the struct (initializer)
+        printer.pln(n.getString(0) + "();");
+        printer.pln("");
         visit(n);
         printer.pln("};");
+        printer.pln("\n");
     }
     public void visitMethods(GNode n) throws IOException {
         visit(n);
+        printer.pln("");
     }
 
     public void visitVisability(GNode n) throws IOException {
@@ -88,30 +94,89 @@ public class CppHeaderPrinter extends Visitor {
         visit(n);
         // TODO: remove comma at the end of the line
         // before closing parentheses
-        if (n.size() > 0) {
+        StringBuilder sb = new StringBuilder();
+        Node curNode;
+        for (int i = 0; i < n.size(); i++) {
+            curNode = n.getNode(i);
+            sb.append(curNode.getString(0));
+            sb.append(',');
         }
+        System.out.println("???");
+        System.out.println(sb);
+        if (sb.length() > 0) {
+            sb.delete(sb.length() - 1, sb.length());
+        }
+        printer.p(sb.toString());
         printer.p(')');
     }
     public void visitParameter(GNode n) {
-        printer.p(n.getString(0));
-        printer.p(',');
         visit(n);
     }
     public void visitMethod(GNode n) throws IOException {
         // all public for now
         // TODO: add static modifiers
-
+        CppDataLayout.typeTranslate tt = new CppDataLayout.typeTranslate();
+        String type = tt.translateType(n.getString(1));
         printer.p(n.getString(1) + " " + n.getString(0));
+        printer = printer.buffer();
         visit(n);
         printer.pln(";");
     }
     public void visitFields(GNode n) throws IOException {
-
+        visit(n);
     }
     public void visitField(GNode n) throws IOException {
-
+        printer.pln(n.getString(0) + " " + n.getString(1) + ";");
+        visit(n);
+        printer.pln("");
     }
 
+    public void visitVTable(GNode n) throws IOException {
+        printer.pln("struct " + n.getString(0) + ";");
+        printer.pln("");
+        printer.pln("struct " + n.getString(0) + " { ");
+        visit(n);
+        printer.pln("};");
+        printer.pln("\n");
+    }
+
+    public void visitVTables(GNode n) throws IOException {
+        printer.pln("");
+        visit(n);
+    }
+
+    public void visitVTMethod(GNode n) {
+        printer.pln(n.getString(0));
+        visit(n);
+    }
+
+    public void visitVTMethods(GNode n) {
+        visit(n);
+        printer.pln();
+    }
+
+    public void visitVTInstantiators(GNode n) {
+        visit(n);
+    }
+
+    public void visitVTInstantiator(GNode n) {
+        printer.pln(n.getString(0));
+        printer.pln(n.getString(1));
+        visit(n);
+    }
+
+    public void visitInstantiatorMethods(GNode n) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < n.size(); i++) {
+            sb.append(n.getString(0));
+            sb.append(",\n");
+        }
+        if (sb.length() > 0) {
+            sb.delete(sb.length() - 3, sb.length());
+        }
+        printer.pln(sb.toString());
+        visit(n);
+    }
 
 
     private void headOfFile() {
