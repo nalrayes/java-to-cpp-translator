@@ -34,14 +34,16 @@ public class CppHVisitorTest {
         List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep(node);
 
         //Phase two
-        CppHeaderVisitor visitor = new CppHeaderVisitor();
+        //CppHeaderVisitor visitor = new CppHeaderVisitor();
 
         //Phase two
         CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
         //Print the CPPAST
         XtcTestUtils.prettyPrintAst(cppAST.getRoot());
+
         //Visit
-        visitor.visit(cppAST.getRoot());
+        //visitor.visit(cppAST.getRoot());
+
         // print cpp node names for translation
         CppHeaderPrinter printer = new CppHeaderPrinter();
         printer.print(cppAST.getRoot());

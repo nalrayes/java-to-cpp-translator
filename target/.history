@@ -20,3 +20,5 @@ test-only *CppHVisitorTest*
 clear && printf '\e[3J'
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 test-only *CppHVisitorTest*
+xtc translate
+runxtc -translate src/test/java/inputs/Test000/Test000.java

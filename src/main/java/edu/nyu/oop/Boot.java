@@ -23,6 +23,7 @@ import xtc.lang.CPrinter;
 import xtc.parser.ParseException;
 import xtc.util.Runtime;
 
+
 /**
  * A 'Tool' is an entry point to a program that uses XTC. It configures the user interface, defining
  * the set of valid commands, provides feedback to the user about their inputs
@@ -151,13 +152,17 @@ public class Boot extends Tool {
             System.out.println("Start Phase One");
             List <GNode> javaASTNodes = PrimarySourceAndDep.getSourceAndDep((GNode)n);
             //System.out.println("Total Number of AST's found: " + javaASTNodes.size());
-            GNode firstNode = javaASTNodes.get(0); //Get the first node
             //System.out.println(firstNode.getLocation().file);
             //System.out.println(javaASTNodes);
             System.out.println("END Phase One");
 
             //Phase 2 - ALl JavaAST head nodes are stored in javaASTNodesList
+            CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
 
+            //Phase 3
+            // print cpp node names for translation
+            CppHeaderPrinter printer = new CppHeaderPrinter();
+            printer.print(cppAST.getRoot());
 
 
 
