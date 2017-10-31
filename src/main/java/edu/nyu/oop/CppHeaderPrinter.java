@@ -153,6 +153,7 @@ public class CppHeaderPrinter extends Visitor {
 
     public void visitVTables(GNode n) throws IOException {
         printer.pln("");
+
         visit(n);
     }
 
