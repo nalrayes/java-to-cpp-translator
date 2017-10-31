@@ -22,3 +22,16 @@ runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 test-only *CppHVisitorTest*
 runxtc -cppFilePrinter "src/test/java/inputs/Test010/Test010.java"
 test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java

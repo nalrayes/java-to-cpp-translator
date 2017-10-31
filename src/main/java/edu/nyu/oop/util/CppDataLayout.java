@@ -126,6 +126,7 @@ public class CppDataLayout {
         String VTableDeclarator;
         String parentName;
         String custTypedef;
+        String VTPointer;
 
 
         ArrayList<CppConstructor> constructors;
@@ -134,6 +135,7 @@ public class CppDataLayout {
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
             this.parentName = c.getParentClass();
+            this.VTPointer = "__" + c.getClassName() + "* __vptr";
 
             this.name = "__" + c.getClassName();
             this.classDeclarator = "static Class __class()";
@@ -160,11 +162,11 @@ public class CppDataLayout {
                 }
             } else {
                 // make default constructor
-                CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
-
-                this.methods.add(defaultConstructor);
-
-                System.out.println(defaultConstructor);
+//                CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
+//
+//                this.methods.add(defaultConstructor);
+//
+//                System.out.println(defaultConstructor);
             }
 
 
@@ -230,7 +232,7 @@ public class CppDataLayout {
         public CppMethod(CustomMethodClass m) {
             parameters = new ArrayList<CppParameter>();
 
-            this.name = "__" + m.getName();
+            this.name =  m.getName();
             this.modifier = m.getModifier();
             this.visibility = m.getVisibility();
 

@@ -49,11 +49,12 @@ public class CppHeaderASTCreator {
         }
 
 
-        //With the Class Summary create the struts
+
+        //With the Class Summary populate the CppAST Tree
         for (TraverseAST.ClassSummary javaData : javaClassSummaries) {
             //Add the nameSpaces to our C++ AST Tree
             GNode currentNamespace = addNameSpacesToCppAST(javaData, cppHeaderAST);
-           addStructNodes(javaData, currentNamespace, cppHeaderAST);
+            addStructNodes(javaData, currentNamespace, cppHeaderAST);
         }
 
         //Check to print out the recent parent mutated of the ASTTree
@@ -64,11 +65,11 @@ public class CppHeaderASTCreator {
         //Fill the CPPClassObjects with their data layouts
         fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
 
-        //TODO TEST - print all the CPPDataObject's Layouts
-        ArrayList<CppClassObject> clist = cppHeaderAST.getCppClassObjectslist();
-        for (CppClassObject c : clist){
-             System.out.println(c.getCppDataLayout());
-        }
+//        //TODO TEST - print all the CPPDataObject's Layouts
+//        ArrayList<CppClassObject> clist = cppHeaderAST.getCppClassObjectslist();
+//        for (CppClassObject c : clist){
+//             System.out.println(c.getCppDataLayout());
+//        }
 
         return cppHeaderAST;
     }

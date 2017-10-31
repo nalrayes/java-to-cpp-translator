@@ -72,9 +72,11 @@ public class CppHeaderPrinter extends Visitor {
     }
     public void visitStruct(GNode n) throws IOException {
         printer.pln("struct " + n.getString(0) + ";");
-        printer.pln(n.getString(1) + ";");
+        printer.pln("struct " + n.getString(0) + "_VT;");
+        printer.pln("typedef " + n.getString(1) + ";");
         printer.pln("");
         printer.pln("struct " + n.getString(0) + " { ");
+        printer.pln(n.getString(2));
         // the constructor for the struct (initializer)
         printer.pln(n.getString(0) + "();");
         printer.pln("");
@@ -116,7 +118,7 @@ public class CppHeaderPrinter extends Visitor {
         // TODO: add static modifiers
         CppDataLayout.typeTranslate tt = new CppDataLayout.typeTranslate();
         String type = tt.translateType(n.getString(1));
-        printer.p(n.getString(1) + " " + n.getString(0));
+        printer.p("static " + n.getString(1) + " " + n.getString(0));
         printer = printer.buffer();
         visit(n);
         printer.pln(";");
@@ -131,7 +133,7 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitVTable(GNode n) throws IOException {
-        printer.pln("struct __" + n.getString(0) + "_VT;");
+
         printer.pln("");
         printer.pln("struct __" + n.getString(0) + "_VT { ");
         visit(n);
