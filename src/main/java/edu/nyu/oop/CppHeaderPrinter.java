@@ -76,16 +76,23 @@ public class CppHeaderPrinter extends Visitor {
         printer.pln("typedef " + n.getString(1) + ";");
         printer.pln("");
         printer.pln("struct " + n.getString(0) + " { ");
-        printer.pln(n.getString(2));
+        // print vtable pointer
+        printer.pln(n.getString(2) +";");
         // the constructor for the struct (initializer)
         printer.pln(n.getString(0) + "();");
+
+
         printer.pln("");
         visit(n);
+        printer.pln(n.getString(3)+";");
+        printer.pln(n.getString(4)+";");
+
         printer.pln("};");
         printer.pln("\n");
     }
     public void visitMethods(GNode n) throws IOException {
         visit(n);
+
         printer.pln("");
     }
 
@@ -135,7 +142,10 @@ public class CppHeaderPrinter extends Visitor {
     public void visitVTable(GNode n) throws IOException {
 
         printer.pln("");
+
         printer.pln("struct __" + n.getString(0) + "_VT { ");
+        printer.pln(n.getString(3) + ";");
+
         visit(n);
         printer.pln("};");
         printer.pln("\n");

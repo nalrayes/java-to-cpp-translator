@@ -129,17 +129,18 @@ public class CppDataLayout {
         String VTPointer;
 
 
+
         ArrayList<CppConstructor> constructors;
 
         public CppStruct(CustomClassObject c) {
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
             this.parentName = c.getParentClass();
-            this.VTPointer = "__" + c.getClassName() + "* __vptr";
+            this.VTPointer = "__" + c.getClassName() + "_VT* __vptr";
 
             this.name = "__" + c.getClassName();
             this.classDeclarator = "static Class __class()";
-            this.VTableDeclarator = "__" + name + "_" +"VT" + " __vtable";
+            this.VTableDeclarator = "static __" + c.getClassName() + "_" +"VT" + " __vtable";
             this.custTypedef = "__" + c.getClassName() +"* " + c.getClassName();
 
 
@@ -148,7 +149,7 @@ public class CppDataLayout {
             // instantiates all data
             for (CustomMethodClass javaMethod : c.getMethods()) {
 
-                CppMethod cMethod = new CppMethod(javaMethod);
+                CppMethod cMethod = new CppMethod(javaMethod, c);
                 methods.add(cMethod);
 
             }
@@ -162,11 +163,11 @@ public class CppDataLayout {
                 }
             } else {
                 // make default constructor
-//                CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
-//
-//                this.methods.add(defaultConstructor);
-//
-//                System.out.println(defaultConstructor);
+                CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
+
+                this.methods.add(defaultConstructor);
+
+                System.out.println(defaultConstructor);
             }
 
 
@@ -228,18 +229,37 @@ public class CppDataLayout {
         String visibility;
         String returnType;
         ArrayList<CppParameter> parameters;
+        String methodOwner;
+        String fullLine;
 
-        public CppMethod(CustomMethodClass m) {
+        public CppMethod(CustomMethodClass m, CustomClassObject c) {
             parameters = new ArrayList<CppParameter>();
 
             this.name =  m.getName();
             this.modifier = m.getModifier();
             this.visibility = m.getVisibility();
-
+            this.methodOwner = m.getOwnerClass();
             typeTranslate translateType = new typeTranslate();
             this.returnType = translateType.translateType(m.getReturnType());
+            //this.fullLine = "static " + this.returnType +" " + m.getName()  + "(**" +"**)";
 
+
+
+           // this.parameters.add(c.getClassName());
             // translates and add java method params to cpp method params
+            CppParameter classParam = new CppParameter(c.getClassName(), c.getClassName());
+            CppParameter objectParam = new CppParameter("Object", "Object");
+            if (m.getName().equals("equals")){
+                this.parameters.add(classParam);
+                this.parameters.add(objectParam);
+
+            }
+            else{
+                this.parameters.add(classParam);
+
+            }
+
+
             for (CustomVariablesClass javaParam : m.getParameters()) {
 
 
@@ -247,6 +267,7 @@ public class CppDataLayout {
                 this.parameters.add(cParam);
 
             }
+
 
 
         }
@@ -298,6 +319,11 @@ public class CppDataLayout {
             this.type = translateType.translateType(v.getType());
 
 
+        }
+
+        public CppParameter(String name, String type){
+            this.name = name;
+            this.type = type;
         }
 
     }
@@ -654,7 +680,7 @@ public class CppDataLayout {
                 fullLine = "";
 
                 if (isOverridden) {;
-                    this.objectReference = method.getName() + "(__" + className + "::" + method.getName() + ")";
+                    this.objectReference = method.getName() + "(&__" + className + "::" + method.getName() + ")";
                     this.fullLine = this.objectReference;
                 }
                 else {
@@ -662,10 +688,23 @@ public class CppDataLayout {
 
                     // get parent class
                     if (method.getOwnerClass() != "None") {
-                        this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "_" + className + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
+                        if (!method.getName().equals("equals")) {
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
+                        }
+                        else{
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
+
+                        }
+
                     }
                     else {
-                        this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + "_" + className + " &_Object::" + method.getName() + ")";
+                        if (!method.getName().equals("equals")) {
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &_Object::" + method.getName() + ")";
+                        }
+                        else{
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &_Object::" + method.getName() + ")";
+
+                        }
                     }
                     this.fullLine = this.objectReference + this.returnTypeClassName;
                 }
@@ -725,6 +764,7 @@ public class CppDataLayout {
 
                 this.VTInstantiators = new ArrayList<VTInstantiator>();
                 this.VTMethods = new ArrayList<VTMethod>();
+                this.is_a = "Class __is_a";
                 ArrayList<CustomMethodClass> VTInheritedmethods = new ArrayList<CustomMethodClass>();
 
                 CustomClassObject tempStruct = currClass;
@@ -895,16 +935,33 @@ public class CppDataLayout {
             String fullLine;
 
 
+            public void setFullLine(CustomMethodClass method, String returnT, String className) {
+                if (!method.getName().equals("equals")) {
+
+                    this.fullLine = returnT + " (*" + method.getName() + ") (" + className + ")";
+                }
+                else{
+                    this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
 
 
+                }
+            }
 
-                // for overriden methods
+            // for overriden methods
                 public VTMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
 
                     typeTranslate translateType = new typeTranslate();
                     String returnT = translateType.translateType(method.getReturnType());
-                    this.fullLine = returnT + " *(" + method.getName() + ") (" + className + ")";
-
+//                    if (!method.getName().equals("equals")) {
+//
+//                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + ")";
+//                    }
+//                    else{
+//                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
+//
+//
+//                    }
+                    setFullLine(method, returnT, className);
 
 
                 }

@@ -50,6 +50,11 @@ public abstract class cppNodeActions {
             newNode.add(value.name);
             newNode.add(value.custTypedef);
             newNode.add(value.VTPointer);
+            newNode.add(value.classDeclarator);
+            newNode.add(value.VTableDeclarator);
+
+
+
             addMethodsToNodeWithArray(newNode, value.methods);
             addFieldsToNodeWithArray(newNode, value.variables);
             node.add(newNode);
@@ -73,8 +78,10 @@ public abstract class cppNodeActions {
 
                 newNode.add(value.name);
 
+
             addVTMethodsToNodeWithArray(newNode, value.VTMethods);
             addVTInstantiatorsToNodeWithArray(newNode, value.VTInstantiators);
+            newNode.add(value.is_a);
             //addInstantiatorMethodsToNodeWithArray(newNode, value.VTInstantiators.getVTInstantiatorMethods());
 
 //            addFieldsToNodeWithArray(newNode, value.variables);
@@ -94,6 +101,8 @@ public abstract class cppNodeActions {
 
             methodNode.add(method.name);
             methodNode.add(method.returnType);
+            methodNode.add(method.fullLine);
+
             methodNode.add(createNewASTNode("Visibility").add(method.visibility));
             methodNode.add(createModifiersNode(method.modifier));
             methodNode.add(createParametersNode(method.parameters));
