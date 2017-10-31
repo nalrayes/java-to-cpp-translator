@@ -26,12 +26,13 @@ class B1 extends A {
 class B2 extends B1 {
     public void goodbye(){}
     public void helloWorld(){}
+    public void helloJohn(){}
 
     String b;
 }
 
 class C extends B2 {
-    //public void helloWorld(){}
+    public void helloDave(){}
     public String toString() {
         return "123";
     }

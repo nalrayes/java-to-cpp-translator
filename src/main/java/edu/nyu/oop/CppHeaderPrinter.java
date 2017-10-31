@@ -101,8 +101,6 @@ public class CppHeaderPrinter extends Visitor {
             sb.append(curNode.getString(0));
             sb.append(',');
         }
-        System.out.println("???");
-        System.out.println(sb);
         if (sb.length() > 0) {
             sb.delete(sb.length() - 1, sb.length());
         }
@@ -132,9 +130,9 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitVTable(GNode n) throws IOException {
-        printer.pln("struct " + n.getString(0) + ";");
+        printer.pln("struct __" + n.getString(0) + "_VT;");
         printer.pln("");
-        printer.pln("struct " + n.getString(0) + " { ");
+        printer.pln("struct __" + n.getString(0) + "_VT { ");
         visit(n);
         printer.pln("};");
         printer.pln("\n");
@@ -146,7 +144,7 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitVTMethod(GNode n) {
-        printer.pln(n.getString(0));
+        printer.pln(n.getString(0) + ";");
         visit(n);
     }
 
@@ -163,6 +161,7 @@ public class CppHeaderPrinter extends Visitor {
         printer.pln(n.getString(0));
         printer.pln(n.getString(1));
         visit(n);
+        printer.pln(n.getString(3));
     }
 
     public void visitInstantiatorMethods(GNode n) {

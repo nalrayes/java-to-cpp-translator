@@ -8,7 +8,7 @@ import org.junit.*;
 import org.slf4j.Logger;
 import xtc.tree.GNode;
 
-import edu.nyu.oop.util.cppNodeActions;
+import edu.nyu.oop.CppHeaderPrinter;
 
 
 import static org.junit.Assert.*;

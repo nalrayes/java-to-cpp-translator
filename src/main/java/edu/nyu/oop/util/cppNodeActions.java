@@ -114,6 +114,7 @@ public abstract class cppNodeActions {
 
             newNode.add(methodNode);
         }
+
         node.add(newNode);
 
     }
@@ -124,7 +125,7 @@ public abstract class cppNodeActions {
         for (CppDataLayout.VTMethod method : methods) {
             GNode methodNode = createNewASTNode("VTMethod");
 
-            methodNode.add(method.methodName);
+            methodNode.add(method.fullLine);
 
             newNode.add(methodNode);
         }
@@ -153,9 +154,10 @@ public abstract class cppNodeActions {
 
             }
             instantiatorNode.add(instantiatorMethodsNode);
-
+            instantiatorNode.add(instantiator.randoCurls);
             newNode.add(instantiatorNode);
         }
+
         node.add(newNode);
 
     }
