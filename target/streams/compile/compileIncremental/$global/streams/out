@@ -14,10 +14,10 @@
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@6d4e915c directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.031795718 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.012109683 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.045935631 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@ebb2fcb directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.039487633 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.013648287 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.054885404 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

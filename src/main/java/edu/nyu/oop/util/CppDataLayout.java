@@ -689,7 +689,7 @@ public class CppDataLayout {
                     // get parent class
                     if (method.getOwnerClass() != "None") {
                         if (!method.getName().equals("equals")) {
-                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
                         }
                         else{
                             this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
@@ -699,10 +699,10 @@ public class CppDataLayout {
                     }
                     else {
                         if (!method.getName().equals("equals")) {
-                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &_Object::" + method.getName() + ")";
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__Object::" + method.getName() + ")";
                         }
                         else{
-                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &_Object::" + method.getName() + ")";
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &__Object::" + method.getName() + ")";
 
                         }
                     }
@@ -935,33 +935,23 @@ public class CppDataLayout {
             String fullLine;
 
 
-            public void setFullLine(CustomMethodClass method, String returnT, String className) {
-                if (!method.getName().equals("equals")) {
 
-                    this.fullLine = returnT + " (*" + method.getName() + ") (" + className + ")";
-                }
-                else{
-                    this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
-
-
-                }
-            }
 
             // for overriden methods
                 public VTMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
 
                     typeTranslate translateType = new typeTranslate();
                     String returnT = translateType.translateType(method.getReturnType());
-//                    if (!method.getName().equals("equals")) {
-//
-//                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + ")";
-//                    }
-//                    else{
-//                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
-//
-//
-//                    }
-                    setFullLine(method, returnT, className);
+                    if (!method.getName().equals("equals")) {
+
+                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + ")";
+                    }
+                    else{
+                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
+
+
+                    }
+
 
 
                 }

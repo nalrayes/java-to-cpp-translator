@@ -50,3 +50,4 @@ runxtc -translate src/test/java/inputs/Test001/Test001.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test001/Test001.java
 runxtc -translate src/test/java/inputs/Test002/Test002.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
