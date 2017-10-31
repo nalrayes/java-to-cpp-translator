@@ -51,3 +51,11 @@ test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test001/Test001.java
 runxtc -translate src/test/java/inputs/Test002/Test002.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+q
+runxtc -translate src/test/java/inputs/Test010/Test010.java

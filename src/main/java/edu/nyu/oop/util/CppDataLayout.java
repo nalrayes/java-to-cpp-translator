@@ -494,9 +494,28 @@ public class CppDataLayout {
             ArrayList<VTInstantiatorMethod> overwrittenMethods = new ArrayList<VTInstantiatorMethod>();
             // check if current class overrides any of these methods
             int index = 0;
+            ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
+            int k = 0;
+            boolean isLastMethod = false;
+
+
+            for (CustomMethodClass m1 : currStruct.getMethods()) {
+                if (k == currStruct.getMethods().size() -1 ){
+
+                    isLastMethod = true;
+
+                }
+                m1.setOwnerClass(currStruct.getClassName());
+                // if m isnt in overwritten methods, add it to vtinstantiator
+                if (!(inheritedMethodNames.contains(m1.getName()))) {
+                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m1, currStruct.getClassName(), isLastMethod, true);
+                    overwrittenMethods.add(vtiMethod);
+                }
+            }
+
 
             for (CustomMethodClass m : inheritedMethods){
-                boolean isLastMethod = false;
+                 isLastMethod = false;
 
                 if (index == currStruct.getMethods().size() -1 ){
 
@@ -510,16 +529,16 @@ public class CppDataLayout {
                 boolean isOverriden = false;
                 // if contains override
 
-                if (currStruct.getMethodNames().contains(m.getName())){
-                    isOverriden = true;
+                if (!currStruct.getMethodNames().contains(m.getName())){
+                    isOverriden = false;
                     m.setOwnerClass(currStruct.getClassName());
 
                 String className = currStruct.getClassName();
 
                     // create overridden instantiator
 
-                VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
-                    overwrittenMethods.add(vtiMethod);
+                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
+                    VTInstantiatorMethods.add(vtiMethod);
 
                    // add to list of vt instantiatior methods
 
@@ -527,8 +546,9 @@ public class CppDataLayout {
                 }
                 else {
                     String className = currStruct.getClassName();
+                    isOverriden = true;
                     VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
-                    VTInstantiatorMethods.add(vtiMethod);
+                    overwrittenMethods.add(vtiMethod);
 
 
                 }
@@ -539,22 +559,9 @@ public class CppDataLayout {
 
             }
 
-            ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
-            int k = 0;
-            boolean isLastMethod = false;
-            for (CustomMethodClass m : currStruct.getMethods()) {
-                if (k == currStruct.getMethods().size() -1 ){
 
-                    isLastMethod = true;
 
-                }
-                m.setOwnerClass(currStruct.getClassName());
-                // if m isnt in overwritten methods, add it to vtinstantiator
-                if (!(inheritedMethodNames.contains(m.getName()))) {
-                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, currStruct.getClassName(), isLastMethod, false);
-                    VTInstantiatorMethods.add(vtiMethod);
-                }
-            }
+
 
             VTInstantiatorMethods.addAll(overwrittenMethods);
 
