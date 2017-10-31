@@ -8,6 +8,7 @@ namespace inputs {
 namespace CustomTests {
 
 struct __A;
+__A* A;
 
 struct __A { 
 __A();
@@ -23,6 +24,7 @@ String a;
 
 
 struct __B1;
+__B1* B1;
 
 struct __B1 { 
 __B1();
@@ -36,6 +38,7 @@ String b;
 
 
 struct __B2;
+__B2* B2;
 
 struct __B2 { 
 __B2();
@@ -51,6 +54,7 @@ String b;
 
 
 struct __C;
+__C* C;
 
 struct __C { 
 __C();
@@ -65,6 +69,7 @@ String c;
 
 
 struct __CustomTest1;
+__CustomTest1* CustomTest1;
 
 struct __CustomTest1 { 
 __CustomTest1();

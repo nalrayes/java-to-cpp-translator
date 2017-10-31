@@ -49,8 +49,7 @@ public class CppHeaderASTCreator {
         }
 
 
-        //TODO TEST
-        //With the Class Summary create the namespaces
+        //With the Class Summary create the struts
         for (TraverseAST.ClassSummary javaData : javaClassSummaries) {
             //Add the nameSpaces to our C++ AST Tree
             GNode currentNamespace = addNameSpacesToCppAST(javaData, cppHeaderAST);

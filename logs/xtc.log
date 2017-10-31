@@ -903,3 +903,24 @@
 2017-10-31 00:55:56,709 - [pool-17-thread-7] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
 2017-10-31 00:55:56,746 - [pool-17-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/CustomTests
 2017-10-31 00:55:56,747 - [pool-17-thread-7] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-31 14:09:42,461 - [pool-6-thread-8] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-31 14:09:42,515 - [pool-6-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-31 14:09:42,516 - [pool-6-thread-8] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-31 14:13:56,714 - [main] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-31 14:13:56,807 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-31 14:13:56,807 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-31 14:16:40,332 - [pool-6-thread-5] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-31 14:16:40,381 - [pool-6-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-31 14:16:40,381 - [pool-6-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-31 14:21:12,299 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-31 14:22:24,117 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-31 14:23:56,627 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-10-31 14:40:33,076 - [pool-11-thread-2] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-31 14:40:33,118 - [pool-11-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-31 14:40:33,119 - [pool-11-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-31 15:42:05,214 - [pool-13-thread-6] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-31 15:42:05,264 - [pool-13-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-31 15:42:05,265 - [pool-13-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-10-31 15:42:56,397 - [pool-15-thread-6] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-10-31 15:42:56,443 - [pool-15-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/inputs/CustomTests
+2017-10-31 15:42:56,443 - [pool-15-thread-6] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java

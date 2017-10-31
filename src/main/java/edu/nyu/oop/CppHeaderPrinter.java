@@ -72,6 +72,7 @@ public class CppHeaderPrinter extends Visitor {
     }
     public void visitStruct(GNode n) throws IOException {
         printer.pln("struct " + n.getString(0) + ";");
+        printer.pln(n.getString(1) + ";");
         printer.pln("");
         printer.pln("struct " + n.getString(0) + " { ");
         // the constructor for the struct (initializer)

@@ -4,10 +4,12 @@
     <list default="true" id="cd56c2e6-0096-45e4-8688-3e17424c69ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/output.h" afterPath="$PROJECT_DIR$/output/output.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/main.cpp" afterPath="$PROJECT_DIR$/output/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderPrinter.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderPrinter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" afterPath="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
     </list>
@@ -26,44 +28,61 @@
       <file leaf-file-name="CppHeaderASTCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5928">
-              <caret line="316" column="27" lean-forward="false" selection-start-line="316" selection-start-column="27" selection-end-line="316" selection-end-column="27" />
+            <state relative-caret-position="381">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="57" selection-end-column="0" />
               <folding>
-                <marker date="1509388257000" expanded="true" signature="16796:16939" ph="{...}" />
+                <marker date="1509477295000" expanded="true" signature="16920:17063" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CppClassObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
+      <file leaf-file-name="TraverseAST.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-28">
-              <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+            <state relative-caret-position="839">
+              <caret line="216" column="9" lean-forward="true" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test010.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test010/Test010.java">
+      <file leaf-file-name="Boot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+            <state relative-caret-position="1755">
+              <caret line="146" column="21" lean-forward="false" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomTest1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CppHeaderPrinter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderPrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="74" column="20" lean-forward="false" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/output.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomTest1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="639">
               <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-              <folding>
-                <marker date="1509389029000" expanded="false" signature="537:548" ph=" { " />
-                <marker date="1509389029000" expanded="false" signature="561:567" ph=" }" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,46 +90,8 @@
       <file leaf-file-name="CppDataLayout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="899" column="12" lean-forward="false" selection-start-line="899" selection-start-column="12" selection-end-line="899" selection-end-column="12" />
-              <folding>
-                <element signature="e#3778#3779#0" expanded="true" />
-                <element signature="e#3813#3814#0" expanded="true" />
-                <element signature="e#3854#3855#0" expanded="true" />
-                <element signature="e#3895#3896#0" expanded="true" />
-                <element signature="e#3947#3948#0" expanded="true" />
-                <element signature="e#3985#3986#0" expanded="true" />
-                <element signature="e#6412#6431#0" expanded="true" />
-                <element signature="e#7532#7540#0" expanded="true" />
-                <element signature="e#7955#7956#0" expanded="true" />
-                <element signature="e#7989#7990#0" expanded="true" />
-                <element signature="e#10603#10625#0" expanded="true" />
-                <element signature="e#15381#15382#0" expanded="true" />
-                <element signature="e#15427#15428#0" expanded="true" />
-                <element signature="e#15505#15506#0" expanded="true" />
-                <element signature="e#15557#15558#0" expanded="true" />
-                <element signature="e#17507#17508#0" expanded="true" />
-                <element signature="e#17561#17562#0" expanded="true" />
-                <element signature="e#17604#17605#0" expanded="true" />
-                <element signature="e#17651#17652#0" expanded="true" />
-                <element signature="e#17705#17706#0" expanded="true" />
-                <element signature="e#17763#17764#0" expanded="true" />
-                <element signature="e#18378#18397#0" expanded="true" />
-                <element signature="e#21400#21410#0" expanded="true" />
-                <element signature="e#26242#26243#0" expanded="true" />
-                <element signature="e#26290#26291#0" expanded="true" />
-                <element signature="e#26356#26357#0" expanded="true" />
-                <element signature="e#26386#26387#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomMethodClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomMethodClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="188">
+              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,23 +100,9 @@
       <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="126" column="42" lean-forward="false" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+            <state relative-caret-position="428">
+              <caret line="50" column="41" lean-forward="false" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CppHVisitorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/CppHVisitorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-              <folding>
-                <marker date="1509388260000" expanded="true" signature="753:2135" ph="{...}" />
-                <marker date="1509388260000" expanded="true" signature="1336:2128" ph="//..." />
-                <marker date="1509388260000" expanded="true" signature="2184:2192" ph="{}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -143,7 +110,7 @@
       <file leaf-file-name="CustomClassObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
+            <state relative-caret-position="798">
               <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="e#1451#1452#0" expanded="true" />
@@ -158,17 +125,9 @@
       <file leaf-file-name="TraverseASTTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="26" column="92" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="92" />
-              <folding>
-                <marker date="1509388257000" expanded="true" signature="811:1520" ph="{...}" />
-                <marker date="1509388257000" expanded="true" signature="871:934" ph="//..." />
-                <marker date="1509388257000" expanded="true" signature="1069:1341" ph="//..." />
-                <marker date="1509388257000" expanded="true" signature="1569:5816" ph="{...}" />
-                <marker date="1509388257000" expanded="true" signature="1579:1714" ph="//..." />
-                <marker date="1509388257000" expanded="true" signature="4833:5810" ph="//..." />
-                <marker date="1509388257000" expanded="true" signature="5818:6180" ph="//..." />
-              </folding>
+            <state relative-caret-position="370">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,18 +136,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CppStruct</find>
-      <find>VTInstantia</find>
-      <find>structsmap</find>
-      <find>structsM</find>
-      <find>structsMa</find>
-      <find>structsMap</find>
-      <find>structs.add</find>
-      <find>VTInsta</find>
-      <find>cm</find>
       <find>VTAB</find>
       <find>VTInstantiatorMe</find>
-      <find>VTable</find>
       <find>params</find>
       <find>Instantiator</find>
       <find>declarationN</find>
@@ -207,6 +156,16 @@
       <find>VTMEth</find>
       <find>VTMethod</find>
       <find>addVT</find>
+      <find>&quot;None&quot;</find>
+      <find>printCppCode</find>
+      <find>cppFileP</find>
+      <find>output.h</find>
+      <find>printer</find>
+      <find>visitClass</find>
+      <find>visitClassDe</find>
+      <find>VTab</find>
+      <find>&quot;none</find>
+      <find>VTable</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -225,11 +184,12 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java" />
         <option value="$PROJECT_DIR$/logs/xtc.log" />
         <option value="$PROJECT_DIR$/src/test/java/edu/nyu/oop/CppHVisitorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java" />
-        <option value="$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderPrinter.java" />
       </list>
     </option>
   </component>
@@ -260,7 +220,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -420,9 +383,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -601,13 +561,11 @@
       <updated>1508867298612</updated>
       <workItem from="1508867305442" duration="36190000" />
       <workItem from="1509211539164" duration="1688000" />
+      <workItem from="1509473517947" duration="4959000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CppHVisitorTest - 2017.10.28 at 12h 10m 12s.xml">
-      <configuration name="CppHVisitorTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CppHVisitorTest - 2017.10.28 at 12h 11m 43s.xml">
       <configuration name="CppHVisitorTest" configurationId="JUnit" />
     </history-entry>
@@ -632,15 +590,18 @@
     <history-entry file="CppHVisitorTest - 2017.10.28 at 13h 39m 15s.xml">
       <configuration name="CppHVisitorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CppHVisitorTest - 2017.10.31 at 14h 13m 57s.xml">
+      <configuration name="CppHVisitorTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TraverseASTTest - 2017.10.28 at 12h 28m 07s.xml">
       <configuration name="TraverseASTTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26529000" />
+    <option name="totallyTimeSpent" value="31488000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="23" width="1511" height="859" extended-state="0" />
+    <frame x="30" y="24" width="1609" height="859" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -652,14 +613,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.013089005" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15793057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13337588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -667,34 +629,10 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.013089005" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30759412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,50 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-          <folding>
-            <element signature="e#3778#3779#0" expanded="true" />
-            <element signature="e#3813#3814#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3895#3896#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#6412#6431#0" expanded="true" />
-            <element signature="e#7532#7540#0" expanded="true" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7989#7990#0" expanded="true" />
-            <element signature="e#10603#10625#0" expanded="true" />
-            <element signature="e#15381#15382#0" expanded="true" />
-            <element signature="e#15427#15428#0" expanded="true" />
-            <element signature="e#15505#15506#0" expanded="true" />
-            <element signature="e#15557#15558#0" expanded="true" />
-            <element signature="e#17507#17508#0" expanded="true" />
-            <element signature="e#17561#17562#0" expanded="true" />
-            <element signature="e#17604#17605#0" expanded="true" />
-            <element signature="e#17651#17652#0" expanded="true" />
-            <element signature="e#17705#17706#0" expanded="true" />
-            <element signature="e#17763#17764#0" expanded="true" />
-            <element signature="e#18378#18397#0" expanded="true" />
-            <element signature="e#21400#21410#0" expanded="true" />
-            <element signature="e#26242#26243#0" expanded="true" />
-            <element signature="e#26290#26291#0" expanded="true" />
-            <element signature="e#26356#26357#0" expanded="true" />
-            <element signature="e#26386#26387#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -788,9 +682,10 @@
         <state relative-caret-position="532">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <marker date="1509388260000" expanded="true" signature="753:2135" ph="{...}" />
-            <marker date="1509388260000" expanded="true" signature="1336:2128" ph="//..." />
-            <marker date="1509388260000" expanded="true" signature="2184:2192" ph="{}" />
+            <marker date="1509473366000" expanded="true" signature="505:711" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="750:2132" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="1333:2125" ph="//..." />
+            <marker date="1509473366000" expanded="true" signature="2181:2189" ph="{}" />
           </folding>
         </state>
       </provider>
@@ -808,7 +703,7 @@
         <state relative-caret-position="1007">
           <caret line="57" column="63" lean-forward="true" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
           <folding>
-            <marker date="1509388257000" expanded="true" signature="16796:16939" ph="{...}" />
+            <marker date="1509477295000" expanded="true" signature="16920:17063" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -906,9 +801,10 @@
         <state relative-caret-position="342">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <marker date="1509388260000" expanded="true" signature="753:2135" ph="{...}" />
-            <marker date="1509388260000" expanded="true" signature="1336:2128" ph="//..." />
-            <marker date="1509388260000" expanded="true" signature="2184:2192" ph="{}" />
+            <marker date="1509473366000" expanded="true" signature="505:711" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="750:2132" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="1333:2125" ph="//..." />
+            <marker date="1509473366000" expanded="true" signature="2181:2189" ph="{}" />
           </folding>
         </state>
       </provider>
@@ -918,7 +814,7 @@
         <state relative-caret-position="299">
           <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <marker date="1509388257000" expanded="true" signature="16796:16939" ph="{...}" />
+            <marker date="1509477295000" expanded="true" signature="16920:17063" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -943,35 +839,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5770">
           <caret line="516" column="0" lean-forward="true" selection-start-line="516" selection-start-column="0" selection-end-line="516" selection-end-column="0" />
-          <folding>
-            <element signature="e#3778#3779#0" expanded="true" />
-            <element signature="e#3813#3814#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3895#3896#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#6412#6431#0" expanded="true" />
-            <element signature="e#7532#7540#0" expanded="true" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7989#7990#0" expanded="true" />
-            <element signature="e#10603#10625#0" expanded="true" />
-            <element signature="e#15381#15382#0" expanded="true" />
-            <element signature="e#15427#15428#0" expanded="true" />
-            <element signature="e#15505#15506#0" expanded="true" />
-            <element signature="e#15557#15558#0" expanded="true" />
-            <element signature="e#17507#17508#0" expanded="true" />
-            <element signature="e#17561#17562#0" expanded="true" />
-            <element signature="e#17604#17605#0" expanded="true" />
-            <element signature="e#17651#17652#0" expanded="true" />
-            <element signature="e#17705#17706#0" expanded="true" />
-            <element signature="e#17763#17764#0" expanded="true" />
-            <element signature="e#18378#18397#0" expanded="true" />
-            <element signature="e#21400#21410#0" expanded="true" />
-            <element signature="e#26242#26243#0" expanded="true" />
-            <element signature="e#26290#26291#0" expanded="true" />
-            <element signature="e#26356#26357#0" expanded="true" />
-            <element signature="e#26386#26387#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -994,35 +862,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-          <folding>
-            <element signature="e#3778#3779#0" expanded="true" />
-            <element signature="e#3813#3814#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3895#3896#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#6412#6431#0" expanded="true" />
-            <element signature="e#7532#7540#0" expanded="true" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7989#7990#0" expanded="true" />
-            <element signature="e#10603#10625#0" expanded="true" />
-            <element signature="e#15381#15382#0" expanded="true" />
-            <element signature="e#15427#15428#0" expanded="true" />
-            <element signature="e#15505#15506#0" expanded="true" />
-            <element signature="e#15557#15558#0" expanded="true" />
-            <element signature="e#17507#17508#0" expanded="true" />
-            <element signature="e#17561#17562#0" expanded="true" />
-            <element signature="e#17604#17605#0" expanded="true" />
-            <element signature="e#17651#17652#0" expanded="true" />
-            <element signature="e#17705#17706#0" expanded="true" />
-            <element signature="e#17763#17764#0" expanded="true" />
-            <element signature="e#18378#18397#0" expanded="true" />
-            <element signature="e#21400#21410#0" expanded="true" />
-            <element signature="e#26242#26243#0" expanded="true" />
-            <element signature="e#26290#26291#0" expanded="true" />
-            <element signature="e#26356#26357#0" expanded="true" />
-            <element signature="e#26386#26387#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,9 +900,10 @@
         <state relative-caret-position="532">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
-            <marker date="1509388260000" expanded="true" signature="753:2135" ph="{...}" />
-            <marker date="1509388260000" expanded="true" signature="1336:2128" ph="//..." />
-            <marker date="1509388260000" expanded="true" signature="2184:2192" ph="{}" />
+            <marker date="1509473366000" expanded="true" signature="505:711" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="750:2132" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="1333:2125" ph="//..." />
+            <marker date="1509473366000" expanded="true" signature="2181:2189" ph="{}" />
           </folding>
         </state>
       </provider>
@@ -1080,15 +921,8 @@
         <state relative-caret-position="1007">
           <caret line="57" column="63" lean-forward="true" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
           <folding>
-            <marker date="1509388257000" expanded="true" signature="16796:16939" ph="{...}" />
+            <marker date="1509477295000" expanded="true" signature="16920:17063" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1128,14 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderPrinter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CPPAST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -1146,35 +972,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
+        <state relative-caret-position="532">
           <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="92" lean-forward="false" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="92" />
-          <folding>
-            <marker date="1509388257000" expanded="true" signature="811:1520" ph="{...}" />
-            <marker date="1509388257000" expanded="true" signature="871:934" ph="//..." />
-            <marker date="1509388257000" expanded="true" signature="1069:1341" ph="//..." />
-            <marker date="1509388257000" expanded="true" signature="1569:5816" ph="{...}" />
-            <marker date="1509388257000" expanded="true" signature="1579:1714" ph="//..." />
-            <marker date="1509388257000" expanded="true" signature="4833:5810" ph="//..." />
-            <marker date="1509388257000" expanded="true" signature="5818:6180" ph="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5928">
-          <caret line="316" column="27" lean-forward="false" selection-start-line="316" selection-start-column="27" selection-end-line="316" selection-end-column="27" />
-          <folding>
-            <marker date="1509388257000" expanded="true" signature="16796:16939" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1183,9 +983,10 @@
         <state relative-caret-position="361">
           <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding>
-            <marker date="1509388260000" expanded="true" signature="753:2135" ph="{...}" />
-            <marker date="1509388260000" expanded="true" signature="1336:2128" ph="//..." />
-            <marker date="1509388260000" expanded="true" signature="2184:2192" ph="{}" />
+            <marker date="1509473366000" expanded="true" signature="505:711" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="750:2132" ph="{...}" />
+            <marker date="1509473366000" expanded="true" signature="1333:2125" ph="//..." />
+            <marker date="1509473366000" expanded="true" signature="2181:2189" ph="{}" />
           </folding>
         </state>
       </provider>
@@ -1200,7 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
+        <state relative-caret-position="798">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="e#1451#1452#0" expanded="true" />
@@ -1211,66 +1012,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomMethodClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/nyu/oop/TraverseASTTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/output.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/Boot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="146" column="21" lean-forward="false" selection-start-line="146" selection-start-column="21" selection-end-line="146" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/TraverseAST.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="157" column="76" lean-forward="false" selection-start-line="155" selection-start-column="14" selection-end-line="157" selection-end-column="76" />
+        <state relative-caret-position="839">
+          <caret line="216" column="9" lean-forward="true" selection-start-line="216" selection-start-column="9" selection-end-line="216" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <marker date="1509477295000" expanded="true" signature="16920:17063" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="899" column="12" lean-forward="false" selection-start-line="899" selection-start-column="12" selection-end-line="899" selection-end-column="12" />
-          <folding>
-            <element signature="e#3778#3779#0" expanded="true" />
-            <element signature="e#3813#3814#0" expanded="true" />
-            <element signature="e#3854#3855#0" expanded="true" />
-            <element signature="e#3895#3896#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#3985#3986#0" expanded="true" />
-            <element signature="e#6412#6431#0" expanded="true" />
-            <element signature="e#7532#7540#0" expanded="true" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7989#7990#0" expanded="true" />
-            <element signature="e#10603#10625#0" expanded="true" />
-            <element signature="e#15381#15382#0" expanded="true" />
-            <element signature="e#15427#15428#0" expanded="true" />
-            <element signature="e#15505#15506#0" expanded="true" />
-            <element signature="e#15557#15558#0" expanded="true" />
-            <element signature="e#17507#17508#0" expanded="true" />
-            <element signature="e#17561#17562#0" expanded="true" />
-            <element signature="e#17604#17605#0" expanded="true" />
-            <element signature="e#17651#17652#0" expanded="true" />
-            <element signature="e#17705#17706#0" expanded="true" />
-            <element signature="e#17763#17764#0" expanded="true" />
-            <element signature="e#18378#18397#0" expanded="true" />
-            <element signature="e#21400#21410#0" expanded="true" />
-            <element signature="e#26242#26243#0" expanded="true" />
-            <element signature="e#26290#26291#0" expanded="true" />
-            <element signature="e#26356#26357#0" expanded="true" />
-            <element signature="e#26386#26387#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="188">
+          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="126" column="42" lean-forward="false" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+        <state relative-caret-position="428">
+          <caret line="50" column="41" lean-forward="false" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/CustomTests/CustomTest1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
-          <folding>
-            <marker date="1509389029000" expanded="false" signature="537:548" ph=" { " />
-            <marker date="1509389029000" expanded="false" signature="561:567" ph=" }" />
-          </folding>
+        <state relative-caret-position="446">
+          <caret line="74" column="20" lean-forward="false" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

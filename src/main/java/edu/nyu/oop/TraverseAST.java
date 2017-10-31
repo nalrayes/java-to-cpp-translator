@@ -153,9 +153,6 @@ public class TraverseAST extends Visitor {
         if (extention != null){
             //there is an extension
             classExtension = extention.getNode(0).getNode(0).getString(0);
-//            System.out.println("EXTENSION *** " + extention);
-//
-//            System.out.println("EXTENSION precise *** " + classExtension);
 
         }
         //Add the extension to the class

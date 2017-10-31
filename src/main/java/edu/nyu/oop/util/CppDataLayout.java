@@ -37,11 +37,6 @@ public class CppDataLayout {
         parentDataLayout.getStructs();
 
 
-
-
-       // structsMap = new HashMap<>();
-
-
     }
 
     @Override
@@ -50,7 +45,6 @@ public class CppDataLayout {
     }
 
     // Helper method to translate java types to C++ types
-    // TODO: add differing types
     public static class typeTranslate {
 
         // TODO: make static
@@ -131,6 +125,7 @@ public class CppDataLayout {
         String classDeclarator;
         String VTableDeclarator;
         String parentName;
+        String custTypedef;
 
 
         ArrayList<CppConstructor> constructors;
@@ -143,6 +138,7 @@ public class CppDataLayout {
             this.name = "__" + c.getClassName();
             this.classDeclarator = "static Class __class()";
             this.VTableDeclarator = "__" + name + "_" +"VT" + " __vtable";
+            this.custTypedef = "__" + c.getClassName() +"* " + c.getClassName();
 
 
             this.constructors = new ArrayList<CppConstructor>();
@@ -427,18 +423,17 @@ public class CppDataLayout {
             System.out.println(inheritedMethods);
             System.out.println(tempStruct.getParentClass());
 
+
+            // gets inherited methods of a class
             while (tempStruct.getParentClass() != "None") {
 
                 String getParentStructName = tempStruct.getParentClass();
 
-                System.out.println("ASDASDASDASD");
-                System.out.println(getParentStructName);
                 // get all methods of parent class
                 CustomClassObject parentClass = classMap.get(getParentStructName);
 
                 for (CustomMethodClass method : parentClass.getMethods()) {
-                    System.out.println("!!!!!!!");
-                    System.out.println(method.getName());
+
                     ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
                     // checking if method is overwritten
                     if ((!inheritedMethodNames.contains(method.getName()))) {
@@ -486,12 +481,6 @@ public class CppDataLayout {
 
                 boolean isOverriden = false;
                 // if contains override
-
-
-                System.out.println("OVERWRITTEN1111111111111111111111111111");
-                System.out.println(currStruct.getClassName());
-                System.out.println(m.getName());
-                System.out.println(currStruct.getMethods());
 
                 if (currStruct.getMethodNames().contains(m.getName())){
                     isOverriden = true;
@@ -735,35 +724,10 @@ public class CppDataLayout {
                 this.VTInstantiators = new ArrayList<VTInstantiator>();
                 this.VTMethods = new ArrayList<VTMethod>();
                 ArrayList<CustomMethodClass> VTInheritedmethods = new ArrayList<CustomMethodClass>();
-//                VTMethod hashCodeMethod = new VTMethod("int32_t", "hashCode", currClass.getClassName());
-//                VTMethod equalsMethod = new VTMethod("bool", "equals", currClass.getClassName());
-//                VTMethod classMethod = new VTMethod("Class", "getClass", currClass.getClassName());
-//                VTMethod stringMethod = new VTMethod("String","toString", currClass.getClassName());
-//
-//                // add default methods
-//                VTMethods.add(hashCodeMethod);
-//                VTMethods.add(equalsMethod);
-//                VTMethods.add(classMethod);
-//                VTMethods.add(stringMethod);
-//
-//                System.out.println("asdhasd");
 
-                // add custom vtmethods
                 CustomClassObject tempStruct = currClass;
 
-
-                // tempStruct = currStruct;
-
                 // Get all methods that the current class inherits
-                System.out.println("*****************CLASS NAME");
-
-                System.out.println(currClass.getClassName());
-                System.out.println("*****************");
-
-                System.out.println("!!!");
-                System.out.println(VTInheritedmethods);
-                System.out.println(tempStruct.getParentClass());
-
                 while (tempStruct.getParentClass() != "None") {
 
                     String getParentStructName = tempStruct.getParentClass();
@@ -802,8 +766,6 @@ public class CppDataLayout {
                         VTInheritedmethods.add(m);
                     }
                 }
-
-//            inheritedMethods.addAll(overwriddenMethods);
 
                 ArrayList<VTMethod> overwrittenVTMethods = new ArrayList<VTMethod>();
                 // check if current class overrides any of these methods

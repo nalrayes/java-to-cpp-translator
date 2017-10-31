@@ -48,6 +48,7 @@ public abstract class cppNodeActions {
             //Add to the parent
             GNode newNode = createNewASTNode("Struct");
             newNode.add(value.name);
+            newNode.add(value.custTypedef);
             addMethodsToNodeWithArray(newNode, value.methods);
             addFieldsToNodeWithArray(newNode, value.variables);
             node.add(newNode);
