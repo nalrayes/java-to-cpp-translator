@@ -157,7 +157,10 @@ public class CppHeaderPrinter extends Visitor {
     }
     public void visitField(GNode n) throws IOException {
         if(n.getNode(2).size() > 0){
-                printer.indent().pln(n.getNode(2).getString(0)+ " " + n.getString(0) + " " + n.getString(1) + ";");
+            printer.indent().pln(n.getNode(2).getString(0)+ " " + n.getString(0) + " " + n.getString(1) + ";");
+        }
+        else{
+            printer.indent().pln(n.getString(0) + " " + n.getString(1) + ";");
         }
         visit(n);
         printer.pln("");

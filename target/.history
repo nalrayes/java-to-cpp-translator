@@ -107,3 +107,17 @@ runxtc -translate src/test/java/inputs/Test016/Test016.java
 runxtc -translate src/test/java/inputs/Test046/Test004.java
 runxtc -translate src/test/java/inputs/Test004/Test004.java
 runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test004/Test004.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/Test018/Test018.java
+runxtc -translate src/test/java/inputs/Test019/Test019.java
+runxtc -translate src/test/java/inputs/Test029/Test020.java
+runxtc -translate src/test/java/inputs/Test020/Test020.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test011/Test011.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test013/Test013.java
+runxtc -translate src/test/java/inputs/Test015/Test015.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java

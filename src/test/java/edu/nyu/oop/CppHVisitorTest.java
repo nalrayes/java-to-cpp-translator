@@ -24,7 +24,7 @@ public class CppHVisitorTest {
     @BeforeClass
     public static void beforeClass() {
         logger.debug("Executing MethodVisitorTest");
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test007/Test007.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test008/Test008.java");
         XtcTestUtils.prettyPrintAst(node);
     }
 

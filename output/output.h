@@ -5,7 +5,7 @@
 using namespace java::lang;
 
 namespace inputs {
-  namespace test007 {
+  namespace test008 {
   
     struct __A;
     struct __A_VT;
@@ -18,6 +18,7 @@ namespace inputs {
       __A();
 
       static A __init();
+      String a;
 
       static Class __class();
 
@@ -51,6 +52,7 @@ namespace inputs {
       __B();
 
       static B __init();
+      String b;
 
       static Class __class();
 
@@ -73,39 +75,39 @@ namespace inputs {
         equals((bool (*)(B, Object)) &__Object::equals) {}
     };
 
-    struct __Test007;
-    struct __Test007_VT;
-    typedef __Test007* Test007;
+    struct __Test008;
+    struct __Test008_VT;
+    typedef __Test008* Test008;
     
-    struct __Test007 { 
+    struct __Test008 { 
       
-      __Test007_VT* __vptr;
+      __Test008_VT* __vptr;
       
-      __Test007();
+      __Test008();
 
-      static void main(Test007,String);
-      static Test007 __init();
+      static void main(Test008,String);
+      static Test008 __init();
       static Class __class();
 
-      static __Test007_VT __vtable;
+      static __Test008_VT __vtable;
     };
 
-    struct __Test007_VT { 
+    struct __Test008_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (Test007);
-      Class (*getClass) (Test007);
-      String (*toString) (Test007);
-      bool (*equals) (Test007, Object);
-      void (*main) (Test007);
+      int32_t (*hashCode) (Test008);
+      Class (*getClass) (Test008);
+      String (*toString) (Test008);
+      bool (*equals) (Test008, Object);
+      void (*main) (Test008);
 
-      __Test007_VT()
-      : __is_a(__Test007::__class()),
-        hashCode((int32_t (*)(Test007)) &__Object::hashCode),
-        getClass((Class (*)(Test007)) &__Object::getClass),
-        toString((String (*)(Test007)) &__Object::toString),
-        equals((bool (*)(Test007, Object)) &__Object::equals),
-        main(&__Test007::main) {}
+      __Test008_VT()
+      : __is_a(__Test008::__class()),
+        hashCode((int32_t (*)(Test008)) &__Object::hashCode),
+        getClass((Class (*)(Test008)) &__Object::getClass),
+        toString((String (*)(Test008)) &__Object::toString),
+        equals((bool (*)(Test008, Object)) &__Object::equals),
+        main(&__Test008::main) {}
     };
 
   }
