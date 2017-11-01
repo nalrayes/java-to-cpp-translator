@@ -18,7 +18,6 @@ namespace inputs {
       __A();
 
       static A __init();
-      String a;
 
       static Class __class();
 
@@ -52,7 +51,6 @@ namespace inputs {
       __B();
 
       static B __init();
-      String b;
 
       static Class __class();
 
