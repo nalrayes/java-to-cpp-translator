@@ -58,7 +58,7 @@ public class CppHeaderASTCreator {
         }
 
         //Check to print out the recent parent mutated of the ASTTree
-        System.out.println(cppHeaderAST.getLinkToNamespaceNode());
+        //System.out.println(cppHeaderAST.getLinkToNamespaceNode());
 
         //Create the cppClassObjects
         createCppClassObject(javaClassSummaries, cppHeaderAST);
@@ -237,7 +237,7 @@ public class CppHeaderASTCreator {
                 cppAst.setCppClassObjectslist(newListOfCppClassObjects);
                 CppClassObject.setArrayListOfCppClassObjectsInTheCppAST(newListOfCppClassObjects);
                 //System.out.println(cppAst.getCppClassObjectslist());
-                System.out.println(CppClassObject.getArrayListOfCppClassObjectsInTheCppAST());
+                //System.out.println(CppClassObject.getArrayListOfCppClassObjectsInTheCppAST());
 
                 //Prints the HashMap in the classHigh structure
                 //System.out.println(classHigh.getNameOfClassForCppClassObjectHashMap());

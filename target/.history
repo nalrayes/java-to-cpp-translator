@@ -69,11 +69,18 @@ test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test010/Test010.java
+<<<<<<< HEAD
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+git st
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+git st
+=======
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/Test011/test011.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test011/test011.java
 runxtc -translate src/test/java/inputs/Test012/test012.java
+<<<<<<< HEAD
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test07/test07.java
 runxtc -translate src/test/java/inputs/Test007/test007.java
@@ -84,3 +91,49 @@ runxtc -translate src/test/java/inputs/Test002/test002.java
 runxtc -translate src/test/java/inputs/Test003/test003.java
 runxtc -translate src/test/java/inputs/Test004/test004.java
 q
+=======
+>>>>>>> 251bafa7c7e5c510db8ec32fa9999b1743599715
+xtc -translate src/test/java/inputs/Test012/Test012.javarunxtc -translate src/test/java/inputs/Test012/Test012.java
+xtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/Test018/Test018.java
+runxtc -translate src/test/java/inputs/Test020/Test020.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+runxtc -translate src/test/java/inputs/Test002/Test002.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test004/Test004.java
+runxtc -translate src/test/java/inputs/Test005/Test005.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test01/Test011.java
+runxtc -translate src/test/java/inputs/Test011/Test011.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test013/Test013.java
+runxtc -translate src/test/java/inputs/Test014/Test014.java
+runxtc -translate src/test/java/inputs/Test015/Test015.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test046/Test004.java
+runxtc -translate src/test/java/inputs/Test004/Test004.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test004/Test004.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/Test018/Test018.java
+runxtc -translate src/test/java/inputs/Test019/Test019.java
+runxtc -translate src/test/java/inputs/Test029/Test020.java
+runxtc -translate src/test/java/inputs/Test020/Test020.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test011/Test011.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test013/Test013.java
+runxtc -translate src/test/java/inputs/Test015/Test015.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+>>>>>>> dac8efba81345e2b021a405f0e2819e82c133593
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test009/Test009.java
