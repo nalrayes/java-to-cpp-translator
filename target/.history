@@ -59,3 +59,5 @@ runxtc -translate src/test/java/inputs/Test003/Test003.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 q
 runxtc -translate src/test/java/inputs/Test010/Test010.java
+test
+runxtc -translate src/test/java/inputs/Test010/Test010.java

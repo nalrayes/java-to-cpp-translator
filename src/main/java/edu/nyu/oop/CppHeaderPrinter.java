@@ -61,34 +61,57 @@ public class CppHeaderPrinter extends Visitor {
         printer.pln("");
     }
 
+    int nameSpaceCount = 0;
     public void visitNamespace(GNode n) throws IOException {
-        printer.pln("namespace " + n.getString(0) + " {");
+        if(nameSpaceCount == 0){
+            printer.pln("namespace " + n.getString(0) + " {");
+        }
+        else{
+            printer.incr().indent().pln("namespace " + n.getString(0) + " {");
+        }
+        nameSpaceCount++;
         visit(n);
-        printer.pln("}");
+        nameSpaceCount = 0;
+        printer.indent().pln("}");
+        //Decrement the printer for final brace
+        printer.decr();
     }
     public void visitStructs(GNode n) throws IOException {
-        printer.pln("");
+        printer.indent().pln("");
         visit(n);
     }
     public void visitStruct(GNode n) throws IOException {
-        printer.pln("struct " + n.getString(0) + ";");
-        printer.pln("struct " + n.getString(0) + "_VT;");
-        printer.pln("typedef " + n.getString(1) + ";");
-        printer.pln("");
-        printer.pln("struct " + n.getString(0) + " { ");
+        printer.incr().indent().pln("struct " + n.getString(0) + ";");
+        printer.indent().pln("struct " + n.getString(0) + "_VT;");
+        printer.indent().pln("typedef " + n.getString(1) + ";");
+        printer.indent().pln("");
+        printer.indent().pln("struct " + n.getString(0) + " { ");
         // print vtable pointer
-        printer.pln(n.getString(2) +";");
+        //Increment the printer again for the struct stuff
+        printer.incr();
+        printer.indent().pln("");
+        printer.indent().pln(n.getString(2) +";");
+        printer.indent().pln("");
         // the constructor for the struct (initializer)
-        printer.pln(n.getString(0) + "();");
+        printer.indent().pln(n.getString(0) + "();");
 
 
         printer.pln("");
         visit(n);
-        printer.pln(n.getString(3)+";");
-        printer.pln(n.getString(4)+";");
+        //Prints __class()
+        printer.indent().pln(n.getString(3)+";");
+        printer.indent().pln("");
+        //prints __A_VT __vtable
+        printer.indent().pln(n.getString(4)+";");
 
-        printer.pln("};");
-        printer.pln("\n");
+        //Decrement the printer before closing
+        printer.decr();
+        printer.indent().pln("};");
+        printer.pln("");
+
+        //decrement printer for the new struct that comes after
+        printer.decr();
+
     }
     public void visitMethods(GNode n) throws IOException {
         visit(n);
@@ -122,10 +145,9 @@ public class CppHeaderPrinter extends Visitor {
     }
     public void visitMethod(GNode n) throws IOException {
         // all public for now
-        // TODO: add static modifiers
         CppDataLayout.typeTranslate tt = new CppDataLayout.typeTranslate();
         String type = tt.translateType(n.getString(1));
-        printer.p("static " + n.getString(1) + " " + n.getString(0));
+        printer.indent().p("static " + n.getString(1) + " " + n.getString(0));
         printer = printer.buffer();
         visit(n);
         printer.pln(";");
@@ -134,21 +156,27 @@ public class CppHeaderPrinter extends Visitor {
         visit(n);
     }
     public void visitField(GNode n) throws IOException {
-        printer.pln(n.getString(0) + " " + n.getString(1) + ";");
+        printer.indent().pln(n.getString(0) + " " + n.getString(1) + ";");
         visit(n);
         printer.pln("");
     }
 
     public void visitVTable(GNode n) throws IOException {
 
+        printer.incr().pln("");
+
+        printer.indent().pln("struct __" + n.getString(0) + "_VT { ");
+        //Print __is_a
+        printer.incr().indent().pln(n.getString(3) + ";");
         printer.pln("");
 
-        printer.pln("struct __" + n.getString(0) + "_VT { ");
-        printer.pln(n.getString(3) + ";");
-
         visit(n);
-        printer.pln("};");
-        printer.pln("\n");
+        //decrement
+        printer.decr();
+        printer.decr();
+        printer.indent().pln("};");;
+        //Decrement for next vtable
+        printer.decr();
     }
 
     public void visitVTables(GNode n) throws IOException {
@@ -158,7 +186,7 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitVTMethod(GNode n) {
-        printer.pln(n.getString(0) + ";");
+        printer.indent().pln(n.getString(0) + ";");
         visit(n);
     }
 
@@ -172,22 +200,23 @@ public class CppHeaderPrinter extends Visitor {
     }
 
     public void visitVTInstantiator(GNode n) {
-        printer.pln(n.getString(0));
-        printer.pln(n.getString(1));
+        //Print Vtable name
+        printer.indent().pln(n.getString(0));
+        //print __is_a
+        printer.indent().pln(n.getString(1));
         visit(n);
         printer.pln(n.getString(3));
     }
 
     public void visitInstantiatorMethods(GNode n) {
-        StringBuilder sb = new StringBuilder();
+        printer.incr();
         for (int i = 0; i < n.size(); i++) {
-            sb.append(n.getString(i));
-            sb.append(",\n");
+            if (i < n.size() - 1) {
+                printer.indent().pln(n.getString(i) + ",");
+            } else {
+                printer.indent().p(n.getString(i));
+            }
         }
-        if (sb.length() > 0) {
-            sb.delete(sb.length() - 2, sb.length());
-        }
-        printer.pln(sb.toString());
         visit(n);
     }
 

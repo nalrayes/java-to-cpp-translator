@@ -63,6 +63,10 @@ public class CppDataLayout {
                     cType = "void";
                     break;
 
+                case "boolean":
+                    cType = "bool";
+                    break;
+
                 default:
                     cType = javaType;
                     break;
@@ -432,9 +436,9 @@ public class CppDataLayout {
             this.VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
             this.inheritedMethods = new ArrayList<CustomMethodClass>();
 
-            this.isA = " : __is_a(__" + currStruct.getClassName() + "::__class()),";
+            this.isA = ": __is_a(__" + currStruct.getClassName() + "::__class()),";
             this.declarationName = "__" + currStruct.getClassName() + "_VT()";
-            this.randoCurls = "{\n}";
+            this.randoCurls = " {}";
 
             CustomClassObject tempStruct = currStruct;
 
@@ -699,7 +703,7 @@ public class CppDataLayout {
                             this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
                         }
                         else{
-                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &_" + method.getOwnerClass() + "::" + method.getName() + ")";
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
 
                         }
 
