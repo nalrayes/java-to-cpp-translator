@@ -23,9 +23,11 @@ Output will be placed in the output.h file within the output directory.
 
 ### Project Map:
 
+![Alt text](https://github.com/nyu-oop-fa17/translator-2/blob/master/process.png)
 
 ```
 
+- README.md
 
 - build.sbt (managed library dependencies and c++ compilation configuration)
 
