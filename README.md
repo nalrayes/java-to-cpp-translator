@@ -23,6 +23,7 @@ Output will be placed in the output.h file within the output directory.
 
 ### Project Map:
 
+```
 - README.md
 
 - build.sbt (managed library dependencies and c++ compilation configuration)
@@ -58,3 +59,4 @@ Output will be placed in the output.h file within the output directory.
       -   java
           *   edu (translator unit tests)
           *   inputs (translator test inputs)
+```
