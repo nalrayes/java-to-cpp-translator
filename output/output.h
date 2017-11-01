@@ -5,85 +5,197 @@
 using namespace java::lang;
 
 namespace inputs {
-namespace test001 {
-
-struct __A;
-struct __A_VT;
-typedef __A* A;
-
-struct __A { 
-__A_VT* __vptr;
-__A();
-
-static Class __class();
-static __A_VT __vtable;
-};
-
-
+  namespace test010 {
   
-static String toString(A
-);
-static A __init(
-);
-
-}
-struct __A_VT { 
-Class __is_a;
-int32_t (*hashCode) (A);
-Class (*getClass) (A);
-boolean (*equals) (A, Object);
-String (*toString) (A);
-
-__A_VT()
- : __is_a(__A::__class()),
-hashCode((int32_t (*)(A)) &__A::hashCode),
-getClass((Class (*)(A)) &__A::getClass),
-equals((boolean (*)(A, Object)) &_A::equals),
-toString(&__A::toString)
-{
-}
-};
-
-
-struct __Test001;
-struct __Test001_VT;
-typedef __Test001* Test001;
-
-struct __Test001 { 
-__Test001_VT* __vptr;
-__Test001();
-
-static Class __class();
-static __Test001_VT __vtable;
-};
-
-
+    struct __A;
+    struct __A_VT;
+    typedef __A* A;
     
-static void main(Test001,String
-);
-static Test001 __init(
-);
+    struct __A { 
+      
+      __A_VT* __vptr;
+      
+      __A();
 
-}
-struct __Test001_VT { 
-Class __is_a;
-int32_t (*hashCode) (Test001);
-Class (*getClass) (Test001);
-String (*toString) (Test001);
-boolean (*equals) (Test001, Object);
-void (*main) (Test001);
+      static void setA(A,String);
+      static void printOther(A,A);
+      static String toString(A);
+      static A __init();
+      String a;
 
-__Test001_VT()
- : __is_a(__Test001::__class()),
-hashCode((int32_t (*)(Test001)) &__Test001::hashCode),
-getClass((Class (*)(Test001)) &__Test001::getClass),
-toString((String (*)(Test001)) &__Test001::toString),
-equals((boolean (*)(Test001, Object)) &_Test001::equals),
-main(&__Test001::main)
-{
-}
-};
+      static Class __class();
 
+      static __A_VT __vtable;
+    };
 
-}
+    struct __A_VT { 
+      Class __is_a;
+
+      int32_t (*hashCode) (A);
+      Class (*getClass) (A);
+      bool (*equals) (A, Object);
+      void (*setA) (A);
+      void (*printOther) (A);
+      String (*toString) (A);
+
+      __A_VT()
+      : __is_a(__A::__class()),
+        hashCode((int32_t (*)(A)) &__A::hashCode),
+        getClass((Class (*)(A)) &__A::getClass),
+        equals((bool (*)(A, Object)) &__A::equals),
+        setA(&__A::setA),
+        printOther(&__A::printOther),
+        toString(&__A::toString) {}
+    };
+
+    struct __B1;
+    struct __B1_VT;
+    typedef __B1* B1;
+    
+    struct __B1 { 
+      
+      __B1_VT* __vptr;
+      
+      __B1();
+
+      static B1 __init();
+      String b;
+
+      static Class __class();
+
+      static __B1_VT __vtable;
+    };
+
+    struct __B1_VT { 
+      Class __is_a;
+
+      void (*setA) (B1);
+      void (*printOther) (B1);
+      String (*toString) (B1);
+      int32_t (*hashCode) (B1);
+      Class (*getClass) (B1);
+      bool (*equals) (B1, Object);
+
+      __B1_VT()
+      : __is_a(__B1::__class()),
+        setA((void (*)(B1)) &__B1::setA),
+        printOther((void (*)(B1)) &__B1::printOther),
+        toString((String (*)(B1)) &__B1::toString),
+        hashCode((int32_t (*)(B1)) &__B1::hashCode),
+        getClass((Class (*)(B1)) &__B1::getClass),
+        equals((bool (*)(B1, Object)) &__B1::equals) {}
+    };
+
+    struct __B2;
+    struct __B2_VT;
+    typedef __B2* B2;
+    
+    struct __B2 { 
+      
+      __B2_VT* __vptr;
+      
+      __B2();
+
+      static B2 __init();
+      String b;
+
+      static Class __class();
+
+      static __B2_VT __vtable;
+    };
+
+    struct __B2_VT { 
+      Class __is_a;
+
+      void (*setA) (B2);
+      void (*printOther) (B2);
+      String (*toString) (B2);
+      int32_t (*hashCode) (B2);
+      Class (*getClass) (B2);
+      bool (*equals) (B2, Object);
+
+      __B2_VT()
+      : __is_a(__B2::__class()),
+        setA((void (*)(B2)) &__B2::setA),
+        printOther((void (*)(B2)) &__B2::printOther),
+        toString((String (*)(B2)) &__B2::toString),
+        hashCode((int32_t (*)(B2)) &__B2::hashCode),
+        getClass((Class (*)(B2)) &__B2::getClass),
+        equals((bool (*)(B2, Object)) &__B2::equals) {}
+    };
+
+    struct __C;
+    struct __C_VT;
+    typedef __C* C;
+    
+    struct __C { 
+      
+      __C_VT* __vptr;
+      
+      __C();
+
+      static C __init();
+      String c;
+
+      static Class __class();
+
+      static __C_VT __vtable;
+    };
+
+    struct __C_VT { 
+      Class __is_a;
+
+      void (*setA) (C);
+      void (*printOther) (C);
+      String (*toString) (C);
+      int32_t (*hashCode) (C);
+      Class (*getClass) (C);
+      bool (*equals) (C, Object);
+
+      __C_VT()
+      : __is_a(__C::__class()),
+        setA((void (*)(C)) &__C::setA),
+        printOther((void (*)(C)) &__C::printOther),
+        toString((String (*)(C)) &__C::toString),
+        hashCode((int32_t (*)(C)) &__C::hashCode),
+        getClass((Class (*)(C)) &__C::getClass),
+        equals((bool (*)(C, Object)) &__C::equals) {}
+    };
+
+    struct __Test010;
+    struct __Test010_VT;
+    typedef __Test010* Test010;
+    
+    struct __Test010 { 
+      
+      __Test010_VT* __vptr;
+      
+      __Test010();
+
+      static void main(Test010,String);
+      static Test010 __init();
+      static Class __class();
+
+      static __Test010_VT __vtable;
+    };
+
+    struct __Test010_VT { 
+      Class __is_a;
+
+      int32_t (*hashCode) (Test010);
+      Class (*getClass) (Test010);
+      String (*toString) (Test010);
+      bool (*equals) (Test010, Object);
+      void (*main) (Test010);
+
+      __Test010_VT()
+      : __is_a(__Test010::__class()),
+        hashCode((int32_t (*)(Test010)) &__Test010::hashCode),
+        getClass((Class (*)(Test010)) &__Test010::getClass),
+        toString((String (*)(Test010)) &__Test010::toString),
+        equals((bool (*)(Test010, Object)) &__Test010::equals),
+        main(&__Test010::main) {}
+    };
+
+  }
 }

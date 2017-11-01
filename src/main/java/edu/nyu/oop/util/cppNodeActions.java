@@ -59,9 +59,10 @@ public abstract class cppNodeActions {
             addMethodsToNodeWithArray(newNode, value.methods);
 
             addFieldsToNodeWithArray(newNode, value.variables);
-            addVTableToNodeWithArray(newNode, value.structVTable);
 
             node.add(newNode);
+
+            addVTableToNodeWithArray(node, value.structVTable);
         }
         return node;
     }
