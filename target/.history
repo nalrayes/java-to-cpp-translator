@@ -81,3 +81,19 @@ test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test011/test011.java
 runxtc -translate src/test/java/inputs/Test012/test012.java
 >>>>>>> 251bafa7c7e5c510db8ec32fa9999b1743599715
+xtc -translate src/test/java/inputs/Test012/Test012.javarunxtc -translate src/test/java/inputs/Test012/Test012.java
+xtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/Test018/Test018.java
+runxtc -translate src/test/java/inputs/Test020/Test020.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+runxtc -translate src/test/java/inputs/Test002/Test002.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test004/Test004.java
+runxtc -translate src/test/java/inputs/Test005/Test005.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
