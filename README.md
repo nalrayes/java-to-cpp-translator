@@ -2,10 +2,10 @@
 
 ### Features (So Far):
 
-translates java into C++ header files for required provided inputs (test000 through test020)
-supports method overriding and overloading
+- translates java into C++ header files for required provided inputs (test000 through test020)
+- supports method overriding and overloading
 
-###  Execution
+###  Execution:
 
 To execute translator, within sbt run the command with the following format:
 
@@ -21,7 +21,7 @@ runxtc -translate src/test/java/inputs/Test010/Test010.java
 
 Output will be placed in the output.h file within the output directory.
 
-### Project Map
+### Project Map:
 
 - README.md
 
