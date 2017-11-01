@@ -52,42 +52,46 @@ public abstract class cppNodeActions {
             newNode.add(value.VTPointer);
             newNode.add(value.classDeclarator);
             newNode.add(value.VTableDeclarator);
+            //newNode.add(value.structVTable);
 
 
 
             addMethodsToNodeWithArray(newNode, value.methods);
+
             addFieldsToNodeWithArray(newNode, value.variables);
+            addVTableToNodeWithArray(newNode, value.structVTable);
+
             node.add(newNode);
         }
         return node;
     }
 
 
-    public static GNode addVTableToNodeWithArray(GNode node ,ArrayList<CppDataLayout.VTable> listOfData){
+    public static GNode addVTableToNodeWithArray(GNode node , CppDataLayout.VTable listOfData){
 
 
 
 
-        if(listOfData == null && listOfData.size() == 0){
+        if(listOfData == null){
             return null;
         }
-        for (CppDataLayout.VTable value : listOfData){
+       // for (CppDataLayout.VTable value : listOfData){
             //Add to the parent
             GNode newNode = createNewASTNode("VTable");
 
 
-                newNode.add(value.name);
+                newNode.add(listOfData.name);
 
 
-            addVTMethodsToNodeWithArray(newNode, value.VTMethods);
-            addVTInstantiatorsToNodeWithArray(newNode, value.VTInstantiators);
-            newNode.add(value.is_a);
+            addVTMethodsToNodeWithArray(newNode, listOfData.VTMethods);
+            addVTInstantiatorsToNodeWithArray(newNode, listOfData.VTInstantiators);
+            newNode.add(listOfData.is_a);
             //addInstantiatorMethodsToNodeWithArray(newNode, value.VTInstantiators.getVTInstantiatorMethods());
 
 //            addFieldsToNodeWithArray(newNode, value.variables);
 
             node.add(newNode);
-        }
+        //}
         return node;
 
     }
@@ -111,6 +115,10 @@ public abstract class cppNodeActions {
         node.add(newNode);
 
     }
+
+
+
+
 
 
     public static void addInstantiatorMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiatorMethod> vtiMethods) {

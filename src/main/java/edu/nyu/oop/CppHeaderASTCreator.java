@@ -298,13 +298,10 @@ public class CppHeaderASTCreator {
         ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
         structsMap = new HashMap<String, CustomClassObject>();
 
-        // creates branch for structs
+
         for (CustomClassObject c: javaData.classes){
 
-            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c);
 
-            // added to the tree
-            structs.add(aStruct);
 
 
             // used for populating vtables
@@ -314,16 +311,32 @@ public class CppHeaderASTCreator {
 
 
 
-        // creates branch for VTables
+        // creates branch for structs
         for (CustomClassObject c: javaData.classes){
 
-            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c, structsMap);
+            CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c, structsMap);
+
+            // added to the tree
+            structs.add(aStruct);
 
 
 
-            VTables.add(vTable);
 
         }
+
+
+
+
+
+//        // creates branch for VTables
+//        for (CustomClassObject c: javaData.classes){
+//
+//            CppDataLayout.VTable vTable = new CppDataLayout.VTable(c, structsMap);
+//
+//
+//            VTables.add(vTable);
+//
+//        }
 
 
 
@@ -338,9 +351,7 @@ public class CppHeaderASTCreator {
         GNode newStructNode = cppNodeActions.createNewASTNode("Structs");
         cppNodeActions.addNodeAsChildToParent(pointer, newStructNode);
         cppNodeActions.addStructToNodeWithArray(newStructNode, structs);
-        GNode newVTablesNode = cppNodeActions.createNewASTNode("VTables");
-        cppNodeActions.addVTableToNodeWithArray(newVTablesNode, VTables);
-        cppNodeActions.addNodeAsChildToParent(pointer, newVTablesNode);
+
         // this may not be necessary, but I'm keeping it rn just in case
         rootNode.setRecentParentNodeMutated(newStructNode);
 

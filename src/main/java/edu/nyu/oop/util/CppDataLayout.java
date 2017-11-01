@@ -119,6 +119,7 @@ public class CppDataLayout {
 
         ArrayList<CppVar> variables;
         ArrayList<CppMethod> methods;
+       VTable structVTable;
 
 
         String name;
@@ -132,7 +133,7 @@ public class CppDataLayout {
 
         ArrayList<CppConstructor> constructors;
 
-        public CppStruct(CustomClassObject c) {
+        public CppStruct(CustomClassObject c, HashMap<String, CustomClassObject> classMap) {
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
             this.parentName = c.getParentClass();
@@ -178,6 +179,12 @@ public class CppDataLayout {
 
 
             }
+
+             this.structVTable = new VTable(c,classMap);
+
+
+
+
 
             structs.add(this);
            // structsMap.put(c.getClassName(), c);
@@ -908,6 +915,7 @@ public class CppDataLayout {
                 System.out.println("SIZE " + VTInstantiators.size() + " OF " + this.name);
 
                 VTables.add(this);
+
 
 
             }

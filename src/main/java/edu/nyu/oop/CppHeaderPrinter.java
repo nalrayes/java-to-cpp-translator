@@ -83,12 +83,14 @@ public class CppHeaderPrinter extends Visitor {
 
 
         printer.pln("");
-        visit(n);
         printer.pln(n.getString(3)+";");
         printer.pln(n.getString(4)+";");
 
         printer.pln("};");
         printer.pln("\n");
+        printer.incr().indent().pln("");
+        visit(n);
+
     }
     public void visitMethods(GNode n) throws IOException {
         visit(n);
@@ -114,7 +116,7 @@ public class CppHeaderPrinter extends Visitor {
         if (sb.length() > 0) {
             sb.delete(sb.length() - 1, sb.length());
         }
-        printer.p(sb.toString());
+        printer.pln(sb.toString());
         printer.p(')');
     }
     public void visitParameter(GNode n) {
@@ -123,6 +125,8 @@ public class CppHeaderPrinter extends Visitor {
     public void visitMethod(GNode n) throws IOException {
         // all public for now
         // TODO: add static modifiers
+
+
         CppDataLayout.typeTranslate tt = new CppDataLayout.typeTranslate();
         String type = tt.translateType(n.getString(1));
         printer.p("static " + n.getString(1) + " " + n.getString(0));
@@ -141,7 +145,7 @@ public class CppHeaderPrinter extends Visitor {
 
     public void visitVTable(GNode n) throws IOException {
 
-        printer.pln("");
+        printer.pln("}");
 
         printer.pln("struct __" + n.getString(0) + "_VT { ");
         printer.pln(n.getString(3) + ";");
