@@ -74,3 +74,13 @@ runxtc -translate src/test/java/inputs/Test011/test011.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test011/test011.java
 runxtc -translate src/test/java/inputs/Test012/test012.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test07/test07.java
+runxtc -translate src/test/java/inputs/Test007/test007.java
+runxtc -translate src/test/java/inputs/Test001/test001.java
+runxtc -translate src/test/java/inputs/Test002/test002.java
+runxtc -translate src/test/java/inputs/Test001/test001.java
+runxtc -translate src/test/java/inputs/Test002/test002.java
+runxtc -translate src/test/java/inputs/Test003/test003.java
+runxtc -translate src/test/java/inputs/Test004/test004.java
+q

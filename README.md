@@ -21,12 +21,24 @@ runxtc -translate src/test/java/inputs/Test010/Test010.java
 
 Output will be placed in the output.h file within the output directory.
 
-### Project Map:
+## Project Map:
 
 ![Alt text](https://github.com/nyu-oop-fa17/translator-2/blob/master/process.png)
 
-```
 
+#### Collection of Java AST:
+###### TraverseAst.java
+####Custom Java Objects to retain data:
+###### CustomClassObject.java, CustomMethodClass.java, CustomConstructorClass.java, CustomVariablesClass.java
+####CPP Data Layout (Intermediate Data Structure)
+######CppDataLayout.java
+####Build CPP AST
+######CppHeaderASTCreator.java, cppNodeActions.java, CPPAST.java
+####Print CPP AST 
+######CppHeaderPrinter.java, CppHeaderVisitor.java
+
+
+### Directory Overview
 - README.md
 
 - build.sbt (managed library dependencies and c++ compilation configuration)
@@ -59,4 +71,4 @@ Output will be placed in the output.h file within the output directory.
       -   java
           *   edu (translator unit tests)
           *   inputs (translator test inputs)
-```
+
