@@ -23,8 +23,9 @@ Output will be placed in the output.h file within the output directory.
 
 ### Project Map:
 
+
 ```
-- README.md
+
 
 - build.sbt (managed library dependencies and c++ compilation configuration)
 
@@ -40,9 +41,6 @@ Output will be placed in the output.h file within the output directory.
 - doc
 
 - output (target c++ source & supporting java_lang library)
-  *  java_lang.cpp
-  *  java_lang.h
-  *  main.cpp
   *  output.h
 
 - project (sbt configuration, shouldn't need to be touched)
