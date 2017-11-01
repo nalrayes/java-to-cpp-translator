@@ -69,3 +69,5 @@ test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+git st

@@ -172,7 +172,7 @@ public class CppDataLayout {
 
                 this.methods.add(defaultConstructor);
 
-                System.out.println(defaultConstructor);
+                //System.out.println(defaultConstructor);
             }
 
 
@@ -453,14 +453,14 @@ public class CppDataLayout {
            // tempStruct = currStruct;
 
             // Get all methods that the current class inherits
-            System.out.println("*****************CLASS NAME");
+            //System.out.println("*****************CLASS NAME");
 
-            System.out.println(currStruct.getClassName());
-            System.out.println("*****************");
+            //System.out.println(currStruct.getClassName());
+            //System.out.println("*****************");
 
-            System.out.println("!!!");
-            System.out.println(inheritedMethods);
-            System.out.println(tempStruct.getParentClass());
+            //System.out.println("!!!");
+            //System.out.println(inheritedMethods);
+            //System.out.println(tempStruct.getParentClass());
 
 
             // gets inherited methods of a class
@@ -542,9 +542,8 @@ public class CppDataLayout {
 
                 if (!currStruct.getMethodNames().contains(m.getName())){
                     isOverriden = false;
-                    m.setOwnerClass(currStruct.getClassName());
 
-                String className = currStruct.getClassName();
+                    String className = currStruct.getClassName();
 
                     // create overridden instantiator
 
@@ -706,6 +705,7 @@ public class CppDataLayout {
 
                     // get parent class
                     if (method.getOwnerClass() != "None") {
+                        //System.out.println("DUHH HELLO" + method.getOwnerClass());
                         if (!method.getName().equals("equals")) {
                             this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
                         }
@@ -716,6 +716,7 @@ public class CppDataLayout {
 
                     }
                     else {
+                        //System.out.println("HELLO");
                         if (!method.getName().equals("equals")) {
                             this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__Object::" + method.getName() + ")";
                         }
@@ -791,15 +792,12 @@ public class CppDataLayout {
                 while (tempStruct.getParentClass() != "None") {
 
                     String getParentStructName = tempStruct.getParentClass();
-
-                    System.out.println("ASDASDASDASD");
-                    System.out.println(getParentStructName);
+                    //System.out.println(getParentStructName);
                     // get all methods of parent class
                     CustomClassObject parentClass = classMap.get(getParentStructName);
 
                     for (CustomMethodClass method : parentClass.getMethods()) {
-                        System.out.println("!!!!!!!");
-                        System.out.println(method.getName());
+                        //System.out.println(method.getName());
                         ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
                         // checking if method is overwritten
                         if ((!inheritedMethodNames.contains(method.getName()))) {
@@ -830,28 +828,13 @@ public class CppDataLayout {
                 ArrayList<VTMethod> overwrittenVTMethods = new ArrayList<VTMethod>();
                 // check if current class overrides any of these methods
                 int index = 0;
-
                 for (CustomMethodClass m : VTInheritedmethods){
                     boolean isLastMethod = false;
-
                     if (index == currClass.getMethods().size() -1 ){
-
                         isLastMethod = true;
-
                     }
-
-
-
-
                     boolean isOverriden = false;
                     // if contains override
-
-
-                    System.out.println("OVERWRITTEN1111111111111111111111111111");
-                    System.out.println(currClass.getClassName());
-                    System.out.println(m.getName());
-                    System.out.println(currClass.getMethods());
-
                     if (currClass.getMethodNames().contains(m.getName())){
                         isOverriden = true;
                         m.setOwnerClass(currClass.getClassName());
@@ -859,13 +842,8 @@ public class CppDataLayout {
                         String className = currClass.getClassName();
 
                         // create overridden instantiator
-
                         VTMethod vtiMethod = new VTMethod(m, className, isLastMethod, isOverriden);
                         overwrittenVTMethods.add(vtiMethod);
-
-                        // add to list of vt instantiatior methods
-
-
                     }
                     else {
                         String className = currClass.getClassName();
@@ -874,13 +852,9 @@ public class CppDataLayout {
 
 
                     }
-
                     index++;
-                    // add instantiator to methodlist
-
 
                 }
-
                 ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
                 int k = 0;
                 boolean isLastMethod = false;
@@ -900,40 +874,14 @@ public class CppDataLayout {
 
                 VTMethods.addAll(overwrittenVTMethods);
 
-
-
-
-
-
-
-
-
-
                 VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
 
                 VTInstantiators.add(vtInstantiator);
 
-
-
-
-                System.out.println("SIZE " + VTInstantiators.size() + " OF " + this.name);
+                //System.out.println("SIZE " + VTInstantiators.size() + " OF " + this.name);
 
                 VTables.add(this);
-
-
-
             }
-
-//            @Override
-//            public String toString() {
-//                for (VTMethod method : VTMethods){
-//
-//                    method.getClassName();
-//
-//                }
-//
-//
-//            }
         }
 
 
@@ -996,10 +944,10 @@ public class CppDataLayout {
                     methodName += (this.returnType + " " + this.pointer + "(" + this.className+")" +";");
 
                 if (DEBUGGING == 1) {
-                    System.out.println("________________");
+                    //System.out.println("________________");
                     // System.out.println("return type " + this.returnType);
-                    System.out.println(methodName);
-                    System.out.println("________________");
+                    //System.out.println(methodName);
+                    //System.out.println("________________");
                 }
 
             }

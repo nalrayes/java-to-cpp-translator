@@ -125,8 +125,6 @@ public abstract class cppNodeActions {
     public static void addInstantiatorMethodsToNodeWithArray(GNode node, ArrayList<CppDataLayout.VTInstantiatorMethod> vtiMethods) {
 
         GNode newNode = createNewASTNode("InstantiatorMethods");
-        System.out.println("IM HERE MAN");
-        System.out.println(vtiMethods.size());
         for (CppDataLayout.VTInstantiatorMethod vtiMethod : vtiMethods) {
             GNode methodNode = createNewASTNode("InstantiatorMethod");
 
