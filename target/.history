@@ -137,3 +137,9 @@ runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test007/Test007.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test009/Test009.java
+runxtc -translate ../src/test/java/inputs/Test009/Test009.java
+new java.io.File(".").getAbsolutePath.
+runxtc -translate src/test/java/inputs/Test009/Test009.java
+runxtc -translate src/test/java/inputs/test009/Test009.java
+runxtc -translate src/test/java/inputs/test016/Test016.java
+runxtc -translate src/test/java/inputs/test010/Test010.java

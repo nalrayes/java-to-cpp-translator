@@ -1,23 +1,31 @@
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class: stamp changed from lastModified(1511320118000) to lastModified(1511320443000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class: stamp changed from lastModified(1511320118000) to lastModified(1511320443000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class: stamp changed from lastModified(1511320118000) to lastModified(1511320443000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class: stamp changed from lastModified(1511320118000) to lastModified(1511320443000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class: stamp changed from lastModified(1511320118000) to lastModified(1511320443000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppParameter.class: stamp changed from lastModified(1511320118000) to lastModified(1511320443000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppParameter.class)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
-[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderPrinter.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@3ea3857b directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.04308259 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.012742497 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.057247926 s[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderPrinter.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/cppNodeActions.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppClassObject.java, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java)[0m
+[0m[[0minfo[0m] [0mCompiling 5 Java sources to /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@4793e3e6 directly...[0m
+[0m[[0minfo[0m] [0m/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java: /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java uses unchecked or unsafe operations.[0m
+[0m[[0minfo[0m] [0m/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java: Recompile with -Xlint:unchecked for details.[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.123365245 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.062437221 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.187049366 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

@@ -1,5 +1,6 @@
 package edu.nyu.oop.util;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import edu.nyu.oop.*;
@@ -7,6 +8,7 @@ import xtc.tree.GNode;
 import java.util.Map;
 
 import java.util.HashMap;
+import java.util.Stack;
 
 public class CppDataLayout {
     public static ArrayList<CppStruct> structs;
@@ -487,9 +489,14 @@ public class CppDataLayout {
 
                 CustomClassObject tempStruct = currClass;
 
+                ArrayList<CustomMethodClass> currentArrayList;
+                Stack<ArrayList> arrayListStack= new Stack<ArrayList>();
+
+                // to check inheritence with default methods
+                ArrayList<String> names = new ArrayList<String>();
                 // Get all methods that the current class inherits
                 while (tempStruct.getParentClass() != "None") {
-
+                    currentArrayList = new ArrayList<CustomMethodClass>();
                     String getParentStructName = tempStruct.getParentClass();
                     //System.out.println(getParentStructName);
                     // get all methods of parent class
@@ -501,22 +508,29 @@ public class CppDataLayout {
                         // checking if method is overwritten
                         if ((!inheritedMethodNames.contains(method.getName()))) {
                             method.setOwnerClass(parentClass.getClassName());
-                            VTInheritedmethods.add(method);
+                            currentArrayList.add(method);
+                            names.add(method.getName());
                         }
                     }
+                    arrayListStack.push(currentArrayList);
                     tempStruct = parentClass;
                 }
 
                 // adding default methods to inheritedMethods to check for overriding
                 ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
 
-                ArrayList<String> names = getMethodNames(VTInheritedmethods);
                 for (CustomMethodClass m : defaultMethods) {
                     String name = m.getName();
 
                     if (!(names.contains(name))) {
                         VTInheritedmethods.add(m);
                     }
+                }
+
+
+                // unpack the stack
+                while (!arrayListStack.empty()) {
+                    VTInheritedmethods.addAll(arrayListStack.pop());
                 }
 
                 ArrayList<VTMethod> overwrittenVTMethods = new ArrayList<VTMethod>();
@@ -545,6 +559,7 @@ public class CppDataLayout {
                     index++;
 
                 }
+                VTMethods.addAll(overwrittenVTMethods);
                 ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
                 int k = 0;
                 boolean isLastMethod = false;
@@ -559,7 +574,7 @@ public class CppDataLayout {
                         VTMethods.add(vtiMethod);
                     }
                 }
-                VTMethods.addAll(overwrittenVTMethods);
+
                 VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
                 VTInstantiators.add(vtInstantiator);
                 VTables.add(this);
