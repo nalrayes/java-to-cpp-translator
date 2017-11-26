@@ -5,7 +5,7 @@
 using namespace java::lang;
 
 namespace inputs {
-  namespace test010 {
+  namespace test011 {
   
     struct __A;
     struct __A_VT;
@@ -31,12 +31,12 @@ namespace inputs {
     struct __A_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (A);
-      Class (*getClass) (A);
+      int32_t (*hashCode) (A, );
+      Class (*getClass) (A, );
       bool (*equals) (A, Object);
-      String (*toString) (A);
-      void (*setA) (A);
-      void (*printOther) (A);
+      String (*toString) (A, );
+      void (*setA) (A, String, );
+      void (*printOther) (A, A, );
 
       __A_VT()
       : __is_a(__A::__class()),
@@ -69,12 +69,12 @@ namespace inputs {
     struct __B1_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (B1);
-      Class (*getClass) (B1);
+      int32_t (*hashCode) (B1, );
+      Class (*getClass) (B1, );
       bool (*equals) (B1, Object);
-      void (*setA) (B1);
-      void (*printOther) (B1);
-      String (*toString) (B1);
+      void (*setA) (B1, String, );
+      void (*printOther) (B1, A, );
+      String (*toString) (B1, );
 
       __B1_VT()
       : __is_a(__B1::__class()),
@@ -107,12 +107,12 @@ namespace inputs {
     struct __B2_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (B2);
-      Class (*getClass) (B2);
+      int32_t (*hashCode) (B2, );
+      Class (*getClass) (B2, );
       bool (*equals) (B2, Object);
-      void (*setA) (B2);
-      void (*printOther) (B2);
-      String (*toString) (B2);
+      void (*setA) (B2, String, );
+      void (*printOther) (B2, A, );
+      String (*toString) (B2, );
 
       __B2_VT()
       : __is_a(__B2::__class()),
@@ -145,12 +145,12 @@ namespace inputs {
     struct __C_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (C);
-      Class (*getClass) (C);
+      int32_t (*hashCode) (C, );
+      Class (*getClass) (C, );
       bool (*equals) (C, Object);
-      void (*setA) (C);
-      void (*printOther) (C);
-      String (*toString) (C);
+      void (*setA) (C, String, );
+      void (*printOther) (C, A, );
+      String (*toString) (C, );
 
       __C_VT()
       : __is_a(__C::__class()),
@@ -162,39 +162,38 @@ namespace inputs {
         equals((bool (*)(C, Object)) &__Object::equals) {}
     };
 
-    struct __Test010;
-    struct __Test010_VT;
-    typedef __Test010* Test010;
+    struct __Test011;
+    struct __Test011_VT;
+    typedef __Test011* Test011;
     
-    struct __Test010 { 
+    struct __Test011 { 
       
-      __Test010_VT* __vptr;
+      __Test011_VT* __vptr;
       
-      __Test010();
+      __Test011();
 
-      static void main(Test010,String);
-      static Test010 __init();
+      static void main(Test011,String);
+      static Test011 __init();
       static Class __class();
 
-      static __Test010_VT __vtable;
+      static __Test011_VT __vtable;
     };
 
-    struct __Test010_VT { 
+    struct __Test011_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (Test010);
-      Class (*getClass) (Test010);
-      String (*toString) (Test010);
-      bool (*equals) (Test010, Object);
-      void (*main) (Test010);
+      int32_t (*hashCode) (Test011, );
+      Class (*getClass) (Test011, );
+      String (*toString) (Test011, );
+      bool (*equals) (Test011, Object);
 
-      __Test010_VT()
-      : __is_a(__Test010::__class()),
-        hashCode((int32_t (*)(Test010)) &__Object::hashCode),
-        getClass((Class (*)(Test010)) &__Object::getClass),
-        toString((String (*)(Test010)) &__Object::toString),
-        equals((bool (*)(Test010, Object)) &__Object::equals),
-        main(&__Test010::main) {}
+      __Test011_VT()
+      : __is_a(__Test011::__class()),
+        hashCode((int32_t (*)(Test011)) &__Object::hashCode),
+        getClass((Class (*)(Test011)) &__Object::getClass),
+        toString((String (*)(Test011)) &__Object::toString),
+        equals((bool (*)(Test011, Object)) &__Object::equals),
+        main(&__Test011::main) {}
     };
 
   }

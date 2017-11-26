@@ -506,6 +506,10 @@ public class CppDataLayout {
                         //System.out.println(method.getName());
                         ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
                         // checking if method is overwritten
+                        // if method is static continue
+                        if (method.getModifier() != null &&method.getModifier().contains("static")) {
+                            continue;
+                        };
                         if ((!inheritedMethodNames.contains(method.getName()))) {
                             method.setOwnerClass(parentClass.getClassName());
                             currentArrayList.add(method);
@@ -521,6 +525,10 @@ public class CppDataLayout {
 
                 for (CustomMethodClass m : defaultMethods) {
                     String name = m.getName();
+                    // if method is static dont add
+                    if (m.getModifier() != null && m.getModifier().contains("static")) {
+                        continue;
+                    }
 
                     if (!(names.contains(name))) {
                         VTInheritedmethods.add(m);
@@ -567,6 +575,10 @@ public class CppDataLayout {
                     if (k == currClass.getMethods().size() -1 ){
                         isLastMethod = true;
                     }
+                    // if method is static continue
+                    if (m.getModifier() != null && m.getModifier().contains("static")) {
+                        continue;
+                    }
                     m.setOwnerClass(currClass.getClassName());
                     // if m isnt in overwritten methods, add it to vtinstantiator
                     if (!(inheritedMethodNames.contains(m.getName()))) {
@@ -598,8 +610,15 @@ public class CppDataLayout {
                 public VTMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
                     typeTranslate translateType = new typeTranslate();
                     String returnT = translateType.translateType(method.getReturnType());
+                    String parameters = className + ", ";
+                    for (CustomVariablesClass javaParam : method.getParameters()) {
+                        String parameter = javaParam.getType();
+                        parameters += parameter + ", ";
+                    }
+                    // remove comma and space at the end
+                    parameters = parameters.substring(0, parameters.length() - 2);
                     if (!method.getName().equals("equals")) {
-                        this.fullLine = returnT + " (*" + method.getName() + ") (" + className + ")";
+                        this.fullLine = returnT + " (*" + method.getName() + ") (" + parameters + ")";
                     }
                     else{
                         this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
@@ -611,7 +630,7 @@ public class CppDataLayout {
                 params = new ArrayList<String>();
                 this.pointer = "(*"+pt +")";
                 this.returnType = rt;
-                this.className = "("+className +")";
+                this.className = "("+ className +")";
                 params.add(this.className);
                 if (className.equals("hashCode")) {
                     params.add("Object");
