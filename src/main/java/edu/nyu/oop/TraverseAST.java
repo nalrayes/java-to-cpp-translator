@@ -18,8 +18,6 @@ public class TraverseAST extends Visitor {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
 
     // CustomClassObject
-    // private MethodSummary summary = new MethodSummary();
-
     private ClassSummary classSummary = new ClassSummary();
 
     public static final int DEBUGGING = 1;
@@ -31,37 +29,25 @@ public class TraverseAST extends Visitor {
     }
 
     private void visitClassBody(GNode n){
-
-
-
         visit(n);
-
-
     }
 
     // this function is used to get class Vars
     public CustomVariablesClass TraverseFieldDeclaration(Node n){
-
-
         CustomVariablesClass varToReturn = new CustomVariablesClass();
         if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
             String varModifiers = "";
             int amountOfModifers = n.getNode(0).size();
             for (int i = 0; i < amountOfModifers; i++){
-
                 varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
-
             }
             varToReturn.modifier = varModifiers;
         }
 
         // Get Qualified Identifier
         String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
-
         varToReturn.type = qualifiedIdentifier;
-
         // Get Declarator Identifier
-
         String declarator;
         if (n.getNode(2) != null) {
             // then this is a declarator
@@ -70,15 +56,10 @@ public class TraverseAST extends Visitor {
             // then this is a formalparameter
             declarator = n.getString(3);
         }
-
         varToReturn.name = declarator;
-
         String theVariable = qualifiedIdentifier + " " + declarator;
-
-
         return varToReturn;
     }
-
 
     // this is a method to check if a Modifer()'s string is a visibility parameter
     public boolean checkMethodVisibility(String check){
@@ -110,7 +91,6 @@ public class TraverseAST extends Visitor {
             System.out.println(modifiers.getNode(0).getString(0));
             currentConstructor.setVisibility(modifiers.getNode(0).getString(0));
         }
-
         Node params = n.getNode(3);
         if (params.size() > 0) {
             for (int i = 0; i < params.size(); i++) {
@@ -121,8 +101,6 @@ public class TraverseAST extends Visitor {
                 currentConstructor.addParameter(TraverseFieldDeclaration(params.getNode(i)));
             }
         }
-
-
         return currentConstructor;
     }
 
@@ -141,7 +119,6 @@ public class TraverseAST extends Visitor {
     }
 
     public void visitClassDeclaration(GNode n) {
-
         //Entering the class scope & create a new class object
         currentClass = new CustomClassObject();
         //Get the class name
@@ -320,27 +297,16 @@ public class TraverseAST extends Visitor {
     }
 
 
-
     public ClassSummary getClassSummary(Node n) {
         super.dispatch(n);
 
         return classSummary;
     }
 
-
-
-
-
-
-
-
     //Class Summary represents a file
     static class ClassSummary{
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
         ArrayList<String> packages = new ArrayList<String>();
         JavaFileObject javaFile =  new JavaFileObject();
-
-
-
     }
 }

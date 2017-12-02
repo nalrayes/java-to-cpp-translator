@@ -50,7 +50,6 @@ public class TraverseASTTest {
         //TEST the values are correct from the JavaAST
         classSummary = visitor.getClassSummary(javaASTNodes.get(0));
 
-
     }
 
     @Test
