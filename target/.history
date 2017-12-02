@@ -86,3 +86,5 @@ runxtc -translateJava
 runxtc -translate
 runxtc -translate src/test/java/inputs/Test000/Test000.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *MethodVisitorTest*
+test-only *TraverseASTTest*
