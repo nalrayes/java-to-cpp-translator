@@ -1,0 +1,299 @@
+package edu.nyu.oop;
+
+import edu.nyu.oop.util.ContextualVisitor;
+import edu.nyu.oop.util.SymbolTableUtil;
+import edu.nyu.oop.util.TypeUtil;
+import org.slf4j.Logger;
+import xtc.lang.JavaEntities;
+
+import xtc.Constants;
+
+import xtc.tree.GNode;
+import xtc.tree.Node;
+import xtc.util.SymbolTable;
+import xtc.util.Runtime;
+import xtc.type.*;
+
+import java.util.*;
+
+
+public class TraverseASTM extends ContextualVisitor {
+
+    int globalPositioncounter = 0;
+
+    // CustomClassObject
+    private ImplementationSummary implementationSummary = new ImplementationSummary();
+
+    //Global var to keep track of the current class in AST
+    public CustomClassObject currentClass;
+
+    //Class Summary represents a file
+    static class ImplementationSummary{
+        ArrayList<CustomClassObject> implementationClassObjects = new ArrayList<CustomClassObject>();
+    }
+
+    public ImplementationSummary getImplementationSummary(Node n) {
+        super.dispatch(n);
+        return implementationSummary;
+    }
+
+    public TraverseASTM(Runtime runtime, SymbolTable table) {
+        super(runtime, table);
+    }
+
+    public GNode makeThisExpression() {
+        GNode _this = GNode.create("ThisExpression", null);
+        TypeUtil.setType(_this, JavaEntities.currentType(table));
+        return _this;
+    }
+
+    //Add our own VisitMethods for fields etc
+    @Override
+    public void visitClassDeclaration(GNode n) {
+        SymbolTableUtil.enterScope(table, n);
+        table.mark(n);
+
+        //Entering the class scope & create a new class object
+        currentClass = new CustomClassObject();
+        //Get the class name
+        currentClass.className = n.getString(1);
+
+        //Get the class extensions
+        Node extention = n.getNode(3);
+        String classExtension = "None";
+        if (extention != null){
+            //there is an extension
+            classExtension = extention.getNode(0).getNode(0).getString(0);
+
+        }
+        //Add the extension to the class
+        currentClass.setParentClass(classExtension);
+        currentClass.parentClass = classExtension;
+
+        // Get all modifiers of the class and add them to the class object
+        Node modifiers  = n.getNode(0);
+        for (int i = 0; i < modifiers.size(); i++) {
+            Node curNode = modifiers.getNode(i);
+            String modifierName = curNode.getString(0);
+            currentClass.modifiers.add(modifierName);
+
+        }
+
+//        System.out.println("classname");
+//        System.out.println(currentClass.className);
+//        Iterator<String> iter = table.current().symbols();
+//        System.out.println("pls dont kick us out");
+//
+//        Object thing = table.current().lookup("method(printOther)(A other)");
+//        System.out.println(thing);
+
+        visit(n);
+        SymbolTableUtil.exitScope(table, n);
+
+        //Class scope exists. Hence, end of the class
+        //Save the class object to the array of class objects
+        implementationSummary.implementationClassObjects.add(currentClass);
+        currentClass = null;
+    }
+
+    @Override
+    public void visitMethodDeclaration(GNode n) {
+        SymbolTableUtil.enterScope(table, n);
+        table.mark(n);
+        CustomMethodClass currentMethodObj = new CustomMethodClass();
+        Node currMethod = n;
+        if (n.getString(3) != null){
+            currentMethodObj.name = n.getString(3);
+        }
+
+        //Get method return type
+        Node returnType = n.getNode(2);
+        //System.out.println("Method Return " + returnType.size());
+        if(returnType.size() > 0){
+            //Return type is not void
+            //Get the return type
+            String rt = returnType.getNode(0).getString(0);
+            currentMethodObj.returnType = rt;
+            // System.out.println("Method Return Type " + rt);
+        }
+        else{
+            //Return type is void
+            currentMethodObj.returnType = returnType.getName();
+            //System.out.println("Method Return Type " + returnType.getName());
+        }
+
+        Node methodModifers = currMethod.getNode(0);
+        String wholeModifier = "";
+        int totalModsInMethod = currMethod.getNode(0).size();
+        for (int j = 0; j < totalModsInMethod; j++) {
+            String modifierVal = currMethod.getNode(0).getNode(j).getString(0);
+            if (checkMethodVisibility(modifierVal) == true) {
+                // System.out.println("vis");
+                currentMethodObj.visibility = modifierVal;
+            } else {
+                wholeModifier += modifierVal;
+            }
+            //System.out.println(methodModifers.getNode(0).getString(j));
+            currentMethodObj.modifier = wholeModifier;
+        }
+
+        if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
+            Node formalParams = currMethod.getNode(4);
+            for (int i = 0; i < currMethod.getNode(4).size(); i++) {
+                if (currMethod.getNode(4).getNode(i).getName().equals("FormalParameter")) {
+                    CustomVariablesClass aVar = new CustomVariablesClass();
+                    Node currentformalParameter = currMethod.getNode(4).getNode(i);
+                    if (currentformalParameter == null){
+                        continue;
+                    }
+                    CustomVariablesClass myVar = new CustomVariablesClass();
+                    // get method parameters
+                    myVar.modifier = "";
+                    // get parameter variable type
+                    if (currentformalParameter.getNode(1).getName().equals("Type")) {
+                        Node getVarName = currentformalParameter.getNode(1).getNode(0);
+                        myVar.type = getVarName.getString(0);
+                    }
+                    //Get parameter var name
+                    if (currentformalParameter.getString(3) != null)
+                        myVar.name = currentformalParameter.getString(3);
+                    currentMethodObj.parameters.add(myVar);
+                    //System.out.println(currentMethodObj.name);
+                }
+            }
+        }
+        currentClass.methods.add(currentMethodObj);
+        visit(n);
+        SymbolTableUtil.exitScope(table, n);
+    }
+    // this is a method to check if a Modifer()'s string is a visibility parameter
+    public boolean checkMethodVisibility(String check){
+        switch (check){
+            case "public":
+                return true;
+            // break;
+            case "private":
+                return true;
+            // break;
+            case "protected":
+                return true;
+            // break;
+            default:
+                return false;
+        }
+    }
+
+    @Override
+    public void visitBlock(GNode n) {
+        SymbolTableUtil.enterScope(table, n);
+        table.mark(n);
+        visit(n);
+        SymbolTableUtil.exitScope(table, n);
+    }
+
+
+
+
+
+
+
+    public void visitCallExpression(GNode n) {
+        visit(n);
+        Node receiver = n.getNode(0);
+        String methodName = n.getString(2);
+        if (receiver == null &&
+                !"super".equals(methodName) &&
+                !"this".equals(methodName)) {
+            // find type to search for relevant methods
+            Type typeToSearch = JavaEntities.currentType(table);
+
+            // find type of called method
+            List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
+            MethodT method =
+                    JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
+
+            if (method == null) return;
+
+            //make 'this' access explicit
+            if (!TypeUtil.isStaticType(method)) {
+                n.set(0, makeThisExpression());
+            }
+
+            //Get the Mehtods Information
+            //TODO
+
+
+
+
+        }
+    }
+
+
+    public Node visitPrimaryIdentifier(GNode n) {
+        String fieldName = n.getString(0);
+
+        // find type to search for relevant fields
+        ClassOrInterfaceT typeToSearch = JavaEntities.currentType(table);
+        if (typeToSearch == null) return n;
+
+        // find type of
+        VariableT field = null;
+        SymbolTable.Scope oldScope = table.current();
+        JavaEntities.enterScopeByQualifiedName(table, typeToSearch.getScope());
+        for (final VariableT f : JavaEntities.fieldsOwnAndInherited(table, classpath(), typeToSearch))
+            if (f.getName().equals(fieldName)) {
+                field = f;
+                break;
+            }
+        table.setScope(oldScope);
+
+        if (field == null) return n;
+
+        //make 'this' access explicit
+        Type t = (Type) table.lookup(fieldName);
+        if (t == null || !t.isVariable()) {
+            t = field;
+        }
+
+        if (JavaEntities.isFieldT(t) && !TypeUtil.isStaticType(t)) {
+            GNode n1 = GNode.create("SelectionExpression", makeThisExpression(), fieldName);
+            TypeUtil.setType(n1, TypeUtil.getType(n));
+            return n1;
+        }
+
+        return n;
+    }
+
+    public List<Type> visitArguments(final GNode n) {
+        List<Type> result = new ArrayList<Type>(n.size());
+        for (int i = 0; i < n.size(); i++) {
+            GNode argi = n.getGeneric(i);
+            Type ti = (Type) argi.getProperty(Constants.TYPE);
+            if (ti.isVariable()) {
+                VariableT vi = ti.toVariable();
+                ti = vi.getType();
+            }
+            result.add(ti);
+            Object argi1 = dispatch(argi);
+            if (argi1 != null && argi1 instanceof Node) {
+                n.set(i, argi1);
+            }
+        }
+        return result;
+    }
+
+    public void visit(GNode n) {
+        for (int i = 0; i < n.size(); ++i) {
+            Object o = n.get(i);
+            if (o instanceof Node) {
+                Object o1 = dispatch((Node) o);
+                if (o1 != null && o1 instanceof Node) {
+                    n.set(i, o1);
+                }
+            }
+        }
+    }
+
+
+
+}

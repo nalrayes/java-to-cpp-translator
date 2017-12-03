@@ -11,6 +11,7 @@ public class CustomMethodClass {
     String returnType;
     String ownerClass;
 
+
     public CustomMethodClass(){
         parameters = new ArrayList<CustomVariablesClass>();
     }

@@ -171,9 +171,6 @@ public class TraverseAST extends Visitor {
         //Save the class object to the array of class objects
         classSummary.classes.add(currentClass);
         classSummary.javaFile.classes.add(currentClass);
-
-
-
         //Make the pointer point to NULL
        // System.out.println("End of class: " + currentClass.className);
         currentClass = null;
@@ -182,14 +179,9 @@ public class TraverseAST extends Visitor {
 
 
     public void visitMethodDeclaration(GNode n) {
-
-
         CustomMethodClass currentMethodObj = new CustomMethodClass();
-
         Node currMethod = n;
-
         if (n.getString(3) != null){
-
             currentMethodObj.name = n.getString(3);
         }
 
@@ -210,79 +202,47 @@ public class TraverseAST extends Visitor {
         }
 
         Node methodModifers = currMethod.getNode(0);
-
         String wholeModifier = "";
-
         int totalModsInMethod = currMethod.getNode(0).size();
-
         for (int j = 0; j < totalModsInMethod; j++) {
-
-
             String modifierVal = currMethod.getNode(0).getNode(j).getString(0);
-
             if (checkMethodVisibility(modifierVal) == true) {
                 // System.out.println("vis");
                 currentMethodObj.visibility = modifierVal;
-
-
             } else {
                 wholeModifier += modifierVal;
             }
-
             //System.out.println(methodModifers.getNode(0).getString(j));
-
             currentMethodObj.modifier = wholeModifier;
         }
 
-
         if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
-
             Node formalParams = currMethod.getNode(4);
-
-
             for (int i = 0; i < currMethod.getNode(4).size(); i++) {
                 if (currMethod.getNode(4).getNode(i).getName().equals("FormalParameter")) {
                     CustomVariablesClass aVar = new CustomVariablesClass();
-
-
-
                     Node currentformalParameter = currMethod.getNode(4).getNode(i);
-
-
                     if (currentformalParameter == null){
                         continue;
                     }
-
                     CustomVariablesClass myVar = new CustomVariablesClass();
                     // get method parameters
                     myVar.modifier = "";
                     // get parameter variable type
                     if (currentformalParameter.getNode(1).getName().equals("Type")) {
-
-
                         Node getVarName = currentformalParameter.getNode(1).getNode(0);
-
-
                             myVar.type = getVarName.getString(0);
-
-
                     }
                     //Get parameter var name
                     if (currentformalParameter.getString(3) != null)
                         myVar.name = currentformalParameter.getString(3);
-
-
-                   currentMethodObj.parameters.add(myVar);
+                    currentMethodObj.parameters.add(myVar);
                     //System.out.println(currentMethodObj.name);
-
-
                 }
             }
         }
-
         currentClass.methods.add(currentMethodObj);
         visit(n);
-
     }
 
 

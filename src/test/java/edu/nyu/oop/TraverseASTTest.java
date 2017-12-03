@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import edu.nyu.oop.util.JavaFiveImportParser;
 import java.util.List;
 import xtc.tree.Location;
+import edu.nyu.oop.util.SymbolTableBuilder;
+import edu.nyu.oop.util.SymbolTableUtil;
 
 import static org.junit.Assert.*;
 
@@ -18,6 +20,7 @@ public class TraverseASTTest {
    // private TraverseAST.MethodSummary summary;
 
     private TraverseAST.ClassSummary classSummary;
+    private TraverseASTM.ImplementationSummary implementationSummary;
 
 
     @BeforeClass
@@ -49,6 +52,11 @@ public class TraverseASTTest {
 
         //TEST the values are correct from the JavaAST
         classSummary = visitor.getClassSummary(javaASTNodes.get(0));
+
+        //Test the values for JavaAST Implementation
+        //SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
+        //TraverseASTM visitorM = new TraverseASTM();
+        //implementationSummary = visitorM.getImplementationSummary(javaASTNodes.get(0));
 
     }
 
