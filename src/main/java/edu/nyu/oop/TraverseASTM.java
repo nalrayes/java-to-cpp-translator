@@ -187,11 +187,35 @@ public class TraverseASTM extends ContextualVisitor {
     public void visitBlock(GNode n) {
         SymbolTableUtil.enterScope(table, n);
         table.mark(n);
+        //TODO create new block and push on stack
         visit(n);
+        //TODO pop new block from stack
         SymbolTableUtil.exitScope(table, n);
     }
 
 
+    public void visitExpression (GNode n){
+        SymbolTableUtil.enterScope(table, n);
+        table.mark(n);
+
+        //Increment block counter
+        //Increment CustomExpressionClass Position (Update)
+
+        CustomExpressionClass exp = new CustomExpressionClass();
+        exp.setLeftArgument(n.getNode(0));
+        exp.setOperator(n.getString(1));
+        exp.setRightArgument(n.getNode(2));
+
+        System.out.println("HELLO");
+        System.out.println(exp.getLeftArgument().getString(0));
+        System.out.println(exp.getOperator());
+        System.out.println(exp.getRightArgument().getString(0));
+
+        //Add CustomExpressionClass to the ArrayList in Block Object
+
+        visit(n);
+        SymbolTableUtil.exitScope(table, n);
+    }
 
 
 

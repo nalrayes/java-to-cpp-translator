@@ -101,3 +101,6 @@ runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 test-only *MethodVisitorTest*
 test-only *TraverseASTTest*
 >>>>>>> 27c8549a37ebcd5a50e033040c95ca4529b6c0f7
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
