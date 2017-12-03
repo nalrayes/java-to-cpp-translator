@@ -86,6 +86,7 @@ runxtc -translateJava
 runxtc -translate
 runxtc -translate src/test/java/inputs/Test000/Test000.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
+<<<<<<< HEAD
 runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/Test028/Test028.java
@@ -96,3 +97,7 @@ runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 xtc -translate src/test/java/inputs/Test010/Test010.javarunxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+=======
+test-only *MethodVisitorTest*
+test-only *TraverseASTTest*
+>>>>>>> 27c8549a37ebcd5a50e033040c95ca4529b6c0f7
