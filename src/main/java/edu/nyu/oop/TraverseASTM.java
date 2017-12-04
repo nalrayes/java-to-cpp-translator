@@ -102,13 +102,21 @@ public class TraverseASTM extends ContextualVisitor {
         table.mark(n);
         CustomMethodClass currentMethodObj = new CustomMethodClass();
         Node currMethod = n;
+
+        //Get method return type
+        if (n.getNode(2) == null) {
+            // constructor
+            GNode classType = GNode.create("Type", GNode.create("QualifiedIdentifier", n.getString(3)));
+            n.set(2, classType);
+            n.set(3, "__init");
+            System.out.println(n);
+        }
+        Node returnType = n.getNode(2);
+
         if (n.getString(3) != null){
             currentMethodObj.name = n.getString(3);
         }
 
-        //Get method return type
-        Node returnType = n.getNode(2);
-        //System.out.println("Method Return " + returnType.size());
         if(returnType.size() > 0){
             //Return type is not void
             //Get the return type
@@ -162,6 +170,19 @@ public class TraverseASTM extends ContextualVisitor {
                 }
             }
         }
+
+        //Get the methods block
+        for (int i = 0; i < currMethod.size(); i++){
+            if (currMethod.get(i) != null && currMethod.get(i).getClass().equals(String.class)){
+              continue;
+            }
+            Node currentNode = currMethod.getNode(i);
+            if (currentNode != null && currentNode.getName() == "Block"){
+                currentMethodObj.setMethodsBlock(currentNode);
+                break;
+            }
+        }
+
         currentClass.methods.add(currentMethodObj);
         visit(n);
         SymbolTableUtil.exitScope(table, n);
@@ -182,44 +203,6 @@ public class TraverseASTM extends ContextualVisitor {
                 return false;
         }
     }
-
-    @Override
-    public void visitBlock(GNode n) {
-        SymbolTableUtil.enterScope(table, n);
-        table.mark(n);
-        //TODO create new block and push on stack
-        visit(n);
-        //TODO pop new block from stack
-        SymbolTableUtil.exitScope(table, n);
-    }
-
-
-    public void visitExpression (GNode n){
-        SymbolTableUtil.enterScope(table, n);
-        table.mark(n);
-
-        //Increment block counter
-        //Increment CustomExpressionClass Position (Update)
-
-        CustomExpressionClass exp = new CustomExpressionClass();
-        exp.setLeftArgument(n.getNode(0));
-        exp.setOperator(n.getString(1));
-        exp.setRightArgument(n.getNode(2));
-
-        System.out.println("HELLO");
-        System.out.println(exp.getLeftArgument().getString(0));
-        System.out.println(exp.getOperator());
-        System.out.println(exp.getRightArgument().getString(0));
-
-        //Add CustomExpressionClass to the ArrayList in Block Object
-
-        visit(n);
-        SymbolTableUtil.exitScope(table, n);
-    }
-
-
-
-
 
     public void visitCallExpression(GNode n) {
         visit(n);
@@ -244,7 +227,7 @@ public class TraverseASTM extends ContextualVisitor {
             }
 
             //Get the Mehtods Information
-            //TODO
+            //TODO HANDLE OVERLOADING
 
 
 

@@ -1,12 +1,12 @@
 package edu.nyu.oop;
 
+import edu.nyu.oop.util.CppDataLayout;
 import xtc.tree.GNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CppMASTCreator {
-
 
 
     public static CPPAST createNewCPPMAstFrom(List<GNode> javaASTNodes, CPPAST cppast, TraverseASTM visitor) {
@@ -16,6 +16,25 @@ public class CppMASTCreator {
         for (GNode javaAST : javaASTNodes) {
             javaImplementationClassSummaries.add(visitor.getImplementationSummary(javaAST));
         }
+
+        CppDataLayoutM layoutM = new CppDataLayoutM();
+
+        //With the Class Summary Implementation populate the CppAST Tree
+        for (TraverseASTM.ImplementationSummary implementationData : javaImplementationClassSummaries) {
+            //Add the nameSpaces to our C++ AST Tree
+           // addStructNodes(javaData, currentNamespace, cppHeaderAST);
+            //TODO
+            for (CustomClassObject classObj : implementationData.implementationClassObjects) {
+                layoutM.implementationClasses.add(new CppDataLayoutM.cppImplementationClass(classObj));
+            }
+
+
+
+        }
+
+
+
+
 
 
 
