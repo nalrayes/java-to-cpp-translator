@@ -12,9 +12,11 @@ public class CppDataLayoutM {
 
     public static ArrayList<CppDataLayoutM.cppImplementationClass> implementationClasses;
 
+
     public CppDataLayoutM(){
         //Use this default constructor to create the deafult __Object data layout
         implementationClasses = new ArrayList<cppImplementationClass>();
+
     }
 
     public static class cppImplementationClass{

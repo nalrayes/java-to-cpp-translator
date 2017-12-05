@@ -25,6 +25,14 @@ public class CppMASTCreator {
            // addStructNodes(javaData, currentNamespace, cppHeaderAST);
             //TODO
             for (CustomClassObject classObj : implementationData.implementationClassObjects) {
+                /*
+                    if classObj.getMethodNames includes main :
+                        get main function
+                        handle that shit
+                            possibilities:
+                            - new main struct
+                            - just take the block object and store that somewhere
+                 */
                 layoutM.implementationClasses.add(new CppDataLayoutM.cppImplementationClass(classObj));
             }
 

@@ -241,6 +241,18 @@ public class TraverseAST extends Visitor {
                 }
             }
         }
+
+        //Handle OverLoading
+        String currNamem = currentMethodObj.getName();
+        String newName = currNamem;
+        ArrayList<CustomVariablesClass> parameters = currentMethodObj.parameters;
+        //Get all the currentMethods param's
+        for (CustomVariablesClass var: parameters){
+            newName = newName + "_" + var.getType();
+        }
+        //Save the new name for the method
+        currentMethodObj.name = newName;
+
         currentClass.methods.add(currentMethodObj);
         visit(n);
     }

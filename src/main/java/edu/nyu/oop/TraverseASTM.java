@@ -14,12 +14,15 @@ import xtc.util.SymbolTable;
 import xtc.util.Runtime;
 import xtc.type.*;
 
+import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.*;
 
 
 public class TraverseASTM extends ContextualVisitor {
 
-    int globalPositioncounter = 0;
+    //Keep track if its a constructor
+    //Because symboltable simplifies the AST
+    boolean isConstructor = false;
 
     // CustomClassObject
     private ImplementationSummary implementationSummary = new ImplementationSummary();
@@ -109,7 +112,8 @@ public class TraverseASTM extends ContextualVisitor {
             GNode classType = GNode.create("Type", GNode.create("QualifiedIdentifier", n.getString(3)));
             n.set(2, classType);
             n.set(3, "__init");
-            System.out.println(n);
+            isConstructor = true;
+            //System.out.println(n);
         }
         Node returnType = n.getNode(2);
 
@@ -165,10 +169,25 @@ public class TraverseASTM extends ContextualVisitor {
                     //Get parameter var name
                     if (currentformalParameter.getString(3) != null)
                         myVar.name = currentformalParameter.getString(3);
-                    currentMethodObj.parameters.add(myVar);
-                    //System.out.println(currentMethodObj.name);
+                        currentMethodObj.parameters.add(myVar);
                 }
             }
+        }
+
+        //Handle Overloading Here
+        //We simply change all method names to include their paramter types
+        //By doing so we handle Overriding cases, Overloading cases and do not need to keep track of inheritence
+        //Get current method name
+        if (!isConstructor){
+            String currNamem = currentMethodObj.getName();
+            String newName = currNamem;
+            ArrayList<CustomVariablesClass> parameters = currentMethodObj.parameters;
+            //Get all the currentMethods param's
+            for (CustomVariablesClass var: parameters){
+                newName = newName + "_" + var.getType();
+            }
+            //Save the new name for the method
+            currentMethodObj.name = newName;
         }
 
         //Get the methods block
@@ -184,6 +203,7 @@ public class TraverseASTM extends ContextualVisitor {
         }
 
         currentClass.methods.add(currentMethodObj);
+        isConstructor = false;
         visit(n);
         SymbolTableUtil.exitScope(table, n);
     }
@@ -208,6 +228,7 @@ public class TraverseASTM extends ContextualVisitor {
         visit(n);
         Node receiver = n.getNode(0);
         String methodName = n.getString(2);
+//
         if (receiver == null &&
                 !"super".equals(methodName) &&
                 !"this".equals(methodName)) {
@@ -225,12 +246,6 @@ public class TraverseASTM extends ContextualVisitor {
             if (!TypeUtil.isStaticType(method)) {
                 n.set(0, makeThisExpression());
             }
-
-            //Get the Mehtods Information
-            //TODO HANDLE OVERLOADING
-
-
-
 
         }
     }

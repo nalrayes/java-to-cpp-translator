@@ -61,9 +61,9 @@ public class CppHeaderASTCreator {
         //System.out.println(cppHeaderAST.getLinkToNamespaceNode());
 
         //Create the cppClassObjects
-        createCppClassObject(javaClassSummaries, cppHeaderAST);
+        //createCppClassObject(javaClassSummaries, cppHeaderAST);
         //Fill the CPPClassObjects with their data layouts
-        fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
+        //fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
 
 //        //TODO TEST - print all the CPPDataObject's Layouts
 //        ArrayList<CppClassObject> clist = cppHeaderAST.getCppClassObjectslist();
