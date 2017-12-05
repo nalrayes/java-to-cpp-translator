@@ -2,7 +2,7 @@ package inputs.CustomTests;
 
 
 class A {
-    String a;
+    String a = "greatstring123";
 
     public void setA(String x) {
         a = x;
@@ -21,7 +21,8 @@ class A {
 
 class B1 extends A {
     public void helloWorld(){}
-
+    public B1(){}
+    public B1(int x, int y){}
     String b;
 }
 
@@ -44,7 +45,9 @@ class C extends B2 {
 public class CustomTest1 {
     public static void main(String[] args) {
         A a = new A();
-        a.setA("A");
+        B1 b12 = new B1(111,232323);
+        String xyz = "greatstring22";
+        a.setA("A123");
         B1 b1 = new B1();
         b1.setA("B1");
         B2 b2 = new B2();

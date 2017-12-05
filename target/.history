@@ -86,6 +86,7 @@ runxtc -translateJava
 runxtc -translate
 runxtc -translate src/test/java/inputs/Test000/Test000.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
+<<<<<<< HEAD
 runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/Test028/Test028.java
@@ -96,8 +97,10 @@ runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 xtc -translate src/test/java/inputs/Test010/Test010.javarunxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+=======
 test-only *MethodVisitorTest*
 test-only *TraverseASTTest*
+>>>>>>> 27c8549a37ebcd5a50e033040c95ca4529b6c0f7
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
@@ -129,14 +132,6 @@ runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
 runxtc -printSimpleJavaAst src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
-runxtc -translate src/test/java/inputs/Test009/Test009.java
-runxtc -translate ../src/test/java/inputs/Test009/Test009.java
-new java.io.File(".").getAbsolutePath.
-runxtc -translate src/test/java/inputs/Test009/Test009.java
-runxtc -translate src/test/java/inputs/test009/Test009.java
-runxtc -translate src/test/java/inputs/test016/Test016.java
-runxtc -translate src/test/java/inputs/test010/Test010.java
-runxtc -translate src/test/java/inputs/test011/Test011.java
 runxtc -printSimpleJavaAst src/test/java/inputs/Test006/Test006.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
@@ -171,5 +166,15 @@ runxtc -translate src/test/java/inputs/Test041/Test041.java
 runxtc -printJavaAst src/test/java/inputs/CustomTEsts/CustomTest1.java
 runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/Test041/Test041.java
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java |more
+reset
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java |more
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java

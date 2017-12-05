@@ -69,11 +69,14 @@ public class CppDataLayoutM {
             String Type;
             ArrayList<String> declarators;
             ArrayList<String> arguments;
+            ArrayList<String> mainFileLines;
 
             public CustomFieldDeclaration(Node fieldDec, int position){
                 modifiers =new ArrayList<String>();
                 declarators = new ArrayList<String>();
                 arguments =new ArrayList<String>();
+                mainFileLines =new ArrayList<String>();
+
                 this.position = position;
 
                 // for (int i = 0; i < fieldDec.size(); i++){
@@ -85,13 +88,16 @@ public class CppDataLayoutM {
                 // 3: Arguments("some string/null"), someVal/null)
 
                 // 0: modifiers
+               // System.out.println("fdeez " + fieldDec);
+                String fieldDeclarationLine ="";
+
                 if (fieldDec.getNode(0).size() > 0 ){
 
                     for (int modifierIndex = 0; modifierIndex < fieldDec.getNode(0).size(); modifierIndex++){
                         String getModifier = fieldDec.getNode(0).getString(modifierIndex);
 
                         modifiers.add(getModifier);
-
+                        fieldDeclarationLine += getModifier + " ";
                     }
 
 
@@ -102,7 +108,6 @@ public class CppDataLayoutM {
 
                     System.out.println("Get Type");
                     System.out.println((fieldDec.getNode(1)));
-                    String fieldDeclarationLine ="";
                     String qualifiedIdentifier;
                     for (int j = 0; j < fieldDec.getNode(1).size(); j++){
 
@@ -116,7 +121,7 @@ public class CppDataLayoutM {
 
 //                                if (fieldDec.getNode(1).getNode(j).getString(0) == null){continue;}
                             qualifiedIdentifier = fieldDec.getNode(1).getNode(j).getString(0);
-                            fieldDeclarationLine += qualifiedIdentifier;
+                            fieldDeclarationLine += qualifiedIdentifier + " ";
                         }
 
 
@@ -138,12 +143,14 @@ public class CppDataLayoutM {
 
 
                 Node declarators = fieldDec.getNode(2);
+                System.out.println("deez " + declarators);
 
                 if (declarators.size() > 0 ) {
                     System.out.println("DECLARATORS1 ");
 
                     System.out.println(declarators);
                     Node declarator = declarators.getNode(0);
+                    System.out.println("mydec1" + declarator);
 
                     if (!declarator.isEmpty()){
 
@@ -153,7 +160,7 @@ public class CppDataLayoutM {
                         // if declator instantiates an object
                         // must get the rhs
                         if (declarator.getNode(2).getName().equals("NewClassExpression")){
-                            declaratorValue = "new";
+                            declaratorValue = "new ";
                             Node newClassExpression = declarator.getNode(2);
                             declaratorValue += newClassExpression.getNode(2).getString(0);
 
@@ -161,7 +168,8 @@ public class CppDataLayoutM {
                             if (!newClassExpression.getNode(3).isEmpty()){
 
                                 Node arguments = newClassExpression.getNode(3);
-                                System.out.println("(");
+
+                                declaratorValue+="(";
                                 for (int x = 0; x < arguments.size(); x++) {
                                     declaratorValue += arguments.getNode(x).getString(0);
 
@@ -171,7 +179,7 @@ public class CppDataLayoutM {
                                     }
 
                                 }
-                                System.out.println(")");
+                                declaratorValue+=")";
 
 
                             }else{
@@ -181,12 +189,21 @@ public class CppDataLayoutM {
 
 
                         } // end of if NewClassExpression
+                        else{
+                            declaratorValue = declarator.getNode(2).getString(0);
+                            //System.out.println("wowee " + declaratorValue);
+                        }
 
+                        String fullDeclarator = declaratorVar + " = " + declaratorValue;
+                        fieldDeclarationLine += fullDeclarator;
 
-
+                        //declarators.add(fieldDeclarationLine);
+                        mainFileLines.add(fieldDeclarationLine);
+                        System.out.println("FULL FIELD DEC \n " +  fieldDeclarationLine);
 
 
                     } // end of if declator isn't empty
+
 
 
 
