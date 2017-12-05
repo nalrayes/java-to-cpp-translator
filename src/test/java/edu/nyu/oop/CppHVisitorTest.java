@@ -24,7 +24,7 @@ public class CppHVisitorTest {
     @BeforeClass
     public static void beforeClass() {
         logger.debug("Executing MethodVisitorTest");
-        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test008/Test008.java");
+        node = (GNode) XtcTestUtils.loadTestFile("src/test/java/inputs/test012/Test012.java");
         XtcTestUtils.prettyPrintAst(node);
     }
 
@@ -51,7 +51,6 @@ public class CppHVisitorTest {
         //Phase three ->Take cppAST from above and use visit methods to access the nodes and data
         //Print data into Cpp.h file
         //(cppAST.getRoot()) <- use this as your point to start
-
 
 
 //        for (int i = 0; i < cppAST.getRoot().size(); i++){

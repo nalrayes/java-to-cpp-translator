@@ -13,6 +13,11 @@
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$typeTranslate.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppVar.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppMethod.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppStruct.class, /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/target/classes/edu/nyu/oop/util/CppDataLayout$CppParameter.class)[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
@@ -32,3 +37,4 @@
 [0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m

@@ -1,5 +1,7 @@
 package edu.nyu.oop;
 
+import xtc.tree.Node;
+
 import java.util.ArrayList;
 
 public class CustomMethodClass {
@@ -10,6 +12,17 @@ public class CustomMethodClass {
     ArrayList<CustomVariablesClass> parameters;
     String returnType;
     String ownerClass;
+
+    public Node methodsBlock;
+
+
+    public void setMethodsBlock(Node methodsBlock) {
+        this.methodsBlock = methodsBlock;
+    }
+
+    public Node getMethodsBlock() {
+        return methodsBlock;
+    }
 
     public CustomMethodClass(){
         parameters = new ArrayList<CustomVariablesClass>();

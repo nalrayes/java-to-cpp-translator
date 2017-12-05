@@ -61,9 +61,9 @@ public class CppHeaderASTCreator {
         //System.out.println(cppHeaderAST.getLinkToNamespaceNode());
 
         //Create the cppClassObjects
-        createCppClassObject(javaClassSummaries, cppHeaderAST);
+        //createCppClassObject(javaClassSummaries, cppHeaderAST);
         //Fill the CPPClassObjects with their data layouts
-        fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
+        //fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
 
 //        //TODO TEST - print all the CPPDataObject's Layouts
 //        ArrayList<CppClassObject> clist = cppHeaderAST.getCppClassObjectslist();
@@ -298,34 +298,17 @@ public class CppHeaderASTCreator {
         ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
         structsMap = new HashMap<String, CustomClassObject>();
 
-
         for (CustomClassObject c: javaData.classes){
-
-
-
-
             // used for populating vtables
             structsMap.put(c.getClassName(), c);
-
         }
-
-
 
         // creates branch for structs
         for (CustomClassObject c: javaData.classes){
-
             CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c, structsMap);
-
             // added to the tree
             structs.add(aStruct);
-
-
-
-
         }
-
-
-
 
 
 //        // creates branch for VTables
@@ -337,8 +320,6 @@ public class CppHeaderASTCreator {
 //            VTables.add(vTable);
 //
 //        }
-
-
 
 //
 //        GNode pointer = rootOfCppAST;
@@ -354,7 +335,6 @@ public class CppHeaderASTCreator {
 
         // this may not be necessary, but I'm keeping it rn just in case
         rootNode.setRecentParentNodeMutated(newStructNode);
-
 
     }
 }

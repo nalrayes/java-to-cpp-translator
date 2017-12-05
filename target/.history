@@ -69,72 +69,65 @@ test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test010/Test010.java
-<<<<<<< HEAD
-runxtc -translate src/test/java/inputs/Test012/Test012.java
-git st
-runxtc -translate src/test/java/inputs/Test012/Test012.java
-git st
-=======
-runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
-runxtc -translate src/test/java/inputs/Test011/test011.java
-test-only *CppHVisitorTest*
-runxtc -translate src/test/java/inputs/Test011/test011.java
-runxtc -translate src/test/java/inputs/Test012/test012.java
-<<<<<<< HEAD
-test-only *CppHVisitorTest*
-runxtc -translate src/test/java/inputs/Test07/test07.java
-runxtc -translate src/test/java/inputs/Test007/test007.java
-runxtc -translate src/test/java/inputs/Test001/test001.java
-runxtc -translate src/test/java/inputs/Test002/test002.java
-runxtc -translate src/test/java/inputs/Test001/test001.java
-runxtc -translate src/test/java/inputs/Test002/test002.java
-runxtc -translate src/test/java/inputs/Test003/test003.java
-runxtc -translate src/test/java/inputs/Test004/test004.java
-q
-=======
->>>>>>> 251bafa7c7e5c510db8ec32fa9999b1743599715
-xtc -translate src/test/java/inputs/Test012/Test012.javarunxtc -translate src/test/java/inputs/Test012/Test012.java
-xtc -translate src/test/java/inputs/Test012/Test012.java
-runxtc -translate src/test/java/inputs/Test012/Test012.java
-runxtc -translate src/test/java/inputs/Test016/Test016.java
-runxtc -translate src/test/java/inputs/Test017/Test017.java
-runxtc -translate src/test/java/inputs/Test018/Test018.java
+/java/inputs/Test019/Test019.java
 runxtc -translate src/test/java/inputs/Test020/Test020.java
-runxtc -translate src/test/java/inputs/Test001/Test001.java
-runxtc -translate src/test/java/inputs/Test002/Test002.java
-runxtc -translate src/test/java/inputs/Test003/Test003.java
-runxtc -translate src/test/java/inputs/Test004/Test004.java
-runxtc -translate src/test/java/inputs/Test005/Test005.java
-runxtc -translate src/test/java/inputs/Test006/Test006.java
-runxtc -translate src/test/java/inputs/Test007/Test007.java
-runxtc -translate src/test/java/inputs/Test006/Test006.java
-runxtc -translate src/test/java/inputs/Test007/Test007.java
-runxtc -translate src/test/java/inputs/Test01/Test011.java
-runxtc -translate src/test/java/inputs/Test011/Test011.java
-runxtc -translate src/test/java/inputs/Test012/Test012.java
-runxtc -translate src/test/java/inputs/Test013/Test013.java
-runxtc -translate src/test/java/inputs/Test014/Test014.java
-runxtc -translate src/test/java/inputs/Test015/Test015.java
-runxtc -translate src/test/java/inputs/Test016/Test016.java
-runxtc -translate src/test/java/inputs/Test046/Test004.java
-runxtc -translate src/test/java/inputs/Test004/Test004.java
-runxtc -translate src/test/java/inputs/Test007/Test007.java
-runxtc -translate src/test/java/inputs/Test004/Test004.java
-runxtc -translate src/test/java/inputs/Test016/Test016.java
-runxtc -translate src/test/java/inputs/Test017/Test017.java
-runxtc -translate src/test/java/inputs/Test018/Test018.java
-runxtc -translate src/test/java/inputs/Test019/Test019.java
-runxtc -translate src/test/java/inputs/Test029/Test020.java
-runxtc -translate src/test/java/inputs/Test020/Test020.java
+rintJavaAst src/test/java/inputs/test010/Test010.java
+test
+test-only *MethodVisitorTest*
+test
+test-only *MethodVisitorTest*
+test
+test-only *MethodVisitorTest*
+kill -9 5430
+test
+runxtc -printJavaAst src/test/java/inputs/Test000/Test000.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translateJava
+runxtc -translate
+runxtc -translate src/test/java/inputs/Test000/Test000.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
-runxtc -translate src/test/java/inputs/Test011/Test011.java
-runxtc -translate src/test/java/inputs/Test012/Test012.java
-runxtc -translate src/test/java/inputs/Test013/Test013.java
-runxtc -translate src/test/java/inputs/Test015/Test015.java
-runxtc -translate src/test/java/inputs/Test016/Test016.java
+runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test028/Test028.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test003/Test003.java
+runxtc -printJavaAst src/test/java/inputs/Test002/Test002.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+xtc -translate src/test/java/inputs/Test010/Test010.javarunxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+test-only *MethodVisitorTest*
+test-only *TraverseASTTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
->>>>>>> dac8efba81345e2b021a405f0e2819e82c133593
-runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test015/Test015.java
+runxtc -printJavaAst src/test/java/inputs/Test016/Test016.java
+runxtc -printJavaAst src/test/java/inputs/Test017/Test017.java
+runxtc -printJavaAst src/test/java/inputs/Test018/Test018.java
+runxtc -printJavaAst src/test/java/inputs/Test019/Test019.java
+runxtc -printJavaAst src/test/java/inputs/Test022/Test022.java
+runxtc -printJavaAst src/test/java/inputs/Test023/Test023.java
+runxtc -printJavaAst src/test/java/inputs/Test024/Test024.java
+runxtc -printJavaAst src/test/java/inputs/Test025/Test025.java
+runxtc -printJavaAst src/test/java/inputs/Test030/Test030.java
+runxtc -printJavaAst src/test/java/inputs/Test031/Test031.java
+runxtc -printJavaAst src/test/java/inputs/Test032/Test032.java
+runxtc -printJavaAst src/test/java/inputs/Test038/Test038.java
+runxtc -printJavaAst src/test/java/inputs/Test043/Test043.java
+runxtc -printJavaAst src/test/java/inputs/Test002/Test002.java
+runxtc -printJavaAst src/test/java/inputs/Test004/Test004.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -printSimpleJavaAst src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test009/Test009.java
 runxtc -translate ../src/test/java/inputs/Test009/Test009.java
@@ -144,3 +137,17 @@ runxtc -translate src/test/java/inputs/test009/Test009.java
 runxtc -translate src/test/java/inputs/test016/Test016.java
 runxtc -translate src/test/java/inputs/test010/Test010.java
 runxtc -translate src/test/java/inputs/test011/Test011.java
+runxtc -printSimpleJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test041/Test041.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test041/Test041.java
+runxtc -translate src/test/java/inputs/Test044/Test044.java
+runxtc -translate src/test/java/inputs/Test029/Test029.java
+runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/Test050/Test050.java
+runxtc -translate src/test/java/inputs/Test041/Test041.java

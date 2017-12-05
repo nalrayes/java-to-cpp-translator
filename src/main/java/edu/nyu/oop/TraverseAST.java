@@ -18,8 +18,6 @@ public class TraverseAST extends Visitor {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(this.getClass());
 
     // CustomClassObject
-    // private MethodSummary summary = new MethodSummary();
-
     private ClassSummary classSummary = new ClassSummary();
 
     public static final int DEBUGGING = 1;
@@ -31,37 +29,25 @@ public class TraverseAST extends Visitor {
     }
 
     private void visitClassBody(GNode n){
-
-
-
         visit(n);
-
-
     }
 
     // this function is used to get class Vars
     public CustomVariablesClass TraverseFieldDeclaration(Node n){
-
-
         CustomVariablesClass varToReturn = new CustomVariablesClass();
         if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
             String varModifiers = "";
             int amountOfModifers = n.getNode(0).size();
             for (int i = 0; i < amountOfModifers; i++){
-
                 varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
-
             }
             varToReturn.modifier = varModifiers;
         }
 
         // Get Qualified Identifier
         String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
-
         varToReturn.type = qualifiedIdentifier;
-
         // Get Declarator Identifier
-
         String declarator;
         if (n.getNode(2) != null) {
             // then this is a declarator
@@ -70,15 +56,10 @@ public class TraverseAST extends Visitor {
             // then this is a formalparameter
             declarator = n.getString(3);
         }
-
         varToReturn.name = declarator;
-
         String theVariable = qualifiedIdentifier + " " + declarator;
-
-
         return varToReturn;
     }
-
 
     // this is a method to check if a Modifer()'s string is a visibility parameter
     public boolean checkMethodVisibility(String check){
@@ -110,7 +91,6 @@ public class TraverseAST extends Visitor {
             System.out.println(modifiers.getNode(0).getString(0));
             currentConstructor.setVisibility(modifiers.getNode(0).getString(0));
         }
-
         Node params = n.getNode(3);
         if (params.size() > 0) {
             for (int i = 0; i < params.size(); i++) {
@@ -121,8 +101,6 @@ public class TraverseAST extends Visitor {
                 currentConstructor.addParameter(TraverseFieldDeclaration(params.getNode(i)));
             }
         }
-
-
         return currentConstructor;
     }
 
@@ -141,7 +119,6 @@ public class TraverseAST extends Visitor {
     }
 
     public void visitClassDeclaration(GNode n) {
-
         //Entering the class scope & create a new class object
         currentClass = new CustomClassObject();
         //Get the class name
@@ -194,9 +171,6 @@ public class TraverseAST extends Visitor {
         //Save the class object to the array of class objects
         classSummary.classes.add(currentClass);
         classSummary.javaFile.classes.add(currentClass);
-
-
-
         //Make the pointer point to NULL
        // System.out.println("End of class: " + currentClass.className);
         currentClass = null;
@@ -205,14 +179,9 @@ public class TraverseAST extends Visitor {
 
 
     public void visitMethodDeclaration(GNode n) {
-
-
         CustomMethodClass currentMethodObj = new CustomMethodClass();
-
         Node currMethod = n;
-
         if (n.getString(3) != null){
-
             currentMethodObj.name = n.getString(3);
         }
 
@@ -233,79 +202,59 @@ public class TraverseAST extends Visitor {
         }
 
         Node methodModifers = currMethod.getNode(0);
-
         String wholeModifier = "";
-
         int totalModsInMethod = currMethod.getNode(0).size();
-
         for (int j = 0; j < totalModsInMethod; j++) {
-
-
             String modifierVal = currMethod.getNode(0).getNode(j).getString(0);
-
             if (checkMethodVisibility(modifierVal) == true) {
                 // System.out.println("vis");
                 currentMethodObj.visibility = modifierVal;
-
-
             } else {
                 wholeModifier += modifierVal;
             }
-
             //System.out.println(methodModifers.getNode(0).getString(j));
-
             currentMethodObj.modifier = wholeModifier;
         }
 
-
         if (currMethod.getNode(4).getName().equals("FormalParameters") && currMethod.getNode(4).size() > 0) {
-
             Node formalParams = currMethod.getNode(4);
-
-
             for (int i = 0; i < currMethod.getNode(4).size(); i++) {
                 if (currMethod.getNode(4).getNode(i).getName().equals("FormalParameter")) {
                     CustomVariablesClass aVar = new CustomVariablesClass();
-
-
-
                     Node currentformalParameter = currMethod.getNode(4).getNode(i);
-
-
                     if (currentformalParameter == null){
                         continue;
                     }
-
                     CustomVariablesClass myVar = new CustomVariablesClass();
                     // get method parameters
                     myVar.modifier = "";
                     // get parameter variable type
                     if (currentformalParameter.getNode(1).getName().equals("Type")) {
-
-
                         Node getVarName = currentformalParameter.getNode(1).getNode(0);
-
-
                             myVar.type = getVarName.getString(0);
-
-
                     }
                     //Get parameter var name
                     if (currentformalParameter.getString(3) != null)
                         myVar.name = currentformalParameter.getString(3);
-
-
-                   currentMethodObj.parameters.add(myVar);
+                    currentMethodObj.parameters.add(myVar);
                     //System.out.println(currentMethodObj.name);
-
-
                 }
             }
         }
 
+        //Handle OverLoading
+        String currNamem = currentMethodObj.getName();
+        String newName = currNamem;
+        ArrayList<CustomVariablesClass> parameters = currentMethodObj.parameters;
+        //Get all the currentMethods param's
+        for (CustomVariablesClass var: parameters){
+            newName = newName + "_" + var.getType();
+        }
+        //Save the new name for the method
+        currentMethodObj.name = newName;
+
         currentClass.methods.add(currentMethodObj);
         visit(n);
-
     }
 
 
@@ -320,27 +269,16 @@ public class TraverseAST extends Visitor {
     }
 
 
-
     public ClassSummary getClassSummary(Node n) {
         super.dispatch(n);
 
         return classSummary;
     }
 
-
-
-
-
-
-
-
     //Class Summary represents a file
     static class ClassSummary{
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
         ArrayList<String> packages = new ArrayList<String>();
         JavaFileObject javaFile =  new JavaFileObject();
-
-
-
     }
 }

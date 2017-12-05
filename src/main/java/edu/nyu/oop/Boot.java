@@ -159,6 +159,12 @@ public class Boot extends Tool {
             //Phase 2 - ALl JavaAST head nodes are stored in javaASTNodesList
             CPPAST cppAST = CppHeaderASTCreator.createNewCPPHeaderAstFrom(javaASTNodes);
 
+            //Implementation
+            SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
+            TraverseASTM visitorM = new TraverseASTM(runtime, table);
+            cppAST = CppMASTCreator.createNewCPPMAstFrom(javaASTNodes,cppAST,visitorM);
+
+
             //Phase 3
             // print cpp node names for translation
             CppHeaderPrinter printer = new CppHeaderPrinter();
