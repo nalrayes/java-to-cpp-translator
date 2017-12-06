@@ -20,6 +20,7 @@ public class CppMASTCreator {
 
         //Create a new CppDataMLayout
         CppDataLayoutM layoutM = new CppDataLayoutM();
+
         //ArrayList to hold the implemented dataLayouts
         ArrayList<CppDataLayoutM.cppImplementationClass> listOfCppImpClassesDatalayout = new ArrayList<CppDataLayoutM.cppImplementationClass>();
         //Single data property to hold the main class
@@ -42,7 +43,6 @@ public class CppMASTCreator {
                         mainMethod = methodInClass;
                     }
                 }
-
                 if (ismain){
                     //Handle for main method
                     mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
@@ -67,6 +67,4 @@ public class CppMASTCreator {
 
         return cppast;
     }
-
-
 }

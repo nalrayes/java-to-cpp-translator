@@ -10,15 +10,7 @@ import xtc.tree.Node;
 
 public class CppDataLayoutM {
 
-    public static ArrayList<CppDataLayoutM.cppImplementationClass> implementationClasses;
-
-
-
-    public CppDataLayoutM(){
-        //Use this default constructor to create the deafult __Object data layout
-        implementationClasses = new ArrayList<cppImplementationClass>();
-
-    }
+    public CppDataLayoutM(){}
 
     //MAIN METHOD IMPLEMENTATION
     public static class cppImplementationMainMethodClass {
@@ -31,10 +23,20 @@ public class CppDataLayoutM {
         public cppImplementationMainMethodClass (CustomMethodClass m){
             this.mainMethodName = "int main(void)";
             this.mainMethodReturnType = "return 0";
+            //Instant the main methods block
             this.transLatedBlockForImpMainMethod = new cppImplementationClass.TranslatedBlock(m.getMethodsBlock());
+
+            System.out.println("MAIN METHOD CLASS NAME");
+            System.out.println("MAIN METHOD");
+
+            System.out.println("MAIN METHOD NAME");
+            System.out.println(this.mainMethodName);
+
+            System.out.println("MAIN METHOD RETURN TYPE");
+            System.out.println(this.mainMethodReturnType);
         }
     }
-    
+
     //METHODS IMPLEMENTATIONS
     public static class cppImplementationClass{
         String className;
@@ -70,9 +72,8 @@ public class CppDataLayoutM {
             System.out.println("CLASS VTABLE DECL");
             System.out.println(this.vTableDecl);
 
-
             for (CustomMethodClass method : theClass.getMethods()){
-                cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className);
+                cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass);
                 this.cppMethodImplementations.add(methodImp);
             }
 
@@ -250,12 +251,11 @@ public class CppDataLayoutM {
             // Expression statements
             ArrayList<CustomFieldDeclaration> fieldDeclarations;
 
-
             public TranslatedBlock(Node b){
                 fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
-                System.out.println(  b.size());
+                System.out.println(b.size());
 
-                for (int i =0; i < b.size(); i++){
+                for (int i = 0; i < b.size(); i++){
 
                     // either a field declaration or ExpressionStatement
 
@@ -269,7 +269,6 @@ public class CppDataLayoutM {
                     if (b.getNode(i).getName().equals("FieldDeclaration")){
                         CustomFieldDeclaration fd = new CustomFieldDeclaration(b.getNode(i), i);
                         this.fieldDeclarations.add(fd);
-
                     }
                     // else if ExpressionStatement
                     // its subnodes have the following indices
@@ -280,31 +279,30 @@ public class CppDataLayoutM {
 
 
 
-
-
-
                 }
-
             }
-
         }
 
-        //TODO
+        //TODO NICHOLAS
+        //Constructor helper stuff
+
+
+
+        //TODO NICHOLAS
         private static class cppMethodImplementation{
             String returnType;
             String name;
             String params;
 
             Node theBlock;
+            TranslatedBlock translatedBlock;
 
             // TODO: add property to hold translated block, check if the block has a constructor
-
             boolean isConstuctor = false;
+            //Constructor properties -> this will be null unless its a constructor. Use isConstructor to check if this is is constructor when adding to the ASTMTree
+            String deafultConstructorLayout;
 
-
-            //blockimpclass [= ]
-
-            public cppMethodImplementation(CustomMethodClass methodClass, String className){
+            public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass){
                 CppDataLayout.typeTranslate typeTranslate = new CppDataLayout.typeTranslate();
                 this.returnType = typeTranslate.translateType(methodClass.getReturnType());
                 // name = __className
@@ -322,6 +320,19 @@ public class CppDataLayoutM {
                     this.isConstuctor = true;
                 }
 
+                //If this is a constructor handle for constructor default properties
+                //TODO NIC
+                if (this.isConstuctor == true){
+                    //Handle constructor
+                    this.deafultConstructorLayout = "__" + theMethodsClass.getClassName() + "::__" + theMethodsClass.getClassName() + "() : __vptr(&__vtable), ";
+                    //Get the class Var's
+
+
+
+                }
+
+
+
                 System.out.println("METHOD NAME");
                 System.out.println(this.name);
 
@@ -335,7 +346,8 @@ public class CppDataLayoutM {
                 System.out.println(this.theBlock);
                 System.out.println("block12345");
 
-                TranslatedBlock translatedBlock = new TranslatedBlock(theBlock);
+                //Translate the block for the method
+                translatedBlock = new TranslatedBlock(this.theBlock);
 
 
 
@@ -362,15 +374,9 @@ public class CppDataLayoutM {
 
                 // TODO: translate the block
 
-
             }
-
         }
         // A a = new A();
-
-
-
-
     }
 }
 

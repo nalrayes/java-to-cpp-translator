@@ -2,34 +2,45 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
 [0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@706d9e48 directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.710985162 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.102677305 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.821198215 s[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java...[0m
-[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m	notify, wait, equals, notifyAll, CppDataLayoutM$cppImplementationMainMethodClass, <init>, toString, getClass, hashCode.[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@5419a286 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.451668681 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.189508464 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.649159217 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
+[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	TraverseFieldDeclaration.[0m
 [0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java[0m
 [0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@5419a286 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.085035758 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.023926349 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.115404955 s[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
 [0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

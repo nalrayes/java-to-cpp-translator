@@ -252,7 +252,6 @@ public class TraverseAST extends Visitor {
         }
         //Save the new name for the method
         currentMethodObj.name = newName;
-
         currentClass.methods.add(currentMethodObj);
         visit(n);
     }
