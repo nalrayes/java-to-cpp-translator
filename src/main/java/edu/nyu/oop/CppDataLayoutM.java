@@ -343,6 +343,11 @@ public class CppDataLayoutM {
 
         //TODO NICHOLAS
         //Constructor helper stuff
+        private static class typeTranslatorToDeafultTypeClass(String type){
+
+
+
+        }
 
 
 
@@ -384,9 +389,12 @@ public class CppDataLayoutM {
                     //Handle constructor
                     this.deafultConstructorLayout = "__" + theMethodsClass.getClassName() + "::__" + theMethodsClass.getClassName() + "() : __vptr(&__vtable), ";
                     //Get the class Var's
+                    ArrayList<CustomVariablesClass> arrayOfClassFields = theMethodsClass.getClassVariables();
+                    for (CustomVariablesClass varInClass : arrayOfClassFields){
+                        String varName = varInClass.getName();
+                        String deafultType;
 
-
-
+                    }
                 }
 
 
