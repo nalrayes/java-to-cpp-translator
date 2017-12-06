@@ -62,19 +62,16 @@ public class CppDataLayoutM {
 
         }
 
+        // TODO: Check for arrays which has dimensions.
+        // If newArrayExpression it has , check concrete dimensions
         public static class CustomFieldDeclaration{
 
             int position;
-            ArrayList<String> modifiers;
-            String Type;
-            ArrayList<String> declarators;
-            ArrayList<String> arguments;
+
             ArrayList<String> mainFileLines;
 
             public CustomFieldDeclaration(Node fieldDec, int position){
-                modifiers =new ArrayList<String>();
-                declarators = new ArrayList<String>();
-                arguments =new ArrayList<String>();
+
                 mainFileLines =new ArrayList<String>();
 
                 this.position = position;
@@ -96,7 +93,7 @@ public class CppDataLayoutM {
                     for (int modifierIndex = 0; modifierIndex < fieldDec.getNode(0).size(); modifierIndex++){
                         String getModifier = fieldDec.getNode(0).getString(modifierIndex);
 
-                        modifiers.add(getModifier);
+                        //modifiers.add(getModifier);
                         fieldDeclarationLine += getModifier + " ";
                     }
 
@@ -109,30 +106,45 @@ public class CppDataLayoutM {
                     System.out.println("Get Type");
                     System.out.println((fieldDec.getNode(1)));
                     String qualifiedIdentifier;
-                    for (int j = 0; j < fieldDec.getNode(1).size(); j++){
+                   // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
 
                         // if value of node is null continue
-                        if (fieldDec.getNode(1).getNode(j) == null){continue;}
+                        //if (fieldDec.getNode(1).getNode(0) == null){continue;}
                         // sub 0th node is Qualified Identifier
-                        if (fieldDec.getNode(1).getNode(j).getName().equals("QualifiedIdentifier")){
+                        if (!fieldDec.getNode(1).getNode(0).isEmpty()){
+                            System.out.println("$t2\n " + fieldDec.getNode(1));
 
-                            System.out.println("QI\n" + fieldDec.getNode(1).getNode(j));
-                            System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(j).getString(0));
+                            System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
+                            System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
 
 //                                if (fieldDec.getNode(1).getNode(j).getString(0) == null){continue;}
-                            qualifiedIdentifier = fieldDec.getNode(1).getNode(j).getString(0);
-                            fieldDeclarationLine += qualifiedIdentifier + " ";
+                           // fieldDec.getNode(1) is varName, which may be as so: var or var[]
+                            qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
+                            fieldDeclarationLine += qualifiedIdentifier;
                         }
 
-
-
-
-
-
-                        System.out.println("types vals " + fieldDec.getNode(1).getNode(j));
-
+                    // if not null the variable is declaring an array
+                    if (fieldDec.getNode(1).getNode(1) != null){
+                            System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
+                            fieldDeclarationLine += "[]";
 
                     }
+                   if (!fieldDec.getNode(1).isEmpty()){
+                        fieldDeclarationLine += " ";
+                    }
+
+
+
+
+
+
+
+
+
+                        System.out.println("types vals " + fieldDec.getNode(1).getNode(0));
+
+
+                   // }
 
 
 
@@ -171,7 +183,13 @@ public class CppDataLayoutM {
 
                                 declaratorValue+="(";
                                 for (int x = 0; x < arguments.size(); x++) {
-                                    declaratorValue += arguments.getNode(x).getString(0);
+
+                                 if (arguments.getNode(x).getName().equals("PrimaryIdentifier")){
+                                     declaratorValue += "__" + arguments.getNode(x).getString(0);
+
+                                 }  else {
+                                     declaratorValue += arguments.getNode(x).getString(0);
+                                 }
 
                                     if (x < arguments.size()-1){
                                         declaratorValue += ",";
@@ -189,6 +207,20 @@ public class CppDataLayoutM {
 
 
                         } // end of if NewClassExpression
+                        // examples of this are in test 24 - ~31
+                        else if(declarator.getNode(2).getName().equals("NewArrayExpression")){
+                            System.out.println("$FOUNDARRAY");
+                            System.out.println(declarator.getNode(2));
+                            declaratorValue = "new ";
+                            Node newArrayExpression = declarator.getNode(2);
+                            declaratorValue += newArrayExpression.getNode(0);
+
+                            Node arrayDimensions = newArrayExpression.getNode(1);
+                            System.out.println("$dim1 \n" + arrayDimensions);
+                            String arrayDimValue = arrayDimensions.getNode(0).getString(0);
+
+
+                        }
                         else{
                             declaratorValue = declarator.getNode(2).getString(0);
                             //System.out.println("wowee " + declaratorValue);
@@ -199,7 +231,7 @@ public class CppDataLayoutM {
 
                         //declarators.add(fieldDeclarationLine);
                         mainFileLines.add(fieldDeclarationLine);
-                        System.out.println("FULL FIELD DEC \n " +  fieldDeclarationLine);
+                        System.out.println("FULL FIELD $D1 \n " +  fieldDeclarationLine);
 
 
                     } // end of if declator isn't empty
@@ -218,7 +250,7 @@ public class CppDataLayoutM {
 
                 } // end of get Declarators
 
-                // TODO: Translate expression statements 
+                // TODO: Translate expression statements
 
 
 
