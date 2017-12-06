@@ -20,6 +20,22 @@ public class CppDataLayoutM {
 
     }
 
+    //MAIN METHOD IMPLEMENTATION
+    public static class cppImplementationMainMethodClass {
+        //Class to handle the main method
+        String mainMethodName;
+        String mainMethodReturnType;
+        //Property to hold the block class for the method
+        cppImplementationClass.TranslatedBlock transLatedBlockForImpMainMethod;
+
+        public cppImplementationMainMethodClass (CustomMethodClass m){
+            this.mainMethodName = "int main(void)";
+            this.mainMethodReturnType = "return 0";
+            this.transLatedBlockForImpMainMethod = new cppImplementationClass.TranslatedBlock(m.getMethodsBlock());
+        }
+    }
+    
+    //METHODS IMPLEMENTATIONS
     public static class cppImplementationClass{
         String className;
         String vTableInit;
@@ -236,7 +252,6 @@ public class CppDataLayoutM {
 
 
             public TranslatedBlock(Node b){
-
                 fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
                 System.out.println(  b.size());
 

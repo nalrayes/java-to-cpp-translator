@@ -178,3 +178,4 @@ runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test002/Test002.java

@@ -355,3 +355,9 @@
 2017-12-05 13:12:44,521 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-05 13:12:44,542 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/CustomTests
 2017-12-05 13:12:44,542 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading CustomTest1.java
+2017-12-06 12:06:55,128 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-06 12:06:55,180 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test002
+2017-12-06 12:06:55,182 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test002.java
+2017-12-06 12:24:50,988 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-06 12:24:51,036 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test002
+2017-12-06 12:24:51,037 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test002.java
