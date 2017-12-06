@@ -343,11 +343,11 @@ public class CppDataLayoutM {
 
         //TODO NICHOLAS
         //Constructor helper stuff
-        private static class typeTranslatorToDeafultTypeClass(String type){
+       // private static class typeTranslatorToDeafultTypeClass(String type){
 
 
 
-        }
+      //  }
 
 
 
