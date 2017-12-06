@@ -143,7 +143,14 @@ public class CppDataLayoutM {
                     // if not null the variable is declaring an array
                     if (fieldDec.getNode(1).getNode(1) != null){
                             System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
-                            fieldDeclarationLine += "[]";
+
+                            Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
+                            System.out.println("$decvar\n " + declaratorVarNode);
+
+                            for (int i = 0; i < declaratorVarNode.size(); i++){
+                                fieldDeclarationLine += "[]";
+                            }
+                            //fieldDeclarationLine += "[]";
 
                     }
                    if (!fieldDec.getNode(1).isEmpty()){
@@ -227,6 +234,7 @@ public class CppDataLayoutM {
                         } // end of if NewClassExpression
                         // examples of this are in test 24 - ~31
                         else if(declarator.getNode(2).getName().equals("NewArrayExpression")){
+                            System.out.println("$NewArray");
                             System.out.println("$FOUNDARRAY1");
                             System.out.println(declarator.getNode(2));
                             declaratorValue = "new ";
@@ -236,10 +244,20 @@ public class CppDataLayoutM {
                             String qualifiedId = newArrayExpression.getNode(0).getString(0);
 
                             Node arrayDimensions = newArrayExpression.getNode(1);
-                            System.out.println("$dim11 \n" + arrayDimensions);
-                            String arrayDimValue = arrayDimensions.getNode(0).getString(0);
+
+
+
+                            System.out.println("$express111 \n" + newArrayExpression);
+                            Node arrayDimValue = arrayDimensions.getNode(0);
                             System.out.println("$Arr1 \n" + arrayDimensions + " \n" + arrayDimValue);
-                            declaratorValue += qualifiedId + "[" + arrayDimValue + "]";
+                            declaratorValue += qualifiedId;
+                            for (int i = 0; i < arrayDimensions.size(); i++){
+
+                                declaratorValue += "[" + arrayDimensions.getNode(i).getString(0) + "]";
+                            }
+
+
+                           // declaratorValue += qualifiedId + "[" + arrayDimValue + "]";
 
 
                         }
@@ -256,7 +274,7 @@ public class CppDataLayoutM {
 
                         //declarators.add(fieldDeclarationLine);
                         mainFileLines.add(fieldDeclarationLine);
-                        System.out.println("FULL FIELD $D111 \n " +  fieldDeclarationLine);
+                        System.out.println("$FULL FIELD $D111 \n " +  fieldDeclarationLine);
 
 
                     } // end of if declarator isn't empty

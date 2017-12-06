@@ -50,6 +50,7 @@ public class CustomTest1 {
         B1 b12 = new B1(111,232323);
         B1 b$11 = new B1(111,232323);
         B1 b$222 = new B1(a);
+        Object[] $as = new B1[10];
 
         String xyz = "greatstring22";
         int intCheck = 42;
