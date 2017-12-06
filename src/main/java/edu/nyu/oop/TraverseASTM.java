@@ -82,13 +82,20 @@ public class TraverseASTM extends ContextualVisitor {
 
         }
 
-//        System.out.println("classname");
-//        System.out.println(currentClass.className);
-//        Iterator<String> iter = table.current().symbols();
-//        System.out.println("pls dont kick us out");
-//
-//        Object thing = table.current().lookup("method(printOther)(A other)");
-//        System.out.println(thing);
+        //Get the field decleration node
+        Node classBody = n.getNode(5);
+        //Get the size of the field
+        int classBodySize = n.getNode(5).size();
+        // check all field declarations
+        for (int i = 0; i < classBodySize; i++){
+            Node curNode = classBody.getNode(i);
+            // if a field Declaration is found get the class variable contained within it
+            if (curNode.getName().equals("FieldDeclaration")){
+                // calls a custom method TraverseFieldDeclaration to collect variable info
+                CustomVariablesClass aVar = TraverseFieldDeclaration(curNode);
+                currentClass.addClassVariable(aVar);
+            }
+        }
 
         visit(n);
         SymbolTableUtil.exitScope(table, n);
@@ -97,6 +104,35 @@ public class TraverseASTM extends ContextualVisitor {
         //Save the class object to the array of class objects
         implementationSummary.implementationClassObjects.add(currentClass);
         currentClass = null;
+    }
+
+    // this function is used to get class Vars
+    public CustomVariablesClass TraverseFieldDeclaration(Node n){
+        CustomVariablesClass varToReturn = new CustomVariablesClass();
+        if (n.getNode(0).getName().equals("Modifiers") && n.getNode(0).size() > 0){
+            String varModifiers = "";
+            int amountOfModifers = n.getNode(0).size();
+            for (int i = 0; i < amountOfModifers; i++){
+                varModifiers += n.getNode(0).getNode(0).getString(i) + " ";
+            }
+            varToReturn.modifier = varModifiers;
+        }
+
+        // Get Qualified Identifier
+        String qualifiedIdentifier = n.getNode(1).getNode(0).getString(0);
+        varToReturn.type = qualifiedIdentifier;
+        // Get Declarator Identifier
+        String declarator;
+        if (n.getNode(2) != null) {
+            // then this is a declarator
+            declarator = n.getNode(2).getNode(0).getString(0);
+        } else {
+            // then this is a formalparameter
+            declarator = n.getString(3);
+        }
+        varToReturn.name = declarator;
+        String theVariable = qualifiedIdentifier + " " + declarator;
+        return varToReturn;
     }
 
     @Override
