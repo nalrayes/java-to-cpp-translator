@@ -84,7 +84,7 @@ public class CppDataLayoutM {
         public static class CustomFieldDeclaration{
 
             int position;
-
+            boolean isArray;
             ArrayList<String> mainFileLines;
 
             public CustomFieldDeclaration(Node fieldDec, int position){
@@ -104,6 +104,7 @@ public class CppDataLayoutM {
                 // 0: modifiers
                // System.out.println("fdeez " + fieldDec);
                 String fieldDeclarationLine ="";
+                String qualifiedIdentifier ="";
 
                 if (fieldDec.getNode(0).size() > 0 ){
 
@@ -122,7 +123,6 @@ public class CppDataLayoutM {
 
                     System.out.println("Get Type");
                     System.out.println((fieldDec.getNode(1)));
-                    String qualifiedIdentifier;
                    // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
 
                         // if value of node is null continue
@@ -137,11 +137,13 @@ public class CppDataLayoutM {
 //                                if (fieldDec.getNode(1).getNode(j).getString(0) == null){continue;}
                            // fieldDec.getNode(1) is varName, which may be as so: var or var[]
                             qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
+                            System.out.println("$qq \n"+ qualifiedIdentifier );
                             fieldDeclarationLine += qualifiedIdentifier;
                         }
 
                     // if not null the variable is declaring an array
                     if (fieldDec.getNode(1).getNode(1) != null){
+                            isArray = true;
                             System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
 
                             Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
@@ -151,6 +153,8 @@ public class CppDataLayoutM {
                                 fieldDeclarationLine += "[]";
                             }
                             //fieldDeclarationLine += "[]";
+                        //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
+
 
                     }
                    if (!fieldDec.getNode(1).isEmpty()){
@@ -196,7 +200,9 @@ public class CppDataLayoutM {
                         // if declator instantiates an object
                         // must get the rhs
                         if (declarator.getNode(2).getName().equals("NewClassExpression")){
-                            declaratorValue = "new ";
+                            if (!isArray) {
+                                declaratorValue = "new ";
+                            }
                             Node newClassExpression = declarator.getNode(2);
                             declaratorValue += newClassExpression.getNode(2).getString(0);
 
@@ -237,7 +243,7 @@ public class CppDataLayoutM {
                             System.out.println("$NewArray");
                             System.out.println("$FOUNDARRAY1");
                             System.out.println(declarator.getNode(2));
-                            declaratorValue = "new ";
+                            //declaratorValue = "new ";
                             Node newArrayExpression = declarator.getNode(2);
                            // declaratorValue += newArrayExpression.getNode(0);
 
@@ -250,7 +256,7 @@ public class CppDataLayoutM {
                             System.out.println("$express111 \n" + newArrayExpression);
                             Node arrayDimValue = arrayDimensions.getNode(0);
                             System.out.println("$Arr1 \n" + arrayDimensions + " \n" + arrayDimValue);
-                            declaratorValue += qualifiedId;
+                            declaratorValue += "__" +qualifiedId;
                             for (int i = 0; i < arrayDimensions.size(); i++){
 
                                 declaratorValue += "[" + arrayDimensions.getNode(i).getString(0) + "]";
@@ -261,8 +267,41 @@ public class CppDataLayoutM {
 
 
                         }
-                        else{
+                        else if(declarator.getNode(2).getName().equals("SubscriptExpression")){
+                            Node subscriptExpression = declarator.getNode(2);
+                            System.out.println("$sub1 " + subscriptExpression);
 
+                            if (!subscriptExpression.getNode(0).getName().equals("SubscriptExpression")){
+                                System.out.println("$sub2 " + subscriptExpression);
+
+                               //System.out.println("$idk2 " + subscriptExpression.getNode(0).getNode(0));
+                                System.out.println("$sub3 " + subscriptExpression);
+
+                                declaratorValue += "[" + subscriptExpression.getNode(1).getString(0) +"]";
+
+
+                            }
+                            else{
+                                subscriptExpression = declarator.getNode(2).getNode(0);
+                                //System.out.println("$sub1 " + subscriptExpression);
+
+                                   System.out.println("$vvv " + subscriptExpression);
+                                    System.out.println("$v1 " + declaratorValue);
+                                    declaratorValue += "[" + subscriptExpression.getNode(0).getString(0) +"]";
+                                    declaratorValue += "[" + subscriptExpression.getNode(1).getString(0) +"]";
+
+
+
+
+
+                            }
+
+
+
+
+                        }
+                        else{
+                            System.out.println("$err \n " + declarator.getNode(2));
                             declaratorValue = declarator.getNode(2).getString(0);
                             System.out.println("$dim111 \n" + declaratorValue);
 
@@ -273,8 +312,17 @@ public class CppDataLayoutM {
                         fieldDeclarationLine += fullDeclarator;
 
                         //declarators.add(fieldDeclarationLine);
+
+                        if (isArray){
+
+                            //__rt::Ptr<double, __rt::array_policy> q = new double[5];
+                            fieldDeclarationLine = "__rt::Ptr<"+qualifiedIdentifier +", __rt::array_policy> " + declaratorVar + " = new " +declaratorValue;
+
+
+                        }
+
                         mainFileLines.add(fieldDeclarationLine);
-                        System.out.println("$FULL FIELD $D111 \n " +  fieldDeclarationLine);
+                        System.out.println("$FULL FIELD $D222 \n " +  fieldDeclarationLine);
 
 
                     } // end of if declarator isn't empty
