@@ -12,6 +12,7 @@
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
 [0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@5419a286 directly...[0m
@@ -38,6 +39,14 @@
 [0m[[0mdebug[0m] [0mJava compilation took 0.085035758 s[0m
 [0m[[0mdebug[0m] [0mJava analysis took 0.023926349 s[0m
 [0m[[0mdebug[0m] [0mJava compile + analysis took 0.115404955 s[0m
+=======
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@7788378c directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.033027339 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.011216616 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.04709525 s[0m
+>>>>>>> fbe825c0be8a1eb4dfd5f642e909d41501c30fc4
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

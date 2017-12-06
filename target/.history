@@ -178,4 +178,22 @@ runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+<<<<<<< HEAD
 runxtc -translate src/test/java/inputs/Test002/Test002.java
+=======
+runxtc -translate src/test/java/inputs/test010/Test010.java
+runxtc -translate src/test/java/inputs/test015/Test015.java
+runxtc -translate src/test/java/inputs/test016/Test016.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/test024/Test024.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/test024/Test024.java
+runxtc -printJavaAst src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/test024/Test024.java
+runxtc -translate src/test/java/inputs/test024/Test024.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/test024/Test024.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -printJavaAst src/test/java/inputs/test024/Test024.java
+runxtc -translate src/test/java/inputs/test024/Test024.java
+>>>>>>> fbe825c0be8a1eb4dfd5f642e909d41501c30fc4
