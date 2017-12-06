@@ -177,6 +177,7 @@ public class CppDataLayoutM {
                             declaratorValue += newClassExpression.getNode(2).getString(0);
 
                             // check if the instantiated object has arguments
+                            System.out.println("$n1 " + newClassExpression);
                             if (!newClassExpression.getNode(3).isEmpty()){
 
                                 Node arguments = newClassExpression.getNode(3);
@@ -209,20 +210,27 @@ public class CppDataLayoutM {
                         } // end of if NewClassExpression
                         // examples of this are in test 24 - ~31
                         else if(declarator.getNode(2).getName().equals("NewArrayExpression")){
-                            System.out.println("$FOUNDARRAY");
+                            System.out.println("$FOUNDARRAY1");
                             System.out.println(declarator.getNode(2));
                             declaratorValue = "new ";
                             Node newArrayExpression = declarator.getNode(2);
-                            declaratorValue += newArrayExpression.getNode(0);
+                           // declaratorValue += newArrayExpression.getNode(0);
+
+                            String qualifiedId = newArrayExpression.getNode(0).getString(0);
 
                             Node arrayDimensions = newArrayExpression.getNode(1);
-                            System.out.println("$dim1 \n" + arrayDimensions);
+                            System.out.println("$dim11 \n" + arrayDimensions);
                             String arrayDimValue = arrayDimensions.getNode(0).getString(0);
+                            System.out.println("$Arr1 \n" + arrayDimensions + " \n" + arrayDimValue);
+                            declaratorValue += qualifiedId + "[" + arrayDimValue + "]";
 
 
                         }
                         else{
+
                             declaratorValue = declarator.getNode(2).getString(0);
+                            System.out.println("$dim111 \n" + declaratorValue);
+
                             //System.out.println("wowee " + declaratorValue);
                         }
 
@@ -231,10 +239,10 @@ public class CppDataLayoutM {
 
                         //declarators.add(fieldDeclarationLine);
                         mainFileLines.add(fieldDeclarationLine);
-                        System.out.println("FULL FIELD $D1 \n " +  fieldDeclarationLine);
+                        System.out.println("FULL FIELD $D111 \n " +  fieldDeclarationLine);
 
 
-                    } // end of if declator isn't empty
+                    } // end of if declarator isn't empty
 
 
 
