@@ -591,7 +591,7 @@ public class CppDataLayoutM {
 
                 //Handle Class level field InIts
                 //Get the class level fields
-                //TEST 003, 006, 007, 008, 025
+                //TEST 003, 006, 007, 008, 025, 017, 021, 024
                 ArrayList<CustomVariablesClass> classFields = theMethodsClass.getClassVariables();
                 for (CustomVariablesClass classField : classFields) {
                     if(classField.declaratorRightSide != null){
