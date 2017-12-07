@@ -1,0 +1,25 @@
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+declaratorRightSidetranslate src/test/java/inputs/Test006/Test006.java
+-translate src/test/java/inputs/Test006/Test006.java
+xyc -translate src/test/java/inputs/Test006/Test006.java
+xtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.javarunxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+5~[A
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java

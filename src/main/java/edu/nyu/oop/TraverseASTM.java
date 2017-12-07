@@ -131,6 +131,14 @@ public class TraverseASTM extends ContextualVisitor {
                 //Right side value exists
                 //Get the value
                 varToReturn.declaratorRightSide = n.getNode(2).getNode(0).getNode(2).getString(0);
+                //System.out.println("DECEL RIGHT");
+                System.out.println(varToReturn.declaratorRightSide);
+                if(n.getNode(2).getNode(0).getNode(2).getName() == "StringLiteral"){
+                    varToReturn.declaratorRightSideType = "string";
+                }
+                else if(n.getNode(2).getNode(0).getNode(2).getName() == "IntegerLiteral"){
+                    varToReturn.declaratorRightSideType = "integer";
+                }
             }
         } else {
             // then this is a formalparameter
