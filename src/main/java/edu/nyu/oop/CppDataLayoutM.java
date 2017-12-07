@@ -274,20 +274,22 @@ public class CppDataLayoutM {
         public static String processNewClassExpression(Node newClassExpression) {
             String ret = "new ";
             ret += newClassExpression.getNode(2).getString(0) + "(";
+            String arguments = "";
+            if (newClassExpression.getNode(3) != null) {
+                arguments = processArguments(newClassExpression.getNode(3));
+            }
+            ret += arguments;
+            ret += ")";
+            return ret;
+        }
 
-            // check if the instantiated object has arguments
-            System.out.println("$n1 " + newClassExpression);
-            if (!newClassExpression.getNode(3).isEmpty()){
-                Node arguments = newClassExpression.getNode(3);
-
-                declaratorValue+="(";
-                for (int x = 0; x < arguments.size(); x++) {
-                    ret += processNameNode(arguments.getNode(x)) + ",";
-                }
-
-                ret+=")";
-            } else {
-                ret += ")";
+        public static String processArguments(Node arguments) {
+            String ret = "";
+            for (int x = 0; x < arguments.size(); x++) {
+                ret += "," + processNameNode(arguments.getNode(x));
+            }
+            if (arguments.size() > 0) {
+                ret = ret.substring(1, ret.length());
             }
 
             return ret;
@@ -299,8 +301,18 @@ public class CppDataLayoutM {
             return ret;
         }
 
+        public static String processCallExpression(Node n) {
+            String methodName = n.getString(2);
+            String arguments = "";
+            if (n.getNode(3) != null) {
+                arguments = processArguments(n.getNode(3));
+            }
+            String ret = processNameNode(n.getNode(0)) + "." + methodName + "(" + arguments + ")";
+            return ret;
+        }
+
         public static String processNameNode(Node n) {
-            String res;
+            String res = "";
             boolean justString = n.getName() == "PrimaryIdentifier" || n.getName() == "IntegerLiteral" || n.getName() == "StringLiteral";
             if (justString) {
                 res = n.getString(0);
@@ -315,13 +327,13 @@ public class CppDataLayoutM {
             } else if (n.getName() == "CastExpression") {
                 res = processCastExpression(n);
             } else if (n.getName() == "AdditiveExpression") {
-                res = processNameNode(n) + " + " processNameNode(n);
+                res = processNameNode(n.getNode(0)) + " + " + processNameNode(n.getNode(2));
             } else if (n.getName() == "MultiplicativeExpression") {
-                res = processNameNode(n) + " * " processNameNode(n);
+                res = processNameNode(n.getNode(0)) + " * " + processNameNode(n.getNode(2));
             } else if (n.getName() == "Expression") {
                 res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
             } else if (n.getName() == "CallExpression") {
-                res = processNameNode(n.getNode(0)) + ""
+                res = processCallExpression(n);
             }
             return res;
         }
@@ -333,7 +345,9 @@ public class CppDataLayoutM {
 
             public CustomExpressionStatement(Node sonNode, int pos) {
                 this.position = pos;
-                this.expression = processNameNode(sonNode);
+                this.expression = processNameNode(sonNode.getNode(0));
+                System.out.println("ExpressionStatement");
+                System.out.println(this.expression);
             }
 
         }
@@ -342,9 +356,11 @@ public class CppDataLayoutM {
             // blocks have field declarations
             // Expression statements
             ArrayList<CustomFieldDeclaration> fieldDeclarations;
+            ArrayList<CustomExpressionStatement> customExpressionStatements;
 
             public TranslatedBlock(Node b){
                 fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
+                customExpressionStatements = new ArrayList<CustomExpressionStatement>();
                 System.out.println(b.size());
 
                 for (int i = 0; i < b.size(); i++){
@@ -363,17 +379,11 @@ public class CppDataLayoutM {
                         this.fieldDeclarations.add(fd);
                     }
                     // else if ExpressionStatement
-                    // its subnodes have the following indices
                     // 0:
-                    else{
-                        if (n.getName() == "ExpressionStatement") {
-                            CustomExpression ex = new CustomExpressionStatement(b.getNode(i), i);
-                            // add to list
-                        }
+                    else if (b.getNode(i).getName() == "ExpressionStatement") {
+                        CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i);
+                        this.customExpressionStatements.add(ex);
                     }
-
-
-
                 }
             }
         }
