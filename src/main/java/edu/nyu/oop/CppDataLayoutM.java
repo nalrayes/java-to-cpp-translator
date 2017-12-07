@@ -11,8 +11,7 @@ import xtc.tree.Node;
 public class CppDataLayoutM {
 
 
-
-    public CppDataLayoutM(){
+    public CppDataLayoutM() {
 
     }
 
@@ -24,7 +23,7 @@ public class CppDataLayoutM {
         //Property to hold the block class for the method
         TranslatedBlock transLatedBlockForImpMainMethod;
 
-        public cppImplementationMainMethodClass (CustomMethodClass m){
+        public cppImplementationMainMethodClass(CustomMethodClass m) {
             this.mainMethodName = "int main(void)";
             this.mainMethodReturnType = "return 0";
             //Instant the main methods block
@@ -43,7 +42,7 @@ public class CppDataLayoutM {
     }
 
     //METHODS IMPLEMENTATIONS
-    public static class cppImplementationClass{
+    public static class cppImplementationClass {
         String className;
         String vTableInit;
         String classMethodInit;
@@ -57,14 +56,18 @@ public class CppDataLayoutM {
             return cppMethodImplementations;
         }
 
-        public cppImplementationClass (CustomClassObject theClass){
+        //Default init for class
+        //If the class override this with its own implementation this will be null
+        cppMethodImplementation defaultInIt;
+
+        public cppImplementationClass(CustomClassObject theClass) {
             if (theClass.getParentClass() == "None") {
                 this.parentClass = "Object";
             } else {
                 this.parentClass = theClass.getParentClass();
             }
             this.className = theClass.getClassName();
-            this.vTableInit = "__" + this.className + "::__" + this.className +  "() : __vptr(&__vtable) {}";
+            this.vTableInit = "__" + this.className + "::__" + this.className + "() : __vptr(&__vtable) {}";
             this.classMethodInit = "Class __" + this.className + "::__class() {\n" +
                     "      static Class k =\n" +
                     "        new __Class(__rt::literal(\"inputs.javalang." + this.className + "\"), __" + parentClass + "::__class());\n" +
@@ -76,13 +79,13 @@ public class CppDataLayoutM {
             //Get the constructor implementations via the class fields
             this.deafultConstructorImplementation = "__" + theClass.getClassName() + "::__" + theClass.getClassName() + "() : __vptr(&__vtable)";
             //Add the class fields
-            for (CustomVariablesClass varClass : theClass.getClassVariables()){
+            for (CustomVariablesClass varClass : theClass.getClassVariables()) {
                 typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
                 String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
-                System.out.println(varClass.getType());
+                //System.out.println(varClass.getType());
                 this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
             }
-            this.deafultConstructorImplementation +=  "\n" + "{}";
+            this.deafultConstructorImplementation += "\n" + "{}";
             System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
             System.out.println(this.deafultConstructorImplementation);
 
@@ -95,11 +98,57 @@ public class CppDataLayoutM {
             System.out.println("CLASS VTABLE DECL");
             System.out.println(this.vTableDecl);
 
-            for (CustomMethodClass method : theClass.getMethods()){
+            //Create def init
+            this.defaultInIt = new cppMethodImplementation();
+            this.defaultInIt.name = theClass.className + " " + "__" + theClass.className + ":: __init(" + theClass.className + "__this)";
+            this.defaultInIt.returnType = "__this";
+            this.defaultInIt.isConstuctor = true;
+            TranslatedBlock blockForDef = new TranslatedBlock();
+            blockForDef.classLevelInitFields = new ArrayList<String>();
+            blockForDef.deafultConsturctorCall = "__Object::__init((Object) __this)";
+            if(theClass.getParentClass() != "None"){
+                blockForDef.deafultConsturctorCall = "__" + theClass.getParentClass() + "::__init((" + theClass.getParentClass() + ") __this)";
+            }
+            ArrayList<CustomVariablesClass> classFields = theClass.getClassVariables();
+            for (CustomVariablesClass classField : classFields) {
+                if (classField.declaratorRightSide != null) {
+                    System.out.println("CON CLASS FIELD DEFAULT");
+                    System.out.println(classField.getDeclaratorRightSide());
+                    String finalString = "";
+                    if (classField.declaratorRightSideType == "string") {
+                        finalString += "__this->" + classField.getName() + " = " + "__rt::literal(" + classField.getDeclaratorRightSide() + ")";
+                    } else if (classField.declaratorRightSideType == "integer") {
+                        finalString += "__this->" + classField.getName() + " = " + classField.getDeclaratorRightSide();
+                    }
+                    blockForDef.classLevelInitFields.add(finalString);
+                    System.out.println(finalString);
+                }
+            }
+            blockForDef.returnStatement = "__this";
+            this.defaultInIt.translatedBlock = blockForDef;
+
+            //Process the methods
+            for (CustomMethodClass method : theClass.getMethods()) {
                 cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass);
                 this.cppMethodImplementations.add(methodImp);
+
+                //Check if the class overrides the default init in its methods
+                if(method.getName() == "__init" && method.getParameters().size() == 0){
+                    //if so
+                    this.defaultInIt = null;
+                }
             }
 
+            System.out.println("DEFAULT INIT CHECK BEGIN");
+            System.out.println(this.defaultInIt);
+            if(this.defaultInIt != null){
+                System.out.println(this.defaultInIt.name);
+                System.out.println(this.defaultInIt.translatedBlock.deafultConsturctorCall);
+                for (String field : this.defaultInIt.translatedBlock.classLevelInitFields){
+                    System.out.println(field);
+                }
+            }
+            System.out.println("DEFAULT INIT CHECK END");
         }
     }
 
@@ -447,15 +496,19 @@ public class CppDataLayoutM {
         // Expression statements
 
         ArrayList<CustomFieldDeclaration> fieldDeclarations;
-
         public ArrayList<CustomFieldDeclaration> getFieldDeclarations() {
             return fieldDeclarations;
         }
+
+
+        String returnStatement = "";
 
         //Constructor properties
         boolean isConstructor;
         String deafultConsturctorCall;
         ArrayList<String> classLevelInitFields;
+
+        public TranslatedBlock(){};
 
         public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass) {
 
@@ -492,14 +545,25 @@ public class CppDataLayoutM {
                 else {
                     System.out.println("Expression Statement\n " + b.getNode(i));
                 }
+
+
+
+
+
             }//End of for loop for block
 
 
-        //TODO NICHOLAS
-        //Constructor helper stuff
-       // private static class typeTranslatorToDeafultTypeClass(String type){
+
+
+            //Constructor helper stuff levae this at the end of the class
             //Handle Constructor Stuff
             if (this.isConstructor) {
+                //Set return type to this
+                this.returnStatement = "__this";
+                //Check if the clas extends object. If not then leave the init call to be Object
+                if(theMethodsClass.getParentClass() != "None"){
+                    this.deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this)";
+                }
                 //First check what type of default constructor is called by going through the block
                 String superOrThis = "";
                 for (int k = 0; k < b.size(); k++) {
@@ -517,30 +581,48 @@ public class CppDataLayoutM {
                                     arguments += ", " + argumentNode.getNode(g).getString(0);
                                 }
                                 deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this" + arguments + ")";
-                            } else if (callExpression.getNode(2).getName().equals("this")) {
+                            } else if (callExpression.getString(2).equals("this")) {
                                 //This Call
                                 deafultConsturctorCall = "__init(__this)";
                             }
                         }
                     }
                 }
-                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK");
-                System.out.println(deafultConsturctorCall);
 
                 //Handle Class level field InIts
                 //Get the class level fields
-                //TEST 006
-                //TEST 021
+                //TEST 003, 006, 007, 008, 025, 017, 021, 024
                 ArrayList<CustomVariablesClass> classFields = theMethodsClass.getClassVariables();
-
                 for (CustomVariablesClass classField : classFields) {
-                    this.classLevelInitFields.add("ASD");
+                    if(classField.declaratorRightSide != null){
+                        System.out.println("CON CLASS FIELD INIT");
+                        System.out.println(classField.getDeclaratorRightSide());
+                        String finalString = "";
+                        if (classField.declaratorRightSideType == "string"){
+                            finalString += "__this->" + classField.getName() + " = " + "__rt::literal(" + classField.getDeclaratorRightSide() + ")";
+                        }
+                        else if(classField.declaratorRightSideType == "integer"){
+                            finalString += "__this->" + classField.getName() + " = " + classField.getDeclaratorRightSide();
+                        }
+                        this.classLevelInitFields.add(finalString);
+                        System.out.println(finalString);
+                    }
                 }
+                //TODO handle remaining body of constructor
+                //When doing expression statements
+                //TODO If the expression statement's left handside is contained in the ClassFields then add a __this->
+
+                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK BEGIN");
+                System.out.println(deafultConsturctorCall);
+                for (String field : this.classLevelInitFields){
+                    System.out.println(field);
+                }
+                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK END");
 
             }//End of if constructor statement
 
         }//END OF Translate Block Constructor
-    }
+    }//End of TranslatedBlock class
 
 
     //Constructor helper stuff
@@ -592,7 +674,6 @@ public class CppDataLayoutM {
         }
     }
 
-    //TODO NICHOLAS
     public static class cppMethodImplementation{
         String returnType;
         String name;
@@ -605,11 +686,13 @@ public class CppDataLayoutM {
         //See if the method is a constructor
         boolean isConstuctor = false;
 
+        public cppMethodImplementation(){};
+
         public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass){
             CppDataLayout.typeTranslate typeTranslate = new CppDataLayout.typeTranslate();
             this.returnType = typeTranslate.translateType(methodClass.getReturnType());
             // name = __className
-            this.name = "__" + className + "::" + methodClass.getName();
+            this.name = this.returnType + " __" + className + "::" + methodClass.getName();
             // TODO: what if its static?
             this.params = "(" + className + " __this";
             for (CustomVariablesClass var : methodClass.getParameters()) {

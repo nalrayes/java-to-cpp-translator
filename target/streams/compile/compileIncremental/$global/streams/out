@@ -2,22 +2,39 @@
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+=======
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+>>>>>>> 486ffb36c69950fe99242cf2bc4e29676cbf4ad0
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
 [0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@7aad4a70 directly...[0m
 [0m[[0mdebug[0m] [0mJava compilation took 0.041566136 s[0m
 [0m[[0mdebug[0m] [0mJava analysis took 0.014416143 s[0m
 [0m[[0mdebug[0m] [0mJava compile + analysis took 0.058222121 s[0m
+=======
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@4949727b directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.507779925 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.09456841 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.643384713 s[0m
+>>>>>>> 486ffb36c69950fe99242cf2bc4e29676cbf4ad0
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

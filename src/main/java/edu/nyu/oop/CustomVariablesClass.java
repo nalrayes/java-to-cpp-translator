@@ -8,6 +8,7 @@ public class CustomVariablesClass {
     String type;
 
     String declaratorRightSide;
+    String declaratorRightSideType;
 
     public String getDeclaratorRightSide() {
         return declaratorRightSide;

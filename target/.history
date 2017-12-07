@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 test *CppHVisitorTest*
 tes-onlyt *CppHVisitorTest*
 test-only *CppHVisitorTest*
@@ -218,3 +219,51 @@ runxtc -translate src/test/java/inputs/test016/Test016.java
 runxtc -translate src/test/java/inputs/test006/Test006.java
 runxtc -translate src/test/java/inputs/test025/Test025.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+=======
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+declaratorRightSidetranslate src/test/java/inputs/Test006/Test006.java
+-translate src/test/java/inputs/Test006/Test006.java
+xyc -translate src/test/java/inputs/Test006/Test006.java
+xtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.javarunxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test006/Test006.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+5~[A
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -printJavaAst src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test038/Test038.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test025/Test025.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test043/Test043.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test006/Test006.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test025/Test025.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test025/Test025.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test007/Test007.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test025/Test025.java
+runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/Test021/Test021.java
+>>>>>>> 486ffb36c69950fe99242cf2bc4e29676cbf4ad0
