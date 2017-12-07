@@ -24,7 +24,7 @@ public class CppMASTCreator {
         //ArrayList to hold the implemented dataLayouts
         ArrayList<CppDataLayoutM.cppImplementationClass> listOfCppImpClassesDatalayout = new ArrayList<CppDataLayoutM.cppImplementationClass>();
         //Single data property to hold the main class
-        CppDataLayoutM.cppImplementationMainMethodClass mainMethodClassm;
+        CppDataLayoutM.cppImplementationMainMethodClass mainMethodClassm = null;
 
 
         //With the Class Summary Implementation populate the CppAST Tree
@@ -43,19 +43,40 @@ public class CppMASTCreator {
                         mainMethod = methodInClass;
                     }
                 }
-                if (ismain){
-                    //Handle for main method
-                    mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
+               if (ismain){
+////                    //Handle for main method
+                  mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
                 }
-                else{
+              else{
                     //This is for normal methods
                     listOfCppImpClassesDatalayout.add(new CppDataLayoutM.cppImplementationClass(classObj));
                 }
             }
         }
 
+        //Print
+        for (CppDataLayoutM.cppImplementationClass class1: listOfCppImpClassesDatalayout){
+            System.out.println("$imple size " + class1.cppMethodImplementations.size());
+
+            for (CppDataLayoutM.cppMethodImplementation method : class1.cppMethodImplementations){
+
+                System.out.println("$ello123 " + method.name + " " + method.translatedBlock.getFieldDeclarations().size());
 
 
+                for (CppDataLayoutM.CustomFieldDeclaration cfd : method.translatedBlock.getFieldDeclarations()){
+                    System.out.println("herez "+ cfd.fieldDeclarationLine);
+                }
+
+
+
+            }
+        }
+        System.out.println("$mainmethod " + mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations().size());
+
+
+        for (CppDataLayoutM.CustomFieldDeclaration cfd : mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations()){
+            System.out.println("herez1 "+ cfd.fieldDeclarationLine);
+        }
 
 
 

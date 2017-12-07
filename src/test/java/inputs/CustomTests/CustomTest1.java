@@ -3,6 +3,7 @@ package inputs.CustomTests;
 
 class A {
 
+
     int theInt;
     boolean theBoolean;
     float theFloat;
@@ -16,6 +17,7 @@ class A {
     String a = "greatstring123";
 
     public void setA(String x) {
+        //int x = 1;
         a = x;
     }
 
