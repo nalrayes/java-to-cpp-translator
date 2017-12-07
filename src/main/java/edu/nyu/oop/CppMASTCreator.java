@@ -44,8 +44,8 @@ public class CppMASTCreator {
                     }
                 }
                if (ismain){
-////                    //Handle for main method
-                  mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
+                    //Handle for main method
+                    mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
                 }
               else{
                     //This is for normal methods
@@ -79,8 +79,11 @@ public class CppMASTCreator {
         }
 
 
-
-
+        //TODO ADD DATA FROM listOfCppImpClassesDatalayout and mainMethodClassm to cppast tree
+        //TODO First add the class level information from cppImplementationClass
+        //TODO. Second Handle the defauly init method. When adding to the tree. First check if deafultConstructorImplementation in cppImplementationClass is null.
+        //TODO. If not null add the data from deafultConstructorImplementation to the tree before moving to add the arrayList
+        //TODO of cppMethodImplementations
 
 
 
