@@ -2,9 +2,22 @@ package inputs.CustomTests;
 
 
 class A {
-    String a = "greatstring12345";
+
+
+    int theInt;
+    boolean theBoolean;
+    float theFloat;
+    long theLong;
+    short theShort;
+    char theChar;
+    double theDouble;
+    byte theByte;
+    A A;
+
+    String a = "greatstring123";
 
     public void setA(String x) {
+        //int x = 1;
         a = x;
     }
 
@@ -17,6 +30,7 @@ class A {
     }
 
 
+
 }
 
 class B1 extends A {
@@ -25,6 +39,10 @@ class B1 extends A {
     public B1(int x, int y){}
     public B1(A a){}
     String b;
+
+    A A;
+    B1 B;
+
 }
 
 class B2 extends B1 {

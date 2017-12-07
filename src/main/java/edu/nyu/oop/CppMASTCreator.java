@@ -63,7 +63,9 @@ public class CppMASTCreator {
                 System.out.println("$ello123 " + method.name + " " + method.translatedBlock.getFieldDeclarations().size());
 
 
-
+                for (CppDataLayoutM.CustomFieldDeclaration cfd : method.translatedBlock.getFieldDeclarations()){
+                    System.out.println("herez "+ cfd.fieldDeclarationLine);
+                }
 
 
 
@@ -72,7 +74,9 @@ public class CppMASTCreator {
         System.out.println("$mainmethod " + mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations().size());
 
 
-
+        for (CppDataLayoutM.CustomFieldDeclaration cfd : mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations()){
+            System.out.println("herez1 "+ cfd.fieldDeclarationLine);
+        }
 
 
 

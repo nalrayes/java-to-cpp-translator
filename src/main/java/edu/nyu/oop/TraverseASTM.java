@@ -126,6 +126,12 @@ public class TraverseASTM extends ContextualVisitor {
         if (n.getNode(2) != null) {
             // then this is a declarator
             declarator = n.getNode(2).getNode(0).getString(0);
+            //Check if the right side has any value
+            if (n.getNode(2).getNode(0).getNode(2) != null){
+                //Right side value exists
+                //Get the value
+                varToReturn.declaratorRightSide = n.getNode(2).getNode(0).getNode(2).getString(0);
+            }
         } else {
             // then this is a formalparameter
             declarator = n.getString(3);

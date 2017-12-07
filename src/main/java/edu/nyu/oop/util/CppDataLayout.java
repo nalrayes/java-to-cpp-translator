@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class CppDataLayout {
+
     public static ArrayList<CppStruct> structs;
     public static ArrayList<VTable> VTables;
     public static final int DEBUGGING = 1;

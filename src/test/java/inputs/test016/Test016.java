@@ -24,6 +24,7 @@ class B extends A {
 public class Test016 {
     public static void main(String[] args) {
         A a = new A();
+        int xyz;
         B other = new B();
         other.some = (B) a; // throws ClassCastException
         a.printOther(other);

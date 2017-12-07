@@ -11,11 +11,8 @@ import xtc.tree.Node;
 public class CppDataLayoutM {
 
 
-    public static ArrayList<cppImplementationClass> methods;
 
     public CppDataLayoutM(){
-
-        methods = new  ArrayList<cppImplementationClass>();
 
     }
 
@@ -31,8 +28,9 @@ public class CppDataLayoutM {
             this.mainMethodName = "int main(void)";
             this.mainMethodReturnType = "return 0";
             //Instant the main methods block
-            this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock());
-            System.out.println("$hb22 " + transLatedBlockForImpMainMethod.getFieldDeclarations().size());
+
+            this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null);
+
             System.out.println("MAIN METHOD CLASS NAME");
             System.out.println("MAIN METHOD");
 
@@ -51,6 +49,7 @@ public class CppDataLayoutM {
         String classMethodInit;
         String vTableDecl;
         String parentClass;
+        String deafultConstructorImplementation;
 
         ArrayList<cppMethodImplementation> cppMethodImplementations;
 
@@ -74,6 +73,19 @@ public class CppDataLayoutM {
             this.vTableDecl = "__" + this.className + "_VT " + "__" + this.className + "::__vtable";
             this.cppMethodImplementations = new ArrayList<cppMethodImplementation>();
 
+            //Get the constructor implementations via the class fields
+            this.deafultConstructorImplementation = "__" + theClass.getClassName() + "::__" + theClass.getClassName() + "() : __vptr(&__vtable)";
+            //Add the class fields
+            for (CustomVariablesClass varClass : theClass.getClassVariables()){
+                typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
+                String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
+                System.out.println(varClass.getType());
+                this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")" + "\n" + "{}";
+                System.out.println("THE DEAFULTE123 CONSTRUCTOR TYPE");
+                System.out.println(this.deafultConstructorImplementation);
+            }
+
+
             System.out.println("CLASS NAME");
             System.out.println(this.className);
             System.out.println("CLASS VTABLE INIT");
@@ -89,9 +101,10 @@ public class CppDataLayoutM {
             }
 
         }
+    }
 
         // A a = new A();
-    }
+
 
 
 
@@ -180,6 +193,8 @@ public class CppDataLayoutM {
                     //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
 
 
+            } // end check modifiers
+
                 }
                 if (!fieldDec.getNode(1).isEmpty()){
                     fieldDeclarationLine += " ";
@@ -187,14 +202,43 @@ public class CppDataLayoutM {
 
 
 
+                System.out.println("Get Type");
+                System.out.println((fieldDec.getNode(1)));
+                   // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
+
+                // if value of node is null continue
+                //if (fieldDec.getNode(1).getNode(0) == null){continue;}
+                // sub 0th node is Qualified Identifier
+                if (!fieldDec.getNode(1).getNode(0).isEmpty()){
+                    System.out.println("$t2\n " + fieldDec.getNode(1));
+
+                    System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
+                    System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
 
 
+                    // fieldDec.getNode(1) is varName, which may be as so: var or var[]
+                    qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
+                    System.out.println("$qq \n"+ qualifiedIdentifier );
+                    fieldDeclarationLine += qualifiedIdentifier;
+                }
 
 
+                // if not null the variable is declaring an array
+                if (fieldDec.getNode(1).getNode(1) != null){
+                    isArray = true;
+                    System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
 
+                    Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
+                    System.out.println("$decvar\n " + declaratorVarNode);
+
+
+                    for (int i = 0; i < declaratorVarNode.size(); i++){
+                                fieldDeclarationLine += "[]";
+                    }
+                    //fieldDeclarationLine += "[]";
+                    //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
 
                 System.out.println("types vals " + fieldDec.getNode(1).getNode(0));
-
 
                 // }
 
@@ -217,6 +261,7 @@ public class CppDataLayoutM {
                 System.out.println("mydec1" + declarator);
 
                 if (!declarator.isEmpty()){
+
 
 
                     String declaratorVar = declarator.getString(0);
@@ -292,6 +337,7 @@ public class CppDataLayoutM {
 
 
                         } else if (declarator.getNode(2).getName().equals("SubscriptExpression")) {
+
                             Node subscriptExpression = declarator.getNode(2);
                             System.out.println("$sub1 " + subscriptExpression);
 
@@ -328,15 +374,13 @@ public class CppDataLayoutM {
 
                             //System.out.println("wowee " + declaratorValue);
                         }
-                        String fullDeclarator = declaratorVar + " = " + declaratorValue;
-                        fieldDeclarationLine += fullDeclarator;
 
-                    }
-                    else{
-                        fieldDeclarationLine += declaratorVar;
 
-                    }
 
+                    String fullDeclarator = declaratorVar + " = " + declaratorValue;
+                    fieldDeclarationLine += fullDeclarator;
+
+                    //declarators.add(fieldDeclarationLine);
 
 
 
@@ -366,11 +410,17 @@ public class CppDataLayoutM {
 
 
 
+                } // end of if declarator isn't empty
 
 
 
 
+                    //declarators.add(fieldDeclarationLine);
+                    mainFileLines.add(fieldDeclarationLine);
+                    System.out.println("FULL FIELD $D111 \n " +  fieldDeclarationLine);
 
+
+                } // end of if declarator isn't empty
 
 
 
@@ -378,7 +428,7 @@ public class CppDataLayoutM {
 
             } // end of get Declarators
 
-            // TODO: Translate expression statements
+
 
 
 
@@ -387,42 +437,39 @@ public class CppDataLayoutM {
         } // end of CustomFieldDeclaration Constructor
 
 
-    }
 
 
-    public static class CustomTestObject{
-
-        String thing;
-      public CustomTestObject(){
-        thing = "thingy";
 
 
-        }
 
-    }
-
-    public static class TranslatedBlock{
+    public static class TranslatedBlock {
         // blocks have field declarations
         // Expression statements
-        int test;
+
         ArrayList<CustomFieldDeclaration> fieldDeclarations;
-        ArrayList<CustomTestObject> customTestObjects;
 
-        ArrayList<String> testList;
+        public ArrayList<CustomFieldDeclaration> getFieldDeclarations() {
+            return fieldDeclarations;
+        }
 
-//            public ArrayList<CustomFieldDeclaration> getFieldDeclarations() {
-//                return fieldDeclarations;
-//            }
+        //Constructor properties
+        boolean isConstructor;
+        String deafultConsturctorCall;
+        ArrayList<String> classLevelInitFields;
 
-        public TranslatedBlock(Node b){
-            this.test = 1;
-            this.fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
+        public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass) {
 
-            testList = new ArrayList<String>();
+            //If this is a constuctor handle the deafult/explcit constructor call
+            //e.g. _Object::__init((Object) __this); OR __A::__init((A) __this, x1);
+            this.isConstructor = flag;
+            this.classLevelInitFields = new ArrayList<String>();
+            this.deafultConsturctorCall = "__Object::__init((Object) __this)";
 
-            System.out.println(b.size());
+            //Fields for standared method block
+            fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
+            //System.out.println(b.size());
 
-            for (int i = 0; i < b.size(); i++){
+            for (int i = 0; i < b.size(); i++) {
 
                 // either a field declaration or ExpressionStatement
 
@@ -432,42 +479,118 @@ public class CppDataLayoutM {
                 // 1: Type(QualifiedIdentifier("string value"),
                 // 2: Declarators(0:Declarator("dec variable"), 1:someVal/null, 2:NewClassExpression,
                 // 3: Arguments("some string/null"), someVal/null)
-System.out.println("$bii " + b.getNode(i));
-                if (b.getNode(i).getName().equals("FieldDeclaration")){
+
+                if (b.getNode(i).getName().equals("FieldDeclaration")) {
                     CustomFieldDeclaration fd = new CustomFieldDeclaration(b.getNode(i), i);
-                    System.out.println("$here1");
                     this.fieldDeclarations.add(fd);
-                    System.out.println("$line4111 " +  this.getFieldDeclarations().size());
+                    System.out.println("fdline " + fd.fieldDeclarationLine);
+
                 }
                 // else if ExpressionStatement
                 // its subnodes have the following indices
                 // 0:
-                else{
+                else {
                     System.out.println("Expression Statement\n " + b.getNode(i));
                 }
+            }//End of for loop for block
+
+            //TODO NICHOLAS
+            //Constructor helper stuff
+            // private static class typeTranslatorToDeafultTypeClass(String type){
 
 
+            //Handle Constructor Stuff
+            if (this.isConstructor) {
+                //First check what type of default constructor is called by going through the block
+                String superOrThis = "";
+                for (int k = 0; k < b.size(); k++) {
+                    //Find if there is super etc..
+                    if (b.getNode(k).getName().equals("ExpressionStatement")) {
+                        if (b.getNode(k).getNode(0).getName().equals("CallExpression")) {
+                            //Get the call expression node
+                            Node callExpression = b.getNode(k).getNode(0);
+                            if (callExpression.getString(2).equals("super")) {
+                                //Super is called
+                                String arguments = "";
+                                Node argumentNode = callExpression.getNode(3);
+                                for (int g = 0; g < argumentNode.size(); g++) {
+                                    //Go through the arguments
+                                    arguments += ", " + argumentNode.getNode(g).getString(0);
+                                }
+                                deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this" + arguments + ")";
+                            } else if (callExpression.getNode(2).getName().equals("this")) {
+                                //This Call
+                                deafultConsturctorCall = "__init(__this)";
+                            }
+                        }
+                    }
+                }
+                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK");
+                System.out.println(deafultConsturctorCall);
 
-            }
-            System.out.println("WALLE123 length " + this.fieldDeclarations.size());
+                //Handle Class level field InIts
+                //Get the class level fields
+                //TEST 006
+                //TEST 021
+                ArrayList<CustomVariablesClass> classFields = theMethodsClass.getClassVariables();
+                for (CustomVariablesClass classField : classFields) {
+                    this.classLevelInitFields.add("ASD");
+                }
 
+            }//End of if constructor statement
 
-        }
-
-        public ArrayList<CustomFieldDeclaration> getFieldDeclarations() {
-            return this.fieldDeclarations;
-        }
+        }//END OF Translate Block Constructor
     }
 
-    //TODO NICHOLAS
+
     //Constructor helper stuff
-    // private static class typeTranslatorToDeafultTypeClass(String type){
+    private static class typeTranslatorToDeafultTypeClass{
+        public String translateDefaultType(String javaType) {
+            String DefaultType = "";
+            switch (javaType) {
+                case "int":
+                    DefaultType = "0";
+                    break;
 
+                case "byte":
+                    DefaultType = "0";
+                    break;
 
+                case "char":
+                    DefaultType = "\u0000";
+                    break;
 
-    //  }
+                case "double":
+                    DefaultType = "0.0d";
+                    break;
 
+                case "float":
+                    DefaultType = "0.0f";
+                    break;
 
+                case "long":
+                    DefaultType = "0L";
+                    break;
+
+                case "short":
+                    DefaultType = "0";
+                    break;
+
+                case "boolean":
+                    DefaultType = "false";
+                    break;
+
+                case "string":
+                    DefaultType = "null";
+                    break;
+
+                default:
+                    DefaultType = "null";
+                    break;
+            }
+            return DefaultType;
+        }
+    }
 
     //TODO NICHOLAS
     public static class cppMethodImplementation{
@@ -475,13 +598,12 @@ System.out.println("$bii " + b.getNode(i));
         String name;
         String params;
 
+        //Block stuff
         Node theBlock;
         TranslatedBlock translatedBlock;
 
-        // TODO: add property to hold translated block, check if the block has a constructor
+        //See if the method is a constructor
         boolean isConstuctor = false;
-        //Constructor properties -> this will be null unless its a constructor. Use isConstructor to check if this is is constructor when adding to the ASTMTree
-        String deafultConstructorLayout;
 
         public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass){
             CppDataLayout.typeTranslate typeTranslate = new CppDataLayout.typeTranslate();
@@ -501,27 +623,13 @@ System.out.println("$bii " + b.getNode(i));
                 this.isConstuctor = true;
             }
 
-            //If this is a constructor handle for constructor default properties
-            //TODO NIC
-            if (this.isConstuctor == true){
-                //Handle constructor
-                this.deafultConstructorLayout = "__" + theMethodsClass.getClassName() + "::__" + theMethodsClass.getClassName() + "() : __vptr(&__vtable), ";
-                //Get the class Var's
-                ArrayList<CustomVariablesClass> arrayOfClassFields = theMethodsClass.getClassVariables();
-                for (CustomVariablesClass varInClass : arrayOfClassFields){
-                    String varName = varInClass.getName();
-                    String deafultType;
-
-                }
-            }
-
-
 
             System.out.println("METHOD NAME");
             System.out.println(this.name);
 
             System.out.println("METHOD PARAMS");
             System.out.println(this.params);
+
 
             System.out.println("METHOD RETURN");
             System.out.println(this.returnType);
@@ -531,50 +639,15 @@ System.out.println("$bii " + b.getNode(i));
             System.out.println("block12345");
 
             //Translate the block for the method
-            this.translatedBlock = new TranslatedBlock(this.theBlock);
-            System.out.println("$im here222 " + this.translatedBlock.getFieldDeclarations().size());
+            translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass);
 
 
+            System.out.println("FIELD DECLARATIONS COUNT");
+            System.out.println(this.translatedBlock.fieldDeclarations.size());
 
-
-
-            // for (translatedBlock.);
-
-
-//System.out.println("$fdSize " + this.translatedBlock.getFieldDeclarations().size());
-            System.out.println("$test " + translatedBlock.test);
-
-
-            //System.out.println("$g " + this.translatedBlock.fieldDeclarations.get(0));
-            for (CustomFieldDeclaration fd : this.translatedBlock.getFieldDeclarations()){
-                //System.out.println(fd.);
-                //for (String l : translatedBlock.getFieldDeclarations())
-                System.out.println("$line222 " + fd.fieldDeclarationLine);
-
-            }
-
-
-//                 System.out.println("start i");
-//                 System.out.print();
-//
-//                for (int j = 0; j < this.theBlock.getNode(i).size(); j++){
-//
-//                    System.out.println("in j block " + this.theBlock.getNode(i).getNode(j) +"\n");
-//
-//
-//
-//                 }
-//                 System.out.println("inc i");
-//
-//
-//
-//             }
-
-            // System.out.println()
-
-            // TODO: translate the block
 
         }
     }
+
 }
 

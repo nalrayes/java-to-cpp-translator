@@ -7,6 +7,11 @@ public class CustomVariablesClass {
     String name;
     String type;
 
+    String declaratorRightSide;
+
+    public String getDeclaratorRightSide() {
+        return declaratorRightSide;
+    }
 
     public String getModifier() {
         return modifier;
