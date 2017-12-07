@@ -98,7 +98,7 @@ public class CppDataLayoutM {
             System.out.println("CLASS VTABLE DECL");
             System.out.println(this.vTableDecl);
 
-            //Create def init
+            //Create def init method for each class
             this.defaultInIt = new cppMethodImplementation();
             this.defaultInIt.name = theClass.className + " " + "__" + theClass.className + ":: __init(" + theClass.className + "__this)";
             this.defaultInIt.returnType = "__this";
@@ -151,9 +151,6 @@ public class CppDataLayoutM {
             System.out.println("DEFAULT INIT CHECK END");
         }
     }
-
-        // A a = new A();
-
 
 
 
