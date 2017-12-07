@@ -75,11 +75,13 @@ public class CppDataLayoutM {
                 typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
                 String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
                 System.out.println(varClass.getType());
-                this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")" + "\n" + "{}";
-                System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
-                System.out.println(this.deafultConstructorImplementation);
-            }
+                this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
 
+
+            }
+            this.deafultConstructorImplementation +=  "\n" + "{}";
+            System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
+            System.out.println(this.deafultConstructorImplementation);
 
             System.out.println("CLASS NAME");
             System.out.println(this.className);
@@ -417,19 +419,6 @@ public class CppDataLayoutM {
         //Constructor helper stuff
        // private static class typeTranslatorToDeafultTypeClass(String type){
 
-
-
-      //  }
-
-
-
-
-
-
-
-
-
-
             //Handle Constructor Stuff
             if(this.isConstructor){
                 //First check what type of default constructor is called by going through the block
@@ -466,7 +455,7 @@ public class CppDataLayoutM {
                 //TEST 021
                 ArrayList<CustomVariablesClass> classFields = theMethodsClass.getClassVariables();
                 for (CustomVariablesClass classField : classFields){
-                    
+
 
 
 

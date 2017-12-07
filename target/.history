@@ -226,3 +226,5 @@ runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 runxtc -translate src/test/java/inputs/test030/Test030.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 >>>>>>> 944a2af356ea4ced767f9e6e28a78c19ae104c40
+runxtc -translate src/test/java/inputs/test030/Test030.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
