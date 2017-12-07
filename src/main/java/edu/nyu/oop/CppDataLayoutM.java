@@ -102,7 +102,7 @@ public class CppDataLayoutM {
                 // 3: Arguments("some string/null"), someVal/null)
 
                 // 0: modifiers
-               // System.out.println("fdeez " + fieldDec);
+                // System.out.println("fdeez " + fieldDec);
                 String fieldDeclarationLine ="";
 
                 if (fieldDec.getNode(0).size() > 0 ){
@@ -123,7 +123,7 @@ public class CppDataLayoutM {
                     System.out.println("Get Type");
                     System.out.println((fieldDec.getNode(1)));
                     String qualifiedIdentifier;
-                   // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
+                    // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
 
                         // if value of node is null continue
                         //if (fieldDec.getNode(1).getNode(0) == null){continue;}
@@ -134,7 +134,6 @@ public class CppDataLayoutM {
                             System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
                             System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
 
-//                                if (fieldDec.getNode(1).getNode(j).getString(0) == null){continue;}
                            // fieldDec.getNode(1) is varName, which may be as so: var or var[]
                             qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
                             fieldDeclarationLine += qualifiedIdentifier;
@@ -155,22 +154,8 @@ public class CppDataLayoutM {
                     }
                    if (!fieldDec.getNode(1).isEmpty()){
                         fieldDeclarationLine += " ";
-                    }
-
-
-
-
-
-
-
-
-
-                        System.out.println("types vals " + fieldDec.getNode(1).getNode(0));
-
-
-                   // }
-
-
+                   }
+                   System.out.println("types vals " + fieldDec.getNode(1).getNode(0));
 
                 } // end of sub 0 check field dec's modifiers
 
@@ -279,28 +264,77 @@ public class CppDataLayoutM {
 
                     } // end of if declarator isn't empty
 
-
-
-
-
-
-
-
-
-
-
-
-
                 } // end of get Declarators
-
-                // TODO: Translate expression statements
-
-
-
-
 
             } // end of CustomFieldDeclaration Constructor
 
+
+        }
+
+        public static String processNewClassExpression(Node newClassExpression) {
+            String ret = "new ";
+            ret += newClassExpression.getNode(2).getString(0) + "(";
+
+            // check if the instantiated object has arguments
+            System.out.println("$n1 " + newClassExpression);
+            if (!newClassExpression.getNode(3).isEmpty()){
+                Node arguments = newClassExpression.getNode(3);
+
+                declaratorValue+="(";
+                for (int x = 0; x < arguments.size(); x++) {
+                    ret += processNameNode(arguments.getNode(x)) + ",";
+                }
+
+                ret+=")";
+            } else {
+                ret += ")";
+            }
+
+            return ret;
+        }
+
+        public static String processCastExpression(Node n) {
+            String ret = "(" + n.getNode(0).getNode(0).getString(0) + ") ";
+            ret += processNameNode(n.getNode(1));
+            return ret;
+        }
+
+        public static String processNameNode(Node n) {
+            String res;
+            boolean justString = n.getName() == "PrimaryIdentifier" || n.getName() == "IntegerLiteral" || n.getName() == "StringLiteral";
+            if (justString) {
+                res = n.getString(0);
+            } else if (n.getName() == "SelectionExpression"){
+                res = processNameNode(n.getNode(0)) + "." + n.getString(1);
+            } else if (n.getName() == "SubscriptExpression") {
+                res = processNameNode(n.getNode(0)) + "[" + processNameNode(n.getNode(1)) + "]";
+            } else if (n.getName() == "ThisExpression") {
+                res = "this";
+            } else if (n.getName() == "NewClassExpression") {
+                res = processNewClassExpression(n);
+            } else if (n.getName() == "CastExpression") {
+                res = processCastExpression(n);
+            } else if (n.getName() == "AdditiveExpression") {
+                res = processNameNode(n) + " + " processNameNode(n);
+            } else if (n.getName() == "MultiplicativeExpression") {
+                res = processNameNode(n) + " * " processNameNode(n);
+            } else if (n.getName() == "Expression") {
+                res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
+            } else if (n.getName() == "CallExpression") {
+                res = processNameNode(n.getNode(0)) + ""
+            }
+            return res;
+        }
+
+        // TODO: Translate expression statements
+        public static class CustomExpressionStatement{
+            String expression;
+            int position;
+
+            public CustomExpressionStatement(Node sonNode, int pos) {
+                this.position = pos;
+                this.expression = processNameNode(sonNode);
+            }
 
         }
 
@@ -332,7 +366,10 @@ public class CppDataLayoutM {
                     // its subnodes have the following indices
                     // 0:
                     else{
-                        System.out.println("Expression Statement\n " + b.getNode(i));
+                        if (n.getName() == "ExpressionStatement") {
+                            CustomExpression ex = new CustomExpressionStatement(b.getNode(i), i);
+                            // add to list
+                        }
                     }
 
 
