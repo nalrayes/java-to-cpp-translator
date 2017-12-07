@@ -2,7 +2,7 @@ package inputs.CustomTests;
 
 
 class A {
-    String a = "greatstring123";
+    String a = "greatstring12345";
 
     public void setA(String x) {
         a = x;
