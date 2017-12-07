@@ -323,8 +323,10 @@ public class CppDataLayoutM {
                         if (declarator.getNode(2).getName().equals("NewClassExpression")) {
                             isClass = true;
                             Node newClassExpression = declarator.getNode(2);
-                            declaratorValue += newClassExpression.getNode(2).getString(0);
+                            System.out.println("$1217/1 \n" + newClassExpression);
 
+                            declaratorValue += newClassExpression.getNode(2).getString(0);
+                            System.out.println(declaratorValue);
                             // check if the instantiated object has arguments
                             System.out.println("$n1 " + newClassExpression);
                             if (!newClassExpression.getNode(3).isEmpty()) {
@@ -446,7 +448,7 @@ public class CppDataLayoutM {
                     if (isClass){
 
                         //__rt::Ptr<int, __rt::object_policy> p = new int(5);
-                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new ";
+                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                     }
 
