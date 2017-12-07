@@ -106,6 +106,9 @@ public class CppDataLayoutM {
             TranslatedBlock blockForDef = new TranslatedBlock();
             blockForDef.classLevelInitFields = new ArrayList<String>();
             blockForDef.deafultConsturctorCall = "__Object::__init((Object) __this)";
+            if(theClass.getParentClass() != "None"){
+                blockForDef.deafultConsturctorCall = "__" + theClass.getParentClass() + "::__init((" + theClass.getParentClass() + ") __this)";
+            }
             ArrayList<CustomVariablesClass> classFields = theClass.getClassVariables();
             for (CustomVariablesClass classField : classFields) {
                 if (classField.declaratorRightSide != null) {
@@ -121,10 +124,10 @@ public class CppDataLayoutM {
                     System.out.println(finalString);
                 }
             }
-            //TODO Add the return statement to block
-
+            blockForDef.returnStatement = "__this";
             this.defaultInIt.translatedBlock = blockForDef;
 
+            //Process the methods
             for (CustomMethodClass method : theClass.getMethods()) {
                 cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass);
                 this.cppMethodImplementations.add(methodImp);
@@ -493,10 +496,12 @@ public class CppDataLayoutM {
         // Expression statements
 
         ArrayList<CustomFieldDeclaration> fieldDeclarations;
-
         public ArrayList<CustomFieldDeclaration> getFieldDeclarations() {
             return fieldDeclarations;
         }
+
+
+        String returnStatement = "";
 
         //Constructor properties
         boolean isConstructor;
@@ -540,13 +545,25 @@ public class CppDataLayoutM {
                 else {
                     System.out.println("Expression Statement\n " + b.getNode(i));
                 }
+
+
+
+
+
             }//End of for loop for block
 
 
-        //Constructor helper stuff
-       // private static class typeTranslatorToDeafultTypeClass(String type){
+
+
+            //Constructor helper stuff levae this at the end of the class
             //Handle Constructor Stuff
             if (this.isConstructor) {
+                //Set return type to this
+                this.returnStatement = "__this";
+                //Check if the clas extends object. If not then leave the init call to be Object
+                if(theMethodsClass.getParentClass() != "None"){
+                    this.deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this)";
+                }
                 //First check what type of default constructor is called by going through the block
                 String superOrThis = "";
                 for (int k = 0; k < b.size(); k++) {
@@ -564,20 +581,17 @@ public class CppDataLayoutM {
                                     arguments += ", " + argumentNode.getNode(g).getString(0);
                                 }
                                 deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this" + arguments + ")";
-                            } else if (callExpression.getNode(2).getName().equals("this")) {
+                            } else if (callExpression.getString(2).equals("this")) {
                                 //This Call
                                 deafultConsturctorCall = "__init(__this)";
                             }
                         }
                     }
                 }
-                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK");
-                System.out.println(deafultConsturctorCall);
 
                 //Handle Class level field InIts
                 //Get the class level fields
-                //TEST 006
-                //TEST 021
+                //TEST 003, 006, 007, 008, 025
                 ArrayList<CustomVariablesClass> classFields = theMethodsClass.getClassVariables();
                 for (CustomVariablesClass classField : classFields) {
                     if(classField.declaratorRightSide != null){
@@ -596,13 +610,19 @@ public class CppDataLayoutM {
                 }
                 //TODO handle remaining body of constructor
                 //When doing expression statements
-                //If the expression statement's left handside is contained in the ClassFields then add a __this->
+                //TODO If the expression statement's left handside is contained in the ClassFields then add a __this->
 
+                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK BEGIN");
+                System.out.println(deafultConsturctorCall);
+                for (String field : this.classLevelInitFields){
+                    System.out.println(field);
+                }
+                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK END");
 
             }//End of if constructor statement
 
         }//END OF Translate Block Constructor
-    }
+    }//End of TranslatedBlock class
 
 
     //Constructor helper stuff
