@@ -3,6 +3,7 @@ package edu.nyu.oop;
 import java.util.ArrayList;
 
 import edu.nyu.oop.*;
+import jdk.nashorn.internal.ir.ExpressionStatement;
 import xtc.tree.GNode;
 import java.util.Map;
 import edu.nyu.oop.util.CppDataLayout;
@@ -499,6 +500,8 @@ public class CppDataLayoutM {
             return fieldDeclarations;
         }
 
+        ArrayList<CustomExpressionStatement> expressionStatements;
+
 
         String returnStatement = "";
 
@@ -519,6 +522,8 @@ public class CppDataLayoutM {
 
             //Fields for standared method block
             fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
+            expressionStatements = new ArrayList<CustomExpressionStatement>();
+
             //System.out.println(b.size());
 
             for (int i = 0; i < b.size(); i++) {
@@ -541,8 +546,10 @@ public class CppDataLayoutM {
                 // else if ExpressionStatement
                 // its subnodes have the following indices
                 // 0:
-                else {
-                    System.out.println("Expression Statement\n " + b.getNode(i));
+                else if (b.getNode(i).getName().equals("ExpressionStatement")) {
+                    CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i);
+                    this.expressionStatements.add(ex);
+                    System.out.println("NODE\n " + b.getNode(i));
                 }
 
 
@@ -729,6 +736,94 @@ public class CppDataLayoutM {
 
 
         }
+    }
+
+    public static String processNewClassExpression(Node newClassExpression) {
+        String ret = "new ";
+        ret += newClassExpression.getNode(2).getString(0) + "(";
+        String arguments = "";
+        if (newClassExpression.getNode(3) != null) {
+            arguments = processArguments(newClassExpression.getNode(3));
+        }
+        ret += arguments;
+        ret += ")";
+        return ret;
+    }
+
+    public static String processArguments(Node arguments) {
+        String ret = "";
+        for (int x = 0; x < arguments.size(); x++) {
+            ret += ", " + processNameNode(arguments.getNode(x));
+        }
+        // No longer necessary because of first argument
+//        if (arguments.size() > 0) {
+//            ret = ret.substring(2, ret.length());
+//        }
+
+        return ret;
+    }
+
+    public static String processCastExpression(Node n) {
+        String ret = "(" + n.getNode(0).getNode(0).getString(0) + ") ";
+        ret += processNameNode(n.getNode(1));
+        return ret;
+    }
+
+    public static String processCallExpression(Node n) {
+        String methodName = n.getString(2);
+        String arguments = "";
+        if (n.getNode(3) != null) {
+            arguments = processArguments(n.getNode(3));
+        }
+        String callTo = processNameNode(n.getNode(0));
+        String ret = callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ")";
+        return ret;
+    }
+
+    public static String processNameNode(Node n) {
+        String res = "";
+        boolean justString = n.getName() == "PrimaryIdentifier" || n.getName() == "IntegerLiteral";
+        if (justString) {
+            res = n.getString(0);
+        } else if (n.getName() == "SelectionExpression"){
+            // translation: ->
+            res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
+        } else if (n.getName() == "SubscriptExpression") {
+            res = "(*" + processNameNode(n.getNode(0)) + ")[" + processNameNode(n.getNode(1)) + "]";
+        } else if (n.getName() == "ThisExpression") {
+            res = "__this";
+        } else if (n.getName() == "NewClassExpression") {
+            res = processNewClassExpression(n);
+        } else if (n.getName() == "CastExpression") {
+            res = processCastExpression(n);
+        } else if (n.getName() == "AdditiveExpression") {
+            res = processNameNode(n.getNode(0)) + " + " + processNameNode(n.getNode(2));
+        } else if (n.getName() == "MultiplicativeExpression") {
+            res = processNameNode(n.getNode(0)) + " * " + processNameNode(n.getNode(2));
+        } else if (n.getName() == "Expression") {
+            res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
+        } else if (n.getName() == "CallExpression") {
+            res = processCallExpression(n);
+        } else if (n.getName() == "StringLiteral") {
+            res = "__rt::literal(" + n.getString(0) + ")";
+        }
+        return res;
+    }
+
+    // TODO: Translate expression statements
+    public static class CustomExpressionStatement{
+        String expression;
+        int position;
+
+        public CustomExpressionStatement(Node sonNode, int pos) {
+            this.position = pos;
+            this.expression = processNameNode(sonNode.getNode(0));
+            System.out.println("=====================================");
+            System.out.println("ExpressionStatement");
+            System.out.println(this.expression);
+            System.out.println("=====================================");
+        }
+
     }
 
 }

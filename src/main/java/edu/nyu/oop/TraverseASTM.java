@@ -132,7 +132,7 @@ public class TraverseASTM extends ContextualVisitor {
                 //Get the value
                 varToReturn.declaratorRightSide = n.getNode(2).getNode(0).getNode(2).getString(0);
                 //System.out.println("DECEL RIGHT");
-                System.out.println(varToReturn.declaratorRightSide);
+//                System.out.println(varToReturn.declaratorRightSide);
                 if(n.getNode(2).getNode(0).getNode(2).getName() == "StringLiteral" && !varToReturn.modifier.contains("static")){
                     varToReturn.declaratorRightSideType = "string";
                 }
