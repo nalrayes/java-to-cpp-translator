@@ -65,26 +65,26 @@ public class TraverseASTTest {
         // Assert that the correct number of methods were counted by our visitor
         //System.out.println(classSummary.classes.toString());
         System.out.println("Print classes");
-        System.out.println("Packages: " + classSummary.packages);
+//        System.out.println("Packages: " + classSummary.packages);
         for (int i =0; i < classSummary.classes.size(); i++){
 
-            System.out.println("Class Name: " + classSummary.classes.get(i).className + " extends " + classSummary.classes.get(i).getParentClass());
+//            System.out.println("Class Name: " + classSummary.classes.get(i).className + " extends " + classSummary.classes.get(i).getParentClass());
 
             //Print all constructors
             ArrayList<CustomConstructorClass> constructors = classSummary.classes.get(i).getConstructors();
             for (int k = 0; k < constructors.size(); k++) {
-                System.out.println("Constructor " + k );
+//                System.out.println("Constructor " + k );
                 CustomConstructorClass c = constructors.get(k);
-                System.out.println("Con vis " + c.getVisibility());
-                System.out.println("Con name " + c.getName());
+//                System.out.println("Con vis " + c.getVisibility());
+//                System.out.println("Con name " + c.getName());
                 ArrayList<CustomVariablesClass> vars = c.getParameters();
                 for (int l = 0; l < vars.size(); l++) {
-                    System.out.println("Construct Param " + k + " " + l);
+//                    System.out.println("Construct Param " + k + " " + l);
                     CustomVariablesClass v = vars.get(l);
-                    System.out.println("Con param vis " + v.visibility);
-                    System.out.println("Con param mod " + v.modifier);
-                    System.out.println("Con param name " +v.name);
-                    System.out.println("Con param type " +v.type);
+//                    System.out.println("Con param vis " + v.visibility);
+//                    System.out.println("Con param mod " + v.modifier);
+//                    System.out.println("Con param name " +v.name);
+//                    System.out.println("Con param type " +v.type);
                 }
             }
 

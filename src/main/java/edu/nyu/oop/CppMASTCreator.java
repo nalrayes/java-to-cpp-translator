@@ -56,26 +56,26 @@ public class CppMASTCreator {
 
         //Print
         for (CppDataLayoutM.cppImplementationClass class1: listOfCppImpClassesDatalayout){
-            System.out.println("$imple size " + class1.cppMethodImplementations.size());
+//            System.out.println("$imple size " + class1.cppMethodImplementations.size());
 
             for (CppDataLayoutM.cppMethodImplementation method : class1.cppMethodImplementations){
 
-                System.out.println("$ello123 " + method.name + " " + method.translatedBlock.getFieldDeclarations().size());
+//                System.out.println("$ello123 " + method.name + " " + method.translatedBlock.getFieldDeclarations().size());
 
 
                 for (CppDataLayoutM.CustomFieldDeclaration cfd : method.translatedBlock.getFieldDeclarations()){
-                    System.out.println("herez "+ cfd.fieldDeclarationLine);
+//                    System.out.println("herez "+ cfd.fieldDeclarationLine);
                 }
 
 
 
             }
         }
-        System.out.println("$mainmethod " + mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations().size());
+//        System.out.println("$mainmethod " + mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations().size());
 
 
         for (CppDataLayoutM.CustomFieldDeclaration cfd : mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations()){
-            System.out.println("herez1 "+ cfd.fieldDeclarationLine);
+//            System.out.println("herez1 "+ cfd.fieldDeclarationLine);
         }
 
 
