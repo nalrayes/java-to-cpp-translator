@@ -739,13 +739,16 @@ public class CppDataLayoutM {
     }
 
     public static String processNewClassExpression(Node newClassExpression) {
-        String ret = "new ";
-        ret += newClassExpression.getNode(2).getString(0) + "(";
+        String className = newClassExpression.getNode(2).getString(0);
+        String ret = "__" + className + "::__init(new __" + className + "()";
         String arguments = "";
         if (newClassExpression.getNode(3) != null) {
             arguments = processArguments(newClassExpression.getNode(3));
         }
-        ret += arguments;
+        if (arguments.length() > 0) {
+            ret += ", ";
+            ret += arguments;
+        }
         ret += ")";
         return ret;
     }
@@ -755,7 +758,7 @@ public class CppDataLayoutM {
         for (int x = 0; x < arguments.size(); x++) {
             ret += ", " + processNameNode(arguments.getNode(x));
         }
-        // No longer necessary because of first argument
+        // No longer necessary because of first arguemnt representing the object
 //        if (arguments.size() > 0) {
 //            ret = ret.substring(2, ret.length());
 //        }
@@ -769,13 +772,32 @@ public class CppDataLayoutM {
         return ret;
     }
 
+
+    public static boolean isPrint(Node n) {
+
+        if (n.getNode(0).getName() == "SelectionExpression") {
+            if (n.getNode(0).getNode(0).getName() == "PrimaryIdentifier") {
+                if (n.getNode(0).getNode(0).getString(0).equals("System")) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public static String processCallExpression(Node n) {
-        String methodName = n.getString(2);
         String arguments = "";
         if (n.getNode(3) != null) {
             arguments = processArguments(n.getNode(3));
         }
+        // handle sys.out.println
+        if (isPrint(n)) {
+            // may want to consider differentiation between print and println
+            return "std::cout << " + arguments.substring(2,arguments.length()) + " << std::endl";
+        }
+
         String callTo = processNameNode(n.getNode(0));
+        String methodName = n.getString(2);
         String ret = callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ")";
         return ret;
     }
@@ -789,22 +811,31 @@ public class CppDataLayoutM {
             // translation: ->
             res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
         } else if (n.getName() == "SubscriptExpression") {
+            // translation: (*var)[index]
             res = "(*" + processNameNode(n.getNode(0)) + ")[" + processNameNode(n.getNode(1)) + "]";
         } else if (n.getName() == "ThisExpression") {
+            // translation: __this
             res = "__this";
         } else if (n.getName() == "NewClassExpression") {
+            // translation: __class:__init
             res = processNewClassExpression(n);
         } else if (n.getName() == "CastExpression") {
+            // translation: no difference
             res = processCastExpression(n);
         } else if (n.getName() == "AdditiveExpression") {
+            // translation: no difference
             res = processNameNode(n.getNode(0)) + " + " + processNameNode(n.getNode(2));
         } else if (n.getName() == "MultiplicativeExpression") {
+            // translation: no difference
             res = processNameNode(n.getNode(0)) + " * " + processNameNode(n.getNode(2));
         } else if (n.getName() == "Expression") {
+            // translation: no difference
             res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
         } else if (n.getName() == "CallExpression") {
+            // translation: ->__vptr->methodCall
             res = processCallExpression(n);
         } else if (n.getName() == "StringLiteral") {
+            // translation: __rt::literal(<string>)
             res = "__rt::literal(" + n.getString(0) + ")";
         }
         return res;
@@ -817,7 +848,7 @@ public class CppDataLayoutM {
 
         public CustomExpressionStatement(Node sonNode, int pos) {
             this.position = pos;
-            this.expression = processNameNode(sonNode.getNode(0));
+            this.expression = processNameNode(sonNode.getNode(0)) + ";";
             System.out.println("=====================================");
             System.out.println("ExpressionStatement");
             System.out.println(this.expression);
