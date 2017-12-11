@@ -491,7 +491,7 @@ public class CppDataLayoutM {
         TranslatedBlock forLoopsTranslatedBlock;
         String forLoopDecLine; // <- e.g. for(int i = 0; i < as.length; i++)
 
-        public CustomForLoop(Node forLoopNode, int position){
+        public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass){
             this.positon = position;
             //TODO PARSE FOR LOOP HEADER
 
@@ -499,8 +499,7 @@ public class CppDataLayoutM {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-                    this.forLoopsTranslatedBlock = new TranslatedBlock()
-
+                    this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass);
                 }
             }
         }
@@ -510,21 +509,36 @@ public class CppDataLayoutM {
         int positon;
         TranslatedBlock whileLoopTranslatedBlock;
 
-        public CustomWhileLoop(Node whileLoopNode, int positon){
+        public CustomWhileLoop(Node whileLoopNode, int positon, CustomClassObject theWhileLoopsClass){
             this.positon = positon;
+
+            //TODO PARSE WHILE LOOP HEADER
+
+
+
+
+            for (int i = 0; i < whileLoopNode.size(); i++) {
+                //Use this to find the for loops block
+                if(whileLoopNode.getNode(i).getName().equals("Block")){
+                    //This is the for loops block
+                    this.whileLoopTranslatedBlock = new TranslatedBlock(whileLoopNode.getNode(i), false, theWhileLoopsClass);
+                }
+            }
         }
-
-
     }
 
     public static class CustomBlockDec{
         int positon;
         TranslatedBlock customBlockDecTranslatedBlock;
-
-        public CustomBlockDec(Node blockNode, int positon){
+        public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass){
             this.positon = positon;
-
-
+            for (int i = 0; i < blockNode.size(); i++) {
+                //Use this to find the for loops block
+                if(blockNode.getNode(i).getName().equals("Block")){
+                    //This is the for loops block
+                    this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode.getNode(i), false, theBlocksClass);
+                }
+            }
         }
     }
 
@@ -604,17 +618,17 @@ public class CppDataLayoutM {
                 }
                 else if (b.getNode(i).getName().equals("ForStatement")){
                     //For loop
-                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i);
+                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i, theMethodsClass);
                     this.forLoops.add(forlp);
                 }
                 else if(b.getNode(i).getName().equals("WhileStatement")){
                     //While loop
-                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i);
+                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass);
                     this.whileLoops.add(whilelp);
                 }
                 else if(b.getNode(i).getName().equals("Block")){
                     //block within a blokc
-                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i);
+                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass);
                     this.blockDecs.add(blocDec);
                 }
 
