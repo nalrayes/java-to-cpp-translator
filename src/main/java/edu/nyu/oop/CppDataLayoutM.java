@@ -604,16 +604,32 @@ public class CppDataLayoutM {
     }
 
     public static class CustomWhileLoop{
-        int positon;
+        int position;
         TranslatedBlock whileLoopTranslatedBlock;
+        String whileLoopDeclarator = "";
+        String conditional = "";
+        String rhsVar = "";
 
-        public CustomWhileLoop(Node whileLoopNode, int positon, CustomClassObject theWhileLoopsClass){
-            this.positon = positon;
-
-            //TODO PARSE WHILE LOOP HEADER
+        public CustomWhileLoop(Node whileLoopNode, int position, CustomClassObject theWhileLoopsClass){
+            this.position = position;
 
 
 
+            //PARSE WHILE LOOP HEADER
+            System.out.println("whiley " + whileLoopNode);
+
+            String primaryId = "";
+
+            Node relationalExpressionNode = whileLoopNode.getNode(0);
+
+           primaryId = relationalExpressionNode.getNode(0).getString(0);
+           conditional = relationalExpressionNode.getString(1);
+           rhsVar = relationalExpressionNode.getNode(2).getString(0);
+
+
+            whileLoopDeclarator += "(" + primaryId +" " + conditional + " "  + rhsVar +")";
+
+            System.out.println("whileLoop124 " + whileLoopDeclarator);
 
             for (int i = 0; i < whileLoopNode.size(); i++) {
                 //Use this to find the for loops block
@@ -724,6 +740,7 @@ public class CppDataLayoutM {
                 }
                 else if(b.getNode(i).getName().equals("WhileStatement")){
                     //While loop
+
                     CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass);
                     this.whileLoops.add(whilelp);
                 }
