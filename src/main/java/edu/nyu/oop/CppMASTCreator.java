@@ -187,8 +187,39 @@ public class CppMASTCreator {
 
         //Handle the block level implementation here
         //TODO Handle THE BLOCK
+        //Get the total length of all the things inside a block
+        //Get the translated block for the mothd
+        CppDataLayoutM.TranslatedBlock transBlock = methodData.translatedBlock;
 
 
+        //TODO add the length of while loops and for loops and arraylist of blocks
+        int totalLengthOfStuff = transBlock.fieldDeclarations.size() + transBlock.expressionStatements.size() + transBlock.forLoops.size() + transBlock.whileLoops.size() + transBlock.blockDecs.size() + 1;
+        for (int i = 0; i < totalLengthOfStuff; i ++){
+            //For loop to check field Declarations
+            for (int f = 0; f < transBlock.fieldDeclarations.size(); f ++){
+                //Check the counter
+                if(i == transBlock.fieldDeclarations.get(f).position){
+                    System.out.println("THE LINE IS FIELD DECLARATION");
+                    System.out.println(transBlock.fieldDeclarations.get(f).fieldDeclarationLine);
+                    //add to the block
+                    cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.fieldDeclarations.get(f).fieldDeclarationLine);
+                }
+            }//End of field declarations
+
+            for(int e = 0; e < transBlock.expressionStatements.size(); e++){
+                //Check the counter
+                if(i == transBlock.expressionStatements.get(e).position){
+                    System.out.println("THE LINE IS FIELD DECLARATION");
+                    System.out.println(transBlock.expressionStatements.get(e).expression);
+                    //add to the block
+                    cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.expressionStatements.get(e).expression);
+                }
+            }
+            //For loop for expressions
+
+        }
+
+        //Helper method for nested blocks
 
 
         return  ImplementationMethodsNode;

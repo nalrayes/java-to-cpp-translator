@@ -6,3 +6,13 @@ runxtc -translate src/test/java/inputs/test010/Test010.java
 runxtc -translate src/test/java/inputs/Test012/Test012.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test017/Test017.java
+runxtc -translate src/test/java/inputs/test010/Test010.java
+runxtc -translate src/test/java/inputs/test010/Test010.javarunxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test012/Test012.java
+THE LINE IS HERE
+runxtc -translate src/test/java/inputs/Test008/Test008.java

@@ -486,9 +486,30 @@ public class CppDataLayoutM {
         } // end of CustomFieldDeclaration Constructor
 
 
+    public static class CustomForLoop{
+        int positon;
+        TranslatedBlock forLoopsTranslatedBlock;
+
+        public CustomForLoop(Node forLoopNode, int position){
 
 
 
+
+        }
+    }
+
+    public static class CustomWhileLoop{
+        int positon;
+        TranslatedBlock whileLoopTranslatedBlock;
+
+
+    }
+
+    public static class CustomBlockDec{
+        int positon;
+        TranslatedBlock customBlockDecTranslatedBlock;
+
+    }
 
 
     public static class TranslatedBlock {
@@ -499,8 +520,11 @@ public class CppDataLayoutM {
         public ArrayList<CustomFieldDeclaration> getFieldDeclarations() {
             return fieldDeclarations;
         }
-
         ArrayList<CustomExpressionStatement> expressionStatements;
+        ArrayList<CustomForLoop> forLoops;
+        ArrayList<CustomWhileLoop> whileLoops;
+        ArrayList<CustomBlockDec> blockDecs;
+
 
 
         String returnStatement = "";
@@ -510,7 +534,14 @@ public class CppDataLayoutM {
         String deafultConsturctorCall;
         ArrayList<String> classLevelInitFields;
 
-        public TranslatedBlock(){};
+        public TranslatedBlock(){
+            //Fields for standared method block
+            fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
+            expressionStatements = new ArrayList<CustomExpressionStatement>();
+            forLoops = new ArrayList<CustomForLoop>();
+            whileLoops = new ArrayList<CustomWhileLoop>();
+            blockDecs = new ArrayList<CustomBlockDec>();
+        };
 
         public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass) {
 
@@ -523,6 +554,9 @@ public class CppDataLayoutM {
             //Fields for standared method block
             fieldDeclarations = new ArrayList<CustomFieldDeclaration>();
             expressionStatements = new ArrayList<CustomExpressionStatement>();
+            forLoops = new ArrayList<CustomForLoop>();
+            whileLoops = new ArrayList<CustomWhileLoop>();
+            blockDecs = new ArrayList<CustomBlockDec>();
 
             //System.out.println(b.size());
 
@@ -551,14 +585,17 @@ public class CppDataLayoutM {
                     this.expressionStatements.add(ex);
                     System.out.println("NODE\n " + b.getNode(i));
                 }
+                else if (b.getNode(i).getName().equals("hello")){
+                    //For looops
+                }
 
-
+                //TODO add while and for loops
+                //TODO blocks
+                //TODO return statements
 
 
 
             }//End of for loop for block
-
-
 
 
             //Constructor helper stuff levae this at the end of the class

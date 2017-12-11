@@ -76,9 +76,9 @@ public class CppImplementationPrinter extends Visitor {
         nameSpaceCount++;
         visit(n);
         nameSpaceCount = 0;
-        printer.indent().pln("}");
         //Decrement the printer for final brace
         printer.decr();
+        printer.indent().pln("}");
     }
 
     public void visitImplementationClassses(GNode n) throws IOException {
@@ -106,20 +106,33 @@ public class CppImplementationPrinter extends Visitor {
         printer.pln("");
         visit(n);
         printer.pln("");
-        printer.decr();
-
     }
-
 
     public void visitBlockImplementation(GNode n) throws IOException {
         //Print default constructor
         //printer.incr().indent().pln(n.getString(0));
 
+        //Use a for loop to go through the block stuff
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.getString(i) != null){
+
+            }
+
+
+
+        }
         visit(n);
-        printer.pln(" }");
+        printer.indent().pln("}");
 
     }
 
+    public void visitForLoopImplementation(GNode n) throws IOException{
+
+
+
+        visit(n);
+    }
 
 
 
