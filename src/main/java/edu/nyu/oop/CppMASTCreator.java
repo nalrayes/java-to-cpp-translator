@@ -121,13 +121,17 @@ public class CppMASTCreator {
                 addImplementationMethodNode(ImplementationMethodsNode,method);
             }
 
-            XtcPrettyPrintCustom.prettyPrintAst(ImplementationClassNode);
-            XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
+            //XtcPrettyPrintCustom.prettyPrintAst(ImplementationClassNode);
+            //XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
 
         }//End of class for loop
 
-
         //TODO Handle the main method last
+        GNode impMainMethodClass = cppNodeActions.createNewASTNode("ImplementationMain");
+        cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impMainMethodClass);
+
+        //mainMethodClassm
+        XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
 
 
         return cppast;

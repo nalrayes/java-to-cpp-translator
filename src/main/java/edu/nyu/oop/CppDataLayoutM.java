@@ -635,7 +635,6 @@ public class CppDataLayoutM {
                 //TODO return statements
 
 
-
             }//End of for loop for block
 
 
@@ -692,9 +691,6 @@ public class CppDataLayoutM {
                         System.out.println(finalString);
                     }
                 }
-                //TODO handle remaining body of constructor
-                //When doing expression statements
-                //TODO If the expression statement's left handside is contained in the ClassFields then add a __this->
 
                 System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK BEGIN");
                 System.out.println(deafultConsturctorCall);
@@ -920,7 +916,6 @@ public class CppDataLayoutM {
         return res;
     }
 
-    // TODO: Translate expression statements
     public static class CustomExpressionStatement{
         String expression;
         int position;
