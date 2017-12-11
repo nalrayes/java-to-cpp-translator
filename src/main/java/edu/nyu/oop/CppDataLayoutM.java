@@ -710,6 +710,7 @@ public class CppDataLayoutM {
             //Check if this
             if(this.name.contains("init")){
                 this.isConstuctor = true;
+                this.returnType = "__this";
             }
 
 

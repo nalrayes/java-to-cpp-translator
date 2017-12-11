@@ -169,6 +169,9 @@ public class Boot extends Tool {
             // print cpp node names for translation
             CppHeaderPrinter printer = new CppHeaderPrinter();
             printer.print(cppAST.getRoot());
+            //Print cpp for transation for implementation files
+            CppImplementationPrinter implementationPrinter = new CppImplementationPrinter();
+            implementationPrinter.print(cppAST.getRoot());
 
 
 
