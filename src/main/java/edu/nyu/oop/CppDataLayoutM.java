@@ -68,7 +68,7 @@ public class CppDataLayoutM {
                 this.parentClass = theClass.getParentClass();
             }
             this.className = theClass.getClassName();
-            this.vTableInit = "__" + this.className + "::__" + this.className + "() : __vptr(&__vtable) {}";
+            this.vTableInit = "__" + this.className + "::__" + this.className + "() : __vptr(&__vtable) \n             {}";
             this.classMethodInit = "Class __" + this.className + "::__class() {\n" +
                     "      static Class k =\n" +
                     "        new __Class(__rt::literal(\"inputs.javalang." + this.className + "\"), __" + parentClass + "::__class());\n" +
@@ -86,7 +86,7 @@ public class CppDataLayoutM {
                 //System.out.println(varClass.getType());
                 this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
             }
-            this.deafultConstructorImplementation += "\n" + "{}";
+            this.deafultConstructorImplementation += "\n" + "    {}";
             System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
             System.out.println(this.deafultConstructorImplementation);
 

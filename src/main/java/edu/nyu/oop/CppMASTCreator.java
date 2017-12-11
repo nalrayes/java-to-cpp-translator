@@ -122,6 +122,7 @@ public class CppMASTCreator {
             }
 
             XtcPrettyPrintCustom.prettyPrintAst(ImplementationClassNode);
+            XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
 
         }//End of class for loop
 
@@ -186,7 +187,7 @@ public class CppMASTCreator {
 
         //Handle the block level implementation here
         //TODO Handle THE BLOCK
-        
+
 
 
 

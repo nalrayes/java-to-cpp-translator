@@ -47,7 +47,82 @@ public class CppImplementationPrinter extends Visitor {
         for (Object o : n) if (o instanceof Node) dispatch((Node) o);
     }
 
-    //Custom Visitmethods
+    //Custom VisitMethods
+
+    public void visitDependencies(GNode n) throws IOException {
+        for (int i = 0; i < n.size(); i++) {
+            printer.pln( n.getString(i));
+        }
+        printer.pln("");
+        visit(n);
+    }
+
+    public void visitUsingNamespace(GNode n) throws IOException {
+        for (int i = 0; i < n.size(); i ++){
+            printer.pln("using namespace " + n.getString(i) + ";");
+        }
+        visit(n);
+        printer.pln("");
+    }
+
+    int nameSpaceCount = 0;
+    public void visitNamespace(GNode n) throws IOException {
+        if(nameSpaceCount == 0){
+            printer.pln("namespace " + n.getString(0) + " {");
+        }
+        else{
+            printer.incr().indent().pln("namespace " + n.getString(0) + " {");
+        }
+        nameSpaceCount++;
+        visit(n);
+        nameSpaceCount = 0;
+        printer.indent().pln("}");
+        //Decrement the printer for final brace
+        printer.decr();
+    }
+
+    public void visitImplementationClassses(GNode n) throws IOException {
+        printer.pln("");
+        visit(n);
+    }
+
+
+    public void visitImplementationClass(GNode n) throws IOException {
+        printer.incr().indent().pln(n.getString(0));
+        printer.pln("");
+        printer.indent().pln(n.getString(1));
+        printer.pln("");
+        printer.indent().pln(n.getString(2));
+        printer.pln("");
+
+        visit(n);
+    }
+
+
+
+    public void visitMethodImplementation(GNode n) throws IOException {
+        //Print default constructor
+        printer.indent().pln(n.getString(0) + " {");
+        printer.pln("");
+        visit(n);
+        printer.pln("");
+        printer.decr();
+
+    }
+
+
+    public void visitBlockImplementation(GNode n) throws IOException {
+        //Print default constructor
+        //printer.incr().indent().pln(n.getString(0));
+
+        visit(n);
+        printer.pln(" }");
+
+    }
+
+
+
+
 
 
 
