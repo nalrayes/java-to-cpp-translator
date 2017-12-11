@@ -16,3 +16,6 @@ runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -translate src/test/java/inputs/Test012/Test012.java
 THE LINE IS HERE
 runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test018/Test018.java

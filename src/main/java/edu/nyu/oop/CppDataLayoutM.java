@@ -489,11 +489,10 @@ public class CppDataLayoutM {
     public static class CustomForLoop{
         int positon;
         TranslatedBlock forLoopsTranslatedBlock;
+        String forLoopDecLine;
 
         public CustomForLoop(Node forLoopNode, int position){
-
-
-
+            this.positon = position;
 
         }
     }
@@ -502,6 +501,10 @@ public class CppDataLayoutM {
         int positon;
         TranslatedBlock whileLoopTranslatedBlock;
 
+        public CustomWhileLoop(Node whileLoopNode, int positon){
+            this.positon = positon;
+        }
+
 
     }
 
@@ -509,6 +512,9 @@ public class CppDataLayoutM {
         int positon;
         TranslatedBlock customBlockDecTranslatedBlock;
 
+        public CustomBlockDec(Node blockNode, int positon){
+            this.positon = positon;
+        }
     }
 
 
@@ -585,12 +591,22 @@ public class CppDataLayoutM {
                     this.expressionStatements.add(ex);
                     System.out.println("NODE\n " + b.getNode(i));
                 }
-                else if (b.getNode(i).getName().equals("hello")){
-                    //For looops
+                else if (b.getNode(i).getName().equals("ForStatement")){
+                    //For loop
+                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i);
+                    this.forLoops.add(forlp);
+                }
+                else if(b.getNode(i).getName().equals("WhileStatement")){
+                    //While loop
+                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i);
+                    this.whileLoops.add(whilelp);
+                }
+                else if(b.getNode(i).getName().equals("Block")){
+                    //block within a blokc
+                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i);
+                    this.blockDecs.add(blocDec);
                 }
 
-                //TODO add while and for loops
-                //TODO blocks
                 //TODO return statements
 
 

@@ -164,34 +164,8 @@ public class CppMASTCreator {
         return impClassNode;
     }
 
-    private static Node addImplementationMethodNode (Node ImplementationMethodsNode, CppDataLayoutM.cppMethodImplementation methodData){
-        //Create new method implementation Node
-        GNode impMethodNode = cppNodeActions.createNewASTNode("MethodImplementation");
-        //Add to ImplementationMethods Node
-        cppNodeActions.addNodeAsChildToParent((GNode) ImplementationMethodsNode, impMethodNode);
 
-        //First add the method name to the node
-        String methodFullNameCall = methodData.name + methodData.params;
-        if(methodData.params == null){
-            methodFullNameCall = methodData.name;
-        }
-        cppNodeActions.addDataToNode((GNode) impMethodNode, methodFullNameCall);
-
-        //Next add the return type to the methodNode
-        //First add the method name to the node
-        cppNodeActions.addDataToNode((GNode) impMethodNode, methodData.returnType);
-
-        //Next add the block Node to the method and process the block
-        GNode blockImplementationNode = cppNodeActions.createNewASTNode("BlockImplementation");
-        cppNodeActions.addNodeAsChildToParent((GNode) impMethodNode, blockImplementationNode);
-
-        //Handle the block level implementation here
-        //TODO Handle THE BLOCK
-        //Get the total length of all the things inside a block
-        //Get the translated block for the mothd
-        CppDataLayoutM.TranslatedBlock transBlock = methodData.translatedBlock;
-
-
+    private static void addDataToBlockNode(GNode blockImplementationNode, CppDataLayoutM.TranslatedBlock transBlock){
         //TODO add the length of while loops and for loops and arraylist of blocks
         int totalLengthOfStuff = transBlock.fieldDeclarations.size() + transBlock.expressionStatements.size() + transBlock.forLoops.size() + transBlock.whileLoops.size() + transBlock.blockDecs.size() + 1;
         for (int i = 0; i < totalLengthOfStuff; i ++){
@@ -219,13 +193,40 @@ public class CppMASTCreator {
 
         }
 
-        //Helper method for nested blocks
 
+    }
+
+    private static Node addImplementationMethodNode (Node ImplementationMethodsNode, CppDataLayoutM.cppMethodImplementation methodData){
+        //Create new method implementation Node
+        GNode impMethodNode = cppNodeActions.createNewASTNode("MethodImplementation");
+        //Add to ImplementationMethods Node
+        cppNodeActions.addNodeAsChildToParent((GNode) ImplementationMethodsNode, impMethodNode);
+
+        //First add the method name to the node
+        String methodFullNameCall = methodData.name + methodData.params;
+        if(methodData.params == null){
+            methodFullNameCall = methodData.name;
+        }
+        cppNodeActions.addDataToNode((GNode) impMethodNode, methodFullNameCall);
+
+        //Next add the return type to the methodNode
+        //First add the method name to the node
+        cppNodeActions.addDataToNode((GNode) impMethodNode, methodData.returnType);
+
+        //Next add the block Node to the method and process the block
+        GNode blockImplementationNode = cppNodeActions.createNewASTNode("BlockImplementation");
+        cppNodeActions.addNodeAsChildToParent((GNode) impMethodNode, blockImplementationNode);
+
+        //Handle the block level implementation here
+        //TODO Handle THE BLOCK
+        //Get the total length of all the things inside a block
+        //Get the translated block for the mothd
+        CppDataLayoutM.TranslatedBlock transBlock = methodData.translatedBlock;
+
+        //Add data to the block Node
+        addDataToBlockNode(blockImplementationNode,transBlock);
 
         return  ImplementationMethodsNode;
     }
-
-
-
 
 }
