@@ -129,14 +129,24 @@ public class CppMASTCreator {
         }//End of class for loop
 
         //TODO Handle the main method last
-        GNode impMainMethodClass = cppNodeActions.createNewASTNode("ImplementationMain");
-        cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impMainMethodClass);
+        //Handle the main method
+        GNode impMainMethodClassNode = cppNodeActions.createNewASTNode("ImplementationMain");
+        cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impMainMethodClassNode);
+        addDataToMainMethodNode(impMainMethodClassNode, mainMethodClassm);
 
-        //mainMethodClassm
+
+
         XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
-
-
         return cppast;
+    }
+
+    private static void addDataToMainMethodNode (Node mainMethodNode, CppDataLayoutM.cppImplementationMainMethodClass mainMethodClass){
+        //add the main methods name
+        cppNodeActions.addDataToNode((GNode) mainMethodNode,mainMethodClass.mainMethodName);
+        GNode blockImplementationNode = cppNodeActions.createNewASTNode("MainMethodBlockImplementation");
+        cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, blockImplementationNode);
+        addDataToBlockNode(blockImplementationNode, mainMethodClass.transLatedBlockForImpMainMethod);
+
     }
 
 
@@ -196,6 +206,12 @@ public class CppMASTCreator {
             CppDataLayoutM.CustomFieldDeclaration fd = transBlock.fieldDeclarations.get(i);
             blockImplementationNode.set(offset + fd.position, fd.fieldDeclarationLine);
         }
+
+        //TODO LOOPS AND BLOCKS
+
+
+
+
     }
 
     private static Node addImplementationMethodNode (Node ImplementationMethodsNode, CppDataLayoutM.cppMethodImplementation methodData){
