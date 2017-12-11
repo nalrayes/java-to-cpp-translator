@@ -196,6 +196,15 @@ public class CppMASTCreator {
             CppDataLayoutM.CustomFieldDeclaration fd = transBlock.fieldDeclarations.get(i);
             blockImplementationNode.set(offset + fd.position, fd.fieldDeclarationLine);
         }
+        for (int i = 0; i < transBlock.blockDecs.size(); i++) {
+            CppDataLayoutM.CustomBlockDec b = transBlock.blockDecs.get(i);
+            // create new block node
+            GNode newBlockNode = cppNodeActions.createNewASTNode("BlockImplementation");
+            // translate block
+            addDataToBlockNode(newBlockNode, b.customBlockDecTranslatedBlock);
+            // add block to correct position
+            blockImplementationNode.set(offset + b.positon, newBlockNode);
+        }
     }
 
     private static Node addImplementationMethodNode (Node ImplementationMethodsNode, CppDataLayoutM.cppMethodImplementation methodData){

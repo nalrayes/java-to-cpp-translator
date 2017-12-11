@@ -33,3 +33,4 @@ runxtc -translate src/test/java/inputs/Test025/Test025.java
 runxtc -translate src/test/java/inputs/Test027/Test027.java
 >>>>>>> 7f41b0216ab8053cb4e1c44004a2eaff63a7a56a
 runxtc -translate src/test/java/inputs/test027/Test027.java
+runxtc -translate src/test/java/inputs/test018/Test018.java
