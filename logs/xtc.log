@@ -360,3 +360,7 @@
 2017-12-11 16:22:49,082 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-11 16:22:49,128 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test008
 2017-12-11 16:22:49,130 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test008.java
+2017-12-11 17:07:51,258 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-11 17:07:58,658 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-11 17:07:58,705 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test008
+2017-12-11 17:07:58,705 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test008.java

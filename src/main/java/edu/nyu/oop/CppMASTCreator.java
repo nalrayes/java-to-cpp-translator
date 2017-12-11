@@ -218,6 +218,13 @@ public class CppMASTCreator {
             //For loop for expressions
 
         }
+        for (int i = 0; i < totalLengthOfStuff; i++) {
+            cppNodeActions.addDataToNode((GNode) blockImplementationNode, "");
+        }
+        for (int i= 0; i < transBlock.expressionStatements.size(); i++) {
+            CppDataLayoutM.CustomExpressionStatement ex = transBlock.expressionStatements.get(i);
+            blockImplementationNode.set(ex.position, ex.expression);
+        }
 
         //Helper method for nested blocks
 
