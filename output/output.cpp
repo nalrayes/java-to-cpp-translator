@@ -26,6 +26,7 @@ namespace inputs {
 
     }
 
+<<<<<<< HEAD
     A __A::__init(A __this, int i) {
 
     }
@@ -34,5 +35,8 @@ namespace inputs {
 
     }
 
+=======
+    }
+>>>>>>> 0e90a6e3ff13be10aa539fc0542e69d857cbbef4
   }
 }

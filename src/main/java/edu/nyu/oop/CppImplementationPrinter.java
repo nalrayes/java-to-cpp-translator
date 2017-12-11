@@ -117,6 +117,7 @@ public class CppImplementationPrinter extends Visitor {
             //Check if the node is a string or not
             if(n.getString(i) != null){
                 //If it is a string then print it
+                //TODO
             }
 
         }

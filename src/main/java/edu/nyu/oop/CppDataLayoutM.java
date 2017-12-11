@@ -646,13 +646,7 @@ public class CppDataLayoutM {
         TranslatedBlock customBlockDecTranslatedBlock;
         public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass){
             this.positon = positon;
-            for (int i = 0; i < blockNode.size(); i++) {
-                //Use this to find the for loops block
-                if(blockNode.getNode(i).getName().equals("Block")){
-                    //This is the for loops block
-                    this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode.getNode(i), false, theBlocksClass);
-                }
-            }
+            this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass);
         }
     }
 
