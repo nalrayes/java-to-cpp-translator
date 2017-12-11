@@ -8,3 +8,5 @@ using namespace java::lang;
 using namespace inputs::constructors;
 using namespace namespace std;
 
+int main(void) {
+}
