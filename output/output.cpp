@@ -9,9 +9,9 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test008 {
+  namespace test025 {
 
-    __A::__A() : __vptr(&__vtable), a(null)
+    __A::__A() : __vptr(&__vtable), i(0)
     {}
 
     Class __A::__class() {
@@ -22,11 +22,19 @@ namespace inputs {
 
     __A_VT __A::__vtable
 
-    A __A::__init(A __this) {
+    A __A:: __init(A__this) {
 
     }
 
-      __B::__B() : __vptr(&__vtable), b(null)
+    A __A::__init(A __this, int i) {
+
+    }
+
+    int32_t __A::get(A __this) {
+
+    }
+
+      __B::__B() : __vptr(&__vtable)
     {}
 
       Class __B::__class() {
@@ -37,7 +45,15 @@ namespace inputs {
 
       __B_VT __B::__vtable
 
-      B __B::__init(B __this) {
+      B __B:: __init(B__this) {
+
+      }
+
+      B __B::__init(B __this, int i) {
+
+      }
+
+      int32_t __B::get(B __this) {
 
       }
 
