@@ -19,4 +19,19 @@ runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -printJavaAst src/test/java/inputs/Test018/Test018.java
-runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
+runxtc -printJavaAst src/test/java/inputs/Test024/Test024.java
+for 
+runxtc -translate src/test/java/inputs/Test025/Test025.java
+runxtc -translate src/test/java/inputs/Test026/Test026.java
+runxtc -translate src/test/java/inputs/Test027/Test027.java
+runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
+runxtc -translate src/test/java/inputs/Test027/Test027.java
+runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
+runxtc -translate src/test/java/inputs/Test027/Test027.java
+runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
+runxtc -translate src/test/java/inputs/Test027/Test027.java
+runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
+runxtc -translate src/test/java/inputs/Test027/Test027.java
+runxtc -translate src/test/java/inputs/Test024/Test024.java
+runxtc -translate src/test/java/inputs/Test022/Test022.java
