@@ -169,11 +169,14 @@ public class Boot extends Tool {
             TraverseASTM visitorM = new TraverseASTM(runtime, table);
             cppAST = CppMASTCreator.createNewCPPMAstFrom(javaASTNodes,cppAST,visitorM);
 
-
             //Phase 3 - Implementation
             //Print cpp for transation for implementation files
             CppImplementationPrinter implementationPrinter = new CppImplementationPrinter();
             implementationPrinter.print(cppAST.getRoot());
+
+            //Phase 3 - Implementation for main
+            CppMainPrinter mainPrinter = new CppMainPrinter();
+            mainPrinter.print(cppAST.getRoot());
 
 
 

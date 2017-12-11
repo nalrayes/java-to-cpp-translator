@@ -125,7 +125,7 @@ public class CppDataLayoutM {
                     System.out.println(finalString);
                 }
             }
-            blockForDef.returnStatement = "__this";
+            blockForDef.returnStatement = "return __this;";
             this.defaultInIt.translatedBlock = blockForDef;
 
             //Process the methods
@@ -491,7 +491,7 @@ public class CppDataLayoutM {
         TranslatedBlock forLoopsTranslatedBlock;
         String forLoopDecLine = ""; // <- e.g. for(int i = 0; i < as.length; i++)
 
-        public CustomForLoop(Node forLoopNode, int position){
+        public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass){
             this.positon = position;
             //TODO PARSE FOR LOOP HEADER
             System.out.println("this is for loop12345 " + forLoopNode);
@@ -596,8 +596,8 @@ public class CppDataLayoutM {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-                    this.forLoopsTranslatedBlock = new TranslatedBlock();
 
+                    this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass);
                 }
             }
         }
@@ -607,21 +607,36 @@ public class CppDataLayoutM {
         int positon;
         TranslatedBlock whileLoopTranslatedBlock;
 
-        public CustomWhileLoop(Node whileLoopNode, int positon){
+        public CustomWhileLoop(Node whileLoopNode, int positon, CustomClassObject theWhileLoopsClass){
             this.positon = positon;
+
+            //TODO PARSE WHILE LOOP HEADER
+
+
+
+
+            for (int i = 0; i < whileLoopNode.size(); i++) {
+                //Use this to find the for loops block
+                if(whileLoopNode.getNode(i).getName().equals("Block")){
+                    //This is the for loops block
+                    this.whileLoopTranslatedBlock = new TranslatedBlock(whileLoopNode.getNode(i), false, theWhileLoopsClass);
+                }
+            }
         }
-
-
     }
 
     public static class CustomBlockDec{
         int positon;
         TranslatedBlock customBlockDecTranslatedBlock;
-
-        public CustomBlockDec(Node blockNode, int positon){
+        public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass){
             this.positon = positon;
-
-
+            for (int i = 0; i < blockNode.size(); i++) {
+                //Use this to find the for loops block
+                if(blockNode.getNode(i).getName().equals("Block")){
+                    //This is the for loops block
+                    this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode.getNode(i), false, theBlocksClass);
+                }
+            }
         }
     }
 
@@ -698,28 +713,35 @@ public class CppDataLayoutM {
                 // its subnodes have the following indices
                 // 0:
                 else if (b.getNode(i).getName().equals("ExpressionStatement")) {
+                    Node curNode = b.getNode(i);
+                    if (curNode.getNode(0).getName().equals("CallExpression")) {
+                        if (curNode.getNode(0).getString(2).equals("super")) {;
+                            continue;
+                        }
+                    }
                     CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i);
                     this.expressionStatements.add(ex);
                     System.out.println("NODE\n " + b.getNode(i));
                 }
                 else if (b.getNode(i).getName().equals("ForStatement")){
                     //For loop
-                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i);
+                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i, theMethodsClass);
                     this.forLoops.add(forlp);
                 }
                 else if(b.getNode(i).getName().equals("WhileStatement")){
                     //While loop
-                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i);
+                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass);
                     this.whileLoops.add(whilelp);
                 }
                 else if(b.getNode(i).getName().equals("Block")){
                     //block within a blokc
-                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i);
+                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass);
                     this.blockDecs.add(blocDec);
+                } else if (b.getNode(i).getName() == "ReturnStatement") {
+                    this.returnStatement = "return " + processNameNode(b.getNode(i).getNode(0)) + ";";
                 }
 
                 //TODO return statements
-
 
 
             }//End of for loop for block
@@ -729,7 +751,7 @@ public class CppDataLayoutM {
             //Handle Constructor Stuff
             if (this.isConstructor) {
                 //Set return type to this
-                this.returnStatement = "__this";
+                this.returnStatement = "return __this;";
                 //Check if the clas extends object. If not then leave the init call to be Object
                 if(theMethodsClass.getParentClass() != "None"){
                     this.deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this)";
@@ -778,9 +800,6 @@ public class CppDataLayoutM {
                         System.out.println(finalString);
                     }
                 }
-                //TODO handle remaining body of constructor
-                //When doing expression statements
-                //TODO If the expression statement's left handside is contained in the ClassFields then add a __this->
 
                 System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK BEGIN");
                 System.out.println(deafultConsturctorCall);
@@ -1013,7 +1032,6 @@ public class CppDataLayoutM {
         return res;
     }
 
-    // TODO: Translate expression statements
     public static class CustomExpressionStatement{
         String expression;
         int position;

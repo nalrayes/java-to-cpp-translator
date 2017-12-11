@@ -116,10 +116,8 @@ public class CppImplementationPrinter extends Visitor {
         for (int i = 0; i < n.size(); i ++){
             //Check if the node is a string or not
             if(n.getString(i) != null){
-
+                //If it is a string then print it
             }
-
-
 
         }
         visit(n);

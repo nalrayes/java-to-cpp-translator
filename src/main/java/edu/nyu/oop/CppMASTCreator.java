@@ -5,6 +5,8 @@ import edu.nyu.oop.util.cppNodeActions;
 import xtc.tree.GNode;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.BlockingDeque;
+
 import xtc.tree.Node;
 
 
@@ -121,13 +123,17 @@ public class CppMASTCreator {
                 addImplementationMethodNode(ImplementationMethodsNode,method);
             }
 
-            XtcPrettyPrintCustom.prettyPrintAst(ImplementationClassNode);
-            XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
+            //XtcPrettyPrintCustom.prettyPrintAst(ImplementationClassNode);
+            //XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
 
         }//End of class for loop
 
-
         //TODO Handle the main method last
+        GNode impMainMethodClass = cppNodeActions.createNewASTNode("ImplementationMain");
+        cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impMainMethodClass);
+
+        //mainMethodClassm
+        XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
 
 
         return cppast;
@@ -167,33 +173,38 @@ public class CppMASTCreator {
 
     private static void addDataToBlockNode(GNode blockImplementationNode, CppDataLayoutM.TranslatedBlock transBlock){
         //TODO add the length of while loops and for loops and arraylist of blocks
-        int totalLengthOfStuff = transBlock.fieldDeclarations.size() + transBlock.expressionStatements.size() + transBlock.forLoops.size() + transBlock.whileLoops.size() + transBlock.blockDecs.size() + 1;
-        for (int i = 0; i < totalLengthOfStuff; i ++){
-            //For loop to check field Declarations
-            for (int f = 0; f < transBlock.fieldDeclarations.size(); f ++){
-                //Check the counter
-                if(i == transBlock.fieldDeclarations.get(f).position){
-                    System.out.println("THE LINE IS FIELD DECLARATION");
-                    System.out.println(transBlock.fieldDeclarations.get(f).fieldDeclarationLine);
-                    //add to the block
-                    cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.fieldDeclarations.get(f).fieldDeclarationLine);
-                }
-            }//End of field declarations
-
-            for(int e = 0; e < transBlock.expressionStatements.size(); e++){
-                //Check the counter
-                if(i == transBlock.expressionStatements.get(e).position){
-                    System.out.println("THE LINE IS FIELD DECLARATION");
-                    System.out.println(transBlock.expressionStatements.get(e).expression);
-                    //add to the block
-                    cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.expressionStatements.get(e).expression);
-                }
+        int totalLengthOfStuff = transBlock.fieldDeclarations.size() + transBlock.expressionStatements.size() + transBlock.forLoops.size() + transBlock.whileLoops.size() + transBlock.blockDecs.size();
+        int offset = 0;
+        if (transBlock.isConstructor) {
+            cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.deafultConsturctorCall);
+            for (int i = 0; i < transBlock.classLevelInitFields.size(); i++) {
+                cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.classLevelInitFields.get(i));
             }
-            //For loop for expressions
-
+            offset = transBlock.classLevelInitFields.size() + 1;
         }
-
-
+        for (int i = 0; i < totalLengthOfStuff; i++) {
+            cppNodeActions.addDataToNode((GNode) blockImplementationNode, "");
+        }
+        if (transBlock.returnStatement != "") {
+            cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.returnStatement);
+        }
+        for (int i = 0; i < transBlock.expressionStatements.size(); i++) {
+            CppDataLayoutM.CustomExpressionStatement ex = transBlock.expressionStatements.get(i);
+            blockImplementationNode.set(offset + ex.position, ex.expression);
+        }
+        for (int i = 0; i < transBlock.fieldDeclarations.size(); i++) {
+            CppDataLayoutM.CustomFieldDeclaration fd = transBlock.fieldDeclarations.get(i);
+            blockImplementationNode.set(offset + fd.position, fd.fieldDeclarationLine);
+        }
+        for (int i = 0; i < transBlock.blockDecs.size(); i++) {
+            CppDataLayoutM.CustomBlockDec b = transBlock.blockDecs.get(i);
+            // create new block node
+            GNode newBlockNode = cppNodeActions.createNewASTNode("BlockImplementation");
+            // translate block
+            addDataToBlockNode(newBlockNode, b.customBlockDecTranslatedBlock);
+            // add block to correct position
+            blockImplementationNode.set(offset + b.positon, newBlockNode);
+        }
     }
 
     private static Node addImplementationMethodNode (Node ImplementationMethodsNode, CppDataLayoutM.cppMethodImplementation methodData){
