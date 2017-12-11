@@ -489,16 +489,114 @@ public class CppDataLayoutM {
     public static class CustomForLoop{
         int positon;
         TranslatedBlock forLoopsTranslatedBlock;
-        String forLoopDecLine; // <- e.g. for(int i = 0; i < as.length; i++)
+        String forLoopDecLine = ""; // <- e.g. for(int i = 0; i < as.length; i++)
 
         public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass){
             this.positon = position;
             //TODO PARSE FOR LOOP HEADER
+            System.out.println("this is for loop12345 " + forLoopNode);
 
-            for (int i = 0; i < forLoopNode.size(); i++) {
+
+//            String getIteratorType = forLoopNode.getNode(1).getString(0);
+//            Node getDeclaratorNode = forLoopNode.getNode(2).getNode(0);
+//            String getDeclatorVar = getDeclaratorNode.getString(0);
+//            String getDeclaratorValue = getDeclaratorNode.getNode(2).getString(0);
+           // String getRelation =
+//
+//
+            String loopIteratorType = "";
+            String declaratorVar = "";
+            String declaratorVal = "";
+            String fullRelationalExpression = "";
+            String rightHandVar = "";
+            String incrementor;
+            String postfixExpression = "";
+
+
+            System.out.println("GETITSI " + forLoopNode.getNode(0).size());
+            for (int i = 0; i < forLoopNode.getNode(0).size(); i++) {
+
+                System.out.println("ello1234 "+ forLoopNode.getNode(0).getNode(i));
+
+                if (forLoopNode.getNode(0).getNode(i).getName().equals("Type")){
+                        System.out.println("$FOR TYPE");
+                        Node getType = forLoopNode.getNode(0).getNode(i);
+                        loopIteratorType = getType.getNode(0).getString(0);
+
+
+                }
+
+                if (forLoopNode.getNode(0).getNode(i).getName().equals("Declarators")){
+                    System.out.println("$FOR DEC");
+
+                    Node declarator = forLoopNode.getNode(0).getNode(i).getNode(0);
+                    declaratorVar = declarator.getString(0);
+                    declaratorVal = declarator.getNode(2).getString(0);
+
+
+
+                }
+
+                if (forLoopNode.getNode(0).getNode(i).getName().equals("RelationalExpression")){
+
+//RelationalExpression(PrimaryIdentifier("i"), "<", SelectionExpression(PrimaryIdentifier("as"), "length"))
+
+                    System.out.println("$FOR RELATIONAL");
+
+                    Node relationalExpression = forLoopNode.getNode(0).getNode(i);
+
+                    String primaryId = relationalExpression.getNode(0).getString(0);
+
+                    String operator = relationalExpression.getString(1);
+
+                    Node selectionExpressionNode =  relationalExpression.getNode(2);
+                    System.out.println("selectionExpressionNode123 " + selectionExpressionNode);
+                    String selectionExpression = selectionExpressionNode.getNode(0).getString(0);
+
+                    String lengthField ="";
+                    if (selectionExpressionNode.getString(1) != null){
+                        lengthField = "." + selectionExpressionNode.getString(1);
+                    }
+
+                    fullRelationalExpression += primaryId +" " + operator + " " + selectionExpression + lengthField;
+
+
+                }
+
+
+                if (forLoopNode.getNode(0).getNode(i).getName().equals("ExpressionList")){
+                    System.out.println("$FOR EXPRESSION");
+
+
+                    Node expressionList = forLoopNode.getNode(0).getNode(i);
+
+                    Node postfixExpressionNode = expressionList.getNode(0);
+
+                     postfixExpression = postfixExpressionNode.getNode(0).getString(0) + postfixExpressionNode.getString(1);
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+                } // end of get for loop header
+
+
+            this.forLoopDecLine = "for (" + loopIteratorType + " " +  declaratorVar + " = " + declaratorVal  + "; " + fullRelationalExpression + "; " + postfixExpression + ") {";
+            System.out.println("fullForLoop12346 " + forLoopDecLine);
+
+                for (int i = 0; i < forLoopNode.size(); i++) {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
+
                     this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass);
                 }
             }
@@ -535,6 +633,9 @@ public class CppDataLayoutM {
             this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass);
         }
     }
+
+
+
 
 
     public static class TranslatedBlock {
@@ -852,13 +953,20 @@ public class CppDataLayoutM {
 
     public static boolean isPrint(Node n) {
 
-        if (n.getNode(0).getName() == "SelectionExpression") {
-            if (n.getNode(0).getNode(0).getName() == "PrimaryIdentifier") {
-                if (n.getNode(0).getNode(0).getString(0).equals("System")) {
-                    return true;
+        System.out.println("isPrint1233 " + n);
+
+       // if (n.getNode(0) == null){}
+
+       // if (n.getNode(0) != null) {
+
+            if (n.getNode(0).getName() == "SelectionExpression") {
+                if (n.getNode(0).getNode(0).getName() == "PrimaryIdentifier") {
+                    if (n.getNode(0).getNode(0).getString(0).equals("System")) {
+                        return true;
+                    }
                 }
             }
-        }
+       // }
         return false;
     }
 

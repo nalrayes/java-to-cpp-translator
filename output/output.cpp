@@ -9,6 +9,11 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
+<<<<<<< HEAD
+  namespace test022 {
+
+}
+=======
   namespace test018 {
 
     __A::__A() : __vptr(&__vtable), x(0)
@@ -28,4 +33,5 @@ namespace inputs {
 
     }
   }
+>>>>>>> 86222c2da8be58ffbb0d4ef33281c8fc3d1ffa38
 }
