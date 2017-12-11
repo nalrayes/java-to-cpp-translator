@@ -22,7 +22,14 @@ runxtc -translate src/test/java/inputs/test008/Test008.java
 runxtc -printJavaAst src/test/java/inputs/Test027/Test027.java
 runxtc -translate src/test/java/inputs/Test008/Test008.java
 runxtc -printJavaAst src/test/java/inputs/Test018/Test018.java
+<<<<<<< HEAD
 >>>>>>> 8dea72c12d7d1d57acd8fa2fe26a314c5f0cdb4b
 runxtc -printJavaAst src/test/java/inputs/test018/Test018.java
 runxtc -translate src/test/java/inputs/test018/Test018.java
 runxtc -translate src/test/java/inputs/test025/Test025.java
+=======
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test025/Test025.java
+runxtc -translate src/test/java/inputs/Test027/Test027.java
+>>>>>>> 7f41b0216ab8053cb4e1c44004a2eaff63a7a56a
+runxtc -translate src/test/java/inputs/test027/Test027.java
