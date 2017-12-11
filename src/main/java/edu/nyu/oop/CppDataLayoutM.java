@@ -489,11 +489,20 @@ public class CppDataLayoutM {
     public static class CustomForLoop{
         int positon;
         TranslatedBlock forLoopsTranslatedBlock;
-        String forLoopDecLine;
+        String forLoopDecLine; // <- e.g. for(int i = 0; i < as.length; i++)
 
         public CustomForLoop(Node forLoopNode, int position){
             this.positon = position;
+            //TODO PARSE FOR LOOP HEADER
 
+            for (int i = 0; i < forLoopNode.size(); i++) {
+                //Use this to find the for loops block
+                if(forLoopNode.getNode(i).getName().equals("Block")){
+                    //This is the for loops block
+                    this.forLoopsTranslatedBlock = new TranslatedBlock()
+
+                }
+            }
         }
     }
 
@@ -514,6 +523,8 @@ public class CppDataLayoutM {
 
         public CustomBlockDec(Node blockNode, int positon){
             this.positon = positon;
+
+
         }
     }
 
