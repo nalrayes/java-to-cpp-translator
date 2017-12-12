@@ -202,8 +202,31 @@ public class CppMASTCreator {
             blockImplementationNode.set(offset + fd.position, fd.fieldDeclarationLine);
         }
 
-        //TODO LOOPS
+        //For loops
+        for (int i = 0; i < transBlock.forLoops.size(); i++){
+            CppDataLayoutM.CustomForLoop forlp = transBlock.forLoops.get(i);
+            //Create new forLoop block Node
+            GNode newForloopBlockNode = cppNodeActions.createNewASTNode("ForloopImplementation");
+            //Add the for loop decl line
+            cppNodeActions.addDataToNode(newForloopBlockNode, forlp.forLoopDecLine);
+            //Add the block
+            addDataToBlockNode(newForloopBlockNode, forlp.forLoopsTranslatedBlock);
+            //Add block to correct position
+            blockImplementationNode.set(offset + forlp.positon, newForloopBlockNode);
+        }
 
+        //While loops
+        for (int i = 0; i < transBlock.forLoops.size(); i++){
+            CppDataLayoutM.CustomWhileLoop whilelp = transBlock.whileLoops.get(i);
+            //Create new forLoop block Node
+            GNode newWhileloopBlockNode = cppNodeActions.createNewASTNode("WhileloopImplementation");
+            //Add the for loop decl line
+            cppNodeActions.addDataToNode(newWhileloopBlockNode, whilelp.whileLoopDeclarator);
+            //Add the block
+            addDataToBlockNode(newWhileloopBlockNode, whilelp.whileLoopTranslatedBlock);
+            //Add block to correct position
+            blockImplementationNode.set(offset + whilelp.position, newWhileloopBlockNode);
+        }
 
         //Block code
         for (int i = 0; i < transBlock.blockDecs.size(); i++) {

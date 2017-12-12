@@ -154,12 +154,6 @@ public class CppDataLayoutM {
     }
 
 
-
-
-
-
-
-    // TODO: Check for arrays which has dimensions.
     // If newArrayExpression it has , check concrete dimensions
     public static class CustomFieldDeclaration{
 
@@ -192,50 +186,30 @@ public class CppDataLayoutM {
             // System.out.println("fdeez " + fieldDec);
             //String fieldDeclarationLine ="";
             String qualifiedIdentifier = "";
-
             System.out.println("$fd " + fieldDec);
-
             for (int i = 0; i < fieldDec.size(); i++) {
-
-
                 if (fieldDec.getNode(i).getName().equals("Modifiers")) {
-
                     System.out.println("In moddy");
-
                     Node modifiers = fieldDec.getNode(i);
-
                     // get all modifiers
                     for (int m = 0; m < modifiers.size(); m++ ){
                         allModifiers += modifiers.getString(m);
                     }
-
-
                 }
 
                 if (fieldDec.getNode(i).getName().equals("Type")) {
-
                     System.out.println("In type");
                     Node getType = fieldDec.getNode(i);
-
                     if (getType.getNode(0) == null){continue;}
                     if (!getType.getNode(0).isEmpty()){
-
-
                         varType = getType.getNode(0).getString(0);
-
                     }
-
-
-
                 }
 
                 if (fieldDec.getNode(i).getName().equals("Declarators")) {
-
                     System.out.println("In declarators");
                     Node declarator = fieldDec.getNode(i).getNode(0);
-
                     declaratorVar = declarator.getString(0);
-
                     // if condition, the declarator is an array
                     if (declarator.getNode(2) != null){
 
@@ -248,7 +222,8 @@ public class CppDataLayoutM {
                         if (expressionName == "SelectionExpression"){
                             // translation: ->
                             //res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
-                        } else if (expressionName == "SubscriptExpression") {
+                        }
+                        else if (expressionName == "SubscriptExpression") {
                             Node subscriptExpression = declarator.getNode(2);
                             System.out.println("$sub1 " + subscriptExpression);
 
@@ -260,19 +235,14 @@ public class CppDataLayoutM {
 
                                 declaratorVal += "[" + subscriptExpression.getNode(1).getString(0) + "]";
 
-
                             } else {
                                 subscriptExpression = declarator.getNode(2).getNode(0);
                                 //System.out.println("$sub1 " + subscriptExpression);
-
                                 System.out.println("$vvv " + subscriptExpression);
                                 System.out.println("$v1 " + declaratorVal);
                                 declaratorVal += "[" + subscriptExpression.getNode(0).getString(0) + "]";
                                 declaratorVal += "[" + subscriptExpression.getNode(1).getString(0) + "]";
-
-
                             }
-
                             // translation: (*var)[index]
                             //res = "(*" + processNameNode(n.getNode(0)) + ")[" + processNameNode(n.getNode(1)) + "]";
                         } else if (expressionName == "ThisExpression") {
@@ -347,47 +317,18 @@ public class CppDataLayoutM {
                             System.out.println("expressurself " + expression);
                             System.out.println("dimsize " + concreteDimensions.size());
                             for (int d = 0; d < concreteDimensions.size(); d++){
-
-
-                                    //declaratorVar += "[]";
-
-                               // __rt::Ptr<double, __rt::array_policy>
-
-
-
-                                    declaratorVal += "[" + concreteDimensions.getNode(d).getString(0) + "]";
-
-
-
+                                declaratorVal += "[" + concreteDimensions.getNode(d).getString(0) + "]";
                             }
-
-
-
                         } // end of NewArrayExpression
                         // else can be integer literals and other primitive types
                         else{
-
                             declaratorVal += declarator.getNode(2).getString(0);
-
                         }
-
 
                         fieldDeclarationLine  = varType + " " + declaratorVar + " = " + declaratorVal;
                         System.out.println("newfielddec22 " + fieldDeclarationLine);
-
-
-
-
-
                     }
-
-
-
-
-
                 }
-
-
             }
         }
 
@@ -699,17 +640,7 @@ public class CppDataLayoutM {
 
         public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass){
             this.positon = position;
-            //TODO PARSE FOR LOOP HEADER
             System.out.println("this is for loop12345 " + forLoopNode);
-
-
-//            String getIteratorType = forLoopNode.getNode(1).getString(0);
-//            Node getDeclaratorNode = forLoopNode.getNode(2).getNode(0);
-//            String getDeclatorVar = getDeclaratorNode.getString(0);
-//            String getDeclaratorValue = getDeclaratorNode.getNode(2).getString(0);
-           // String getRelation =
-//
-//
             String loopIteratorType = "";
             String declaratorVar = "";
             String declaratorVal = "";
@@ -718,114 +649,59 @@ public class CppDataLayoutM {
             String incrementor;
             String postfixExpression = "";
 
-
             System.out.println("GETITSI " + forLoopNode.getNode(0).size());
             for (int i = 0; i < forLoopNode.getNode(0).size(); i++) {
-
                 System.out.println("ello1234 "+ forLoopNode.getNode(0).getNode(i));
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Type")){
-                        System.out.println("$FOR TYPE");
-                        Node getType = forLoopNode.getNode(0).getNode(i);
-                        loopIteratorType = getType.getNode(0).getString(0);
-
-
+                    System.out.println("$FOR TYPE");
+                    Node getType = forLoopNode.getNode(0).getNode(i);
+                    loopIteratorType = getType.getNode(0).getString(0);
                 }
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Declarators")){
                     System.out.println("$FOR DEC");
-
                     Node declarator = forLoopNode.getNode(0).getNode(i).getNode(0);
                     declaratorVar = declarator.getString(0);
                     declaratorVal = declarator.getNode(2).getString(0);
-
-
-
                 }
-
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("RelationalExpression")){
-
-//RelationalExpression(PrimaryIdentifier("i"), "<", SelectionExpression(PrimaryIdentifier("as"), "length"))
-
                     System.out.println("$FOR RELATIONAL");
-
                     Node relationalExpression = forLoopNode.getNode(0).getNode(i);
-
                     String primaryId = relationalExpression.getNode(0).getString(0);
-
                     String operator = relationalExpression.getString(1);
-
                     Node selectionExpressionNode =  relationalExpression.getNode(2);
                     System.out.println("selectionExpressionNode123 " + selectionExpressionNode);
                     String selectionExpression = "";
                     if (selectionExpressionNode.getNode(0).getName().equals("SubscriptExpression")){
-
-
                         Node subscriptExpression = selectionExpressionNode.getNode(0);
-
                         selectionExpression += subscriptExpression.getNode(0).getString(0);
-
                         for (int s = 1; s < subscriptExpression.size(); s++){
-
                             selectionExpression += "[" + subscriptExpression.getNode(s).getString(0) + "]";
-
-
                         }
-
                         //"(*" + selectionExpressionNode.getNode(0).getNode(0).getString(0) + ")[" + selectionExpressionNode.getNode(0).getNode(0).getString(1) + "]";
-
                     }else {
-
-
                         selectionExpression = selectionExpressionNode.getNode(0).getString(0);
-
-
                     }
                     String lengthField = "";
                     if (selectionExpressionNode.getString(1) != null) {
                         lengthField = "." + selectionExpressionNode.getString(1);
                     }
-
                     fullRelationalExpression += primaryId + " " + operator + " " + selectionExpression + lengthField;
-
-
-
                 }
-
-
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("ExpressionList")){
                     System.out.println("$FOR EXPRESSION");
-
-
                     Node expressionList = forLoopNode.getNode(0).getNode(i);
-
                     Node postfixExpressionNode = expressionList.getNode(0);
-
                      postfixExpression = postfixExpressionNode.getNode(0).getString(0) + postfixExpressionNode.getString(1);
-
-
-
-
                 }
-
-
-
-
-
-
-
-
-                } // end of get for loop header
-
-
+            } // end of get for loop header
             this.forLoopDecLine = "for (" + loopIteratorType + " " +  declaratorVar + " = " + declaratorVal  + "; " + fullRelationalExpression + "; " + postfixExpression + ") {";
             System.out.println("fullForLoop1234678 " + forLoopDecLine);
-
-                for (int i = 0; i < forLoopNode.size(); i++) {
+            for (int i = 0; i < forLoopNode.size(); i++) {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-
                     this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass);
                 }
             }
@@ -842,8 +718,6 @@ public class CppDataLayoutM {
         public CustomWhileLoop(Node whileLoopNode, int position, CustomClassObject theWhileLoopsClass){
             this.position = position;
 
-
-
             //PARSE WHILE LOOP HEADER
             System.out.println("whiley " + whileLoopNode);
 
@@ -851,11 +725,9 @@ public class CppDataLayoutM {
 
             Node relationalExpressionNode = whileLoopNode.getNode(0);
 
-           primaryId = relationalExpressionNode.getNode(0).getString(0);
-           conditional = relationalExpressionNode.getString(1);
-           rhsVar = relationalExpressionNode.getNode(2).getString(0);
-
-
+            primaryId = relationalExpressionNode.getNode(0).getString(0);
+            conditional = relationalExpressionNode.getString(1);
+            rhsVar = relationalExpressionNode.getNode(2).getString(0);
             whileLoopDeclarator += "(" + primaryId +" " + conditional + " "  + rhsVar +")";
 
             System.out.println("whileLoop124 " + whileLoopDeclarator);
@@ -878,10 +750,6 @@ public class CppDataLayoutM {
             this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass);
         }
     }
-
-
-
-
 
     public static class TranslatedBlock {
         // blocks have field declarations
@@ -977,13 +845,10 @@ public class CppDataLayoutM {
                     //block within a blokc
                     CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass);
                     this.blockDecs.add(blocDec);
-                } else if (b.getNode(i).getName() == "ReturnStatement") {
+                }
+                else if (b.getNode(i).getName() == "ReturnStatement") {
                     this.returnStatement = "return " + processNameNode(b.getNode(i).getNode(0)) + ";";
                 }
-
-                //TODO return statements
-
-
             }//End of for loop for block
 
 
@@ -1154,10 +1019,8 @@ public class CppDataLayoutM {
             //Translate the block for the method
             translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass);
 
-
             System.out.println("FIELD DECLARATIONS COUNT");
             System.out.println(this.translatedBlock.fieldDeclarations.size());
-
 
         }
     }
@@ -1186,7 +1049,6 @@ public class CppDataLayoutM {
 //        if (arguments.size() > 0) {
 //            ret = ret.substring(2, ret.length());
 //        }
-
         return ret;
     }
 

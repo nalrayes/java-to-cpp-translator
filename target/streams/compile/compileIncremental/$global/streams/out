@@ -1,70 +1,15 @@
-<<<<<<< HEAD
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class: stamp changed from lastModified(1513062083000) to lastModified(1513062197000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class: stamp changed from lastModified(1513062083000) to lastModified(1513062197000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class: stamp changed from lastModified(1513062083000) to lastModified(1513062197000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class: stamp changed from lastModified(1513062083000) to lastModified(1513062197000)[0m
-=======
->>>>>>> fa0dc1d5e5fb086e7756a342b4e4f7e6ca030c64
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-<<<<<<< HEAD
-[0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
-[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class)[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-=======
-[0m[[0mdebug[0m] [0m	modified: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
->>>>>>> fa0dc1d5e5fb086e7756a342b4e4f7e6ca030c64
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
-[0m[[0mdebug[0m] [0m	binary dep: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-<<<<<<< HEAD
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@50a6e6ec directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.064480507 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.012488017 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.078570965 s[0m
-=======
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@83e605 directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 3.037486984 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.301751921 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 3.351594936 s[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java...[0m
-[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0mdebug[0m] [0mThe /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m	positon, whileLoopDeclarator, rhsVar, conditional, position.[0m
-[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java[0m
-[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java[0m
-[0m[[0mdebug[0m] [0mNew invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
-[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set(/Users/Nicholas/Desktop/OOP/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Java source to /Users/Nicholas/Desktop/OOP/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@83e605 directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.162054704 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.032565051 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.199237494 s[0m
->>>>>>> fa0dc1d5e5fb086e7756a342b4e4f7e6ca030c64
-[0m[[0mdebug[0m] [0mNew invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
-[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0mdebug[0m] [0m	Set()[0m
-[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
