@@ -167,12 +167,16 @@ public class CppDataLayoutM {
         boolean isArray;
         boolean isClass;
         String fieldDeclarationLine;
+        String allModifiers = "";
+        String varType = "";
+        String declaratorVar = "";
+        String declaratorVal = "";
 
         ArrayList<String> mainFileLines;
 
-        public CustomFieldDeclaration(Node fieldDec, int position){
+        public CustomFieldDeclaration(Node fieldDec, int position) {
 
-            mainFileLines =new ArrayList<String>();
+            mainFileLines = new ArrayList<String>();
 
             this.position = position;
 
@@ -187,206 +191,64 @@ public class CppDataLayoutM {
             // 0: modifiers
             // System.out.println("fdeez " + fieldDec);
             //String fieldDeclarationLine ="";
-            String qualifiedIdentifier ="";
+            String qualifiedIdentifier = "";
 
             System.out.println("$fd " + fieldDec);
-            if (fieldDec.getNode(0).size() > 0 ){
 
-                for (int modifierIndex = 0; modifierIndex < fieldDec.getNode(0).size(); modifierIndex++){
-                    String getModifier = fieldDec.getNode(0).getString(modifierIndex);
-
-                    //modifiers.add(getModifier);
-                    fieldDeclarationLine += getModifier + " ";
-                }
+            for (int i = 0; i < fieldDec.size(); i++) {
 
 
-            } // end check modifiers
+                if (fieldDec.getNode(i).getName().equals("Modifiers")) {
 
-            // 1: Type(QualifiedIdentifier("string value"),
-            if (fieldDec.getNode(1).size() > 0 ) {
+                    System.out.println("In moddy");
 
-                System.out.println("Get Type");
-                System.out.println((fieldDec.getNode(1)));
-                // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
+                    Node modifiers = fieldDec.getNode(i);
 
-                // if value of node is null continue
-                //if (fieldDec.getNode(1).getNode(0) == null){continue;}
-                // sub 0th node is Qualified Identifier
-                if (!fieldDec.getNode(1).getNode(0).isEmpty()){
-                    System.out.println("$t2\n " + fieldDec.getNode(1));
-
-                    System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
-                    System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
-
-//                                if (fieldDec.getNode(1).getNode(j).getString(0) == null){continue;}
-                    // fieldDec.getNode(1) is varName, which may be as so: var or var[]
-                    qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
-                    System.out.println("$qq \n"+ qualifiedIdentifier );
-                    fieldDeclarationLine += qualifiedIdentifier;
-                }
-
-                // if not null the variable is declaring an array
-                if (fieldDec.getNode(1).getNode(1) != null){
-                    isArray = true;
-                    System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
-
-                    Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
-                    System.out.println("$decvar\n " + declaratorVarNode);
-
-                    for (int i = 0; i < declaratorVarNode.size(); i++){
-                        fieldDeclarationLine += "[]";
+                    // get all modifiers
+                    for (int m = 0; m < modifiers.size(); m++ ){
+                        allModifiers += modifiers.getString(m);
                     }
-                    //fieldDeclarationLine += "[]";
-                    //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
 
-
-            } // end check modifiers
 
                 }
-                if (!fieldDec.getNode(1).isEmpty()){
-                    fieldDeclarationLine += " ";
-                }
+
+                if (fieldDec.getNode(i).getName().equals("Type")) {
+
+                    System.out.println("In type");
+                    Node getType = fieldDec.getNode(i);
+
+                    if (getType.getNode(0) == null){continue;}
+                    if (!getType.getNode(0).isEmpty()){
 
 
+                        varType = getType.getNode(0).getString(0);
 
-                System.out.println("Get Type");
-                System.out.println((fieldDec.getNode(1)));
-                   // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
-
-                // if value of node is null continue
-                //if (fieldDec.getNode(1).getNode(0) == null){continue;}
-                // sub 0th node is Qualified Identifier
-                if (!fieldDec.getNode(1).getNode(0).isEmpty()){
-                    System.out.println("$t2\n " + fieldDec.getNode(1));
-
-                    System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
-                    System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
-
-
-                    // fieldDec.getNode(1) is varName, which may be as so: var or var[]
-                    qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
-                    System.out.println("$qq \n"+ qualifiedIdentifier );
-                    fieldDeclarationLine += qualifiedIdentifier;
-                }
-
-
-                // if not null the variable is declaring an array
-                if (fieldDec.getNode(1).getNode(1) != null){
-                    isArray = true;
-                    System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
-
-                    Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
-                    System.out.println("$decvar\n " + declaratorVarNode);
-
-
-                    for (int i = 0; i < declaratorVarNode.size(); i++){
-                                fieldDeclarationLine += "[]";
                     }
-                    //fieldDeclarationLine += "[]";
-                    //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
-
-                System.out.println("types vals " + fieldDec.getNode(1).getNode(0));
-
-                // }
 
 
 
-            } // end of sub 0 check field dec's modifiers
+                }
 
-            // check field dec's declarators
-            String declaratorValue = "";
+                if (fieldDec.getNode(i).getName().equals("Declarators")) {
 
+                    System.out.println("In declarators");
+                    Node declarator = fieldDec.getNode(i).getNode(0);
 
-            Node declarators = fieldDec.getNode(2);
-            System.out.println("deez " + declarators);
+                    declaratorVar = declarator.getString(0);
 
-            if (declarators.size() > 0 ) {
-                System.out.println("DECLARATORS1 ");
+                    // if condition, the declarator is an array
+                    if (declarator.getNode(2) != null){
 
-                System.out.println(declarators);
-                Node declarator = declarators.getNode(0);
-                System.out.println("mydec1" + declarator);
+                        Node expression = declarator.getNode(2);
 
-                if (!declarator.isEmpty()){
+                        String expressionName = expression.getName();
 
+                        System.out.println("expressionName " + expressionName);
 
-
-                    String declaratorVar = declarator.getString(0);
-
-                    // if declator instantiates an object
-                    // must get the rhs
-                    if (declarator.getNode(2) != null) {
-
-
-                        if (declarator.getNode(2).getName().equals("NewClassExpression")) {
-                            isClass = true;
-                            Node newClassExpression = declarator.getNode(2);
-                            System.out.println("$1217/1 \n" + newClassExpression);
-
-                            declaratorValue += newClassExpression.getNode(2).getString(0);
-                            System.out.println(declaratorValue);
-                            // check if the instantiated object has arguments
-                            System.out.println("$n1 " + newClassExpression);
-                            if (!newClassExpression.getNode(3).isEmpty()) {
-
-                                Node arguments = newClassExpression.getNode(3);
-
-                                declaratorValue += "(";
-                                for (int x = 0; x < arguments.size(); x++) {
-
-                                    if (arguments.getNode(x).getName().equals("PrimaryIdentifier")) {
-                                        declaratorValue += "__" + arguments.getNode(x).getString(0);
-
-                                    } else {
-                                        declaratorValue += arguments.getNode(x).getString(0);
-                                    }
-
-                                    if (x < arguments.size() - 1) {
-                                        declaratorValue += ",";
-
-                                    }
-
-                                }
-                                declaratorValue += ")";
-
-
-                            } else {
-                                declaratorValue += "()";
-                            }
-                            // end of check if instantiated object has arguments
-
-
-                        }
-                        // end of if NewClassExpression
-                        // examples of this are in test 24 - ~31
-                        else if (declarator.getNode(2).getName().equals("NewArrayExpression")) {
-                            System.out.println("$NewArray");
-                            System.out.println("$FOUNDARRAY1");
-                            System.out.println(declarator.getNode(2));
-                            //declaratorValue = "new ";
-                            Node newArrayExpression = declarator.getNode(2);
-                            // declaratorValue += newArrayExpression.getNode(0);
-
-                            String qualifiedId = newArrayExpression.getNode(0).getString(0);
-
-                            Node arrayDimensions = newArrayExpression.getNode(1);
-
-
-                            System.out.println("$express111 \n" + newArrayExpression);
-                            Node arrayDimValue = arrayDimensions.getNode(0);
-                            System.out.println("$Arr1 \n" + arrayDimensions + " \n" + arrayDimValue);
-                            declaratorValue += "__" + qualifiedId;
-                            for (int i = 0; i < arrayDimensions.size(); i++) {
-
-                                declaratorValue += "[" + arrayDimensions.getNode(i).getString(0) + "]";
-                            }
-
-
-                            // declaratorValue += qualifiedId + "[" + arrayDimValue + "]";
-
-
-                        } else if (declarator.getNode(2).getName().equals("SubscriptExpression")) {
-
+                        if (expressionName == "SelectionExpression"){
+                            // translation: ->
+                            //res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
+                        } else if (expressionName == "SubscriptExpression") {
                             Node subscriptExpression = declarator.getNode(2);
                             System.out.println("$sub1 " + subscriptExpression);
 
@@ -396,7 +258,7 @@ public class CppDataLayoutM {
                                 //System.out.println("$idk2 " + subscriptExpression.getNode(0).getNode(0));
                                 System.out.println("$sub3 " + subscriptExpression);
 
-                                declaratorValue += "[" + subscriptExpression.getNode(1).getString(0) + "]";
+                                declaratorVal += "[" + subscriptExpression.getNode(1).getString(0) + "]";
 
 
                             } else {
@@ -404,78 +266,422 @@ public class CppDataLayoutM {
                                 //System.out.println("$sub1 " + subscriptExpression);
 
                                 System.out.println("$vvv " + subscriptExpression);
-                                System.out.println("$v1 " + declaratorValue);
-                                declaratorValue += "[" + subscriptExpression.getNode(0).getString(0) + "]";
-                                declaratorValue += "[" + subscriptExpression.getNode(1).getString(0) + "]";
+                                System.out.println("$v1 " + declaratorVal);
+                                declaratorVal += "[" + subscriptExpression.getNode(0).getString(0) + "]";
+                                declaratorVal += "[" + subscriptExpression.getNode(1).getString(0) + "]";
+
+
+                            }
+
+                            // translation: (*var)[index]
+                            //res = "(*" + processNameNode(n.getNode(0)) + ")[" + processNameNode(n.getNode(1)) + "]";
+                        } else if (expressionName == "ThisExpression") {
+                            // translation: __this
+                            //res = "__this";
+                        } else if (expressionName == "NewClassExpression") {
+                            // translation: __class:__init
+                            fieldDeclarationLine = processNewClassExpression(expression);
+                            System.out.println("fdc123 " + fieldDeclarationLine);
+                            continue;
+//                            Node newClassExpression = declarator.getNode(2);
+//                            System.out.println("$1217/1 \n" + newClassExpression);
+//
+//                            declaratorVal += newClassExpression.getNode(2).getString(0);
+//                            System.out.println(declaratorVal);
+//                            // check if the instantiated object has arguments
+//                            System.out.println("$n11 " + newClassExpression);
+//                            if (!newClassExpression.getNode(3).isEmpty()) {
+//
+//                                Node arguments = newClassExpression.getNode(3);
+//
+//                                declaratorVal += "(";
+//                                for (int x = 0; x < arguments.size(); x++) {
+//
+//                                    if (arguments.getNode(x).getName().equals("PrimaryIdentifier")) {
+//                                        declaratorVal += "__" + arguments.getNode(x).getString(0);
+//
+//                                    } else {
+//                                        declaratorVal += arguments.getNode(x).getString(0);
+//                                    }
+//
+//                                    if (x < arguments.size() - 1) {
+//                                        declaratorVal += ",";
+//
+//                                    }
+//
+//                                }
+//                                declaratorVal += ")";
+//
+//
+//                            } else {
+//                                declaratorVal += "()";
+//                            }
+                            // end of check if instantiated object has arguments
+
+
+                        } else if (expressionName == "CastExpression") {
+                            // translation: no difference
+                            //res = processCastExpression(n);
+                        } else if (expressionName == "AdditiveExpression") {
+                            // translation: no difference
+                            //res = processNameNode(n.getNode(0)) + " + " + processNameNode(n.getNode(2));
+                        } else if (expressionName == "MultiplicativeExpression") {
+                            // translation: no difference
+                            //res = processNameNode(n.getNode(0)) + " * " + processNameNode(n.getNode(2));
+                        } else if (expressionName == "Expression") {
+                            // translation: no difference
+                            //res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
+                        } else if (expressionName == "CallExpression") {
+                            // translation: ->__vptr->methodCall
+                            //res = processCallExpression(n);
+                        }  else if (expressionName == "NewArrayExpression"){
+                            System.out.println("anexpression1");
+
+                            varType = "__rt::Ptr<" + varType + ", __rt::array_policy>";
+
+                            declaratorVal += " new ";
+                            declaratorVal += expression.getNode(0).getString(0);
+
+                            Node concreteDimensions = expression.getNode(1);
+
+                            System.out.println("expressurself " + expression);
+                            System.out.println("dimsize " + concreteDimensions.size());
+                            for (int d = 0; d < concreteDimensions.size(); d++){
+
+
+                                    //declaratorVar += "[]";
+
+                               // __rt::Ptr<double, __rt::array_policy>
+
+
+
+                                    declaratorVal += "[" + concreteDimensions.getNode(d).getString(0) + "]";
+
 
 
                             }
 
 
-                        }
-                        //else if(){}
 
+                        } // end of NewArrayExpression
+                        // else can be integer literals and other primitive types
+                        else{
 
-                        else {
-                            System.out.println("$err \n " + declarator.getNode(2));
-                            declaratorValue = declarator.getNode(2).getString(0);
-                            System.out.println("$dim111 \n" + declaratorValue);
+                            declaratorVal += declarator.getNode(2).getString(0);
 
-                            //System.out.println("wowee " + declaratorValue);
                         }
 
 
-
-                    String fullDeclarator = declaratorVar + " = " + declaratorValue;
-                    fieldDeclarationLine += fullDeclarator;
-
-                    //declarators.add(fieldDeclarationLine);
+                        fieldDeclarationLine  = varType + " " + declaratorVar + " = " + declaratorVal;
+                        System.out.println("newfielddec22 " + fieldDeclarationLine);
 
 
 
-                    //declarators.add(fieldDeclarationLine);
-
-                    if (isArray){
-
-                        //__rt::Ptr<double, __rt::array_policy> q = new double[5];
-                        fieldDeclarationLine = "__rt::Ptr<"+qualifiedIdentifier +", __rt::array_policy> " + declaratorVar + " = new " +declaratorValue;
 
 
                     }
 
-                    if (isClass){
-
-                        //__rt::Ptr<int, __rt::object_policy> p = new int(5);
-                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
-
-                    }
-
-                    mainFileLines.add(fieldDeclarationLine);
-
-                    System.out.println("$FULL FIELD $D33 \n " +  fieldDeclarationLine);
-
-
-                } // end of if declarator isn't empty
-
-
-
-                } // end of if declarator isn't empty
 
 
 
 
-                    //declarators.add(fieldDeclarationLine);
-                    mainFileLines.add(fieldDeclarationLine);
-                    System.out.println("FULL FIELD $D111 \n " +  fieldDeclarationLine);
+                }
 
 
-                } // end of if declarator isn't empty
+            }
+        }
+
+
+//            if (fieldDec.getNode(0).size() > 0 ){
+//
+//                for (int modifierIndex = 0; modifierIndex < fieldDec.getNode(0).size(); modifierIndex++){
+//                    String getModifier = fieldDec.getNode(0).getString(modifierIndex);
+//
+//                    //modifiers.add(getModifier);
+//                    fieldDeclarationLine += getModifier + " ";
+//                }
+//
+//
+//            } // end check modifiers
 
 
 
-
-
-            } // end of get Declarators
+//
+//
+//            // 1: Type(QualifiedIdentifier("string value"),
+//            if (fieldDec.getNode(1).size() > 0 ) {
+//
+//                System.out.println("Get Type");
+//                System.out.println((fieldDec.getNode(1)));
+//                // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
+//
+//                // if value of node is null continue
+//                //if (fieldDec.getNode(1).getNode(0) == null){continue;}
+//                // sub 0th node is Qualified Identifier
+//                if (!fieldDec.getNode(1).getNode(0).isEmpty()){
+//                    System.out.println("$t2\n " + fieldDec.getNode(1));
+//
+//                    System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
+//                    System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
+//
+////                                if (fieldDec.getNode(1).getNode(j).getString(0) == null){continue;}
+//                    // fieldDec.getNode(1) is varName, which may be as so: var or var[]
+//                    qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
+//                    System.out.println("$qq \n"+ qualifiedIdentifier );
+//                    fieldDeclarationLine += qualifiedIdentifier;
+//                }
+//
+//                // if not null the variable is declaring an array
+//                if (fieldDec.getNode(1).getNode(1) != null){
+//                    isArray = true;
+//                    System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
+//
+//                    Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
+//                    System.out.println("$decvar\n " + declaratorVarNode);
+//
+//                    for (int i = 0; i < declaratorVarNode.size(); i++){
+//                        fieldDeclarationLine += "[]";
+//                    }
+//                    //fieldDeclarationLine += "[]";
+//                    //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
+//
+//
+//            } // end check modifiers
+//
+//                }
+//                if (!fieldDec.getNode(1).isEmpty()){
+//                    fieldDeclarationLine += " ";
+//                }
+//
+//
+//
+//                System.out.println("Get Type");
+//                System.out.println((fieldDec.getNode(1)));
+//                   // for (int j = 0; j < fieldDec.getNode(1).size(); j++){
+//
+//                // if value of node is null continue
+//                //if (fieldDec.getNode(1).getNode(0) == null){continue;}
+//                // sub 0th node is Qualified Identifier
+//                if (!fieldDec.getNode(1).getNode(0).isEmpty()){
+//                    System.out.println("$t2\n " + fieldDec.getNode(1));
+//
+//                    System.out.println("QI\n" + fieldDec.getNode(1).getNode(0));
+//                    System.out.println("QIVal\n" + fieldDec.getNode(1).getNode(0).getString(0));
+//
+//
+//                    // fieldDec.getNode(1) is varName, which may be as so: var or var[]
+//                    qualifiedIdentifier = fieldDec.getNode(1).getNode(0).getString(0);
+//                    System.out.println("$qq \n"+ qualifiedIdentifier );
+//                    fieldDeclarationLine += qualifiedIdentifier;
+//                }
+//
+//
+//                // if not null the variable is declaring an array
+//                if (fieldDec.getNode(1).getNode(1) != null){
+//                    isArray = true;
+//                    System.out.println("$drone1\n" + fieldDec.getNode(1).getNode(1));
+//
+//                    Node declaratorVarNode = fieldDec.getNode(1).getNode(1);
+//                    System.out.println("$decvar\n " + declaratorVarNode);
+//
+//
+//                    for (int i = 0; i < declaratorVarNode.size(); i++){
+//                                fieldDeclarationLine += "[]";
+//                    }
+//                    //fieldDeclarationLine += "[]";
+//                    //fieldDeclarationLine = __rt::Ptr<double, __rt::array_policy> q = new double[5];
+//
+//                System.out.println("types vals " + fieldDec.getNode(1).getNode(0));
+//
+//                // }
+//
+//
+//
+//            } // end of sub 0 check field dec's modifiers
+//
+//            // check field dec's declarators
+//            String declaratorValue = "";
+//
+//
+//            Node declarators = fieldDec.getNode(2);
+//            System.out.println("deez " + declarators);
+//
+//            if (declarators.size() > 0 ) {
+//                System.out.println("DECLARATORS1 ");
+//
+//                System.out.println(declarators);
+//                Node declarator = declarators.getNode(0);
+//                System.out.println("mydec1" + declarator);
+//
+//                if (!declarator.isEmpty()){
+//
+//
+//
+//                    String declaratorVar = declarator.getString(0);
+//
+//                    // if declator instantiates an object
+//                    // must get the rhs
+//                    if (declarator.getNode(2) != null) {
+//
+//
+//                        if (declarator.getNode(2).getName().equals("NewClassExpression")) {
+//                            isClass = true;
+//                            Node newClassExpression = declarator.getNode(2);
+//                            System.out.println("$1217/1 \n" + newClassExpression);
+//
+//                            declaratorValue += newClassExpression.getNode(2).getString(0);
+//                            System.out.println(declaratorValue);
+//                            // check if the instantiated object has arguments
+//                            System.out.println("$n1 " + newClassExpression);
+//                            if (!newClassExpression.getNode(3).isEmpty()) {
+//
+//                                Node arguments = newClassExpression.getNode(3);
+//
+//                                declaratorValue += "(";
+//                                for (int x = 0; x < arguments.size(); x++) {
+//
+//                                    if (arguments.getNode(x).getName().equals("PrimaryIdentifier")) {
+//                                        declaratorValue += "__" + arguments.getNode(x).getString(0);
+//
+//                                    } else {
+//                                        declaratorValue += arguments.getNode(x).getString(0);
+//                                    }
+//
+//                                    if (x < arguments.size() - 1) {
+//                                        declaratorValue += ",";
+//
+//                                    }
+//
+//                                }
+//                                declaratorValue += ")";
+//
+//
+//                            } else {
+//                                declaratorValue += "()";
+//                            }
+//                            // end of check if instantiated object has arguments
+//
+//
+//                        }
+//                        // end of if NewClassExpression
+//                        // examples of this are in test 24 - ~31
+//                        else if (declarator.getNode(2).getName().equals("NewArrayExpression")) {
+//                            System.out.println("$NewArray");
+//                            System.out.println("$FOUNDARRAY1");
+//                            System.out.println(declarator.getNode(2));
+//                            //declaratorValue = "new ";
+//                            Node newArrayExpression = declarator.getNode(2);
+//                            // declaratorValue += newArrayExpression.getNode(0);
+//
+//                            String qualifiedId = newArrayExpression.getNode(0).getString(0);
+//
+//                            Node arrayDimensions = newArrayExpression.getNode(1);
+//
+//
+//                            System.out.println("$express111 \n" + newArrayExpression);
+//                            Node arrayDimValue = arrayDimensions.getNode(0);
+//                            System.out.println("$Arr1 \n" + arrayDimensions + " \n" + arrayDimValue);
+//                            declaratorValue += "__" + qualifiedId;
+//                            for (int i = 0; i < arrayDimensions.size(); i++) {
+//
+//                                declaratorValue += "[" + arrayDimensions.getNode(i).getString(0) + "]";
+//                            }
+//
+//
+//                            // declaratorValue += qualifiedId + "[" + arrayDimValue + "]";
+//
+//
+//                        } else if (declarator.getNode(2).getName().equals("SubscriptExpression")) {
+//
+//                            Node subscriptExpression = declarator.getNode(2);
+//                            System.out.println("$sub1 " + subscriptExpression);
+//
+//                            if (!subscriptExpression.getNode(0).getName().equals("SubscriptExpression")) {
+//                                System.out.println("$sub2 " + subscriptExpression);
+//
+//                                //System.out.println("$idk2 " + subscriptExpression.getNode(0).getNode(0));
+//                                System.out.println("$sub3 " + subscriptExpression);
+//
+//                                declaratorValue += "[" + subscriptExpression.getNode(1).getString(0) + "]";
+//
+//
+//                            } else {
+//                                subscriptExpression = declarator.getNode(2).getNode(0);
+//                                //System.out.println("$sub1 " + subscriptExpression);
+//
+//                                System.out.println("$vvv " + subscriptExpression);
+//                                System.out.println("$v1 " + declaratorValue);
+//                                declaratorValue += "[" + subscriptExpression.getNode(0).getString(0) + "]";
+//                                declaratorValue += "[" + subscriptExpression.getNode(1).getString(0) + "]";
+//
+//
+//                            }
+//
+//
+//                        }
+//                        //else if(){}
+//
+//
+//                        else {
+//                            System.out.println("$err \n " + declarator.getNode(2));
+//                            declaratorValue = declarator.getNode(2).getString(0);
+//                            System.out.println("$dim111 \n" + declaratorValue);
+//
+//                            //System.out.println("wowee " + declaratorValue);
+//                        }
+//
+//
+//
+//                    String fullDeclarator = declaratorVar + " = " + declaratorValue;
+//                    fieldDeclarationLine += fullDeclarator;
+//
+//                    //declarators.add(fieldDeclarationLine);
+//
+//
+//
+//                    //declarators.add(fieldDeclarationLine);
+//
+//                    if (isArray){
+//
+//                        //__rt::Ptr<double, __rt::array_policy> q = new double[5];
+//                        fieldDeclarationLine = "__rt::Ptr<"+qualifiedIdentifier +", __rt::array_policy> " + declaratorVar + " = new " +declaratorValue;
+//
+//
+//                    }
+//
+//                    if (isClass){
+//
+//                        //__rt::Ptr<int, __rt::object_policy> p = new int(5);
+//                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
+//
+//                    }
+//
+//                    mainFileLines.add(fieldDeclarationLine);
+//
+//                    System.out.println("$FULL FIELD $D33 \n " +  fieldDeclarationLine);
+//
+//
+//                } // end of if declarator isn't empty
+//
+//
+//
+//                } // end of if declarator isn't empty
+//
+//
+//
+//
+//                    //declarators.add(fieldDeclarationLine);
+//                    mainFileLines.add(fieldDeclarationLine);
+//                    System.out.println("FULL FIELD $D111 \n " +  fieldDeclarationLine);
+//
+//
+//                } // end of if declarator isn't empty
+//
+//
+//
+//
+//
+//            } // end of get Declarators
 
 
 
@@ -551,14 +757,37 @@ public class CppDataLayoutM {
 
                     Node selectionExpressionNode =  relationalExpression.getNode(2);
                     System.out.println("selectionExpressionNode123 " + selectionExpressionNode);
-                    String selectionExpression = selectionExpressionNode.getNode(0).getString(0);
+                    String selectionExpression = "";
+                    if (selectionExpressionNode.getNode(0).getName().equals("SubscriptExpression")){
 
-                    String lengthField ="";
-                    if (selectionExpressionNode.getString(1) != null){
+
+                        Node subscriptExpression = selectionExpressionNode.getNode(0);
+
+                        selectionExpression += subscriptExpression.getNode(0).getString(0);
+
+                        for (int s = 1; s < subscriptExpression.size(); s++){
+
+                            selectionExpression += "[" + subscriptExpression.getNode(s).getString(0) + "]";
+
+
+                        }
+
+                        //"(*" + selectionExpressionNode.getNode(0).getNode(0).getString(0) + ")[" + selectionExpressionNode.getNode(0).getNode(0).getString(1) + "]";
+
+                    }else {
+
+
+                        selectionExpression = selectionExpressionNode.getNode(0).getString(0);
+
+
+                    }
+                    String lengthField = "";
+                    if (selectionExpressionNode.getString(1) != null) {
                         lengthField = "." + selectionExpressionNode.getString(1);
                     }
 
-                    fullRelationalExpression += primaryId +" " + operator + " " + selectionExpression + lengthField;
+                    fullRelationalExpression += primaryId + " " + operator + " " + selectionExpression + lengthField;
+
 
 
                 }
@@ -590,7 +819,7 @@ public class CppDataLayoutM {
 
 
             this.forLoopDecLine = "for (" + loopIteratorType + " " +  declaratorVar + " = " + declaratorVal  + "; " + fullRelationalExpression + "; " + postfixExpression + ") {";
-            System.out.println("fullForLoop12346 " + forLoopDecLine);
+            System.out.println("fullForLoop1234678 " + forLoopDecLine);
 
                 for (int i = 0; i < forLoopNode.size(); i++) {
                 //Use this to find the for loops block

@@ -9,9 +9,9 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test027 {
+  namespace test013 {
 
-    __A::__A() : __vptr(&__vtable), i(0)
+    __A::__A() : __vptr(&__vtable), a(null)
     {}
 
     Class __A::__class() {
@@ -26,17 +26,13 @@ namespace inputs {
 
     }
 
-<<<<<<< HEAD
-    A __A::__init(A __this, int i) {
+    void __A::setA_String(A __this, String x) {
 
     }
 
-    int32_t __A::get(A __this) {
+    void __A::printOther_A(A __this, A other) {
 
     }
 
-=======
-    }
->>>>>>> 0e90a6e3ff13be10aa539fc0542e69d857cbbef4
   }
 }
