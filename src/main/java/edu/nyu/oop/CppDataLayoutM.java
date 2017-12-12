@@ -247,18 +247,28 @@ public class CppDataLayoutM {
 
                             declaratorVal += "(";
 
+                            String args ="";
+
                             for (int a = 0; a <arguments.size(); a++){
 
-                                declaratorVal += arguments.getNode(a).getString(0);
+
+                             // args +=  processArguments(arguments.getNode(a));
+
+
+
+
+
+//
+                              args += arguments.getNode(a).getString(0);
 
                             }
 
                             declaratorVal +=")";
 
-                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new__" + varType + "())";
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new__" + varType  + "("+ args + ")";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
-                        continue;
+                            continue;
 //                            Node newClassExpression = declarator.getNode(2);
 //                            System.out.println("$1217/1 \n" + newClassExpression);
 //
@@ -1021,11 +1031,16 @@ public class CppDataLayoutM {
     public static String processArguments(Node arguments) {
         String ret = "";
         for (int x = 0; x < arguments.size(); x++) {
-            ret += ", " + processNameNode(arguments.getNode(x));
+            if (x != 1) {
+                ret += ", " + processNameNode(arguments.getNode(x));
+            } else {
+                ret += processNameNode(arguments.getNode(x));
+            }
+
         }
         return ret;
-    }
 
+    }
     public static String processCastExpression(Node n) {
         String ret = "(" + n.getNode(0).getNode(0).getString(0) + ") ";
         ret += processNameNode(n.getNode(1));
