@@ -711,7 +711,7 @@ public class CppDataLayoutM {
     public static class CustomWhileLoop{
         int position;
         TranslatedBlock whileLoopTranslatedBlock;
-        String whileLoopDeclarator = "";
+        String whileLoopDeclarator = "while ";
         String conditional = "";
         String rhsVar = "";
 

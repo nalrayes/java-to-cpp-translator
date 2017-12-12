@@ -9,7 +9,7 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test026 {
+  namespace test025 {
 
     __A::__A() : __vptr(&__vtable), i(0)
     {}

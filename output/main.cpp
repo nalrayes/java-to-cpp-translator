@@ -9,7 +9,7 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 int main(void) {
-  __rt::Ptr<A, __rt::array_policy> as =  new B[10]
+  __rt::Ptr<Object, __rt::array_policy> as =  new A[10]
   int k = 0
   for (int i = 0; i < as.length; i++)
   (*as)[i] = __A::__init(new __A(), , i);
