@@ -235,9 +235,30 @@ public class CppDataLayoutM {
                             //res = "__this";
                         } else if (expressionName == "NewClassExpression") {
                             // translation: __class:__init
-                            fieldDeclarationLine = processNewClassExpression(expression);
+                            //fieldDeclarationLine = processNewClassExpression(expression);
                             System.out.println("fdc123 " + fieldDeclarationLine);
-                            continue;
+
+                            Node newClassExpression = declarator.getNode(2);
+
+                            declaratorVal += newClassExpression.getNode(2).getString(0);
+
+
+                            Node arguments = newClassExpression.getNode(3);
+
+                            declaratorVal += "(";
+
+                            for (int a = 0; a <arguments.size(); a++){
+
+                                declaratorVal += arguments.getNode(a).getString(0);
+
+                            }
+
+                            declaratorVal +=")";
+
+                            fieldDeclarationLine = "__rt::Ptr<" + varType + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorVal;
+//                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
+
+                        continue;
 //                            Node newClassExpression = declarator.getNode(2);
 //                            System.out.println("$1217/1 \n" + newClassExpression);
 //
