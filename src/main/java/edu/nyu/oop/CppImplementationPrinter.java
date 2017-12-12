@@ -112,24 +112,25 @@ public class CppImplementationPrinter extends Visitor {
         //Print default constructor
         //printer.incr().indent().pln(n.getString(0));
 
-        //Use a for loop to go through the block stuff
-        for (int i = 0; i < n.size(); i ++){
-            //Check if the node is a string or not
-            if(n.getString(i) != null){
-                //If it is a string then print it
-                //TODO
-            }
-
-        }
+//        //Use a for loop to go through the block stuff
+//        for (int i = 0; i < n.size(); i ++){
+//            //Check if the node is a string or not
+//            if(n.getString(i) != null){
+//                //If it is a string then print it
+//                System.out.println(n.getString(i));
+//            }
+//
+//        }
         visit(n);
         printer.indent().pln("}");
 
     }
 
-    public void visitForLoopImplementation(GNode n) throws IOException{
+    public void visitForloopImplementation(GNode n) throws IOException{
+        visit(n);
+    }
 
-
-
+    public void visitWhileloopImplementation(GNode n) throws IOException{
         visit(n);
     }
 

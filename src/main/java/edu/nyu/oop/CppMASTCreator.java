@@ -206,13 +206,16 @@ public class CppMASTCreator {
         for (int i = 0; i < transBlock.forLoops.size(); i++){
             CppDataLayoutM.CustomForLoop forlp = transBlock.forLoops.get(i);
             //Create new forLoop block Node
-            GNode newForloopBlockNode = cppNodeActions.createNewASTNode("ForloopImplementation");
+            GNode newForLoopNode = cppNodeActions.createNewASTNode("ForloopImplementation");
+            GNode newForLoopBlockNode = cppNodeActions.createNewASTNode("ForloopBlock");
             //Add the for loop decl line
-            cppNodeActions.addDataToNode(newForloopBlockNode, forlp.forLoopDecLine);
-            //Add the block
-            addDataToBlockNode(newForloopBlockNode, forlp.forLoopsTranslatedBlock);
+            cppNodeActions.addDataToNode(newForLoopNode, forlp.forLoopDecLine);
+            cppNodeActions.addNodeAsChildToParent(newForLoopNode, newForLoopBlockNode);
+
+            //Add the forLoop Node
+            addDataToBlockNode(newForLoopBlockNode, forlp.forLoopsTranslatedBlock);
             //Add block to correct position
-            blockImplementationNode.set(offset + forlp.positon, newForloopBlockNode);
+            blockImplementationNode.set(offset + forlp.positon, newForLoopNode);
         }
 
         //While loops
@@ -221,8 +224,6 @@ public class CppMASTCreator {
             //Create new forLoop block Node
             GNode newWhileloopBlockNode = cppNodeActions.createNewASTNode("WhileloopImplementation");
             //Add the for loop decl line
-            cppNodeActions.addDataToNode(newWhileloopBlockNode, whilelp.whileLoopDeclarator);
-            //Add the block
             addDataToBlockNode(newWhileloopBlockNode, whilelp.whileLoopTranslatedBlock);
             //Add block to correct position
             blockImplementationNode.set(offset + whilelp.position, newWhileloopBlockNode);
