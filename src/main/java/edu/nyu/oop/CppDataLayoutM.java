@@ -12,9 +12,7 @@ import xtc.tree.Node;
 public class CppDataLayoutM {
 
 
-    public CppDataLayoutM() {
-
-    }
+    public CppDataLayoutM() { }
 
     //MAIN METHOD IMPLEMENTATION
     public static class cppImplementationMainMethodClass {
@@ -74,7 +72,7 @@ public class CppDataLayoutM {
                     "        new __Class(__rt::literal(\"inputs.javalang." + this.className + "\"), __" + parentClass + "::__class());\n" +
                     "      return k;\n" +
                     "    }";
-            this.vTableDecl = "__" + this.className + "_VT " + "__" + this.className + "::__vtable";
+            this.vTableDecl = "__" + this.className + "_VT " + "__" + this.className + "::__vtable;";
             this.cppMethodImplementations = new ArrayList<cppMethodImplementation>();
 
             //Get the constructor implementations via the class fields
@@ -171,20 +169,8 @@ public class CppDataLayoutM {
         public CustomFieldDeclaration(Node fieldDec, int position) {
 
             mainFileLines = new ArrayList<String>();
-
             this.position = position;
 
-            // for (int i = 0; i < fieldDec.size(); i++){
-
-            // get all indices of field declaration and translate
-            // 0: modifiers
-            // 1: Type(QualifiedIdentifier("string value"),
-            // 2: Declarators(0:Declarator("dec variable"), 1:someVal/null, 2:NewClassExpression,
-            // 3: Arguments("some string/null"), someVal/null)
-
-            // 0: modifiers
-            // System.out.println("fdeez " + fieldDec);
-            //String fieldDeclarationLine ="";
             String qualifiedIdentifier = "";
             System.out.println("$fd " + fieldDec);
             for (int i = 0; i < fieldDec.size(); i++) {
@@ -214,7 +200,6 @@ public class CppDataLayoutM {
                     if (declarator.getNode(2) != null){
 
                         Node expression = declarator.getNode(2);
-
                         String expressionName = expression.getName();
 
                         System.out.println("expressionName " + expressionName);
@@ -250,9 +235,30 @@ public class CppDataLayoutM {
                             //res = "__this";
                         } else if (expressionName == "NewClassExpression") {
                             // translation: __class:__init
-                            fieldDeclarationLine = processNewClassExpression(expression);
+                            //fieldDeclarationLine = processNewClassExpression(expression);
                             System.out.println("fdc123 " + fieldDeclarationLine);
-                            continue;
+
+                            Node newClassExpression = declarator.getNode(2);
+
+                            declaratorVal += newClassExpression.getNode(2).getString(0);
+
+
+                            Node arguments = newClassExpression.getNode(3);
+
+                            declaratorVal += "(";
+
+                            for (int a = 0; a <arguments.size(); a++){
+
+                                declaratorVal += arguments.getNode(a).getString(0);
+
+                            }
+
+                            declaratorVal +=")";
+
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new__" + varType + "())";
+//                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
+
+                        continue;
 //                            Node newClassExpression = declarator.getNode(2);
 //                            System.out.println("$1217/1 \n" + newClassExpression);
 //
@@ -623,13 +629,6 @@ public class CppDataLayoutM {
 //
 //
 //            } // end of get Declarators
-
-
-
-
-
-
-
         } // end of CustomFieldDeclaration Constructor
 
 
@@ -722,7 +721,6 @@ public class CppDataLayoutM {
             System.out.println("whiley " + whileLoopNode);
 
             String primaryId = "";
-
             Node relationalExpressionNode = whileLoopNode.getNode(0);
 
             primaryId = relationalExpressionNode.getNode(0).getString(0);
@@ -764,8 +762,6 @@ public class CppDataLayoutM {
         ArrayList<CustomWhileLoop> whileLoops;
         ArrayList<CustomBlockDec> blockDecs;
 
-
-
         String returnStatement = "";
 
         //Constructor properties
@@ -797,28 +793,12 @@ public class CppDataLayoutM {
             whileLoops = new ArrayList<CustomWhileLoop>();
             blockDecs = new ArrayList<CustomBlockDec>();
 
-            //System.out.println(b.size());
-
             for (int i = 0; i < b.size(); i++) {
-
-                // either a field declaration or ExpressionStatement
-
-                // if field declaration
-                // its subnodes have the following indices:
-                // 0: modifiers
-                // 1: Type(QualifiedIdentifier("string value"),
-                // 2: Declarators(0:Declarator("dec variable"), 1:someVal/null, 2:NewClassExpression,
-                // 3: Arguments("some string/null"), someVal/null)
-
                 if (b.getNode(i).getName().equals("FieldDeclaration")) {
                     CustomFieldDeclaration fd = new CustomFieldDeclaration(b.getNode(i), i);
                     this.fieldDeclarations.add(fd);
                     System.out.println("fdline " + fd.fieldDeclarationLine);
-
                 }
-                // else if ExpressionStatement
-                // its subnodes have the following indices
-                // 0:
                 else if (b.getNode(i).getName().equals("ExpressionStatement")) {
                     Node curNode = b.getNode(i);
                     if (curNode.getNode(0).getName().equals("CallExpression")) {
@@ -850,7 +830,6 @@ public class CppDataLayoutM {
                     this.returnStatement = "return " + processNameNode(b.getNode(i).getNode(0));
                 }
             }//End of for loop for block
-
 
             //Constructor helper stuff levae this at the end of the class
             //Handle Constructor Stuff
@@ -1001,7 +980,6 @@ public class CppDataLayoutM {
                 this.returnType = "__this";
             }
 
-
             System.out.println("METHOD NAME");
             System.out.println(this.name);
 
@@ -1045,10 +1023,6 @@ public class CppDataLayoutM {
         for (int x = 0; x < arguments.size(); x++) {
             ret += ", " + processNameNode(arguments.getNode(x));
         }
-        // No longer necessary because of first arguemnt representing the object
-//        if (arguments.size() > 0) {
-//            ret = ret.substring(2, ret.length());
-//        }
         return ret;
     }
 
@@ -1060,12 +1034,7 @@ public class CppDataLayoutM {
 
 
     public static boolean isPrint(Node n) {
-
         System.out.println("isPrint1233 " + n);
-
-       // if (n.getNode(0) == null){}
-
-       // if (n.getNode(0) != null) {
 
             if (n.getNode(0).getName() == "SelectionExpression") {
                 if (n.getNode(0).getNode(0).getName() == "PrimaryIdentifier") {
@@ -1074,7 +1043,6 @@ public class CppDataLayoutM {
                     }
                 }
             }
-       // }
         return false;
     }
 
@@ -1083,7 +1051,6 @@ public class CppDataLayoutM {
         if (n.getNode(3) != null) {
             arguments = processArguments(n.getNode(3));
         }
-        // handle sys.out.println
         if (isPrint(n)) {
             // may want to consider differentiation between print and println
             return "std::cout << " + arguments.substring(2,arguments.length()) + " << std::endl";
@@ -1146,8 +1113,6 @@ public class CppDataLayoutM {
             System.out.println(this.expression);
             System.out.println("=====================================");
         }
-
     }
-
 }
 

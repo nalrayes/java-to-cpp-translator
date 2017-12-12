@@ -64,7 +64,6 @@ public class CppMainPrinter  extends Visitor {
         printer.pln("");
     }
 
-
     public void visitNamespace(GNode n) throws IOException {
         visit(n);
     }
@@ -74,7 +73,6 @@ public class CppMainPrinter  extends Visitor {
         visit(n);
         printer.decr();
         printer.indent().pln("}");
-
     }
 
     public void visitMainMethodBlockImplementation(GNode n) throws IOException{
@@ -84,7 +82,7 @@ public class CppMainPrinter  extends Visitor {
             //Check if the node is a string or not
             if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
                 //ForLoop, Whileloop and block are found
-                System.out.println(n.getNode(i).getName());
+                //System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
                 printer.indent().pln(n.getNode(i).getString(0) + " {");
                 visit(n.getNode(i));
@@ -95,7 +93,6 @@ public class CppMainPrinter  extends Visitor {
                 printer.indent().pln(n.getString(i) + ";");
             }
         }
-//        visit(n);
         printer.decr();
 
     }
@@ -113,7 +110,7 @@ public class CppMainPrinter  extends Visitor {
             //Check if the node is a string or not
             if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
                 //ForLoop, Whileloop and block are found
-                System.out.println(n.getNode(i).getName());
+                //System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
                 printer.indent().pln(n.getNode(i).getString(0) + " {");
                 visit(n.getNode(i));
@@ -124,10 +121,8 @@ public class CppMainPrinter  extends Visitor {
                 printer.indent().pln(n.getString(i) + ";");
             }
         }
-//        visit(n);
         printer.decr();
     }
-
 
     public void visitWhileloopImplementation(GNode n) throws IOException{
         //Print while loop dec statement
@@ -142,7 +137,7 @@ public class CppMainPrinter  extends Visitor {
             //Check if the node is a string or not
             if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
                 //ForLoop, Whileloop and block are found
-                System.out.println(n.getNode(i).getName());
+                //System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
                 printer.indent().pln(n.getNode(i).getString(0) + " {");
                 visit(n.getNode(i));
@@ -163,7 +158,7 @@ public class CppMainPrinter  extends Visitor {
             //Check if the node is a string or not
             if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
                 //ForLoop, Whileloop and block are found
-                System.out.println(n.getNode(i).getName());
+                //System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
                 printer.indent().pln(n.getNode(i).getString(0) + " {");
                 visit(n.getNode(i));
@@ -174,10 +169,6 @@ public class CppMainPrinter  extends Visitor {
                 printer.indent().pln(n.getString(i) + ";");
             }
         }
-//        visit(n);
         printer.decr();
     }
-
-
-
 }
