@@ -255,7 +255,7 @@ public class CppDataLayoutM {
 
                             declaratorVal +=")";
 
-                            fieldDeclarationLine = "__rt::Ptr<" + varType + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorVal;
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new__" + varType + "())";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                         continue;

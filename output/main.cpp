@@ -9,7 +9,7 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 int main(void) {
-  __rt::Ptr<A, __rt::object_policy> a = new A();
-  std::cout << a->self->__vptr->toString(a->self) << std::endl;
+  A a =  __A::__init(new__A());
+  std::cout << a->__vptr->toString(a) << std::endl;
   return 0;
 }

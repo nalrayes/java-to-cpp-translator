@@ -9,9 +9,9 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test009 {
+  namespace test001 {
 
-    __A::__A() : __vptr(&__vtable), self(null)
+    __A::__A() : __vptr(&__vtable)
     {}
 
     Class __A::__class() {
@@ -22,10 +22,12 @@ namespace inputs {
 
     __A_VT __A::__vtable;
 
-    A __A::__init(A __this) {
-      __Object::__init((Object) __this);
-      __this->self = __this;
+    A __A:: __init(A__this) {
       return __this;
+    }
+    
+    String __A::toString(A __this) {
+      return __rt::literal("A");
     }
     
   }
