@@ -89,33 +89,75 @@ public class CppMainPrinter  extends Visitor {
                 //ForLoop, Whileloop and block are found
                 System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
-                visit(n);
+                printer.indent().pln(n.getNode(i).getString(0) + " {");
+                visit(n.getNode(i));
+                printer.indent().pln("}");
             }
             else{
                 //Print the thing there
-                printer.indent().pln(n.getString(i));
+                printer.indent().pln(n.getString(i) + ";");
             }
         }
-        visit(n);
+//        visit(n);
+        printer.decr();
+
     }
 
     public void visitForloopImplementation(GNode n) throws IOException{
-
-
+        //Print for loop dec statement
+        printer.indent().pln(n.getString(0));
         visit(n);
     }
 
     public void visitForloopBlock(GNode n) throws IOException{
-
-
-        visit(n);
+        //Use a for loop to go through the block stuff
+        printer.incr();
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ){
+                //ForLoop, Whileloop and block are found
+                System.out.println(n.getNode(i).getName());
+                //Call visit to find deeper nodes
+                printer.indent().pln(n.getNode(i).getString(0) + " {");
+                visit(n.getNode(i));
+                printer.indent().pln("}");
+            }
+            else{
+                //Print the thing there
+                printer.indent().pln(n.getString(i) + ";");
+            }
+        }
+//        visit(n);
+        printer.decr();
     }
 
 
     public void visitWhileloopImplementation(GNode n) throws IOException{
-
-
+        //Print while loop dec statement
+        printer.indent().pln(n.getString(0));
         visit(n);
+    }
+
+    public void visitWhileloopBlock(GNode n) throws  IOException{
+        //Use a for loop to go through the block stuff
+        printer.incr();
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ){
+                //ForLoop, Whileloop and block are found
+                System.out.println(n.getNode(i).getName());
+                //Call visit to find deeper nodes
+                printer.indent().pln(n.getNode(i).getString(0) + " {");
+                visit(n.getNode(i));
+                printer.indent().pln("}");
+            }
+            else{
+                //Print the thing there
+                printer.indent().pln(n.getString(i) + ";");
+            }
+        }
+//        visit(n);
+        printer.decr();
     }
 
 
