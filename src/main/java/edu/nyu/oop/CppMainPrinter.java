@@ -65,10 +65,24 @@ public class CppMainPrinter  extends Visitor {
     }
 
 
+    public void visitNamespace(GNode n) throws IOException {
+        visit(n);
+    }
 
+    public void visitImplementationMain(GNode n) throws IOException {
+        printer.indent().pln(n.getString(0) + " {");
 
+        visit(n);
 
+        printer.decr();
+        printer.indent().pln("}");
 
+    }
 
+    public void visitMainMethodBlockImplementation(GNode n) throws IOException{
+
+        visit(n);
+
+    }
 
 }
