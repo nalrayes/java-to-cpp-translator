@@ -59,28 +59,6 @@ public class CppMASTCreator {
             }
         }
 
-//        //ERROR CHECK PRINTING STUFF
-//        for (CppDataLayoutM.cppImplementationClass class1: listOfCppImpClassesDatalayout){
-////            System.out.println("$imple size " + class1.cppMethodImplementations.size());
-//            for (CppDataLayoutM.cppMethodImplementation method : class1.cppMethodImplementations){
-////                System.out.println("$ello123 " + method.name + " " + method.translatedBlock.getFieldDeclarations().size());
-//                for (CppDataLayoutM.CustomFieldDeclaration cfd : method.translatedBlock.getFieldDeclarations()){
-////                    System.out.println("herez "+ cfd.fieldDeclarationLine);
-//                }
-//            }
-//        }
-////        System.out.println("$mainmethod " + mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations().size());
-//
-//        for (CppDataLayoutM.CustomFieldDeclaration cfd : mainMethodClassm.transLatedBlockForImpMainMethod.getFieldDeclarations()){
-////            System.out.println("herez1 "+ cfd.fieldDeclarationLine);
-//        }
-
-        //TODO ADD DATA FROM listOfCppImpClassesDatalayout and mainMethodClassm to cppast tree
-        //TODO First add the class level information from cppImplementationClass
-        //TODO. Second Handle the defauly init method. When adding to the tree. First check if deafultConstructorImplementation in cppImplementationClass is null.
-        //TODO. If not null add the data from deafultConstructorImplementation to the tree before moving to add the arrayList
-        //TODO of cppMethodImplementations
-
         //Add to the cpp AST Tree
         //Get the root node of the CPPAST tree
         GNode rootNodeCppAST = cppast.getRoot();
@@ -95,7 +73,6 @@ public class CppMASTCreator {
         //Add the node for implementation classes
         GNode impClassNode = cppNodeActions.createNewASTNode("ImplementationClassses");
         cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impClassNode);
-
 
         //First add the class level information
         for (CppDataLayoutM.cppImplementationClass theClassLevel: listOfCppImpClassesDatalayout){
@@ -176,7 +153,6 @@ public class CppMASTCreator {
 
 
     private static void addDataToBlockNode(GNode blockImplementationNode, CppDataLayoutM.TranslatedBlock transBlock){
-        //TODO add the length of while loops and for loops and arraylist of blocks
         //Get the total length of all the things inside a block
         int totalLengthOfStuff = transBlock.fieldDeclarations.size() + transBlock.expressionStatements.size() + transBlock.forLoops.size() + transBlock.whileLoops.size() + transBlock.blockDecs.size();
         int offset = 0;
@@ -276,5 +252,4 @@ public class CppMASTCreator {
 
         return  ImplementationMethodsNode;
     }
-
 }
