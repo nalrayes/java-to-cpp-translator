@@ -72,7 +72,7 @@ public class CppDataLayoutM {
                     "        new __Class(__rt::literal(\"inputs.javalang." + this.className + "\"), __" + parentClass + "::__class());\n" +
                     "      return k;\n" +
                     "    }";
-            this.vTableDecl = "__" + this.className + "_VT " + "__" + this.className + "::__vtable";
+            this.vTableDecl = "__" + this.className + "_VT " + "__" + this.className + "::__vtable;";
             this.cppMethodImplementations = new ArrayList<cppMethodImplementation>();
 
             //Get the constructor implementations via the class fields

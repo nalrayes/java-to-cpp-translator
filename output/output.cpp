@@ -20,7 +20,7 @@ namespace inputs {
       return k;
     }
 
-    __A_VT __A::__vtable
+    __A_VT __A::__vtable;
 
     A __A:: __init(A__this) {
       return __this;
@@ -45,7 +45,7 @@ namespace inputs {
       return k;
     }
 
-    __B_VT __B::__vtable
+    __B_VT __B::__vtable;
 
     B __B:: __init(B__this) {
       return __this;
