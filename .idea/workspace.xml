@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="af68bbdd-f213-45b2-8739-394f328d7d0c" name="Default" comment="" />
+=======
     <list default="true" id="af68bbdd-f213-45b2-8739-394f328d7d0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
@@ -10,6 +13,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
     </list>
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -39,11 +43,29 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="CppDataLayoutM.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="706" column="13" lean-forward="true" selection-start-line="706" selection-start-column="13" selection-end-line="706" selection-end-column="13" />
+=======
       <file leaf-file-name="CppMASTCreator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMASTCreator.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="550">
               <caret line="257" column="49" lean-forward="true" selection-start-line="257" selection-start-column="49" selection-end-line="257" selection-end-column="49" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="132">
+              <caret line="218" column="9" lean-forward="true" selection-start-line="218" selection-start-column="9" selection-end-line="218" selection-end-column="9" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+            <state relative-caret-position="3885">
+              <caret line="266" column="92" lean-forward="false" selection-start-line="266" selection-start-column="73" selection-end-line="266" selection-end-column="92" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,26 +73,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CppImplementationPrinter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppImplementationPrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1006">
-              <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CppMainPrinter.java" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <file leaf-file-name="CppMainPrinter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="89" column="52" lean-forward="true" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="90" column="49" lean-forward="true" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,18 +89,142 @@
       <file leaf-file-name="output.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output/output.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="cppNodeActions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="Test041.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test041/Test041.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+=======
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/output/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="output.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/output.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="828">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding />
+=======
+      <file leaf-file-name="CppMainPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java">
+=======
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
+      <file leaf-file-name="CppImplementationPrinter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppImplementationPrinter.java">
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1006">
+              <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+=======
+      <file leaf-file-name="CppImplementationPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppImplementationPrinter.java">
+=======
+      <file leaf-file-name="CppMainPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java">
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="89" column="52" lean-forward="true" selection-start-line="89" selection-start-column="52" selection-end-line="89" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output/output.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="215">
+              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state relative-caret-position="4086">
+              <caret line="240" column="17" lean-forward="false" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
+=======
+            <state relative-caret-position="570">
+              <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="CppHeaderASTCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+=======
       <file leaf-file-name="Test026.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test026/Test026.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="155">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
             <state relative-caret-position="165">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
               <folding />
             </state>
           </provider>
@@ -120,6 +255,10 @@
       <find>typeTranslate</find>
       <find>translateType</find>
       <find>CppMethod</find>
+<<<<<<< HEAD
+      <find>Forloop</find>
+=======
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,13 +279,26 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java" />
         <option value="$PROJECT_DIR$/output/output.h" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java" />
+        <option value="$PROJECT_DIR$/output/main.cpp" />
+        <option value="$PROJECT_DIR$/logs/xtc.log" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
         <option value="$PROJECT_DIR$/output/main.cpp" />
         <option value="$PROJECT_DIR$/logs/xtc.log" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMASTCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppImplementationPrinter.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/output/output.cpp" />
+=======
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
       </list>
     </option>
   </component>
@@ -156,11 +308,19 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="32" />
+    <option name="y" value="29" />
+    <option name="width" value="1334" />
+    <option name="height" value="769" />
+=======
   <component name="MavenProjectNavigator">
     <treeState>
       <expand />
       <select />
     </treeState>
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="10" />
@@ -188,6 +348,15 @@
       <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="Scratches" />
+<<<<<<< HEAD
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+=======
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -853,85 +1022,123 @@
               <item name="inputs" type="462c0819:PsiDirectoryNode" />
               <item name="test041" type="462c0819:PsiDirectoryNode" />
               <item name="Test041.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="inputs" type="462c0819:PsiDirectoryNode" />
               <item name="test043" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="inputs" type="462c0819:PsiDirectoryNode" />
               <item name="test043" type="462c0819:PsiDirectoryNode" />
               <item name="Test043.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="inputs" type="462c0819:PsiDirectoryNode" />
               <item name="test047" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="inputs" type="462c0819:PsiDirectoryNode" />
               <item name="test047" type="462c0819:PsiDirectoryNode" />
               <item name="Test047.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inputs" type="462c0819:PsiDirectoryNode" />
-              <item name="test050" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inputs" type="462c0819:PsiDirectoryNode" />
-              <item name="test050" type="462c0819:PsiDirectoryNode" />
-              <item name="Test050.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="target" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="nyu" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="streams" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="nyu" type="462c0819:PsiDirectoryNode" />
+              <item name="oop" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="streams" type="462c0819:PsiDirectoryNode" />
               <item name="compile" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="translator-2" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="streams" type="462c0819:PsiDirectoryNode" />
               <item name="compile" type="462c0819:PsiDirectoryNode" />
@@ -945,6 +1152,7 @@
               <item name="compile" type="462c0819:PsiDirectoryNode" />
               <item name="compileIncremental" type="462c0819:PsiDirectoryNode" />
               <item name="$global" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
             </path>
             <path>
               <item name="xtc-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -1105,13 +1313,36 @@
       <updated>1512342325658</updated>
       <workItem from="1512342331311" duration="22567000" />
       <workItem from="1512440269320" duration="631000" />
+<<<<<<< HEAD
+      <workItem from="1513095878277" duration="1034000" />
+=======
       <workItem from="1513095878277" duration="281000" />
+<<<<<<< HEAD
       <workItem from="1513098019486" duration="246000" />
+=======
+<<<<<<< HEAD
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+      <workItem from="1513098019486" duration="5000" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="25177000" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="24232000" />
+=======
+    <option name="totallyTimeSpent" value="24089000" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+    <option name="totallyTimeSpent" value="24936000" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="85" width="1279" height="649" extended-state="0" />
@@ -1195,6 +1426,53 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CustomClassObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/CppDataLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="155" column="35" lean-forward="true" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMASTCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="218" column="9" lean-forward="true" selection-start-line="218" selection-start-column="9" selection-end-line="218" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#600#636#0" expanded="true" />
+            <element signature="e#1041#1080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test040/Test040.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test039/Test039.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
     <entry file="file://$PROJECT_DIR$/src/test/java/inputs/test043/Test043.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1468,6 +1746,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/output/output.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1422">
@@ -1475,6 +1755,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppHeaderASTCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1501,6 +1782,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <state relative-caret-position="153">
+          <caret line="706" column="13" lean-forward="true" selection-start-line="706" selection-start-column="13" selection-end-line="706" selection-end-column="13" />
+=======
+        <state relative-caret-position="-6411">
+          <caret line="698" column="31" lean-forward="false" selection-start-line="698" selection-start-column="17" selection-end-line="698" selection-end-column="31" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1513096872000" expanded="true" signature="33173:34490" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="33458:34484" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="34530:34857" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="34700:34851" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="34899:43277" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="34909:34975" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="35109:35124" ph=" { " />
+            <marker date="1513096872000" expanded="true" signature="35149:35159" ph=" }" />
+            <marker date="1513096872000" expanded="true" signature="35587:35969" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="36060:43235" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="36075:36229" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="36897:37315" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="37647:37758" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="39438:39538" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="41589:41728" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="43398:44577" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="43460:44571" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="44626:46593" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="45038:46587" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="46671:47137" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="47197:47560" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="47360:47534" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="47617:47762" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="47807:48295" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="47866:47935" ph="//..." />
+            <marker date="1513096872000" expanded="true" signature="48352:48948" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="48999:50867" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="50918:51408" ph="{...}" />
+            <marker date="1513096872000" expanded="true" signature="51034:51401" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/output/output.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -1511,11 +1847,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/output/main.cpp">
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java">
+=======
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java">
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4641">
           <caret line="784" column="15" lean-forward="false" selection-start-line="784" selection-start-column="15" selection-end-line="784" selection-end-column="15" />
@@ -1525,7 +1869,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/util/cppNodeActions.java">
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-550">
           <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
@@ -1533,7 +1882,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output/main.cpp">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/output/output.cpp">
+=======
+    <entry file="file://$PROJECT_DIR$/logs/xtc.log">
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+    <entry file="file://$PROJECT_DIR$/output/output.cpp">
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1541,6 +1900,48 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="90" column="49" lean-forward="true" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
+=======
+>>>>>>> d2f476a45f108e9f97a5afa6688e4a81bbb5457c
+    <entry file="file://$PROJECT_DIR$/output/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+=======
+>>>>>>> 4076e7436e15031d42991507ef6c743cc452ef99
+=======
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMASTCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -1579,5 +1980,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> a9e5cef922bb86f6d9bde5a01cdafe46bcec376e
   </component>
 </project>

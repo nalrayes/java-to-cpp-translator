@@ -30,7 +30,7 @@ public class CppDataLayoutM {
             //Instant the main methods block
 
             this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null);
-
+            this.transLatedBlockForImpMainMethod.returnStatement = "return 0";
             System.out.println("MAIN METHOD CLASS NAME");
             System.out.println("MAIN METHOD");
 
@@ -125,7 +125,7 @@ public class CppDataLayoutM {
                     System.out.println(finalString);
                 }
             }
-            blockForDef.returnStatement = "return __this;";
+            blockForDef.returnStatement = "return __this";
             this.defaultInIt.translatedBlock = blockForDef;
 
             //Process the methods
@@ -847,7 +847,7 @@ public class CppDataLayoutM {
                     this.blockDecs.add(blocDec);
                 }
                 else if (b.getNode(i).getName() == "ReturnStatement") {
-                    this.returnStatement = "return " + processNameNode(b.getNode(i).getNode(0)) + ";";
+                    this.returnStatement = "return " + processNameNode(b.getNode(i).getNode(0));
                 }
             }//End of for loop for block
 
@@ -856,7 +856,7 @@ public class CppDataLayoutM {
             //Handle Constructor Stuff
             if (this.isConstructor) {
                 //Set return type to this
-                this.returnStatement = "return __this;";
+                this.returnStatement = "return __this";
                 //Check if the clas extends object. If not then leave the init call to be Object
                 if(theMethodsClass.getParentClass() != "None"){
                     this.deafultConsturctorCall = "__" + theMethodsClass.getParentClass() + "::__init((" + theMethodsClass.getParentClass() + ") __this)";
@@ -1140,7 +1140,7 @@ public class CppDataLayoutM {
 
         public CustomExpressionStatement(Node sonNode, int pos) {
             this.position = pos;
-            this.expression = processNameNode(sonNode.getNode(0)) + ";";
+            this.expression = processNameNode(sonNode.getNode(0));
             System.out.println("=====================================");
             System.out.println("ExpressionStatement");
             System.out.println(this.expression);
