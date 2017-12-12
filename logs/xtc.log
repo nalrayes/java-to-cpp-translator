@@ -66,10 +66,22 @@
 2017-12-12 13:00:54,818 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:00:54,838 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test009
 2017-12-12 13:00:54,838 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test009.java
+<<<<<<< HEAD
+2017-12-12 13:01:55,331 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:01:55,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test001
+2017-12-12 13:01:55,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
+2017-12-12 13:10:35,519 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:10:35,540 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test001
+2017-12-12 13:10:35,540 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
+=======
 >>>>>>> ac29178f4ebd8b3beab574e91a9bb9fa5a3eb1e9
+<<<<<<< HEAD
 2017-12-12 13:03:54,892 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:03:54,949 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test001
 2017-12-12 13:03:54,951 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
 2017-12-12 13:10:15,127 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:10:15,166 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test002
 2017-12-12 13:10:15,169 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test002.java
+=======
+>>>>>>> db21f29de3636537773c707ceebbb1dc0ca34aef
+>>>>>>> 170d25ec2c2d5248d3615c5a3081ee64a6c9d4e8
