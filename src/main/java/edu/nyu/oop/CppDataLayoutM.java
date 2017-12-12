@@ -344,6 +344,11 @@ public class CppDataLayoutM {
                         fieldDeclarationLine  = varType + " " + declaratorVar + " = " + declaratorVal;
                         System.out.println("newfielddec22 " + fieldDeclarationLine);
                     }
+                    else{
+                        // there is no declaratorValue
+                        declaratorVar = declarator.getString(0);
+                        fieldDeclarationLine = varType + " " + declaratorVar;
+                    }
                 }
             }
         }

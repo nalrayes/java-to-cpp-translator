@@ -9,7 +9,10 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 int main(void) {
-  A a =  __A::__init(new__A("A");
+  A a =  __A::__init(new__A();
+  a->__vptr->almostSetFld(a, __rt::literal("B"));
+  std::cout << a->__vptr->getFld(a) << std::endl;
+  a->__vptr->setFld(a, __rt::literal("B"));
   std::cout << a->__vptr->getFld(a) << std::endl;
   return 0;
 }
