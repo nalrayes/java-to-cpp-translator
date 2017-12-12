@@ -108,6 +108,7 @@ public class CppDataLayoutM {
             if(theClass.getParentClass() != "None"){
                 blockForDef.deafultConsturctorCall = "__" + theClass.getParentClass() + "::__init((" + theClass.getParentClass() + ") __this)";
             }
+            blockForDef.isConstructor = true;
             ArrayList<CustomVariablesClass> classFields = theClass.getClassVariables();
             for (CustomVariablesClass classField : classFields) {
                 if (classField.declaratorRightSide != null) {
