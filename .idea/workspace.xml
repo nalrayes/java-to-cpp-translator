@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af68bbdd-f213-45b2-8739-394f328d7d0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/xtc.log" afterPath="$PROJECT_DIR$/logs/xtc.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMASTCreator.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMASTCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java" afterPath="$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppMainPrinter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -34,8 +37,8 @@
       <file leaf-file-name="CppDataLayoutM.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="713" column="44" lean-forward="false" selection-start-line="713" selection-start-column="44" selection-end-line="713" selection-end-column="44" />
+            <state relative-caret-position="423">
+              <caret line="721" column="49" lean-forward="true" selection-start-line="721" selection-start-column="49" selection-end-line="721" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -2583,12 +2586,12 @@
       <updated>1512342325658</updated>
       <workItem from="1512342331311" duration="22567000" />
       <workItem from="1512440269320" duration="631000" />
-      <workItem from="1513095878277" duration="331000" />
+      <workItem from="1513095878277" duration="435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23529000" />
+    <option name="totallyTimeSpent" value="23633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1028" extended-state="6" />
@@ -3052,8 +3055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/nyu/oop/CppDataLayoutM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="713" column="44" lean-forward="false" selection-start-line="713" selection-start-column="44" selection-end-line="713" selection-end-column="44" />
+        <state relative-caret-position="423">
+          <caret line="721" column="49" lean-forward="true" selection-start-line="721" selection-start-column="49" selection-end-line="721" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
