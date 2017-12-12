@@ -99,7 +99,6 @@ public class CppImplementationPrinter extends Visitor {
     }
 
 
-
     public void visitMethodImplementation(GNode n) throws IOException {
         //Print default constructor
         printer.indent().pln(n.getString(0) + " {");
@@ -108,43 +107,79 @@ public class CppImplementationPrinter extends Visitor {
         printer.pln("");
     }
 
-    public void visitBlockImplementation(GNode n) throws IOException {
-        //Print default constructor
-        //printer.incr().indent().pln(n.getString(0));
-
-//        //Use a for loop to go through the block stuff
-//        for (int i = 0; i < n.size(); i ++){
-//            //Check if the node is a string or not
-//            if(n.getString(i) != null){
-//                //If it is a string then print it
-//                System.out.println(n.getString(i));
-//            }
-//
-//        }
+    public void visitBlockImplementation(GNode n) throws IOException{
+        printer.incr();
+        //Use a for loop to go through the block stuff
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") || n.get(i).toString().contains("BlockDecsImplementation")){
+                //ForLoop, Whileloop and block are found
+            }
+            else{
+                //Print the thing there
+                printer.indent().pln(n.getString(i));
+            }
+        }
         visit(n);
-        printer.indent().pln("}");
-
     }
 
     public void visitForloopImplementation(GNode n) throws IOException{
+        //Print for loop dec statement
+        printer.indent().pln(n.getString(0));
         visit(n);
     }
+
+    public void visitForloopBlock(GNode n) throws IOException{
+        //Use a for loop to go through the block stuff
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
+                //ForLoop, Whileloop and block are found
+            }
+            else{
+                //Print the thing there
+                printer.indent().pln(n.getString(i));
+            }
+        }
+        visit(n);
+    }
+
 
     public void visitWhileloopImplementation(GNode n) throws IOException{
+        //Print while loop dec statement
+        printer.indent().pln(n.getString(0));
         visit(n);
     }
 
+    public void visitWhileloopBlock(GNode n) throws  IOException{
+        //Use a for loop to go through the block stuff
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
+                //ForLoop, Whileloop and block are found
+            }
+            else{
+                //Print the thing there
+                printer.indent().pln(n.getString(i));
+            }
+        }
+        visit(n);
+    }
 
-
-
-
-
-
-
-
-
-
-
+    public void visitBlockDecsImplementation(GNode n) throws  IOException{
+        //Use a for loop to go through the block stuff
+        for (int i = 0; i < n.size(); i ++){
+            //Check if the node is a string or not
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
+                //ForLoop, Whileloop and block are found
+            }
+            else{
+                //Print the thing there
+                printer.indent().pln(n.getString(i));
+            }
+        }
+        visit(n);
+    }
 
 
     //Helper methods
