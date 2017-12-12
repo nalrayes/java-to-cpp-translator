@@ -1047,8 +1047,8 @@ public class CppDataLayoutM {
 
     }
     public static String processCastExpression(Node n) {
-        String ret = "(" + n.getNode(0).getNode(0).getString(0) + ") ";
-        ret += processNameNode(n.getNode(1));
+        String ret = "__rt::java_cast<" + n.getNode(0).getNode(0).getString(0) + ">(";
+        ret += processNameNode(n.getNode(1)) + ")";
         return ret;
     }
 
