@@ -9,9 +9,9 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test025 {
+  namespace test001 {
 
-    __A::__A() : __vptr(&__vtable), i(0)
+    __A::__A() : __vptr(&__vtable)
     {}
 
     Class __A::__class() {
@@ -26,38 +26,8 @@ namespace inputs {
       return __this;
     }
     
-    A __A::__init(A __this, int i) {
-      __Object::__init((Object) __this);
-      __this->i = i;
-      return __this;
-    }
-    
-    int32_t __A::get(A __this) {
-      return __this->i;
-    }
-    
-    __B::__B() : __vptr(&__vtable)
-    {}
-
-    Class __B::__class() {
-      static Class k =
-        new __Class(__rt::literal("inputs.javalang.B"), __A::__class());
-      return k;
-    }
-
-    __B_VT __B::__vtable;
-
-    B __B:: __init(B__this) {
-      return __this;
-    }
-    
-    B __B::__init(B __this, int i) {
-      __A::__init((A) __this, i);
-      return __this;
-    }
-    
-    int32_t __B::get(B __this) {
-      return 10 + __this->i;
+    String __A::toString(A __this) {
+      return __rt::literal("A");
     }
     
   }
