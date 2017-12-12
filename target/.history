@@ -8,3 +8,12 @@ runxtc -translate src/test/java/inputs/test013/Test013.java
 runxtc -translate src/test/java/inputs/test027/Test027.java
 runxtc -translate src/test/java/inputs/test009/Test009.java
 runxtc -translate src/test/java/inputs/test001/Test001.java
+runxtc -translate src/test/java/inputs/test015/Test015.java
+runxtc -translate src/test/java/inputs/test016/Test016.java
+runxtc -translate src/test/java/inputs/test042/Test042.java
+runxtc -translate src/test/java/inputs/test015/Test015.java
+runxtc -translate src/test/java/inputs/test042/Test042.java
+runxtc -translate src/test/java/inputs/test015/Test015.java
+runxtc -printJavaAst src/test/java/inputs/test042/Test042.java
+runxtc -translate src/test/java/inputs/test015/Test015.java
+runxtc -translate src/test/java/inputs/test042/Test042.java
