@@ -12,6 +12,7 @@ class A {
     public void almostSetFld(String f) {
         String fld;
         fld = f;
+        
     }
 
     public String getFld() {
