@@ -1,0 +1,3 @@
+2017-12-12 02:10:06,802 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 02:10:06,823 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test027
+2017-12-12 02:10:06,823 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test027.java
