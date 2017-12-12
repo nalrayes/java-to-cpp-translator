@@ -1,0 +1,4 @@
+-Fix header file arrangement
+-Check for bugs and syntax for all tests
+    Record which tests are throwing errors here
+-Additional advanced features
