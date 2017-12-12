@@ -238,7 +238,7 @@ public class CppMASTCreator {
         for (int i = 0; i < transBlock.blockDecs.size(); i++) {
             CppDataLayoutM.CustomBlockDec b = transBlock.blockDecs.get(i);
             // create new block node
-            GNode newBlockNode = cppNodeActions.createNewASTNode("BlockImplementation");
+            GNode newBlockNode = cppNodeActions.createNewASTNode("BlockDecsImplementation");
             // translate block
             addDataToBlockNode(newBlockNode, b.customBlockDecTranslatedBlock);
             // add block to correct position
