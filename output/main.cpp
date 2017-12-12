@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 #include "java_lang.h"
 #include <string>
@@ -13,3 +14,5 @@ int main(void) {
   std::cout << a->__vptr->toString(a) << std::endl;
   return 0;
 }
+=======
+>>>>>>> db21f29de3636537773c707ceebbb1dc0ca34aef

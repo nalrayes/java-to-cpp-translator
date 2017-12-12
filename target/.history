@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 test *CppHVisitorTest*
 tes-onlyt *CppHVisitorTest*
 test-only *CppHVisitorTest*
@@ -258,3 +259,5 @@ runxtc -translate src/test/java/inputs/test013/Test013.java
 runxtc -translate src/test/java/inputs/test027/Test027.java
 runxtc -translate src/test/java/inputs/test009/Test009.java
 runxtc -translate src/test/java/inputs/test001/Test001.java
+=======
+>>>>>>> db21f29de3636537773c707ceebbb1dc0ca34aef

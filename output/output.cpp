@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 #include "java_lang.h"
 #include <string>
@@ -32,3 +33,5 @@ namespace inputs {
     
   }
 }
+=======
+>>>>>>> db21f29de3636537773c707ceebbb1dc0ca34aef
