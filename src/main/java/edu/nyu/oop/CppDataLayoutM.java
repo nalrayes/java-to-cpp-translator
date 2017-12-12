@@ -696,7 +696,7 @@ public class CppDataLayoutM {
                      postfixExpression = postfixExpressionNode.getNode(0).getString(0) + postfixExpressionNode.getString(1);
                 }
             } // end of get for loop header
-            this.forLoopDecLine = "for (" + loopIteratorType + " " +  declaratorVar + " = " + declaratorVal  + "; " + fullRelationalExpression + "; " + postfixExpression + ") {";
+            this.forLoopDecLine = "for (" + loopIteratorType + " " +  declaratorVar + " = " + declaratorVal  + "; " + fullRelationalExpression + "; " + postfixExpression + ")";
             System.out.println("fullForLoop1234678 " + forLoopDecLine);
             for (int i = 0; i < forLoopNode.size(); i++) {
                 //Use this to find the for loops block
