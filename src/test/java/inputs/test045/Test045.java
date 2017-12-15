@@ -18,6 +18,12 @@ class B extends A {
         System.out.println("B.m(B)");
         return new C();
     }
+
+    C m12345(B b) {
+        System.out.println("B.m(B)");
+        return new C();
+    }
+
     A m(A a) {
         System.out.println("B.m(A)");
         return a;
