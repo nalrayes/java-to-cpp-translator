@@ -1,2 +1,25 @@
 runxtc -translate src/test/java/inputs/test006/Test006.java
 
+runxtc -customUnitTest src/test/java/inputs/Test040/Test040.java
+runxtc -customUnitTest src/test/java/inputs/test040/Test040.java
+runxtc -translate src/test/java/inputs/Test040/Test040.java
+runxtc -translate src/test/java/inputs/test040/Test040.java
+runxtc -customUnitTest src/test/java/inputs/test040/Test040.java
+runxtc -customUnitTest src/test/java/inputs/test010/Test010.java
+runxtc -translate src/test/java/inputs/test010/Test010.java
+runxtc -customUnitTest src/test/java/inputs/test010/Test010.java
+test-only *ExampleUnitTest*
+test-only ExampleUnitTest
+test-only TraverseASTTest
+test TraverseASTTest
+test-only TraverseASTTest
+test
+test-only *TraverseASTTest*
+test-only *ExampleUnitTest*
+test-only *TraverseASTTest*
+test-only CustomUnitTest
+test
+clear
+test-only *CustomUnitTest*
+test-only *TraverseASTTest*
+test-only *CustomUnitTest*
