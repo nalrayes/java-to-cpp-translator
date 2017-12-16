@@ -1,35 +1,106 @@
-s
-runxtc -translate src/test/java/inputs/test013/Test013.java
-runxtc -translate src/test/java/inputs/test032/Test032.java
-runxtc -translate src/test/java/inputs/test036/Test036.java
-runxtc -translate src/test/java/inputs/test046/Test046.java
-runxtc -translate src/test/java/inputs/test050/Test050.java
-runxtc -translate src/test/java/inputs/test015/Test015.java
-runxtc -translate src/test/java/inputs/test046/Test046.java
-runxtc -translate src/test/java/inputs/test006/Test006.java
-
-runxtc -customUnitTest src/test/java/inputs/Test040/Test040.java
-runxtc -customUnitTest src/test/java/inputs/test040/Test040.java
-runxtc -translate src/test/java/inputs/Test040/Test040.java
-runxtc -translate src/test/java/inputs/test040/Test040.java
-runxtc -customUnitTest src/test/java/inputs/test040/Test040.java
-runxtc -customUnitTest src/test/java/inputs/test010/Test010.java
-runxtc -translate src/test/java/inputs/test010/Test010.java
-runxtc -customUnitTest src/test/java/inputs/test010/Test010.java
-test-only *ExampleUnitTest*
-test-only ExampleUnitTest
-test-only TraverseASTTest
-test TraverseASTTest
-test-only TraverseASTTest
+test *CppHVisitorTest*
+tes-onlyt *CppHVisitorTest*
+test-only *CppHVisitorTest*
+tesst
 test
-test-only *TraverseASTTest*
-test-only *ExampleUnitTest*
-test-only *TraverseASTTest*
-test-only CustomUnitTest
+git add .
+test-only *CppHVisitorTest*
+test-only *CppHVisitorTest* a
+git add .
+test-only *CppHVisitorTest* a
+test-only *CppHVisitorTest*
+test-only *CppHVisitorTest*>
+test-only *CppHVisitorTest*
+q
+test-only *CppHVisitorTest*
+q
+test-only *CppHVisitorTest*
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+clear && printf '\e[3J'
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -cppFilePrinter "src/test/java/inputs/Test010/Test010.java"
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+runxtc -translate src/test/java/inputs/Test002/Test002.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+q
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+/java/inputs/Test019/Test019.java
+runxtc -translate src/test/java/inputs/Test020/Test020.java
+rintJavaAst src/test/java/inputs/test010/Test010.java
 test
-clear
-test-only *CustomUnitTest*
+test-only *MethodVisitorTest*
+test
+test-only *MethodVisitorTest*
+test
+test-only *MethodVisitorTest*
+kill -9 5430
+test
+runxtc -printJavaAst src/test/java/inputs/Test000/Test000.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translateJava
+runxtc -translate
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+<<<<<<< HEAD
+runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test028/Test028.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test003/Test003.java
+runxtc -printJavaAst src/test/java/inputs/Test002/Test002.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+xtc -translate src/test/java/inputs/Test010/Test010.javarunxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+=======
+test-only *MethodVisitorTest*
 test-only *TraverseASTTest*
+>>>>>>> 27c8549a37ebcd5a50e033040c95ca4529b6c0f7
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
 runxtc -translate src/test/java/inputs/Test010/Test010.java
@@ -216,3 +287,4 @@ runxtc -translate src/test/java/inputs/test037/Test037.java
 runxtc -translate src/test/java/inputs/test038/Test038.java
 runxtc -translate src/test/java/inputs/test012/Test012.java
 runxtc -translate src/test/java/inputs/test038/Test038.java
+runxtc -translate src/test/java/inputs/test001/Test001.java

@@ -104,7 +104,11 @@ public class CppDataLayout {
             this.name = "__" + c.getClassName();
             this.classDeclarator = "static Class __class()";
             this.VTableDeclarator = "static __" + c.getClassName() + "_" +"VT" + " __vtable";
-            this.custTypedef = "__" + c.getClassName() +"* " + c.getClassName();
+            this.custTypedef = "__rt::Ptr<__" + c.getClassName() +">" + c.getClassName();
+
+            //__rt::Ptr<__A> A
+
+
             this.constructors = new ArrayList<CppConstructor>();
 
             // instantiates all data

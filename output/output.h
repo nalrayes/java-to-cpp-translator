@@ -9,7 +9,7 @@ namespace inputs {
   
     struct __A;
     struct __A_VT;
-    typedef __A* A;
+    typedef __rt::Ptr<__A>A;
     
     struct __A { 
       
@@ -42,7 +42,7 @@ namespace inputs {
 
     struct __Test001;
     struct __Test001_VT;
-    typedef __Test001* Test001;
+    typedef __rt::Ptr<__Test001>Test001;
     
     struct __Test001 { 
       
