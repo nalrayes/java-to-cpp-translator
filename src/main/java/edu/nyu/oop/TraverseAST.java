@@ -253,7 +253,19 @@ public class TraverseAST extends Visitor {
         //Save the new name for the method
         currentMethodObj.name = newName;
         currentClass.methods.add(currentMethodObj);
+
+
+
+
         visit(n);
+        System.out.println("Class " + currentClass.className);
+        for (CustomMethodClass cm : currentClass.methods){
+
+            System.out.println("TESTMETHODS1234567 \n" + cm.getName());
+
+
+
+        }
     }
 
 
@@ -279,5 +291,6 @@ public class TraverseAST extends Visitor {
         ArrayList<CustomClassObject> classes = new ArrayList<CustomClassObject>();
         ArrayList<String> packages = new ArrayList<String>();
         JavaFileObject javaFile =  new JavaFileObject();
+        ArrayList<CustomMethodClass> methods = new ArrayList<CustomMethodClass>();
     }
 }

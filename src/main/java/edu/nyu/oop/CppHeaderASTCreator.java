@@ -12,6 +12,8 @@ import java.util.ArrayList;
 //This class generates the C++ Header AST from the classSummary object
 public class CppHeaderASTCreator {
 
+    public static ArrayList<CustomMethodClass> allMethods = new ArrayList<CustomMethodClass>();
+
 
     private CppHeaderASTCreator() {
     }
@@ -117,9 +119,17 @@ public class CppHeaderASTCreator {
                 //this is all other classes which are children
                 //System.out.println(cobj.getCppClassName() + " " + cobj.getOldJavaClassName());
                 //Get the parent
+
                 CppClassObject parent = cobj.getParentClass();
                 //System.out.println(cobj.getCppClassName() + " Parent: " + parent.getCppClassName());
                 cobj.createCppDataLayoutExtendsParent(parent.getCppDataLayout(),currJavaClass);
+
+
+
+
+
+
+
             }
         }
     }
@@ -298,6 +308,15 @@ public class CppHeaderASTCreator {
         ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
         structsMap = new HashMap<String, CustomClassObject>();
 
+
+
+
+        //rearrange methods in classes
+
+
+
+
+
         for (CustomClassObject c: javaData.classes){
             // used for populating vtables
             structsMap.put(c.getClassName(), c);
@@ -306,9 +325,21 @@ public class CppHeaderASTCreator {
         // creates branch for structs
         for (CustomClassObject c: javaData.classes){
             CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c, structsMap);
+
+
+
+
             // added to the tree
             structs.add(aStruct);
         }
+
+
+
+
+
+
+
+
 
 
 //        // creates branch for VTables

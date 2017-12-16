@@ -5,7 +5,7 @@
 using namespace java::lang;
 
 namespace inputs {
-  namespace test012 {
+  namespace test038 {
   
     struct __A;
     struct __A_VT;
@@ -17,11 +17,9 @@ namespace inputs {
       
       __A();
 
-      String a;
-
-      static void setA_String(A,String);
-      static void printOther_A(A,A);
-      static String myToString(A);
+      static void m_Object_Object(A,Object,Object);
+      static void m_A_Object(A,A,Object);
+      static void m_Object_A(A,Object,A);
       static A __init();
       static Class __class();
 
@@ -35,9 +33,9 @@ namespace inputs {
       Class (*getClass) (A);
       String (*toString) (A);
       bool (*equals) (A, Object);
-      void (*setA_String) (A, String);
-      void (*printOther_A) (A, A);
-      String (*myToString) (A);
+      void (*m_Object_Object) (A, Object, Object);
+      void (*m_A_Object) (A, A, Object);
+      void (*m_Object_A) (A, Object, A);
 
       __A_VT()
       : __is_a(__A::__class()),
@@ -45,164 +43,89 @@ namespace inputs {
         getClass((Class (*)(A)) &__Object::getClass),
         toString((String (*)(A)) &__Object::toString),
         equals((bool (*)(A, Object)) &__Object::equals),
-        setA_String(&__A::setA_String),
-        printOther_A(&__A::printOther_A),
-        myToString(&__A::myToString) {}
+        m_Object_Object(&__A::m_Object_Object),
+        m_A_Object(&__A::m_A_Object),
+        m_Object_A(&__A::m_Object_A) {}
     };
 
-    struct __B1;
-    struct __B1_VT;
-    typedef __B1* B1;
+    struct __B;
+    struct __B_VT;
+    typedef __B* B;
     
-    struct __B1 { 
+    struct __B { 
       
-      __B1_VT* __vptr;
+      __B_VT* __vptr;
       
-      __B1();
+      __B();
 
-      String b;
-
-      static B1 __init();
+      static void m_Object_Object(B,Object,Object);
+      static void m_B_Object(B,B,Object);
+      static void m_Object_B(B,Object,B);
+      static B __init();
       static Class __class();
 
-      static __B1_VT __vtable;
+      static __B_VT __vtable;
     };
 
-    struct __B1_VT { 
+    struct __B_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (B1);
-      Class (*getClass) (B1);
-      String (*toString) (B1);
-      bool (*equals) (B1, Object);
-      void (*setA_String) (B1, String);
-      void (*printOther_A) (B1, A);
-      String (*myToString) (B1);
+      int32_t (*hashCode) (B);
+      Class (*getClass) (B);
+      String (*toString) (B);
+      bool (*equals) (B, Object);
+      void (*m_Object_Object) (B, Object, Object);
+      void (*m_A_Object) (B, A, Object);
+      void (*m_Object_A) (B, Object, A);
+      void (*m_B_Object) (B, B, Object);
+      void (*m_Object_B) (B, Object, B);
 
-      __B1_VT()
-      : __is_a(__B1::__class()),
-        setA_String((void (*)(B1)) &__A::setA_String),
-        printOther_A((void (*)(B1)) &__A::printOther_A),
-        myToString((String (*)(B1)) &__A::myToString),
-        hashCode((int32_t (*)(B1)) &__Object::hashCode),
-        getClass((Class (*)(B1)) &__Object::getClass),
-        toString((String (*)(B1)) &__Object::toString),
-        equals((bool (*)(B1, Object)) &__Object::equals) {}
+      __B_VT()
+      : __is_a(__B::__class()),
+        hashCode((int32_t (*)(B)) &__Object::hashCode),
+        getClass((Class (*)(B)) &__Object::getClass),
+        toString((String (*)(B)) &__Object::toString),
+        equals((bool (*)(B, Object)) &__Object::equals),
+        m_Object_Object(&__B::m_Object_Object),
+        m_A_Object((void (*)(B)) &__A::m_A_Object),
+        m_Object_A((void (*)(B)) &__A::m_Object_A),
+        m_B_Object(&__B::m_B_Object),
+        m_Object_B(&__B::m_Object_B) {}
     };
 
-    struct __B2;
-    struct __B2_VT;
-    typedef __B2* B2;
+    struct __Test038;
+    struct __Test038_VT;
+    typedef __Test038* Test038;
     
-    struct __B2 { 
+    struct __Test038 { 
       
-      __B2_VT* __vptr;
+      __Test038_VT* __vptr;
       
-      __B2();
+      __Test038();
 
-      String b;
-
-      static B2 __init();
+      static void main_String(Test038,String);
+      static Test038 __init();
       static Class __class();
 
-      static __B2_VT __vtable;
+      static __Test038_VT __vtable;
     };
 
-    struct __B2_VT { 
+    struct __Test038_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (B2);
-      Class (*getClass) (B2);
-      String (*toString) (B2);
-      bool (*equals) (B2, Object);
-      void (*setA_String) (B2, String);
-      void (*printOther_A) (B2, A);
-      String (*myToString) (B2);
+      int32_t (*hashCode) (Test038);
+      Class (*getClass) (Test038);
+      String (*toString) (Test038);
+      bool (*equals) (Test038, Object);
+      void (*main_String) (Test038, String);
 
-      __B2_VT()
-      : __is_a(__B2::__class()),
-        setA_String((void (*)(B2)) &__A::setA_String),
-        printOther_A((void (*)(B2)) &__A::printOther_A),
-        myToString((String (*)(B2)) &__A::myToString),
-        hashCode((int32_t (*)(B2)) &__Object::hashCode),
-        getClass((Class (*)(B2)) &__Object::getClass),
-        toString((String (*)(B2)) &__Object::toString),
-        equals((bool (*)(B2, Object)) &__Object::equals) {}
-    };
-
-    struct __C;
-    struct __C_VT;
-    typedef __C* C;
-    
-    struct __C { 
-      
-      __C_VT* __vptr;
-      
-      __C();
-
-      String c;
-
-      static String myToString(C);
-      static C __init();
-      static Class __class();
-
-      static __C_VT __vtable;
-    };
-
-    struct __C_VT { 
-      Class __is_a;
-
-      int32_t (*hashCode) (C);
-      Class (*getClass) (C);
-      String (*toString) (C);
-      bool (*equals) (C, Object);
-      void (*setA_String) (C, String);
-      void (*printOther_A) (C, A);
-      String (*myToString) (C);
-
-      __C_VT()
-      : __is_a(__C::__class()),
-        setA_String((void (*)(C)) &__A::setA_String),
-        printOther_A((void (*)(C)) &__A::printOther_A),
-        hashCode((int32_t (*)(C)) &__Object::hashCode),
-        getClass((Class (*)(C)) &__Object::getClass),
-        toString((String (*)(C)) &__Object::toString),
-        equals((bool (*)(C, Object)) &__Object::equals),
-        myToString(&__C::myToString) {}
-    };
-
-    struct __Test012;
-    struct __Test012_VT;
-    typedef __Test012* Test012;
-    
-    struct __Test012 { 
-      
-      __Test012_VT* __vptr;
-      
-      __Test012();
-
-      static void main_String(Test012,String);
-      static Test012 __init();
-      static Class __class();
-
-      static __Test012_VT __vtable;
-    };
-
-    struct __Test012_VT { 
-      Class __is_a;
-
-      int32_t (*hashCode) (Test012);
-      Class (*getClass) (Test012);
-      String (*toString) (Test012);
-      bool (*equals) (Test012, Object);
-
-      __Test012_VT()
-      : __is_a(__Test012::__class()),
-        hashCode((int32_t (*)(Test012)) &__Object::hashCode),
-        getClass((Class (*)(Test012)) &__Object::getClass),
-        toString((String (*)(Test012)) &__Object::toString),
-        equals((bool (*)(Test012, Object)) &__Object::equals),
-        main_String(&__Test012::main_String) {}
+      __Test038_VT()
+      : __is_a(__Test038::__class()),
+        hashCode((int32_t (*)(Test038)) &__Object::hashCode),
+        getClass((Class (*)(Test038)) &__Object::getClass),
+        toString((String (*)(Test038)) &__Object::toString),
+        equals((bool (*)(Test038, Object)) &__Object::equals),
+        main_String(&__Test038::main_String) {}
     };
 
   }

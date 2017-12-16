@@ -1,7 +1,8 @@
--Fix header file arrangement
--Check default init implementations to include call to the superClass init - Currently missing
--Check for bugs and syntax for all tests
-    Record which tests are throwing errors here:
-      Test006
--Additional advanced features
-    1. Changer header files to use smart pointers
+
+- Fix header file arrangement
+- Check for bugs and syntax for all tests
+    Record which tests are throwing errors here
+- Additional advanced features
+
+What should array translations look like?
+At this point, how should we do JUnit tests?
