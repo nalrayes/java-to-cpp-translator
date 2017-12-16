@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 #include "java_lang.h"
 #include <string>
 #include "output.h"
@@ -9,7 +9,7 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test038 {
+  namespace test001 {
 
     __A::__A() : __vptr(&__vtable)
     {}
@@ -23,6 +23,12 @@ namespace inputs {
     __A_VT __A::__vtable;
 
     A __A:: __init(A__this) {
+      __Object::__init((Object) __this);
+      return __this;
+    }
+    
+    String __A::toString(A __this) {
+      return __rt::literal("A");
     }
     
   }
