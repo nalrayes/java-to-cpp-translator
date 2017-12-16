@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-=runxtc -translate src/test/java/inputs/test030/Test030.java
-runxtc -translate src/test/java/inputs/test031/Test031.java
-runxtc -printJavaAst src/test/java/inputs/test031/Test031.java
-runxtc -translate src/test/java/inputs/test031/Test031.java
-runxtc -translate src/test/java/inputs/test032/Test032.java
-runxtc -translate src/test/java/inputs/test027/Test027.java
+runxtc -translate src/test/java/inputs/test010/Test010.java
 runxtc -translate src/test/java/inputs/test013/Test013.java
-runxtc -translate src/test/java/inputs/test027/Test027.java
-runxtc -translate src/test/java/inputs/test009/Test009.java
-runxtc -translate src/test/java/inputs/test001/Test001.java
+runxtc -translate src/test/java/inputs/test032/Test032.java
+runxtc -translate src/test/java/inputs/test036/Test036.java
+runxtc -translate src/test/java/inputs/test046/Test046.java
+runxtc -translate src/test/java/inputs/test050/Test050.java
 runxtc -translate src/test/java/inputs/test015/Test015.java
-runxtc -translate src/test/java/inputs/test016/Test016.java
-runxtc -translate src/test/java/inputs/test042/Test042.java
-runxtc -translate src/test/java/inputs/test015/Test015.java
-runxtc -translate src/test/java/inputs/test042/Test042.java
-runxtc -translate src/test/java/inputs/test015/Test015.java
-runxtc -printJavaAst src/test/java/inputs/test042/Test042.java
-runxtc -translate src/test/java/inputs/test015/Test015.java
-runxtc -translate src/test/java/inputs/test042/Test042.java
-=======
-runxtc -translate src/test/java/inputs/test005/Test005.java
-runxtc -translate src/test/java/inputs/test006/Test006.java
-runxtc -printJavaAst src/test/java/inputs/test006/Test006.java
-runxtc -translate src/test/java/inputs/test006/Test006.java
-runxtc -translate src/test/java/inputs/test007/Test007.java
-runxtc -translate src/test/java/inputs/test004/Test004.java
-runxtc -translate src/test/java/inputs/test002/Test002.java
-runxtc -translate src/test/java/inputs/test004/Test004.java
->>>>>>> 43c0c2835a8a8d5e452f8c0b2bc31f87ce2647e9
+runxtc -translate src/test/java/inputs/test046/Test046.java
