@@ -108,6 +108,7 @@ public class CppDataLayoutM {
             if(theClass.getParentClass() != "None"){
                 blockForDef.deafultConsturctorCall = "__" + theClass.getParentClass() + "::__init((" + theClass.getParentClass() + ") __this)";
             }
+            blockForDef.isConstructor = true;
             ArrayList<CustomVariablesClass> classFields = theClass.getClassVariables();
             for (CustomVariablesClass classField : classFields) {
                 if (classField.declaratorRightSide != null) {
@@ -781,7 +782,7 @@ public class CppDataLayoutM {
         return false;
     }
 
-    public static String processCallExpression(Node n) {
+    public static String processCallExpression(Node n, int i) {
         String arguments = "";
         if (n.getNode(3) != null) {
             arguments = processArguments(n.getNode(3));
@@ -791,9 +792,22 @@ public class CppDataLayoutM {
             return "std::cout << " + arguments.substring(2,arguments.length()) + " << std::endl";
         }
 
-        String callTo = processNameNode(n.getNode(0));
+
         String methodName = n.getString(2);
-        String ret = callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ")";
+        String ret = "({";
+        String callTo;
+        if (n.getNode(0).getName().equals("CallExpression")) {
+            String tmpCallTo = processCallExpression(n.getNode(0), i + 1);
+            String iter = Integer.toString(i);
+            String tmp = "tmp" + iter;
+            ret += "Object " + tmp + " = " + tmpCallTo + "; ";
+            ret += "__rt::checkNotNull(" + tmp + "); ";
+            callTo = tmp;
+        } else {
+            callTo = processNameNode(n.getNode(0));
+            ret += "__rt::checkNotNull(" + callTo + "); ";
+        }
+        ret += callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ")})";
         return ret;
     }
 
@@ -815,7 +829,7 @@ public class CppDataLayoutM {
             // translation: __class:__init
             res = processNewClassExpression(n);
         } else if (n.getName() == "CastExpression") {
-            // translation: no difference
+            // javalangcast thing
             res = processCastExpression(n);
         } else if (n.getName() == "AdditiveExpression") {
             // translation: no difference
@@ -828,7 +842,7 @@ public class CppDataLayoutM {
             res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
         } else if (n.getName() == "CallExpression") {
             // translation: ->__vptr->methodCall
-            res = processCallExpression(n);
+            res = processCallExpression(n, 0);
         } else if (n.getName() == "StringLiteral") {
             // translation: __rt::literal(<string>)
             res = "__rt::literal(" + n.getString(0) + ")";

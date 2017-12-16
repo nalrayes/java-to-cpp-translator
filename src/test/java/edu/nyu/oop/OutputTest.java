@@ -60,6 +60,8 @@ public class OutputTest {
 
     @Test
     public void testOutput() {
+
+    }
 //        class A {
 //            public String toString() {
 //                return "A";
@@ -72,6 +74,8 @@ public class OutputTest {
 //                System.out.println(a.toString());
 //            }
 //        }
+
+        /*
         __A::__String toString(__A this){
             return __rt::literal ("A");
         }
@@ -92,8 +96,7 @@ public class OutputTest {
             __A a = new __A::__init(__A());
             std::cout << a->__vptr->toString(a) << std::endl;
         }
-
-//    class A {
+        //    class A {
 //        String a;
 //
 //        public void setA(String x) {
@@ -161,5 +164,5 @@ public class OutputTest {
         a->vptr->printOther(a,b2);
         a->vptr->printOther(a,c);
 
-
+        */
 }

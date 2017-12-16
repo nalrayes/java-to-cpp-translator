@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 2017-12-12 12:07:30,226 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 12:07:30,287 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test025
 2017-12-12 12:07:30,291 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test025.java
@@ -62,29 +61,92 @@
 2017-12-12 12:59:45,307 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 12:59:45,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test001
 2017-12-12 12:59:45,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
-=======
 2017-12-12 13:00:54,818 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:00:54,838 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test009
 2017-12-12 13:00:54,838 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test009.java
-<<<<<<< HEAD
 2017-12-12 13:01:55,331 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:01:55,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test001
 2017-12-12 13:01:55,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
 2017-12-12 13:10:35,519 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:10:35,540 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test001
 2017-12-12 13:10:35,540 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
-=======
->>>>>>> ac29178f4ebd8b3beab574e91a9bb9fa5a3eb1e9
-<<<<<<< HEAD
 2017-12-12 13:03:54,892 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:03:54,949 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test001
 2017-12-12 13:03:54,951 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test001.java
 2017-12-12 13:10:15,127 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:10:15,166 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test002
 2017-12-12 13:10:15,169 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test002.java
-=======
->>>>>>> db21f29de3636537773c707ceebbb1dc0ca34aef
->>>>>>> 170d25ec2c2d5248d3615c5a3081ee64a6c9d4e8
+2017-12-12 13:32:52,256 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:32:52,294 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test015
+2017-12-12 13:32:52,295 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test015.java
+2017-12-12 13:42:13,800 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:42:13,854 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test016
+2017-12-12 13:42:13,854 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test016.java
+2017-12-12 14:09:47,479 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 14:09:47,501 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test042
+2017-12-12 14:09:47,502 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test042.java
+2017-12-12 14:15:37,800 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 14:15:37,825 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test015
+2017-12-12 14:15:37,828 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test015.java
+2017-12-12 14:17:31,651 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 14:17:31,671 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test042
+2017-12-12 14:17:31,671 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test042.java
+2017-12-12 14:20:14,782 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 14:20:14,813 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test015
+2017-12-12 14:20:14,814 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test015.java
+2017-12-12 14:38:34,887 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:20:35,127 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:20:35,151 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test015
+2017-12-12 16:20:35,151 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test015.java
+2017-12-12 16:20:47,156 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:20:47,177 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test015
+2017-12-12 16:20:47,177 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test015.java
+2017-12-12 16:21:01,445 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:21:01,489 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test015
+2017-12-12 16:21:01,490 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test015.java
+2017-12-12 16:22:05,435 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:22:05,459 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test042
+2017-12-12 16:22:05,459 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test042.java
+2017-12-12 16:25:54,794 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:25:54,830 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test042
+2017-12-12 16:25:54,831 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test042.java
+2017-12-12 16:26:49,500 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:26:49,522 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test042
+2017-12-12 16:26:49,523 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test042.java
+2017-12-12 16:27:33,531 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 16:27:33,571 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/nayef/Dropbox/NYU Classes/Senior Semester 1/oop/translator-2/src/main/java/inputs/test042
+2017-12-12 16:27:33,571 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test042.java
+2017-12-12 13:20:05,597 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:20:05,655 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test004
+2017-12-12 13:20:05,656 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test004.java
+2017-12-12 13:23:06,435 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:23:06,473 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test005
+2017-12-12 13:23:06,474 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test005.java
+2017-12-12 13:26:21,745 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:26:21,779 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test006
+2017-12-12 13:26:21,783 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test006.java
+2017-12-12 13:26:27,745 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:26:27,775 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test006
+2017-12-12 13:26:27,776 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test006.java
+2017-12-12 13:29:35,255 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:31:16,493 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:31:16,542 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test006
+2017-12-12 13:31:16,543 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test006.java
+2017-12-12 13:32:10,143 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:32:10,178 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test007
+2017-12-12 13:32:10,179 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test007.java
+2017-12-12 13:33:34,365 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:33:34,397 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test004
+2017-12-12 13:33:34,399 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test004.java
+2017-12-12 13:34:58,315 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:34:58,350 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test002
+2017-12-12 13:34:58,351 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test002.java
+2017-12-12 13:41:34,046 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:41:34,092 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test002
+2017-12-12 13:41:34,111 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test002.java
+2017-12-12 13:41:46,170 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:41:46,200 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test004
+2017-12-12 13:41:46,201 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test004.java
 2017-12-12 13:22:25,098 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-12 13:22:25,121 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test004
 2017-12-12 13:22:25,121 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test004.java
@@ -411,3 +473,264 @@
 2017-12-15 21:40:44,260 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
 2017-12-15 21:40:44,304 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/inputs/test038
 2017-12-15 21:40:44,305 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test038.java
+2017-12-12 13:44:23,593 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-12 13:44:23,672 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /Users/Nicholas/Desktop/OOP/translator-2/src/main/java/inputs/test006
+2017-12-12 13:44:23,673 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test006.java
+2017-12-15 16:56:31,572 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 16:57:32,417 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 16:57:32,498 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 16:57:32,502 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 16:59:27,901 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 16:59:27,978 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 16:59:27,981 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 17:00:02,529 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:00:43,327 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:00:43,431 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 17:00:43,437 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 17:01:20,301 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:01:20,391 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 17:01:20,395 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 17:02:06,484 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:02:06,635 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 17:02:06,640 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 17:04:47,413 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:04:47,545 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 17:04:47,545 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 17:04:57,533 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:04:57,643 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 17:04:57,646 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 17:05:14,883 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:05:14,980 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 17:05:14,986 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 17:06:47,438 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:06:47,537 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 17:06:47,540 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 17:07:59,111 - [main] DEBUG edu.nyu.oop.Boot - This is a debugging statement.
+2017-12-15 17:07:59,218 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 17:07:59,221 - [main] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:23:47,788 - [pool-12-thread-2] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-12-15 18:24:22,340 - [pool-15-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-12-15 18:25:21,645 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Executing NodeInspectionExample
+2017-12-15 18:25:21,721 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Root node name is CompilationUnit
+2017-12-15 18:25:21,721 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 0's name is PackageDeclaration
+2017-12-15 18:25:21,722 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 1's name is ImportDeclaration
+2017-12-15 18:25:21,722 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 2's name is ImportDeclaration
+2017-12-15 18:25:21,722 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 3's name is ImportDeclaration
+2017-12-15 18:25:21,722 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 4's name is ImportDeclaration
+2017-12-15 18:25:21,722 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 5's name is ImportDeclaration
+2017-12-15 18:25:21,722 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 6's name is ImportDeclaration
+2017-12-15 18:25:21,724 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 7's name is ImportDeclaration
+2017-12-15 18:25:21,725 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 8's name is ImportDeclaration
+2017-12-15 18:25:21,726 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 9's name is ImportDeclaration
+2017-12-15 18:25:21,726 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Child 10's name is ClassDeclaration
+2017-12-15 18:25:21,728 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - PackageDeclaration node looks like this PackageDeclaration(null, QualifiedIdentifier("inputs", "homework2"))
+2017-12-15 18:25:21,728 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-12-15 18:25:21,728 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeInspectionExample - Type of child is  class java.lang.String
+2017-12-15 18:25:21,864 - [pool-19-thread-1] DEBUG edu.nyu.oop.NodeUtilTest - Executing NodeUtilTest
+2017-12-15 18:25:21,906 - [pool-19-thread-1] DEBUG edu.nyu.oop.SymbolTableTest - Executing SymbolTableTest
+2017-12-15 18:25:21,915 - [pool-19-thread-1] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookupWithShadowedVariables
+2017-12-15 18:25:22,269 - [pool-19-thread-1] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleLookup
+2017-12-15 18:25:22,580 - [pool-19-thread-1] DEBUG edu.nyu.oop.SymbolTableTest - Executing testSimpleGenerateAndPrint
+2017-12-15 18:25:22,925 - [pool-19-thread-1] DEBUG edu.nyu.oop.SymbolTableTest - Executing testLookup
+2017-12-15 18:25:23,267 - [pool-19-thread-1] DEBUG edu.nyu.oop.MethodVisitorTest - Executing MethodVisitorTest
+2017-12-15 18:25:23,353 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - Executing NodeTransformationExample
+2017-12-15 18:25:23,354 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - Begin addNewNodes
+2017-12-15 18:25:23,355 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-12-15 18:25:23,360 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-12-15 18:25:23,364 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - Begin mutateNodes
+2017-12-15 18:25:23,377 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - Before...
+2017-12-15 18:25:23,381 - [pool-19-thread-1] DEBUG e.nyu.oop.NodeTransformationExample - After...
+2017-12-15 18:25:23,394 - [pool-19-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-12-15 18:25:23,410 - [pool-19-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing TraverseASTTest
+2017-12-15 18:25:23,426 - [pool-19-thread-1] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-12-15 18:25:23,435 - [pool-19-thread-1] DEBUG edu.nyu.oop.CppHVisitorTest - Executing MethodVisitorTest
+2017-12-15 18:25:23,492 - [pool-19-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test012
+2017-12-15 18:25:23,494 - [pool-19-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test012.java
+2017-12-15 18:25:23,600 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - BeforeClass - beforeClass
+2017-12-15 18:25:23,600 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-12-15 18:25:23,600 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-12-15 18:25:23,604 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-12-15 18:25:23,605 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-12-15 18:25:23,605 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @Before - setUp
+2017-12-15 18:25:23,605 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @After - tearDown
+2017-12-15 18:25:23,605 - [pool-19-thread-1] DEBUG edu.nyu.oop.JunitTestExample - @AfterClass - afterClass
+2017-12-15 18:26:56,013 - [pool-21-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing TraverseASTTest
+2017-12-15 18:27:25,073 - [pool-23-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing CustomUnitTest
+2017-12-15 18:27:45,021 - [pool-25-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing CustomUnitTest
+2017-12-15 18:28:29,204 - [pool-27-thread-4] DEBUG edu.nyu.oop.TraverseASTTest - Executing TraverseASTTest
+2017-12-15 18:28:29,306 - [pool-27-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:28:29,309 - [pool-27-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:39:05,559 - [pool-4-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:42:12,326 - [pool-6-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:43:43,762 - [pool-8-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:44:56,998 - [pool-10-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:44:57,093 - [pool-10-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:44:57,098 - [pool-10-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:44:57,160 - [pool-10-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:44:57,160 - [pool-10-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:46:24,225 - [pool-12-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:46:24,301 - [pool-12-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:46:24,303 - [pool-12-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:46:24,360 - [pool-12-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:46:24,361 - [pool-12-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:47:18,377 - [pool-14-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:47:18,483 - [pool-14-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:47:18,488 - [pool-14-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:47:18,534 - [pool-14-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:47:18,535 - [pool-14-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:47:42,595 - [pool-16-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:47:42,646 - [pool-16-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:47:42,647 - [pool-16-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:47:42,681 - [pool-16-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:47:42,681 - [pool-16-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:51:51,084 - [pool-18-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:51:51,139 - [pool-18-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:51:51,141 - [pool-18-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:51:51,181 - [pool-18-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:51:51,182 - [pool-18-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:54:15,521 - [pool-20-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:54:15,566 - [pool-20-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:54:15,567 - [pool-20-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:54:15,598 - [pool-20-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:54:15,598 - [pool-20-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:57:04,605 - [pool-22-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 18:57:04,646 - [pool-22-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:57:04,648 - [pool-22-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 18:57:04,692 - [pool-22-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 18:57:04,693 - [pool-22-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:00:47,608 - [pool-24-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:00:47,654 - [pool-24-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:00:47,655 - [pool-24-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:00:47,685 - [pool-24-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:00:47,685 - [pool-24-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:01:09,765 - [pool-26-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:01:09,815 - [pool-26-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:01:09,816 - [pool-26-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:01:09,852 - [pool-26-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:01:09,852 - [pool-26-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:01:24,795 - [pool-28-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:01:24,808 - [pool-28-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:01:24,852 - [pool-28-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:01:24,857 - [pool-28-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:03:49,693 - [pool-30-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:03:49,776 - [pool-30-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:03:49,784 - [pool-30-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:03:49,817 - [pool-30-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:03:49,819 - [pool-30-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:04:39,681 - [pool-32-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:04:39,738 - [pool-32-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:04:39,738 - [pool-32-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:04:39,785 - [pool-32-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:04:39,785 - [pool-32-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:07:19,473 - [pool-34-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:07:19,537 - [pool-34-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:07:19,538 - [pool-34-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:07:19,562 - [pool-34-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:07:19,562 - [pool-34-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:08:25,532 - [pool-36-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:08:25,587 - [pool-36-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:08:25,590 - [pool-36-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:08:25,618 - [pool-36-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:08:25,620 - [pool-36-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:09:12,416 - [pool-38-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:09:12,494 - [pool-38-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:09:12,496 - [pool-38-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:09:12,533 - [pool-38-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:09:12,535 - [pool-38-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:09:42,965 - [pool-40-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:09:43,027 - [pool-40-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:09:43,028 - [pool-40-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:09:43,063 - [pool-40-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:09:43,064 - [pool-40-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:10:21,955 - [pool-42-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:10:22,005 - [pool-42-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:10:22,006 - [pool-42-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:10:22,046 - [pool-42-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:10:22,047 - [pool-42-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:11:20,616 - [pool-44-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:11:20,676 - [pool-44-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:11:20,689 - [pool-44-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:12:15,374 - [pool-46-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:12:15,420 - [pool-46-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:12:15,421 - [pool-46-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:12:28,091 - [pool-48-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:12:28,133 - [pool-48-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:12:28,134 - [pool-48-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:17:10,978 - [pool-50-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:17:11,059 - [pool-50-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:17:11,059 - [pool-50-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:17:37,808 - [pool-52-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:17:37,893 - [pool-52-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:17:37,894 - [pool-52-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:19:27,471 - [pool-54-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:19:27,513 - [pool-54-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:19:27,514 - [pool-54-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:20:02,015 - [pool-56-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:20:02,100 - [pool-56-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test010
+2017-12-15 19:20:02,102 - [pool-56-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test010.java
+2017-12-15 19:20:48,845 - [pool-58-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:20:48,890 - [pool-58-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 19:20:48,891 - [pool-58-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 19:23:17,691 - [pool-60-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:23:17,806 - [pool-60-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 19:23:17,808 - [pool-60-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 19:25:30,666 - [pool-62-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:25:30,723 - [pool-62-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 19:25:30,725 - [pool-62-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 19:55:52,660 - [pool-64-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:55:52,767 - [pool-64-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 19:55:52,768 - [pool-64-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 19:57:02,742 - [pool-66-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 19:57:02,856 - [pool-66-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 19:57:02,860 - [pool-66-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:02:23,314 - [pool-68-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:02:23,395 - [pool-68-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:02:23,397 - [pool-68-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:04:33,662 - [pool-70-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:04:33,772 - [pool-70-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:04:33,775 - [pool-70-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:04:49,181 - [pool-72-thread-5] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:04:49,367 - [pool-72-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:04:49,367 - [pool-72-thread-5] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:08:40,660 - [pool-74-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:08:40,719 - [pool-74-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:08:40,727 - [pool-74-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:09:00,017 - [pool-76-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:09:00,117 - [pool-76-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:09:00,126 - [pool-76-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:11:01,875 - [pool-78-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:11:02,032 - [pool-78-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:11:02,034 - [pool-78-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:26:58,782 - [pool-80-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:26:58,923 - [pool-80-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:26:58,924 - [pool-80-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:28:07,818 - [pool-82-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:28:07,932 - [pool-82-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:28:07,933 - [pool-82-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:32:52,217 - [pool-84-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:32:52,410 - [pool-84-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:32:52,412 - [pool-84-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:33:07,019 - [pool-86-thread-4] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:33:07,198 - [pool-86-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:33:07,199 - [pool-86-thread-4] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:38:16,277 - [pool-88-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:38:16,390 - [pool-88-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:38:16,391 - [pool-88-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:40:34,715 - [pool-90-thread-2] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:40:34,888 - [pool-90-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:40:34,889 - [pool-90-thread-2] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:42:40,157 - [pool-93-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:42:40,253 - [pool-93-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:42:40,255 - [pool-93-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:51:24,556 - [pool-95-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:51:24,720 - [pool-95-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:51:24,721 - [pool-95-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:52:46,900 - [pool-97-thread-1] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:52:46,977 - [pool-97-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:52:46,979 - [pool-97-thread-1] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:53:15,260 - [pool-99-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:53:15,352 - [pool-99-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:53:15,354 - [pool-99-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
+2017-12-15 20:57:01,846 - [pool-101-thread-3] DEBUG edu.nyu.oop.CustomUnitTest - Executing custom unit tests
+2017-12-15 20:57:02,008 - [pool-101-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Did not find a directory at /home/luistics/Desktop/OOPHW/translator-2/src/main/java/inputs/test040
+2017-12-15 20:57:02,015 - [pool-101-thread-3] DEBUG e.nyu.oop.util.JavaFiveImportParser - Loading Test040.java
