@@ -390,7 +390,6 @@ public class CppDataLayout {
                 vtiMethod = new VTInstantiatorMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
                 vtMethod = new VTMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
 
-                System.out.println("vtmethaddict4life " + vtMethod.methodName);
                 VTInstantiatorMethods.add(vtiMethod);
                 VTMethods.add(vtMethod);
 
