@@ -9,9 +9,9 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 namespace inputs {
-  namespace test012 {
+  namespace test038 {
 
-    __A::__A() : __vptr(&__vtable), a(null)
+    __A::__A() : __vptr(&__vtable)
     {}
 
     Class __A::__class() {
@@ -26,65 +26,43 @@ namespace inputs {
       return __this;
     }
     
-    void __A::setA_String(A __this, String x) {
-      __this->a = x;
+    void __A::m_Object_Object(A __this, Object o1, Object o2) {
+      std::cout << __rt::literal("A.m(Object, Object)") << std::endl;
     }
     
-    void __A::printOther_A(A __this, A other) {
-      std::cout << other->__vptr->myToString(other) << std::endl;
+    void __A::m_A_Object(A __this, A a1, Object o2) {
+      std::cout << __rt::literal("A.m(A, Object)") << std::endl;
     }
     
-    String __A::myToString(A __this) {
-      return __this->a;
+    void __A::m_Object_A(A __this, Object o1, A a2) {
+      std::cout << __rt::literal("A.m(Object, A)") << std::endl;
     }
     
-    __B1::__B1() : __vptr(&__vtable), b(null)
+    __B::__B() : __vptr(&__vtable)
     {}
 
-    Class __B1::__class() {
+    Class __B::__class() {
       static Class k =
-        new __Class(__rt::literal("inputs.javalang.B1"), __A::__class());
+        new __Class(__rt::literal("inputs.javalang.B"), __A::__class());
       return k;
     }
 
-    __B1_VT __B1::__vtable;
+    __B_VT __B::__vtable;
 
-    B1 __B1:: __init(B1__this) {
+    B __B:: __init(B__this) {
       return __this;
     }
     
-    __B2::__B2() : __vptr(&__vtable), b(null)
-    {}
-
-    Class __B2::__class() {
-      static Class k =
-        new __Class(__rt::literal("inputs.javalang.B2"), __A::__class());
-      return k;
-    }
-
-    __B2_VT __B2::__vtable;
-
-    B2 __B2:: __init(B2__this) {
-      return __this;
+    void __B::m_Object_Object(B __this, Object o1, Object o2) {
+      std::cout << __rt::literal("B.m(Object, Object)") << std::endl;
     }
     
-    __C::__C() : __vptr(&__vtable), c(null)
-    {}
-
-    Class __C::__class() {
-      static Class k =
-        new __Class(__rt::literal("inputs.javalang.C"), __B1::__class());
-      return k;
-    }
-
-    __C_VT __C::__vtable;
-
-    C __C:: __init(C__this) {
-      return __this;
+    void __B::m_B_Object(B __this, B a1, Object o2) {
+      std::cout << __rt::literal("B.m(B, Object)") << std::endl;
     }
     
-    String __C::myToString(C __this) {
-      return __rt::literal("still C");
+    void __B::m_Object_B(B __this, Object o1, B a2) {
+      std::cout << __rt::literal("B.m(Object, B)") << std::endl;
     }
     
   }

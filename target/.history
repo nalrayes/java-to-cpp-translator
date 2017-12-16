@@ -286,3 +286,4 @@ runxtc -translate src/test/java/inputs/test025/Test025.java
 runxtc -translate src/test/java/inputs/test037/Test037.java
 runxtc -translate src/test/java/inputs/test038/Test038.java
 runxtc -translate src/test/java/inputs/test012/Test012.java
+runxtc -translate src/test/java/inputs/test038/Test038.java
