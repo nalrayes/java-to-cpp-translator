@@ -61,7 +61,6 @@ public class CustomUnitTest {
     }
     */
     @Test
-    @SuppressWarnings("Duplicates")
     public void testConstructors() {
         System.out.println();
 
@@ -85,7 +84,6 @@ public class CustomUnitTest {
     }
 
     @Test
-    @SuppressWarnings("Duplicates")
     public void testFields() {
         System.out.println();
 
