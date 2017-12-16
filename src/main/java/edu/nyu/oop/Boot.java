@@ -3,6 +3,7 @@ package edu.nyu.oop;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 import edu.nyu.oop.util.JavaFiveImportParser;
@@ -62,7 +63,7 @@ public class Boot extends Tool {
         bool("printJavaImportCode", "printJavaImportCode", false, "Print Java code for imports of primary source file.").
         bool("printSymbolTable", "printSymbolTable", false, "Print symbol table for Java Ast.").
         bool("printConfig", "printConfig", false, "Output application configuration to screen.").
-                //Add new command for Transation
+                //Add new command for Translation
         bool("translate", "translate", false, "Translate Java Into C++").
         bool("printCppCode", "printCppCode", false, "Print Cpp code.");
     }

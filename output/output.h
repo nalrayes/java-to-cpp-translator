@@ -5,7 +5,7 @@
 using namespace java::lang;
 
 namespace inputs {
-  namespace test042 {
+  namespace test038 {
   
     struct __A;
     struct __A_VT;
@@ -17,8 +17,9 @@ namespace inputs {
       
       __A();
 
-      static void m(A);
-      static A m_A(A,A);
+      static void m_Object_Object(A,Object,Object);
+      static void m_A_Object(A,A,Object);
+      static void m_Object_A(A,Object,A);
       static A __init();
       static Class __class();
 
@@ -32,8 +33,9 @@ namespace inputs {
       Class (*getClass) (A);
       String (*toString) (A);
       bool (*equals) (A, Object);
-      void (*m) (A);
-      A (*m_A) (A, A);
+      void (*m_Object_Object) (A, Object, Object);
+      void (*m_A_Object) (A, A, Object);
+      void (*m_Object_A) (A, Object, A);
 
       __A_VT()
       : __is_a(__A::__class()),
@@ -41,8 +43,9 @@ namespace inputs {
         getClass((Class (*)(A)) &__Object::getClass),
         toString((String (*)(A)) &__Object::toString),
         equals((bool (*)(A, Object)) &__Object::equals),
-        m(&__A::m),
-        m_A(&__A::m_A) {}
+        m_Object_Object(&__A::m_Object_Object),
+        m_A_Object(&__A::m_A_Object),
+        m_Object_A(&__A::m_Object_A) {}
     };
 
     struct __B;
@@ -55,9 +58,9 @@ namespace inputs {
       
       __B();
 
-      static void m(B);
-      static B m_B(B,B);
-      static A m_A(B,A);
+      static void m_Object_Object(B,Object,Object);
+      static void m_B_Object(B,B,Object);
+      static void m_Object_B(B,Object,B);
       static B __init();
       static Class __class();
 
@@ -71,9 +74,11 @@ namespace inputs {
       Class (*getClass) (B);
       String (*toString) (B);
       bool (*equals) (B, Object);
-      void (*m) (B);
-      A (*m_A) (B, A);
-      B (*m_B) (B, B);
+      void (*m_Object_Object) (B, Object, Object);
+      void (*m_A_Object) (B, A, Object);
+      void (*m_Object_A) (B, Object, A);
+      void (*m_B_Object) (B, B, Object);
+      void (*m_Object_B) (B, Object, B);
 
       __B_VT()
       : __is_a(__B::__class()),
@@ -81,43 +86,46 @@ namespace inputs {
         getClass((Class (*)(B)) &__Object::getClass),
         toString((String (*)(B)) &__Object::toString),
         equals((bool (*)(B, Object)) &__Object::equals),
-        m_B(&__B::m_B),
-        m(&__B::m),
-        m_A(&__B::m_A) {}
+        m_Object_Object(&__B::m_Object_Object),
+        m_A_Object((void (*)(B)) &__A::m_A_Object),
+        m_Object_A((void (*)(B)) &__A::m_Object_A),
+        m_B_Object(&__B::m_B_Object),
+        m_Object_B(&__B::m_Object_B) {}
     };
 
-    struct __Test042;
-    struct __Test042_VT;
-    typedef __Test042* Test042;
+    struct __Test038;
+    struct __Test038_VT;
+    typedef __Test038* Test038;
     
-    struct __Test042 { 
+    struct __Test038 { 
       
-      __Test042_VT* __vptr;
+      __Test038_VT* __vptr;
       
-      __Test042();
+      __Test038();
 
-      static void main_String(Test042,String);
-      static Test042 __init();
+      static void main_String(Test038,String);
+      static Test038 __init();
       static Class __class();
 
-      static __Test042_VT __vtable;
+      static __Test038_VT __vtable;
     };
 
-    struct __Test042_VT { 
+    struct __Test038_VT { 
       Class __is_a;
 
-      int32_t (*hashCode) (Test042);
-      Class (*getClass) (Test042);
-      String (*toString) (Test042);
-      bool (*equals) (Test042, Object);
+      int32_t (*hashCode) (Test038);
+      Class (*getClass) (Test038);
+      String (*toString) (Test038);
+      bool (*equals) (Test038, Object);
+      void (*main_String) (Test038, String);
 
-      __Test042_VT()
-      : __is_a(__Test042::__class()),
-        hashCode((int32_t (*)(Test042)) &__Object::hashCode),
-        getClass((Class (*)(Test042)) &__Object::getClass),
-        toString((String (*)(Test042)) &__Object::toString),
-        equals((bool (*)(Test042, Object)) &__Object::equals),
-        main_String(&__Test042::main_String) {}
+      __Test038_VT()
+      : __is_a(__Test038::__class()),
+        hashCode((int32_t (*)(Test038)) &__Object::hashCode),
+        getClass((Class (*)(Test038)) &__Object::getClass),
+        toString((String (*)(Test038)) &__Object::toString),
+        equals((bool (*)(Test038, Object)) &__Object::equals),
+        main_String(&__Test038::main_String) {}
     };
 
   }

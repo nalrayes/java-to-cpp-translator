@@ -2,7 +2,7 @@ package edu.nyu.oop.util;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-
+import java.util.Iterator;
 import edu.nyu.oop.*;
 import xtc.tree.GNode;
 import java.util.Map;
@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class CppDataLayout {
+
+    public static ArrayList<CppMethod> allMethods;
 
     public static ArrayList<CppStruct> structs;
     public static ArrayList<VTable> VTables;
@@ -27,6 +29,7 @@ public class CppDataLayout {
         //Check javaCustomClassObj against the parentDataLayout for overidden methods
         structs = new ArrayList<CppStruct>();
         VTables = new ArrayList<VTable>();
+        allMethods = new ArrayList<CppMethod>();
         ArrayList<VTMethod> parentMethods;
         parentDataLayout.getStructs();
     }
@@ -311,9 +314,15 @@ public class CppDataLayout {
     public static class VTInstantiator {
         String randoCurls;
         String isA;
+        String methodName;
         String declarationName;
         ArrayList<CustomMethodClass> inheritedMethods;
+        //ArrayList<CustomMethodClass> inheritedMethods;
         ArrayList<VTInstantiatorMethod> VTInstantiatorMethods;
+        ArrayList<VTMethod> VTMethods;
+
+
+        boolean shouldOverride = false;
 
         public String getIsA() {
             return isA;
@@ -321,6 +330,7 @@ public class CppDataLayout {
         // non overridden methods
         public VTInstantiator(CustomClassObject currStruct, HashMap<String, CustomClassObject> classMap) {
             this.VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
+            this.VTMethods = new ArrayList<VTMethod>();
             this.inheritedMethods = new ArrayList<CustomMethodClass>();
             this.isA = ": __is_a(__" + currStruct.getClassName() + "::__class()),";
             this.declarationName = "__" + currStruct.getClassName() + "_VT()";
@@ -328,32 +338,38 @@ public class CppDataLayout {
 
             CustomClassObject tempStruct = currStruct;
 
+            ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
+            ArrayList<String> names = getMethodNames(inheritedMethods);
+            for (CustomMethodClass m : defaultMethods) {
+                String name = m.getName();
+
+                //if (!(names.contains(name))) {
+                    inheritedMethods.add(m);
+               // }
+            }
+
             // gets inherited methods of a class
             while (tempStruct.getParentClass() != "None") {
+
+
+
+
+
+
                 String getParentStructName = tempStruct.getParentClass();
                 // get all methods of parent class
                 CustomClassObject parentClass = classMap.get(getParentStructName);
                 for (CustomMethodClass method : parentClass.getMethods()) {
                     ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
                     // checking if method is overwritten
-                    if ((!inheritedMethodNames.contains(method.getName()))) {
-                        method.setOwnerClass(parentClass.getClassName());
-                        inheritedMethods.add(method);
-                    }
+                    //inheritedMethods.add();
+                    inheritedMethods.add(method);
                 }
                 tempStruct = parentClass;
             }
 
             // adding default methods to inheritedMethods to check for overriding
-            ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
-            ArrayList<String> names = getMethodNames(inheritedMethods);
-            for (CustomMethodClass m : defaultMethods) {
-                String name = m.getName();
 
-                if (!(names.contains(name))) {
-                    inheritedMethods.add(m);
-                }
-            }
 
             ArrayList<VTInstantiatorMethod> overwrittenMethods = new ArrayList<VTInstantiatorMethod>();
             // check if current class overrides any of these methods
@@ -361,48 +377,229 @@ public class CppDataLayout {
             ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
             int k = 0;
             boolean isLastMethod = false;
+            VTInstantiatorMethod vtiMethod;
+            VTMethod vtMethod;
+
+            System.out.println("TESTSTRUCT1 " + currStruct.getClassName());
+
+
+
+            for (CustomMethodClass inheritedM : inheritedMethods){
+
+
+                vtiMethod = new VTInstantiatorMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
+                vtMethod = new VTMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
+
+                VTInstantiatorMethods.add(vtiMethod);
+                VTMethods.add(vtMethod);
+
+
+            }
+
+
 
             for (CustomMethodClass m1 : currStruct.getMethods()) {
                 if (k == currStruct.getMethods().size() -1 ){
                     isLastMethod = true;
                 }
                 m1.setOwnerClass(currStruct.getClassName());
-                // if m isnt in overwritten methods, add it to vtinstantiator
+
+                // if m isnt in overwritten methods, the method is new and should be adde3d to the struct
+                // if method is old, check the current list of methods to isnert in the right position
+
+                // first add all inherited method names
+                //VTInstantiatorMethods.addAll(inheritedMethods);;
+
+
+
+                // IF THE METHOD WAS NOT INHERITED ADD IT TO THE LIST OF METHODS
                 if (!(inheritedMethodNames.contains(m1.getName()))) {
-                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m1, currStruct.getClassName(), isLastMethod, true);
-                    overwrittenMethods.add(vtiMethod);
-                }
-            }
+                     vtiMethod = new VTInstantiatorMethod(m1, currStruct.getClassName(), isLastMethod, true);
+//                    overwrittenMethods.add(vtiMethod);
+                    vtMethod = new VTMethod(m1, currStruct.getClassName(), isLastMethod, true);
 
-            for (CustomMethodClass m : inheritedMethods){
-                 isLastMethod = false;
-                if (index == currStruct.getMethods().size() -1 ){
-                    isLastMethod = true;
-                }
-
-                boolean isOverriden = false;
-                // if contains override
-                if (!currStruct.getMethodNames().contains(m.getName())){
-                    isOverriden = false;
-                    String className = currStruct.getClassName();
-                    // create overridden instantiator
-                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
+                    System.out.println("testcomp123 "+ m1.getName());
                     VTInstantiatorMethods.add(vtiMethod);
+                    VTMethods.add(vtMethod);
+
+
+                }else{
+                    // else the method is actually being
+                    // overriden and you have to find the position of the original method
+                    // to keep postitioning of the methods
+
+
+                    // get the position of the method
+                    for (int i= 0; i < VTInstantiatorMethods.size(); i++){
+
+
+                        if (VTInstantiatorMethods.get(i).saveMethodName.equals(m1.getName())){
+                            vtiMethod = new VTInstantiatorMethod(m1, currStruct.getClassName(), isLastMethod, true);
+                            System.out.println("testcompagain1 " + m1.getName() + " index: " + i);
+
+                            VTInstantiatorMethods.set(i, vtiMethod);
+
+                        }
+
+
+                    }
+
+                    System.out.println("VTMETHODSSIZE123 " + VTMethods.size());
+                    for (int i= 0; i < VTMethods.size(); i++){
+                            System.out.println("themeth " + VTMethods.get(i).methodName);
+
+                        if (VTMethods.get(i).methodName.equals(m1.getName())){
+                            vtMethod = new VTMethod(m1, currStruct.getClassName(), isLastMethod, true);
+                            System.out.println("testcompagain1 " + m1.getName() + " index: " + i);
+
+                           VTMethods.set(i, vtMethod);
+
+                        }
+
+
+                    }
+
+
                 }
-                else {
-                    String className = currStruct.getClassName();
-                    isOverriden = true;
-                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
-                    overwrittenMethods.add(vtiMethod);
-                }
-                index++;
+
+
+
+
+
+
+
+                System.out.println(m1.getName());
+
+
+
+
+
+
+
+
+
+
+
+
             }
-            VTInstantiatorMethods.addAll(overwrittenMethods);
+            System.out.println("test all vtmethods1234 " + currStruct.getClassName());
+
+            int duplicate = 0;
+            int getIndex = 0;
+
+
+            for (int x = 0; x < VTMethods.size(); x++){
+                //             getIndex++;
+                duplicate = 0;
+
+                String originalName = VTMethods.get(x).methodName;
+//\
+                for (int j = 0; j < VTMethods.size(); j++) {
+
+
+                    String currentName = VTMethods.get(j).methodName;
+
+//                    if (originalName.equals(currentName)){
+//
+//                        duplicate++;
+//                    }
+//                    if (VTInstantiatorMethods.get(x).saveMethodName.equals(VTInstantiatorMethods.get(j).saveMethodName)){
+//                        duplicate++;
+//                    }
+                    if (duplicate >= 2){
+                        System.out.println("duplicate12 " + originalName);
+                        VTMethods.set(x, VTMethods.get(j));
+
+                        VTMethods.remove(j);
+//
+//
+                    }
+//
+//                }
+
+
+
+
+                }
+
+            }
+
+
+            for (int x = 0; x < VTInstantiatorMethods.size(); x++){
+   //             getIndex++;
+                duplicate = 0;
+
+                String originalName = VTInstantiatorMethods.get(x).saveMethodName;
+//\
+               for (int j = 0; j < VTInstantiatorMethods.size(); j++) {
+
+
+                   String currentName = VTInstantiatorMethods.get(j).saveMethodName;
+
+                  if (originalName.equals(currentName)){
+
+                      duplicate++;
+                  }
+//                    if (VTInstantiatorMethods.get(x).saveMethodName.equals(VTInstantiatorMethods.get(j).saveMethodName)){
+//                        duplicate++;
+//                    }
+                  if (duplicate >= 2){
+                      System.out.println("duplicate12 " + originalName);
+                      VTInstantiatorMethods.set(x, VTInstantiatorMethods.get(j));
+
+                        VTInstantiatorMethods.remove(j);
+//
+//
+                   }
+//
+//                }
+
+
+
+
+               }
+
+            }
+
+//            for (CustomMethodClass m : inheritedMethods){
+//                 isLastMethod = false;
+//                if (index == currStruct.getMethods().size() -1 ){
+//                    isLastMethod = true;
+//                }
+//
+//                boolean isOverriden = false;
+//                // if contains override
+//                if (!currStruct.getMethodNames().contains(m.getName())){
+//                    isOverriden = false;
+//                    String className = currStruct.getClassName();
+//                    // create overridden instantiator
+//                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
+//                    VTInstantiatorMethods.add(vtiMethod);
+//                }
+//                else {
+//                    String className = currStruct.getClassName();
+//                    isOverriden = true;
+//                    VTInstantiatorMethod vtiMethod = new VTInstantiatorMethod(m, className, isLastMethod, isOverriden);
+//                    overwrittenMethods.add(vtiMethod);
+//                }
+//                index++;
+//            }
+
+
+
+
+
+
+            //VTInstantiatorMethods.addAll(overwrittenMethods);
         }
 
 
         public String getDeclarationName() {
             return declarationName;
+        }
+
+        public ArrayList<VTMethod> getVTMethods() {
+            return VTMethods;
         }
 
         public ArrayList<VTInstantiatorMethod> getVTInstantiatorMethods() {
@@ -414,13 +611,19 @@ public class CppDataLayout {
             String objectReference;
             String returnTypeClassName;
             String fullLine;
+            String saveClassName;
+            String saveMethodName;
+            boolean shouldOverride;
             public VTInstantiatorMethod(CustomClassObject current){}
 
             // for overriden methods
             public VTInstantiatorMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
                 typeTranslate translateType = new typeTranslate();
+                this.saveClassName = className;
+                this.saveMethodName = method.getName();
                 String returnT = translateType.translateType(method.getReturnType());
                 fullLine = "";
+                shouldOverride = false;
                 if (isOverridden) {;
                     this.objectReference = method.getName() + "(&__" + className + "::" + method.getName() + ")";
                     this.fullLine = this.objectReference;
@@ -481,6 +684,10 @@ public class CppDataLayout {
 
             public VTable(CustomClassObject currClass, HashMap<String, CustomClassObject> classMap) {
 
+
+
+
+
                 this.name = currClass.getClassName();
 
                 this.VTInstantiators = new ArrayList<VTInstantiator>();
@@ -496,100 +703,111 @@ public class CppDataLayout {
                 // to check inheritence with default methods
                 ArrayList<String> names = new ArrayList<String>();
                 // Get all methods that the current class inherits
-                while (tempStruct.getParentClass() != "None") {
-                    currentArrayList = new ArrayList<CustomMethodClass>();
-                    String getParentStructName = tempStruct.getParentClass();
-                    //System.out.println(getParentStructName);
-                    // get all methods of parent class
-                    CustomClassObject parentClass = classMap.get(getParentStructName);
-
-                    for (CustomMethodClass method : parentClass.getMethods()) {
-                        //System.out.println(method.getName());
-                        ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
-                        // checking if method is overwritten
-                        // if method is static continue
-                        if (method.getModifier() != null &&method.getModifier().contains("static")) {
-                            continue;
-                        };
-                        if ((!inheritedMethodNames.contains(method.getName()))) {
-                            method.setOwnerClass(parentClass.getClassName());
-                            currentArrayList.add(method);
-                            names.add(method.getName());
-                        }
-                    }
-                    arrayListStack.push(currentArrayList);
-                    tempStruct = parentClass;
-                }
+//                while (tempStruct.getParentClass() != "None") {
+//                    currentArrayList = new ArrayList<CustomMethodClass>();
+//                    String getParentStructName = tempStruct.getParentClass();
+//                    //System.out.println(getParentStructName);
+//                    // get all methods of parent class
+//                    CustomClassObject parentClass = classMap.get(getParentStructName);
+//
+//                    for (CustomMethodClass method : parentClass.getMethods()) {
+//                        //System.out.println(method.getName());
+//                        ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
+//                        // checking if method is overwritten
+//                        // if method is static continue
+//                        if (method.getModifier() != null &&method.getModifier().contains("static")) {
+//                            continue;
+//                        };
+//                        if ((!inheritedMethodNames.contains(method.getName()))) {
+//                            method.setOwnerClass(parentClass.getClassName());
+//                            currentArrayList.add(method);
+//                            names.add(method.getName());
+//                        }
+//                    }
+//                    arrayListStack.push(currentArrayList);
+//                    tempStruct = parentClass;
+//                }
 
                 // adding default methods to inheritedMethods to check for overriding
-                ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
-
-                for (CustomMethodClass m : defaultMethods) {
-                    String name = m.getName();
-                    // if method is static dont add
-                    if (m.getModifier() != null && m.getModifier().contains("static")) {
-                        continue;
-                    }
-
-                    if (!(names.contains(name))) {
-                        VTInheritedmethods.add(m);
-                    }
-                }
+//                ArrayList<CustomMethodClass> defaultMethods = createDefaultMethods();
+//
+//                for (CustomMethodClass m : defaultMethods) {
+//                    String name = m.getName();
+//                    // if method is static dont add
+//                    if (m.getModifier() != null && m.getModifier().contains("static")) {
+//                        continue;
+//                    }
+//
+//                    if (!(names.contains(name))) {
+//                        VTInheritedmethods.add(m);
+//                    }
+//                }
 
 
                 // unpack the stack
-                while (!arrayListStack.empty()) {
-                    VTInheritedmethods.addAll(arrayListStack.pop());
-                }
+//                while (!arrayListStack.empty()) {
+//                    VTInheritedmethods.addAll(arrayListStack.pop());
+//                }
 
-                ArrayList<VTMethod> overwrittenVTMethods = new ArrayList<VTMethod>();
-                // check if current class overrides any of these methods
-                int index = 0;
-                for (CustomMethodClass m : VTInheritedmethods){
-                    boolean isLastMethod = false;
-                    if (index == currClass.getMethods().size() -1 ){
-                        isLastMethod = true;
-                    }
-                    boolean isOverriden = false;
-                    // if contains override
-                    if (currClass.getMethodNames().contains(m.getName())){
-                        isOverriden = true;
-                        m.setOwnerClass(currClass.getClassName());
-                        String className = currClass.getClassName();
-                        // create overridden instantiator
-                        VTMethod vtiMethod = new VTMethod(m, className, isLastMethod, isOverriden);
-                        overwrittenVTMethods.add(vtiMethod);
-                    }
-                    else {
-                        String className = currClass.getClassName();
-                        VTMethod vtiMethod = new VTMethod(m, className, isLastMethod, isOverriden);
-                        VTMethods.add(vtiMethod);
-                    }
-                    index++;
+//                ArrayList<VTMethod> overwrittenVTMethods = new ArrayList<VTMethod>();
+//                // check if current class overrides any of these methods
+//                int index = 0;
+//                for (CustomMethodClass m : VTInheritedmethods){
+//                    boolean isLastMethod = false;
+//                    if (index == currClass.getMethods().size() -1 ){
+//                        isLastMethod = true;
+//                    }
+//                    boolean isOverriden = false;
+//                    // if contains override
+//                    if (currClass.getMethodNames().contains(m.getName())){
+//                        isOverriden = true;
+//                        m.setOwnerClass(currClass.getClassName());
+//                        String className = currClass.getClassName();
+//                        // create overridden instantiator
+//                        VTMethod vtiMethod = new VTMethod(m, className, isLastMethod, isOverriden);
+//                        overwrittenVTMethods.add(vtiMethod);
+//                    }
+//                    else {
+//                        String className = currClass.getClassName();
+//                        VTMethod vtiMethod = new VTMethod(m, className, isLastMethod, isOverriden);
+//                        VTMethods.add(vtiMethod);
+//                    }
+//                    index++;
+//
+//                }
+//                VTMethods.addAll(overwrittenVTMethods);
+//                ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
+//                int k = 0;
+//                boolean isLastMethod = false;
+//                for (CustomMethodClass m : currClass.getMethods()) {
+//                    if (k == currClass.getMethods().size() -1 ){
+//                        isLastMethod = true;
+//                    }
+//                    // if method is static continue
+//                    if (m.getModifier() != null && m.getModifier().contains("static")) {
+//                        continue;
+//                    }
+//                    m.setOwnerClass(currClass.getClassName());
+//                    // if m isnt in overwritten methods, add it to vtinstantiator
+//                    if (!(inheritedMethodNames.contains(m.getName()))) {
+//                        VTMethod vtiMethod = new VTMethod(m, currClass.getClassName(), isLastMethod, false);
+//                        VTMethods.add(vtiMethod);
+//                    }
+//                }
 
-                }
-                VTMethods.addAll(overwrittenVTMethods);
-                ArrayList<String> inheritedMethodNames = getMethodNames(VTInheritedmethods);
-                int k = 0;
-                boolean isLastMethod = false;
-                for (CustomMethodClass m : currClass.getMethods()) {
-                    if (k == currClass.getMethods().size() -1 ){
-                        isLastMethod = true;
-                    }
-                    // if method is static continue
-                    if (m.getModifier() != null && m.getModifier().contains("static")) {
-                        continue;
-                    }
-                    m.setOwnerClass(currClass.getClassName());
-                    // if m isnt in overwritten methods, add it to vtinstantiator
-                    if (!(inheritedMethodNames.contains(m.getName()))) {
-                        VTMethod vtiMethod = new VTMethod(m, currClass.getClassName(), isLastMethod, false);
-                        VTMethods.add(vtiMethod);
-                    }
-                }
 
                 VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
+                System.out.println("thisthingy3 " + vtInstantiator.getVTMethods().size());
+
                 VTInstantiators.add(vtInstantiator);
+
+                for (VTMethod v : vtInstantiator.getVTMethods()){
+
+                    VTMethods.add(v);
+                }
+                System.out.println("again12 " + VTMethods.size());
+
+
                 VTables.add(this);
             }
         }
@@ -610,6 +828,7 @@ public class CppDataLayout {
             // for overriden methods
                 public VTMethod(CustomMethodClass method, String className, boolean isLastMethod, boolean isOverridden){
                     typeTranslate translateType = new typeTranslate();
+                    this.methodName = method.getName();
                     String returnT = translateType.translateType(method.getReturnType());
                     String parameters = className + ", ";
                     for (CustomVariablesClass javaParam : method.getParameters()) {
