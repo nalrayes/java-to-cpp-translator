@@ -23,7 +23,7 @@ class A {
 public class Test006 {
     public static void main(String[] args) {
         A a = new A();
-        a.almostSetFld("B");
+        a.almostSetFld("A");
         System.out.println(a.getFld());
         a.setFld("B");
         System.out.println(a.getFld());

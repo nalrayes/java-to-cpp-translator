@@ -278,15 +278,32 @@ public class TraverseASTM extends ContextualVisitor {
         visit(n);
         Node receiver = n.getNode(0);
         String methodName = n.getString(2);
-//
+
+        Type typeToSearch = JavaEntities.currentType(table);
+        List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
+
+        System.out.println("THE METHOD OVERSTUFF NAME");
+        System.out.println(methodName);
+        System.out.println("THE METHOD OVERSTUFF");
+        System.out.println(actuals);
+
+        System.out.println("THE METHOD OVERSTUFF FOR");
+        for (Type at : actuals){
+            at.getAttribute("annotated");
+            System.out.println(at.get);
+
+
+        }
+
         if (receiver == null &&
                 !"super".equals(methodName) &&
                 !"this".equals(methodName)) {
+
             // find type to search for relevant methods
-            Type typeToSearch = JavaEntities.currentType(table);
+            //Type typeToSearch = JavaEntities.currentType(table);
 
             // find type of called method
-            List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
+            //List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
             MethodT method =
                     JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
 
@@ -298,6 +315,7 @@ public class TraverseASTM extends ContextualVisitor {
             }
 
         }
+
     }
 
 

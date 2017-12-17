@@ -469,3 +469,7 @@ execc
 runxtc -translate src/test/java/inputs/test005/Test005.java
 compilec
 execc
+runxtc -translate src/test/java/inputs/test006/Test006.java
+execc
+compilec
+runxtc -translate src/test/java/inputs/test006/Test006.java
