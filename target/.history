@@ -322,6 +322,7 @@ runxtc -translate src/test/java/inputs/test001/Test001.java
 compilec
 runxtc -translate src/test/java/inputs/test018/Test018.java
 runxtc -translate src/test/java/inputs/test001/Test001.java
+<<<<<<< HEAD
 compilec
 runxtc -translate src/test/java/inputs/test001/Test001.java
 ./a.out
@@ -330,3 +331,11 @@ runxtc -translate src/test/java/inputs/test001/Test001.java
 execc
 runxtc -translate src/test/java/inputs/test000/Test000.java
 execc
+=======
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+>>>>>>> 54b83086f1d04dc8c3d643a72efb0a7bc53aa153
