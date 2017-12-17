@@ -317,11 +317,11 @@ public class CppDataLayout {
         delete.setReturnType("void");
         delete.setOwnerClass("None");
 
+        methods.add(delete);
         methods.add(hashCode);
         methods.add(getClass);
         methods.add(toString);
         methods.add(equals);
-        methods.add(delete);
 
         return methods;
     }
