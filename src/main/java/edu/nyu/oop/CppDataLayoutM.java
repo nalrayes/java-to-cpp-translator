@@ -260,7 +260,7 @@ public class CppDataLayoutM {
                             System.out.println("THEARGS " +  arguments.getNode(a).getString(0));
 
                                if (arguments.getNode(a).getName().equals("StringLiteral")){
-                                   args += ", __rt::literal(" + arguments.getNode(a).getString(0);
+                                   args += ", __rt::literal(" + arguments.getNode(a).getString(0) + ")";
                                }
                                else {
 //
