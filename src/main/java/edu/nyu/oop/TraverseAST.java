@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import xtc.tree.GNode;
 import xtc.tree.Node;
 import xtc.tree.Visitor;
+import java.util.Iterator;
 
 import  edu.nyu.oop.CustomClassObject;
 
@@ -118,6 +119,35 @@ public class TraverseAST extends Visitor {
         }
     }
 
+
+    public void getInheritedFields(CustomClassObject currentClass, String parent){
+
+        for (CustomClassObject fc : classSummary.classes ){
+
+            if (fc.getClassName().equals(parent)){
+
+            System.out.println("thething " + fc.getClassName());
+
+                for (CustomVariablesClass v : fc.getClassVariables()){
+
+                   currentClass.addClassVariable(v);
+
+
+                }
+
+
+
+
+
+
+            }
+
+
+
+        }
+
+    }
+
     public void visitClassDeclaration(GNode n) {
         //Entering the class scope & create a new class object
         currentClass = new CustomClassObject();
@@ -128,8 +158,67 @@ public class TraverseAST extends Visitor {
         Node extention = n.getNode(3);
         String classExtension = "None";
         if (extention != null){
+            System.out.println("currentClass123 " + currentClass.getClassName());
             //there is an extension
             classExtension = extention.getNode(0).getNode(0).getString(0);
+
+            // get all class vars from inherited class
+           // if (classExtension )
+
+            //getInheritedFields(currentClass, classExtension);
+//            for (CustomClassObject fc : classSummary.classes ) {
+//
+//                if (fc.getClassName().equals(classExtension)) {
+//
+//                    System.out.println("thething " + fc.getClassName());
+//
+//                    for (CustomVariablesClass v : fc.getClassVariables()) {
+//
+//                        currentClass.addClassVariable(v);
+//
+//
+//
+//                    }
+//
+//
+//                }
+//            }
+            Iterator<CustomClassObject> iter = classSummary.classes.iterator();
+
+            while (iter.hasNext()) {
+                CustomClassObject c = iter.next();
+
+                if (c.className.equals(classExtension)) {
+
+                    Iterator<CustomVariablesClass> iter2 = c.getClassVariables().iterator();
+
+                    while (iter2.hasNext()){
+
+                        CustomVariablesClass v = iter2.next();
+
+                        currentClass.addClassVariable(v);
+
+                    }
+
+
+
+//                    for (CustomVariablesClass v : c.getClassVariables()) {
+////
+//                        currentClass.addClassVariable(v);
+////
+////
+////
+//                }
+
+                }
+//
+
+
+
+                }
+
+
+
 
         }
         //Add the extension to the class
