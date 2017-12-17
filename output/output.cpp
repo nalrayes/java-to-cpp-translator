@@ -2,8 +2,8 @@
 #include <iostream>
 
 using namespace java::lang;
-using namespace inputs::constructors;
-using namespace namespace std;
+//using namespace inputs::constructors;
+using namespace std;
 
 namespace inputs {
   namespace test001 {
@@ -19,7 +19,7 @@ namespace inputs {
 
     __A_VT __A::__vtable;
 
-    A __A:: __init(A__this) {
+    A __A::__init(A __this) {
       __Object::__init((Object) __this);
       return __this;
     }

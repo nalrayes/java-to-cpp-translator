@@ -20,6 +20,7 @@ public class CppMASTCreator {
         //Get all the data from JavaAst using Visitor
         List<TraverseASTM.ImplementationSummary> javaImplementationClassSummaries = new ArrayList<TraverseASTM.ImplementationSummary>();
         for (GNode javaAST : javaASTNodes) {
+            
             javaImplementationClassSummaries.add(visitor.getImplementationSummary(javaAST));
         }
 

@@ -6,7 +6,7 @@ using namespace inputs::constructors;
 using namespace namespace std;
 
 int main(void) {
-  A a =  __A::__init(new__A();
+  A a =  __A::__init(new__ A();
   std::cout << ({__rt::checkNotNull(a); a->__vptr->toString(a)}) << std::endl;
   return 0;
 }

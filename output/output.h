@@ -18,7 +18,7 @@ namespace inputs {
       __A();
 
       static String toString(A);
-      static A __init();
+      static A __init(A __this);
       static Class __class();
 
       static __A_VT __vtable;
@@ -51,7 +51,7 @@ namespace inputs {
       __Test001();
 
       static void main_String(Test001,String);
-      static Test001 __init();
+      static Test001 __init(A __this);
       static Class __class();
 
       static __Test001_VT __vtable;

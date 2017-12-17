@@ -124,6 +124,9 @@ public class CppDataLayout {
             } else {
                 // make default constructor
                 CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
+                CppParameter cppparm = new CppParameter(c.getClassName(), "A __this");
+                //defaultConstructor.parameters.add("");
+                defaultConstructor.parameters.add(cppparm);
                 this.methods.add(defaultConstructor);
             }
 
@@ -213,6 +216,15 @@ public class CppDataLayout {
                 this.parameters.add(cParam);
             }
 
+        }
+
+        public CppMethod(String name, String returnType, ArrayList<CppParameter> params) {
+            parameters = new ArrayList<CppParameter>();
+            //for (params)
+            params = parameters;
+
+            this.name = name;
+            this.returnType = returnType;
         }
 
         // used for creating default constructor object

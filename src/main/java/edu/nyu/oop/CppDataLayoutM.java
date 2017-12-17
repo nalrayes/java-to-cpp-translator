@@ -99,7 +99,7 @@ public class CppDataLayoutM {
 
             //Create def init method for each class
             this.defaultInIt = new cppMethodImplementation();
-            this.defaultInIt.name = theClass.className + " " + "__" + theClass.className + ":: __init(" + theClass.className + "__this)";
+            this.defaultInIt.name = theClass.className + " " + "__" + theClass.className + "::__init(" + theClass.className + " __this)";
             this.defaultInIt.returnType = "__this";
             this.defaultInIt.isConstuctor = true;
             TranslatedBlock blockForDef = new TranslatedBlock();
@@ -266,7 +266,7 @@ public class CppDataLayoutM {
 
                             declaratorVal +=")";
 
-                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new__" + varType  + "("+ args + ")";
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new__ " + varType  + "("+ args + ")";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                             continue;
