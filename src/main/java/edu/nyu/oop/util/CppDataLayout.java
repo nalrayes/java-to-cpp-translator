@@ -211,6 +211,7 @@ public class CppDataLayout {
 
             this.name = "__init";
             this.returnType = c.getName();
+            this.parameters.add(new CppParameter("__init", c.getName()));
 
             for (CustomVariablesClass javaParam :c.getParameters()) {
                 CppParameter cParam = new CppParameter(javaParam);
@@ -319,9 +320,10 @@ public class CppDataLayout {
 
         methods.add(delete);
         methods.add(hashCode);
+        methods.add(equals);
         methods.add(getClass);
         methods.add(toString);
-        methods.add(equals);
+       ;
 
         return methods;
     }

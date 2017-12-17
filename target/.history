@@ -395,3 +395,11 @@ compilec
 execc
 compilec
 execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test003/Test003.java
+compilec
+runxtc -translate src/test/java/inputs/test003/Test003.java
+compilec
+runxtc -translate src/test/java/inputs/test003/Test003.java
