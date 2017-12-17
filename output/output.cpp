@@ -18,7 +18,7 @@ namespace inputs {
 
     __A_VT __A::__vtable;
 
-    A __A:: __init(A__this) {
+    A __A::__init(A __this) {
       __Object::__init((Object) __this);
       return __this;
     }
