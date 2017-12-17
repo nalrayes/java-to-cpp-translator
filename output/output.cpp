@@ -5,9 +5,9 @@ using namespace java::lang;
 using namespace std;
 
 namespace inputs {
-  namespace test007 {
+  namespace test006 {
 
-    __A::__A() : __vptr(&__vtable), a(__rt::null())
+    __A::__A() : __vptr(&__vtable), fld(__rt::null())
     {}
 
     Class __A::__class() {
@@ -20,25 +20,21 @@ namespace inputs {
 
     A __A::__init(A __this) {
       __Object::__init((Object) __this);
-      __this->a = __rt::literal("A");
+      __this->fld = __rt::literal("A");
       return __this;
     }
     
-    __B::__B() : __vptr(&__vtable), b(__rt::null())
-    {}
-
-    Class __B::__class() {
-      static Class k =
-        new __Class(__rt::literal("inputs.javalang.B"), __A::__class());
-      return k;
+    void __A::setFld_String(A __this, String f) {
+      __this->fld = f;
     }
-
-    __B_VT __B::__vtable;
-
-    B __B::__init(B __this) {
-      __A::__init((A) __this);
-      __this->b = __rt::literal("B");
-      return __this;
+    
+    void __A::almostSetFld_String(A __this, String f) {
+      String fld;
+      fld = f;
+    }
+    
+    String __A::getFld(A __this) {
+      return __this->fld;
     }
     
   }

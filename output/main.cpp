@@ -4,11 +4,13 @@
 using namespace java::lang;
 using namespace std;
 
-using namespace inputs::test007;
+using namespace inputs::test006;
 
 int main(void) {
-  B b =  __B::__init(new __B));
-  std::cout << b->a << std::endl;
-  std::cout << b->b << std::endl;
+  A a =  __A::__init(new __A);
+  ({__rt::checkNotNull(a); a->__vptr->almostSetFld(a, __rt::literal("B"));});
+  std::cout << ({__rt::checkNotNull(a); a->__vptr->getFld(a);}) << std::endl;
+  ({__rt::checkNotNull(a); a->__vptr->setFld(a, __rt::literal("B"));});
+  std::cout << ({__rt::checkNotNull(a); a->__vptr->getFld(a);}) << std::endl;
   return 0;
 }

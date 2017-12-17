@@ -260,7 +260,7 @@ public class CppDataLayoutM {
                             System.out.println("THEARGS " +  arguments.getNode(a).getString(0));
 
                                if (arguments.getNode(a).getName().equals("StringLiteral")){
-                                   args += ", __rt::literal(" + arguments.getNode(a).getString(0);
+                                   args += ", __rt::literal(" + arguments.getNode(a).getString(0) + ")";
                                }
                                else {
 //
@@ -273,7 +273,7 @@ public class CppDataLayoutM {
 
                             System.out.println("argsprint " + args);
 
-                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + ""+ args + "))";
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + ""+ args + ")";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                             continue;

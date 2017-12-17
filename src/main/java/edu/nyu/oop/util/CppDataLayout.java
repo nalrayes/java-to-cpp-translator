@@ -117,17 +117,23 @@ public class CppDataLayout {
                 CppMethod cMethod = new CppMethod(javaMethod, c);
                 methods.add(cMethod);
             }
+            boolean defaultConstructorAdded = false;
             if (c.getConstructors().size() > 0) {
                 for (CustomConstructorClass javaConstructor : c.getConstructors()) {
                     CppMethod cppConstructor = new CppMethod(javaConstructor);
                     this.methods.add(cppConstructor);
+                    if (javaConstructor.getParameters().size() == 0) {
+                        defaultConstructorAdded = true;
+                    }
                 }
             }
-            CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
-            CppParameter cppparm = new CppParameter(c.getClassName(), c.getClassName() + " __this");
-            //defaultConstructor.parameters.add("");
-            defaultConstructor.parameters.add(cppparm);
-            this.methods.add(defaultConstructor);
+            if (!defaultConstructorAdded) {
+                CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
+                CppParameter cppparm = new CppParameter(c.getClassName(), c.getClassName() + " __this");
+                //defaultConstructor.parameters.add("");
+                defaultConstructor.parameters.add(cppparm);
+                this.methods.add(defaultConstructor);
+            }
 
             for (CustomVariablesClass javaVar : c.getClassVariables()) {
 
@@ -533,21 +539,22 @@ public class CppDataLayout {
                 duplicate = 0;
 
                 String originalName = VTMethods.get(x).methodName;
+                System.out.println("themeths " + originalName);
 //\
                 for (int j = 0; j < VTMethods.size(); j++) {
 
 
                     String currentName = VTMethods.get(j).methodName;
 
-//                    if (originalName.equals(currentName)){
-//
-//                        duplicate++;
-//                    }
+                    if (originalName.equals(currentName)){
+
+                        duplicate++;
+                    }
 //                    if (VTInstantiatorMethods.get(x).saveMethodName.equals(VTInstantiatorMethods.get(j).saveMethodName)){
 //                        duplicate++;
 //                    }
                     if (duplicate >= 2){
-                        System.out.println("duplicate12 " + originalName);
+                        System.out.println("duplicate122 " + originalName);
                         VTMethods.set(x, VTMethods.get(j));
 
                         VTMethods.remove(j);
