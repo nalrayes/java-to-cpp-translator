@@ -319,9 +319,10 @@ public class CppDataLayout {
 
         methods.add(delete);
         methods.add(hashCode);
+        methods.add(equals);
         methods.add(getClass);
         methods.add(toString);
-        methods.add(equals);
+       ;
 
         return methods;
     }
