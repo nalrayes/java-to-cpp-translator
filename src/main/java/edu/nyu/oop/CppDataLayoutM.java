@@ -248,25 +248,32 @@ public class CppDataLayoutM {
 
                             declaratorVal += "(";
 
-                            String args ="";
+                            String args = "";
 
+                           //A a =  __A::__init(new __A(), __rt::literal("A"));
                             for (int a = 0; a <arguments.size(); a++){
 
 
                              // args +=  processArguments(arguments.getNode(a));
 
 
+                            System.out.println("THEARGS " +  arguments.getNode(a).getString(0));
 
-
-
+                               if (arguments.getNode(a).getName().equals("StringLiteral")){
+                                   args += ", __rt::literal(" + arguments.getNode(a).getString(0);
+                               }
+                               else {
 //
-                              args += arguments.getNode(a).getString(0);
+                                   args += "," + arguments.getNode(a).getString(0);
+                               }
 
                             }
 
                             declaratorVal +=")";
 
-                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + "("+ args + "))";
+                            System.out.println("argsprint " + args);
+
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + ""+ args + "))";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                             continue;

@@ -211,6 +211,7 @@ public class CppDataLayout {
 
             this.name = "__init";
             this.returnType = c.getName();
+            this.parameters.add(new CppParameter("__init", c.getName()));
 
             for (CustomVariablesClass javaParam :c.getParameters()) {
                 CppParameter cParam = new CppParameter(javaParam);
@@ -274,7 +275,15 @@ public class CppDataLayout {
             typeTranslate translateType = new typeTranslate();
             this.name = v.getName();
             this.type = translateType.translateType(v.getType());
-            this.modifier = v.getModifier();
+
+//            if (!v.getModifier().equals("private")) {
+//                System.out.println("testmod11 " + v.getModifier());
+//                this.modifier = v.getModifier();
+//            }
+//            else{
+//                this.modifier = "";
+//            }
+            //this.modifier
         }
     }
 
