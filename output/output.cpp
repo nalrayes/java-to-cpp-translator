@@ -2,8 +2,7 @@
 #include <iostream>
 
 using namespace java::lang;
-using namespace inputs::constructors;
-using namespace namespace std;
+using namespace std;
 
 namespace inputs {
   namespace test001 {
