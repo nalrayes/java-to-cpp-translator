@@ -7,7 +7,7 @@ using namespace std;
 namespace inputs {
   namespace test003 {
 
-    __A::__A() : __vptr(&__vtable), fld(null)
+    __A::__A() : __vptr(&__vtable), fld(__rt::null())
     {}
 
     Class __A::__class() {

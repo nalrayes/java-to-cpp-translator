@@ -21,6 +21,7 @@ namespace inputs {
 
       static String getFld(A);
       static A __init(A, String);
+      static A __init(A __this);
       static Class __class();
 
       static __A_VT __vtable;
