@@ -311,10 +311,16 @@ public class CppDataLayout {
         equals.setReturnType("boolean");
         equals.setOwnerClass("None");
 
+        CustomMethodClass delete = new CustomMethodClass();
+        delete.setName("delete");
+        delete.setReturnType("void");
+        delete.setOwnerClass("None");
+
         methods.add(hashCode);
         methods.add(getClass);
         methods.add(toString);
         methods.add(equals);
+        methods.add(delete);
 
         return methods;
     }
