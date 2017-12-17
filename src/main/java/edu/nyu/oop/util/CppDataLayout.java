@@ -124,7 +124,7 @@ public class CppDataLayout {
             } else {
                 // make default constructor
                 CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
-                CppParameter cppparm = new CppParameter(c.getClassName(), "A __this");
+                CppParameter cppparm = new CppParameter(c.getClassName(), c.getClassName() + " __this");
                 //defaultConstructor.parameters.add("");
                 defaultConstructor.parameters.add(cppparm);
                 this.methods.add(defaultConstructor);
