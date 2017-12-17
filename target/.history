@@ -288,5 +288,11 @@ runxtc -translate src/test/java/inputs/test038/Test038.java
 runxtc -translate src/test/java/inputs/test012/Test012.java
 runxtc -translate src/test/java/inputs/test038/Test038.java
 runxtc -translate src/test/java/inputs/test001/Test001.java
+<<<<<<< HEAD
 cpp
 compilec
+=======
+>>>>>>> 97399a4ea055aade6629639eb212c7b991429c6e
+runxtc -translate src/test/java/inputs/test001/Test001.java
+compilec
+runxtc -translate src/test/java/inputs/test001/Test001.java

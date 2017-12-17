@@ -64,6 +64,7 @@ public class CppMASTCreator {
         GNode rootNodeCppAST = cppast.getRoot();
         //We add new dependencies so first get the dependency node
         Node dependNode = rootNodeCppAST.getNode(0);
+        clearDepNode(dependNode);
         addNewDep(dependNode);
 
         //We add new namespaces for the mainMethod
@@ -127,6 +128,9 @@ public class CppMASTCreator {
         cppNodeActions.addDataToNode((GNode)depNode, "#include <iostream>");
     }
 
+    private static void clearDepNode(Node depNode) {
+        cppNodeActions.
+    }
     private static void addNewNameSpaces (Node usingNamespaceNode){
         cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"inputs::constructors");
         cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"namespace std");

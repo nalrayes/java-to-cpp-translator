@@ -15,6 +15,10 @@ public abstract class cppNodeActions {
         return newNode;
     }
 
+    public static void clearNode(GNode node) {
+        node
+    }
+
     public static GNode addNodeAsChildToParent(GNode parent, GNode child){
         parent.add(child);
         return parent;
