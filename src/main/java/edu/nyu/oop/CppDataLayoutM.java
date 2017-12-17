@@ -667,11 +667,11 @@ public class CppDataLayoutM {
                     break;
 
                 case "string":
-                    DefaultType = "null";
+                    DefaultType = "__rt::literal(\"\")";
                     break;
 
                 default:
-                    DefaultType = "null";
+                    DefaultType = "__rt::null()";
                     break;
             }
             return DefaultType;
