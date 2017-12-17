@@ -70,7 +70,7 @@ namespace java {
 
       // The init method for the default constructor Object()
       static Object __init(Object __this) { return __this; }
-
+      
       // The methods implemented by java.lang.Object.
       static int32_t hashCode(Object);
       static bool equals(Object, Object);
@@ -128,13 +128,13 @@ namespace java {
 
       // The constructor
       __String(std::string data);
-
+      
       // The init method for the constructor String()
       static String __init(String __this) { return __this; }
 
       // The init method for the constructor String(String)
       static String __init(String __this, std::string data) { __this->data = data; return __this; }
-
+      
       // The methods implemented by java.lang.String.
       static int32_t hashCode(String);
       static bool equals(String, Object);
@@ -159,9 +159,9 @@ namespace java {
       return new __String(safeToString(s)->data + safeToString(t)->data);
     }
 
-    String operator+(String s, char t);
+    String operator+(String s, char t); 
 
-    String operator+(char s, String t);
+    String operator+(char s, String t); 
 
     // The vtable layout for java.lang.String.
     struct __String_VT {
@@ -210,7 +210,7 @@ namespace java {
 
       // The init method for the constructor Class()
       static Class __init(Class __this) { return __this; }
-
+      
       // The instance methods of java.lang.Class.
       static String toString(Class);
       static String getName(Class);
@@ -338,7 +338,7 @@ namespace __rt {
       delete[] addr->__data;
       delete addr;
     }
-
+    
     // overload array subscript operators for convenient bounds-checked array access
     T& operator[](int32_t index)  {
       if (0 > index || index >= length)
@@ -483,5 +483,5 @@ namespace __rt {
 
     return T(object);
   }
-
+  
 }
