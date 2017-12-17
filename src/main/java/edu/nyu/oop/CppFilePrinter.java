@@ -53,13 +53,14 @@ public class CppFilePrinter extends Visitor {
     }
 
     private void headOfFile() {
-        printer.pln("#include <iostream>");
-        printer.pln("#include \"java_lang.h\"");
-        printer.pln();
-        printer.pln("using namespace java::lang;");
-      //  printer.pln("using namespace std;");
-        printer.pln();
-        printer.pln("int main(void) {");
+
+//        printer.pln("#include <iostream>");
+//        printer.pln("#include \"java_lang.h\"");
+//        printer.pln();
+//        printer.pln("using namespace java::lang;");
+//        printer.pln("using namespace std;");
+//        printer.pln();
+//        printer.pln("int main(void) {");
     }
 
     private void cout(String line) {

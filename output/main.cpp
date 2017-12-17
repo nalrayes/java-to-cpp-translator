@@ -2,8 +2,9 @@
 #include <iostream>
 
 using namespace java::lang;
-using namespace inputs::constructors;
-using namespace namespace std;
+using namespace std;
+
+#include inputs::test001
 
 int main(void) {
   A a =  __A::__init(new__ A();

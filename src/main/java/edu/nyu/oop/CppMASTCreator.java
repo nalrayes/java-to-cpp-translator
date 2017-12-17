@@ -105,16 +105,20 @@ public class CppMASTCreator {
 
         //Handle the main method
         GNode impMainMethodClassNode = cppNodeActions.createNewASTNode("ImplementationMain");
-        cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impMainMethodClassNode);
-        addDataToMainMethodNode(impMainMethodClassNode, mainMethodClassm);
+        cppNodeActions.addNodeAsChildToParent((GNode) cppast.getLinkToNamespaceNode(), impMainMethodClassNode);;
+        addDataToMainMethodNode(impMainMethodClassNode, mainMethodClassm, rootNodeCppAST);
 
         //TODO PRINT OUR AST
         XtcPrettyPrintCustom.prettyPrintAst(cppast.getRoot());
         return cppast;
     }
 
-    private static void addDataToMainMethodNode (Node mainMethodNode, CppDataLayoutM.cppImplementationMainMethodClass mainMethodClass){
-        //add the main methods name
+    private static void addDataToMainMethodNode (Node mainMethodNode, CppDataLayoutM.cppImplementationMainMethodClass mainMethodClass, GNode rootNode){
+
+        // get namespace name
+        String nameSpaceName = rootNode.getNode(2).getNode(1).getString(0);
+        cppNodeActions.addDataToNode((GNode) mainMethodNode, "#include inputs::" + nameSpaceName);
+        // add the main methods name
         cppNodeActions.addDataToNode((GNode) mainMethodNode,mainMethodClass.mainMethodName);
         GNode blockImplementationNode = cppNodeActions.createNewASTNode("MainMethodBlockImplementation");
         cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, blockImplementationNode);
@@ -133,8 +137,8 @@ public class CppMASTCreator {
         cppNodeActions.clearNode((GNode) depNode);
     }
     private static void addNewNameSpaces (Node usingNamespaceNode){
-        cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"inputs::constructors");
-        cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"namespace std");
+//        cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"inputs::constructors");
+        cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"std");
     }
 
     private static Node addClassLevelImpNode (Node theClassesImplementationNode, CppDataLayoutM.cppImplementationClass classData){
