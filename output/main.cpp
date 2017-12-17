@@ -4,10 +4,11 @@
 using namespace java::lang;
 using namespace std;
 
-#include inputs::test001
+#include inputs::test018
 
 int main(void) {
-  A a =  __A::__init(new__ A();
-  std::cout << ({__rt::checkNotNull(a); a->__vptr->toString(a)}) << std::endl;
+  A->x = 3 {
+  }
+  std::cout << A->x << std::endl;
   return 0;
 }
