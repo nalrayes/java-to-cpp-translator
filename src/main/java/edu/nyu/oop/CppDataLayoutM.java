@@ -266,7 +266,7 @@ public class CppDataLayoutM {
 
                             declaratorVal +=")";
 
-                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + "("+ args + ")";
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + "("+ args + "))";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                             continue;
@@ -807,7 +807,7 @@ public class CppDataLayoutM {
             callTo = processNameNode(n.getNode(0));
             ret += "__rt::checkNotNull(" + callTo + "); ";
         }
-        ret += callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ")})";
+        ret += callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ");})";
         return ret;
     }
 
@@ -841,7 +841,7 @@ public class CppDataLayoutM {
             // translation: no difference
             res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
         } else if (n.getName() == "CallExpression") {
-            // translation: ->__vptr->methodCall
+            // translation: ->__vptr->methodCall with bracket stuff
             res = processCallExpression(n, 0);
         } else if (n.getName() == "StringLiteral") {
             // translation: __rt::literal(<string>)

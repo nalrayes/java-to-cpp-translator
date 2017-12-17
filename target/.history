@@ -1,44 +1,8 @@
-test *CppHVisitorTest*
-tes-onlyt *CppHVisitorTest*
-test-only *CppHVisitorTest*
-tesst
-test
-git add .
-test-only *CppHVisitorTest*
-test-only *CppHVisitorTest* a
-git add .
-test-only *CppHVisitorTest* a
-test-only *CppHVisitorTest*
-test-only *CppHVisitorTest*>
-test-only *CppHVisitorTest*
-q
-test-only *CppHVisitorTest*
-q
-test-only *CppHVisitorTest*
-runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
-test-only *CppHVisitorTest*
-clear && printf '\e[3J'
-runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
-test-only *CppHVisitorTest*
-runxtc -cppFilePrinter "src/test/java/inputs/Test010/Test010.java"
-test-only *CppHVisitorTest*
-runxtc -translate src/test/java/inputs/Test000/Test000.java
-test-only *CppHVisitorTest*
-runxtc -translate src/test/java/inputs/Test000/Test000.java
-runxtc -translate src/test/java/inputs/Test001/Test001.java
-runxtc -translate src/test/java/inputs/Test000/Test000.java
-test-only *CppHVisitorTest*
-runxtc -translate src/test/java/inputs/Test000/Test000.java
-runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
-compilec
-runxtc -translate src/test/java/inputs/test018/Test018.java
-runxtc -translate src/test/java/inputs/test001/Test001.java
-runxtc -translate src/test/java/inputs/test000/Test000.java
-compilec
-runxtc -translate src/test/java/inputs/test000/Test000.java
-compilec
 runxtc -translate src/test/java/inputs/test000/Test000.java
 compilec
 execc
+runxtc -translate src/test/java/inputs/test005/Test005.java
+compilec
 runxtc -translate src/test/java/inputs/test001/Test001.java
 compilec
+
