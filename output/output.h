@@ -31,13 +31,15 @@ namespace inputs {
       Class (*getClass) (A);
       String (*toString) (A);
       bool (*equals) (A, Object);
+      void (*__delete) (__A*);
 
       __A_VT()
       : __is_a(__A::__class()),
         hashCode((int32_t (*)(A)) &__Object::hashCode),
         getClass((Class (*)(A)) &__Object::getClass),
         toString(&__A::toString),
-        equals((bool (*)(A, Object)) &__Object::equals) {}
+        equals((bool (*)(A, Object)) &__Object::equals),
+        __delete(__rt::__delete<__A>) {}
     };
 
     struct __Test001;
@@ -46,12 +48,12 @@ namespace inputs {
     
     struct __Test001 { 
       
-      __rt::Ptr<__Test001_VT> __vptr;
+      __Test001_VT* __vptr;
       
       __Test001();
 
       static void main_String(Test001,String);
-      static Test001 __init(A __this);
+      static Test001 __init(Test001 __this);
       static Class __class();
 
       static __Test001_VT __vtable;
@@ -64,6 +66,7 @@ namespace inputs {
       Class (*getClass) (Test001);
       String (*toString) (Test001);
       bool (*equals) (Test001, Object);
+      void (*__delete) (__Test001*);
       void (*main_String) (Test001, String);
 
       __Test001_VT()
@@ -72,6 +75,7 @@ namespace inputs {
         getClass((Class (*)(Test001)) &__Object::getClass),
         toString((String (*)(Test001)) &__Object::toString),
         equals((bool (*)(Test001, Object)) &__Object::equals),
+        __delete(__rt::__delete<__Test001>),
         main_String(&__Test001::main_String) {}
     };
 

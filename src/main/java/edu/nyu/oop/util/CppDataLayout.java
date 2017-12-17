@@ -125,7 +125,7 @@ public class CppDataLayout {
             } else {
                 // make default constructor
                 CppMethod defaultConstructor = new CppMethod("__init", c.getClassName());
-                CppParameter cppparm = new CppParameter(c.getClassName(), "A __this");
+                CppParameter cppparm = new CppParameter(c.getClassName(), c.getClassName() + " __this");
                 //defaultConstructor.parameters.add("");
                 defaultConstructor.parameters.add(cppparm);
                 this.methods.add(defaultConstructor);
@@ -312,10 +312,16 @@ public class CppDataLayout {
         equals.setReturnType("boolean");
         equals.setOwnerClass("None");
 
+        CustomMethodClass delete = new CustomMethodClass();
+        delete.setName("__delete");
+        delete.setReturnType("void");
+        delete.setOwnerClass("None");
+
         methods.add(hashCode);
         methods.add(getClass);
         methods.add(toString);
         methods.add(equals);
+        methods.add(delete);
 
         return methods;
     }
@@ -394,6 +400,7 @@ public class CppDataLayout {
             ArrayList<String> inheritedMethodNames = getMethodNames(inheritedMethods);
             int k = 0;
             boolean isLastMethod = false;
+            boolean isDeleteMethod = false;
             VTInstantiatorMethod vtiMethod;
             VTMethod vtMethod;
 
@@ -403,8 +410,16 @@ public class CppDataLayout {
 
             for (CustomMethodClass inheritedM : inheritedMethods){
 
-
+                isDeleteMethod = false;
                 vtiMethod = new VTInstantiatorMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
+
+
+                if (inheritedM.getName().equals("__delete")){
+                    System.out.println("foundDELETE");
+                    isDeleteMethod = true;
+
+                }
+
                 vtMethod = new VTMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
 
                 VTInstantiatorMethods.add(vtiMethod);
@@ -641,7 +656,12 @@ public class CppDataLayout {
                 String returnT = translateType.translateType(method.getReturnType());
                 fullLine = "";
                 shouldOverride = false;
-                if (isOverridden) {;
+                if (method.getName().equals("__delete")){
+                   // __delete(__rt::__delete<__A>),
+                   // this.objectReference = method.getName() + "(&__" + className + "::" + method.getName() + ")";
+                    this.fullLine = "__delete(__rt::__delete<__" + className + ">)";
+                }
+                else if (isOverridden) {;
                     this.objectReference = method.getName() + "(&__" + className + "::" + method.getName() + ")";
                     this.fullLine = this.objectReference;
                 }
@@ -853,10 +873,20 @@ public class CppDataLayout {
                         parameters += parameter + ", ";
                     }
                     // remove comma and space at the end
+
+
+                    System.out.println("methname " + method.getName());
                     parameters = parameters.substring(0, parameters.length() - 2);
-                    if (!method.getName().equals("equals")) {
+                    if (method.getName().equals("__delete")){
+                        // void (*__delete)(__A*);
+                        System.out.println("in delete");
+                        this.fullLine = returnT + " (*" + method.getName() + ") (__" + parameters + "*)";
+
+                    }
+                    else if (!method.getName().equals("equals") && !method.getName().equals("__delete")) {
                         this.fullLine = returnT + " (*" + method.getName() + ") (" + parameters + ")";
                     }
+
                     else{
                         this.fullLine = returnT + " (*" + method.getName() + ") (" + className + "," + " Object"+ ")";
                     }

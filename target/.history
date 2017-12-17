@@ -30,6 +30,7 @@ runxtc -translate src/test/java/inputs/Test000/Test000.java
 test-only *CppHVisitorTest*
 runxtc -translate src/test/java/inputs/Test000/Test000.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+<<<<<<< HEAD
 runxtc -translate src/test/java/inputs/Test000/Test000.java
 runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
 test-only *CppHVisitorTest*
@@ -308,10 +309,22 @@ compilec
 runxtc -translate src/test/java/inputs/test001/Test001.java
 compilec
 runxtc -translate src/test/java/inputs/test001/Test001.java
+=======
+>>>>>>> 54b83086f1d04dc8c3d643a72efb0a7bc53aa153
+compilec
+runxtc -translate src/test/java/inputs/test018/Test018.java
+runxtc -translate src/test/java/inputs/test001/Test001.java
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+runxtc -translate src/test/java/inputs/test000/Test000.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test005/Test005.java
 compilec
 runxtc -translate src/test/java/inputs/test001/Test001.java
 compilec
-runxtc -translate src/test/java/inputs/test001/Test001.java
-compilec
-runxtc -translate src/test/java/inputs/test001/Test001.java
-compilec
+execc
