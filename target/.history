@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 test *CppHVisitorTest*
 tes-onlyt *CppHVisitorTest*
 test-only *CppHVisitorTest*
@@ -332,10 +333,57 @@ execc
 runxtc -translate src/test/java/inputs/test000/Test000.java
 execc
 =======
+=======
+>>>>>>> 4bcc548abe51338c2c227b5297e43d748efa0431
 runxtc -translate src/test/java/inputs/test000/Test000.java
 compilec
-runxtc -translate src/test/java/inputs/test000/Test000.java
+execc
+runxtc -translate src/test/java/inputs/test005/Test005.java
 compilec
-runxtc -translate src/test/java/inputs/test000/Test000.java
+runxtc -translate src/test/java/inputs/test001/Test001.java
 compilec
+<<<<<<< HEAD
+execc
+runxtc -translate src/test/java/inputs/test001/Test001.java
+execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+execc
+compilec
+execc
+compilec
+execc
+compilec
+execc
+compilec
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+execc
+compilec
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test002/Test002.java
+compilec
+<<<<<<< HEAD
 >>>>>>> 54b83086f1d04dc8c3d643a72efb0a7bc53aa153
+=======
+execc
+=======
+
+>>>>>>> 819476b2c6832908c2e1afe34479df8907b2484d
+>>>>>>> 4bcc548abe51338c2c227b5297e43d748efa0431

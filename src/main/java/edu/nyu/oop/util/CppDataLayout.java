@@ -99,6 +99,7 @@ public class CppDataLayout {
             this.variables = new ArrayList<CppVar>();
             this.methods = new ArrayList<CppMethod>();
             this.parentName = c.getParentClass();
+            // __rt::Ptr<__A_VT>
             this.VTPointer = "__" + c.getClassName() + "_VT* __vptr";
 
             this.name = "__" + c.getClassName();
@@ -316,11 +317,11 @@ public class CppDataLayout {
         delete.setReturnType("void");
         delete.setOwnerClass("None");
 
+        methods.add(delete);
         methods.add(hashCode);
         methods.add(getClass);
         methods.add(toString);
         methods.add(equals);
-        methods.add(delete);
 
         return methods;
     }
