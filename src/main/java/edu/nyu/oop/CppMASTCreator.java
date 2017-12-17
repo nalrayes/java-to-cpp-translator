@@ -129,7 +129,7 @@ public class CppMASTCreator {
     }
 
     private static void clearDepNode(Node depNode) {
-        cppNodeActions.
+        cppNodeActions.clearNode((GNode) depNode);
     }
     private static void addNewNameSpaces (Node usingNamespaceNode){
         cppNodeActions.addDataToNode((GNode) usingNamespaceNode,"inputs::constructors");

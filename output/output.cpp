@@ -1,6 +1,3 @@
-#pragma once
-#include "java_lang.h"
-#include <string>
 #include "output.h"
 #include <iostream>
 

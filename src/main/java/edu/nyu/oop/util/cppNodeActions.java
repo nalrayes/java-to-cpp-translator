@@ -16,7 +16,9 @@ public abstract class cppNodeActions {
     }
 
     public static void clearNode(GNode node) {
-        node
+        while (node.size() > 0) {
+            node.remove(0);
+        }
     }
 
     public static GNode addNodeAsChildToParent(GNode parent, GNode child){
