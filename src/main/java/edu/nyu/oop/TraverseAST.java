@@ -120,33 +120,45 @@ public class TraverseAST extends Visitor {
     }
 
 
-    public void getInheritedFields(CustomClassObject currentClass, String parent){
+    public void getInheritedFields(CustomClassObject currentClass, String classExtension){
 
-        for (CustomClassObject fc : classSummary.classes ){
+        Iterator<CustomClassObject> iter = classSummary.classes.iterator();
 
-            if (fc.getClassName().equals(parent)){
+        while (iter.hasNext()) {
+            CustomClassObject c = iter.next();
 
-            System.out.println("thething " + fc.getClassName());
+            if (c.className.equals(classExtension)) {
 
-                for (CustomVariablesClass v : fc.getClassVariables()){
+                Iterator<CustomVariablesClass> iter2 = c.getClassVariables().iterator();
 
-                   currentClass.addClassVariable(v);
+                while (iter2.hasNext()){
 
+                    CustomVariablesClass v = iter2.next();
+
+                    currentClass.addClassVariable(v);
 
                 }
 
 
 
-
-
+//                    for (CustomVariablesClass v : c.getClassVariables()) {
+////
+//                        currentClass.addClassVariable(v);
+////
+////
+////
+//                }
 
             }
+//
 
 
 
         }
 
     }
+
+
 
     public void visitClassDeclaration(GNode n) {
         //Entering the class scope & create a new class object
@@ -183,39 +195,9 @@ public class TraverseAST extends Visitor {
 //
 //                }
 //            }
-            Iterator<CustomClassObject> iter = classSummary.classes.iterator();
 
-            while (iter.hasNext()) {
-                CustomClassObject c = iter.next();
-
-                if (c.className.equals(classExtension)) {
-
-                    Iterator<CustomVariablesClass> iter2 = c.getClassVariables().iterator();
-
-                    while (iter2.hasNext()){
-
-                        CustomVariablesClass v = iter2.next();
-
-                        currentClass.addClassVariable(v);
-
-                    }
-
-
-
-//                    for (CustomVariablesClass v : c.getClassVariables()) {
-////
-//                        currentClass.addClassVariable(v);
-////
-////
-////
-//                }
-
-                }
-//
-
-
-
-                }
+            // get inherited fields
+            getInheritedFields(currentClass, classExtension);
 
 
 
