@@ -17,10 +17,17 @@ namespace inputs {
       
       __A();
 
+<<<<<<< HEAD
       private String fld;
 
       static String getFld(A);
       static A __init(A, String);
+=======
+      String fld;
+
+      static String getFld(A);
+      static A __init(String);
+>>>>>>> f778f90af7d2a571eb400ea165f4ac38d3647a48
       static Class __class();
 
       static __A_VT __vtable;
@@ -56,7 +63,11 @@ namespace inputs {
       
       __Test003();
 
+<<<<<<< HEAD
       static void main_String(Test003, String);
+=======
+      static void main_String(Test003,String);
+>>>>>>> f778f90af7d2a571eb400ea165f4ac38d3647a48
       static Test003 __init(Test003 __this);
       static Class __class();
 
