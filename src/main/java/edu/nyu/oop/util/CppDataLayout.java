@@ -211,6 +211,7 @@ public class CppDataLayout {
 
             this.name = "__init";
             this.returnType = c.getName();
+            this.parameters.add(new CppParameter("__init", c.getName()));
 
             for (CustomVariablesClass javaParam :c.getParameters()) {
                 CppParameter cParam = new CppParameter(javaParam);
@@ -534,21 +535,22 @@ public class CppDataLayout {
                 duplicate = 0;
 
                 String originalName = VTMethods.get(x).methodName;
+                System.out.println("themeths " + originalName);
 //\
                 for (int j = 0; j < VTMethods.size(); j++) {
 
 
                     String currentName = VTMethods.get(j).methodName;
 
-//                    if (originalName.equals(currentName)){
-//
-//                        duplicate++;
-//                    }
+                    if (originalName.equals(currentName)){
+
+                        duplicate++;
+                    }
 //                    if (VTInstantiatorMethods.get(x).saveMethodName.equals(VTInstantiatorMethods.get(j).saveMethodName)){
 //                        duplicate++;
 //                    }
                     if (duplicate >= 2){
-                        System.out.println("duplicate12 " + originalName);
+                        System.out.println("duplicate122 " + originalName);
                         VTMethods.set(x, VTMethods.get(j));
 
                         VTMethods.remove(j);

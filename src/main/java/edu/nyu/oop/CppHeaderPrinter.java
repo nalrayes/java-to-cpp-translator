@@ -131,10 +131,10 @@ public class CppHeaderPrinter extends Visitor {
         for (int i = 0; i < n.size(); i++) {
             curNode = n.getNode(i);
             sb.append(curNode.getString(0));
-            sb.append(',');
+            sb.append(", " );
         }
         if (sb.length() > 0) {
-            sb.delete(sb.length() - 1, sb.length());
+            sb.delete(sb.length() - 2, sb.length());
         }
         printer.p(sb.toString());
         printer.p(')');
