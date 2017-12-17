@@ -4,10 +4,9 @@
 using namespace java::lang;
 using namespace std;
 
-#include inputs::test001
+using namespace::test000
 
 int main(void) {
-  A a =  __A::__init(new __A();
-  std::cout << ({__rt::checkNotNull(a); a->__vptr->toString(a)}) << std::endl;
+  std::cout << __rt::literal("Hello.") << std::endl;
   return 0;
 }
