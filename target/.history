@@ -39,3 +39,6 @@ runxtc -translate src/test/java/inputs/test000/Test000.java
 compilec
 runxtc -translate src/test/java/inputs/test000/Test000.java
 compilec
+execc
+runxtc -translate src/test/java/inputs/test001/Test001.java
+compilec
