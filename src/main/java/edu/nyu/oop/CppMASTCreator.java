@@ -116,7 +116,7 @@ public class CppMASTCreator {
 
         // get namespace name
         String nameSpaceName = rootNode.getNode(2).getNode(1).getString(0);
-        cppNodeActions.addDataToNode((GNode) mainMethodNode, "#include inputs::" + nameSpaceName);
+        cppNodeActions.addDataToNode((GNode) mainMethodNode, "using namespace inputs::" + nameSpaceName + ";");
         // add the main methods name
         cppNodeActions.addDataToNode((GNode) mainMethodNode,mainMethodClass.mainMethodName);
         GNode blockImplementationNode = cppNodeActions.createNewASTNode("MainMethodBlockImplementation");
