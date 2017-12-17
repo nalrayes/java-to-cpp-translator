@@ -273,7 +273,7 @@ public class CppDataLayoutM {
 
                             System.out.println("argsprint " + args);
 
-                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + ""+ args + "))";
+                           fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + ""+ args + ")";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
 
                             continue;
