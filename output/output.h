@@ -38,7 +38,7 @@ namespace inputs {
         __delete(__rt::__delete<__A>),
         hashCode((int32_t (*)(A)) &__Object::hashCode),
         getClass((Class (*)(A)) &__Object::getClass),
-        toString(&__A::toString),
+        toString((String (*)(A)) &__A::toString),
         equals((bool (*)(A, Object)) &__Object::equals) {}
     };
 
