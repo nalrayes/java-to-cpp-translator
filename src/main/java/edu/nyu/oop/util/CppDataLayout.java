@@ -250,7 +250,6 @@ public class CppDataLayout {
         }
     }
 
-
     public static class CppParameter {
         String name;
         String type;
@@ -286,7 +285,6 @@ public class CppDataLayout {
             else{
                 this.modifier = "";
             }
-            //this.modifier
         }
     }
 

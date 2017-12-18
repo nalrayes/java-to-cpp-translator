@@ -5,7 +5,11 @@
 using namespace java::lang;
 
 namespace inputs {
+<<<<<<< HEAD
   namespace test020 {
+=======
+  namespace test030 {
+>>>>>>> 16778525e1a93051b24e450824e2cc3cd19cced5
   
     struct __A;
     struct __A_VT;
@@ -44,6 +48,7 @@ namespace inputs {
         toString((String (*)(A)) &__Object::toString) {}
     };
 
+<<<<<<< HEAD
     struct __Test020;
     struct __Test020_VT;
     typedef __rt::Ptr<__Test020> Test020;
@@ -77,6 +82,41 @@ namespace inputs {
         equals((bool (*)(Test020, Object)) &__Object::equals),
         getClass((Class (*)(Test020)) &__Object::getClass),
         toString((String (*)(Test020)) &__Object::toString) {}
+=======
+    struct __Test030;
+    struct __Test030_VT;
+    typedef __rt::Ptr<__Test030> Test030;
+    
+    struct __Test030 { 
+      
+      __Test030_VT* __vptr;
+      
+      __Test030();
+
+      static void main_String_static(String);
+      static Test030 __init(Test030 __this);
+      static Class __class();
+
+      static __Test030_VT __vtable;
+    };
+
+    struct __Test030_VT { 
+      Class __is_a;
+
+      void (*__delete) (__Test030*);
+      int32_t (*hashCode) (Test030);
+      bool (*equals) (Test030, Object);
+      Class (*getClass) (Test030);
+      String (*toString) (Test030);
+
+      __Test030_VT()
+      : __is_a(__Test030::__class()),
+        __delete(__rt::__delete<__Test030>),
+        hashCode((int32_t (*)(Test030)) &__Object::hashCode),
+        equals((bool (*)(Test030, Object)) &__Object::equals),
+        getClass((Class (*)(Test030)) &__Object::getClass),
+        toString((String (*)(Test030)) &__Object::toString) {}
+>>>>>>> 16778525e1a93051b24e450824e2cc3cd19cced5
     };
 
   }

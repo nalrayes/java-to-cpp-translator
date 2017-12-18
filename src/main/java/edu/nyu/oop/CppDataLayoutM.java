@@ -292,17 +292,30 @@ public class CppDataLayoutM {
 
                         }  else if (expressionName == "NewArrayExpression"){
                             //System.out.println("anexpression1");
+// __rt::Array<__rt::Array<A>> as = new __rt::__Array<__rt::Array<A>>(5);
 
-                            declaratorVar = "__rt::Array<"+ varType + "> " + declaratorVar ;
-                           // __rt::Array<A> as =  new __rt::__Array<A>(10);
-                            declaratorVal = " new __rt::__Array<"+varType+">";
+
+
+
                             System.out.println("express123 " + expression);
                             //declaratorVal += expression.getNode(0).getString(0)+")";
                             Node concreteDimensions = expression.getNode(1);
+                            if (concreteDimensions.size() == 1){
+                                declaratorVar = "__rt::Array<"+ varType + "> " + declaratorVar ;
+                                // __rt::Array<A> as =  new __rt::__Array<A>(10);
+                                declaratorVal = " new __rt::__Array<"+varType+">";
+
+                            }
+                            else{
+                                declaratorVar = "__rt::Array<__rt::Array<"+ varType + ">> " + declaratorVar ;
+                                // __rt::Array<A> as =  new __rt::__Array<A>(10);
+                                declaratorVal = " new __rt::__Array<__rt::Array<"+varType+">>";
+                            }
 //                            System.out.println("expressurself " + expression);
 //                            System.out.println("dimsize " + concreteDimensions.size());
                             for (int d = 0; d < concreteDimensions.size(); d++){
                                 declaratorVal += "(" + concreteDimensions.getNode(d).getString(0) + ")";
+                                break;
                             }
                             fieldDeclarationLine = declaratorVar + " = " + declaratorVal;
                             continue;
