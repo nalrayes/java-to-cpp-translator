@@ -292,8 +292,26 @@ public class TraverseASTM extends ContextualVisitor {
         Node receiver = n.getNode(0);
         String methodName = n.getString(2);
 
+        System.out.println("thispla");
+
         Type typeToSearch = JavaEntities.currentType(table);
         List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
+
+        MethodT method =
+                JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
+
+
+        if (method == null) {
+            System.out.println("PLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASEPLEASE");
+            System.out.println(methodName);
+            System.out.println(typeToSearch);
+            System.out.println(actuals);
+            System.out.println("ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP");
+            return;
+        }
+        if (JavaEntities.hasModifier(method, "static")) {
+            System.out.println("STATIC METHOD!!!");
+        }
 
 //        System.out.println("THE METHOD OVERSTUFF NAME");
 //        System.out.println(methodName);
@@ -302,6 +320,7 @@ public class TraverseASTM extends ContextualVisitor {
 //
 //        System.out.println("THE METHOD OVERSTUFF FOR");
         if (!TypeUtil.getType(receiver).isAlias()) {
+//            System.out.println("ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP ADD IT UP");
             return;
         }
         String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
@@ -359,6 +378,7 @@ public class TraverseASTM extends ContextualVisitor {
         }
 
 
+
         if (receiver == null &&
                 !"super".equals(methodName) &&
                 !"this".equals(methodName)) {
@@ -368,8 +388,7 @@ public class TraverseASTM extends ContextualVisitor {
 
             // find type of called method
             //List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
-            MethodT method =
-                    JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
+
 
             if (method == null) return;
 
