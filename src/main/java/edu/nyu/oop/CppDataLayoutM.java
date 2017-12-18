@@ -733,8 +733,13 @@ public class CppDataLayoutM {
             this.returnType = typeTranslate.translateType(methodClass.getReturnType());
             // name = __className
             this.name = this.returnType + " __" + className + "::" + methodClass.getName();
-            // TODO: what if its static?
-            this.params = "(" + className + " __this";
+
+            if(methodClass.getName().contains("static")){
+                this.params = "(";
+            }
+            else{
+                this.params = "(" + className + " __this";
+            }
             for (CustomVariablesClass var : methodClass.getParameters()) {
                 this.params += ", " + var.type + " " + var.name;
             }

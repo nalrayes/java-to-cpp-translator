@@ -237,6 +237,11 @@ public class TraverseASTM extends ContextualVisitor {
             currentMethodObj.name = newName;
         }
 
+        //Handle static
+        if(currentMethodObj.modifier.contains("static")){
+            currentMethodObj.name += "_static";
+        }
+
         //Get the methods block
         for (int i = 0; i < currMethod.size(); i++){
             if (currMethod.get(i) != null && currMethod.get(i).getClass().equals(String.class)){
@@ -248,6 +253,8 @@ public class TraverseASTM extends ContextualVisitor {
                 break;
             }
         }
+
+
 
         currentClass.methods.add(currentMethodObj);
         isConstructor = false;
