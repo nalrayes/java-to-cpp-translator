@@ -222,6 +222,15 @@ public class TraverseASTM extends ContextualVisitor {
                         currentMethodObj.parameters.add(myVar);
                 }
             }
+//            for (int i = 0; i < currentClass.getMethodNames().size(); i++) {
+//                // remove the old method
+//                System.out.println("THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS ");
+//                System.out.println(currentMethodObj.getName());
+//                System.out.println(currentClass.getMethodNames());
+//                if (currentClass.getMethodNames().get(i).contains(currentMethodObj.getName())) {
+//                    currentClass.methods.remove(i);
+//                }
+//            }
         }
 
         //Handle Overloading Here
@@ -288,6 +297,16 @@ public class TraverseASTM extends ContextualVisitor {
 //        System.out.println(actuals);
 //
 //        System.out.println("THE METHOD OVERSTUFF FOR");
+        String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
+
+        String baseMethodName = new String(methodName);
+
+        ArrayList<String> calleeMethodNames = new ArrayList<String>();
+        for (CustomClassObject classObject : implementationSummary.implementationClassObjects) {
+            if (classObject.getClassName().equals(calleeClassName)) {
+                calleeMethodNames = classObject.getMethodNames();
+            }
+        }
         for (Type at : actuals){
             if (at.hasScope()) {
                 String[] splittedScope = at.getScope().split("\\.");
@@ -299,7 +318,39 @@ public class TraverseASTM extends ContextualVisitor {
                 System.out.println(at.getConstant().getKind());
             }
         }
-        n.set(2, methodName);
+        // if methodName is in class methods:
+            // add it
+        // else
+            // search classmethods for closest match (using .contains)
+            // add that
+
+//        ArrayList<String> allMethodNames = receiver.get.getMethodNames();
+        boolean methodSet = false;
+        for (int i = 0; i < calleeMethodNames.size(); i++) {
+            // remove the base method
+            if (calleeMethodNames.get(i).equals(baseMethodName)) {
+                calleeMethodNames.remove(i);
+            } else if (calleeMethodNames.get(i).equals(methodName)) {
+                methodSet = true;
+                n.set(2, methodName);
+                break;
+            }
+        }
+
+        if (!methodSet) {
+            for (int i  = 0; i < calleeMethodNames.size(); i++) {
+                if (calleeMethodNames.get(i).contains(baseMethodName)) {
+                    n.set(2, calleeMethodNames.get(i));
+                    methodSet = true;
+                    break;
+                }
+            }
+        }
+
+        if (!methodSet) {
+            n.set(2, methodName);
+        }
+
 
         if (receiver == null &&
                 !"super".equals(methodName) &&
