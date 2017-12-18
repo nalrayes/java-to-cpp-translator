@@ -281,7 +281,7 @@ public class TraverseASTM extends ContextualVisitor {
         Type typeToSearch = JavaEntities.currentType(table);
         List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
 
-        
+
         Type t = JavaEntities.resolveIfAlias(table, classpath(), table.current().getQualifiedName(), TypeUtil.getType(receiver));
 //        String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
         String calleeClassName;

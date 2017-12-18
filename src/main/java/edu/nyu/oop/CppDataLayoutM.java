@@ -832,7 +832,10 @@ public class CppDataLayoutM {
         String methodName = n.getString(2);
         String ret = "({";
         String callTo;
-        if (n.getNode(0).getName().equals("CallExpression")) {
+        if (methodName.contains("static")) {
+            return processNameNode(n.getNode(0)) + "::" + methodName + "(" + arguments + ")";
+        }
+        else if (n.getNode(0).getName().equals("CallExpression")) {
             String tmpCallTo = processCallExpression(n.getNode(0), i + 1);
             String iter = Integer.toString(i);
             String tmp = "tmp" + iter;
