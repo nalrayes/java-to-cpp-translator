@@ -919,6 +919,12 @@ System.out.println("imhere123 " + declarator);
             ret += "Object " + tmp + " = " + tmpCallTo + "; ";
             ret += "__rt::checkNotNull(" + tmp + "); ";
             callTo = tmp;
+        } if (n.getNode(0).getName().equals("CastExpression")) {
+            String castType = n.getNode(0).getNode(0).getNode(0).getString(0);
+            String castExpression = processCastExpression(n.getNode(0));
+            String tmpCast = castType + " tmpCast = " + castExpression + ";";
+            ret += tmpCast;
+            callTo = "tmpCast";
         } else {
             callTo = processNameNode(n.getNode(0));
             if (isMethodStatic(callTo, methodName)) {
@@ -986,10 +992,10 @@ System.out.println("imhere123 " + declarator);
             res = processCastExpression(n);
         } else if (n.getName() == "AdditiveExpression") {
             // translation: no difference
-            res = processNameNode(n.getNode(0)) + " + " + processNameNode(n.getNode(2));
+            res = processNameNode(n.getNode(0)) + n.getString(1) + processNameNode(n.getNode(2));
         } else if (n.getName() == "MultiplicativeExpression") {
             // translation: no difference
-            res = processNameNode(n.getNode(0)) + " * " + processNameNode(n.getNode(2));
+            res = processNameNode(n.getNode(0)) + n.getString(1) + processNameNode(n.getNode(2));
         } else if (n.getName() == "Expression") {
             // translation: no difference
             res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));

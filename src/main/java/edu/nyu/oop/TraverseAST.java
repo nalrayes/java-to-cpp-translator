@@ -278,7 +278,7 @@ public class TraverseAST extends Visitor {
         }
 
         //Handle static
-        if(currentMethodObj.modifier.contains("static")){
+        if(currentMethodObj.modifier != null && currentMethodObj.modifier.contains("static")){
             newName += "_static";
         }
 

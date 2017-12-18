@@ -238,7 +238,7 @@ public class TraverseASTM extends ContextualVisitor {
         }
 
         //Handle static
-        if(currentMethodObj.modifier.contains("static")){
+        if(currentMethodObj.modifier != null && currentMethodObj.modifier.contains("static")){
             currentMethodObj.name += "_static";
         }
 
@@ -284,10 +284,39 @@ public class TraverseASTM extends ContextualVisitor {
         String methodName = n.getString(2);
 
         System.out.println("thispla");
+        if (methodName == "super") {
+            return;
+        }
 
         Type typeToSearch = JavaEntities.currentType(table);
         List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
 
+        if (receiver == null &&
+                !"super".equals(methodName) &&
+                !"this".equals(methodName)) {
+
+            // find type to search for relevant methods
+            //Type typeToSearch = JavaEntities.currentType(table);
+
+            // find type of called method
+            //List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
+            MethodT method =
+                    JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
+
+
+            if (method == null) return;
+
+            //make 'this' access explicit
+            if (!TypeUtil.isStaticType(method)) {
+                n.set(0, makeThisExpression());
+            }
+
+        }
+
+        receiver = n.getNode(0);
+        if (receiver != null) {
+
+        }
 
         Type t = JavaEntities.resolveIfAlias(table, classpath(), table.current().getQualifiedName(), TypeUtil.getType(receiver));
 //        String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
@@ -345,30 +374,6 @@ public class TraverseASTM extends ContextualVisitor {
 
         if (!methodSet) {
             n.set(2, methodName);
-        }
-
-
-
-        if (receiver == null &&
-                !"super".equals(methodName) &&
-                !"this".equals(methodName)) {
-
-            // find type to search for relevant methods
-            //Type typeToSearch = JavaEntities.currentType(table);
-
-            // find type of called method
-            //List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
-            MethodT method =
-                    JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
-
-
-            if (method == null) return;
-
-            //make 'this' access explicit
-            if (!TypeUtil.isStaticType(method)) {
-                n.set(0, makeThisExpression());
-            }
-
         }
 
     }
