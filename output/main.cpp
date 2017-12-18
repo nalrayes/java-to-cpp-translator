@@ -4,7 +4,7 @@
 using namespace java::lang;
 using namespace std;
 
-using namespace inputs::test019;
+using namespace inputs::test018;
 
 int __A::x;
 int main(int argc, char* argv[]) {
@@ -12,8 +12,8 @@ int main(int argc, char* argv[]) {
   for (int32_t i = 1; i < argc; i++) {
     (*args)[i] = __rt::literal(argv[i]);
   }
-  int x;
-  x = __A::x;
-  std::cout << x << std::endl;
+  {__A::x = 3;
+  }
+  std::cout << __A::x << std::endl;
   return 0;
 }

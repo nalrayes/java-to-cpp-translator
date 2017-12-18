@@ -5,7 +5,7 @@
 using namespace java::lang;
 
 namespace inputs {
-  namespace test020 {
+  namespace test018 {
   
     struct __A;
     struct __A_VT;
@@ -19,7 +19,6 @@ namespace inputs {
 
       static int32_t x;
 
-      static int32_t x(A);
       static A __init(A __this);
       static Class __class();
 
@@ -34,7 +33,6 @@ namespace inputs {
       bool (*equals) (A, Object);
       Class (*getClass) (A);
       String (*toString) (A);
-      int32_t (*x) (A);
 
       __A_VT()
       : __is_a(__A::__class()),
@@ -42,45 +40,44 @@ namespace inputs {
         hashCode((int32_t (*)(A)) &__Object::hashCode),
         equals((bool (*)(A, Object)) &__Object::equals),
         getClass((Class (*)(A)) &__Object::getClass),
-        toString((String (*)(A)) &__Object::toString),
-        x(&__A::x) {}
+        toString((String (*)(A)) &__Object::toString) {}
     };
 
-    struct __Test020;
-    struct __Test020_VT;
-    typedef __rt::Ptr<__Test020> Test020;
+    struct __Test018;
+    struct __Test018_VT;
+    typedef __rt::Ptr<__Test018> Test018;
     
-    struct __Test020 { 
+    struct __Test018 { 
       
-      __Test020_VT* __vptr;
+      __Test018_VT* __vptr;
       
-      __Test020();
+      __Test018();
 
-      static void main_String(Test020, String);
-      static Test020 __init(Test020 __this);
+      static void main_String(Test018, String);
+      static Test018 __init(Test018 __this);
       static Class __class();
 
-      static __Test020_VT __vtable;
+      static __Test018_VT __vtable;
     };
 
-    struct __Test020_VT { 
+    struct __Test018_VT { 
       Class __is_a;
 
-      void (*__delete) (__Test020*);
-      int32_t (*hashCode) (Test020);
-      bool (*equals) (Test020, Object);
-      Class (*getClass) (Test020);
-      String (*toString) (Test020);
-      void (*main_String) (Test020, String);
+      void (*__delete) (__Test018*);
+      int32_t (*hashCode) (Test018);
+      bool (*equals) (Test018, Object);
+      Class (*getClass) (Test018);
+      String (*toString) (Test018);
+      void (*main_String) (Test018, String);
 
-      __Test020_VT()
-      : __is_a(__Test020::__class()),
-        __delete(__rt::__delete<__Test020>),
-        hashCode((int32_t (*)(Test020)) &__Object::hashCode),
-        equals((bool (*)(Test020, Object)) &__Object::equals),
-        getClass((Class (*)(Test020)) &__Object::getClass),
-        toString((String (*)(Test020)) &__Object::toString),
-        main_String(&__Test020::main_String) {}
+      __Test018_VT()
+      : __is_a(__Test018::__class()),
+        __delete(__rt::__delete<__Test018>),
+        hashCode((int32_t (*)(Test018)) &__Object::hashCode),
+        equals((bool (*)(Test018, Object)) &__Object::equals),
+        getClass((Class (*)(Test018)) &__Object::getClass),
+        toString((String (*)(Test018)) &__Object::toString),
+        main_String(&__Test018::main_String) {}
     };
 
   }

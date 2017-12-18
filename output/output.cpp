@@ -5,7 +5,7 @@ using namespace java::lang;
 using namespace std;
 
 namespace inputs {
-  namespace test019 {
+  namespace test018 {
 
     __A::__A() : __vptr(&__vtable)
     {}
@@ -23,5 +23,5 @@ namespace inputs {
       return __this;
     }
     
-  }
+}
 }
