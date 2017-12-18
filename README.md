@@ -3,7 +3,8 @@
 ### Features :
 
 - translates java into C++ for required provided inputs (test000 through test020)
-- supports method overriding and overloading (Some)
+- supports method overriding 
+- supports overloading (Some)
 - supports arrays
 - supports static stuff
 - supports memory management
@@ -34,21 +35,21 @@ Output will be placed in the output.h, output.cpp and main.cpp file within the o
 ###### TraverseAst.java
 ###### TraverseAstM.java
 
-####Custom Java Objects to retain data:
+#### Custom Java Objects to retain data:
 ###### CustomClassObject.java, CustomMethodClass.java, CustomConstructorClass.java, CustomVariablesClass.java
 
-####CPP Data Layout (Intermediate Data Structure)
-######CppDataLayout.java
-######CppDataLayoutM.java
+#### CPP Data Layout (Intermediate Data Structure)
+###### CppDataLayout.java
+###### CppDataLayoutM.java
 
-####Build CPP AST
-######CppHeaderASTCreator.java, cppNodeActions.java, CPPAST.java
-######CppHeaderASTMCreator.java 
+#### Build CPP AST
+###### CppHeaderASTCreator.java, cppNodeActions.java, CPPAST.java
+###### CppHeaderASTMCreator.java 
 
-####Print CPP AST 
-######CppHeaderPrinter.java
-######CppImplementationPrinter.java
-######CppMainPrinter.java
+#### Print CPP AST 
+###### CppHeaderPrinter.java
+###### CppImplementationPrinter.java
+###### CppMainPrinter.java
 
 
 ### Directory Overview
