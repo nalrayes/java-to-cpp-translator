@@ -831,6 +831,25 @@ public class CppDataLayoutM {
         return false;
     }
 
+    public static boolean isMethodStatic(String callTo, String methodName) {
+        ArrayList<CustomClassObject> theClasses = cppImplementationMainMethodClass.allTheClasses;
+
+        // this is the check for static fields
+        String nameToCheck = methodName + "_static";
+        for (CustomClassObject c : theClasses){
+            if (c.getClassName().contains(callTo)){
+                // found the class
+                for (CustomMethodClass m : c.getMethods()){
+                    if (m.getName().equals(nameToCheck)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+        return false;
+    }
+
     public static String processCallExpression(Node n, int i) {
         String arguments = "";
         if (n.getNode(3) != null) {
@@ -845,10 +864,7 @@ public class CppDataLayoutM {
         String methodName = n.getString(2);
         String ret = "({";
         String callTo;
-        if (methodName.contains("static")) {
-            return processNameNode(n.getNode(0)) + "::" + methodName + "(" + arguments + ")";
-        }
-        else if (n.getNode(0).getName().equals("CallExpression")) {
+        if (n.getNode(0).getName().equals("CallExpression")) {
             String tmpCallTo = processCallExpression(n.getNode(0), i + 1);
             String iter = Integer.toString(i);
             String tmp = "tmp" + iter;
@@ -857,6 +873,10 @@ public class CppDataLayoutM {
             callTo = tmp;
         } else {
             callTo = processNameNode(n.getNode(0));
+            if (isMethodStatic(callTo, methodName)) {
+                String newRet = callTo + "::" + methodName + "_static" + "(" + arguments + ")";
+                return newRet;
+            }
             ret += "__rt::checkNotNull(" + callTo + "); ";
         }
         ret += callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ");})";
@@ -912,11 +932,7 @@ public class CppDataLayoutM {
                       }
                   }
 
-
-
               }
-
-
           }
 
           System.out.println("getclasses123 " + theClasses.size());
