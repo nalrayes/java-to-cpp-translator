@@ -659,6 +659,14 @@ public class CppDataLayout {
         }
     }
 
+    public static String getArgs(ArrayList<CustomVariablesClass> vars) {
+        String s = "";
+        for (CustomVariablesClass v : vars) {
+            s += ", " + v.getType();
+        }
+        return s;
+    }
+
         public static class VTInstantiatorMethod{
             String objectReference;
             String returnTypeClassName;
@@ -688,9 +696,11 @@ public class CppDataLayout {
                 else {
                     this.objectReference = method.getName();
                     // get parent class
+                    ArrayList<CustomVariablesClass> vars = method.getParameters();
+                    String args = getArgs(vars);
                     if (method.getOwnerClass() != "None") {
                         if (!method.getName().equals("equals")) {
-                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + args + "))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
                         }
                         else{
                             this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &__" + method.getOwnerClass() + "::" + method.getName() + ")";
@@ -699,7 +709,7 @@ public class CppDataLayout {
                     }
                     else {
                         if (!method.getName().equals("equals")) {
-                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + "))" + " &__Object::" + method.getName() + ")";
+                            this.returnTypeClassName = "((" + returnT + " (*)(" + className + args + "))" + " &__Object::" + method.getName() + ")";
                         }
                         else{
                             this.returnTypeClassName = "((" + returnT + " (*)(" + className + ", Object" +"))" + " &__Object::" + method.getName() + ")";
