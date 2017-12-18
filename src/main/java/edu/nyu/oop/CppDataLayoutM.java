@@ -833,6 +833,7 @@ public class CppDataLayoutM {
         boolean justString = n.getName() == "PrimaryIdentifier" || n.getName() == "IntegerLiteral";
         if (justString) {
             res = n.getString(0);
+            
         } else if (n.getName() == "SelectionExpression"){
             // translation: ->
             res = processNameNode(n.getNode(0)) + "->" + n.getString(1);

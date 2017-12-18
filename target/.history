@@ -1,9 +1,3 @@
-test *CppHVisitorTest*
-tes-onlyt *CppHVisitorTest*
-test-only *CppHVisitorTest*
-tesst
-test
-git add .
 test-only *CppHVisitorTest*
 test-only *CppHVisitorTest* a
 git add .
@@ -469,3 +463,38 @@ execc
 runxtc -translate src/test/java/inputs/test003/Test003.java
 compilec
 execc
+runxtc -translate src/test/java/inputs/test010/Test010.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test011/Test011.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test012/Test012.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test013/Test013.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test013/Test013.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test014/Test014.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test014/Test014.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test015/Test015.java
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test016/Test016.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
