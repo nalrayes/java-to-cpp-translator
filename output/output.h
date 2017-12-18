@@ -5,7 +5,7 @@
 using namespace java::lang;
 
 namespace inputs {
-  namespace test025 {
+  namespace test026 {
   
     struct __A;
     struct __A_VT;
@@ -87,39 +87,39 @@ namespace inputs {
         get(&__B::get) {}
     };
 
-    struct __Test025;
-    struct __Test025_VT;
-    typedef __rt::Ptr<__Test025> Test025;
+    struct __Test026;
+    struct __Test026_VT;
+    typedef __rt::Ptr<__Test026> Test026;
     
-    struct __Test025 { 
+    struct __Test026 { 
       
-      __Test025_VT* __vptr;
+      __Test026_VT* __vptr;
       
-      __Test025();
+      __Test026();
 
       static void main_String_static(String);
-      static Test025 __init(Test025 __this);
+      static Test026 __init(Test026 __this);
       static Class __class();
 
-      static __Test025_VT __vtable;
+      static __Test026_VT __vtable;
     };
 
-    struct __Test025_VT { 
+    struct __Test026_VT { 
       Class __is_a;
 
-      void (*__delete) (__Test025*);
-      int32_t (*hashCode) (Test025);
-      bool (*equals) (Test025, Object);
-      Class (*getClass) (Test025);
-      String (*toString) (Test025);
+      void (*__delete) (__Test026*);
+      int32_t (*hashCode) (Test026);
+      bool (*equals) (Test026, Object);
+      Class (*getClass) (Test026);
+      String (*toString) (Test026);
 
-      __Test025_VT()
-      : __is_a(__Test025::__class()),
-        __delete(__rt::__delete<__Test025>),
-        hashCode((int32_t (*)(Test025)) &__Object::hashCode),
-        equals((bool (*)(Test025, Object)) &__Object::equals),
-        getClass((Class (*)(Test025)) &__Object::getClass),
-        toString((String (*)(Test025)) &__Object::toString) {}
+      __Test026_VT()
+      : __is_a(__Test026::__class()),
+        __delete(__rt::__delete<__Test026>),
+        hashCode((int32_t (*)(Test026)) &__Object::hashCode),
+        equals((bool (*)(Test026, Object)) &__Object::equals),
+        getClass((Class (*)(Test026)) &__Object::getClass),
+        toString((String (*)(Test026)) &__Object::toString) {}
     };
 
   }

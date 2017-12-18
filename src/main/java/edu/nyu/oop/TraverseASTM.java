@@ -238,7 +238,7 @@ public class TraverseASTM extends ContextualVisitor {
         }
 
         //Handle static
-        if(currentMethodObj.modifier.contains("static")){
+        if(currentMethodObj.modifier != null && currentMethodObj.modifier.contains("static")){
             currentMethodObj.name += "_static";
         }
 
