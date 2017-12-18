@@ -126,43 +126,20 @@ public class TraverseAST extends Visitor {
 
 
     public void getInheritedFields(CustomClassObject currentClass, String classExtension){
-
         Iterator<CustomClassObject> iter = classSummary.classes.iterator();
-
         while (iter.hasNext()) {
             CustomClassObject c = iter.next();
-
             if (c.className.equals(classExtension)) {
-
                 Iterator<CustomVariablesClass> iter2 = c.getClassVariables().iterator();
-
                 while (iter2.hasNext()){
-
                     CustomVariablesClass v = iter2.next();
-
                     currentClass.addClassVariable(v);
 
                 }
-
-
-
-//                    for (CustomVariablesClass v : c.getClassVariables()) {
-////
-//                        currentClass.addClassVariable(v);
-////
-////
-////
-//                }
-
             }
-//
-
-
-
         }
 
     }
-
 
 
     public void visitClassDeclaration(GNode n) {
@@ -178,35 +155,8 @@ public class TraverseAST extends Visitor {
             System.out.println("currentClass123 " + currentClass.getClassName());
             //there is an extension
             classExtension = extention.getNode(0).getNode(0).getString(0);
-
-            // get all class vars from inherited class
-           // if (classExtension )
-
-            //getInheritedFields(currentClass, classExtension);
-//            for (CustomClassObject fc : classSummary.classes ) {
-//
-//                if (fc.getClassName().equals(classExtension)) {
-//
-//                    System.out.println("thething " + fc.getClassName());
-//
-//                    for (CustomVariablesClass v : fc.getClassVariables()) {
-//
-//                        currentClass.addClassVariable(v);
-//
-//
-//
-//                    }
-//
-//
-//                }
-//            }
-
             // get inherited fields
             getInheritedFields(currentClass, classExtension);
-
-
-
-
         }
         //Add the extension to the class
         currentClass.setParentClass(classExtension);
@@ -326,21 +276,20 @@ public class TraverseAST extends Visitor {
         for (CustomVariablesClass var: parameters){
             newName = newName + "_" + var.getType();
         }
+
+        //Handle static
+        if(currentMethodObj.modifier.contains("static")){
+            newName += "_static";
+        }
+
         //Save the new name for the method
         currentMethodObj.name = newName;
         currentClass.methods.add(currentMethodObj);
 
-
-
-
         visit(n);
         System.out.println("Class " + currentClass.className);
         for (CustomMethodClass cm : currentClass.methods){
-
-            System.out.println("TESTMETHODS1234567 \n" + cm.getName());
-
-
-
+            //System.out.println("TESTMETHODS1234567 \n" + cm.getName());
         }
     }
 
@@ -358,7 +307,6 @@ public class TraverseAST extends Visitor {
 
     public ClassSummary getClassSummary(Node n) {
         super.dispatch(n);
-
         return classSummary;
     }
 
