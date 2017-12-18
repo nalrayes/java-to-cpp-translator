@@ -301,6 +301,9 @@ public class TraverseASTM extends ContextualVisitor {
 //        System.out.println(actuals);
 //
 //        System.out.println("THE METHOD OVERSTUFF FOR");
+        if (!TypeUtil.getType(receiver).isAlias()) {
+            return;
+        }
         String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
 
         String baseMethodName = new String(methodName);
@@ -382,6 +385,10 @@ public class TraverseASTM extends ContextualVisitor {
 
     public Node visitPrimaryIdentifier(GNode n) {
         String fieldName = n.getString(0);
+
+
+        System.out.println("assdsadasdasdasdasdasdasdasdasdasdasdasdasdasd");
+        System.out.println(n);
 
         // find type to search for relevant fields
         ClassOrInterfaceT typeToSearch = JavaEntities.currentType(table);

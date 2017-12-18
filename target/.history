@@ -1,3 +1,77 @@
+<<<<<<< HEAD
+=======
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test001/Test001.java
+runxtc -translate src/test/java/inputs/Test002/Test002.java
+runxtc -translate src/test/java/inputs/CustomTests/CustomTest1.java
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test003/Test003.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+q
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+test-only *CppHVisitorTest*
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+/java/inputs/Test019/Test019.java
+runxtc -translate src/test/java/inputs/Test020/Test020.java
+rintJavaAst src/test/java/inputs/test010/Test010.java
+test
+test-only *MethodVisitorTest*
+test
+test-only *MethodVisitorTest*
+test
+test-only *MethodVisitorTest*
+kill -9 5430
+test
+runxtc -printJavaAst src/test/java/inputs/Test000/Test000.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translateJava
+runxtc -translate
+runxtc -translate src/test/java/inputs/Test000/Test000.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+<<<<<<< HEAD
+runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test028/Test028.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test003/Test003.java
+runxtc -printJavaAst src/test/java/inputs/Test002/Test002.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+xtc -translate src/test/java/inputs/Test010/Test010.javarunxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+=======
+test-only *MethodVisitorTest*
+test-only *TraverseASTTest*
+>>>>>>> 27c8549a37ebcd5a50e033040c95ca4529b6c0f7
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -translate src/test/java/inputs/Test010/Test010.java
+runxtc -translate src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test008/Test008.java
+runxtc -printJavaAst src/test/java/inputs/Test009/Test009.java
+runxtc -printJavaAst src/test/java/inputs/Test010/Test010.java
+runxtc -printJavaAst src/test/java/inputs/Test015/Test015.java
+runxtc -printJavaAst src/test/java/inputs/Test016/Test016.java
+>>>>>>> da8d60e15cca51444a6d1aa4c9112bd77185f960
 runxtc -printJavaAst src/test/java/inputs/Test017/Test017.java
 runxtc -printJavaAst src/test/java/inputs/Test018/Test018.java
 runxtc -printJavaAst src/test/java/inputs/Test019/Test019.java
@@ -414,6 +488,7 @@ runxtc -translate src/test/java/inputs/test014/Test014.java
 compilec
 exec
 execc
+<<<<<<< HEAD
 runxtc -translate src/test/java/inputs/test016/Test016.java
 compilec
 runxtc -translate src/test/java/inputs/test017/Test017.java
@@ -495,6 +570,79 @@ runxtc -translate src/test/java/inputs/test023/Test023.java
 compilec
 runxtc -translate src/test/java/inputs/test024/Test024.java
 runxtc -translate src/test/java/inputs/test003/Test003.java
+=======
+runxtc -translate src/test/java/inputs/test010/Test010.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test011/Test011.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test012/Test012.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test013/Test013.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test013/Test013.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test014/Test014.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test014/Test014.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test015/Test015.java
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test016/Test016.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
+runxtc -translate src/test/java/inputs/test017/Test017.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test018/Test018.java
+compilec
+runxtc -translate src/test/java/inputs/test016/Test016.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test015/Test015.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test014/Test014.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test014/Test013.java
+runxtc -translate src/test/java/inputs/test013/Test013.java
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test012/Test012.java
+execc
+compilec
+execc
+runxtc -translate src/test/java/inputs/test011/Test011.java
+>>>>>>> da8d60e15cca51444a6d1aa4c9112bd77185f960
 compilec
 execxc
 execc
+runxtc -translate src/test/java/inputs/test011/Test011.java
+runxtc -translate src/test/java/inputs/test018/Test018.java
+compilec
+runxtc -translate src/test/java/inputs/test019/Test019.java
+compilec
+runxtc -translate src/test/java/inputs/test018/Test018.java
+runxtc -printJavaASt src/test/java/inputs/test018/Test018.java
+runxtc -printJavaAst src/test/java/inputs/test018/Test018.java
+runxtc -printJavaAst src/test/java/inputs/test024/Test024.java
+compilec
+runxtc -translate src/test/java/inputs/test024/Test024.java
+compilec
