@@ -67,7 +67,6 @@ public class CppHeaderASTCreator {
         //Fill the CPPClassObjects with their data layouts
         //fillCppClassObjectsWithDataLayout(javaClassSummaries, cppHeaderAST);
 
-//        //TODO TEST - print all the CPPDataObject's Layouts
 //        ArrayList<CppClassObject> clist = cppHeaderAST.getCppClassObjectslist();
 //        for (CppClassObject c : clist){
 //             System.out.println(c.getCppDataLayout());
@@ -308,15 +307,7 @@ public class CppHeaderASTCreator {
         ArrayList<CppDataLayout.VTable> VTables = new ArrayList<CppDataLayout.VTable>();
         structsMap = new HashMap<String, CustomClassObject>();
 
-
-
-
         //rearrange methods in classes
-
-
-
-
-
         for (CustomClassObject c: javaData.classes){
             // used for populating vtables
             structsMap.put(c.getClassName(), c);
@@ -326,21 +317,9 @@ public class CppHeaderASTCreator {
         for (CustomClassObject c: javaData.classes){
             CppDataLayout.CppStruct aStruct = new  CppDataLayout.CppStruct(c, structsMap);
 
-
-
-
             // added to the tree
             structs.add(aStruct);
         }
-
-
-
-
-
-
-
-
-
 
 //        // creates branch for VTables
 //        for (CustomClassObject c: javaData.classes){

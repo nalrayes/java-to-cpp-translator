@@ -1,7 +1,7 @@
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class: stamp changed from lastModified(1513614372000) to lastModified(1513614383000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class: stamp changed from lastModified(1513614372000) to lastModified(1513614383000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class: stamp changed from lastModified(1513614372000) to lastModified(1513614383000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class: stamp changed from lastModified(1513614372000) to lastModified(1513614383000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class: stamp changed from lastModified(1513616840000) to lastModified(1513616884000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class: stamp changed from lastModified(1513616840000) to lastModified(1513616884000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class: stamp changed from lastModified(1513616840000) to lastModified(1513616884000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class: stamp changed from lastModified(1513616840000) to lastModified(1513616884000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
@@ -18,10 +18,10 @@
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
 [0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@217cd2ec directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.037857155 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.012241122 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.051618423 s[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@9f9928 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.047172517 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.016912367 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.066634621 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

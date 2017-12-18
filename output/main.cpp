@@ -4,24 +4,21 @@
 using namespace java::lang;
 using namespace std;
 
-using namespace inputs::test010;
+using namespace inputs::test027;
 
 int main(int argc, char* argv[]) {
   __rt::Array<String> args = new __rt::__Array<String>(argc - 1);
   for (int32_t i = 1; i < argc; i++) {
     (*args)[i] = __rt::literal(argv[i]);
   }
-  A a =  __A::__init(new __A);
-  ({__rt::checkNotNull(a); a->__vptr->setA_String(a, __rt::literal("A"));});
-  B1 b1 =  __B1::__init(new __B1);
-  ({__rt::checkNotNull(b1); b1->__vptr->setA_String(b1, __rt::literal("B1"));});
-  B2 b2 =  __B2::__init(new __B2);
-  ({__rt::checkNotNull(b2); b2->__vptr->setA_String(b2, __rt::literal("B2"));});
-  C c =  __C::__init(new __C);
-  ({__rt::checkNotNull(c); c->__vptr->setA_String(c, __rt::literal("C"));});
-  ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, a);});
-  ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, b1);});
-  ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, b2);});
-  ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, c);});
+  __rt::Array<A> as =  new __rt::__Array<A>(10);
+  for (int32_t i = 0; i <({__rt::checkNotNull(as); as->length; }); i++) {
+    (*as)[i] = __A::__init(new __A(), i);
+  }
+  int k = 0;
+  while (k < 11) {
+    std::cout << ({__rt::checkNotNull(__rt::java_cast<A>((*as)[k])); __rt::java_cast<A>((*as)[k])->__vptr->get(__rt::java_cast<A>((*as)[k]));}) << std::endl;
+    k = k + 1;
+  }
   return 0;
 }

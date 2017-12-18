@@ -165,17 +165,17 @@ public class Boot extends Tool {
             CppHeaderPrinter printer = new CppHeaderPrinter();
             printer.print(cppAST.getRoot());
 
-            //Phase 2 - Implementation
+            //Phase 4 - Implementation
             SymbolTable table = new SymbolTableBuilder(runtime).getTable(n);
             TraverseASTM visitorM = new TraverseASTM(runtime, table);
             cppAST = CppMASTCreator.createNewCPPMAstFrom(javaASTNodes,cppAST,visitorM);
 
-            //Phase 3 - Implementation
+            //Phase 5 - Implementation
             //Print cpp for transation for implementation files
             CppImplementationPrinter implementationPrinter = new CppImplementationPrinter();
             implementationPrinter.print(cppAST.getRoot());
 
-            //Phase 3 - Implementation for main
+            //Phase 5 - Implementation for main
             CppMainPrinter mainPrinter = new CppMainPrinter();
             mainPrinter.print(cppAST.getRoot());
 

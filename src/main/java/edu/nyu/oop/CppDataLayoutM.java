@@ -35,14 +35,14 @@ public class CppDataLayoutM {
 
             this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null, allTheClasses);
             this.transLatedBlockForImpMainMethod.returnStatement = "return 0";
-            System.out.println("MAIN METHOD CLASS NAME");
-            System.out.println("MAIN METHOD");
-
-            System.out.println("MAIN METHOD NAME");
-            System.out.println(this.mainMethodName);
-
-            System.out.println("MAIN METHOD RETURN TYPE");
-            System.out.println(this.mainMethodReturnType);
+//            System.out.println("MAIN METHOD CLASS NAME");
+//            System.out.println("MAIN METHOD");
+//
+//            System.out.println("MAIN METHOD NAME");
+//            System.out.println(this.mainMethodName);
+//
+//            System.out.println("MAIN METHOD RETURN TYPE");
+//            System.out.println(this.mainMethodReturnType);
         }
     }
 
@@ -99,17 +99,17 @@ public class CppDataLayoutM {
                 }
             }
             this.deafultConstructorImplementation += "\n" + "    {}";
-            System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
-            System.out.println(this.deafultConstructorImplementation);
-
-            System.out.println("CLASS NAME");
-            System.out.println(this.className);
-            System.out.println("CLASS VTABLE INIT");
-            System.out.println(this.vTableInit);
-            System.out.println("CLASS METHOD INIT");
-            System.out.println(this.classMethodInit);
-            System.out.println("CLASS VTABLE DECL");
-            System.out.println(this.vTableDecl);
+//            System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
+//            System.out.println(this.deafultConstructorImplementation);
+//
+//            System.out.println("CLASS NAME");
+//            System.out.println(this.className);
+//            System.out.println("CLASS VTABLE INIT");
+//            System.out.println(this.vTableInit);
+//            System.out.println("CLASS METHOD INIT");
+//            System.out.println(this.classMethodInit);
+//            System.out.println("CLASS VTABLE DECL");
+//            System.out.println(this.vTableDecl);
 
             //Create def init method for each class
             this.defaultInIt = new cppMethodImplementation();
@@ -126,8 +126,8 @@ public class CppDataLayoutM {
             ArrayList<CustomVariablesClass> classFields = theClass.getClassVariables();
             for (CustomVariablesClass classField : classFields) {
                 if (classField.declaratorRightSide != null) {
-                    System.out.println("CON CLASS FIELD DEFAULT");
-                    System.out.println(classField.getDeclaratorRightSide());
+//                    System.out.println("CON CLASS FIELD DEFAULT");
+//                    System.out.println(classField.getDeclaratorRightSide());
                     String finalString = "";
                     if (classField.declaratorRightSideType == "string") {
                         finalString += "__this->" + classField.getName() + " = " + "__rt::literal(" + classField.getDeclaratorRightSide() + ")";
@@ -135,7 +135,7 @@ public class CppDataLayoutM {
                         finalString += "__this->" + classField.getName() + " = " + classField.getDeclaratorRightSide();
                     }
                     blockForDef.classLevelInitFields.add(finalString);
-                    System.out.println(finalString);
+//                    System.out.println(finalString);
                 }
             }
             blockForDef.returnStatement = "return __this";
@@ -153,16 +153,16 @@ public class CppDataLayoutM {
                 }
             }
 
-            System.out.println("DEFAULT INIT CHECK BEGIN");
-            System.out.println(this.defaultInIt);
-            if(this.defaultInIt != null){
-                System.out.println(this.defaultInIt.name);
-                System.out.println(this.defaultInIt.translatedBlock.deafultConsturctorCall);
-                for (String field : this.defaultInIt.translatedBlock.classLevelInitFields){
-                    System.out.println(field);
-                }
-            }
-            System.out.println("DEFAULT INIT CHECK END");
+////            System.out.println("DEFAULT INIT CHECK BEGIN");
+////            System.out.println(this.defaultInIt);
+//            if(this.defaultInIt != null){
+//                System.out.println(this.defaultInIt.name);
+//                System.out.println(this.defaultInIt.translatedBlock.deafultConsturctorCall);
+//                for (String field : this.defaultInIt.translatedBlock.classLevelInitFields){
+//                    System.out.println(field);
+//                }
+//            }
+////            System.out.println("DEFAULT INIT CHECK END");
         }
     }
 
@@ -187,10 +187,10 @@ public class CppDataLayoutM {
             this.position = position;
 
             String qualifiedIdentifier = "";
-            System.out.println("$fd " + fieldDec);
+            //System.out.println("$fd " + fieldDec);
             for (int i = 0; i < fieldDec.size(); i++) {
                 if (fieldDec.getNode(i).getName().equals("Modifiers")) {
-                    System.out.println("In moddy");
+                    //System.out.println("In moddy");
                     Node modifiers = fieldDec.getNode(i);
                     // get all modifiers
                     for (int m = 0; m < modifiers.size(); m++ ){
@@ -199,7 +199,7 @@ public class CppDataLayoutM {
                 }
 
                 if (fieldDec.getNode(i).getName().equals("Type")) {
-                    System.out.println("In type");
+                    //System.out.println("In type");
                     Node getType = fieldDec.getNode(i);
                     System.out.println("thistype "  + getType);
                     if (getType.getNode(0) == null){continue;}
@@ -210,6 +210,8 @@ public class CppDataLayoutM {
 
 
                     if (getType.getNode(1) != null && !getType.getNode(1).isEmpty()){
+
+                        System.out.println("arrayistrue");
 
                         isArray = true;
                         //varType = "__rt::Array<A>";
@@ -239,7 +241,7 @@ public class CppDataLayoutM {
                 }
 
                 if (fieldDec.getNode(i).getName().equals("Declarators")) {
-                    System.out.println("In declarators");
+                    //System.out.println("In declarators");
                     Node declarator = fieldDec.getNode(i).getNode(0);
                     declaratorVar = declarator.getString(0);
                     // if condition, the declarator is an array
@@ -248,7 +250,7 @@ public class CppDataLayoutM {
                         Node expression = declarator.getNode(2);
                         String expressionName = expression.getName();
 
-                        System.out.println("expressionName " + expressionName);
+                        //System.out.println("expressionName " + expressionName);
 
                         if (expressionName == "SelectionExpression"){
 
@@ -268,8 +270,9 @@ public class CppDataLayoutM {
                             if (isArray){
 
                                // __rt::Array<A> as =  new __rt::__Array<A>(10);
+                                String thing = "__rt::Array<"+varType +">"+ declaratorVar;
+                                System.out.println("thething123 " + thing);
                                 declaratorVal = "new __rt::__Array<A>("+rhs+")";
-
                             }
 
 
@@ -277,22 +280,24 @@ public class CppDataLayoutM {
                             //res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
                         }
                         else if (expressionName == "SubscriptExpression") {
+                            System.out.println("insubscript");
+
                             Node subscriptExpression = declarator.getNode(2);
-                            System.out.println("$sub1 " + subscriptExpression);
+                            //System.out.println("$sub1 " + subscriptExpression);
 
                             if (!subscriptExpression.getNode(0).getName().equals("SubscriptExpression")) {
-                                System.out.println("$sub2 " + subscriptExpression);
+                                //System.out.println("$sub2 " + subscriptExpression);
 
                                 //System.out.println("$idk2 " + subscriptExpression.getNode(0).getNode(0));
-                                System.out.println("$sub3 " + subscriptExpression);
+                                //System.out.println("$sub3 " + subscriptExpression);
 
                                 declaratorVal += "[" + subscriptExpression.getNode(1).getString(0) + "]";
 
                             } else {
                                 subscriptExpression = declarator.getNode(2).getNode(0);
                                 //System.out.println("$sub1 " + subscriptExpression);
-                                System.out.println("$vvv " + subscriptExpression);
-                                System.out.println("$v1 " + declaratorVal);
+                               // System.out.println("$vvv " + subscriptExpression);
+                                //System.out.println("$v1 " + declaratorVal);
                                 declaratorVal += "[" + subscriptExpression.getNode(0).getString(0) + "]";
                                 declaratorVal += "[" + subscriptExpression.getNode(1).getString(0) + "]";
                             }
@@ -304,12 +309,11 @@ public class CppDataLayoutM {
                         } else if (expressionName == "NewClassExpression") {
                             // translation: __class:__init
                             //fieldDeclarationLine = processNewClassExpression(expression);
-                            System.out.println("fdc123 " + fieldDeclarationLine);
+                            //System.out.println("fdc123 " + fieldDeclarationLine);
 
                             Node newClassExpression = declarator.getNode(2);
 
                             declaratorVal += newClassExpression.getNode(2).getString(0);
-
 
                             Node arguments = newClassExpression.getNode(3);
 
@@ -319,26 +323,19 @@ public class CppDataLayoutM {
 
                            //A a =  __A::__init(new __A(), __rt::literal("A"));
                             for (int a = 0; a <arguments.size(); a++){
-
-
                              // args +=  processArguments(arguments.getNode(a));
-
-
-                            System.out.println("THEARGS " +  arguments.getNode(a).getString(0));
-
+                            //System.out.println("THEARGS " +  arguments.getNode(a).getString(0));
                                if (arguments.getNode(a).getName().equals("StringLiteral")){
                                    args += ", __rt::literal(" + arguments.getNode(a).getString(0) + ")";
                                }
                                else {
-//
                                    args += "," + arguments.getNode(a).getString(0);
                                }
 
                             }
-
                             declaratorVal +=")";
 
-                            System.out.println("argsprint " + args);
+                            //System.out.println("argsprint " + args);
 
                            fieldDeclarationLine =  varType + " " +  declaratorVar + " =  __" + varType + "::__init(new __" + varType  + ""+ args + ")";
 //                        fieldDeclarationLine = "__rt::Ptr<" +qualifiedIdentifier + ", __rt::object_policy> "+ declaratorVar + " = new " + declaratorValue;
@@ -396,19 +393,14 @@ public class CppDataLayoutM {
                             // translation: ->__vptr->methodCall
                             //res = processCallExpression(n);
                         }  else if (expressionName == "NewArrayExpression"){
-                            System.out.println("anexpression1");
+                            //System.out.println("anexpression1");
 
-                            declaratorVar = "\n__rt::Array<"+ varType + ">";
-
-
+                            declaratorVar = "__rt::Array<"+ varType + "> " + declaratorVar ;
                            // __rt::Array<A> as =  new __rt::__Array<A>(10);
-
                             declaratorVal = " new __rt::__Array<"+varType+">";
                             System.out.println("express123 " + expression);
                             //declaratorVal += expression.getNode(0).getString(0)+")";
-
                             Node concreteDimensions = expression.getNode(1);
-
 //                            System.out.println("expressurself " + expression);
 //                            System.out.println("dimsize " + concreteDimensions.size());
                             for (int d = 0; d < concreteDimensions.size(); d++){
@@ -419,18 +411,19 @@ public class CppDataLayoutM {
                         } // end of NewArrayExpression
                         // else can be integer literals and other primitive types
                         else{
-                            System.out.println("imhere123 " + declarator);
+                            System.out.println("imhere1234 " + declarator);
 
                             // System.out
                             declaratorVal += declarator.getNode(2).getString(0);
                             if (isArray){
+                                System.out.println("thisisvar ");
                                 fieldDeclarationLine = "__rt::Array<"+varType +"> " +declaratorVar + " = "+declaratorVal;
                                 continue;
                             }
                         }
 
                         fieldDeclarationLine  = varType + " " + declaratorVar + " = " + declaratorVal;
-                        System.out.println("newfielddec22 " + fieldDeclarationLine);
+                        //System.out.println("newfielddec22 " + fieldDeclarationLine);
                     }
                     else{
                         // there is no declaratorValue
@@ -462,7 +455,7 @@ System.out.println("imhere123 " + declarator);
 
         public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass,  ArrayList<CustomClassObject> allTheClasses){
             this.positon = position;
-            System.out.println("this is for loop12345 " + forLoopNode);
+            //System.out.println("this is for loop12345 " + forLoopNode);
             String loopIteratorType = "";
             String declaratorVar = "";
             String declaratorVal = "";
@@ -471,12 +464,12 @@ System.out.println("imhere123 " + declarator);
             String incrementor;
             String postfixExpression = "";
 
-            System.out.println("GETITSI " + forLoopNode.getNode(0).size());
+            //System.out.println("GETITSI " + forLoopNode.getNode(0).size());
             for (int i = 0; i < forLoopNode.getNode(0).size(); i++) {
-                System.out.println("ello1234 "+ forLoopNode.getNode(0).getNode(i));
+                //System.out.println("ello1234 "+ forLoopNode.getNode(0).getNode(i));
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Type")){
-                    System.out.println("$FOR TYPE");
+                    //System.out.println("$FOR TYPE");
                     Node getType = forLoopNode.getNode(0).getNode(i);
                     loopIteratorType = getType.getNode(0).getString(0);
                     CppDataLayout.typeTranslate trans = new CppDataLayout.typeTranslate();
@@ -484,18 +477,19 @@ System.out.println("imhere123 " + declarator);
                 }
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Declarators")){
-                    System.out.println("$FOR DEC123");
+
+
                     Node declarator = forLoopNode.getNode(0).getNode(i).getNode(0);
                     declaratorVar = declarator.getString(0);
                     declaratorVal = declarator.getNode(2).getString(0);
                 }
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("RelationalExpression")){
-                    System.out.println("$FOR RELATIONAL");
+                    //System.out.println("$FOR RELATIONAL");
                     Node relationalExpression = forLoopNode.getNode(0).getNode(i);
                     String primaryId = relationalExpression.getNode(0).getString(0);
                     String operator = relationalExpression.getString(1);
                     Node selectionExpressionNode =  relationalExpression.getNode(2);
-                    System.out.println("selectionExpressionNode123 " + selectionExpressionNode);
+                    //System.out.println("selectionExpressionNode123 " + selectionExpressionNode);
                     String selectionExpression = "";
                     if (selectionExpressionNode.getNode(0).getName().equals("SubscriptExpression")){
                         Node subscriptExpression = selectionExpressionNode.getNode(0);
@@ -515,14 +509,14 @@ System.out.println("imhere123 " + declarator);
                     fullRelationalExpression += primaryId + " " + operator + "({__rt::checkNotNull("+ selectionExpression +"); "+selectionExpression+"->length; })";
                 }
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("ExpressionList")){
-                    System.out.println("$FOR EXPRESSION");
+                    //System.out.println("$FOR EXPRESSION");
                     Node expressionList = forLoopNode.getNode(0).getNode(i);
                     Node postfixExpressionNode = expressionList.getNode(0);
                      postfixExpression = postfixExpressionNode.getNode(0).getString(0) + postfixExpressionNode.getString(1);
                 }
             } // end of get for loop header
             this.forLoopDecLine = "for (" + loopIteratorType + " " +  declaratorVar + " = " + declaratorVal  + "; " + fullRelationalExpression + "; " + postfixExpression + ")";
-            System.out.println("fullForLoop1234678 " + forLoopDecLine);
+            //System.out.println("fullForLoop1234678 " + forLoopDecLine);
             for (int i = 0; i < forLoopNode.size(); i++) {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
@@ -544,7 +538,7 @@ System.out.println("imhere123 " + declarator);
             this.position = position;
 
             //PARSE WHILE LOOP HEADER
-            System.out.println("whiley " + whileLoopNode);
+            //System.out.println("whiley " + whileLoopNode);
 
             String primaryId = "";
             Node relationalExpressionNode = whileLoopNode.getNode(0);
@@ -554,7 +548,7 @@ System.out.println("imhere123 " + declarator);
             rhsVar = relationalExpressionNode.getNode(2).getString(0);
             whileLoopDeclarator += "(" + primaryId +" " + conditional + " "  + rhsVar +")";
 
-            System.out.println("whileLoop124 " + whileLoopDeclarator);
+            //System.out.println("whileLoop124 " + whileLoopDeclarator);
 
             for (int i = 0; i < whileLoopNode.size(); i++) {
                 //Use this to find the for loops block
@@ -623,7 +617,7 @@ System.out.println("imhere123 " + declarator);
                 if (b.getNode(i).getName().equals("FieldDeclaration")) {
                     CustomFieldDeclaration fd = new CustomFieldDeclaration(b.getNode(i), i);
                     this.fieldDeclarations.add(fd);
-                    System.out.println("fdline " + fd.fieldDeclarationLine);
+                    //System.out.println("fdline " + fd.fieldDeclarationLine);
                 }
                 else if (b.getNode(i).getName().equals("ExpressionStatement")) {
                     Node curNode = b.getNode(i);
@@ -634,7 +628,7 @@ System.out.println("imhere123 " + declarator);
                     }
                     CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i, allTheClasses);
                     this.expressionStatements.add(ex);
-                    System.out.println("NODE\n " + b.getNode(i));
+                    //System.out.println("NODE\n " + b.getNode(i));
                 }
                 else if (b.getNode(i).getName().equals("ForStatement")){
                     //For loop
@@ -700,8 +694,8 @@ System.out.println("imhere123 " + declarator);
                 ArrayList<CustomVariablesClass> classFields = theMethodsClass.getClassVariables();
                 for (CustomVariablesClass classField : classFields) {
                     if(classField.declaratorRightSide != null){
-                        System.out.println("CON CLASS FIELD INIT");
-                        System.out.println(classField.getDeclaratorRightSide());
+                        //System.out.println("CON CLASS FIELD INIT");
+                        //System.out.println(classField.getDeclaratorRightSide());
                         String finalString = "";
                         if (classField.declaratorRightSideType == "string"){
                             finalString += "__this->" + classField.getName() + " = " + "__rt::literal(" + classField.getDeclaratorRightSide() + ")";
@@ -710,16 +704,16 @@ System.out.println("imhere123 " + declarator);
                             finalString += "__this->" + classField.getName() + " = " + classField.getDeclaratorRightSide();
                         }
                         this.classLevelInitFields.add(finalString);
-                        System.out.println(finalString);
+                        //System.out.println(finalString);
                     }
                 }
 
-                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK BEGIN");
-                System.out.println(deafultConsturctorCall);
-                for (String field : this.classLevelInitFields){
-                    System.out.println(field);
-                }
-                System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK END");
+                //System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK BEGIN");
+                //System.out.println(deafultConsturctorCall);
+                //for (String field : this.classLevelInitFields){
+                   // System.out.println(field);
+               // }
+                //System.out.println("THE CONSTRUCTOR CALL123 IN CONSTRUCTOR BLOCK END");
 
             }//End of if constructor statement
 
@@ -809,25 +803,25 @@ System.out.println("imhere123 " + declarator);
                 this.returnType = "__this";
             }
 
-            System.out.println("METHOD NAME");
-            System.out.println(this.name);
-
-            System.out.println("METHOD PARAMS");
-            System.out.println(this.params);
-
-
-            System.out.println("METHOD RETURN");
-            System.out.println(this.returnType);
-
-            System.out.println("THE BLOCK");
-            System.out.println(this.theBlock);
-            System.out.println("block12345");
+//            System.out.println("METHOD NAME");
+//            System.out.println(this.name);
+//
+//            System.out.println("METHOD PARAMS");
+//            System.out.println(this.params);
+//
+//
+//            System.out.println("METHOD RETURN");
+//            System.out.println(this.returnType);
+//
+//            System.out.println("THE BLOCK");
+//            System.out.println(this.theBlock);
+//            System.out.println("block12345");
 
             //Translate the block for the method
             translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass, allTheClasses);
 
-            System.out.println("FIELD DECLARATIONS COUNT");
-            System.out.println(this.translatedBlock.fieldDeclarations.size());
+//            System.out.println("FIELD DECLARATIONS COUNT");
+//            System.out.println(this.translatedBlock.fieldDeclarations.size());
 
         }
     }
@@ -840,7 +834,7 @@ System.out.println("imhere123 " + declarator);
             arguments = processArguments(newClassExpression.getNode(3));
         }
         if (arguments.length() > 0) {
-            ret += ", ";
+            //ret += " ";
             ret += arguments;
         }
         ret += ")";
@@ -868,7 +862,7 @@ System.out.println("imhere123 " + declarator);
 
 
     public static boolean isPrint(Node n) {
-        System.out.println("isPrint1233 " + n);
+        //System.out.println("isPrint1233 " + n);
 
             if (n.getNode(0).getName() == "SelectionExpression") {
                 if (n.getNode(0).getNode(0).getName() == "PrimaryIdentifier") {
@@ -894,7 +888,10 @@ System.out.println("imhere123 " + declarator);
         String methodName = n.getString(2);
         String ret = "({";
         String callTo;
-        if (n.getNode(0).getName().equals("CallExpression")) {
+        if (methodName.contains("static")) {
+            return processNameNode(n.getNode(0)) + "::" + methodName + "(" + arguments + ")";
+        }
+        else if (n.getNode(0).getName().equals("CallExpression")) {
             String tmpCallTo = processCallExpression(n.getNode(0), i + 1);
             String iter = Integer.toString(i);
             String tmp = "tmp" + iter;
@@ -918,63 +915,41 @@ System.out.println("imhere123 " + declarator);
             res = n.getString(0);
             
         } else if (n.getName() == "SelectionExpression"){
-
-
-
-
             // translation: ->
-
             String getType = processNameNode(n.getNode(0));
-
-
-
            // for (CustomClassObject c : ){}
-
-            System.out.println("pleaseprint ");
-
-
-            //GETLINE
-
+            //System.out.println("pleaseprint ");
           ArrayList<CustomClassObject> theClasses = cppImplementationMainMethodClass.allTheClasses;
-
           // this is the check for static fields
-
           for (CustomClassObject c : theClasses){
-
               if (c.getClassName().contains(getType)){
-                  System.out.println("prettypleaseprint");
-
+                  //System.out.println("prettypleaseprint");
                   for (CustomVariablesClass v : c.getClassVariables()){
                       if (v.getModifier().contains("static")){
-                          System.out.println("were in busines");
-                            System.out.println("idk1 " + n);
+                          //System.out.println("were in busines");
+                          //System.out.println("idk1 " + n);
                           String getVar = n.getString(1);
                           String getVT = v.getType();
                          // String getVal = n.getNode(2).getString(0);
                           res = "__"+getType +"::"+getVar;
                           cppImplementationMainMethodClass.allTheStaticVars.add(getVT + " " + res);
                           return res;
-//                          res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
+//                         res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
                       }
                   }
-
-
-
               }
-
-
           }
 
-          System.out.println("getclasses123 " + theClasses.size());
-
+          //System.out.println("getclasses123 " + theClasses.size());
             res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
-
             if(res.contains("self")){
                 res = res.replace("self","Self");
             }
         } else if (n.getName() == "SubscriptExpression") {
+            System.out.println("imintohere123 " + n);
             // translation: (*var)[index]
             res = "(*" + processNameNode(n.getNode(0)) + ")[" + processNameNode(n.getNode(1)) + "]";
+
         } else if (n.getName() == "ThisExpression") {
             // translation: __this
             res = "__this";
@@ -1015,10 +990,10 @@ System.out.println("imhere123 " + declarator);
         public CustomExpressionStatement(Node sonNode, int pos, ArrayList<CustomClassObject> allTheClasses) {
             this.position = pos;
             this.expression = processNameNode(sonNode.getNode(0));
-            System.out.println("=====================================");
-            System.out.println("ExpressionStatement");
-            System.out.println(this.expression);
-            System.out.println("=====================================");
+//            System.out.println("=====================================");
+//            System.out.println("ExpressionStatement");
+//            System.out.println(this.expression);
+//            System.out.println("=====================================");
         }
     }
 }
