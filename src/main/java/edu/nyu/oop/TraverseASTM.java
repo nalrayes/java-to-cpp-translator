@@ -301,9 +301,11 @@ public class TraverseASTM extends ContextualVisitor {
 //        System.out.println(actuals);
 //
 //        System.out.println("THE METHOD OVERSTUFF FOR");
-        if (!TypeUtil.getType(receiver).isAlias()) {
-            return;
-        }
+
+//        if (!TypeUtil.getType(receiver).isAlias()) {
+//            return;
+//        }
+
         String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
 
         String baseMethodName = new String(methodName);
