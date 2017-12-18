@@ -576,6 +576,9 @@ public class CppDataLayoutM {
                 }
                 else if (b.getNode(i).getName() == "ReturnStatement") {
                     this.returnStatement = "return " + processNameNode(b.getNode(i).getNode(0));
+                    if(this.returnStatement.contains("self")){
+                        this.returnStatement = this.returnStatement.replace("self","Self");
+                    }
                 }
             }//End of for loop for block
 
@@ -836,6 +839,10 @@ public class CppDataLayoutM {
         } else if (n.getName() == "SelectionExpression"){
             // translation: ->
             res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
+
+            if(res.contains("self")){
+                res = res.replace("self","Self");
+            }
         } else if (n.getName() == "SubscriptExpression") {
             // translation: (*var)[index]
             res = "(*" + processNameNode(n.getNode(0)) + ")[" + processNameNode(n.getNode(1)) + "]";
@@ -857,6 +864,10 @@ public class CppDataLayoutM {
         } else if (n.getName() == "Expression") {
             // translation: no difference
             res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
+
+            if(res.contains("self")){
+                res = res.replace("self","Self");
+            }
         } else if (n.getName() == "CallExpression") {
             // translation: ->__vptr->methodCall with bracket stuff
             res = processCallExpression(n, 0);
@@ -864,6 +875,7 @@ public class CppDataLayoutM {
             // translation: __rt::literal(<string>)
             res = "__rt::literal(" + n.getString(0) + ")";
         }
+
         return res;
     }
 

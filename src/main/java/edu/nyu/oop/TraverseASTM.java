@@ -144,6 +144,10 @@ public class TraverseASTM extends ContextualVisitor {
             // then this is a formalparameter
             declarator = n.getString(3);
         }
+
+        if(declarator.contains("self")){
+            declarator = "Self";
+        }
         varToReturn.name = declarator;
         String theVariable = qualifiedIdentifier + " " + declarator;
         return varToReturn;
