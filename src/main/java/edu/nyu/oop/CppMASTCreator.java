@@ -51,11 +51,11 @@ public class CppMASTCreator {
                 }
                if (ismain){
                     //Handle for main method
-                    mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
+                    mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod,implementationData.implementationClassObjects);
                 }
               else{
                     //This is for normal methods
-                    listOfCppImpClassesDatalayout.add(new CppDataLayoutM.cppImplementationClass(classObj));
+                    listOfCppImpClassesDatalayout.add(new CppDataLayoutM.cppImplementationClass(classObj, implementationData.implementationClassObjects));
                 }
             }
         }

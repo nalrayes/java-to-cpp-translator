@@ -1,5 +1,6 @@
 package edu.nyu.oop;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import edu.nyu.oop.*;
@@ -22,12 +23,12 @@ public class CppDataLayoutM {
         //Property to hold the block class for the method
         TranslatedBlock transLatedBlockForImpMainMethod;
 
-        public cppImplementationMainMethodClass(CustomMethodClass m) {
+        public cppImplementationMainMethodClass(CustomMethodClass m,  ArrayList<CustomClassObject> allTheClasses) {
             this.mainMethodName = "int main(int argc, char* argv[])";
             this.mainMethodReturnType = "return 0";
             //Instant the main methods block
 
-            this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null);
+            this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null, allTheClasses);
             this.transLatedBlockForImpMainMethod.returnStatement = "return 0";
             System.out.println("MAIN METHOD CLASS NAME");
             System.out.println("MAIN METHOD");
@@ -59,7 +60,7 @@ public class CppDataLayoutM {
         //If the class override this with its own implementation this will be null
         cppMethodImplementation defaultInIt;
 
-        public cppImplementationClass(CustomClassObject theClass) {
+        public cppImplementationClass(CustomClassObject theClass, ArrayList<CustomClassObject> allTheClasses) {
             if (theClass.getParentClass() == "None") {
                 this.parentClass = "Object";
             } else {
@@ -137,7 +138,7 @@ public class CppDataLayoutM {
 
             //Process the methods
             for (CustomMethodClass method : theClass.getMethods()) {
-                cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass);
+                cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass, allTheClasses);
                 this.cppMethodImplementations.add(methodImp);
 
                 //Check if the class overrides the default init in its methods
@@ -393,7 +394,7 @@ public class CppDataLayoutM {
         TranslatedBlock forLoopsTranslatedBlock;
         String forLoopDecLine = ""; // <- e.g. for(int i = 0; i < as.length; i++)
 
-        public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass){
+        public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass,  ArrayList<CustomClassObject> allTheClasses){
             this.positon = position;
             System.out.println("this is for loop12345 " + forLoopNode);
             String loopIteratorType = "";
@@ -457,7 +458,7 @@ public class CppDataLayoutM {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-                    this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass);
+                    this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass, allTheClasses);
                 }
             }
         }
@@ -470,7 +471,7 @@ public class CppDataLayoutM {
         String conditional = "";
         String rhsVar = "";
 
-        public CustomWhileLoop(Node whileLoopNode, int position, CustomClassObject theWhileLoopsClass){
+        public CustomWhileLoop(Node whileLoopNode, int position, CustomClassObject theWhileLoopsClass,  ArrayList<CustomClassObject> allTheClasses){
             this.position = position;
 
             //PARSE WHILE LOOP HEADER
@@ -490,7 +491,7 @@ public class CppDataLayoutM {
                 //Use this to find the for loops block
                 if(whileLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-                    this.whileLoopTranslatedBlock = new TranslatedBlock(whileLoopNode.getNode(i), false, theWhileLoopsClass);
+                    this.whileLoopTranslatedBlock = new TranslatedBlock(whileLoopNode.getNode(i), false, theWhileLoopsClass, allTheClasses);
                 }
             }
         }
@@ -499,9 +500,9 @@ public class CppDataLayoutM {
     public static class CustomBlockDec{
         int positon;
         TranslatedBlock customBlockDecTranslatedBlock;
-        public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass){
+        public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass,  ArrayList<CustomClassObject> allTheClasses){
             this.positon = positon;
-            this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass);
+            this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass, allTheClasses);
         }
     }
 
@@ -534,7 +535,7 @@ public class CppDataLayoutM {
             blockDecs = new ArrayList<CustomBlockDec>();
         };
 
-        public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass) {
+        public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass,  ArrayList<CustomClassObject> allTheClasses) {
 
             //If this is a constuctor handle the deafult/explcit constructor call
             //e.g. _Object::__init((Object) __this); OR __A::__init((A) __this, x1);
@@ -568,18 +569,18 @@ public class CppDataLayoutM {
                 }
                 else if (b.getNode(i).getName().equals("ForStatement")){
                     //For loop
-                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i, theMethodsClass);
+                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i, theMethodsClass, allTheClasses);
                     this.forLoops.add(forlp);
                 }
                 else if(b.getNode(i).getName().equals("WhileStatement")){
                     //While loop
 
-                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass);
+                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass, allTheClasses);
                     this.whileLoops.add(whilelp);
                 }
                 else if(b.getNode(i).getName().equals("Block")){
                     //block within a blokc
-                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass);
+                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass, allTheClasses);
                     this.blockDecs.add(blocDec);
                 }
                 else if (b.getNode(i).getName() == "ReturnStatement") {
@@ -720,7 +721,7 @@ public class CppDataLayoutM {
 
         public cppMethodImplementation(){};
 
-        public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass){
+        public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass,  ArrayList<CustomClassObject> allTheClasses){
             CppDataLayout.typeTranslate typeTranslate = new CppDataLayout.typeTranslate();
             this.returnType = typeTranslate.translateType(methodClass.getReturnType());
             // name = __className
@@ -754,7 +755,7 @@ public class CppDataLayoutM {
             System.out.println("block12345");
 
             //Translate the block for the method
-            translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass);
+            translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass, allTheClasses);
 
             System.out.println("FIELD DECLARATIONS COUNT");
             System.out.println(this.translatedBlock.fieldDeclarations.size());
