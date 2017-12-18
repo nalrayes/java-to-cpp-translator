@@ -232,7 +232,7 @@ namespace __rt {
     return k;
   }
 
-//  // Template specialization for arrays of A
+  // Template specialization for arrays of A
 //  template<>
 //  java::lang::Class __Array<inputs::javalang::A>::__class()
 //  {

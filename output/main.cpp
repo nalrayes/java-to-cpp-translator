@@ -4,16 +4,16 @@
 using namespace java::lang;
 using namespace std;
 
-using namespace inputs::test019;
+using namespace inputs::test023;
 
-int __A::x;
 int main(int argc, char* argv[]) {
   __rt::Array<String> args = new __rt::__Array<String>(argc - 1);
   for (int32_t i = 1; i < argc; i++) {
     (*args)[i] = __rt::literal(argv[i]);
   }
-  int x;
-  x = __A::x;
-  std::cout << x << std::endl;
+  Object as = args;
+  for (int32_t i = 0; i <({__rt::checkNotNull(as); as->length; }); i++) {
+    std::cout << (*as)[i] << std::endl;
+  }
   return 0;
 }
