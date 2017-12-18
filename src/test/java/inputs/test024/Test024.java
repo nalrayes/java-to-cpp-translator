@@ -14,7 +14,6 @@ class A {
 public class Test024 {
     public static void main(String[] args) {
         Object[] as = new A[10];
-        String $var11 = "1";
 
         for(int i = 0; i < as.length; i++) {
             as[i] = new A(i);

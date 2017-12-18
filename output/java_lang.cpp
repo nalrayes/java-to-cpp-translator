@@ -212,6 +212,59 @@ namespace __rt {
     return value;
   }
 
+  // Template specialization for arrays of objects.
+     template<>
+     java::lang::Class __Array<java::lang::Object>::__class() {
+         static java::lang::Class k =
+         new java::lang::__Class(literal("[Ljava.lang.Object;"),
+                                 java::lang::__Object::__class(),
+                                 java::lang::__Object::__class());
+       return k;
+     }
+
+  // Template specialization for arrays of strings.
+  template<>
+  java::lang::Class __Array<java::lang::String>::__class() {
+    static java::lang::Class k =
+      new java::lang::__Class(literal("[Ljava.lang.String;"),
+                              java::lang::__Object::__class(),
+                              java::lang::__String::__class());
+    return k;
+  }
+
+//  // Template specialization for arrays of A
+//  template<>
+//  java::lang::Class __Array<inputs::javalang::A>::__class()
+//  {
+//    static java::lang::Class k =
+//      new java::lang::__Class(literal("[Linputs.javalang.A;"),
+//                              java::lang::__Object::__class(),
+//                              inputs::javalang::__A::__class());
+//    return k;
+//  }
+//
+//  // Template specialization for arrays of B
+//  template<>
+//  java::lang::Class __Array<inputs::javalang::B>::__class()
+//  {
+//    static java::lang::Class k =
+//      new java::lang::__Class(literal("[Linputs.javalang.B;"),
+//                              java::lang::__Object::__class(),
+//                              inputs::javalang::__B::__class());
+//    return k;
+//  }
+//
+//  // Template specialization for arrays of C
+//  template<>
+//  java::lang::Class __Array<inputs::javalang::C>::__class()
+//  {
+//    static java::lang::Class k =
+//      new java::lang::__Class(literal("[Linputs.javalang.C;"),
+//                              java::lang::__Object::__class(),
+//                              inputs::javalang::__C::__class());
+//    return k;
+//  }
+
   // Template specialization for arrays of ints.
   template<>
   java::lang::Class __Array<int32_t>::__class() {

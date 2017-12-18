@@ -23,7 +23,7 @@ public class CppDataLayoutM {
         TranslatedBlock transLatedBlockForImpMainMethod;
 
         public cppImplementationMainMethodClass(CustomMethodClass m) {
-            this.mainMethodName = "int main(int argc, char* args[])";
+            this.mainMethodName = "int main(int argc, char* argv[])";
             this.mainMethodReturnType = "return 0";
             //Instant the main methods block
 
@@ -434,7 +434,7 @@ public class CppDataLayoutM {
                     if (selectionExpressionNode.getString(1) != null) {
                         lengthField = "." + selectionExpressionNode.getString(1);
                     }
-                    fullRelationalExpression += primaryId + " " + operator + " sizeof(*" + selectionExpression +")/sizeof(*"+selectionExpression+"[0])" ;
+                    fullRelationalExpression += primaryId + " " + operator + " sizeof(*" + selectionExpression +")/sizeof((*"+selectionExpression+")[0])" ;
                 }
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("ExpressionList")){
                     System.out.println("$FOR EXPRESSION");
