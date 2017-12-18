@@ -23,6 +23,9 @@ public class CppDataLayoutM {
         //Property to hold the block class for the method
         TranslatedBlock transLatedBlockForImpMainMethod;
         public static ArrayList<CustomClassObject> allTheClasses = new ArrayList<CustomClassObject>();
+        public static ArrayList<String> allTheStaticVars = new ArrayList<String>();
+
+
 
         public cppImplementationMainMethodClass(CustomMethodClass m,  ArrayList<CustomClassObject> allTheClasses) {
             this.mainMethodName = "int main(int argc, char* argv[])";
@@ -888,8 +891,10 @@ public class CppDataLayoutM {
                           System.out.println("were in busines");
                             System.out.println("idk1 " + n);
                           String getVar = n.getString(1);
+                          String getVT = v.getType();
                          // String getVal = n.getNode(2).getString(0);
                           res = "__"+getType +"::"+getVar;
+                          cppImplementationMainMethodClass.allTheStaticVars.add(getVT + " " + res);
                           return res;
 //                          res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
                       }

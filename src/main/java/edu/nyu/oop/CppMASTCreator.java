@@ -123,6 +123,22 @@ public class CppMASTCreator {
         GNode blockImplementationNode = cppNodeActions.createNewASTNode("MainMethodBlockImplementation");
         cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, blockImplementationNode);
         addDataToBlockNode(blockImplementationNode, mainMethodClass.transLatedBlockForImpMainMethod,true);
+       // cppImplementationMainMethodClass.allTheStaticVars
+        GNode mainStaticVars = cppNodeActions.createNewASTNode("MainStaticVars");
+        //cppNodeActions.addNodeAsChildToParent(v);
+        cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, mainStaticVars);
+
+
+        for (String v : CppDataLayoutM.cppImplementationMainMethodClass.allTheStaticVars){
+           // add(mainStaticVars, v,true);
+            cppNodeActions.addDataToNode((GNode)mainStaticVars, v);
+
+
+
+        }
+
+
+
 
     }
 
