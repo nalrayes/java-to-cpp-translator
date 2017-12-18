@@ -276,11 +276,20 @@ public class TraverseASTM extends ContextualVisitor {
         Node receiver = n.getNode(0);
         String methodName = n.getString(2);
 
+        System.out.println("thispla");
+
         Type typeToSearch = JavaEntities.currentType(table);
         List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
 
-        String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
-
+        
+        Type t = JavaEntities.resolveIfAlias(table, classpath(), table.current().getQualifiedName(), TypeUtil.getType(receiver));
+//        String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
+        String calleeClassName;
+        if (!t.hasAlias()) {
+            calleeClassName = "";
+        } else {
+            calleeClassName = t.toAlias().getName();
+        }
         String baseMethodName = new String(methodName);
 
         ArrayList<String> calleeMethodNames = new ArrayList<String>();
@@ -332,6 +341,7 @@ public class TraverseASTM extends ContextualVisitor {
         }
 
 
+
         if (receiver == null &&
                 !"super".equals(methodName) &&
                 !"this".equals(methodName)) {
@@ -343,6 +353,7 @@ public class TraverseASTM extends ContextualVisitor {
             //List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
             MethodT method =
                     JavaEntities.typeDotMethod(table, classpath(), typeToSearch, true, methodName, actuals);
+
 
             if (method == null) return;
 
