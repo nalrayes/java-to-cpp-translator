@@ -1,9 +1,12 @@
 # Translator Team 2 
 
-### Features (So Far):
+### Features :
 
-- translates java into C++ header files for required provided inputs (test000 through test020)
-- supports method overriding and overloading
+- translates java into C++ for required provided inputs (test000 through test020)
+- supports method overriding and overloading (Some)
+- supports arrays
+- supports static stuff
+- supports memory management
 
 ###  Execution:
 
@@ -19,23 +22,33 @@ For example, to translate Test 10:
 runxtc -translate src/test/java/inputs/Test010/Test010.java
 ```
 
-Output will be placed in the output.h file within the output directory.
+Output will be placed in the output.h, output.cpp and main.cpp file within the output directory.
+
 
 ## Project Map:
 
-![Alt text](https://github.com/nyu-oop-fa17/translator-2/blob/master/process.png)
+![Alt text](https://github.com/nyu-oop-fa17/translator-2/blob/master/FinalProcess.png)
 
 
 #### Collection of Java AST:
 ###### TraverseAst.java
+###### TraverseAstM.java
+
 ####Custom Java Objects to retain data:
 ###### CustomClassObject.java, CustomMethodClass.java, CustomConstructorClass.java, CustomVariablesClass.java
+
 ####CPP Data Layout (Intermediate Data Structure)
 ######CppDataLayout.java
+######CppDataLayoutM.java
+
 ####Build CPP AST
 ######CppHeaderASTCreator.java, cppNodeActions.java, CPPAST.java
+######CppHeaderASTMCreator.java 
+
 ####Print CPP AST 
-######CppHeaderPrinter.java, CppHeaderVisitor.java
+######CppHeaderPrinter.java
+######CppImplementationPrinter.java
+######CppMainPrinter.java
 
 
 ### Directory Overview
