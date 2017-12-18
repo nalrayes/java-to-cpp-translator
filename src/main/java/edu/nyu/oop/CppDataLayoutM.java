@@ -79,10 +79,18 @@ public class CppDataLayoutM {
             this.deafultConstructorImplementation = "__" + theClass.getClassName() + "::__" + theClass.getClassName() + "() : __vptr(&__vtable)";
             //Add the class fields
             for (CustomVariablesClass varClass : theClass.getClassVariables()) {
-                typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
-                String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
-                //System.out.println(varClass.getType());
-                this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
+                if(varClass.getModifier() != null && !varClass.getModifier().contains("static")){
+                    typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
+                    String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
+                    //System.out.println(varClass.getType());
+                    this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
+                }
+                else if (varClass.getModifier() == null){
+                    typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
+                    String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
+                    //System.out.println(varClass.getType());
+                    this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
+                }
             }
             this.deafultConstructorImplementation += "\n" + "    {}";
             System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
