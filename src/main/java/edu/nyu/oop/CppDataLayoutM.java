@@ -171,14 +171,14 @@ public class CppDataLayoutM {
     public static class CustomFieldDeclaration{
 
         int position;
-        boolean isArray;
+
         boolean isClass;
         String fieldDeclarationLine;
         String allModifiers = "";
         String varType = "";
         String declaratorVar = "";
         String declaratorVal = "";
-
+        boolean isArray = false;
         ArrayList<String> mainFileLines;
 
         public CustomFieldDeclaration(Node fieldDec, int position) {
@@ -201,10 +201,41 @@ public class CppDataLayoutM {
                 if (fieldDec.getNode(i).getName().equals("Type")) {
                     System.out.println("In type");
                     Node getType = fieldDec.getNode(i);
+                    System.out.println("thistype "  + getType);
                     if (getType.getNode(0) == null){continue;}
                     if (!getType.getNode(0).isEmpty()){
                         varType = getType.getNode(0).getString(0);
                     }
+
+
+
+                    if (getType.getNode(1) != null && !getType.getNode(1).isEmpty()){
+
+                        isArray = true;
+                        //varType = "__rt::Array<A>";
+
+                     for (int x = 0; x < getType.getNode(1).size();x++){
+
+                         //varType += "[]";
+
+                     }
+
+                     // = "__rt::Array<A>" + varType;
+
+
+                    }
+
+                    //__rt::Array<A> as =  new __rt::__Array<A>(10);
+                  //  fieldDeclarationLine = "__rt::Array<A> " + declaratorVar + " = new __rt::__Array<A>"
+
+
+
+
+
+
+
+
+
                 }
 
                 if (fieldDec.getNode(i).getName().equals("Declarators")) {
@@ -233,6 +264,13 @@ public class CppDataLayoutM {
 
 
                             declaratorVal = lhs +"->" + rhs;
+
+                            if (isArray){
+
+                               // __rt::Array<A> as =  new __rt::__Array<A>(10);
+                                declaratorVal = "new __rt::__Array<A>("+rhs+")";
+
+                            }
 
 
                            // continue;
@@ -381,8 +419,14 @@ public class CppDataLayoutM {
                         } // end of NewArrayExpression
                         // else can be integer literals and other primitive types
                         else{
-                           // System.out
+                            System.out.println("imhere123 " + declarator);
+
+                            // System.out
                             declaratorVal += declarator.getNode(2).getString(0);
+                            if (isArray){
+                                fieldDeclarationLine = "__rt::Array<"+varType +"> " +declaratorVar + " = "+declaratorVal;
+                                continue;
+                            }
                         }
 
                         fieldDeclarationLine  = varType + " " + declaratorVar + " = " + declaratorVal;
@@ -390,8 +434,13 @@ public class CppDataLayoutM {
                     }
                     else{
                         // there is no declaratorValue
+System.out.println("imhere123 " + declarator);
                         declaratorVar = declarator.getString(0);
                         fieldDeclarationLine = varType + " " + declaratorVar;
+
+//                        if (isArray){
+//                            fieldDeclarationLine = varType + " new __rt::__Array<A>"+declaratorVal;
+//                        }
                     }
                 }
             }
@@ -435,7 +484,7 @@ public class CppDataLayoutM {
                 }
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Declarators")){
-                    System.out.println("$FOR DEC");
+                    System.out.println("$FOR DEC123");
                     Node declarator = forLoopNode.getNode(0).getNode(i).getNode(0);
                     declaratorVar = declarator.getString(0);
                     declaratorVal = declarator.getNode(2).getString(0);
