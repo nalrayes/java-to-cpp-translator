@@ -360,18 +360,24 @@ public class CppDataLayoutM {
                         }  else if (expressionName == "NewArrayExpression"){
                             System.out.println("anexpression1");
 
-                            varType = "__rt::Ptr<" + varType + ", __rt::array_policy>";
+                            declaratorVar = "\n__rt::Array<"+ varType + ">";
 
-                            declaratorVal += " new ";
-                            declaratorVal += expression.getNode(0).getString(0);
+
+                           // __rt::Array<A> as =  new __rt::__Array<A>(10);
+
+                            declaratorVal = " new __rt::__Array<"+varType+">";
+                            System.out.println("express123 " + expression);
+                            //declaratorVal += expression.getNode(0).getString(0)+")";
 
                             Node concreteDimensions = expression.getNode(1);
 
-                            System.out.println("expressurself " + expression);
-                            System.out.println("dimsize " + concreteDimensions.size());
+//                            System.out.println("expressurself " + expression);
+//                            System.out.println("dimsize " + concreteDimensions.size());
                             for (int d = 0; d < concreteDimensions.size(); d++){
-                                declaratorVal += "[" + concreteDimensions.getNode(d).getString(0) + "]";
+                                declaratorVal += "(" + concreteDimensions.getNode(d).getString(0) + ")";
                             }
+                            fieldDeclarationLine = declaratorVar + " = " + declaratorVal;
+                            continue;
                         } // end of NewArrayExpression
                         // else can be integer literals and other primitive types
                         else{
@@ -424,6 +430,8 @@ public class CppDataLayoutM {
                     System.out.println("$FOR TYPE");
                     Node getType = forLoopNode.getNode(0).getNode(i);
                     loopIteratorType = getType.getNode(0).getString(0);
+                    CppDataLayout.typeTranslate trans = new CppDataLayout.typeTranslate();
+                    loopIteratorType = trans.translateType(loopIteratorType);
                 }
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Declarators")){
@@ -454,7 +462,8 @@ public class CppDataLayoutM {
                     if (selectionExpressionNode.getString(1) != null) {
                         lengthField = "." + selectionExpressionNode.getString(1);
                     }
-                    fullRelationalExpression += primaryId + " " + operator + " sizeof(*" + selectionExpression +")/sizeof((*"+selectionExpression+")[0])" ;
+                    //for (int32_t i = 0; i < ({__rt::checkNotNull(args); args->length; }); i++) {
+                    fullRelationalExpression += primaryId + " " + operator + "({__rt::checkNotNull("+ selectionExpression +"); "+selectionExpression+"->length; })";
                 }
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("ExpressionList")){
                     System.out.println("$FOR EXPRESSION");
