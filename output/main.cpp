@@ -4,21 +4,16 @@
 using namespace java::lang;
 using namespace std;
 
-using namespace inputs::test026;
+using namespace inputs::test020;
 
+int __A::x;
 int main(int argc, char* argv[]) {
   __rt::Array<String> args = new __rt::__Array<String>(argc - 1);
   for (int32_t i = 1; i < argc; i++) {
     (*args)[i] = __rt::literal(argv[i]);
   }
-  __rt::Array<A> as =  new __rt::__Array<B>(10);
-  for (int32_t i = 0; i <({__rt::checkNotNull(as); as->length; }); i++) {
-    (*as)[i] = __A::__init(new __A(), i);
-  }
-  int k = 0;
-  while (k < 10) {
-    std::cout << ({A tmpCast = __rt::java_cast<A>((*as)[k]);tmpCast->__vptr->get(tmpCast);}) << std::endl;
-    k = k+1;
-  }
+  int x;
+  x = __A::x;
+  std::cout << __A::x_static() << std::endl;
   return 0;
 }
