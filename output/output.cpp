@@ -55,7 +55,7 @@ namespace inputs {
     }
     
     int32_t __B::get(B __this) {
-      return 10 + __this->i;
+      return 10-__this->i;
     }
     
   }

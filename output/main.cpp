@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
   int k = 0;
   while (k < 10) {
     std::cout << ({A tmpCast = __rt::java_cast<A>((*as)[k]);tmpCast->__vptr->get(tmpCast);}) << std::endl;
-    k = k + 1;
+    k = k+1;
   }
   return 0;
 }

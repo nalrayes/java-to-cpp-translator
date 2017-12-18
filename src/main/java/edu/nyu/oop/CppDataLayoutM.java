@@ -992,10 +992,10 @@ System.out.println("imhere123 " + declarator);
             res = processCastExpression(n);
         } else if (n.getName() == "AdditiveExpression") {
             // translation: no difference
-            res = processNameNode(n.getNode(0)) + " + " + processNameNode(n.getNode(2));
+            res = processNameNode(n.getNode(0)) + n.getString(1) + processNameNode(n.getNode(2));
         } else if (n.getName() == "MultiplicativeExpression") {
             // translation: no difference
-            res = processNameNode(n.getNode(0)) + " * " + processNameNode(n.getNode(2));
+            res = processNameNode(n.getNode(0)) + n.getString(1) + processNameNode(n.getNode(2));
         } else if (n.getName() == "Expression") {
             // translation: no difference
             res = processNameNode(n.getNode(0)) + " = " + processNameNode(n.getNode(2));
