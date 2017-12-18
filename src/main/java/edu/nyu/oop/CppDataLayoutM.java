@@ -789,8 +789,13 @@ System.out.println("imhere123 " + declarator);
             this.returnType = typeTranslate.translateType(methodClass.getReturnType());
             // name = __className
             this.name = this.returnType + " __" + className + "::" + methodClass.getName();
-            // TODO: what if its static?
-            this.params = "(" + className + " __this";
+
+            if(methodClass.getName().contains("static")){
+                this.params = "(";
+            }
+            else{
+                this.params = "(" + className + " __this";
+            }
             for (CustomVariablesClass var : methodClass.getParameters()) {
                 this.params += ", " + var.type + " " + var.name;
             }
@@ -874,6 +879,25 @@ System.out.println("imhere123 " + declarator);
         return false;
     }
 
+    public static boolean isMethodStatic(String callTo, String methodName) {
+        ArrayList<CustomClassObject> theClasses = cppImplementationMainMethodClass.allTheClasses;
+
+        // this is the check for static fields
+        String nameToCheck = methodName + "_static";
+        for (CustomClassObject c : theClasses){
+            if (c.getClassName().contains(callTo)){
+                // found the class
+                for (CustomMethodClass m : c.getMethods()){
+                    if (m.getName().equals(nameToCheck)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+        return false;
+    }
+
     public static String processCallExpression(Node n, int i) {
         String arguments = "";
         if (n.getNode(3) != null) {
@@ -888,10 +912,7 @@ System.out.println("imhere123 " + declarator);
         String methodName = n.getString(2);
         String ret = "({";
         String callTo;
-        if (methodName.contains("static")) {
-            return processNameNode(n.getNode(0)) + "::" + methodName + "(" + arguments + ")";
-        }
-        else if (n.getNode(0).getName().equals("CallExpression")) {
+        if (n.getNode(0).getName().equals("CallExpression")) {
             String tmpCallTo = processCallExpression(n.getNode(0), i + 1);
             String iter = Integer.toString(i);
             String tmp = "tmp" + iter;
@@ -900,6 +921,10 @@ System.out.println("imhere123 " + declarator);
             callTo = tmp;
         } else {
             callTo = processNameNode(n.getNode(0));
+            if (isMethodStatic(callTo, methodName)) {
+                String newRet = "__" + callTo + "::" + methodName + "_static" + "(" + arguments + ")";
+                return newRet;
+            }
             ret += "__rt::checkNotNull(" + callTo + "); ";
         }
         ret += callTo + "->__vptr->" + methodName + "(" + callTo + arguments + ");})";

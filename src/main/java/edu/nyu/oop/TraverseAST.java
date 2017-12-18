@@ -275,10 +275,13 @@ public class TraverseAST extends Visitor {
         //Get all the currentMethods param's
         for (CustomVariablesClass var: parameters){
             newName = newName + "_" + var.getType();
-            if(var.modifier.contains("static")){
-                newName = currNamem + "_static";
-            }
         }
+
+        //Handle static
+        if(currentMethodObj.modifier.contains("static")){
+            newName += "_static";
+        }
+
         //Save the new name for the method
         currentMethodObj.name = newName;
         currentClass.methods.add(currentMethodObj);

@@ -109,7 +109,6 @@ public class CppDataLayout {
 
             //__rt::Ptr<__A> A
 
-
             this.constructors = new ArrayList<CppConstructor>();
 
             // instantiates all data
@@ -198,7 +197,7 @@ public class CppDataLayout {
                 this.parameters.add(classParam);
                 this.parameters.add(objectParam);
             }
-            else{
+            else if (!m.getName().contains("static")){
                 this.parameters.add(classParam);
 
             }
@@ -423,15 +422,16 @@ public class CppDataLayout {
             VTInstantiatorMethod vtiMethod;
             VTMethod vtMethod;
 
-            System.out.println("TESTSTRUCT1 " + currStruct.getClassName());
-
-
+            //System.out.println("TESTSTRUCT1 " + currStruct.getClassName());
 
             for (CustomMethodClass inheritedM : inheritedMethods){
+                //Check static
+                if(inheritedM.getName().contains("static")){
+                    continue;
+                }
 
                 isDeleteMethod = false;
                 vtiMethod = new VTInstantiatorMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
-
 
                 if (inheritedM.getName().equals("__delete")){
                     System.out.println("foundDELETE");
@@ -439,12 +439,11 @@ public class CppDataLayout {
 
                 }
 
+
                 vtMethod = new VTMethod(inheritedM, currStruct.getClassName(), isLastMethod, false);
 
                 VTInstantiatorMethods.add(vtiMethod);
                 VTMethods.add(vtMethod);
-
-
             }
 
 
@@ -465,11 +464,18 @@ public class CppDataLayout {
 
                 // IF THE METHOD WAS NOT INHERITED ADD IT TO THE LIST OF METHODS
                 if (!(inheritedMethodNames.contains(m1.getName()))) {
+                    //Static
+                    if(m1.getName().contains("static")){
+                        continue;
+                    }
+
                      vtiMethod = new VTInstantiatorMethod(m1, currStruct.getClassName(), isLastMethod, true);
 //                    overwrittenMethods.add(vtiMethod);
+
+
                     vtMethod = new VTMethod(m1, currStruct.getClassName(), isLastMethod, true);
 
-                    System.out.println("testcomp123 "+ m1.getName());
+                    //System.out.println("testcomp123 "+ m1.getName());
                     VTInstantiatorMethods.add(vtiMethod);
                     VTMethods.add(vtMethod);
 
@@ -485,8 +491,12 @@ public class CppDataLayout {
 
 
                         if (VTInstantiatorMethods.get(i).saveMethodName.equals(m1.getName())){
+                            //Check static
+                            if(m1.getName().contains("static")){
+                                continue;
+                            }
                             vtiMethod = new VTInstantiatorMethod(m1, currStruct.getClassName(), isLastMethod, true);
-                            System.out.println("testcompagain1 " + m1.getName() + " index: " + i);
+                            //System.out.println("testcompagain1 " + m1.getName() + " index: " + i);
 
                             VTInstantiatorMethods.set(i, vtiMethod);
 
@@ -495,13 +505,19 @@ public class CppDataLayout {
 
                     }
 
-                    System.out.println("VTMETHODSSIZE123 " + VTMethods.size());
+                    //System.out.println("VTMETHODSSIZE123 " + VTMethods.size());
                     for (int i= 0; i < VTMethods.size(); i++){
-                            System.out.println("themeth " + VTMethods.get(i).methodName);
+                            //System.out.println("themeth " + VTMethods.get(i).methodName);
 
                         if (VTMethods.get(i).methodName.equals(m1.getName())){
+
+                            //Check static
+                            if(m1.getModifier().contains("static")){
+                                continue;
+                            }
+
                             vtMethod = new VTMethod(m1, currStruct.getClassName(), isLastMethod, true);
-                            System.out.println("testcompagain1 " + m1.getName() + " index: " + i);
+                            //System.out.println("testcompagain1 " + m1.getName() + " index: " + i);
 
                            VTMethods.set(i, vtMethod);
 
@@ -751,10 +767,6 @@ public class CppDataLayout {
 
             public VTable(CustomClassObject currClass, HashMap<String, CustomClassObject> classMap) {
 
-
-
-
-
                 this.name = currClass.getClassName();
 
                 this.VTInstantiators = new ArrayList<VTInstantiator>();
@@ -862,19 +874,14 @@ public class CppDataLayout {
 //                    }
 //                }
 
-
                 VTInstantiator vtInstantiator = new VTInstantiator(currClass, classMap);
-                System.out.println("thisthingy3 " + vtInstantiator.getVTMethods().size());
-
+                //System.out.println("thisthingy3 " + vtInstantiator.getVTMethods().size());
                 VTInstantiators.add(vtInstantiator);
 
                 for (VTMethod v : vtInstantiator.getVTMethods()){
-
                     VTMethods.add(v);
                 }
-                System.out.println("again12 " + VTMethods.size());
-
-
+                //System.out.println("again12 " + VTMethods.size());
                 VTables.add(this);
             }
         }
