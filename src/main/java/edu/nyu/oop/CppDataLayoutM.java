@@ -22,10 +22,15 @@ public class CppDataLayoutM {
         String mainMethodReturnType;
         //Property to hold the block class for the method
         TranslatedBlock transLatedBlockForImpMainMethod;
+        public static ArrayList<CustomClassObject> allTheClasses = new ArrayList<CustomClassObject>();
+        public static ArrayList<String> allTheStaticVars = new ArrayList<String>();
+
+
 
         public cppImplementationMainMethodClass(CustomMethodClass m,  ArrayList<CustomClassObject> allTheClasses) {
             this.mainMethodName = "int main(int argc, char* argv[])";
             this.mainMethodReturnType = "return 0";
+            this.allTheClasses = allTheClasses;
             //Instant the main methods block
 
             this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null, allTheClasses);
@@ -222,7 +227,13 @@ public class CppDataLayoutM {
                             String lhs = expression.getNode(0).getString(0);
                             String rhs = expression.getString(1);
 
+                            //for ()
+
+
+
+
                             declaratorVal = lhs +"->" + rhs;
+
 
                            // continue;
                             //res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
@@ -563,7 +574,7 @@ public class CppDataLayoutM {
                             continue;
                         }
                     }
-                    CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i);
+                    CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i, allTheClasses);
                     this.expressionStatements.add(ex);
                     System.out.println("NODE\n " + b.getNode(i));
                 }
@@ -840,6 +851,8 @@ public class CppDataLayoutM {
         return ret;
     }
 
+
+
     public static String processNameNode(Node n) {
         String res = "";
         boolean justString = n.getName() == "PrimaryIdentifier" || n.getName() == "IntegerLiteral";
@@ -847,7 +860,55 @@ public class CppDataLayoutM {
             res = n.getString(0);
             
         } else if (n.getName() == "SelectionExpression"){
+
+
+
+
             // translation: ->
+
+            String getType = processNameNode(n.getNode(0));
+
+
+
+           // for (CustomClassObject c : ){}
+
+            System.out.println("pleaseprint ");
+
+
+            //GETLINE
+
+          ArrayList<CustomClassObject> theClasses = cppImplementationMainMethodClass.allTheClasses;
+
+          // this is the check for static fields
+
+          for (CustomClassObject c : theClasses){
+
+              if (c.getClassName().contains(getType)){
+                  System.out.println("prettypleaseprint");
+
+                  for (CustomVariablesClass v : c.getClassVariables()){
+                      if (v.getModifier().contains("static")){
+                          System.out.println("were in busines");
+                            System.out.println("idk1 " + n);
+                          String getVar = n.getString(1);
+                          String getVT = v.getType();
+                         // String getVal = n.getNode(2).getString(0);
+                          res = "__"+getType +"::"+getVar;
+                          cppImplementationMainMethodClass.allTheStaticVars.add(getVT + " " + res);
+                          return res;
+//                          res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
+                      }
+                  }
+
+
+
+              }
+
+
+          }
+
+          System.out.println("getclasses123 " + theClasses.size());
+
             res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
 
             if(res.contains("self")){
@@ -885,7 +946,7 @@ public class CppDataLayoutM {
             // translation: __rt::literal(<string>)
             res = "__rt::literal(" + n.getString(0) + ")";
         }
-
+        //ExpressionStat
         return res;
     }
 
@@ -893,7 +954,7 @@ public class CppDataLayoutM {
         String expression;
         int position;
 
-        public CustomExpressionStatement(Node sonNode, int pos) {
+        public CustomExpressionStatement(Node sonNode, int pos, ArrayList<CustomClassObject> allTheClasses) {
             this.position = pos;
             this.expression = processNameNode(sonNode.getNode(0));
             System.out.println("=====================================");

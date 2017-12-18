@@ -1,3 +1,7 @@
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class: stamp changed from lastModified(1513592232000) to lastModified(1513592248000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class: stamp changed from lastModified(1513592232000) to lastModified(1513592248000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class: stamp changed from lastModified(1513592232000) to lastModified(1513592248000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class: stamp changed from lastModified(1513592232000) to lastModified(1513592248000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
@@ -5,11 +9,22 @@
 [0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
-[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class)[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
-[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
+[0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@632f387d directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.051717526 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.015349294 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.068898307 s[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

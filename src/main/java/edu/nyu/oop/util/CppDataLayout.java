@@ -280,13 +280,13 @@ public class CppDataLayout {
             this.name = v.getName();
             this.type = translateType.translateType(v.getType());
 
-//            if (!v.getModifier().equals("private")) {
-//                System.out.println("testmod11 " + v.getModifier());
-//                this.modifier = v.getModifier();
-//            }
-//            else{
-//                this.modifier = "";
-//            }
+            if (v.getModifier() != null && v.getModifier().contains("static")) {
+                System.out.println("testmod11 " + v.getModifier());
+                this.modifier = v.getModifier();
+            }
+            else{
+                this.modifier = "";
+            }
             //this.modifier
         }
     }

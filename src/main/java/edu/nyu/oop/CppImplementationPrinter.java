@@ -202,7 +202,7 @@ public class CppImplementationPrinter extends Visitor {
                     //ForLoop, Whileloop and block are found
                     //System.out.println(n.getNode(i).getName());
                     //Call visit to find deeper nodes
-                    printer.indent().pln(n.getNode(i).getString(0) + " {");
+                    printer.indent().pln("{" + n.getNode(i).getString(0));
                     visit(n.getNode(i));
                     printer.indent().pln("}");
                 }
