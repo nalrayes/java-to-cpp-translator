@@ -128,18 +128,10 @@ public class CppMASTCreator {
         //cppNodeActions.addNodeAsChildToParent(v);
         cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, mainStaticVars);
 
-
         for (String v : CppDataLayoutM.cppImplementationMainMethodClass.allTheStaticVars){
            // add(mainStaticVars, v,true);
             cppNodeActions.addDataToNode((GNode)mainStaticVars, v);
-
-
-
         }
-
-
-
-
     }
 
 

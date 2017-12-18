@@ -131,8 +131,6 @@ public class TraverseASTM extends ContextualVisitor {
                 //Right side value exists
                 //Get the value
                 varToReturn.declaratorRightSide = n.getNode(2).getNode(0).getNode(2).getString(0);
-                //System.out.println("DECEL RIGHT");
-//                System.out.println(varToReturn.declaratorRightSide);
                 if(n.getNode(2).getNode(0).getNode(2).getName() == "StringLiteral" && !varToReturn.modifier.contains("static")){
                     varToReturn.declaratorRightSideType = "string";
                 }
@@ -167,7 +165,6 @@ public class TraverseASTM extends ContextualVisitor {
             n.set(2, classType);
             n.set(3, "__init");
             isConstructor = true;
-            //System.out.println(n);
         }
         Node returnType = n.getNode(2);
 
@@ -180,12 +177,10 @@ public class TraverseASTM extends ContextualVisitor {
             //Get the return type
             String rt = returnType.getNode(0).getString(0);
             currentMethodObj.returnType = rt;
-            // System.out.println("Method Return Type " + rt);
         }
         else{
             //Return type is void
             currentMethodObj.returnType = returnType.getName();
-            //System.out.println("Method Return Type " + returnType.getName());
         }
 
         Node methodModifers = currMethod.getNode(0);
@@ -194,12 +189,10 @@ public class TraverseASTM extends ContextualVisitor {
         for (int j = 0; j < totalModsInMethod; j++) {
             String modifierVal = currMethod.getNode(0).getNode(j).getString(0);
             if (checkMethodVisibility(modifierVal) == true) {
-                // System.out.println("vis");
                 currentMethodObj.visibility = modifierVal;
             } else {
                 wholeModifier += modifierVal;
             }
-            //System.out.println(methodModifers.getNode(0).getString(j));
             currentMethodObj.modifier = wholeModifier;
         }
 
@@ -226,15 +219,6 @@ public class TraverseASTM extends ContextualVisitor {
                         currentMethodObj.parameters.add(myVar);
                 }
             }
-//            for (int i = 0; i < currentClass.getMethodNames().size(); i++) {
-//                // remove the old method
-//                System.out.println("THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS THIS ");
-//                System.out.println(currentMethodObj.getName());
-//                System.out.println(currentClass.getMethodNames());
-//                if (currentClass.getMethodNames().get(i).contains(currentMethodObj.getName())) {
-//                    currentClass.methods.remove(i);
-//                }
-//            }
         }
 
         //Handle Overloading Here
@@ -295,17 +279,6 @@ public class TraverseASTM extends ContextualVisitor {
         Type typeToSearch = JavaEntities.currentType(table);
         List<Type> actuals = JavaEntities.typeList((List) dispatch(n.getNode(3)));
 
-//        System.out.println("THE METHOD OVERSTUFF NAME");
-//        System.out.println(methodName);
-//        System.out.println("THE METHOD OVERSTUFF");
-//        System.out.println(actuals);
-//
-//        System.out.println("THE METHOD OVERSTUFF FOR");
-
-//        if (!TypeUtil.getType(receiver).isAlias()) {
-//            return;
-//        }
-
         String calleeClassName = TypeUtil.getType(receiver).toAlias().getName();
 
         String baseMethodName = new String(methodName);
@@ -321,10 +294,8 @@ public class TraverseASTM extends ContextualVisitor {
                 String[] splittedScope = at.getScope().split("\\.");
                 String type = splittedScope[splittedScope.length - 1];
                 methodName += "_" + type;
-                System.out.println(methodName);
             } else if (at.hasConstant()) {
                 // if overloaded with int
-                System.out.println(at.getConstant().getKind());
             }
         }
         // if methodName is in class methods:
@@ -387,10 +358,6 @@ public class TraverseASTM extends ContextualVisitor {
 
     public Node visitPrimaryIdentifier(GNode n) {
         String fieldName = n.getString(0);
-
-
-        System.out.println("assdsadasdasdasdasdasdasdasdasdasdasdasdasdasd");
-        System.out.println(n);
 
         // find type to search for relevant fields
         ClassOrInterfaceT typeToSearch = JavaEntities.currentType(table);
