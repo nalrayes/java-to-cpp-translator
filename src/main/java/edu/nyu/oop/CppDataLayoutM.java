@@ -1,5 +1,6 @@
 package edu.nyu.oop;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import edu.nyu.oop.*;
@@ -21,13 +22,18 @@ public class CppDataLayoutM {
         String mainMethodReturnType;
         //Property to hold the block class for the method
         TranslatedBlock transLatedBlockForImpMainMethod;
+        public static ArrayList<CustomClassObject> allTheClasses = new ArrayList<CustomClassObject>();
+        public static ArrayList<String> allTheStaticVars = new ArrayList<String>();
 
-        public cppImplementationMainMethodClass(CustomMethodClass m) {
-            this.mainMethodName = "int main(void)";
+
+
+        public cppImplementationMainMethodClass(CustomMethodClass m,  ArrayList<CustomClassObject> allTheClasses) {
+            this.mainMethodName = "int main(int argc, char* argv[])";
             this.mainMethodReturnType = "return 0";
+            this.allTheClasses = allTheClasses;
             //Instant the main methods block
 
-            this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null);
+            this.transLatedBlockForImpMainMethod = new TranslatedBlock(m.getMethodsBlock(), false, null, allTheClasses);
             this.transLatedBlockForImpMainMethod.returnStatement = "return 0";
             System.out.println("MAIN METHOD CLASS NAME");
             System.out.println("MAIN METHOD");
@@ -59,7 +65,7 @@ public class CppDataLayoutM {
         //If the class override this with its own implementation this will be null
         cppMethodImplementation defaultInIt;
 
-        public cppImplementationClass(CustomClassObject theClass) {
+        public cppImplementationClass(CustomClassObject theClass, ArrayList<CustomClassObject> allTheClasses) {
             if (theClass.getParentClass() == "None") {
                 this.parentClass = "Object";
             } else {
@@ -79,10 +85,18 @@ public class CppDataLayoutM {
             this.deafultConstructorImplementation = "__" + theClass.getClassName() + "::__" + theClass.getClassName() + "() : __vptr(&__vtable)";
             //Add the class fields
             for (CustomVariablesClass varClass : theClass.getClassVariables()) {
-                typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
-                String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
-                //System.out.println(varClass.getType());
-                this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
+                if(varClass.getModifier() != null && !varClass.getModifier().contains("static")){
+                    typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
+                    String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
+                    //System.out.println(varClass.getType());
+                    this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
+                }
+                else if (varClass.getModifier() == null){
+                    typeTranslatorToDeafultTypeClass deafultTypeClassTranslator = new typeTranslatorToDeafultTypeClass();
+                    String deafultInstanceType = deafultTypeClassTranslator.translateDefaultType(varClass.getType());
+                    //System.out.println(varClass.getType());
+                    this.deafultConstructorImplementation += ", " + varClass.getName() + "(" + deafultInstanceType + ")";
+                }
             }
             this.deafultConstructorImplementation += "\n" + "    {}";
             System.out.println("THE DEAFULTE CONSTRUCTOR TYPE");
@@ -129,7 +143,7 @@ public class CppDataLayoutM {
 
             //Process the methods
             for (CustomMethodClass method : theClass.getMethods()) {
-                cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass);
+                cppMethodImplementation methodImp = new cppMethodImplementation(method, this.className, theClass, allTheClasses);
                 this.cppMethodImplementations.add(methodImp);
 
                 //Check if the class overrides the default init in its methods
@@ -213,7 +227,13 @@ public class CppDataLayoutM {
                             String lhs = expression.getNode(0).getString(0);
                             String rhs = expression.getString(1);
 
+                            //for ()
+
+
+
+
                             declaratorVal = lhs +"->" + rhs;
+
 
                            // continue;
                             //res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
@@ -340,18 +360,24 @@ public class CppDataLayoutM {
                         }  else if (expressionName == "NewArrayExpression"){
                             System.out.println("anexpression1");
 
-                            varType = "__rt::Ptr<" + varType + ", __rt::array_policy>";
+                            declaratorVar = "\n__rt::Array<"+ varType + ">";
 
-                            declaratorVal += " new ";
-                            declaratorVal += expression.getNode(0).getString(0);
+
+                           // __rt::Array<A> as =  new __rt::__Array<A>(10);
+
+                            declaratorVal = " new __rt::__Array<"+varType+">";
+                            System.out.println("express123 " + expression);
+                            //declaratorVal += expression.getNode(0).getString(0)+")";
 
                             Node concreteDimensions = expression.getNode(1);
 
-                            System.out.println("expressurself " + expression);
-                            System.out.println("dimsize " + concreteDimensions.size());
+//                            System.out.println("expressurself " + expression);
+//                            System.out.println("dimsize " + concreteDimensions.size());
                             for (int d = 0; d < concreteDimensions.size(); d++){
-                                declaratorVal += "[" + concreteDimensions.getNode(d).getString(0) + "]";
+                                declaratorVal += "(" + concreteDimensions.getNode(d).getString(0) + ")";
                             }
+                            fieldDeclarationLine = declaratorVar + " = " + declaratorVal;
+                            continue;
                         } // end of NewArrayExpression
                         // else can be integer literals and other primitive types
                         else{
@@ -385,7 +411,7 @@ public class CppDataLayoutM {
         TranslatedBlock forLoopsTranslatedBlock;
         String forLoopDecLine = ""; // <- e.g. for(int i = 0; i < as.length; i++)
 
-        public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass){
+        public CustomForLoop(Node forLoopNode, int position, CustomClassObject theForLoopsClass,  ArrayList<CustomClassObject> allTheClasses){
             this.positon = position;
             System.out.println("this is for loop12345 " + forLoopNode);
             String loopIteratorType = "";
@@ -404,6 +430,8 @@ public class CppDataLayoutM {
                     System.out.println("$FOR TYPE");
                     Node getType = forLoopNode.getNode(0).getNode(i);
                     loopIteratorType = getType.getNode(0).getString(0);
+                    CppDataLayout.typeTranslate trans = new CppDataLayout.typeTranslate();
+                    loopIteratorType = trans.translateType(loopIteratorType);
                 }
 
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("Declarators")){
@@ -434,7 +462,8 @@ public class CppDataLayoutM {
                     if (selectionExpressionNode.getString(1) != null) {
                         lengthField = "." + selectionExpressionNode.getString(1);
                     }
-                    fullRelationalExpression += primaryId + " " + operator + " " + selectionExpression + lengthField;
+                    //for (int32_t i = 0; i < ({__rt::checkNotNull(args); args->length; }); i++) {
+                    fullRelationalExpression += primaryId + " " + operator + "({__rt::checkNotNull("+ selectionExpression +"); "+selectionExpression+"->length; })";
                 }
                 if (forLoopNode.getNode(0).getNode(i).getName().equals("ExpressionList")){
                     System.out.println("$FOR EXPRESSION");
@@ -449,7 +478,7 @@ public class CppDataLayoutM {
                 //Use this to find the for loops block
                 if(forLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-                    this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass);
+                    this.forLoopsTranslatedBlock = new TranslatedBlock(forLoopNode.getNode(i), false, theForLoopsClass, allTheClasses);
                 }
             }
         }
@@ -462,7 +491,7 @@ public class CppDataLayoutM {
         String conditional = "";
         String rhsVar = "";
 
-        public CustomWhileLoop(Node whileLoopNode, int position, CustomClassObject theWhileLoopsClass){
+        public CustomWhileLoop(Node whileLoopNode, int position, CustomClassObject theWhileLoopsClass,  ArrayList<CustomClassObject> allTheClasses){
             this.position = position;
 
             //PARSE WHILE LOOP HEADER
@@ -482,7 +511,7 @@ public class CppDataLayoutM {
                 //Use this to find the for loops block
                 if(whileLoopNode.getNode(i).getName().equals("Block")){
                     //This is the for loops block
-                    this.whileLoopTranslatedBlock = new TranslatedBlock(whileLoopNode.getNode(i), false, theWhileLoopsClass);
+                    this.whileLoopTranslatedBlock = new TranslatedBlock(whileLoopNode.getNode(i), false, theWhileLoopsClass, allTheClasses);
                 }
             }
         }
@@ -491,9 +520,9 @@ public class CppDataLayoutM {
     public static class CustomBlockDec{
         int positon;
         TranslatedBlock customBlockDecTranslatedBlock;
-        public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass){
+        public CustomBlockDec(Node blockNode, int positon, CustomClassObject theBlocksClass,  ArrayList<CustomClassObject> allTheClasses){
             this.positon = positon;
-            this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass);
+            this.customBlockDecTranslatedBlock = new TranslatedBlock(blockNode, false, theBlocksClass, allTheClasses);
         }
     }
 
@@ -526,7 +555,7 @@ public class CppDataLayoutM {
             blockDecs = new ArrayList<CustomBlockDec>();
         };
 
-        public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass) {
+        public TranslatedBlock(Node b, boolean flag, CustomClassObject theMethodsClass,  ArrayList<CustomClassObject> allTheClasses) {
 
             //If this is a constuctor handle the deafult/explcit constructor call
             //e.g. _Object::__init((Object) __this); OR __A::__init((A) __this, x1);
@@ -554,24 +583,24 @@ public class CppDataLayoutM {
                             continue;
                         }
                     }
-                    CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i);
+                    CustomExpressionStatement ex = new CustomExpressionStatement(b.getNode(i), i, allTheClasses);
                     this.expressionStatements.add(ex);
                     System.out.println("NODE\n " + b.getNode(i));
                 }
                 else if (b.getNode(i).getName().equals("ForStatement")){
                     //For loop
-                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i, theMethodsClass);
+                    CustomForLoop forlp = new CustomForLoop(b.getNode(i), i, theMethodsClass, allTheClasses);
                     this.forLoops.add(forlp);
                 }
                 else if(b.getNode(i).getName().equals("WhileStatement")){
                     //While loop
 
-                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass);
+                    CustomWhileLoop whilelp = new CustomWhileLoop((b.getNode(i)), i, theMethodsClass, allTheClasses);
                     this.whileLoops.add(whilelp);
                 }
                 else if(b.getNode(i).getName().equals("Block")){
                     //block within a blokc
-                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass);
+                    CustomBlockDec blocDec = new CustomBlockDec(b.getNode(i), i, theMethodsClass, allTheClasses);
                     this.blockDecs.add(blocDec);
                 }
                 else if (b.getNode(i).getName() == "ReturnStatement") {
@@ -712,7 +741,7 @@ public class CppDataLayoutM {
 
         public cppMethodImplementation(){};
 
-        public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass){
+        public cppMethodImplementation(CustomMethodClass methodClass, String className, CustomClassObject theMethodsClass,  ArrayList<CustomClassObject> allTheClasses){
             CppDataLayout.typeTranslate typeTranslate = new CppDataLayout.typeTranslate();
             this.returnType = typeTranslate.translateType(methodClass.getReturnType());
             // name = __className
@@ -746,7 +775,7 @@ public class CppDataLayoutM {
             System.out.println("block12345");
 
             //Translate the block for the method
-            translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass);
+            translatedBlock = new TranslatedBlock(this.theBlock, this.isConstuctor, theMethodsClass, allTheClasses);
 
             System.out.println("FIELD DECLARATIONS COUNT");
             System.out.println(this.translatedBlock.fieldDeclarations.size());
@@ -831,6 +860,8 @@ public class CppDataLayoutM {
         return ret;
     }
 
+
+
     public static String processNameNode(Node n) {
         String res = "";
         boolean justString = n.getName() == "PrimaryIdentifier" || n.getName() == "IntegerLiteral";
@@ -838,7 +869,55 @@ public class CppDataLayoutM {
             res = n.getString(0);
             
         } else if (n.getName() == "SelectionExpression"){
+
+
+
+
             // translation: ->
+
+            String getType = processNameNode(n.getNode(0));
+
+
+
+           // for (CustomClassObject c : ){}
+
+            System.out.println("pleaseprint ");
+
+
+            //GETLINE
+
+          ArrayList<CustomClassObject> theClasses = cppImplementationMainMethodClass.allTheClasses;
+
+          // this is the check for static fields
+
+          for (CustomClassObject c : theClasses){
+
+              if (c.getClassName().contains(getType)){
+                  System.out.println("prettypleaseprint");
+
+                  for (CustomVariablesClass v : c.getClassVariables()){
+                      if (v.getModifier().contains("static")){
+                          System.out.println("were in busines");
+                            System.out.println("idk1 " + n);
+                          String getVar = n.getString(1);
+                          String getVT = v.getType();
+                         // String getVal = n.getNode(2).getString(0);
+                          res = "__"+getType +"::"+getVar;
+                          cppImplementationMainMethodClass.allTheStaticVars.add(getVT + " " + res);
+                          return res;
+//                          res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
+                      }
+                  }
+
+
+
+              }
+
+
+          }
+
+          System.out.println("getclasses123 " + theClasses.size());
+
             res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
 
             if(res.contains("self")){
@@ -876,7 +955,7 @@ public class CppDataLayoutM {
             // translation: __rt::literal(<string>)
             res = "__rt::literal(" + n.getString(0) + ")";
         }
-
+        //ExpressionStat
         return res;
     }
 
@@ -884,7 +963,7 @@ public class CppDataLayoutM {
         String expression;
         int position;
 
-        public CustomExpressionStatement(Node sonNode, int pos) {
+        public CustomExpressionStatement(Node sonNode, int pos, ArrayList<CustomClassObject> allTheClasses) {
             this.position = pos;
             this.expression = processNameNode(sonNode.getNode(0));
             System.out.println("=====================================");

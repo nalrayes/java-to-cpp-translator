@@ -51,11 +51,11 @@ public class CppMASTCreator {
                 }
                if (ismain){
                     //Handle for main method
-                    mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod);
+                    mainMethodClassm = new CppDataLayoutM.cppImplementationMainMethodClass(mainMethod,implementationData.implementationClassObjects);
                 }
               else{
                     //This is for normal methods
-                    listOfCppImpClassesDatalayout.add(new CppDataLayoutM.cppImplementationClass(classObj));
+                    listOfCppImpClassesDatalayout.add(new CppDataLayoutM.cppImplementationClass(classObj, implementationData.implementationClassObjects));
                 }
             }
         }
@@ -122,7 +122,23 @@ public class CppMASTCreator {
         cppNodeActions.addDataToNode((GNode) mainMethodNode,mainMethodClass.mainMethodName);
         GNode blockImplementationNode = cppNodeActions.createNewASTNode("MainMethodBlockImplementation");
         cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, blockImplementationNode);
-        addDataToBlockNode(blockImplementationNode, mainMethodClass.transLatedBlockForImpMainMethod);
+        addDataToBlockNode(blockImplementationNode, mainMethodClass.transLatedBlockForImpMainMethod,true);
+       // cppImplementationMainMethodClass.allTheStaticVars
+        GNode mainStaticVars = cppNodeActions.createNewASTNode("MainStaticVars");
+        //cppNodeActions.addNodeAsChildToParent(v);
+        cppNodeActions.addNodeAsChildToParent((GNode) mainMethodNode, mainStaticVars);
+
+
+        for (String v : CppDataLayoutM.cppImplementationMainMethodClass.allTheStaticVars){
+           // add(mainStaticVars, v,true);
+            cppNodeActions.addDataToNode((GNode)mainStaticVars, v);
+
+
+
+        }
+
+
+
 
     }
 
@@ -161,10 +177,24 @@ public class CppMASTCreator {
     }
 
 
-    private static void addDataToBlockNode(GNode blockImplementationNode, CppDataLayoutM.TranslatedBlock transBlock){
+    private static void addDataToBlockNode(GNode blockImplementationNode, CppDataLayoutM.TranslatedBlock transBlock, boolean isMain){
         //Get the total length of all the things inside a block
         int totalLengthOfStuff = transBlock.fieldDeclarations.size() + transBlock.expressionStatements.size() + transBlock.forLoops.size() + transBlock.whileLoops.size() + transBlock.blockDecs.size();
         int offset = 0;
+
+        if(isMain){
+            offset += 2;
+            cppNodeActions.addDataToNode((GNode) blockImplementationNode, "__rt::Array<String> args = new __rt::__Array<String>(argc - 1)");
+            GNode newForLoopNode = cppNodeActions.createNewASTNode("ForloopImplementation");
+            GNode newForLoopBlockNode = cppNodeActions.createNewASTNode("ForloopBlock");
+
+            cppNodeActions.addDataToNode(newForLoopNode, "for (int32_t i = 1; i < argc; i++)");
+            cppNodeActions.addNodeAsChildToParent(newForLoopNode, newForLoopBlockNode);
+            cppNodeActions.addDataToNode(newForLoopBlockNode, "(*args)[i] = __rt::literal(argv[i])");
+            cppNodeActions.addNodeAsChildToParent((GNode) blockImplementationNode, newForLoopNode);
+
+        }
+
         if (transBlock.isConstructor) {
             cppNodeActions.addDataToNode((GNode) blockImplementationNode, transBlock.deafultConsturctorCall);
             for (int i = 0; i < transBlock.classLevelInitFields.size(); i++) {
@@ -198,7 +228,7 @@ public class CppMASTCreator {
             cppNodeActions.addNodeAsChildToParent(newForLoopNode, newForLoopBlockNode);
 
             //Add the forLoop Node
-            addDataToBlockNode(newForLoopBlockNode, forlp.forLoopsTranslatedBlock);
+            addDataToBlockNode(newForLoopBlockNode, forlp.forLoopsTranslatedBlock,false);
             //Add block to correct position
             blockImplementationNode.set(offset + forlp.positon, newForLoopNode);
         }
@@ -214,7 +244,7 @@ public class CppMASTCreator {
             cppNodeActions.addNodeAsChildToParent(newWhileLoopNode, newWhileLoopBlockNode);
 
             //Add the forLoop Node
-            addDataToBlockNode(newWhileLoopBlockNode, whilelp.whileLoopTranslatedBlock);
+            addDataToBlockNode(newWhileLoopBlockNode, whilelp.whileLoopTranslatedBlock,false);
             //Add block to correct position
             blockImplementationNode.set(offset + whilelp.position, newWhileLoopNode);
         }
@@ -225,7 +255,7 @@ public class CppMASTCreator {
             // create new block node
             GNode newBlockNode = cppNodeActions.createNewASTNode("BlockDecsImplementation");
             // translate block
-            addDataToBlockNode(newBlockNode, b.customBlockDecTranslatedBlock);
+            addDataToBlockNode(newBlockNode, b.customBlockDecTranslatedBlock,false);
             // add block to correct position
             blockImplementationNode.set(offset + b.positon, newBlockNode);
         }
@@ -257,7 +287,7 @@ public class CppMASTCreator {
         CppDataLayoutM.TranslatedBlock transBlock = methodData.translatedBlock;
 
         //Add data to the block Node
-        addDataToBlockNode(blockImplementationNode,transBlock);
+        addDataToBlockNode(blockImplementationNode,transBlock,false);
 
         return  ImplementationMethodsNode;
     }

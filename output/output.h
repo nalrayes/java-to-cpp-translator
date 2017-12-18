@@ -17,9 +17,9 @@ namespace inputs {
       
       __A();
 
-      int32_t x;
+      static int32_t x;
 
-      static int32_t x(A);
+      static int32_t x__static();
       static A __init(A __this);
       static Class __class();
 
@@ -34,7 +34,7 @@ namespace inputs {
       bool (*equals) (A, Object);
       Class (*getClass) (A);
       String (*toString) (A);
-      int32_t (*x) (A);
+//      int32_t (*x) (A);
 
       __A_VT()
       : __is_a(__A::__class()),
@@ -42,8 +42,8 @@ namespace inputs {
         hashCode((int32_t (*)(A)) &__Object::hashCode),
         equals((bool (*)(A, Object)) &__Object::equals),
         getClass((Class (*)(A)) &__Object::getClass),
-        toString((String (*)(A)) &__Object::toString),
-        x(&__A::x) {}
+        toString((String (*)(A)) &__Object::toString) {}
+//        x(&__A::x) {}
     };
 
     struct __Test020;

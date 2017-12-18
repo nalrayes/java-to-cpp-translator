@@ -365,8 +365,8 @@ namespace __rt {
   // This saves us the extra work of manually specializing the __class()
   // method for arrays of object types.
   template <typename T>
-  struct __Array<Ptr<T> > {
-    __Array_VT<Ptr<T> >* __vptr;
+  struct __Array<Ptr<T>> {
+    __Array_VT<Ptr<T>>* __vptr;
     const int32_t length;
     Ptr<T>* __data;
 
@@ -376,7 +376,7 @@ namespace __rt {
     }
 
     // The destructor.
-    static void __delete(__Array<Ptr<T> >* addr) {
+    static void __delete(__Array<Ptr<T>>* addr) {
       delete[] addr->__data;
       delete addr;
     }
@@ -404,7 +404,7 @@ namespace __rt {
     }
 
     // The vtable for the array.
-    static __Array_VT<Ptr<T> > __vtable;
+    static __Array_VT<Ptr<T>> __vtable;
   };
 
   // The vtable for arrays.
@@ -439,7 +439,7 @@ namespace __rt {
   __Array_VT<T> __Array<T>::__vtable;
 
   template <typename T>
-  __Array_VT<Ptr<T> > __Array<Ptr<T> >::__vtable;
+  __Array_VT<Ptr<T>> __Array<Ptr<T>>::__vtable;
 
   // ========================================================================
 
@@ -483,5 +483,5 @@ namespace __rt {
 
     return T(object);
   }
-  
+
 }

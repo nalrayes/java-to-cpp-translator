@@ -7,7 +7,7 @@ using namespace std;
 namespace inputs {
   namespace test020 {
 
-    __A::__A() : __vptr(&__vtable), x(0)
+    __A::__A() : __vptr(&__vtable)
     {}
 
     Class __A::__class() {
@@ -23,7 +23,7 @@ namespace inputs {
       return __this;
     }
     
-    int32_t __A::x(A __this) {
+    int32_t __A::x__static() {
       return 4;
     }
     

@@ -68,9 +68,17 @@ public class CppMainPrinter  extends Visitor {
         visit(n);
     }
 
+
     public void visitImplementationMain(GNode n) throws IOException {
         printer.indent().pln(n.getString(0));
         printer.indent().pln("");
+        // this is the static declarator
+        //for (int i = 0; i < n.getNode(3).size(); i++){
+        if (!n.getNode(3).isEmpty()){
+            printer.indent().pln(n.getNode(3).getString(0) +";");
+
+        }
+
         printer.indent().pln(n.getString(1) + " {");
         visit(n);
         printer.decr();
@@ -83,11 +91,16 @@ public class CppMainPrinter  extends Visitor {
         //Use a for loop to go through the block stuff
         for (int i = 0; i < n.size(); i ++){
             //Check if the node is a string or not
-            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ||  n.get(i).toString().contains("BlockDecsImplementation")){
+            if(n.get(i).toString().contains("ForloopImplementation") || n.get(i).toString().contains("WhileloopImplementation") || n.get(i).toString().contains("BlockImplementation") ){
                 //ForLoop, Whileloop and block are found
                 //System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
                 printer.indent().pln(n.getNode(i).getString(0) + " {");
+                visit(n.getNode(i));
+                printer.indent().pln("}");
+            }
+            else if(n.get(i).toString().contains("BlockDecsImplementation")){
+                printer.indent().pln ("{"+(n.getNode(i).getString(0))+";");
                 visit(n.getNode(i));
                 printer.indent().pln("}");
             }
@@ -163,7 +176,7 @@ public class CppMainPrinter  extends Visitor {
                 //ForLoop, Whileloop and block are found
                 //System.out.println(n.getNode(i).getName());
                 //Call visit to find deeper nodes
-                printer.indent().pln(n.getNode(i).getString(0) + " {");
+                printer.indent().pln( "{" + n.getNode(i).getString(0) + ";");
                 visit(n.getNode(i));
                 printer.indent().pln("}");
             }
