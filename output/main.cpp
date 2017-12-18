@@ -4,6 +4,7 @@
 using namespace java::lang;
 using namespace std;
 
+<<<<<<< HEAD
 using namespace inputs::test010;
 
 int main(void) {
@@ -19,5 +20,13 @@ int main(void) {
   ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, b1);});
   ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, b2);});
   ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, c);});
+=======
+using namespace inputs::test014;
+
+int main(void) {
+  A a =  __A::__init(new __A);
+  A other = a->some;
+  ({__rt::checkNotNull(a); a->__vptr->printOther_A(a, other);});
+>>>>>>> 36ee1741fe9486eddbb8956b4a692daff79ee824
   return 0;
 }

@@ -354,6 +354,7 @@ public class CppDataLayout {
         String methodName;
         String declarationName;
         ArrayList<CustomMethodClass> inheritedMethods;
+        ArrayList<CustomVariablesClass> inheritedFields;
         //ArrayList<CustomMethodClass> inheritedMethods;
         ArrayList<VTInstantiatorMethod> VTInstantiatorMethods;
         ArrayList<VTMethod> VTMethods;
@@ -369,6 +370,8 @@ public class CppDataLayout {
             this.VTInstantiatorMethods = new ArrayList<VTInstantiatorMethod>();
             this.VTMethods = new ArrayList<VTMethod>();
             this.inheritedMethods = new ArrayList<CustomMethodClass>();
+            this.inheritedFields  = new ArrayList<CustomVariablesClass>();
+
             this.isA = ": __is_a(__" + currStruct.getClassName() + "::__class()),";
             this.declarationName = "__" + currStruct.getClassName() + "_VT()";
             this.randoCurls = " {}";
@@ -384,6 +387,8 @@ public class CppDataLayout {
                     inheritedMethods.add(m);
                // }
             }
+            
+
 
             // gets inherited methods of a class
             while (tempStruct.getParentClass() != "None") {

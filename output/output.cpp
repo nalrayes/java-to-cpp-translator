@@ -5,9 +5,15 @@ using namespace java::lang;
 using namespace std;
 
 namespace inputs {
+<<<<<<< HEAD
   namespace test010 {
 
     __A::__A() : __vptr(&__vtable), a(__rt::null())
+=======
+  namespace test014 {
+
+    __A::__A() : __vptr(&__vtable), some(__rt::null())
+>>>>>>> 36ee1741fe9486eddbb8956b4a692daff79ee824
     {}
 
     Class __A::__class() {
@@ -23,6 +29,7 @@ namespace inputs {
       return __this;
     }
     
+<<<<<<< HEAD
     void __A::setA_String(A __this, String x) {
       __this->a = x;
     }
@@ -81,6 +88,10 @@ namespace inputs {
     C __C::__init(C __this) {
       __B1::__init((B1) __this);
       return __this;
+=======
+    void __A::printOther_A(A __this, A other) {
+      std::cout << ({__rt::checkNotNull(other); other->__vptr->toString(other);}) << std::endl;
+>>>>>>> 36ee1741fe9486eddbb8956b4a692daff79ee824
     }
     
   }

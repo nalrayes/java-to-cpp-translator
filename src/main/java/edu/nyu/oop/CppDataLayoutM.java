@@ -206,7 +206,16 @@ public class CppDataLayoutM {
                         System.out.println("expressionName " + expressionName);
 
                         if (expressionName == "SelectionExpression"){
+
+                            //fieldDeclarationLine = processNameNode(expression.getNode(0)) + "->" + expression.getString(1);
                             // translation: ->
+
+                            String lhs = expression.getNode(0).getString(0);
+                            String rhs = expression.getString(1);
+
+                            declaratorVal = lhs +"->" + rhs;
+
+                           // continue;
                             //res = processNameNode(n.getNode(0)) + "->" + n.getString(1);
                         }
                         else if (expressionName == "SubscriptExpression") {
@@ -346,6 +355,7 @@ public class CppDataLayoutM {
                         } // end of NewArrayExpression
                         // else can be integer literals and other primitive types
                         else{
+                           // System.out
                             declaratorVal += declarator.getNode(2).getString(0);
                         }
 
