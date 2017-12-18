@@ -2,8 +2,7 @@
 
 ### Features :
 
-- tests 1 - 30 pass
-- translates java into C++ for required provided inputs (test000 through test020)
+- translates and compiles java into C++ for required provided inputs (test000 through test030)
 - supports method overriding 
 - supports overloading (Some)
 - supports arrays

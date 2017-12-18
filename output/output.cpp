@@ -5,13 +5,9 @@ using namespace java::lang;
 using namespace std;
 
 namespace inputs {
-<<<<<<< HEAD
-  namespace test020 {
-=======
   namespace test030 {
->>>>>>> 16778525e1a93051b24e450824e2cc3cd19cced5
 
-    __A::__A() : __vptr(&__vtable)
+    __A::__A() : __vptr(&__vtable), i(0)
     {}
 
     Class __A::__class() {
@@ -27,10 +23,6 @@ namespace inputs {
       return __this;
     }
     
-<<<<<<< HEAD
-    int32_t __A::x_static() {
-      return 4;
-=======
     A __A::__init(A __this, int i) {
       __Object::__init((Object) __this);
       __this->i = i;
@@ -39,7 +31,6 @@ namespace inputs {
     
     int32_t __A::get(A __this) {
       return __this->i;
->>>>>>> 16778525e1a93051b24e450824e2cc3cd19cced5
     }
     
   }
