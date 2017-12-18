@@ -1,27 +1,27 @@
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class: stamp changed from lastModified(1513621797000) to lastModified(1513621805000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class: stamp changed from lastModified(1513621797000) to lastModified(1513621805000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class: stamp changed from lastModified(1513621797000) to lastModified(1513621805000)[0m
-[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class: stamp changed from lastModified(1513621797000) to lastModified(1513621805000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class: stamp changed from lastModified(1513621805000) to lastModified(1513621816000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class: stamp changed from lastModified(1513621805000) to lastModified(1513621816000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class: stamp changed from lastModified(1513621805000) to lastModified(1513621816000)[0m
+[0m[[0mdebug[0m] [0mInvalidating /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class: stamp changed from lastModified(1513621805000) to lastModified(1513621816000)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomExpressionStatement.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomWhileLoop.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomBlockDec.class, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes/edu/nyu/oop/CppDataLayoutM$CustomForLoop.class)[0m
-[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java)[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java)[0m
-[0m[[0minfo[0m] [0mCompiling 2 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
-[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@540aac9c directly...[0m
-[0m[[0mdebug[0m] [0mJava compilation took 0.037116906 s[0m
-[0m[[0mdebug[0m] [0mJava analysis took 0.014536874 s[0m
-[0m[[0mdebug[0m] [0mJava compile + analysis took 0.05394843 s[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppMASTCreator.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/TraverseAST.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/CppDataLayoutM.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/util/CppDataLayout.java, /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/src/main/java/edu/nyu/oop/TraverseASTM.java)[0m
+[0m[[0minfo[0m] [0mCompiling 5 Java sources to /Users/charlesdickstein/Desktop/NYUClasses/oop/translator/translator-2/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@41a42dae directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 0.064851774 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.030714912 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 0.097770434 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

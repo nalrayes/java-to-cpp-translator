@@ -6,9 +6,6 @@ compilec
 runxtc -printJavaAst src/test/java/inputs/test014/Test014.java
 runxtc -translate src/test/java/inputs/test014/Test014.java
 compilec
-runxtc -printJavaAst src/test/java/inputs/test014/Test014.java
-runxtc -translate src/test/java/inputs/test014/Test014.java
-compilec
 exec
 execc
 runxtc -translate src/test/java/inputs/test016/Test016.java
@@ -493,6 +490,9 @@ runxtc -translate src/test/java/inputs/test028/Test028.java
 compilec
 execc
 runxtc -translate src/test/java/inputs/test029/Test029.java
+compilec
+execc
+runxtc -translate src/test/java/inputs/test030/Test030.java
 compilec
 execc
 runxtc -translate src/test/java/inputs/test030/Test030.java
